@@ -1,0 +1,22 @@
+{
+  "depot": {
+    "startkapital": 100000,
+    "aktueller_barbestand": 50500,
+    "portfoliowert": 50246,
+    "gesamtvermoegen": 100746,
+    "positionen": [
+      { "wertpapier": "Siemens Energy", "wkn": "ENER6Y", "stueck": 280, "kaufkurs": 35.0, "boersenkurs": 36.5, "investiert": 9800, "boersenwert": 10220, "gewinn_verlust": 420 },
+      { "wertpapier": "Leonardo", "wkn": "852787", "stueck": 400, "kaufkurs": 25.0, "boersenkurs": 26.1, "investiert": 10000, "boersenwert": 10440, "gewinn_verlust": 440 },
+      { "wertpapier": "Thales", "wkn": "850842", "stueck": 66, "kaufkurs": 150.0, "boersenkurs": 148.5, "investiert": 9900, "boersenwert": 9801, "gewinn_verlust": -99 },
+      { "wertpapier": "MTU Aero Engines", "wkn": "A0D9PT", "stueck": 35, "kaufkurs": 280.0, "boersenkurs": 285.0, "investiert": 9800, "boersenwert": 9975, "gewinn_verlust": 175 },
+      { "wertpapier": "Safran", "wkn": "924781", "stueck": 45, "kaufkurs": 220.0, "boersenkurs": 218.0, "investiert": 9900, "boersenwert": 9810, "gewinn_verlust": -90 }
+    ],
+    "transaktionshistorie": [
+      { "datum": "2026-06-29", "wertpapier": "Siemens Energy", "typ": "Kauf", "stueck": 280, "kurs": 35.0, "gebuehr": 10, "gesamt": 9810 },
+      { "datum": "2026-06-29", "wertpapier": "Leonardo", "typ": "Kauf", "stueck": 400, "kurs": 25.0, "gebuehr": 10, "gesamt": 10010 },
+      { "datum": "2026-06-29", "wertpapier": "Thales", "typ": "Kauf", "stueck": 66, "kurs": 150.0, "gebuehr": 10, "gesamt": 9910 },
+      { "datum": "2026-06-29", "wertpapier": "MTU Aero Engines", "typ": "Kauf", "stueck": 35, "kurs": 280.0, "gebuehr": 10, "gesamt": 9810 },
+      { "datum": "2026-06-29", "wertpapier": "Safran", "typ": "Kauf", "stueck": 45, "kurs": 220.0, "gebuehr": 10, "gesamt": 9910 }
+    ]
+  }
+}
