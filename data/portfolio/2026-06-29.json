@@ -1,0 +1,40 @@
+{
+  "depotName": "Virtuelles Startdepot",
+  "startKapital": 10000.0,
+  "waehrung": "EUR",
+  "transaktionsKosten": 5.0,
+  "steuersatz": 0.25,
+  "logbuchPfad": "memory/portfolio/virtual_depot_log.md",
+  "datum": "2026-06-29",
+  "bestaende": [
+    {
+      "name": "Oracle Corp",
+      "symbol": "ORCL",
+      "anzahl": 25,
+      "kaufkurs": 159.0,
+      "aktueller_kurs": 148.53
+    },
+    {
+      "name": "Salesforce Inc",
+      "symbol": "CRM",
+      "anzahl": 20,
+      "kaufkurs": 162.0,
+      "aktueller_kurs": 158.27
+    },
+    {
+      "name": "iShares Nasdaq-100 UCITS ETF",
+      "symbol": "SXRV",
+      "anzahl": 1,
+      "kaufkurs": 1475.0,
+      "aktueller_kurs": 1270.0
+    },
+    {
+      "name": "iShares U.S. Aerospace & Defense ETF",
+      "symbol": "ITA",
+      "anzahl": 18,
+      "kaufkurs": 235.0,
+      "aktueller_kurs": 236.78
+    }
+  ],
+  "depot_gesamtwert": 11130.49
+}
