@@ -170,14 +170,14 @@
   "depot": {
     "startkapital": 100000,
     "aktueller_barbestand": 50500,
-    "portfoliowert": 49450,
-    "gesamtvermoegen": 99950,
+    "portfoliowert": 50246,
+    "gesamtvermoegen": 100746,
     "positionen": [
-      { "wertpapier": "Siemens Energy", "stueck": 280, "kaufkurs": 35.0, "investiert": 9800 },
-      { "wertpapier": "Leonardo", "stueck": 400, "kaufkurs": 25.0, "investiert": 10000 },
-      { "wertpapier": "Thales", "stueck": 66, "kaufkurs": 150.0, "investiert": 9900 },
-      { "wertpapier": "MTU Aero Engines", "stueck": 35, "kaufkurs": 280.0, "investiert": 9800 },
-      { "wertpapier": "Safran", "stueck": 45, "kaufkurs": 220.0, "investiert": 9900 }
+      { "wertpapier": "Siemens Energy", "wkn": "ENER6Y", "stueck": 280, "kaufkurs": 35.0, "boersenkurs": 36.5, "investiert": 9800, "boersenwert": 10220, "gewinn_verlust": 420 },
+      { "wertpapier": "Leonardo", "wkn": "852787", "stueck": 400, "kaufkurs": 25.0, "boersenkurs": 26.1, "investiert": 10000, "boersenwert": 10440, "gewinn_verlust": 440 },
+      { "wertpapier": "Thales", "wkn": "850842", "stueck": 66, "kaufkurs": 150.0, "boersenkurs": 148.5, "investiert": 9900, "boersenwert": 9801, "gewinn_verlust": -99 },
+      { "wertpapier": "MTU Aero Engines", "wkn": "A0D9PT", "stueck": 35, "kaufkurs": 280.0, "boersenkurs": 285.0, "investiert": 9800, "boersenwert": 9975, "gewinn_verlust": 175 },
+      { "wertpapier": "Safran", "wkn": "924781", "stueck": 45, "kaufkurs": 220.0, "boersenkurs": 218.0, "investiert": 9900, "boersenwert": 9810, "gewinn_verlust": -90 }
     ],
     "transaktionshistorie": [
       { "datum": "2026-06-29", "wertpapier": "Siemens Energy", "typ": "Kauf", "stueck": 280, "kurs": 35.0, "gebuehr": 10, "gesamt": 9810 },
@@ -263,17 +263,27 @@
         <h3 class="sector-title">Aktuelle Positionen (Wertpapiere)</h3>
         <table>
             <tr>
+                <th>WKN</th>
                 <th>Wertpapier</th>
-                <th>Stückzahl</th>
+                <th>Stück</th>
                 <th>Kaufkurs</th>
-                <th>Investiertes Volumen</th>
+                <th>Börsenkurs</th>
+                <th>Investiert</th>
+                <th>Börsenwert</th>
+                <th>Gewinn/Verlust</th>
             </tr>`;
         d.positionen.forEach(p => {
+            let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
+            let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
             depotHtml += `<tr>
+                <td>${p.wkn}</td>
                 <td><strong>${p.wertpapier}</strong></td>
                 <td>${p.stueck}</td>
                 <td>${p.kaufkurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                <td>${(p.boersenkurs || p.kaufkurs).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
                 <td>${p.investiert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                <td>${(p.boersenwert || p.investiert).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${(p.gewinn_verlust || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'})}</span></td>
             </tr>`;
         });
         depotHtml += `</table>
