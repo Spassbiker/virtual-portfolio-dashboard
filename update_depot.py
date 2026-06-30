@@ -74,13 +74,13 @@ summary = []
 chart_buys = set()
 for sector, items in chart_data.get("sektoren", {}).items():
     for item in items:
-        if "kauf" in item.get("empfehlung", "").lower():
+        if item.get("empfehlung", "").lower() == "kaufen":
             chart_buys.add(normalize_name(item["wertpapier"]))
 
 funda_buys = set()
 for sector, items in funda_data.get("sektoren", {}).items():
     for item in items:
-        if "kauf" in item.get("empfehlung", "").lower():
+        if item.get("empfehlung", "").lower() == "kaufen":
             funda_buys.add(normalize_name(item["wertpapier"]))
 
 # Zielkandidaten ermitteln und fix sortieren (alphabetisch für Konsistenz)
