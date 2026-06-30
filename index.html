@@ -61,11 +61,11 @@
 
         async function loadData() {
             try {
-                // Fetch JSON files directly from the repository
+                const timestamp = new Date().getTime();
                 const [chartRes, fundaRes, depotRes] = await Promise.all([
-                    fetch('chartanalyse_ergebnisse.json?v=' + new Date().getTime()),
-                    fetch('fundamentalanalyse_ergebnisse.json?v=' + new Date().getTime()),
-                    fetch('depot_status.json?v=' + new Date().getTime())
+                    fetch('chartanalyse_ergebnisse.json?v=' + timestamp),
+                    fetch('fundamentalanalyse_ergebnisse.json?v=' + timestamp),
+                    fetch('depot_status.json?v=' + timestamp)
                 ]);
 
                 const chartData = await chartRes.json();
@@ -84,55 +84,66 @@
         }
 
         function renderChart(chartData) {
-            let html = `<h2>Ergebnisse der Chartanalyse</h2><p>Aktuelle technische Analyse.</p>`;
-            html += `<table>
-                <tr>
-                    <th>Symbol</th>
-                    <th>Name</th>
-                    <th>Trend</th>
-                    <th>SMA50</th>
-                    <th>SMA200</th>
-                    <th>RSI</th>
-                    <th>Signal</th>
-                </tr>`;
-            chartData.analysen.forEach(w => {
-                html += `<tr>
-                    <td><strong>${w.symbol}</strong></td>
-                    <td>${w.name}</td>
-                    <td>${w.trend}</td>
-                    <td>${w.sma50}</td>
-                    <td>${w.sma200}</td>
-                    <td>${w.rsi}</td>
-                    <td>${getBadge(w.signal)}</td>
-                </tr>`;
-            });
-            html += `</table>`;
+            let html = `<h2>Ergebnisse der Chartanalyse</h2><p>Übersicht der Trendbewertungen nach Sektoren.</p>`;
+            
+            if (chartData.sektoren) {
+                for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
+                    html += `<h3 class="sector-title">${sektor}</h3>
+                    <table>
+                        <tr>
+                            <th style="width: 25%">Wertpapier</th>
+                            <th style="width: 15%">Empfehlung</th>
+                            <th style="width: 60%">Charttechnische Begründung</th>
+                        </tr>`;
+                    werte.forEach(w => {
+                        html += `<tr>
+                            <td><strong>${w.wertpapier}</strong></td>
+                            <td>${getBadge(w.empfehlung)}</td>
+                            <td>${w.begruendung}</td>
+                        </tr>`;
+                    });
+                    html += `</table>`;
+                }
+            } else {
+                html += `<p>Keine Sektordaten gefunden.</p>`;
+            }
             document.getElementById('chart').innerHTML = html;
         }
 
         function renderFunda(fundaData) {
-            let html = `<h2>Ergebnisse der Fundamentalanalyse</h2><p>Fundamentale Kennzahlen.</p>`;
-            html += `<table>
-                <tr>
-                    <th>Symbol</th>
-                    <th>Name</th>
-                    <th>KGV</th>
-                    <th>Dividendenrendite</th>
-                    <th>Wachstumsprognose</th>
-                    <th>Empfehlung</th>
-                    <th>Notiz</th>
-                </tr>`;
-            fundaData.analysen.forEach(w => {
-                html += `<tr>
-                    <td><strong>${w.symbol}</strong></td>
-                    <td>${w.name}</td>
-                    <td>${w.kgv !== null ? w.kgv : '-'}</td>
-                    <td>${w.dividendenrendite}%</td>
-                    <td>${w.wachstumsprognose}</td>
-                    <td>${w.notiz}</td>
-                </tr>`;
-            });
-            html += `</table>`;
+            let html = `<h2>Ergebnisse der Fundamentalanalyse</h2><p>Fundamentale Kennzahlen nach Sektoren.</p>`;
+            
+            if (fundaData.sektoren) {
+                for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
+                    html += `<h3 class="sector-title">${sektor}</h3>
+                    <table>
+                        <tr>
+                            <th>Wertpapier</th>
+                            <th>KGV</th>
+                            <th>KBV</th>
+                            <th>KUV</th>
+                            <th>KCV</th>
+                            <th>Dividende</th>
+                            <th>Empfehlung</th>
+                            <th style="width: 35%">Begründung</th>
+                        </tr>`;
+                    werte.forEach(w => {
+                        html += `<tr>
+                            <td><strong>${w.wertpapier}</strong></td>
+                            <td>${w.kgv || '-'}</td>
+                            <td>${w.kbv || '-'}</td>
+                            <td>${w.kuv || '-'}</td>
+                            <td>${w.kcv || '-'}</td>
+                            <td>${w.dividendenrendite || '-'}</td>
+                            <td>${getBadge(w.empfehlung)}</td>
+                            <td>${w.begruendung}</td>
+                        </tr>`;
+                    });
+                    html += `</table>`;
+                }
+            } else {
+                html += `<p>Keine Sektordaten gefunden.</p>`;
+            }
             document.getElementById('funda').innerHTML = html;
         }
 
@@ -141,10 +152,10 @@
             let html = `<h2>Aktueller Depot-Status</h2>
             
             <div class="stats-grid">
-                <div class="stat-card"><h4>Gesamtvermögen</h4><p>${d.gesamtvermoegen.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-                <div class="stat-card"><h4>Barbestand</h4><p>${d.aktueller_barbestand.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-                <div class="stat-card"><h4>Portfoliowert</h4><p>${d.portfoliowert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-                <div class="stat-card"><h4>Startkapital</h4><p>${d.startkapital.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
+                <div class="stat-card"><h4>Gesamtvermögen</h4><p>${(d.gesamtvermoegen || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
+                <div class="stat-card"><h4>Barbestand</h4><p>${(d.aktueller_barbestand || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
+                <div class="stat-card"><h4>Portfoliowert</h4><p>${(d.portfoliowert || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
+                <div class="stat-card"><h4>Startkapital</h4><p>${(d.startkapital || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
             </div>
             
             <h3 class="sector-title">Aktuelle Positionen</h3>
@@ -157,17 +168,19 @@
                     <th>Aktueller Kurs</th>
                     <th>Gesamtwert</th>
                 </tr>`;
-            if(d.positionen) {
+            if(d.positionen && d.positionen.length > 0) {
                 d.positionen.forEach(p => {
                     html += `<tr>
-                        <td><strong>${p.symbol}</strong></td>
-                        <td>${p.name}</td>
-                        <td>${p.anteile}</td>
-                        <td>${p.kaufkurs_durchschnitt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${p.aktueller_kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${p.gesamtwert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td><strong>${p.symbol || p.wkn || '-'}</strong></td>
+                        <td>${p.name || p.wertpapier}</td>
+                        <td>${p.anteile || p.stueck}</td>
+                        <td>${(p.kaufkurs_durchschnitt || p.kaufkurs || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td>${(p.aktueller_kurs || p.boersenkurs || p.kaufkurs || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td>${(p.gesamtwert || p.boersenwert || p.investiert || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
                     </tr>`;
                 });
+            } else {
+                html += `<tr><td colspan="6" style="text-align:center;">Keine Positionen im Depot.</td></tr>`;
             }
             html += `</table>
             
@@ -176,28 +189,26 @@
                 <tr>
                     <th>Datum</th>
                     <th>Typ</th>
-                    <th>Symbol</th>
-                    <th>Name</th>
+                    <th>Symbol/Name</th>
                     <th>Anteile</th>
                     <th>Kurs</th>
                     <th>Gebühren</th>
                     <th>Gesamtbetrag</th>
-                    <th>Notiz</th>
                 </tr>`;
-            if(d.transaktionshistorie) {
+            if(d.transaktionshistorie && d.transaktionshistorie.length > 0) {
                 d.transaktionshistorie.forEach(t => {
                     html += `<tr>
                         <td>${t.datum}</td>
                         <td><strong>${t.typ}</strong></td>
-                        <td>${t.symbol}</td>
-                        <td>${t.name}</td>
-                        <td>${t.anteile}</td>
-                        <td>${t.kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${t.gebuehren.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${t.gesamtbetrag.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${t.notiz || '-'}</td>
+                        <td>${t.symbol || t.wertpapier} ${t.name ? '('+t.name+')' : ''}</td>
+                        <td>${t.anteile || t.stueck}</td>
+                        <td>${(t.kurs || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td>${(t.gebuehren || t.gebuehr || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td>${(t.gesamtbetrag || t.gesamt || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
                     </tr>`;
                 });
+            } else {
+                html += `<tr><td colspan="7" style="text-align:center;">Keine Transaktionen bisher.</td></tr>`;
             }
             html += `</table>`;
             document.getElementById('depot').innerHTML = html;
