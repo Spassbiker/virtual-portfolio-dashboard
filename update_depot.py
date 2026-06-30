@@ -1,9 +1,11 @@
 import json
 import os
+import urllib.request
 from datetime import datetime
 
 base_dir = "/home/ubuntu/.openclaw/workspace"
-depot_path = os.path.join(base_dir, "depot_status.json")
+# Wir arbeiten im aktuellen Verzeichnis, da wir im Temp Repo sind.
+depot_path = "depot_status.json"
 
 with open(depot_path, "r") as f:
     data = json.load(f)
@@ -28,25 +30,56 @@ def get_recommendation(data_json, stock_name):
                 return item.get("empfehlung", "").lower()
     return "unbekannt"
 
-# Mock prices and ISIN mapping
-mock_data = {
-    'Leonardo': {'price': 23.10, 'isin': 'IT0003856405'},
-    'Siemens Energy': {'price': 27.00, 'isin': 'DE000ENER6Y0'},
-    'Rolls-Royce': {'price': 5.30, 'isin': 'GB00B63H8491'},
-    'Thales': {'price': 166.00, 'isin': 'FR0000121329'},
-    'ASML': {'price': 945.00, 'isin': 'NL0010273215'},
-    'MTU Aero Engines': {'price': 236.00, 'isin': 'DE000A0D9PT0'},
-    'Rheinmetall': {'price': 525.00, 'isin': 'DE0007030009'},
-    'SAP': {'price': 186.50, 'isin': 'DE0007164600'},
-    'Safran': {'price': 212.00, 'isin': 'FR0000073272'},
-    'E.ON': {'price': 12.50, 'isin': 'DE000ENAG999'},
-    'RWE': {'price': 32.00, 'isin': 'DE0007037129'},
-    'Infineon': {'price': 35.00, 'isin': 'DE0006231004'},
-    'Airbus': {'price': 140.00, 'isin': 'NL0000235190'},
-    'Planet Labs': {'price': 2.10, 'isin': 'US72703X1054'},
-    'Encavis': {'price': 16.50, 'isin': 'DE0006095003'},
-    'Eutelsat': {'price': 4.20, 'isin': 'FR0010221234'}
+yf_tickers = {
+    'Leonardo': 'LDO.MI',
+    'Siemens Energy': 'ENR.DE',
+    'Rolls-Royce': 'RRU.DE',
+    'Thales': 'HO.PA',
+    'ASML': 'ASML.AS',
+    'MTU Aero Engines': 'MTX.DE',
+    'Rheinmetall': 'RHM.DE',
+    'SAP': 'SAP.DE',
+    'Safran': 'SAF.PA',
+    'E.ON': 'EOAN.DE',
+    'RWE': 'RWE.DE',
+    'Infineon': 'IFX.DE',
+    'Airbus': 'AIR.PA',
+    'Planet Labs': 'PL',
+    'Eutelsat': 'ETL.PA'
 }
+
+isin_mapping = {
+    'Leonardo': 'IT0003856405',
+    'Siemens Energy': 'DE000ENER6Y0',
+    'Rolls-Royce': 'GB00B63H8491',
+    'Thales': 'FR0000121329',
+    'ASML': 'NL0010273215',
+    'MTU Aero Engines': 'DE000A0D9PT0',
+    'Rheinmetall': 'DE0007030009',
+    'SAP': 'DE0007164600',
+    'Safran': 'FR0000073272',
+    'E.ON': 'DE000ENAG999',
+    'RWE': 'DE0007037129',
+    'Infineon': 'DE0006231004',
+    'Airbus': 'NL0000235190',
+    'Planet Labs': 'US72703X1054',
+    'Encavis': 'DE0006095003',
+    'Eutelsat': 'FR0010221234'
+}
+
+def get_live_price(stock):
+    if stock not in yf_tickers:
+        return None
+    ticker = yf_tickers[stock]
+    url = f"https://query2.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d&range=1d"
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+    try:
+        with urllib.request.urlopen(req) as response:
+            jdata = json.loads(response.read().decode())
+            return jdata['chart']['result'][0]['meta']['regularMarketPrice']
+    except Exception as e:
+        print(f"Error fetching live price for {stock}: {e}")
+        return None
 
 fee_per_trade = 5.00
 summary = []
@@ -60,30 +93,26 @@ for p in positions:
     chart_rec = get_recommendation(chart_data, stock)
     funda_rec = get_recommendation(funda_data, stock)
     
-    # Wenn EINE der Analysen auf "Verkauf" steht -> Raus!
+    current_price = get_live_price(stock) or p["boersenkurs"]
+    
     if "verkauf" in chart_rec or "verkauf" in funda_rec:
         units = p["stueck"]
-        price = mock_data.get(stock, {}).get('price', p["boersenkurs"])
-        isin = mock_data.get(stock, {}).get('isin', p.get("isin", ""))
-        revenue = (units * price) - fee_per_trade
+        revenue = (units * current_price) - fee_per_trade
         current_cash += revenue
-        summary.append(f"Strategischer Verkauf: {units}x {stock} zu {price:.2f} EUR (Erlös: {revenue:.2f} EUR). Grund: 'Verkaufen'-Signal.")
+        summary.append(f"Strategischer Verkauf: {units}x {stock} zu {current_price:.2f} EUR (Erlös: {revenue:.2f} EUR). Grund: 'Verkaufen'-Signal.")
         transactions.append({
             "datum": datetime.now().strftime("%Y-%m-%d"),
             "typ": "Verkauf",
-            "isin": isin,
+            "isin": p.get("isin", ""),
             "wertpapier": stock,
             "stueck": units,
-            "kurs": price,
+            "kurs": current_price,
             "gebuehr": fee_per_trade,
             "gesamt": round(revenue, 2),
-            "notiz": "Strategischer Verkauf ('Verkaufen'-Signal in einer Analyse)"
+            "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)"
         })
     else:
-        # Kurse aktualisieren
-        p["boersenkurs"] = mock_data.get(stock, {}).get('price', p["boersenkurs"])
-        if "isin" not in p and stock in mock_data:
-            p["isin"] = mock_data[stock]['isin']
+        p["boersenkurs"] = current_price
         p["boersenwert"] = round(p["stueck"] * p["boersenkurs"], 2)
         p["gewinn_verlust"] = round(p["boersenwert"] - p["investiert"], 2)
         positions_to_keep.append(p)
@@ -113,12 +142,13 @@ target_stocks = list(chart_buys.intersection(funda_buys))
 budget_per_stock = 1500.0
 
 for stock in target_stocks:
-    if stock not in mock_data: continue
     already_owned = any(p["wertpapier"] == stock for p in positions)
     if already_owned: continue
     
-    price = mock_data[stock]['price']
-    isin = mock_data[stock]['isin']
+    price = get_live_price(stock)
+    if not price: continue
+    
+    isin = isin_mapping.get(stock, "")
     units_to_buy = int((budget_per_stock - fee_per_trade) / price)
     if units_to_buy <= 0: continue
     total_cost = (units_to_buy * price) + fee_per_trade
@@ -153,7 +183,7 @@ for stock in target_stocks:
                 weak_p["boersenwert"] = round(weak_p["stueck"] * weak_p["boersenkurs"], 2)
                 weak_p["gewinn_verlust"] = round(weak_p["boersenwert"] - weak_p["investiert"], 2)
                 
-                summary.append(f"Rebalancing-Verkauf: {units_to_sell}x {weak_p['wertpapier']} (Erlös: {revenue:.2f} EUR), um Kapital für {stock} freizumachen.")
+                summary.append(f"Rebalancing-Verkauf: {units_to_sell}x {weak_p['wertpapier']} (Erlös: {revenue:.2f} EUR).")
                 transactions.append({
                     "datum": datetime.now().strftime("%Y-%m-%d"),
                     "typ": "Verkauf",
@@ -163,7 +193,7 @@ for stock in target_stocks:
                     "kurs": weak_price,
                     "gebuehr": fee_per_trade,
                     "gesamt": round(revenue, 2),
-                    "notiz": f"Rebalancing (Teilverkauf) für Neukauf von {stock}"
+                    "notiz": f"Rebalancing für Neukauf von {stock}"
                 })
                 
             if current_cash >= total_cost:
@@ -197,7 +227,7 @@ for stock in target_stocks:
             "kurs": price,
             "gebuehr": fee_per_trade,
             "gesamt": round(total_cost, 2),
-            "notiz": "Neukauf (Kauf-Signal in beiden Analysen)"
+            "notiz": "Neukauf (Kauf-Signal)"
         })
         summary.append(f"Kauf: {units_to_buy}x {stock} zu {price:.2f} EUR (Gesamt: {total_cost:.2f} EUR).")
 
