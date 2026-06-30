@@ -1,7 +1,7 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 122.39,
+    "aktueller_barbestand": 102.15,
     "portfoliowert": 9842.61,
     "gesamtvermoegen": 9965.0,
     "positionen": [
@@ -38,11 +38,11 @@
       {
         "isin": "US72703X1054",
         "wertpapier": "Planet Labs",
-        "stueck": 47,
-        "kaufkurs": 31.28,
-        "boersenkurs": 31.28,
-        "investiert": 1470.16,
-        "boersenwert": 1470.16,
+        "stueck": 54,
+        "kaufkurs": 27.6,
+        "boersenkurs": 27.6,
+        "investiert": 1490.4,
+        "boersenwert": 1490.4,
         "gewinn_verlust": 0.0
       },
       {
@@ -115,10 +115,10 @@
         "typ": "Kauf",
         "isin": "US72703X1054",
         "wertpapier": "Planet Labs",
-        "stueck": 47,
-        "kurs": 31.28,
+        "stueck": 54,
+        "kurs": 27.6,
         "gebuehr": 5.0,
-        "gesamt": 1475.16,
+        "gesamt": 1495.4,
         "notiz": "Neukauf (Kauf-Signal)"
       },
       {

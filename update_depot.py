@@ -34,7 +34,7 @@ yf_tickers = {
     'Thales': 'HO.PA', 'ASML': 'ASML.AS', 'MTU Aero Engines': 'MTX.DE',
     'Rheinmetall': 'RHM.DE', 'SAP': 'SAP.DE', 'Safran': 'SAF.PA',
     'E.ON': 'EOAN.DE', 'RWE': 'RWE.DE', 'Infineon': 'IFX.DE',
-    'Airbus': 'AIR.PA', 'Planet Labs': 'PL', 'Eutelsat': 'ETL.PA'
+    'Airbus': 'AIR.PA', 'Planet Labs': '85H1.DE', 'Eutelsat': 'ETL.PA'
 }
 
 isin_mapping = {
