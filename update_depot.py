@@ -29,6 +29,13 @@ def get_recommendation(data_json, stock_name):
                 return item.get("empfehlung", "").lower()
     return "unbekannt"
 
+def get_reason(data_json, stock_name):
+    for sector, items in data_json.get("sektoren", {}).items():
+        for item in items:
+            if normalize_name(item["wertpapier"]) == stock_name:
+                return item.get("begruendung", "")
+    return ""
+
 yf_tickers = {
     'Leonardo': 'LDO.MI', 'Siemens Energy': 'ENR.DE', 'Rolls-Royce': 'RRU.DE',
     'Thales': 'HO.PA', 'ASML': 'ASML.AS', 'MTU Aero Engines': 'MTX.DE',
@@ -102,7 +109,17 @@ for p in positions:
     if "verkauf" in chart_rec or "verkauf" in funda_rec:
         units = p["stueck"]
         revenue = (units * current_price) - fee_per_trade
-        current_cash += revenue
+        investiert = p["investiert"]
+        gewinn_verlust_brutto = revenue - investiert
+        steuern = 0.0
+        if gewinn_verlust_brutto > 0:
+            steuern = round(gewinn_verlust_brutto * 0.26375, 2)
+        current_cash += (revenue - steuern)
+        
+        c_reason = get_reason(chart_data, stock)
+        f_reason = get_reason(funda_data, stock)
+        begruendung = f"Chartanalyse: {c_reason} | Fundamentalanalyse: {f_reason}"
+        
         summary.append(f"Strategischer Verkauf: {units}x {stock} zu {current_price:.2f} EUR. Grund: 'Verkaufen'-Signal.")
         transactions.append({
             "datum": datetime.now().strftime("%Y-%m-%d"),
@@ -112,8 +129,11 @@ for p in positions:
             "stueck": units,
             "kurs": current_price,
             "gebuehr": fee_per_trade,
-            "gesamt": round(revenue, 2),
-            "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)"
+            "steuern": steuern,
+            "gewinn_verlust": round(gewinn_verlust_brutto, 2),
+            "gesamt": round(revenue - steuern, 2),
+            "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
+            "begruendung": begruendung
         })
     else:
         p["boersenkurs"] = current_price
@@ -144,7 +164,16 @@ for p in halten_positions:
     units = p["stueck"]
     price = p["boersenkurs"]
     revenue = (units * price) - fee_per_trade
-    current_cash += revenue
+    investiert = p["investiert"]
+    gewinn_verlust_brutto = revenue - investiert
+    steuern = 0.0
+    if gewinn_verlust_brutto > 0:
+        steuern = round(gewinn_verlust_brutto * 0.26375, 2)
+    current_cash += (revenue - steuern)
+    
+    c_reason = get_reason(chart_data, stock)
+    f_reason = get_reason(funda_data, stock)
+    begruendung = f"Chartanalyse: {c_reason} | Fundamentalanalyse: {f_reason}"
     
     summary.append(f"Rebalancing-Verkauf: {units}x {stock} zu {price:.2f} EUR, um Liquidität für Zielportfolio zu schaffen.")
     transactions.append({
@@ -155,8 +184,11 @@ for p in halten_positions:
         "stueck": units,
         "kurs": price,
         "gebuehr": fee_per_trade,
-        "gesamt": round(revenue, 2),
-        "notiz": "Rebalancing (Kapitalbeschaffung für Neukäufe)"
+        "steuern": steuern,
+        "gewinn_verlust": round(gewinn_verlust_brutto, 2),
+        "gesamt": round(revenue - steuern, 2),
+        "notiz": "Rebalancing (Kapitalbeschaffung für Neukäufe)",
+        "begruendung": begruendung
     })
     positions.remove(p)
 
@@ -184,6 +216,10 @@ for stock in unowned_targets:
             "boersenwert": round(units_to_buy * price, 2),
             "gewinn_verlust": 0.0
         })
+        c_reason = get_reason(chart_data, stock)
+        f_reason = get_reason(funda_data, stock)
+        begruendung = f"Chartanalyse: {c_reason} | Fundamentalanalyse: {f_reason}"
+        
         transactions.append({
             "datum": datetime.now().strftime("%Y-%m-%d"),
             "typ": "Kauf",
@@ -192,8 +228,11 @@ for stock in unowned_targets:
             "stueck": units_to_buy,
             "kurs": price,
             "gebuehr": fee_per_trade,
+            "steuern": 0.0,
+            "gewinn_verlust": 0.0,
             "gesamt": round(total_cost, 2),
-            "notiz": "Neukauf (Kauf-Signal)"
+            "notiz": "Neukauf (Kauf-Signal)",
+            "begruendung": begruendung
         })
         summary.append(f"Kauf: {units_to_buy}x {stock} zu {price:.2f} EUR (Gesamt: {total_cost:.2f} EUR).")
 

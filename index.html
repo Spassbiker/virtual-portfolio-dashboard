@@ -436,25 +436,44 @@
             <tr>
                 <th>Datum</th>
                 <th>Typ</th>
-                <th>ISIN</th>
                 <th>Wertpapier</th>
                 <th>Stück</th>
                 <th>Kurs</th>
                 <th>Gebühr</th>
+                <th>Steuern</th>
+                <th>Gewinn/Verlust</th>
                 <th>Gesamt</th>
+                <th>Begründung</th>
             </tr>`;
         
         if (transData && transData.transaktionen) {
+            // Sortiere neueste zuerst (optional, aber nützlich, falls gewünscht - hier lassen wir die Reihenfolge wie sie ist oder drehen sie um)
+            // transData.transaktionen.reverse();
             transData.transaktionen.forEach(t => {
+                let steuern = t.steuern !== undefined ? t.steuern.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}) : '-';
+                let gv = t.gewinn_verlust !== undefined ? t.gewinn_verlust.toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'}) : '-';
+                let begruendung = t.begruendung || t.notiz || '';
+                
+                // Color coding for G/V
+                let gvColor = '';
+                if (t.gewinn_verlust !== undefined && t.typ === 'Verkauf') {
+                    gvColor = t.gewinn_verlust >= 0 ? 'color: #155724; background-color: #d4edda; padding: 2px 4px; border-radius: 4px;' : 'color: #721c24; background-color: #f8d7da; padding: 2px 4px; border-radius: 4px;';
+                    gv = `<span style="${gvColor}"><b>${gv}</b></span>`;
+                }
+                
+                let typColor = t.typ === 'Kauf' ? 'color: #155724;' : 'color: #721c24;';
+
                 transHtml += `<tr>
-                    <td>${t.datum}</td>
-                    <td><strong>${t.typ}</strong></td>
-                    <td>${t.isin || ''}</td>
-                    <td>${t.wertpapier}</td>
+                    <td style="white-space: nowrap;">${t.datum}</td>
+                    <td style="${typColor}"><strong>${t.typ}</strong></td>
+                    <td><strong>${t.wertpapier}</strong><br><small style="color: #666;">${t.isin || ''}</small></td>
                     <td>${t.stueck}</td>
                     <td>${t.kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
                     <td>${t.gebuehr.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                    <td>${t.gesamt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td>${steuern}</td>
+                    <td>${t.typ === 'Verkauf' ? gv : '-'}</td>
+                    <td><strong>${t.gesamt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</strong></td>
+                    <td style="font-size: 0.85em; color: #555;">${begruendung}</td>
                 </tr>`;
             });
         }
