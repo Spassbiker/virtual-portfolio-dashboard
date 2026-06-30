@@ -1,0 +1,10 @@
+{
+  "depot": {
+    "startkapital": 10000,
+    "aktueller_barbestand": 10000,
+    "portfoliowert": 0,
+    "gesamtvermoegen": 10000,
+    "positionen": [],
+    "transaktionshistorie": []
+  }
+}

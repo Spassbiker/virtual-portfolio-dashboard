@@ -1,0 +1,12 @@
+{
+  "parent": { "type": "page_id", "page_id": "38d42c0b-de77-8047-aa90-c6e2d1ce2283" },
+  "title": [ { "type": "text", "text": { "content": "Mein Aktien-Depot" } } ],
+  "properties": {
+    "Name": { "title": {} },
+    "Symbol": { "rich_text": {} },
+    "Anzahl": { "number": { "format": "number" } },
+    "Kaufkurs": { "number": { "format": "euro" } },
+    "Börsenpreis": { "number": { "format": "euro" } },
+    "Gesamtwert": { "number": { "format": "euro" } }
+  }
+}
