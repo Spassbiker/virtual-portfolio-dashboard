@@ -1,10 +1,72 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 10000,
-    "portfoliowert": 0,
-    "gesamtvermoegen": 10000,
-    "positionen": [],
-    "transaktionshistorie": []
+    "aktueller_barbestand": 380.0,
+    "portfoliowert": 9605.0,
+    "gesamtvermoegen": 9985.0,
+    "positionen": [
+      {
+        "symbol": "EUNL.DE",
+        "name": "iShares Core MSCI World",
+        "anteile": 50,
+        "kaufkurs_durchschnitt": 130.0,
+        "aktueller_kurs": 130.0,
+        "gesamtwert": 6500.0
+      },
+      {
+        "symbol": "MSFT.DE",
+        "name": "Microsoft Corp.",
+        "anteile": 5,
+        "kaufkurs_durchschnitt": 325.0,
+        "aktueller_kurs": 325.0,
+        "gesamtwert": 1625.0
+      },
+      {
+        "symbol": "NVDA.DE",
+        "name": "Nvidia Corp.",
+        "anteile": 8,
+        "kaufkurs_durchschnitt": 185.0,
+        "aktueller_kurs": 185.0,
+        "gesamtwert": 1480.0
+      }
+    ],
+    "transaktionshistorie": [
+      {
+        "datum": "2026-06-30",
+        "typ": "Kauf",
+        "symbol": "EUNL.DE",
+        "name": "iShares Core MSCI World",
+        "anteile": 50,
+        "kurs": 130.0,
+        "gebuehren": 5.0,
+        "steuern": 0.0,
+        "gesamtbetrag": 6505.0,
+        "notiz": "Erster Aufbau Core-Satellite Strategie"
+      },
+      {
+        "datum": "2026-06-30",
+        "typ": "Kauf",
+        "symbol": "MSFT.DE",
+        "name": "Microsoft Corp.",
+        "anteile": 5,
+        "kurs": 325.0,
+        "gebuehren": 5.0,
+        "steuern": 0.0,
+        "gesamtbetrag": 1630.0,
+        "notiz": "Erster Aufbau Core-Satellite Strategie"
+      },
+      {
+        "datum": "2026-06-30",
+        "typ": "Kauf",
+        "symbol": "NVDA.DE",
+        "name": "Nvidia Corp.",
+        "anteile": 8,
+        "kurs": 185.0,
+        "gebuehren": 5.0,
+        "steuern": 0.0,
+        "gesamtbetrag": 1485.0,
+        "notiz": "Erster Aufbau Core-Satellite Strategie"
+      }
+    ]
   }
 }
