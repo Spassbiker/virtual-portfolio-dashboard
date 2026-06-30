@@ -18,7 +18,7 @@ Damit das Dashboard für dich unter einer URL (wie eine echte Webseite) auf GitH
    - Wähle links in der Seitenleiste **Pages**.
    - Wähle unter *Build and deployment* -> *Source* den Branch `main` (oder `master`) und als Ordner `/ (root)`.
    - Klicke auf **Save**.
-4. **Dashboard aufrufen:** Nach ca. 1-2 Minuten ist dein Dashboard unter `https://<dein-github-name>.github.io/virtual-portfolio/` online!
+4. **Dashboard aufrufen:** Nach ca. 1-2 Minuten ist dein Dashboard unter `https://spassbiker.github.io/virtual-portfolio-dashboard/` online!
 
 ## 📊 Aufbau der `index.html`
 
