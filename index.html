@@ -84,56 +84,55 @@
         }
 
         function renderChart(chartData) {
-            let html = `<h2>Ergebnisse der Chartanalyse</h2><p>Übersicht der kurz-, mittel- und langfristigen Trendbewertungen.</p>`;
-            for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
-                html += `<h3 class="sector-title">${sektor}</h3>
-                <table>
-                    <tr>
-                        <th style="width: 25%">Wertpapier</th>
-                        <th style="width: 15%">Empfehlung</th>
-                        <th style="width: 60%">Charttechnische Begründung</th>
-                    </tr>`;
-                werte.forEach(w => {
-                    html += `<tr>
-                        <td><strong>${w.wertpapier}</strong></td>
-                        <td>${getBadge(w.empfehlung)}</td>
-                        <td>${w.begruendung}</td>
-                    </tr>`;
-                });
-                html += `</table>`;
-            }
+            let html = `<h2>Ergebnisse der Chartanalyse</h2><p>Aktuelle technische Analyse.</p>`;
+            html += `<table>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Trend</th>
+                    <th>SMA50</th>
+                    <th>SMA200</th>
+                    <th>RSI</th>
+                    <th>Signal</th>
+                </tr>`;
+            chartData.analysen.forEach(w => {
+                html += `<tr>
+                    <td><strong>${w.symbol}</strong></td>
+                    <td>${w.name}</td>
+                    <td>${w.trend}</td>
+                    <td>${w.sma50}</td>
+                    <td>${w.sma200}</td>
+                    <td>${w.rsi}</td>
+                    <td>${getBadge(w.signal)}</td>
+                </tr>`;
+            });
+            html += `</table>`;
             document.getElementById('chart').innerHTML = html;
         }
 
         function renderFunda(fundaData) {
-            let html = `<h2>Ergebnisse der Fundamentalanalyse</h2><p>Vergleichende Gegenüberstellung nach der Commerzbank-Methodik.</p>`;
-            for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
-                html += `<h3 class="sector-title">${sektor}</h3>
-                <table>
-                    <tr>
-                        <th>Wertpapier</th>
-                        <th>KGV</th>
-                        <th>KBV</th>
-                        <th>KUV</th>
-                        <th>KCV</th>
-                        <th>Dividende</th>
-                        <th>Empfehlung</th>
-                        <th style="width: 35%">Begründung</th>
-                    </tr>`;
-                werte.forEach(w => {
-                    html += `<tr>
-                        <td><strong>${w.wertpapier}</strong></td>
-                        <td>${w.kgv}</td>
-                        <td>${w.kbv}</td>
-                        <td>${w.kuv}</td>
-                        <td>${w.kcv}</td>
-                        <td>${w.dividendenrendite}</td>
-                        <td>${getBadge(w.empfehlung)}</td>
-                        <td>${w.begruendung}</td>
-                    </tr>`;
-                });
-                html += `</table>`;
-            }
+            let html = `<h2>Ergebnisse der Fundamentalanalyse</h2><p>Fundamentale Kennzahlen.</p>`;
+            html += `<table>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>KGV</th>
+                    <th>Dividendenrendite</th>
+                    <th>Wachstumsprognose</th>
+                    <th>Empfehlung</th>
+                    <th>Notiz</th>
+                </tr>`;
+            fundaData.analysen.forEach(w => {
+                html += `<tr>
+                    <td><strong>${w.symbol}</strong></td>
+                    <td>${w.name}</td>
+                    <td>${w.kgv !== null ? w.kgv : '-'}</td>
+                    <td>${w.dividendenrendite}%</td>
+                    <td>${w.wachstumsprognose}</td>
+                    <td>${w.notiz}</td>
+                </tr>`;
+            });
+            html += `</table>`;
             document.getElementById('funda').innerHTML = html;
         }
 
@@ -148,31 +147,25 @@
                 <div class="stat-card"><h4>Startkapital</h4><p>${d.startkapital.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
             </div>
             
-            <h3 class="sector-title">Aktuelle Positionen (Wertpapiere)</h3>
+            <h3 class="sector-title">Aktuelle Positionen</h3>
             <table>
                 <tr>
-                    <th>WKN</th>
-                    <th>Wertpapier</th>
-                    <th>Stück</th>
-                    <th>Kaufkurs</th>
-                    <th>Börsenkurs</th>
-                    <th>Investiert</th>
-                    <th>Börsenwert</th>
-                    <th>Gewinn/Verlust</th>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Anteile</th>
+                    <th>Kaufkurs (Durchschn.)</th>
+                    <th>Aktueller Kurs</th>
+                    <th>Gesamtwert</th>
                 </tr>`;
             if(d.positionen) {
                 d.positionen.forEach(p => {
-                    let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
-                    let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
                     html += `<tr>
-                        <td>${p.wkn || '-'}</td>
-                        <td><strong>${p.wertpapier}</strong></td>
-                        <td>${p.stueck}</td>
-                        <td>${p.kaufkurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${(p.boersenkurs || p.kaufkurs).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${p.investiert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${(p.boersenwert || p.investiert).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${(p.gewinn_verlust || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'})}</span></td>
+                        <td><strong>${p.symbol}</strong></td>
+                        <td>${p.name}</td>
+                        <td>${p.anteile}</td>
+                        <td>${p.kaufkurs_durchschnitt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td>${p.aktueller_kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td>${p.gesamtwert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
                     </tr>`;
                 });
             }
@@ -183,22 +176,26 @@
                 <tr>
                     <th>Datum</th>
                     <th>Typ</th>
-                    <th>Wertpapier</th>
-                    <th>Stück</th>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Anteile</th>
                     <th>Kurs</th>
-                    <th>Gebühr</th>
-                    <th>Gesamt</th>
+                    <th>Gebühren</th>
+                    <th>Gesamtbetrag</th>
+                    <th>Notiz</th>
                 </tr>`;
             if(d.transaktionshistorie) {
                 d.transaktionshistorie.forEach(t => {
                     html += `<tr>
                         <td>${t.datum}</td>
                         <td><strong>${t.typ}</strong></td>
-                        <td>${t.wertpapier}</td>
-                        <td>${t.stueck}</td>
+                        <td>${t.symbol}</td>
+                        <td>${t.name}</td>
+                        <td>${t.anteile}</td>
                         <td>${t.kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${t.gebuehr.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${t.gesamt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td>${t.gebuehren.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td>${t.gesamtbetrag.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                        <td>${t.notiz || '-'}</td>
                     </tr>`;
                 });
             }
