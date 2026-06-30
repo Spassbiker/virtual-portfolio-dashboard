@@ -1,48 +1,38 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 169.39,
-    "portfoliowert": 9755.61,
-    "gesamtvermoegen": 9925.0,
+    "aktueller_barbestand": 122.39,
+    "portfoliowert": 9842.61,
+    "gesamtvermoegen": 9965.0,
     "positionen": [
-      {
-        "isin": "FR0000121329",
-        "wertpapier": "Thales",
-        "stueck": 4,
-        "kaufkurs": 221.6,
-        "boersenkurs": 221.6,
-        "investiert": 886.4,
-        "boersenwert": 886.4,
-        "gewinn_verlust": 0.0
-      },
       {
         "isin": "FR0010221234",
         "wertpapier": "Eutelsat",
         "stueck": 643,
-        "kaufkurs": 2.323,
-        "boersenkurs": 2.323,
-        "investiert": 1493.69,
-        "boersenwert": 1493.69,
+        "kaufkurs": 2.324,
+        "boersenkurs": 2.324,
+        "investiert": 1494.33,
+        "boersenwert": 1494.33,
         "gewinn_verlust": 0.0
       },
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
-        "kaufkurs": 46.41,
-        "boersenkurs": 46.41,
-        "investiert": 1485.12,
-        "boersenwert": 1485.12,
+        "kaufkurs": 46.38,
+        "boersenkurs": 46.38,
+        "investiert": 1484.16,
+        "boersenwert": 1484.16,
         "gewinn_verlust": 0.0
       },
       {
-        "isin": "DE000ENER6Y0",
-        "wertpapier": "Siemens Energy",
-        "stueck": 9,
-        "kaufkurs": 165.08,
-        "boersenkurs": 165.08,
-        "investiert": 1485.72,
-        "boersenwert": 1485.72,
+        "isin": "DE000A0D9PT0",
+        "wertpapier": "MTU Aero Engines",
+        "stueck": 4,
+        "kaufkurs": 363.3,
+        "boersenkurs": 363.3,
+        "investiert": 1453.2,
+        "boersenwert": 1453.2,
         "gewinn_verlust": 0.0
       },
       {
@@ -56,23 +46,33 @@
         "gewinn_verlust": 0.0
       },
       {
-        "isin": "DE000A0D9PT0",
-        "wertpapier": "MTU Aero Engines",
-        "stueck": 4,
-        "kaufkurs": 363.7,
-        "boersenkurs": 363.7,
-        "investiert": 1454.8,
-        "boersenwert": 1454.8,
+        "isin": "DE0007030009",
+        "wertpapier": "Rheinmetall",
+        "stueck": 1,
+        "kaufkurs": 975.6,
+        "boersenkurs": 975.6,
+        "investiert": 975.6,
+        "boersenwert": 975.6,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "isin": "GB00B63H8491",
+        "wertpapier": "Rolls-Royce",
+        "stueck": 89,
+        "kaufkurs": 16.72,
+        "boersenkurs": 16.72,
+        "investiert": 1488.08,
+        "boersenwert": 1488.08,
         "gewinn_verlust": 0.0
       },
       {
         "isin": "DE0007164600",
         "wertpapier": "SAP",
         "stueck": 11,
-        "kaufkurs": 134.52,
-        "boersenkurs": 134.52,
-        "investiert": 1479.72,
-        "boersenwert": 1479.72,
+        "kaufkurs": 134.28,
+        "boersenkurs": 134.28,
+        "investiert": 1477.08,
+        "boersenwert": 1477.08,
         "gewinn_verlust": 0.0
       }
     ],
@@ -80,34 +80,12 @@
       {
         "datum": "2026-06-30",
         "typ": "Kauf",
-        "isin": "GB00B63H8491",
-        "wertpapier": "Rolls-Royce",
-        "stueck": 89,
-        "kurs": 16.69,
-        "gebuehr": 5.0,
-        "gesamt": 1490.41,
-        "notiz": "Neukauf (Kauf-Signal)"
-      },
-      {
-        "datum": "2026-06-30",
-        "typ": "Kauf",
-        "isin": "FR0000121329",
-        "wertpapier": "Thales",
-        "stueck": 6,
-        "kurs": 221.6,
-        "gebuehr": 5.0,
-        "gesamt": 1334.6,
-        "notiz": "Neukauf (Kauf-Signal)"
-      },
-      {
-        "datum": "2026-06-30",
-        "typ": "Kauf",
         "isin": "FR0010221234",
         "wertpapier": "Eutelsat",
         "stueck": 643,
-        "kurs": 2.323,
+        "kurs": 2.324,
         "gebuehr": 5.0,
-        "gesamt": 1498.69,
+        "gesamt": 1499.33,
         "notiz": "Neukauf (Kauf-Signal)"
       },
       {
@@ -116,54 +94,21 @@
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
-        "kurs": 46.41,
+        "kurs": 46.38,
         "gebuehr": 5.0,
-        "gesamt": 1490.12,
+        "gesamt": 1489.16,
         "notiz": "Neukauf (Kauf-Signal)"
       },
       {
         "datum": "2026-06-30",
         "typ": "Kauf",
-        "isin": "FR0000073272",
-        "wertpapier": "Safran",
+        "isin": "DE000A0D9PT0",
+        "wertpapier": "MTU Aero Engines",
         "stueck": 4,
-        "kurs": 342.0,
+        "kurs": 363.3,
         "gebuehr": 5.0,
-        "gesamt": 1373.0,
+        "gesamt": 1458.2,
         "notiz": "Neukauf (Kauf-Signal)"
-      },
-      {
-        "datum": "2026-06-30",
-        "typ": "Kauf",
-        "isin": "DE000ENER6Y0",
-        "wertpapier": "Siemens Energy",
-        "stueck": 9,
-        "kurs": 165.08,
-        "gebuehr": 5.0,
-        "gesamt": 1490.72,
-        "notiz": "Neukauf (Kauf-Signal)"
-      },
-      {
-        "datum": "2026-06-30",
-        "typ": "Kauf",
-        "isin": "DE0007030009",
-        "wertpapier": "Rheinmetall",
-        "stueck": 1,
-        "kurs": 973.8,
-        "gebuehr": 5.0,
-        "gesamt": 978.8,
-        "notiz": "Neukauf (Kauf-Signal)"
-      },
-      {
-        "datum": "2026-06-30",
-        "typ": "Verkauf",
-        "isin": "FR0000073272",
-        "wertpapier": "Safran",
-        "stueck": 4,
-        "kurs": 342.0,
-        "gebuehr": 5.0,
-        "gesamt": 1363.0,
-        "notiz": "Rebalancing f\u00fcr Neukauf von Planet Labs"
       },
       {
         "datum": "2026-06-30",
@@ -178,58 +123,25 @@
       },
       {
         "datum": "2026-06-30",
-        "typ": "Verkauf",
+        "typ": "Kauf",
         "isin": "DE0007030009",
         "wertpapier": "Rheinmetall",
         "stueck": 1,
-        "kurs": 973.8,
+        "kurs": 975.6,
         "gebuehr": 5.0,
-        "gesamt": 968.8,
-        "notiz": "Rebalancing f\u00fcr Neukauf von MTU Aero Engines"
-      },
-      {
-        "datum": "2026-06-30",
-        "typ": "Verkauf",
-        "isin": "GB00B63H8491",
-        "wertpapier": "Rolls-Royce",
-        "stueck": 16,
-        "kurs": 16.69,
-        "gebuehr": 5.0,
-        "gesamt": 262.04,
-        "notiz": "Rebalancing f\u00fcr Neukauf von MTU Aero Engines"
-      },
-      {
-        "datum": "2026-06-30",
-        "typ": "Kauf",
-        "isin": "DE000A0D9PT0",
-        "wertpapier": "MTU Aero Engines",
-        "stueck": 4,
-        "kurs": 363.7,
-        "gebuehr": 5.0,
-        "gesamt": 1459.8,
+        "gesamt": 980.6,
         "notiz": "Neukauf (Kauf-Signal)"
       },
       {
         "datum": "2026-06-30",
-        "typ": "Verkauf",
+        "typ": "Kauf",
         "isin": "GB00B63H8491",
         "wertpapier": "Rolls-Royce",
-        "stueck": 73,
-        "kurs": 16.69,
+        "stueck": 89,
+        "kurs": 16.72,
         "gebuehr": 5.0,
-        "gesamt": 1213.37,
-        "notiz": "Rebalancing f\u00fcr Neukauf von SAP"
-      },
-      {
-        "datum": "2026-06-30",
-        "typ": "Verkauf",
-        "isin": "FR0000121329",
-        "wertpapier": "Thales",
-        "stueck": 2,
-        "kurs": 221.6,
-        "gebuehr": 5.0,
-        "gesamt": 438.2,
-        "notiz": "Rebalancing f\u00fcr Neukauf von SAP"
+        "gesamt": 1493.08,
+        "notiz": "Neukauf (Kauf-Signal)"
       },
       {
         "datum": "2026-06-30",
@@ -237,9 +149,9 @@
         "isin": "DE0007164600",
         "wertpapier": "SAP",
         "stueck": 11,
-        "kurs": 134.52,
+        "kurs": 134.28,
         "gebuehr": 5.0,
-        "gesamt": 1484.72,
+        "gesamt": 1482.08,
         "notiz": "Neukauf (Kauf-Signal)"
       }
     ]
