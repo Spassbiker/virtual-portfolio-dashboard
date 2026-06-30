@@ -1,71 +1,151 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 380.0,
-    "portfoliowert": 9605.0,
-    "gesamtvermoegen": 9985.0,
+    "aktueller_barbestand": 203.6,
+    "portfoliowert": 9761.4,
+    "gesamtvermoegen": 9965.0,
     "positionen": [
       {
-        "symbol": "EUNL.DE",
-        "name": "iShares Core MSCI World",
-        "anteile": 50,
-        "kaufkurs_durchschnitt": 130.0,
-        "aktueller_kurs": 130.0,
-        "gesamtwert": 6500.0
+        "symbol": "MTU .DE",
+        "wertpapier": "MTU Aero Engines",
+        "stueck": 6,
+        "kaufkurs": 235.0,
+        "boersenkurs": 235.0,
+        "investiert": 1410.0,
+        "boersenwert": 1410.0,
+        "gewinn_verlust": 0.0
       },
       {
-        "symbol": "MSFT.DE",
-        "name": "Microsoft Corp.",
-        "anteile": 5,
-        "kaufkurs_durchschnitt": 325.0,
-        "aktueller_kurs": 325.0,
-        "gesamtwert": 1625.0
+        "symbol": "LEON.DE",
+        "wertpapier": "Leonardo",
+        "stueck": 66,
+        "kaufkurs": 22.5,
+        "boersenkurs": 22.5,
+        "investiert": 1485.0,
+        "boersenwert": 1485.0,
+        "gewinn_verlust": 0.0
       },
       {
-        "symbol": "NVDA.DE",
-        "name": "Nvidia Corp.",
-        "anteile": 8,
-        "kaufkurs_durchschnitt": 185.0,
-        "aktueller_kurs": 185.0,
-        "gesamtwert": 1480.0
+        "symbol": "SAFR.DE",
+        "wertpapier": "Safran",
+        "stueck": 7,
+        "kaufkurs": 210.0,
+        "boersenkurs": 210.0,
+        "investiert": 1470.0,
+        "boersenwert": 1470.0,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "symbol": "SIEM.DE",
+        "wertpapier": "Siemens Energy",
+        "stueck": 55,
+        "kaufkurs": 26.8,
+        "boersenkurs": 26.8,
+        "investiert": 1474.0,
+        "boersenwert": 1474.0,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "symbol": "ROLL.DE",
+        "wertpapier": "Rolls-Royce",
+        "stueck": 287,
+        "kaufkurs": 5.2,
+        "boersenkurs": 5.2,
+        "investiert": 1492.4,
+        "boersenwert": 1492.4,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "symbol": "ASML.DE",
+        "wertpapier": "ASML",
+        "stueck": 1,
+        "kaufkurs": 950.0,
+        "boersenkurs": 950.0,
+        "investiert": 950.0,
+        "boersenwert": 950.0,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "symbol": "SAP.DE",
+        "wertpapier": "SAP",
+        "stueck": 8,
+        "kaufkurs": 185.0,
+        "boersenkurs": 185.0,
+        "investiert": 1480.0,
+        "boersenwert": 1480.0,
+        "gewinn_verlust": 0.0
       }
     ],
     "transaktionshistorie": [
       {
         "datum": "2026-06-30",
         "typ": "Kauf",
-        "symbol": "EUNL.DE",
-        "name": "iShares Core MSCI World",
-        "anteile": 50,
-        "kurs": 130.0,
-        "gebuehren": 5.0,
-        "steuern": 0.0,
-        "gesamtbetrag": 6505.0,
-        "notiz": "Erster Aufbau Core-Satellite Strategie"
+        "wertpapier": "MTU Aero Engines",
+        "stueck": 6,
+        "kurs": 235.0,
+        "gebuehr": 5.0,
+        "gesamt": 1415.0,
+        "notiz": "Kaufempfehlung in Chart- & Fundamentalanalyse"
       },
       {
         "datum": "2026-06-30",
         "typ": "Kauf",
-        "symbol": "MSFT.DE",
-        "name": "Microsoft Corp.",
-        "anteile": 5,
-        "kurs": 325.0,
-        "gebuehren": 5.0,
-        "steuern": 0.0,
-        "gesamtbetrag": 1630.0,
-        "notiz": "Erster Aufbau Core-Satellite Strategie"
+        "wertpapier": "Leonardo",
+        "stueck": 66,
+        "kurs": 22.5,
+        "gebuehr": 5.0,
+        "gesamt": 1490.0,
+        "notiz": "Kaufempfehlung in Chart- & Fundamentalanalyse"
       },
       {
         "datum": "2026-06-30",
         "typ": "Kauf",
-        "symbol": "NVDA.DE",
-        "name": "Nvidia Corp.",
-        "anteile": 8,
+        "wertpapier": "Safran",
+        "stueck": 7,
+        "kurs": 210.0,
+        "gebuehr": 5.0,
+        "gesamt": 1475.0,
+        "notiz": "Kaufempfehlung in Chart- & Fundamentalanalyse"
+      },
+      {
+        "datum": "2026-06-30",
+        "typ": "Kauf",
+        "wertpapier": "Siemens Energy",
+        "stueck": 55,
+        "kurs": 26.8,
+        "gebuehr": 5.0,
+        "gesamt": 1479.0,
+        "notiz": "Kaufempfehlung in Chart- & Fundamentalanalyse"
+      },
+      {
+        "datum": "2026-06-30",
+        "typ": "Kauf",
+        "wertpapier": "Rolls-Royce",
+        "stueck": 287,
+        "kurs": 5.2,
+        "gebuehr": 5.0,
+        "gesamt": 1497.4,
+        "notiz": "Kaufempfehlung in Chart- & Fundamentalanalyse"
+      },
+      {
+        "datum": "2026-06-30",
+        "typ": "Kauf",
+        "wertpapier": "ASML",
+        "stueck": 1,
+        "kurs": 950.0,
+        "gebuehr": 5.0,
+        "gesamt": 955.0,
+        "notiz": "Kaufempfehlung in Chart- & Fundamentalanalyse"
+      },
+      {
+        "datum": "2026-06-30",
+        "typ": "Kauf",
+        "wertpapier": "SAP",
+        "stueck": 8,
         "kurs": 185.0,
-        "gebuehren": 5.0,
-        "steuern": 0.0,
-        "gesamtbetrag": 1485.0,
-        "notiz": "Erster Aufbau Core-Satellite Strategie"
+        "gebuehr": 5.0,
+        "gesamt": 1485.0,
+        "notiz": "Kaufempfehlung in Chart- & Fundamentalanalyse"
       }
     ]
   }
