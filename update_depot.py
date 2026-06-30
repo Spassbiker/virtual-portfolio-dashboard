@@ -42,7 +42,7 @@ isin_mapping = {
     'Thales': 'FR0000121329', 'ASML': 'NL0010273215', 'MTU Aero Engines': 'DE000A0D9PT0',
     'Rheinmetall': 'DE0007030009', 'SAP': 'DE0007164600', 'Safran': 'FR0000073272',
     'E.ON': 'DE000ENAG999', 'RWE': 'DE0007037129', 'Infineon': 'DE0006231004',
-    'Airbus': 'NL0000235190', 'Planet Labs': 'US72703X1054', 'Encavis': 'DE0006095003',
+    'Airbus': 'NL0000235190', 'Planet Labs': 'US72703X1063', 'Encavis': 'DE0006095003',
     'Eutelsat': 'FR0010221234'
 }
 

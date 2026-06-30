@@ -36,7 +36,7 @@
         "gewinn_verlust": 0.0
       },
       {
-        "isin": "US72703X1054",
+        "isin": "US72703X1063",
         "wertpapier": "Planet Labs",
         "stueck": 54,
         "kaufkurs": 27.6,
@@ -113,7 +113,7 @@
       {
         "datum": "2026-06-30",
         "typ": "Kauf",
-        "isin": "US72703X1054",
+        "isin": "US72703X1063",
         "wertpapier": "Planet Labs",
         "stueck": 54,
         "kurs": 27.6,
