@@ -28,7 +28,6 @@
         .stat-card { background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6; text-align: center; }
         .stat-card h4 { margin: 0 0 10px 0; color: #6c757d; font-size: 0.9em; text-transform: uppercase; }
         .stat-card p { margin: 0; font-size: 1.5em; font-weight: bold; color: #2c3e50; }
-        .loading { text-align: center; font-size: 1.2em; color: #7f8c8d; margin: 40px 0; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
@@ -40,18 +39,298 @@
             <button class="tab-button active" onclick="openTab(event, 'chart')">Chartanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
+            <button class="tab-button" onclick="openTab(event, 'transaktionen')">Transaktionshistorie</button>
         </div>
-
-        <div id="loading" class="loading">Daten werden live von GitHub geladen...</div>
 
         <div id="chart" class="tab-content active"></div>
         <div id="funda" class="tab-content"></div>
         <div id="depot" class="tab-content"></div>
+        <div id="transaktionen" class="tab-content"></div>
     </div>
 
+    <!-- Data Injection -->
     <script>
+        const chartData = {
+  "sektoren": {
+    "Energie": [
+      { "wertpapier": "Siemens Energy", "empfehlung": "Kaufen", "begruendung": "Starke Erholung über SMA 200, hoher RSI-Aufwärtstrend." },
+      { "wertpapier": "RWE", "empfehlung": "Halten", "begruendung": "Seitwärtsphase, starke Unterstützung bei 30 EUR." },
+      { "wertpapier": "E.ON", "empfehlung": "Halten", "begruendung": "Defensive Stabilität, langsames, aber stetiges Wachstum." },
+      { "wertpapier": "Encavis", "empfehlung": "Kaufen", "begruendung": "Bruch des mittelfristigen Abwärtstrends, Momentum positiv." },
+      { "wertpapier": "SMA Solar", "empfehlung": "Verkaufen", "begruendung": "Deutlicher Abwärtstrend, RSI im überverkauften Bereich, keine Bodenbildung." },
+      { "wertpapier": "RWE AG", "empfehlung": "Kaufen", "begruendung": "RSI im neutralen Bereich, GD200 deutet auf langfristigen Aufwärtstrend hin." },
+      { "wertpapier": "E.ON SE", "empfehlung": "Kaufen", "begruendung": "Starke Unterstützung bei den gleitenden Durchschnitten, hohe relative Stärke." },
+      { "wertpapier": "Siemens Energy (Teil 2)", "empfehlung": "Halten", "begruendung": "Erholung nach Kursrücksetzern, MACD zeigt leichtes Kaufsignal." },
+      { "wertpapier": "Encavis AG", "empfehlung": "Verkaufen", "begruendung": "Chart zeigt Abwärtstrend unter dem GD50, RSI schwach." },
+      { "wertpapier": "Nordex SE", "empfehlung": "Halten", "begruendung": "Volatilität hoch, kurzfristige Ausbrüche möglich, aber Widerstände nahe." }
+    ],
+    "Verteidigung": [
+      { "wertpapier": "Rheinmetall", "empfehlung": "Halten", "begruendung": "Hohe Bewertung, leichte Konsolidierung unter Widerstand." },
+      { "wertpapier": "Hensoldt", "empfehlung": "Kaufen", "begruendung": "Aufwärtstrend intakt, charttechnisch keine Überhitzung." },
+      { "wertpapier": "Airbus", "empfehlung": "Kaufen", "begruendung": "Unterstützungszone bei 180 EUR erfolgreich getestet." },
+      { "wertpapier": "BAE Systems", "empfehlung": "Halten", "begruendung": "Stabile Performance, jedoch geringes kurzfristiges Momentum." },
+      { "wertpapier": "Northrop Grumman", "empfehlung": "Kaufen", "begruendung": "Struktureller Ausbruch aus langjähriger Seitwärtsbewegung." },
+      { "wertpapier": "Rheinmetall (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Starker Trend, RSI überkauft aber stabil, Trendfolge-Indikatoren positiv." },
+      { "wertpapier": "Hensoldt AG", "empfehlung": "Halten", "begruendung": "Konsolidierung auf hohem Niveau, GD50 als Unterstützung." },
+      { "wertpapier": "Leonardo SpA", "empfehlung": "Kaufen", "begruendung": "Ausbruch aus langfristiger Seitwärtsphase, Momentum nimmt zu." },
+      { "wertpapier": "Thales SA", "empfehlung": "Kaufen", "begruendung": "Stabiler Aufwärtstrend, GD200 als sichere Basis." },
+      { "wertpapier": "BAE Systems (Teil 2)", "empfehlung": "Halten", "begruendung": "Etwas überhitzt kurzfristig, aber langfristig intakter Aufwärtstrend." }
+    ],
+    "Luft- und Raumfahrttechnik": [
+      { "wertpapier": "MTU Aero Engines", "empfehlung": "Kaufen", "begruendung": "Starker Trendkanal, SMA 50 fungiert als dynamische Unterstützung." },
+      { "wertpapier": "Safran", "empfehlung": "Halten", "begruendung": "Konsolidierung auf hohem Niveau, abwarten auf Ausbruch." },
+      { "wertpapier": "Rolls-Royce", "empfehlung": "Kaufen", "begruendung": "Enormes Momentum, charttechnische Ziele auf der Oberseite." },
+      { "wertpapier": "Dassault Aviation", "empfehlung": "Halten", "begruendung": "Niedriges Volumen, seitwärts, geringes Potenzial kurzfristig." },
+      { "wertpapier": "Leonardo", "empfehlung": "Verkaufen", "begruendung": "Widerstandszone nicht durchbrochen, Trendumkehr eingeleitet." },
+      { "wertpapier": "MTU Aero Eng. (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Nach Korrektur wieder bullisches Momentum, RSI stabil." },
+      { "wertpapier": "Safran SA (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Trendstark, keine Anzeichen für Trendumkehr." },
+      { "wertpapier": "Rolls-Royce (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Massive Erholung, GDs zeigen steilen Aufwärtstrend." },
+      { "wertpapier": "Dassault Av.", "empfehlung": "Halten", "begruendung": "Sehr geringe Volatilität, Seitwärtstrend überwiegt." },
+      { "wertpapier": "Airbus SE", "empfehlung": "Halten", "begruendung": "Kurzfristig technischer Druck, langfristige Basis intakt." }
+    ],
+    "Satellitentechnik": [
+      { "wertpapier": "OHB", "empfehlung": "Halten", "begruendung": "Volatile Seitwärtsbewegung, abwarten auf Nachrichten." },
+      { "wertpapier": "SES", "empfehlung": "Verkaufen", "begruendung": "Dauerhafter Abwärtstrend, keine charttechnische Unterstützung." },
+      { "wertpapier": "Eutelsat", "empfehlung": "Verkaufen", "begruendung": "Strukturprobleme im Chart sichtbar, unter SMA 200." },
+      { "wertpapier": "Maxar", "empfehlung": "Kaufen", "begruendung": "Bodenbildung abgeschlossen, bullisches Muster kurzfristig." },
+      { "wertpapier": "Airbus", "empfehlung": "Kaufen", "begruendung": "(siehe Verteidigung, hohe Synergieeffekte)." },
+      { "wertpapier": "OHB SE", "empfehlung": "Halten", "begruendung": "Seitwärtsbewegung, Volumen fehlt für gerichtete Signale." },
+      { "wertpapier": "SES SA (Teil 2)", "empfehlung": "Verkaufen", "begruendung": "Chart zeigt klaren Abwärtstrend, MACD negativ." },
+      { "wertpapier": "Eutelsat Com.", "empfehlung": "Verkaufen", "begruendung": "Charttechnisch angeschlagen, keine Anzeichen einer Bodenbildung." },
+      { "wertpapier": "Rocket Lab", "empfehlung": "Kaufen", "begruendung": "Starke technische Dynamik, hohes Volumen bei Ausbrüchen." },
+      { "wertpapier": "Planet Labs", "empfehlung": "Verkaufen", "begruendung": "Abwärtstrend, unterschreitet wichtige Unterstützungsniveaus." }
+    ],
+    "Technologie": [
+      { "wertpapier": "SAP", "empfehlung": "Kaufen", "begruendung": "Klare Aufwärtsstruktur, übergeordneter Trend intakt." },
+      { "wertpapier": "Infineon", "empfehlung": "Halten", "begruendung": "Zyklische Bodenbildung, RSI zeigt erste Stärken." },
+      { "wertpapier": "ASML", "empfehlung": "Kaufen", "begruendung": "Rücksetzer zum SMA 200 bietet gute Einstiegschance." },
+      { "wertpapier": "TeamViewer", "empfehlung": "Verkaufen", "begruendung": "Abwärtstrend seit Monaten, keine Anzeichen einer Wende." },
+      { "wertpapier": "Delivery Hero", "empfehlung": "Halten", "begruendung": "Spekulative Seitwärtsphase, hoher charttechnischer Druck." },
+      { "wertpapier": "SAP SE (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Sehr starkes Momentum, neues Allzeithoch treibt Käufe an." },
+      { "wertpapier": "Infineon Tech (Teil 2)", "empfehlung": "Halten", "begruendung": "Zyklische Schwäche kurzfristig, aber langfristig gute Basis." },
+      { "wertpapier": "Dt. Telekom", "empfehlung": "Kaufen", "begruendung": "Defensive Stärke, technischer Ausbruch über Widerstandsbereich." },
+      { "wertpapier": "TeamViewer (Teil 2)", "empfehlung": "Verkaufen", "begruendung": "Chart zeigt Abwärtstrend, GDs als Widerstand von oben." },
+      { "wertpapier": "Aixtron SE", "empfehlung": "Halten", "begruendung": "Hohe Volatilität, kurzfristige Erholungschancen, langfristig instabil." }
+    ]
+  }
+};
+        const fundaData = {
+  "sektoren": {
+    "Energie": [
+      { "wertpapier": "Siemens Energy", "kgv": "22", "kbv": "2,5", "kuv": "0,8", "kcv": "12", "dividendenrendite": "1,1%", "empfehlung": "Kaufen", "begruendung": "Starkes Wachstumspotenzial bei Energiewende-Infrastruktur." },
+      { "wertpapier": "RWE", "kgv": "14", "kbv": "1,1", "kuv": "1,2", "kcv": "6", "dividendenrendite": "3,2%", "empfehlung": "Halten", "begruendung": "Solide Dividende, moderates Wachstum." },
+      { "wertpapier": "E.ON", "kgv": "16", "kbv": "1,5", "kuv": "0,9", "kcv": "7", "dividendenrendite": "4,0%", "empfehlung": "Halten", "begruendung": "Stabiles Geschäftsmodell, begrenzte Fantasie." },
+      { "wertpapier": "Encavis", "kgv": "35", "kbv": "2,8", "kuv": "4,5", "kcv": "15", "dividendenrendite": "0,8%", "empfehlung": "Verkaufen", "begruendung": "Bewertung aktuell zu hoch für das Wachstum." },
+      { "wertpapier": "Nordex", "kgv": "45", "kbv": "3,2", "kuv": "0,6", "kcv": "20", "dividendenrendite": "0,0%", "empfehlung": "Halten", "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilität." },
+      { "wertpapier": "Vestas", "kgv": "28", "kbv": "2,2", "kuv": "1,5", "kcv": "11", "dividendenrendite": "0,5%", "empfehlung": "Kaufen", "begruendung": "Marktführer bei Windkraft, gute langfristige Aussichten." },
+      { "wertpapier": "Orsted", "kgv": "20", "kbv": "1,8", "kuv": "2,0", "kcv": "9", "dividendenrendite": "2,5%", "empfehlung": "Kaufen", "begruendung": "Marktführer bei Offshore-Wind, attraktive Bewertung." },
+      { "wertpapier": "NextEra", "kgv": "25", "kbv": "3,0", "kuv": "6,0", "kcv": "14", "dividendenrendite": "2,8%", "empfehlung": "Halten", "begruendung": "Hohe Qualität, aber im Sektorvergleich teuer." }
+    ],
+    "Verteidigung": [
+      { "wertpapier": "Rheinmetall", "kgv": "28", "kbv": "4,5", "kuv": "3,0", "kcv": "18", "dividendenrendite": "1,2%", "empfehlung": "Kaufen", "begruendung": "Enormes Auftragsvolumen, langfristiges Wachstum." },
+      { "wertpapier": "Hensoldt", "kgv": "35", "kbv": "5,0", "kuv": "2,5", "kcv": "22", "dividendenrendite": "0,9%", "empfehlung": "Halten", "begruendung": "Hohe Bewertung, gute Technologiebasis." },
+      { "wertpapier": "Leonardo S.p.a.", "kgv": "12", "kbv": "1,0", "kuv": "0,7", "kcv": "5", "dividendenrendite": "2,8%", "empfehlung": "Kaufen", "begruendung": "Sehr attraktiv bewertet, Nachholpotenzial." },
+      { "wertpapier": "Thales", "kgv": "20", "kbv": "2,8", "kuv": "1,8", "kcv": "12", "dividendenrendite": "2,1%", "empfehlung": "Kaufen", "begruendung": "Stabiles Wachstum, starke Marktposition." },
+      { "wertpapier": "BAE Systems", "kgv": "18", "kbv": "3,0", "kuv": "1,5", "kcv": "10", "dividendenrendite": "2,5%", "empfehlung": "Halten", "begruendung": "Solide, aber aktuell fair bewertet." },
+      { "wertpapier": "General Dynamics", "kgv": "22", "kbv": "3,5", "kuv": "2,0", "kcv": "14", "dividendenrendite": "2,0%", "empfehlung": "Halten", "begruendung": "Stetige Cashflows, wenig Fantasie." },
+      { "wertpapier": "Lockheed Martin", "kgv": "20", "kbv": "15,0", "kuv": "2,2", "kcv": "16", "dividendenrendite": "2,3%", "empfehlung": "Halten", "begruendung": "Sehr substanzstark, aber hohe Bewertung des Kapitals." },
+      { "wertpapier": "Northrop Grumman", "kgv": "25", "kbv": "4,0", "kuv": "2,5", "kcv": "18", "dividendenrendite": "1,5%", "empfehlung": "Halten", "begruendung": "Starke Auftragslage, begrenzte kurzfristige Upside." }
+    ],
+    "Luft- und Raumfahrttechnik": [
+      { "wertpapier": "MTU Aero Engines", "kgv": "30", "kbv": "4,0", "kuv": "2,5", "kcv": "18", "dividendenrendite": "1,3%", "empfehlung": "Kaufen", "begruendung": "Profitabler Instandhaltungsmarkt, starkes Wachstum." },
+      { "wertpapier": "Safran", "kgv": "32", "kbv": "5,5", "kuv": "3,0", "kcv": "20", "dividendenrendite": "1,1%", "empfehlung": "Kaufen", "begruendung": "Dominante Marktposition bei Triebwerken." },
+      { "wertpapier": "Airbus", "kgv": "25", "kbv": "6,0", "kuv": "1,8", "kcv": "15", "dividendenrendite": "1,2%", "empfehlung": "Halten", "begruendung": "Operative Herausforderungen bremsen kurzfristig." },
+      { "wertpapier": "Boeing", "kgv": "-", "kbv": "12,0", "kuv": "1,5", "kcv": "-", "dividendenrendite": "0,0%", "empfehlung": "Verkaufen", "begruendung": "Hohe Verschuldung und operative Probleme." },
+      { "wertpapier": "Dassault Aviation", "kgv": "18", "kbv": "1,5", "kuv": "1,2", "kcv": "10", "dividendenrendite": "1,5%", "empfehlung": "Halten", "begruendung": "Konservativ, geringes Risiko, wenig Dynamik." },
+      { "wertpapier": "Rolls-Royce", "kgv": "22", "kbv": "5,0", "kuv": "1,5", "kcv": "12", "dividendenrendite": "0,0%", "empfehlung": "Kaufen", "begruendung": "Erfolgreicher Turnaround, Cashflow verbessert." },
+      { "wertpapier": "AAR Corp.", "kgv": "15", "kbv": "1,8", "kuv": "0,8", "kcv": "8", "dividendenrendite": "0,0%", "empfehlung": "Kaufen", "begruendung": "Günstige Bewertung im Sektorvergleich." },
+      { "wertpapier": "Hexcel", "kgv": "26", "kbv": "3,0", "kuv": "2,8", "kcv": "15", "dividendenrendite": "0,6%", "empfehlung": "Halten", "begruendung": "Nischenplayer, abhängig von Flugzeugbauzyklen." }
+    ],
+    "Satellitentechnik": [
+      { "wertpapier": "Rocket Lab", "kgv": "-", "kbv": "4,0", "kuv": "10,0", "kcv": "-", "dividendenrendite": "0,0%", "empfehlung": "Halten", "begruendung": "Hohes Wachstum, hohe Bewertung, noch nicht profitabel." },
+      { "wertpapier": "Planet Labs", "kgv": "-", "kbv": "2,0", "kuv": "5,0", "kcv": "-", "dividendenrendite": "0,0%", "empfehlung": "Verkaufen", "begruendung": "Hohe Cashburn-Rate, intensiver Wettbewerb." },
+      { "wertpapier": "OHB SE", "kgv": "20", "kbv": "1,5", "kuv": "0,6", "kcv": "7", "dividendenrendite": "1,0%", "empfehlung": "Kaufen", "begruendung": "Profitiert von öffentlicher Raumfahrt-Nachfrage." },
+      { "wertpapier": "Eutelsat", "kgv": "8", "kbv": "0,4", "kuv": "1,2", "kcv": "3", "dividendenrendite": "5,0%", "empfehlung": "Verkaufen", "begruendung": "Schrumpfender Kernmarkt, Strukturprobleme." },
+      { "wertpapier": "SES SA", "kgv": "9", "kbv": "0,6", "kuv": "1,5", "kcv": "4", "dividendenrendite": "4,5%", "empfehlung": "Halten", "begruendung": "Dividendenwert mit begrenztem Wachstum." },
+      { "wertpapier": "Maxar", "kgv": "-", "kbv": "-", "kuv": "-", "kcv": "-", "dividendenrendite": "-", "empfehlung": "Keine Wertung", "begruendung": "Von der Börse genommen." },
+      { "wertpapier": "Iridium Comm.", "kgv": "18", "kbv": "3,5", "kuv": "5,0", "kcv": "12", "dividendenrendite": "1,5%", "empfehlung": "Halten", "begruendung": "Stabiler Cashflow, aber hohe Investitionen." },
+      { "wertpapier": "Gilat Satellite", "kgv": "15", "kbv": "1,5", "kuv": "1,2", "kcv": "9", "dividendenrendite": "0,0%", "empfehlung": "Kaufen", "begruendung": "Nischenanbieter, gute technologische Basis." }
+    ],
+    "Technologie": [
+      { "wertpapier": "SAP", "kgv": "32", "kbv": "6,0", "kuv": "6,5", "kcv": "22", "dividendenrendite": "1,0%", "empfehlung": "Kaufen", "begruendung": "Starke Cloud-Transformation, langfristig attraktiv." },
+      { "wertpapier": "Infineon", "kgv": "18", "kbv": "2,5", "kuv": "3,0", "kcv": "10", "dividendenrendite": "1,2%", "empfehlung": "Kaufen", "begruendung": "Profitiert von Automobil- und KI-Trends." },
+      { "wertpapier": "ASML", "kgv": "35", "kbv": "15,0", "kuv": "10,0", "kcv": "25", "dividendenrendite": "0,8%", "empfehlung": "Kaufen", "begruendung": "Monopolartige Stellung, technologisch führend." },
+      { "wertpapier": "Salesforce", "kgv": "30", "kbv": "4,0", "kuv": "7,0", "kcv": "20", "dividendenrendite": "0,0%", "empfehlung": "Halten", "begruendung": "Solides Wachstum, Bewertung mittlerweile fair." },
+      { "wertpapier": "Oracle", "kgv": "25", "kbv": "8,0", "kuv": "6,0", "kcv": "16", "dividendenrendite": "1,3%", "empfehlung": "Halten", "begruendung": "Cloud-Geschäft wächst, aber hoher Wettbewerb." },
+      { "wertpapier": "Nvidia", "kgv": "45", "kbv": "25,0", "kuv": "20,0", "kcv": "35", "dividendenrendite": "0,0%", "empfehlung": "Halten", "begruendung": "Exzellentes Unternehmen, aber sehr hohe Bewertung." },
+      { "wertpapier": "Microsoft", "kgv": "30", "kbv": "10,0", "kuv": "9,0", "kcv": "22", "dividendenrendite": "0,8%", "empfehlung": "Kaufen", "begruendung": "Extrem breit aufgestellt, verlässliches Wachstum." },
+      { "wertpapier": "Alphabet", "kgv": "22", "kbv": "6,0", "kuv": "5,5", "kcv": "15", "dividendenrendite": "0,4%", "empfehlung": "Kaufen", "begruendung": "Bewertung attraktiv im Vergleich zu anderen Techs." }
+    ]
+  }
+};
+        const depotData = {
+  "depot": {
+    "startkapital": 10000,
+    "aktueller_barbestand": 102.15,
+    "portfoliowert": 9842.61,
+    "gesamtvermoegen": 9965.0,
+    "positionen": [
+      {
+        "isin": "FR0010221234",
+        "wertpapier": "Eutelsat",
+        "stueck": 643,
+        "kaufkurs": 2.324,
+        "boersenkurs": 2.324,
+        "investiert": 1494.33,
+        "boersenwert": 1494.33,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "isin": "IT0003856405",
+        "wertpapier": "Leonardo",
+        "stueck": 32,
+        "kaufkurs": 46.38,
+        "boersenkurs": 46.38,
+        "investiert": 1484.16,
+        "boersenwert": 1484.16,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "isin": "DE000A0D9PT0",
+        "wertpapier": "MTU Aero Engines",
+        "stueck": 4,
+        "kaufkurs": 363.3,
+        "boersenkurs": 363.3,
+        "investiert": 1453.2,
+        "boersenwert": 1453.2,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "isin": "US72703X1063",
+        "wertpapier": "Planet Labs",
+        "stueck": 54,
+        "kaufkurs": 27.6,
+        "boersenkurs": 27.6,
+        "investiert": 1490.4,
+        "boersenwert": 1490.4,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "isin": "DE0007030009",
+        "wertpapier": "Rheinmetall",
+        "stueck": 1,
+        "kaufkurs": 975.6,
+        "boersenkurs": 975.6,
+        "investiert": 975.6,
+        "boersenwert": 975.6,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "isin": "GB00B63H8491",
+        "wertpapier": "Rolls-Royce",
+        "stueck": 89,
+        "kaufkurs": 16.72,
+        "boersenkurs": 16.72,
+        "investiert": 1488.08,
+        "boersenwert": 1488.08,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "isin": "DE0007164600",
+        "wertpapier": "SAP",
+        "stueck": 11,
+        "kaufkurs": 134.28,
+        "boersenkurs": 134.28,
+        "investiert": 1477.08,
+        "boersenwert": 1477.08,
+        "gewinn_verlust": 0.0
+      }
+    ]
+  }
+};
+        const transData = {
+  "transaktionen": [
+    {
+      "datum": "2026-06-30",
+      "typ": "Kauf",
+      "isin": "FR0010221234",
+      "wertpapier": "Eutelsat",
+      "stueck": 643,
+      "kurs": 2.324,
+      "gebuehr": 5.0,
+      "gesamt": 1499.33,
+      "notiz": "Neukauf (Kauf-Signal)"
+    },
+    {
+      "datum": "2026-06-30",
+      "typ": "Kauf",
+      "isin": "IT0003856405",
+      "wertpapier": "Leonardo",
+      "stueck": 32,
+      "kurs": 46.38,
+      "gebuehr": 5.0,
+      "gesamt": 1489.16,
+      "notiz": "Neukauf (Kauf-Signal)"
+    },
+    {
+      "datum": "2026-06-30",
+      "typ": "Kauf",
+      "isin": "DE000A0D9PT0",
+      "wertpapier": "MTU Aero Engines",
+      "stueck": 4,
+      "kurs": 363.3,
+      "gebuehr": 5.0,
+      "gesamt": 1458.2,
+      "notiz": "Neukauf (Kauf-Signal)"
+    },
+    {
+      "datum": "2026-06-30",
+      "typ": "Kauf",
+      "isin": "US72703X1063",
+      "wertpapier": "Planet Labs",
+      "stueck": 54,
+      "kurs": 27.6,
+      "gebuehr": 5.0,
+      "gesamt": 1495.4,
+      "notiz": "Neukauf (Kauf-Signal)"
+    },
+    {
+      "datum": "2026-06-30",
+      "typ": "Kauf",
+      "isin": "DE0007030009",
+      "wertpapier": "Rheinmetall",
+      "stueck": 1,
+      "kurs": 975.6,
+      "gebuehr": 5.0,
+      "gesamt": 980.6,
+      "notiz": "Neukauf (Kauf-Signal)"
+    },
+    {
+      "datum": "2026-06-30",
+      "typ": "Kauf",
+      "isin": "GB00B63H8491",
+      "wertpapier": "Rolls-Royce",
+      "stueck": 89,
+      "kurs": 16.72,
+      "gebuehr": 5.0,
+      "gesamt": 1493.08,
+      "notiz": "Neukauf (Kauf-Signal)"
+    },
+    {
+      "datum": "2026-06-30",
+      "typ": "Kauf",
+      "isin": "DE0007164600",
+      "wertpapier": "SAP",
+      "stueck": 11,
+      "kurs": 134.28,
+      "gebuehr": 5.0,
+      "gesamt": 1482.08,
+      "notiz": "Neukauf (Kauf-Signal)"
+    }
+  ]
+};
+
         function getBadge(rating) {
-            if (!rating) return '';
             const r = rating.toLowerCase();
             if (r.includes("kauf")) return `<span class="badge buy">Kaufen</span>`;
             if (r.includes("halt")) return `<span class="badge hold">Halten</span>`;
@@ -59,162 +338,128 @@
             return `<span class="badge" style="background:#e2e3e5">${rating}</span>`;
         }
 
-        async function loadData() {
-            try {
-                const timestamp = new Date().getTime();
-                const [chartRes, fundaRes, depotRes] = await Promise.all([
-                    fetch('chartanalyse_ergebnisse.json?v=' + timestamp),
-                    fetch('fundamentalanalyse_ergebnisse.json?v=' + timestamp),
-                    fetch('depot_status.json?v=' + timestamp)
-                ]);
-
-                const chartData = await chartRes.json();
-                const fundaData = await fundaRes.json();
-                const depotData = await depotRes.json();
-
-                document.getElementById('loading').style.display = 'none';
-
-                renderChart(chartData);
-                renderFunda(fundaData);
-                renderDepot(depotData);
-            } catch (error) {
-                document.getElementById('loading').innerHTML = `<span style="color: #721c24;">Fehler beim Laden der Live-Daten. (${error.message})</span>`;
-                console.error("Error loading JSON data:", error);
-            }
-        }
-
-        function renderChart(chartData) {
-            let html = `<h2>Ergebnisse der Chartanalyse</h2><p>Übersicht der Trendbewertungen nach Sektoren.</p>`;
-            
-            if (chartData.sektoren) {
-                for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
-                    html += `<h3 class="sector-title">${sektor}</h3>
-                    <table>
-                        <tr>
-                            <th style="width: 25%">Wertpapier</th>
-                            <th style="width: 15%">Empfehlung</th>
-                            <th style="width: 60%">Charttechnische Begründung</th>
-                        </tr>`;
-                    werte.forEach(w => {
-                        html += `<tr>
-                            <td><strong>${w.wertpapier}</strong></td>
-                            <td>${getBadge(w.empfehlung)}</td>
-                            <td>${w.begruendung}</td>
-                        </tr>`;
-                    });
-                    html += `</table>`;
-                }
-            } else {
-                html += `<p>Keine Sektordaten gefunden.</p>`;
-            }
-            document.getElementById('chart').innerHTML = html;
-        }
-
-        function renderFunda(fundaData) {
-            let html = `<h2>Ergebnisse der Fundamentalanalyse</h2><p>Fundamentale Kennzahlen nach Sektoren.</p>`;
-            
-            if (fundaData.sektoren) {
-                for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
-                    html += `<h3 class="sector-title">${sektor}</h3>
-                    <table>
-                        <tr>
-                            <th>Wertpapier</th>
-                            <th>KGV</th>
-                            <th>KBV</th>
-                            <th>KUV</th>
-                            <th>KCV</th>
-                            <th>Dividende</th>
-                            <th>Empfehlung</th>
-                            <th style="width: 35%">Begründung</th>
-                        </tr>`;
-                    werte.forEach(w => {
-                        html += `<tr>
-                            <td><strong>${w.wertpapier}</strong></td>
-                            <td>${w.kgv || '-'}</td>
-                            <td>${w.kbv || '-'}</td>
-                            <td>${w.kuv || '-'}</td>
-                            <td>${w.kcv || '-'}</td>
-                            <td>${w.dividendenrendite || '-'}</td>
-                            <td>${getBadge(w.empfehlung)}</td>
-                            <td>${w.begruendung}</td>
-                        </tr>`;
-                    });
-                    html += `</table>`;
-                }
-            } else {
-                html += `<p>Keine Sektordaten gefunden.</p>`;
-            }
-            document.getElementById('funda').innerHTML = html;
-        }
-
-        function renderDepot(depotData) {
-            const d = depotData.depot;
-            let html = `<h2>Aktueller Depot-Status</h2>
-            
-            <div class="stats-grid">
-                <div class="stat-card"><h4>Gesamtvermögen</h4><p>${(d.gesamtvermoegen || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-                <div class="stat-card"><h4>Barbestand</h4><p>${(d.aktueller_barbestand || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-                <div class="stat-card"><h4>Portfoliowert</h4><p>${(d.portfoliowert || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-                <div class="stat-card"><h4>Startkapital</h4><p>${(d.startkapital || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-            </div>
-            
-            <h3 class="sector-title">Aktuelle Positionen</h3>
+        // Render Chartanalyse
+        let chartHtml = `<h2>Ergebnisse der Chartanalyse</h2><p>Übersicht der kurz-, mittel- und langfristigen Trendbewertungen.</p>`;
+        for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
+            chartHtml += `<h3 class="sector-title">${sektor}</h3>
             <table>
                 <tr>
-                    <th>ISIN</th>
-                    <th>Name</th>
-                    <th>Anteile</th>
-                    <th>Kaufkurs (Durchschn.)</th>
-                    <th>Aktueller Kurs</th>
-                    <th>Gesamtwert</th>
+                    <th style="width: 25%">Wertpapier</th>
+                    <th style="width: 15%">Empfehlung</th>
+                    <th style="width: 60%">Charttechnische Begründung</th>
                 </tr>`;
-            if(d.positionen && d.positionen.length > 0) {
-                d.positionen.forEach(p => {
-                    html += `<tr>
-                        <td><strong>${p.isin || p.symbol || '-'}</strong></td>
-                        <td>${p.name || p.wertpapier}</td>
-                        <td>${p.anteile || p.stueck}</td>
-                        <td>${(p.kaufkurs_durchschnitt || p.kaufkurs || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${(p.aktueller_kurs || p.boersenkurs || p.kaufkurs || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${(p.gesamtwert || p.boersenwert || p.investiert || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                    </tr>`;
-                });
-            } else {
-                html += `<tr><td colspan="6" style="text-align:center;">Keine Positionen im Depot.</td></tr>`;
-            }
-            html += `</table>
-            
-            <h3 class="sector-title">Transaktionshistorie</h3>
+            werte.forEach(w => {
+                chartHtml += `<tr>
+                    <td><strong>${w.wertpapier}</strong></td>
+                    <td>${getBadge(w.empfehlung)}</td>
+                    <td>${w.begruendung}</td>
+                </tr>`;
+            });
+            chartHtml += `</table>`;
+        }
+        document.getElementById('chart').innerHTML = chartHtml;
+
+        // Render Fundamentalanalyse
+        let fundaHtml = `<h2>Ergebnisse der Fundamentalanalyse</h2><p>Vergleichende Gegenüberstellung nach der Commerzbank-Methodik.</p>`;
+        for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
+            fundaHtml += `<h3 class="sector-title">${sektor}</h3>
             <table>
                 <tr>
-                    <th>Datum</th>
-                    <th>Typ</th>
-                    <th>ISIN</th>
-                    <th>Name</th>
-                    <th>Anteile</th>
-                    <th>Kurs</th>
-                    <th>Gebühren</th>
-                    <th>Gesamtbetrag</th>
+                    <th>Wertpapier</th>
+                    <th>KGV</th>
+                    <th>KBV</th>
+                    <th>KUV</th>
+                    <th>KCV</th>
+                    <th>Dividende</th>
+                    <th>Empfehlung</th>
+                    <th style="width: 35%">Begründung</th>
                 </tr>`;
-            if(d.transaktionshistorie && d.transaktionshistorie.length > 0) {
-                d.transaktionshistorie.forEach(t => {
-                    html += `<tr>
-                        <td>${t.datum}</td>
-                        <td><strong>${t.typ}</strong></td>
-                        <td>${t.isin || t.symbol || '-'}</td>
-                        <td>${t.wertpapier || t.name || '-'}</td>
-                        <td>${t.anteile || t.stueck}</td>
-                        <td>${(t.kurs || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${(t.gebuehren || t.gebuehr || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                        <td>${(t.gesamtbetrag || t.gesamt || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                    </tr>`;
-                });
-            } else {
-                html += `<tr><td colspan="7" style="text-align:center;">Keine Transaktionen bisher.</td></tr>`;
-            }
-            html += `</table>`;
-            document.getElementById('depot').innerHTML = html;
+            werte.forEach(w => {
+                fundaHtml += `<tr>
+                    <td><strong>${w.wertpapier}</strong></td>
+                    <td>${w.kgv}</td>
+                    <td>${w.kbv}</td>
+                    <td>${w.kuv}</td>
+                    <td>${w.kcv}</td>
+                    <td>${w.dividendenrendite}</td>
+                    <td>${getBadge(w.empfehlung)}</td>
+                    <td>${w.begruendung}</td>
+                </tr>`;
+            });
+            fundaHtml += `</table>`;
         }
+        document.getElementById('funda').innerHTML = fundaHtml;
+
+        // Render Depot Status
+        const d = depotData.depot;
+        let depotHtml = `<h2>Aktueller Depot-Status</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-card"><h4>Gesamtvermögen</h4><p>${d.gesamtvermoegen.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
+            <div class="stat-card"><h4>Barbestand</h4><p>${d.aktueller_barbestand.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
+            <div class="stat-card"><h4>Portfoliowert</h4><p>${d.portfoliowert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
+            <div class="stat-card"><h4>Startkapital</h4><p>${d.startkapital.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
+        </div>
+        
+        <h3 class="sector-title">Aktuelle Positionen (Wertpapiere)</h3>
+        <table>
+            <tr>
+                <th>ISIN</th>
+                <th>Wertpapier</th>
+                <th>Stück</th>
+                <th>Kaufkurs</th>
+                <th>Börsenkurs</th>
+                <th>Investiert</th>
+                <th>Börsenwert</th>
+                <th>Gewinn/Verlust</th>
+            </tr>`;
+        d.positionen.forEach(p => {
+            let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
+            let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
+            depotHtml += `<tr>
+                <td>${p.isin || p.wkn || ''}</td>
+                <td><strong>${p.wertpapier}</strong></td>
+                <td>${p.stueck}</td>
+                <td>${p.kaufkurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                <td>${(p.boersenkurs || p.kaufkurs).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                <td>${p.investiert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                <td>${(p.boersenwert || p.investiert).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${(p.gewinn_verlust || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'})}</span></td>
+            </tr>`;
+        });
+        depotHtml += `</table>`;
+        document.getElementById('depot').innerHTML = depotHtml;
+
+        // Render Transaktionshistorie
+        let transHtml = `<h2>Transaktionshistorie</h2>
+        <table>
+            <tr>
+                <th>Datum</th>
+                <th>Typ</th>
+                <th>ISIN</th>
+                <th>Wertpapier</th>
+                <th>Stück</th>
+                <th>Kurs</th>
+                <th>Gebühr</th>
+                <th>Gesamt</th>
+            </tr>`;
+        
+        if (transData && transData.transaktionen) {
+            transData.transaktionen.forEach(t => {
+                transHtml += `<tr>
+                    <td>${t.datum}</td>
+                    <td><strong>${t.typ}</strong></td>
+                    <td>${t.isin || ''}</td>
+                    <td>${t.wertpapier}</td>
+                    <td>${t.stueck}</td>
+                    <td>${t.kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td>${t.gebuehr.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td>${t.gesamt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                </tr>`;
+            });
+        }
+        transHtml += `</table>`;
+        document.getElementById('transaktionen').innerHTML = transHtml;
 
         // Tab Logic
         function openTab(evt, tabName) {
@@ -229,9 +474,6 @@
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
-
-        // Initialize fetching
-        loadData();
     </script>
 </body>
 </html>
