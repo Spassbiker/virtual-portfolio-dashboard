@@ -161,7 +161,7 @@
             <h3 class="sector-title">Aktuelle Positionen</h3>
             <table>
                 <tr>
-                    <th>Symbol</th>
+                    <th>ISIN</th>
                     <th>Name</th>
                     <th>Anteile</th>
                     <th>Kaufkurs (Durchschn.)</th>
@@ -171,7 +171,7 @@
             if(d.positionen && d.positionen.length > 0) {
                 d.positionen.forEach(p => {
                     html += `<tr>
-                        <td><strong>${p.symbol || p.wkn || '-'}</strong></td>
+                        <td><strong>${p.isin || p.symbol || '-'}</strong></td>
                         <td>${p.name || p.wertpapier}</td>
                         <td>${p.anteile || p.stueck}</td>
                         <td>${(p.kaufkurs_durchschnitt || p.kaufkurs || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
@@ -189,7 +189,8 @@
                 <tr>
                     <th>Datum</th>
                     <th>Typ</th>
-                    <th>Symbol/Name</th>
+                    <th>ISIN</th>
+                    <th>Name</th>
                     <th>Anteile</th>
                     <th>Kurs</th>
                     <th>Gebühren</th>
@@ -200,7 +201,8 @@
                     html += `<tr>
                         <td>${t.datum}</td>
                         <td><strong>${t.typ}</strong></td>
-                        <td>${t.symbol || t.wertpapier} ${t.name ? '('+t.name+')' : ''}</td>
+                        <td>${t.isin || t.symbol || '-'}</td>
+                        <td>${t.wertpapier || t.name || '-'}</td>
                         <td>${t.anteile || t.stueck}</td>
                         <td>${(t.kurs || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
                         <td>${(t.gebuehren || t.gebuehr || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>

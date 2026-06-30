@@ -28,12 +28,24 @@ def get_recommendation(data_json, stock_name):
                 return item.get("empfehlung", "").lower()
     return "unbekannt"
 
-# Mock prices for simulation
-mock_prices = {
-    'Leonardo': 23.10, 'Siemens Energy': 27.00, 'Rolls-Royce': 5.30, 'Thales': 166.00, 
-    'ASML': 945.00, 'MTU Aero Engines': 236.00, 'Rheinmetall': 525.00, 'SAP': 186.50, 
-    'Safran': 212.00, 'E.ON': 12.50, 'RWE': 32.00, 'Infineon': 35.00, 'Airbus': 140.00,
-    'Planet Labs': 2.10, 'Encavis': 16.50, 'Eutelsat': 4.20
+# Mock prices and ISIN mapping
+mock_data = {
+    'Leonardo': {'price': 23.10, 'isin': 'IT0003856405'},
+    'Siemens Energy': {'price': 27.00, 'isin': 'DE000ENER6Y0'},
+    'Rolls-Royce': {'price': 5.30, 'isin': 'GB00B63H8491'},
+    'Thales': {'price': 166.00, 'isin': 'FR0000121329'},
+    'ASML': {'price': 945.00, 'isin': 'NL0010273215'},
+    'MTU Aero Engines': {'price': 236.00, 'isin': 'DE000A0D9PT0'},
+    'Rheinmetall': {'price': 525.00, 'isin': 'DE0007030009'},
+    'SAP': {'price': 186.50, 'isin': 'DE0007164600'},
+    'Safran': {'price': 212.00, 'isin': 'FR0000073272'},
+    'E.ON': {'price': 12.50, 'isin': 'DE000ENAG999'},
+    'RWE': {'price': 32.00, 'isin': 'DE0007037129'},
+    'Infineon': {'price': 35.00, 'isin': 'DE0006231004'},
+    'Airbus': {'price': 140.00, 'isin': 'NL0000235190'},
+    'Planet Labs': {'price': 2.10, 'isin': 'US72703X1054'},
+    'Encavis': {'price': 16.50, 'isin': 'DE0006095003'},
+    'Eutelsat': {'price': 4.20, 'isin': 'FR0010221234'}
 }
 
 fee_per_trade = 5.00
@@ -51,13 +63,15 @@ for p in positions:
     # Wenn EINE der Analysen auf "Verkauf" steht -> Raus!
     if "verkauf" in chart_rec or "verkauf" in funda_rec:
         units = p["stueck"]
-        price = mock_prices.get(stock, p["boersenkurs"])
+        price = mock_data.get(stock, {}).get('price', p["boersenkurs"])
+        isin = mock_data.get(stock, {}).get('isin', p.get("isin", ""))
         revenue = (units * price) - fee_per_trade
         current_cash += revenue
         summary.append(f"Strategischer Verkauf: {units}x {stock} zu {price:.2f} EUR (Erlös: {revenue:.2f} EUR). Grund: 'Verkaufen'-Signal.")
         transactions.append({
             "datum": datetime.now().strftime("%Y-%m-%d"),
             "typ": "Verkauf",
+            "isin": isin,
             "wertpapier": stock,
             "stueck": units,
             "kurs": price,
@@ -67,7 +81,9 @@ for p in positions:
         })
     else:
         # Kurse aktualisieren
-        p["boersenkurs"] = mock_prices.get(stock, p["boersenkurs"])
+        p["boersenkurs"] = mock_data.get(stock, {}).get('price', p["boersenkurs"])
+        if "isin" not in p and stock in mock_data:
+            p["isin"] = mock_data[stock]['isin']
         p["boersenwert"] = round(p["stueck"] * p["boersenkurs"], 2)
         p["gewinn_verlust"] = round(p["boersenwert"] - p["investiert"], 2)
         positions_to_keep.append(p)
@@ -97,24 +113,24 @@ target_stocks = list(chart_buys.intersection(funda_buys))
 budget_per_stock = 1500.0
 
 for stock in target_stocks:
-    if stock not in mock_prices: continue
+    if stock not in mock_data: continue
     already_owned = any(p["wertpapier"] == stock for p in positions)
     if already_owned: continue
     
-    price = mock_prices[stock]
+    price = mock_data[stock]['price']
+    isin = mock_data[stock]['isin']
     units_to_buy = int((budget_per_stock - fee_per_trade) / price)
     if units_to_buy <= 0: continue
     total_cost = (units_to_buy * price) + fee_per_trade
     
-    # Rebalancing, wenn das Geld nicht reicht
+    # Rebalancing
     if current_cash < total_cost:
-        # Sortiere das Depot nach Schwäche (1. Priorität: 'Halten' in Analysen, 2. Priorität: Schwächste Rendite)
         def sort_key(p):
             c_rec = get_recommendation(chart_data, p["wertpapier"])
             f_rec = get_recommendation(funda_data, p["wertpapier"])
             is_halten = 1 if ("halt" in c_rec or "halt" in f_rec) else 0
             profit_margin = p["gewinn_verlust"] / p["investiert"] if p["investiert"] > 0 else 0
-            return (-is_halten, profit_margin) # Schwächste zuerst
+            return (-is_halten, profit_margin)
         
         positions.sort(key=sort_key)
         
@@ -141,6 +157,7 @@ for stock in target_stocks:
                 transactions.append({
                     "datum": datetime.now().strftime("%Y-%m-%d"),
                     "typ": "Verkauf",
+                    "isin": weak_p.get("isin", ""),
                     "wertpapier": weak_p["wertpapier"],
                     "stueck": units_to_sell,
                     "kurs": weak_price,
@@ -162,7 +179,7 @@ for stock in target_stocks:
     if current_cash >= total_cost:
         current_cash -= total_cost
         positions.append({
-            "symbol": stock[:4].upper() + ".DE",
+            "isin": isin,
             "wertpapier": stock,
             "stueck": units_to_buy,
             "kaufkurs": price,
@@ -174,6 +191,7 @@ for stock in target_stocks:
         transactions.append({
             "datum": datetime.now().strftime("%Y-%m-%d"),
             "typ": "Kauf",
+            "isin": isin,
             "wertpapier": stock,
             "stueck": units_to_buy,
             "kurs": price,
