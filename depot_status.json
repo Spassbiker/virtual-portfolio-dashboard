@@ -1,9 +1,9 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 25.55,
-    "portfoliowert": 10016.93,
-    "gesamtvermoegen": 10042.48,
+    "aktueller_barbestand": 19.49,
+    "portfoliowert": 10012.99,
+    "gesamtvermoegen": 10032.48,
     "positionen": [
       {
         "isin": "IT0003856405",
@@ -46,16 +46,6 @@
         "gewinn_verlust": 10.15
       },
       {
-        "isin": "DE0007164600",
-        "wertpapier": "SAP",
-        "stueck": 11,
-        "kaufkurs": 134.28,
-        "boersenkurs": 134.0,
-        "investiert": 1477.08,
-        "boersenwert": 1474.0,
-        "gewinn_verlust": -3.08
-      },
-      {
         "isin": "FR0000073272",
         "wertpapier": "Safran",
         "stueck": 4,
@@ -83,6 +73,16 @@
         "boersenkurs": 224.8,
         "investiert": 224.8,
         "boersenwert": 224.8,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "isin": "DE0006231004",
+        "wertpapier": "Infineon",
+        "stueck": 18,
+        "kaufkurs": 81.67,
+        "boersenkurs": 81.67,
+        "investiert": 1470.06,
+        "boersenwert": 1470.06,
         "gewinn_verlust": 0.0
       }
     ],
@@ -156,6 +156,34 @@
         "gesamt": 229.8,
         "notiz": "Neukauf (Kauf-Signal)",
         "begruendung": "Chartanalyse: Stabiler Aufw\u00e4rtstrend, GD200 als sichere Basis. | Fundamentalanalyse: Stabiles Wachstum, starke Marktposition."
+      },
+      {
+        "datum": "2026-07-01",
+        "typ": "Verkauf",
+        "isin": "DE0007164600",
+        "wertpapier": "SAP",
+        "stueck": 11,
+        "kurs": 134.0,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": -8.08,
+        "gesamt": 1469.0,
+        "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
+        "begruendung": "Chartanalyse: Kurzfristige \u00dcberhitzung nach starken Rallye, Gewinnmitnahmen empfohlen. | Fundamentalanalyse: Starke Cloud-Transformation, langfristig attraktiv."
+      },
+      {
+        "datum": "2026-07-01",
+        "typ": "Kauf",
+        "isin": "DE0006231004",
+        "wertpapier": "Infineon",
+        "stueck": 18,
+        "kurs": 81.67,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 1475.06,
+        "notiz": "Neukauf (Kauf-Signal)",
+        "begruendung": "Chartanalyse: Bodenbildung abgeschlossen, starkes Momentum nach oben. | Fundamentalanalyse: Attraktive Bewertung, starke Nachfrage im Automotive-Sektor."
       }
     ]
   }

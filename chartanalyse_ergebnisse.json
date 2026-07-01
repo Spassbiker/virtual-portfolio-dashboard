@@ -1,64 +1,264 @@
 {
   "sektoren": {
     "Energie": [
-      { "wertpapier": "Siemens Energy", "empfehlung": "Kaufen", "begruendung": "Starke Erholung über SMA 200, hoher RSI-Aufwärtstrend." },
-      { "wertpapier": "RWE", "empfehlung": "Halten", "begruendung": "Seitwärtsphase, starke Unterstützung bei 30 EUR." },
-      { "wertpapier": "E.ON", "empfehlung": "Halten", "begruendung": "Defensive Stabilität, langsames, aber stetiges Wachstum." },
-      { "wertpapier": "Encavis", "empfehlung": "Kaufen", "begruendung": "Bruch des mittelfristigen Abwärtstrends, Momentum positiv." },
-      { "wertpapier": "SMA Solar", "empfehlung": "Verkaufen", "begruendung": "Deutlicher Abwärtstrend, RSI im überverkauften Bereich, keine Bodenbildung." },
-      { "wertpapier": "RWE AG", "empfehlung": "Kaufen", "begruendung": "RSI im neutralen Bereich, GD200 deutet auf langfristigen Aufwärtstrend hin." },
-      { "wertpapier": "E.ON SE", "empfehlung": "Kaufen", "begruendung": "Starke Unterstützung bei den gleitenden Durchschnitten, hohe relative Stärke." },
-      { "wertpapier": "Siemens Energy (Teil 2)", "empfehlung": "Halten", "begruendung": "Erholung nach Kursrücksetzern, MACD zeigt leichtes Kaufsignal." },
-      { "wertpapier": "Encavis AG", "empfehlung": "Verkaufen", "begruendung": "Chart zeigt Abwärtstrend unter dem GD50, RSI schwach." },
-      { "wertpapier": "Nordex SE", "empfehlung": "Halten", "begruendung": "Volatilität hoch, kurzfristige Ausbrüche möglich, aber Widerstände nahe." }
+      {
+        "wertpapier": "Siemens Energy",
+        "empfehlung": "Kaufen",
+        "begruendung": "Starke Erholung \u00fcber SMA 200, hoher RSI-Aufw\u00e4rtstrend."
+      },
+      {
+        "wertpapier": "RWE",
+        "empfehlung": "Halten",
+        "begruendung": "Seitw\u00e4rtsphase, starke Unterst\u00fctzung bei 30 EUR."
+      },
+      {
+        "wertpapier": "E.ON",
+        "empfehlung": "Halten",
+        "begruendung": "Defensive Stabilit\u00e4t, langsames, aber stetiges Wachstum."
+      },
+      {
+        "wertpapier": "Encavis",
+        "empfehlung": "Kaufen",
+        "begruendung": "Bruch des mittelfristigen Abw\u00e4rtstrends, Momentum positiv."
+      },
+      {
+        "wertpapier": "SMA Solar",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Deutlicher Abw\u00e4rtstrend, RSI im \u00fcberverkauften Bereich, keine Bodenbildung."
+      },
+      {
+        "wertpapier": "RWE AG",
+        "empfehlung": "Kaufen",
+        "begruendung": "RSI im neutralen Bereich, GD200 deutet auf langfristigen Aufw\u00e4rtstrend hin."
+      },
+      {
+        "wertpapier": "E.ON SE",
+        "empfehlung": "Kaufen",
+        "begruendung": "Starke Unterst\u00fctzung bei den gleitenden Durchschnitten, hohe relative St\u00e4rke."
+      },
+      {
+        "wertpapier": "Siemens Energy (Teil 2)",
+        "empfehlung": "Halten",
+        "begruendung": "Erholung nach Kursr\u00fccksetzern, MACD zeigt leichtes Kaufsignal."
+      },
+      {
+        "wertpapier": "Encavis AG",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Chart zeigt Abw\u00e4rtstrend unter dem GD50, RSI schwach."
+      },
+      {
+        "wertpapier": "Nordex SE",
+        "empfehlung": "Halten",
+        "begruendung": "Volatilit\u00e4t hoch, kurzfristige Ausbr\u00fcche m\u00f6glich, aber Widerst\u00e4nde nahe."
+      }
     ],
     "Verteidigung": [
-      { "wertpapier": "Rheinmetall", "empfehlung": "Halten", "begruendung": "Hohe Bewertung, leichte Konsolidierung unter Widerstand." },
-      { "wertpapier": "Hensoldt", "empfehlung": "Kaufen", "begruendung": "Aufwärtstrend intakt, charttechnisch keine Überhitzung." },
-      { "wertpapier": "Airbus", "empfehlung": "Kaufen", "begruendung": "Unterstützungszone bei 180 EUR erfolgreich getestet." },
-      { "wertpapier": "BAE Systems", "empfehlung": "Halten", "begruendung": "Stabile Performance, jedoch geringes kurzfristiges Momentum." },
-      { "wertpapier": "Northrop Grumman", "empfehlung": "Kaufen", "begruendung": "Struktureller Ausbruch aus langjähriger Seitwärtsbewegung." },
-      { "wertpapier": "Rheinmetall (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Starker Trend, RSI überkauft aber stabil, Trendfolge-Indikatoren positiv." },
-      { "wertpapier": "Hensoldt AG", "empfehlung": "Halten", "begruendung": "Konsolidierung auf hohem Niveau, GD50 als Unterstützung." },
-      { "wertpapier": "Leonardo SpA", "empfehlung": "Kaufen", "begruendung": "Ausbruch aus langfristiger Seitwärtsphase, Momentum nimmt zu." },
-      { "wertpapier": "Thales SA", "empfehlung": "Kaufen", "begruendung": "Stabiler Aufwärtstrend, GD200 als sichere Basis." },
-      { "wertpapier": "BAE Systems (Teil 2)", "empfehlung": "Halten", "begruendung": "Etwas überhitzt kurzfristig, aber langfristig intakter Aufwärtstrend." }
+      {
+        "wertpapier": "Rheinmetall",
+        "empfehlung": "Halten",
+        "begruendung": "Hohe Bewertung, leichte Konsolidierung unter Widerstand."
+      },
+      {
+        "wertpapier": "Hensoldt",
+        "empfehlung": "Kaufen",
+        "begruendung": "Aufw\u00e4rtstrend intakt, charttechnisch keine \u00dcberhitzung."
+      },
+      {
+        "wertpapier": "Airbus",
+        "empfehlung": "Kaufen",
+        "begruendung": "Unterst\u00fctzungszone bei 180 EUR erfolgreich getestet."
+      },
+      {
+        "wertpapier": "BAE Systems",
+        "empfehlung": "Halten",
+        "begruendung": "Stabile Performance, jedoch geringes kurzfristiges Momentum."
+      },
+      {
+        "wertpapier": "Northrop Grumman",
+        "empfehlung": "Kaufen",
+        "begruendung": "Struktureller Ausbruch aus langj\u00e4hriger Seitw\u00e4rtsbewegung."
+      },
+      {
+        "wertpapier": "Rheinmetall (Teil 2)",
+        "empfehlung": "Kaufen",
+        "begruendung": "Starker Trend, RSI \u00fcberkauft aber stabil, Trendfolge-Indikatoren positiv."
+      },
+      {
+        "wertpapier": "Hensoldt AG",
+        "empfehlung": "Halten",
+        "begruendung": "Konsolidierung auf hohem Niveau, GD50 als Unterst\u00fctzung."
+      },
+      {
+        "wertpapier": "Leonardo SpA",
+        "empfehlung": "Kaufen",
+        "begruendung": "Ausbruch aus langfristiger Seitw\u00e4rtsphase, Momentum nimmt zu."
+      },
+      {
+        "wertpapier": "Thales SA",
+        "empfehlung": "Kaufen",
+        "begruendung": "Stabiler Aufw\u00e4rtstrend, GD200 als sichere Basis."
+      },
+      {
+        "wertpapier": "BAE Systems (Teil 2)",
+        "empfehlung": "Halten",
+        "begruendung": "Etwas \u00fcberhitzt kurzfristig, aber langfristig intakter Aufw\u00e4rtstrend."
+      }
     ],
     "Luft- und Raumfahrttechnik": [
-      { "wertpapier": "MTU Aero Engines", "empfehlung": "Kaufen", "begruendung": "Starker Trendkanal, SMA 50 fungiert als dynamische Unterstützung." },
-      { "wertpapier": "Safran", "empfehlung": "Halten", "begruendung": "Konsolidierung auf hohem Niveau, abwarten auf Ausbruch." },
-      { "wertpapier": "Rolls-Royce", "empfehlung": "Kaufen", "begruendung": "Enormes Momentum, charttechnische Ziele auf der Oberseite." },
-      { "wertpapier": "Dassault Aviation", "empfehlung": "Halten", "begruendung": "Niedriges Volumen, seitwärts, geringes Potenzial kurzfristig." },
-      { "wertpapier": "Leonardo", "empfehlung": "Verkaufen", "begruendung": "Widerstandszone nicht durchbrochen, Trendumkehr eingeleitet." },
-      { "wertpapier": "MTU Aero Eng. (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Nach Korrektur wieder bullisches Momentum, RSI stabil." },
-      { "wertpapier": "Safran SA (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Trendstark, keine Anzeichen für Trendumkehr." },
-      { "wertpapier": "Rolls-Royce (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Massive Erholung, GDs zeigen steilen Aufwärtstrend." },
-      { "wertpapier": "Dassault Av.", "empfehlung": "Halten", "begruendung": "Sehr geringe Volatilität, Seitwärtstrend überwiegt." },
-      { "wertpapier": "Airbus SE", "empfehlung": "Halten", "begruendung": "Kurzfristig technischer Druck, langfristige Basis intakt." }
+      {
+        "wertpapier": "MTU Aero Engines",
+        "empfehlung": "Kaufen",
+        "begruendung": "Starker Trendkanal, SMA 50 fungiert als dynamische Unterst\u00fctzung."
+      },
+      {
+        "wertpapier": "Safran",
+        "empfehlung": "Halten",
+        "begruendung": "Konsolidierung auf hohem Niveau, abwarten auf Ausbruch."
+      },
+      {
+        "wertpapier": "Rolls-Royce",
+        "empfehlung": "Kaufen",
+        "begruendung": "Enormes Momentum, charttechnische Ziele auf der Oberseite."
+      },
+      {
+        "wertpapier": "Dassault Aviation",
+        "empfehlung": "Halten",
+        "begruendung": "Niedriges Volumen, seitw\u00e4rts, geringes Potenzial kurzfristig."
+      },
+      {
+        "wertpapier": "Leonardo",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Widerstandszone nicht durchbrochen, Trendumkehr eingeleitet."
+      },
+      {
+        "wertpapier": "MTU Aero Eng. (Teil 2)",
+        "empfehlung": "Kaufen",
+        "begruendung": "Nach Korrektur wieder bullisches Momentum, RSI stabil."
+      },
+      {
+        "wertpapier": "Safran SA (Teil 2)",
+        "empfehlung": "Kaufen",
+        "begruendung": "Trendstark, keine Anzeichen f\u00fcr Trendumkehr."
+      },
+      {
+        "wertpapier": "Rolls-Royce (Teil 2)",
+        "empfehlung": "Kaufen",
+        "begruendung": "Massive Erholung, GDs zeigen steilen Aufw\u00e4rtstrend."
+      },
+      {
+        "wertpapier": "Dassault Av.",
+        "empfehlung": "Halten",
+        "begruendung": "Sehr geringe Volatilit\u00e4t, Seitw\u00e4rtstrend \u00fcberwiegt."
+      },
+      {
+        "wertpapier": "Airbus SE",
+        "empfehlung": "Halten",
+        "begruendung": "Kurzfristig technischer Druck, langfristige Basis intakt."
+      }
     ],
     "Satellitentechnik": [
-      { "wertpapier": "OHB", "empfehlung": "Halten", "begruendung": "Volatile Seitwärtsbewegung, abwarten auf Nachrichten." },
-      { "wertpapier": "SES", "empfehlung": "Verkaufen", "begruendung": "Dauerhafter Abwärtstrend, keine charttechnische Unterstützung." },
-      { "wertpapier": "Eutelsat", "empfehlung": "Verkaufen", "begruendung": "Strukturprobleme im Chart sichtbar, unter SMA 200." },
-      { "wertpapier": "Maxar", "empfehlung": "Kaufen", "begruendung": "Bodenbildung abgeschlossen, bullisches Muster kurzfristig." },
-      { "wertpapier": "Airbus", "empfehlung": "Kaufen", "begruendung": "(siehe Verteidigung, hohe Synergieeffekte)." },
-      { "wertpapier": "OHB SE", "empfehlung": "Halten", "begruendung": "Seitwärtsbewegung, Volumen fehlt für gerichtete Signale." },
-      { "wertpapier": "SES SA (Teil 2)", "empfehlung": "Verkaufen", "begruendung": "Chart zeigt klaren Abwärtstrend, MACD negativ." },
-      { "wertpapier": "Eutelsat Com.", "empfehlung": "Verkaufen", "begruendung": "Charttechnisch angeschlagen, keine Anzeichen einer Bodenbildung." },
-      { "wertpapier": "Rocket Lab", "empfehlung": "Kaufen", "begruendung": "Starke technische Dynamik, hohes Volumen bei Ausbrüchen." },
-      { "wertpapier": "Planet Labs", "empfehlung": "Verkaufen", "begruendung": "Abwärtstrend, unterschreitet wichtige Unterstützungsniveaus." }
+      {
+        "wertpapier": "OHB",
+        "empfehlung": "Halten",
+        "begruendung": "Volatile Seitw\u00e4rtsbewegung, abwarten auf Nachrichten."
+      },
+      {
+        "wertpapier": "SES",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Dauerhafter Abw\u00e4rtstrend, keine charttechnische Unterst\u00fctzung."
+      },
+      {
+        "wertpapier": "Eutelsat",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Strukturprobleme im Chart sichtbar, unter SMA 200."
+      },
+      {
+        "wertpapier": "Maxar",
+        "empfehlung": "Kaufen",
+        "begruendung": "Bodenbildung abgeschlossen, bullisches Muster kurzfristig."
+      },
+      {
+        "wertpapier": "Airbus",
+        "empfehlung": "Kaufen",
+        "begruendung": "(siehe Verteidigung, hohe Synergieeffekte)."
+      },
+      {
+        "wertpapier": "OHB SE",
+        "empfehlung": "Halten",
+        "begruendung": "Seitw\u00e4rtsbewegung, Volumen fehlt f\u00fcr gerichtete Signale."
+      },
+      {
+        "wertpapier": "SES SA (Teil 2)",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Chart zeigt klaren Abw\u00e4rtstrend, MACD negativ."
+      },
+      {
+        "wertpapier": "Eutelsat Com.",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Charttechnisch angeschlagen, keine Anzeichen einer Bodenbildung."
+      },
+      {
+        "wertpapier": "Rocket Lab",
+        "empfehlung": "Kaufen",
+        "begruendung": "Starke technische Dynamik, hohes Volumen bei Ausbr\u00fcchen."
+      },
+      {
+        "wertpapier": "Planet Labs",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Abw\u00e4rtstrend, unterschreitet wichtige Unterst\u00fctzungsniveaus."
+      }
     ],
     "Technologie": [
-      { "wertpapier": "SAP", "empfehlung": "Kaufen", "begruendung": "Klare Aufwärtsstruktur, übergeordneter Trend intakt." },
-      { "wertpapier": "Infineon", "empfehlung": "Halten", "begruendung": "Zyklische Bodenbildung, RSI zeigt erste Stärken." },
-      { "wertpapier": "ASML", "empfehlung": "Kaufen", "begruendung": "Rücksetzer zum SMA 200 bietet gute Einstiegschance." },
-      { "wertpapier": "TeamViewer", "empfehlung": "Verkaufen", "begruendung": "Abwärtstrend seit Monaten, keine Anzeichen einer Wende." },
-      { "wertpapier": "Delivery Hero", "empfehlung": "Halten", "begruendung": "Spekulative Seitwärtsphase, hoher charttechnischer Druck." },
-      { "wertpapier": "SAP SE (Teil 2)", "empfehlung": "Kaufen", "begruendung": "Sehr starkes Momentum, neues Allzeithoch treibt Käufe an." },
-      { "wertpapier": "Infineon Tech (Teil 2)", "empfehlung": "Halten", "begruendung": "Zyklische Schwäche kurzfristig, aber langfristig gute Basis." },
-      { "wertpapier": "Dt. Telekom", "empfehlung": "Kaufen", "begruendung": "Defensive Stärke, technischer Ausbruch über Widerstandsbereich." },
-      { "wertpapier": "TeamViewer (Teil 2)", "empfehlung": "Verkaufen", "begruendung": "Chart zeigt Abwärtstrend, GDs als Widerstand von oben." },
-      { "wertpapier": "Aixtron SE", "empfehlung": "Halten", "begruendung": "Hohe Volatilität, kurzfristige Erholungschancen, langfristig instabil." }
+      {
+        "wertpapier": "SAP",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Kurzfristige \u00dcberhitzung nach starken Rallye, Gewinnmitnahmen empfohlen."
+      },
+      {
+        "wertpapier": "Infineon",
+        "empfehlung": "Kaufen",
+        "begruendung": "Bodenbildung abgeschlossen, starkes Momentum nach oben."
+      },
+      {
+        "wertpapier": "ASML",
+        "empfehlung": "Kaufen",
+        "begruendung": "R\u00fccksetzer zum SMA 200 bietet gute Einstiegschance."
+      },
+      {
+        "wertpapier": "TeamViewer",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Abw\u00e4rtstrend seit Monaten, keine Anzeichen einer Wende."
+      },
+      {
+        "wertpapier": "Delivery Hero",
+        "empfehlung": "Halten",
+        "begruendung": "Spekulative Seitw\u00e4rtsphase, hoher charttechnischer Druck."
+      },
+      {
+        "wertpapier": "SAP SE (Teil 2)",
+        "empfehlung": "Kaufen",
+        "begruendung": "Sehr starkes Momentum, neues Allzeithoch treibt K\u00e4ufe an."
+      },
+      {
+        "wertpapier": "Infineon Tech (Teil 2)",
+        "empfehlung": "Halten",
+        "begruendung": "Zyklische Schw\u00e4che kurzfristig, aber langfristig gute Basis."
+      },
+      {
+        "wertpapier": "Dt. Telekom",
+        "empfehlung": "Kaufen",
+        "begruendung": "Defensive St\u00e4rke, technischer Ausbruch \u00fcber Widerstandsbereich."
+      },
+      {
+        "wertpapier": "TeamViewer (Teil 2)",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Chart zeigt Abw\u00e4rtstrend, GDs als Widerstand von oben."
+      },
+      {
+        "wertpapier": "Aixtron SE",
+        "empfehlung": "Halten",
+        "begruendung": "Hohe Volatilit\u00e4t, kurzfristige Erholungschancen, langfristig instabil."
+      }
     ]
   }
 }
