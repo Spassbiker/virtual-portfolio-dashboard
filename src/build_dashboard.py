@@ -66,9 +66,9 @@ html_template = """<!DOCTYPE html>
 
         function getBadge(rating) {
             const r = rating.toLowerCase();
+            if (r.includes("verkauf")) return `<span class="badge sell">Verkaufen</span>`;
             if (r.includes("kauf")) return `<span class="badge buy">Kaufen</span>`;
             if (r.includes("halt")) return `<span class="badge hold">Halten</span>`;
-            if (r.includes("verkauf")) return `<span class="badge sell">Verkaufen</span>`;
             return `<span class="badge" style="background:#e2e3e5">${rating}</span>`;
         }
 
