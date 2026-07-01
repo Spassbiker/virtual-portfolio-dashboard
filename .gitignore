@@ -1,0 +1,11 @@
+.github_token
+.openclaw/
+AGENTS.md
+HEARTBEAT.md
+IDENTITY.md
+SOUL.md
+TOOLS.md
+USER.md
+memory/
+skills/
+openclaw-workspace-state.json
