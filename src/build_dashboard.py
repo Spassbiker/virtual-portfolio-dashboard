@@ -1,11 +1,11 @@
 import json
 
 # Lese JSON-Dateien
-with open('chartanalyse_ergebnisse.json', 'r', encoding='utf-8') as f:
+with open('data/chartanalyse_ergebnisse.json', 'r', encoding='utf-8') as f:
     chart_data = f.read()
-with open('fundamentalanalyse_ergebnisse.json', 'r', encoding='utf-8') as f:
+with open('data/fundamentalanalyse_ergebnisse.json', 'r', encoding='utf-8') as f:
     funda_data = f.read()
-with open('depot_status.json', 'r', encoding='utf-8') as f:
+with open('data/depot_status.json', 'r', encoding='utf-8') as f:
     depot_data = f.read()
 
 html_template = """<!DOCTYPE html>

@@ -3,8 +3,8 @@ import os
 import urllib.request
 from datetime import datetime
 
-base_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard"
-depot_path = "depot_status.json"
+base_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data"
+depot_path = os.path.join(base_dir, "depot_status.json")
 
 with open(depot_path, "r") as f:
     data = json.load(f)
