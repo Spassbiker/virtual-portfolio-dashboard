@@ -78,15 +78,13 @@ html_template = """<!DOCTYPE html>
             chartHtml += `<h3 class="sector-title">${sektor}</h3>
             <table>
                 <tr>
-                    <th style="width: 15%">ISIN</th>
-                    <th style="width: 25%">Wertpapier</th>
+                    <th style="width: 35%">Wertpapier</th>
                     <th style="width: 15%">Empfehlung</th>
-                    <th style="width: 45%">Charttechnische Begründung</th>
+                    <th style="width: 50%">Charttechnische Begründung</th>
                 </tr>`;
             werte.forEach(w => {
                 chartHtml += `<tr>
-                    <td><small>${w.isin || ''}</small></td>
-                    <td><strong>${w.wertpapier}</strong></td>
+                    <td><strong>${w.wertpapier}</strong><br><small style="color: #7f8c8d;">${w.isin || ''}</small></td>
                     <td>${getBadge(w.empfehlung)}</td>
                     <td>${w.begruendung}</td>
                 </tr>`;
@@ -101,7 +99,6 @@ html_template = """<!DOCTYPE html>
             fundaHtml += `<h3 class="sector-title">${sektor}</h3>
             <table>
                 <tr>
-                    <th>ISIN</th>
                     <th>Wertpapier</th>
                     <th>KGV</th>
                     <th>KBV</th>
@@ -109,12 +106,11 @@ html_template = """<!DOCTYPE html>
                     <th>KCV</th>
                     <th>Dividende</th>
                     <th>Empfehlung</th>
-                    <th style="width: 30%">Begründung</th>
+                    <th style="width: 35%">Begründung</th>
                 </tr>`;
             werte.forEach(w => {
                 fundaHtml += `<tr>
-                    <td><small>${w.isin || ''}</small></td>
-                    <td><strong>${w.wertpapier}</strong></td>
+                    <td><strong>${w.wertpapier}</strong><br><small style="color: #7f8c8d;">${w.isin || ''}</small></td>
                     <td>${w.kgv}</td>
                     <td>${w.kbv}</td>
                     <td>${w.kuv}</td>
@@ -142,7 +138,6 @@ html_template = """<!DOCTYPE html>
         <h3 class="sector-title">Aktuelle Positionen (Wertpapiere)</h3>
         <table>
             <tr>
-                <th>ISIN</th>
                 <th>Wertpapier</th>
                 <th>Stück</th>
                 <th>Kaufkurs</th>
@@ -155,8 +150,7 @@ html_template = """<!DOCTYPE html>
             let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
             let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
             depotHtml += `<tr>
-                <td>${p.isin || ''}</td>
-                <td><strong>${p.wertpapier}</strong></td>
+                <td><strong>${p.wertpapier}</strong><br><small style="color: #7f8c8d;">${p.isin || ''}</small></td>
                 <td>${p.stueck}</td>
                 <td>${p.kaufkurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
                 <td>${(p.boersenkurs || p.kaufkurs).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
@@ -174,7 +168,6 @@ html_template = """<!DOCTYPE html>
             <tr>
                 <th>Datum</th>
                 <th>Typ</th>
-                <th>ISIN</th>
                 <th>Wertpapier</th>
                 <th>Stück</th>
                 <th>Kurs</th>
@@ -194,8 +187,7 @@ html_template = """<!DOCTYPE html>
                 transHtml += `<tr>
                     <td>${t.datum}</td>
                     <td><strong>${t.typ}</strong></td>
-                    <td>${t.isin || ''}</td>
-                    <td>${t.wertpapier}</td>
+                    <td><strong>${t.wertpapier}</strong><br><small style="color: #7f8c8d;">${t.isin || ''}</small></td>
                     <td>${t.stueck}</td>
                     <td>${t.kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
                     <td>${t.gebuehr.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
