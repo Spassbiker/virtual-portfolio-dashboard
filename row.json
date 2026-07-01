@@ -1,0 +1,11 @@
+  {
+    "parent": { "data_source_id": "4322147e-e916-43eb-a959-0b4925a8dfc8" },
+    "properties": {
+      "Name": { "title": [ { "text": { "content": "iShares Aerospace" } } ] },
+      "Symbol": { "rich_text": [ { "text": { "content": "ITA" } } ] },
+      "Anzahl": { "number": 18 },
+      "Kaufkurs": { "number": 235.0 },
+      "Börsenpreis": { "number": 242.00 },
+      "Gesamtwert": { "number": 4356.00 }
+    }
+  }
