@@ -1,11 +1,18 @@
 import json
+import os
+
+# Bestimme das Basisverzeichnis (eine Ebene über src)
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def get_path(filename):
+    return os.path.join(base_dir, filename)
 
 # Lese JSON-Dateien
-with open('data/chartanalyse_ergebnisse.json', 'r', encoding='utf-8') as f:
+with open(get_path('data/chartanalyse_ergebnisse.json'), 'r', encoding='utf-8') as f:
     chart_data = f.read()
-with open('data/fundamentalanalyse_ergebnisse.json', 'r', encoding='utf-8') as f:
+with open(get_path('data/fundamentalanalyse_ergebnisse.json'), 'r', encoding='utf-8') as f:
     funda_data = f.read()
-with open('data/depot_status.json', 'r', encoding='utf-8') as f:
+with open(get_path('data/depot_status.json'), 'r', encoding='utf-8') as f:
     depot_data = f.read()
 
 html_template = """<!DOCTYPE html>
@@ -224,7 +231,7 @@ html_output = html_template.replace("CHART_DATA_PLACEHOLDER", chart_data)
 html_output = html_output.replace("FUNDA_DATA_PLACEHOLDER", funda_data)
 html_output = html_output.replace("DEPOT_DATA_PLACEHOLDER", depot_data)
 
-with open('index.html', 'w', encoding='utf-8') as f:
+with open(get_path('index.html'), 'w', encoding='utf-8') as f:
     f.write(html_output)
 
-print("Dashboard erfolgreich aktualisiert: index.html")
+print(f"Dashboard erfolgreich aktualisiert: {get_path('index.html')}")
