@@ -39,11 +39,13 @@
             <button class="tab-button active" onclick="openTab(event, 'chart')">Chartanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
+            <button class="tab-button" onclick="openTab(event, 'transaktionen')">Transaktionshistorie</button>
         </div>
 
         <div id="chart" class="tab-content active"></div>
         <div id="funda" class="tab-content"></div>
         <div id="depot" class="tab-content"></div>
+        <div id="transaktionen" class="tab-content"></div>
     </div>
 
     <!-- Data Injection -->
@@ -991,7 +993,7 @@
         <h3 class="sector-title">Aktuelle Positionen (Wertpapiere)</h3>
         <table>
             <tr>
-                <th>WKN</th>
+                <th>ISIN</th>
                 <th>Wertpapier</th>
                 <th>Stück</th>
                 <th>Kaufkurs</th>
@@ -1004,7 +1006,7 @@
             let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
             let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
             depotHtml += `<tr>
-                <td>${p.wkn}</td>
+                <td>${p.isin || ''}</td>
                 <td><strong>${p.wertpapier}</strong></td>
                 <td>${p.stueck}</td>
                 <td>${p.kaufkurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
@@ -1016,30 +1018,49 @@
         });
         depotHtml += `</table>
         
-        <h3 class="sector-title">Transaktionshistorie</h3>
+        document.getElementById('depot').innerHTML = depotHtml;
+
+        // Render Transaktionshistorie
+        let transHtml = `<h2>Transaktionshistorie</h2>
         <table>
             <tr>
                 <th>Datum</th>
                 <th>Typ</th>
+                <th>ISIN</th>
                 <th>Wertpapier</th>
                 <th>Stück</th>
                 <th>Kurs</th>
                 <th>Gebühr</th>
+                <th>Steuern</th>
+                <th>Gewinn/Verlust</th>
                 <th>Gesamt</th>
+                <th>Notiz</th>
             </tr>`;
-        d.transaktionshistorie.forEach(t => {
-            depotHtml += `<tr>
-                <td>${t.datum}</td>
-                <td><strong>${t.typ}</strong></td>
-                <td>${t.wertpapier}</td>
-                <td>${t.stueck}</td>
-                <td>${t.kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td>${t.gebuehr.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td>${t.gesamt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-            </tr>`;
-        });
-        depotHtml += `</table>`;
-        document.getElementById('depot').innerHTML = depotHtml;
+        
+        if (d.transaktionshistorie) {
+            // Zeige neueste Transaktionen zuerst (optional, aber hilfreich)
+            const transactionsRev = [...d.transaktionshistorie].reverse();
+            transactionsRev.forEach(t => {
+                let gvText = t.gewinn_verlust !== undefined ? t.gewinn_verlust.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}) : '-';
+                let steuernText = t.steuern !== undefined ? t.steuern.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}) : '-';
+                transHtml += `<tr>
+                    <td>${t.datum}</td>
+                    <td><strong>${t.typ}</strong></td>
+                    <td>${t.isin || ''}</td>
+                    <td>${t.wertpapier}</td>
+                    <td>${t.stueck}</td>
+                    <td>${t.kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td>${t.gebuehr.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td>${steuernText}</td>
+                    <td>${gvText}</td>
+                    <td>${t.gesamt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td><small>${t.notiz || ''}</small></td>
+                </tr>`;
+            });
+        }
+        transHtml += `</table>`;
+        document.getElementById('transaktionen').innerHTML = transHtml;
+
 
         // Tab Logic
         function openTab(evt, tabName) {
