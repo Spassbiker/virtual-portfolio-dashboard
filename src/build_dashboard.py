@@ -179,8 +179,8 @@ html_template = """<!DOCTYPE html>
             </tr>`;
         
         if (d.transaktionshistorie) {
-            // Zeige neueste Transaktionen zuerst (optional, aber hilfreich)
-            const transactionsRev = [...d.transaktionshistorie].reverse();
+            // Sortiere Transaktionen chronologisch absteigend (neueste zuerst)
+            const transactionsRev = [...d.transaktionshistorie].sort((a, b) => new Date(b.datum) - new Date(a.datum));
             transactionsRev.forEach(t => {
                 let gvText = t.gewinn_verlust !== undefined ? t.gewinn_verlust.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}) : '-';
                 let steuernText = t.steuern !== undefined ? t.steuern.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}) : '-';
