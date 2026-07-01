@@ -9,7 +9,8 @@
         "kcv": "12",
         "dividendenrendite": "1,1%",
         "empfehlung": "Kaufen",
-        "begruendung": "Starkes Wachstumspotenzial bei Energiewende-Infrastruktur."
+        "begruendung": "Starkes Wachstumspotenzial bei Energiewende-Infrastruktur.",
+        "isin": "DE000ENER6Y0"
       },
       {
         "wertpapier": "RWE",
@@ -19,7 +20,8 @@
         "kcv": "6",
         "dividendenrendite": "3,2%",
         "empfehlung": "Halten",
-        "begruendung": "Solide Dividende, moderates Wachstum."
+        "begruendung": "Solide Dividende, moderates Wachstum.",
+        "isin": "DE0007037129"
       },
       {
         "wertpapier": "E.ON",
@@ -29,7 +31,8 @@
         "kcv": "7",
         "dividendenrendite": "4,0%",
         "empfehlung": "Halten",
-        "begruendung": "Stabiles Gesch\u00e4ftsmodell, begrenzte Fantasie."
+        "begruendung": "Stabiles Gesch\u00e4ftsmodell, begrenzte Fantasie.",
+        "isin": "DE000ENAG999"
       },
       {
         "wertpapier": "Encavis",
@@ -39,7 +42,8 @@
         "kcv": "15",
         "dividendenrendite": "0,8%",
         "empfehlung": "Verkaufen",
-        "begruendung": "Bewertung aktuell zu hoch f\u00fcr das Wachstum."
+        "begruendung": "Bewertung aktuell zu hoch f\u00fcr das Wachstum.",
+        "isin": "DE0006095003"
       },
       {
         "wertpapier": "Nordex",
@@ -49,7 +53,8 @@
         "kcv": "20",
         "dividendenrendite": "0,0%",
         "empfehlung": "Halten",
-        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilit\u00e4t."
+        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilit\u00e4t.",
+        "isin": "DE000A0D6554"
       },
       {
         "wertpapier": "Vestas",
@@ -59,7 +64,8 @@
         "kcv": "11",
         "dividendenrendite": "0,5%",
         "empfehlung": "Kaufen",
-        "begruendung": "Marktf\u00fchrer bei Windkraft, gute langfristige Aussichten."
+        "begruendung": "Marktf\u00fchrer bei Windkraft, gute langfristige Aussichten.",
+        "isin": "DK0061539921"
       },
       {
         "wertpapier": "Orsted",
@@ -69,7 +75,8 @@
         "kcv": "9",
         "dividendenrendite": "2,5%",
         "empfehlung": "Kaufen",
-        "begruendung": "Marktf\u00fchrer bei Offshore-Wind, attraktive Bewertung."
+        "begruendung": "Marktf\u00fchrer bei Offshore-Wind, attraktive Bewertung.",
+        "isin": "DK0060094928"
       },
       {
         "wertpapier": "NextEra",
@@ -79,7 +86,8 @@
         "kcv": "14",
         "dividendenrendite": "2,8%",
         "empfehlung": "Halten",
-        "begruendung": "Hohe Qualit\u00e4t, aber im Sektorvergleich teuer."
+        "begruendung": "Hohe Qualit\u00e4t, aber im Sektorvergleich teuer.",
+        "isin": "US65339F1012"
       }
     ],
     "Verteidigung": [
@@ -91,7 +99,8 @@
         "kcv": "18",
         "dividendenrendite": "1,2%",
         "empfehlung": "Kaufen",
-        "begruendung": "Enormes Auftragsvolumen, langfristiges Wachstum."
+        "begruendung": "Enormes Auftragsvolumen, langfristiges Wachstum.",
+        "isin": "DE0007030009"
       },
       {
         "wertpapier": "Hensoldt",
@@ -101,7 +110,8 @@
         "kcv": "22",
         "dividendenrendite": "0,9%",
         "empfehlung": "Halten",
-        "begruendung": "Hohe Bewertung, gute Technologiebasis."
+        "begruendung": "Hohe Bewertung, gute Technologiebasis.",
+        "isin": "DE000HAG0005"
       },
       {
         "wertpapier": "Leonardo S.p.a.",
@@ -111,7 +121,8 @@
         "kcv": "5",
         "dividendenrendite": "2,8%",
         "empfehlung": "Kaufen",
-        "begruendung": "Sehr attraktiv bewertet, Nachholpotenzial."
+        "begruendung": "Sehr attraktiv bewertet, Nachholpotenzial.",
+        "isin": "IT0003856405"
       },
       {
         "wertpapier": "Thales",
@@ -121,7 +132,8 @@
         "kcv": "12",
         "dividendenrendite": "2,1%",
         "empfehlung": "Kaufen",
-        "begruendung": "Stabiles Wachstum, starke Marktposition."
+        "begruendung": "Stabiles Wachstum, starke Marktposition.",
+        "isin": "FR0000121329"
       },
       {
         "wertpapier": "BAE Systems",
@@ -131,7 +143,8 @@
         "kcv": "10",
         "dividendenrendite": "2,5%",
         "empfehlung": "Halten",
-        "begruendung": "Solide, aber aktuell fair bewertet."
+        "begruendung": "Solide, aber aktuell fair bewertet.",
+        "isin": "GB0002634946"
       },
       {
         "wertpapier": "General Dynamics",
@@ -141,7 +154,8 @@
         "kcv": "14",
         "dividendenrendite": "2,0%",
         "empfehlung": "Halten",
-        "begruendung": "Stetige Cashflows, wenig Fantasie."
+        "begruendung": "Stetige Cashflows, wenig Fantasie.",
+        "isin": "US3695501086"
       },
       {
         "wertpapier": "Lockheed Martin",
@@ -151,7 +165,8 @@
         "kcv": "16",
         "dividendenrendite": "2,3%",
         "empfehlung": "Halten",
-        "begruendung": "Sehr substanzstark, aber hohe Bewertung des Kapitals."
+        "begruendung": "Sehr substanzstark, aber hohe Bewertung des Kapitals.",
+        "isin": "US5398301094"
       },
       {
         "wertpapier": "Northrop Grumman",
@@ -161,7 +176,8 @@
         "kcv": "18",
         "dividendenrendite": "1,5%",
         "empfehlung": "Halten",
-        "begruendung": "Starke Auftragslage, begrenzte kurzfristige Upside."
+        "begruendung": "Starke Auftragslage, begrenzte kurzfristige Upside.",
+        "isin": "US6668071029"
       }
     ],
     "Luft- und Raumfahrttechnik": [
@@ -173,7 +189,8 @@
         "kcv": "18",
         "dividendenrendite": "1,3%",
         "empfehlung": "Kaufen",
-        "begruendung": "Profitabler Instandhaltungsmarkt, starkes Wachstum."
+        "begruendung": "Profitabler Instandhaltungsmarkt, starkes Wachstum.",
+        "isin": "DE000A0D9PT0"
       },
       {
         "wertpapier": "Safran",
@@ -183,7 +200,8 @@
         "kcv": "20",
         "dividendenrendite": "1,1%",
         "empfehlung": "Kaufen",
-        "begruendung": "Dominante Marktposition bei Triebwerken."
+        "begruendung": "Dominante Marktposition bei Triebwerken.",
+        "isin": "FR0000073272"
       },
       {
         "wertpapier": "Airbus",
@@ -193,7 +211,8 @@
         "kcv": "15",
         "dividendenrendite": "1,2%",
         "empfehlung": "Halten",
-        "begruendung": "Operative Herausforderungen bremsen kurzfristig."
+        "begruendung": "Operative Herausforderungen bremsen kurzfristig.",
+        "isin": "NL0000235190"
       },
       {
         "wertpapier": "Boeing",
@@ -203,7 +222,8 @@
         "kcv": "-",
         "dividendenrendite": "0,0%",
         "empfehlung": "Verkaufen",
-        "begruendung": "Hohe Verschuldung und operative Probleme."
+        "begruendung": "Hohe Verschuldung und operative Probleme.",
+        "isin": "US0970231058"
       },
       {
         "wertpapier": "Dassault Aviation",
@@ -213,7 +233,8 @@
         "kcv": "10",
         "dividendenrendite": "1,5%",
         "empfehlung": "Halten",
-        "begruendung": "Konservativ, geringes Risiko, wenig Dynamik."
+        "begruendung": "Konservativ, geringes Risiko, wenig Dynamik.",
+        "isin": "FR0014004L86"
       },
       {
         "wertpapier": "Rolls-Royce",
@@ -223,7 +244,8 @@
         "kcv": "12",
         "dividendenrendite": "0,0%",
         "empfehlung": "Kaufen",
-        "begruendung": "Erfolgreicher Turnaround, Cashflow verbessert."
+        "begruendung": "Erfolgreicher Turnaround, Cashflow verbessert.",
+        "isin": "GB00B63H8491"
       },
       {
         "wertpapier": "AAR Corp.",
@@ -233,7 +255,8 @@
         "kcv": "8",
         "dividendenrendite": "0,0%",
         "empfehlung": "Kaufen",
-        "begruendung": "G\u00fcnstige Bewertung im Sektorvergleich."
+        "begruendung": "G\u00fcnstige Bewertung im Sektorvergleich.",
+        "isin": "US0003611052"
       },
       {
         "wertpapier": "Hexcel",
@@ -243,7 +266,8 @@
         "kcv": "15",
         "dividendenrendite": "0,6%",
         "empfehlung": "Halten",
-        "begruendung": "Nischenplayer, abh\u00e4ngig von Flugzeugbauzyklen."
+        "begruendung": "Nischenplayer, abh\u00e4ngig von Flugzeugbauzyklen.",
+        "isin": "US4282911084"
       }
     ],
     "Satellitentechnik": [
@@ -255,7 +279,8 @@
         "kcv": "-",
         "dividendenrendite": "0,0%",
         "empfehlung": "Halten",
-        "begruendung": "Hohes Wachstum, hohe Bewertung, noch nicht profitabel."
+        "begruendung": "Hohes Wachstum, hohe Bewertung, noch nicht profitabel.",
+        "isin": "US7731221062"
       },
       {
         "wertpapier": "Planet Labs",
@@ -265,7 +290,8 @@
         "kcv": "-",
         "dividendenrendite": "0,0%",
         "empfehlung": "Verkaufen",
-        "begruendung": "Hohe Cashburn-Rate, intensiver Wettbewerb."
+        "begruendung": "Hohe Cashburn-Rate, intensiver Wettbewerb.",
+        "isin": "US72703X1063"
       },
       {
         "wertpapier": "OHB SE",
@@ -275,7 +301,8 @@
         "kcv": "7",
         "dividendenrendite": "1,0%",
         "empfehlung": "Kaufen",
-        "begruendung": "Profitiert von \u00f6ffentlicher Raumfahrt-Nachfrage."
+        "begruendung": "Profitiert von \u00f6ffentlicher Raumfahrt-Nachfrage.",
+        "isin": "DE0005936124"
       },
       {
         "wertpapier": "Eutelsat",
@@ -285,7 +312,8 @@
         "kcv": "3",
         "dividendenrendite": "5,0%",
         "empfehlung": "Verkaufen",
-        "begruendung": "Schrumpfender Kernmarkt, Strukturprobleme."
+        "begruendung": "Schrumpfender Kernmarkt, Strukturprobleme.",
+        "isin": "FR0010221234"
       },
       {
         "wertpapier": "SES SA",
@@ -295,7 +323,8 @@
         "kcv": "4",
         "dividendenrendite": "4,5%",
         "empfehlung": "Halten",
-        "begruendung": "Dividendenwert mit begrenztem Wachstum."
+        "begruendung": "Dividendenwert mit begrenztem Wachstum.",
+        "isin": "LU0088087324"
       },
       {
         "wertpapier": "Maxar",
@@ -305,7 +334,8 @@
         "kcv": "-",
         "dividendenrendite": "-",
         "empfehlung": "Keine Wertung",
-        "begruendung": "Von der B\u00f6rse genommen."
+        "begruendung": "Von der B\u00f6rse genommen.",
+        "isin": "US57778K1051"
       },
       {
         "wertpapier": "Iridium Comm.",
@@ -315,7 +345,8 @@
         "kcv": "12",
         "dividendenrendite": "1,5%",
         "empfehlung": "Halten",
-        "begruendung": "Stabiler Cashflow, aber hohe Investitionen."
+        "begruendung": "Stabiler Cashflow, aber hohe Investitionen.",
+        "isin": "US46269C1027"
       },
       {
         "wertpapier": "Gilat Satellite",
@@ -325,7 +356,8 @@
         "kcv": "9",
         "dividendenrendite": "0,0%",
         "empfehlung": "Kaufen",
-        "begruendung": "Nischenanbieter, gute technologische Basis."
+        "begruendung": "Nischenanbieter, gute technologische Basis.",
+        "isin": "IL0010825102"
       }
     ],
     "Technologie": [
@@ -337,7 +369,8 @@
         "kcv": "22",
         "dividendenrendite": "1,0%",
         "empfehlung": "Kaufen",
-        "begruendung": "Starke Cloud-Transformation, langfristig attraktiv."
+        "begruendung": "Starke Cloud-Transformation, langfristig attraktiv.",
+        "isin": "DE0007164600"
       },
       {
         "wertpapier": "Infineon",
@@ -347,7 +380,8 @@
         "kcv": "10",
         "dividendenrendite": "1,2%",
         "empfehlung": "Kaufen",
-        "begruendung": "Attraktive Bewertung, starke Nachfrage im Automotive-Sektor."
+        "begruendung": "Attraktive Bewertung, starke Nachfrage im Automotive-Sektor.",
+        "isin": "DE0006231004"
       },
       {
         "wertpapier": "ASML",
@@ -357,7 +391,8 @@
         "kcv": "25",
         "dividendenrendite": "0,8%",
         "empfehlung": "Kaufen",
-        "begruendung": "Monopolartige Stellung, technologisch f\u00fchrend."
+        "begruendung": "Monopolartige Stellung, technologisch f\u00fchrend.",
+        "isin": "NL0010273215"
       },
       {
         "wertpapier": "Salesforce",
@@ -367,7 +402,8 @@
         "kcv": "20",
         "dividendenrendite": "0,0%",
         "empfehlung": "Halten",
-        "begruendung": "Solides Wachstum, Bewertung mittlerweile fair."
+        "begruendung": "Solides Wachstum, Bewertung mittlerweile fair.",
+        "isin": "US79466L3024"
       },
       {
         "wertpapier": "Oracle",
@@ -377,7 +413,8 @@
         "kcv": "16",
         "dividendenrendite": "1,3%",
         "empfehlung": "Halten",
-        "begruendung": "Cloud-Gesch\u00e4ft w\u00e4chst, aber hoher Wettbewerb."
+        "begruendung": "Cloud-Gesch\u00e4ft w\u00e4chst, aber hoher Wettbewerb.",
+        "isin": "US68389X1054"
       },
       {
         "wertpapier": "Nvidia",
@@ -387,7 +424,8 @@
         "kcv": "35",
         "dividendenrendite": "0,0%",
         "empfehlung": "Halten",
-        "begruendung": "Exzellentes Unternehmen, aber sehr hohe Bewertung."
+        "begruendung": "Exzellentes Unternehmen, aber sehr hohe Bewertung.",
+        "isin": "US67066G1040"
       },
       {
         "wertpapier": "Microsoft",
@@ -397,7 +435,8 @@
         "kcv": "22",
         "dividendenrendite": "0,8%",
         "empfehlung": "Kaufen",
-        "begruendung": "Extrem breit aufgestellt, verl\u00e4ssliches Wachstum."
+        "begruendung": "Extrem breit aufgestellt, verl\u00e4ssliches Wachstum.",
+        "isin": "US5949181045"
       },
       {
         "wertpapier": "Alphabet",
@@ -407,7 +446,8 @@
         "kcv": "15",
         "dividendenrendite": "0,4%",
         "empfehlung": "Kaufen",
-        "begruendung": "Bewertung attraktiv im Vergleich zu anderen Techs."
+        "begruendung": "Bewertung attraktiv im Vergleich zu anderen Techs.",
+        "isin": "US02079K3059"
       }
     ]
   }

@@ -78,12 +78,14 @@ html_template = """<!DOCTYPE html>
             chartHtml += `<h3 class="sector-title">${sektor}</h3>
             <table>
                 <tr>
+                    <th style="width: 15%">ISIN</th>
                     <th style="width: 25%">Wertpapier</th>
                     <th style="width: 15%">Empfehlung</th>
-                    <th style="width: 60%">Charttechnische Begründung</th>
+                    <th style="width: 45%">Charttechnische Begründung</th>
                 </tr>`;
             werte.forEach(w => {
                 chartHtml += `<tr>
+                    <td><small>${w.isin || ''}</small></td>
                     <td><strong>${w.wertpapier}</strong></td>
                     <td>${getBadge(w.empfehlung)}</td>
                     <td>${w.begruendung}</td>
@@ -99,6 +101,7 @@ html_template = """<!DOCTYPE html>
             fundaHtml += `<h3 class="sector-title">${sektor}</h3>
             <table>
                 <tr>
+                    <th>ISIN</th>
                     <th>Wertpapier</th>
                     <th>KGV</th>
                     <th>KBV</th>
@@ -106,10 +109,11 @@ html_template = """<!DOCTYPE html>
                     <th>KCV</th>
                     <th>Dividende</th>
                     <th>Empfehlung</th>
-                    <th style="width: 35%">Begründung</th>
+                    <th style="width: 30%">Begründung</th>
                 </tr>`;
             werte.forEach(w => {
                 fundaHtml += `<tr>
+                    <td><small>${w.isin || ''}</small></td>
                     <td><strong>${w.wertpapier}</strong></td>
                     <td>${w.kgv}</td>
                     <td>${w.kbv}</td>
