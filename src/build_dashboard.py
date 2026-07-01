@@ -161,8 +161,7 @@ html_template = """<!DOCTYPE html>
                 <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${(p.gewinn_verlust || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'})}</span></td>
             </tr>`;
         });
-        depotHtml += `</table>
-        
+        depotHtml += `</table>`;
         document.getElementById('depot').innerHTML = depotHtml;
 
         // Render Transaktionshistorie
