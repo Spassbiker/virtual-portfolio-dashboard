@@ -2,88 +2,88 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 19.49,
-    "portfoliowert": 10084.9,
-    "gesamtvermoegen": 10104.39,
+    "portfoliowert": 10107.9,
+    "gesamtvermoegen": 10127.39,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 48.845,
+        "boersenkurs": 48.76,
         "investiert": 1484.16,
-        "boersenwert": 1563.04,
-        "gewinn_verlust": 78.88
+        "boersenwert": 1560.32,
+        "gewinn_verlust": 76.16
       },
       {
         "isin": "DE000A0D9PT0",
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 367.3,
+        "boersenkurs": 369.7,
         "investiert": 1453.2,
-        "boersenwert": 1469.2,
-        "gewinn_verlust": 16.0
+        "boersenwert": 1478.8,
+        "gewinn_verlust": 25.6
       },
       {
         "isin": "DE0007030009",
         "wertpapier": "Rheinmetall",
         "stueck": 1,
         "kaufkurs": 975.6,
-        "boersenkurs": 1047.2,
+        "boersenkurs": 1050.6,
         "investiert": 975.6,
-        "boersenwert": 1047.2,
-        "gewinn_verlust": 71.6
+        "boersenwert": 1050.6,
+        "gewinn_verlust": 75.0
       },
       {
         "isin": "GB00B63H8491",
         "wertpapier": "Rolls-Royce",
         "stueck": 89,
         "kaufkurs": 16.72,
-        "boersenkurs": 16.98,
+        "boersenkurs": 17.044,
         "investiert": 1488.08,
-        "boersenwert": 1511.22,
-        "gewinn_verlust": 23.14
+        "boersenwert": 1516.92,
+        "gewinn_verlust": 28.84
       },
       {
         "isin": "FR0000073272",
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 349.6,
+        "boersenkurs": 349.9,
         "investiert": 1380.0,
-        "boersenwert": 1398.4,
-        "gewinn_verlust": 18.4
+        "boersenwert": 1399.6,
+        "gewinn_verlust": 19.6
       },
       {
         "isin": "DE000ENER6Y0",
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 162.64,
+        "boersenkurs": 163.34,
         "investiert": 1492.2,
-        "boersenwert": 1463.76,
-        "gewinn_verlust": -28.44
+        "boersenwert": 1470.06,
+        "gewinn_verlust": -22.14
       },
       {
         "isin": "FR0000121329",
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 228.8,
+        "boersenkurs": 229.4,
         "investiert": 224.8,
-        "boersenwert": 228.8,
-        "gewinn_verlust": 4.0
+        "boersenwert": 229.4,
+        "gewinn_verlust": 4.6
       },
       {
         "isin": "DE0006231004",
         "wertpapier": "Infineon",
         "stueck": 18,
         "kaufkurs": 81.67,
-        "boersenkurs": 77.96,
+        "boersenkurs": 77.9,
         "investiert": 1470.06,
-        "boersenwert": 1403.28,
-        "gewinn_verlust": -66.78
+        "boersenwert": 1402.2,
+        "gewinn_verlust": -67.86
       }
     ],
     "transaktionshistorie": [
