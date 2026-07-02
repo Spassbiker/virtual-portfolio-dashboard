@@ -1,154 +1,218 @@
 {
-  "analysen": [
-    {
-      "isin": "IT0003856405",
-      "wertpapier": "Leonardo",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 49.16,
-      "trend": "Seitw\u00e4rtstrend",
-      "signal": "Halten",
-      "unterstuetzung": 46.7,
-      "widerstand": 51.62,
-      "rsi_14": 52.96,
-      "macd": "Neutral",
-      "sma_50": 48.55,
-      "sma_200": 50.1,
-      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
-    },
-    {
-      "isin": "DE000A0D9PT0",
-      "wertpapier": "MTU Aero Engines",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 369.12,
-      "trend": "Leichter Abw\u00e4rtstrend",
-      "signal": "Halten",
-      "unterstuetzung": 350.66,
-      "widerstand": 387.58,
-      "rsi_14": 50.65,
-      "macd": "Neutral",
-      "sma_50": 369.09,
-      "sma_200": 382.53,
-      "begruendung": "Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Halten."
-    },
-    {
-      "isin": "DE0007030009",
-      "wertpapier": "Rheinmetall",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 1059.88,
-      "trend": "Seitw\u00e4rtstrend",
-      "signal": "Halten",
-      "unterstuetzung": 1006.89,
-      "widerstand": 1112.87,
-      "rsi_14": 42.88,
-      "macd": "Neutral",
-      "sma_50": 1042.37,
-      "sma_200": 1019.0,
-      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
-    },
-    {
-      "isin": "GB00B63H8491",
-      "wertpapier": "Rolls-Royce",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 16.71,
-      "trend": "Leichter Abw\u00e4rtstrend",
-      "signal": "Verkaufen",
-      "unterstuetzung": 15.87,
-      "widerstand": 17.55,
-      "rsi_14": 67.01,
-      "macd": "Neutral",
-      "sma_50": 16.82,
-      "sma_200": 16.17,
-      "begruendung": "Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Verkaufen."
-    },
-    {
-      "isin": "FR0000073272",
-      "wertpapier": "Safran",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 355.39,
-      "trend": "Leichter Abw\u00e4rtstrend",
-      "signal": "Halten",
-      "unterstuetzung": 337.62,
-      "widerstand": 373.16,
-      "rsi_14": 55.05,
-      "macd": "Neutral",
-      "sma_50": 357.46,
-      "sma_200": 345.38,
-      "begruendung": "Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Halten."
-    },
-    {
-      "isin": "DE000ENER6Y0",
-      "wertpapier": "Siemens Energy",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 162.9,
-      "trend": "Aufw\u00e4rtstrend",
-      "signal": "Kaufen",
-      "unterstuetzung": 154.75,
-      "widerstand": 171.05,
-      "rsi_14": 42.38,
-      "macd": "Positiv",
-      "sma_50": 163.66,
-      "sma_200": 156.89,
-      "begruendung": "Aktueller Trend ist Aufw\u00e4rtstrend. Signal lautet Kaufen."
-    },
-    {
-      "isin": "FR0000121329",
-      "wertpapier": "Thales",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 226.14,
-      "trend": "Seitw\u00e4rtstrend",
-      "signal": "Halten",
-      "unterstuetzung": 214.83,
-      "widerstand": 237.45,
-      "rsi_14": 69.15,
-      "macd": "Neutral",
-      "sma_50": 222.03,
-      "sma_200": 228.72,
-      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
-    },
-    {
-      "isin": "DE0006231004",
-      "wertpapier": "Infineon",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 76.67,
-      "trend": "Leichter Abw\u00e4rtstrend",
-      "signal": "Halten",
-      "unterstuetzung": 72.84,
-      "widerstand": 80.5,
-      "rsi_14": 48.76,
-      "macd": "Neutral",
-      "sma_50": 76.09,
-      "sma_200": 73.83,
-      "begruendung": "Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Halten."
-    },
-    {
-      "isin": "NL0010273215",
-      "wertpapier": "ASML",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 1150.5,
-      "trend": "Seitw\u00e4rtstrend",
-      "signal": "Halten",
-      "unterstuetzung": 1092.97,
-      "widerstand": 1208.03,
-      "rsi_14": 63.93,
-      "macd": "Neutral",
-      "sma_50": 1138.19,
-      "sma_200": 1096.66,
-      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
-    },
-    {
-      "isin": "US0378331005",
-      "wertpapier": "Apple",
-      "datum": "2026-07-02",
-      "aktueller_kurs": 210.2,
-      "trend": "Seitw\u00e4rtstrend",
-      "signal": "Halten",
-      "unterstuetzung": 199.69,
-      "widerstand": 220.71,
-      "rsi_14": 52.85,
-      "macd": "Neutral",
-      "sma_50": 206.5,
-      "sma_200": 210.25,
-      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
-    }
-  ]
+  "sektoren": {
+    "Energie": [
+      {
+        "wertpapier": "Siemens Energy",
+        "empfehlung": "Kaufen",
+        "begruendung": "Starke Erholung \u00fcber SMA 200, hoher RSI-Aufw\u00e4rtstrend.",
+        "isin": "DE000ENER6Y0"
+      },
+      {
+        "wertpapier": "RWE",
+        "empfehlung": "Halten",
+        "begruendung": "Seitw\u00e4rtsphase, starke Unterst\u00fctzung bei 30 EUR.",
+        "isin": "DE0007037129"
+      },
+      {
+        "wertpapier": "E.ON",
+        "empfehlung": "Halten",
+        "begruendung": "Defensive Stabilit\u00e4t, langsames, aber stetiges Wachstum.",
+        "isin": "DE000ENAG999"
+      },
+      {
+        "wertpapier": "Encavis",
+        "empfehlung": "Kaufen",
+        "begruendung": "Bruch des mittelfristigen Abw\u00e4rtstrends, Momentum positiv.",
+        "isin": "DE0006095003"
+      },
+      {
+        "wertpapier": "SMA Solar",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Deutlicher Abw\u00e4rtstrend, RSI im \u00fcberverkauften Bereich, keine Bodenbildung.",
+        "isin": "DE000A0DJ6J9"
+      },
+      {
+        "wertpapier": "Nordex SE",
+        "empfehlung": "Halten",
+        "begruendung": "Volatilit\u00e4t hoch, kurzfristige Ausbr\u00fcche m\u00f6glich, aber Widerst\u00e4nde nahe.",
+        "isin": "DE000A0D6554"
+      }
+    ],
+    "Verteidigung": [
+      {
+        "wertpapier": "Rheinmetall",
+        "empfehlung": "Halten",
+        "begruendung": "Hohe Bewertung, leichte Konsolidierung unter Widerstand.",
+        "isin": "DE0007030009"
+      },
+      {
+        "wertpapier": "Hensoldt",
+        "empfehlung": "Kaufen",
+        "begruendung": "Aufw\u00e4rtstrend intakt, charttechnisch keine \u00dcberhitzung.",
+        "isin": "DE000HAG0005"
+      },
+      {
+        "wertpapier": "Airbus",
+        "empfehlung": "Kaufen",
+        "begruendung": "Unterst\u00fctzungszone bei 180 EUR erfolgreich getestet.",
+        "isin": "NL0000235190"
+      },
+      {
+        "wertpapier": "BAE Systems",
+        "empfehlung": "Halten",
+        "begruendung": "Stabile Performance, jedoch geringes kurzfristiges Momentum.",
+        "isin": "GB0002634946"
+      },
+      {
+        "wertpapier": "Northrop Grumman",
+        "empfehlung": "Kaufen",
+        "begruendung": "Struktureller Ausbruch aus langj\u00e4hriger Seitw\u00e4rtsbewegung.",
+        "isin": "US6668071029"
+      },
+      {
+        "wertpapier": "Leonardo SpA",
+        "empfehlung": "Kaufen",
+        "begruendung": "Ausbruch aus langfristiger Seitw\u00e4rtsphase, Momentum nimmt zu.",
+        "isin": "IT0003856405"
+      },
+      {
+        "wertpapier": "Thales SA",
+        "empfehlung": "Kaufen",
+        "begruendung": "Stabiler Aufw\u00e4rtstrend, GD200 als sichere Basis.",
+        "isin": "FR0000121329"
+      }
+    ],
+    "Luft- und Raumfahrttechnik": [
+      {
+        "wertpapier": "MTU Aero Engines",
+        "empfehlung": "Kaufen",
+        "begruendung": "Starker Trendkanal, SMA 50 fungiert als dynamische Unterst\u00fctzung.",
+        "isin": "DE000A0D9PT0"
+      },
+      {
+        "wertpapier": "Safran",
+        "empfehlung": "Halten",
+        "begruendung": "Konsolidierung auf hohem Niveau, abwarten auf Ausbruch.",
+        "isin": "FR0000073272"
+      },
+      {
+        "wertpapier": "Rolls-Royce",
+        "empfehlung": "Kaufen",
+        "begruendung": "Enormes Momentum, charttechnische Ziele auf der Oberseite.",
+        "isin": "GB00B63H8491"
+      },
+      {
+        "wertpapier": "Dassault Aviation",
+        "empfehlung": "Halten",
+        "begruendung": "Niedriges Volumen, seitw\u00e4rts, geringes Potenzial kurzfristig.",
+        "isin": "FR0014004L86"
+      },
+      {
+        "wertpapier": "Leonardo",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Widerstandszone nicht durchbrochen, Trendumkehr eingeleitet.",
+        "isin": "IT0003856405"
+      },
+      {
+        "wertpapier": "MTU Aero Eng.",
+        "empfehlung": "Kaufen",
+        "begruendung": "Nach Korrektur wieder bullisches Momentum, RSI stabil.",
+        "isin": ""
+      },
+      {
+        "wertpapier": "Airbus SE",
+        "empfehlung": "Halten",
+        "begruendung": "Kurzfristig technischer Druck, langfristige Basis intakt.",
+        "isin": "NL0000235190"
+      }
+    ],
+    "Satellitentechnik": [
+      {
+        "wertpapier": "OHB",
+        "empfehlung": "Halten",
+        "begruendung": "Volatile Seitw\u00e4rtsbewegung, abwarten auf Nachrichten.",
+        "isin": "DE0005936124"
+      },
+      {
+        "wertpapier": "SES",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Dauerhafter Abw\u00e4rtstrend, keine charttechnische Unterst\u00fctzung.",
+        "isin": "LU0088087324"
+      },
+      {
+        "wertpapier": "Eutelsat",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Strukturprobleme im Chart sichtbar, unter SMA 200.",
+        "isin": "FR0010221234"
+      },
+      {
+        "wertpapier": "Maxar",
+        "empfehlung": "Kaufen",
+        "begruendung": "Bodenbildung abgeschlossen, bullisches Muster kurzfristig.",
+        "isin": "US57778K1051"
+      },
+      {
+        "wertpapier": "Airbus",
+        "empfehlung": "Kaufen",
+        "begruendung": "(siehe Verteidigung, hohe Synergieeffekte).",
+        "isin": "NL0000235190"
+      },
+      {
+        "wertpapier": "Rocket Lab",
+        "empfehlung": "Kaufen",
+        "begruendung": "Starke technische Dynamik, hohes Volumen bei Ausbr\u00fcchen.",
+        "isin": "US7731221062"
+      },
+      {
+        "wertpapier": "Planet Labs",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Abw\u00e4rtstrend, unterschreitet wichtige Unterst\u00fctzungsniveaus.",
+        "isin": "US72703X1063"
+      }
+    ],
+    "Technologie": [
+      {
+        "wertpapier": "SAP",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Kurzfristige \u00dcberhitzung nach starken Rallye, Gewinnmitnahmen empfohlen.",
+        "isin": "DE0007164600"
+      },
+      {
+        "wertpapier": "Infineon",
+        "empfehlung": "Kaufen",
+        "begruendung": "Bodenbildung abgeschlossen, starkes Momentum nach oben.",
+        "isin": "DE0006231004"
+      },
+      {
+        "wertpapier": "ASML",
+        "empfehlung": "Kaufen",
+        "begruendung": "R\u00fccksetzer zum SMA 200 bietet gute Einstiegschance.",
+        "isin": "NL0010273215"
+      },
+      {
+        "wertpapier": "TeamViewer",
+        "empfehlung": "Verkaufen",
+        "begruendung": "Abw\u00e4rtstrend seit Monaten, keine Anzeichen einer Wende.",
+        "isin": "DE000A2YN900"
+      },
+      {
+        "wertpapier": "Delivery Hero",
+        "empfehlung": "Halten",
+        "begruendung": "Spekulative Seitw\u00e4rtsphase, hoher charttechnischer Druck.",
+        "isin": "DE000A2E4K43"
+      },
+      {
+        "wertpapier": "Dt. Telekom",
+        "empfehlung": "Kaufen",
+        "begruendung": "Defensive St\u00e4rke, technischer Ausbruch \u00fcber Widerstandsbereich.",
+        "isin": "DE0005557508"
+      },
+      {
+        "wertpapier": "Aixtron SE",
+        "empfehlung": "Halten",
+        "begruendung": "Hohe Volatilit\u00e4t, kurzfristige Erholungschancen, langfristig instabil.",
+        "isin": "DE000A0WMPJ6"
+      }
+    ]
+  }
 }
