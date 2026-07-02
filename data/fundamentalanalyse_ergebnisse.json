@@ -23,9 +23,10 @@
         "umsatzwachstum_yoy": 17.8,
         "gewinnwachstum_yoy": -9.86,
         "eigenkapitalquote": 20.97,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "E.ON",
@@ -36,9 +37,10 @@
         "umsatzwachstum_yoy": 9.49,
         "gewinnwachstum_yoy": -9.0,
         "eigenkapitalquote": 57.55,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Encavis",
@@ -49,9 +51,10 @@
         "umsatzwachstum_yoy": -2.8,
         "gewinnwachstum_yoy": 6.86,
         "eigenkapitalquote": 40.45,
-        "bewertung": "Teuer",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "SMA Solar",
@@ -62,9 +65,10 @@
         "umsatzwachstum_yoy": 11.66,
         "gewinnwachstum_yoy": 20.59,
         "eigenkapitalquote": 51.79,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Nordex SE",
@@ -75,9 +79,10 @@
         "umsatzwachstum_yoy": 12.41,
         "gewinnwachstum_yoy": 20.03,
         "eigenkapitalquote": 58.78,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Microsoft",
@@ -88,9 +93,10 @@
         "umsatzwachstum_yoy": -4.7,
         "gewinnwachstum_yoy": 13.32,
         "eigenkapitalquote": 27.17,
-        "bewertung": "Teuer",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Alphabet",
@@ -103,7 +109,8 @@
         "eigenkapitalquote": 37.15,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "L3Harris Technologies",
@@ -116,7 +123,8 @@
         "eigenkapitalquote": 26.91,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Raytheon",
@@ -127,9 +135,10 @@
         "umsatzwachstum_yoy": 23.54,
         "gewinnwachstum_yoy": 21.74,
         "eigenkapitalquote": 51.81,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       }
     ],
     "Verteidigung": [
@@ -155,9 +164,10 @@
         "umsatzwachstum_yoy": 21.44,
         "gewinnwachstum_yoy": 2.84,
         "eigenkapitalquote": 51.51,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Airbus",
@@ -168,9 +178,10 @@
         "umsatzwachstum_yoy": 22.3,
         "gewinnwachstum_yoy": 10.26,
         "eigenkapitalquote": 39.1,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "BAE Systems",
@@ -181,9 +192,10 @@
         "umsatzwachstum_yoy": 29.11,
         "gewinnwachstum_yoy": -7.7,
         "eigenkapitalquote": 46.55,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Northrop Grumman",
@@ -194,9 +206,10 @@
         "umsatzwachstum_yoy": 27.13,
         "gewinnwachstum_yoy": -9.6,
         "eigenkapitalquote": 35.93,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Leonardo SpA",
@@ -233,9 +246,10 @@
         "umsatzwachstum_yoy": 2.6,
         "gewinnwachstum_yoy": 5.89,
         "eigenkapitalquote": 49.64,
-        "bewertung": "Teuer",
+        "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Tesla",
@@ -246,9 +260,10 @@
         "umsatzwachstum_yoy": 13.87,
         "gewinnwachstum_yoy": 3.92,
         "eigenkapitalquote": 49.07,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Gilat Satellite",
@@ -261,7 +276,8 @@
         "eigenkapitalquote": 44.53,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       }
     ],
     "Luft- und Raumfahrttechnik": [
@@ -302,7 +318,8 @@
         "eigenkapitalquote": 53.84,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Dassault Aviation",
@@ -313,9 +330,10 @@
         "umsatzwachstum_yoy": 29.71,
         "gewinnwachstum_yoy": 5.27,
         "eigenkapitalquote": 54.67,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Leonardo",
@@ -341,7 +359,8 @@
         "eigenkapitalquote": 36.83,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Airbus SE",
@@ -352,9 +371,10 @@
         "umsatzwachstum_yoy": 28.5,
         "gewinnwachstum_yoy": 8.78,
         "eigenkapitalquote": 21.41,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Lockheed Martin",
@@ -367,7 +387,8 @@
         "eigenkapitalquote": 44.1,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "General Dynamics",
@@ -378,9 +399,10 @@
         "umsatzwachstum_yoy": -0.35,
         "gewinnwachstum_yoy": -4.05,
         "eigenkapitalquote": 28.3,
-        "bewertung": "Teuer",
+        "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Nvidia",
@@ -393,7 +415,8 @@
         "eigenkapitalquote": 45.94,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       }
     ],
     "Satellitentechnik": [
@@ -408,7 +431,8 @@
         "eigenkapitalquote": 58.72,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "SES",
@@ -419,9 +443,10 @@
         "umsatzwachstum_yoy": 28.46,
         "gewinnwachstum_yoy": -7.61,
         "eigenkapitalquote": 21.31,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Eutelsat",
@@ -432,9 +457,10 @@
         "umsatzwachstum_yoy": 25.14,
         "gewinnwachstum_yoy": 17.74,
         "eigenkapitalquote": 46.36,
-        "bewertung": "Teuer",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Maxar",
@@ -445,9 +471,10 @@
         "umsatzwachstum_yoy": 25.69,
         "gewinnwachstum_yoy": 29.23,
         "eigenkapitalquote": 41.51,
-        "bewertung": "Keine Wertung",
+        "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Airbus",
@@ -458,9 +485,10 @@
         "umsatzwachstum_yoy": 17.11,
         "gewinnwachstum_yoy": 1.68,
         "eigenkapitalquote": 46.68,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Rocket Lab",
@@ -471,9 +499,10 @@
         "umsatzwachstum_yoy": 1.78,
         "gewinnwachstum_yoy": -9.13,
         "eigenkapitalquote": 42.1,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Planet Labs",
@@ -484,9 +513,10 @@
         "umsatzwachstum_yoy": 5.31,
         "gewinnwachstum_yoy": 5.05,
         "eigenkapitalquote": 32.58,
-        "bewertung": "Teuer",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Boeing",
@@ -499,7 +529,8 @@
         "eigenkapitalquote": 50.44,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Tesla",
@@ -512,7 +543,8 @@
         "eigenkapitalquote": 25.95,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Microsoft",
@@ -525,7 +557,8 @@
         "eigenkapitalquote": 57.11,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       }
     ],
     "Technologie": [
@@ -540,7 +573,8 @@
         "eigenkapitalquote": 30.82,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Infineon",
@@ -566,7 +600,8 @@
         "eigenkapitalquote": 54.7,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "TeamViewer",
@@ -577,9 +612,10 @@
         "umsatzwachstum_yoy": 29.73,
         "gewinnwachstum_yoy": 2.95,
         "eigenkapitalquote": 58.15,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Delivery Hero",
@@ -592,7 +628,8 @@
         "eigenkapitalquote": 21.54,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Dt. Telekom",
@@ -603,9 +640,10 @@
         "umsatzwachstum_yoy": 5.37,
         "gewinnwachstum_yoy": 21.77,
         "eigenkapitalquote": 49.19,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Aixtron SE",
@@ -618,7 +656,8 @@
         "eigenkapitalquote": 34.15,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Meta Platforms",
@@ -629,9 +668,10 @@
         "umsatzwachstum_yoy": 17.9,
         "gewinnwachstum_yoy": 2.89,
         "eigenkapitalquote": 41.42,
-        "bewertung": "Fair",
+        "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "NextEra Energy",
@@ -642,9 +682,10 @@
         "umsatzwachstum_yoy": 20.7,
         "gewinnwachstum_yoy": 36.77,
         "eigenkapitalquote": 33.22,
-        "bewertung": "Teuer",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Dassault Aviation",
@@ -657,7 +698,8 @@
         "eigenkapitalquote": 57.65,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02"
+        "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
       }
     ]
   }
