@@ -6,14 +6,14 @@
     <title>Virtual Portfolio Dashboard</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .container { max-width: 1400px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
         h2, h3 { color: #34495e; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 0.95em; }
-        th, td { padding: 12px 15px; border-bottom: 1px solid #ddd; text-align: left; }
-        th { background-color: #34495e; color: white; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 0.9em; }
+        th, td { padding: 10px 12px; border-bottom: 1px solid #ddd; text-align: left; }
+        th { background-color: #34495e; color: white; position: sticky; top: 0; }
         tr:hover { background-color: #f9f9f9; }
-        .badge { padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 0.85em; display: inline-block; text-align: center; width: 80px; }
+        .badge { padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85em; display: inline-block; text-align: center; width: 75px; }
         .buy { background-color: #d4edda; color: #155724; }
         .hold { background-color: #fff3cd; color: #856404; }
         .sell { background-color: #f8d7da; color: #721c24; }
@@ -22,8 +22,7 @@
         .tab-button:hover { background-color: #bdc3c7; }
         .tab-button.active { background-color: #34495e; color: white; }
         .tab-content { display: none; animation: fadeIn 0.5s; }
-        .tab-content.active { display: block; }
-        .sector-title { background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 40px; }
+        .tab-content.active { display: block; overflow-x: auto; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
         .stat-card { background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6; text-align: center; }
         .stat-card h4 { margin: 0 0 10px 0; color: #6c757d; font-size: 0.9em; text-transform: uppercase; }
@@ -33,22 +32,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>📈 Virtual Portfolio Dashboard</h1>
+        <h1>📈 Virtual Portfolio Dashboard <br><small style="font-size: 0.5em; color: #7f8c8d;">Stand: 02.07.2026</small></h1>
         
         <div class="tab-buttons">
-            <button class="tab-button active" onclick="openTab(event, 'chart')">Chartanalyse</button>
+            <button class="tab-button active" onclick="openTab(event, 'depot')">Depot Status</button>
+            <button class="tab-button" onclick="openTab(event, 'chart')">Chartanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
-            <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
             <button class="tab-button" onclick="openTab(event, 'transaktionen')">Transaktionshistorie</button>
         </div>
 
-        <div id="chart" class="tab-content active"></div>
+        <div id="depot" class="tab-content active"></div>
+        <div id="chart" class="tab-content"></div>
         <div id="funda" class="tab-content"></div>
-        <div id="depot" class="tab-content"></div>
         <div id="transaktionen" class="tab-content"></div>
     </div>
 
-    <!-- Data Injection -->
     <script>
         const chartData = {
   "sektoren": {
@@ -1574,78 +1572,78 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 1501.68,
-    "portfoliowert": 8803.2,
-    "gesamtvermoegen": 10304.88,
+    "portfoliowert": 8792.56,
+    "gesamtvermoegen": 10294.24,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 52.09,
+        "boersenkurs": 51.94,
         "investiert": 1484.16,
-        "boersenwert": 1666.88,
-        "gewinn_verlust": 182.72
+        "boersenwert": 1662.08,
+        "gewinn_verlust": 177.92
       },
       {
         "isin": "DE000A0D9PT0",
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 375.3,
+        "boersenkurs": 373.8,
         "investiert": 1453.2,
-        "boersenwert": 1501.2,
-        "gewinn_verlust": 48.0
+        "boersenwert": 1495.2,
+        "gewinn_verlust": 42.0
       },
       {
         "isin": "DE0007030009",
         "wertpapier": "Rheinmetall",
         "stueck": 1,
         "kaufkurs": 975.6,
-        "boersenkurs": 1116.4,
+        "boersenkurs": 1115.0,
         "investiert": 975.6,
-        "boersenwert": 1116.4,
-        "gewinn_verlust": 140.8
+        "boersenwert": 1115.0,
+        "gewinn_verlust": 139.4
       },
       {
         "isin": "FR0000073272",
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 354.9,
+        "boersenkurs": 353.3,
         "investiert": 1380.0,
-        "boersenwert": 1419.6,
-        "gewinn_verlust": 39.6
+        "boersenwert": 1413.2,
+        "gewinn_verlust": 33.2
       },
       {
         "isin": "DE000ENER6Y0",
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 165.14,
+        "boersenkurs": 165.82,
         "investiert": 1492.2,
-        "boersenwert": 1486.26,
-        "gewinn_verlust": -5.94
+        "boersenwert": 1492.38,
+        "gewinn_verlust": 0.18
       },
       {
         "isin": "FR0000121329",
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 240.9,
+        "boersenkurs": 240.4,
         "investiert": 224.8,
-        "boersenwert": 240.9,
-        "gewinn_verlust": 16.1
+        "boersenwert": 240.4,
+        "gewinn_verlust": 15.6
       },
       {
         "isin": "DE0006231004",
         "wertpapier": "Infineon",
         "stueck": 18,
         "kaufkurs": 81.67,
-        "boersenkurs": 76.22,
+        "boersenkurs": 76.35,
         "investiert": 1470.06,
-        "boersenwert": 1371.96,
-        "gewinn_verlust": -98.1
+        "boersenwert": 1374.3,
+        "gewinn_verlust": -95.76
       }
     ],
     "transaktionshistorie": [
@@ -1766,80 +1764,37 @@
 };
 
         function getBadge(rating) {
+            if (!rating) return '';
             const r = rating.toLowerCase();
-            if (r.includes("verkauf")) return `<span class="badge sell">Verkaufen</span>`;
-            if (r.includes("kauf")) return `<span class="badge buy">Kaufen</span>`;
-            if (r.includes("halt")) return `<span class="badge hold">Halten</span>`;
-            return `<span class="badge" style="background:#e2e3e5">${rating}</span>`;
+            if (r.includes("kauf") || r.includes("attraktiv")) return `<span class="badge buy">${rating}</span>`;
+            if (r.includes("halt") || r.includes("fair")) return `<span class="badge hold">${rating}</span>`;
+            if (r.includes("verkauf") || r.includes("teuer")) return `<span class="badge sell">${rating}</span>`;
+            return `<span class="badge" style="background:#e2e3e5; color:#333;">${rating}</span>`;
+        }
+        
+        function formatEUR(val) {
+            if (val === undefined || val === null) return '-';
+            return val.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'});
+        }
+        
+        function formatEURSign(val) {
+            if (val === undefined || val === null) return '-';
+            return val.toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'});
         }
 
-        // Render Chartanalyse
-        let chartHtml = `<h2>Ergebnisse der Chartanalyse</h2><p>Übersicht der kurz-, mittel- und langfristigen Trendbewertungen.</p>`;
-        for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
-            chartHtml += `<h3 class="sector-title">${sektor}</h3>
-            <table>
-                <tr>
-                    <th style="width: 35%">Wertpapier</th>
-                    <th style="width: 15%">Empfehlung</th>
-                    <th style="width: 50%">Charttechnische Begründung</th>
-                </tr>`;
-            werte.forEach(w => {
-                chartHtml += `<tr>
-                    <td><strong>${w.wertpapier}</strong><br><small style="color: #7f8c8d;">${w.isin || ''}</small></td>
-                    <td>${getBadge(w.empfehlung)}</td>
-                    <td>${w.begruendung}</td>
-                </tr>`;
-            });
-            chartHtml += `</table>`;
-        }
-        document.getElementById('chart').innerHTML = chartHtml;
-
-        // Render Fundamentalanalyse
-        let fundaHtml = `<h2>Ergebnisse der Fundamentalanalyse</h2><p>Vergleichende Gegenüberstellung nach der Commerzbank-Methodik.</p>`;
-        for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
-            fundaHtml += `<h3 class="sector-title">${sektor}</h3>
-            <table>
-                <tr>
-                    <th>Wertpapier</th>
-                    <th>KGV</th>
-                    <th>KBV</th>
-                    <th>KUV</th>
-                    <th>KCV</th>
-                    <th>Dividende</th>
-                    <th>Empfehlung</th>
-                    <th style="width: 35%">Begründung</th>
-                </tr>`;
-            werte.forEach(w => {
-                fundaHtml += `<tr>
-                    <td><strong>${w.wertpapier}</strong><br><small style="color: #7f8c8d;">${w.isin || ''}</small></td>
-                    <td>${w.kgv}</td>
-                    <td>${w.kbv}</td>
-                    <td>${w.kuv}</td>
-                    <td>${w.kcv}</td>
-                    <td>${w.dividendenrendite}</td>
-                    <td>${getBadge(w.empfehlung)}</td>
-                    <td>${w.begruendung}</td>
-                </tr>`;
-            });
-            fundaHtml += `</table>`;
-        }
-        document.getElementById('funda').innerHTML = fundaHtml;
-
-        // Render Depot Status
+        // --- DEPOT STATUS ---
         const d = depotData.depot;
         let depotHtml = `<h2>Aktueller Depot-Status</h2>
-        
         <div class="stats-grid">
-            <div class="stat-card"><h4>Gesamtvermögen</h4><p>${d.gesamtvermoegen.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-            <div class="stat-card"><h4>Barbestand</h4><p>${d.aktueller_barbestand.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-            <div class="stat-card"><h4>Portfoliowert</h4><p>${d.portfoliowert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-            <div class="stat-card"><h4>Startkapital</h4><p>${d.startkapital.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
+            <div class="stat-card"><h4>Gesamtvermögen</h4><p>${formatEUR(d.gesamtvermoegen)}</p></div>
+            <div class="stat-card"><h4>Barbestand</h4><p>${formatEUR(d.aktueller_barbestand)}</p></div>
+            <div class="stat-card"><h4>Portfoliowert</h4><p>${formatEUR(d.portfoliowert)}</p></div>
+            <div class="stat-card"><h4>Startkapital</h4><p>${formatEUR(d.startkapital)}</p></div>
         </div>
-        
-        <h3 class="sector-title">Aktuelle Positionen (Wertpapiere)</h3>
         <table>
             <tr>
                 <th>Wertpapier</th>
+                <th>ISIN</th>
                 <th>Stück</th>
                 <th>Kaufkurs</th>
                 <th>Börsenkurs</th>
@@ -1847,25 +1802,110 @@
                 <th>Börsenwert</th>
                 <th>Gewinn/Verlust</th>
             </tr>`;
-        d.positionen.forEach(p => {
-            let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
-            let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
-            depotHtml += `<tr>
-                <td><strong>${p.wertpapier}</strong><br><small style="color: #7f8c8d;">${p.isin || ''}</small></td>
-                <td>${p.stueck}</td>
-                <td>${p.kaufkurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td>${(p.boersenkurs || p.kaufkurs).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td>${p.investiert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td>${(p.boersenwert || p.investiert).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${(p.gewinn_verlust || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'})}</span></td>
-            </tr>`;
-        });
+        if (d.positionen && d.positionen.length > 0) {
+            d.positionen.forEach(p => {
+                let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
+                let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
+                depotHtml += `<tr>
+                    <td><strong>${p.wertpapier}</strong></td>
+                    <td style="color:#666;">${p.isin || ''}</td>
+                    <td>${p.stueck}</td>
+                    <td>${formatEUR(p.kaufkurs)}</td>
+                    <td>${formatEUR(p.boersenkurs)}</td>
+                    <td>${formatEUR(p.investiert)}</td>
+                    <td>${formatEUR(p.boersenwert)}</td>
+                    <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${formatEURSign(p.gewinn_verlust)}</span></td>
+                </tr>`;
+            });
+        }
         depotHtml += `</table>`;
         document.getElementById('depot').innerHTML = depotHtml;
 
-        // Render Transaktionshistorie
-        let transHtml = `<h2>Transaktionshistorie</h2>
-        <table>
+        // --- CHARTANALYSE ---
+        let chartHtml = `<h2>Chartanalyse (Technisch)</h2>`;
+        if (chartData.sektoren) {
+            for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
+                chartHtml += `<h3 style="background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 30px;">${sektor}</h3>`;
+                chartHtml += `<table>
+                    <tr>
+                        <th>Wertpapier</th>
+                        <th>Aktueller Kurs</th>
+                        <th>Trend</th>
+                        <th>Signal</th>
+                        <th>RSI(14)</th>
+                        <th>MACD</th>
+                        <th>SMA 50</th>
+                        <th>SMA 200</th>
+                        <th>Unterstützung</th>
+                        <th>Widerstand</th>
+                        <th>Begründung</th>
+                    </tr>`;
+                werte.forEach(w => {
+                    chartHtml += `<tr>
+                        <td><strong>${w.wertpapier}</strong><br><small style="color:#666">${w.isin || ''}</small></td>
+                        <td>${formatEUR(w.aktueller_kurs)}</td>
+                        <td>${w.trend || '-'}</td>
+                        <td>${getBadge(w.signal)}</td>
+                        <td>${w.rsi_14 || '-'}</td>
+                        <td>${w.macd || '-'}</td>
+                        <td>${formatEUR(w.sma_50)}</td>
+                        <td>${formatEUR(w.sma_200)}</td>
+                        <td style="color: green;">${formatEUR(w.unterstuetzung)}</td>
+                        <td style="color: red;">${formatEUR(w.widerstand)}</td>
+                        <td style="font-size:0.9em;">${w.begruendung}</td>
+                    </tr>`;
+                });
+                chartHtml += `</table>`;
+            }
+        }
+        document.getElementById('chart').innerHTML = chartHtml;
+
+        // --- FUNDAMENTALANALYSE ---
+        let fundaHtml = `<h2>Fundamentalanalyse</h2>`;
+        if (fundaData.sektoren) {
+            for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
+                fundaHtml += `<h3 style="background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 30px;">${sektor}</h3>`;
+                fundaHtml += `<table>
+                    <tr>
+                        <th>Wertpapier</th>
+                        <th>Bewertung</th>
+                        <th>Risiko</th>
+                        <th>KGV</th>
+                        <th>Dividende</th>
+                        <th>Umsatzwachstum (yoy)</th>
+                        <th>Gewinnwachstum (yoy)</th>
+                        <th>EK-Quote</th>
+                        <th>Begründung</th>
+                    </tr>`;
+                werte.forEach(w => {
+                    let empf = w.bewertung;
+                    if(empf === "Attraktiv") empf = "Kaufen";
+                    if(empf === "Teuer") empf = "Verkaufen";
+                    
+                    let divText = w.dividendenrendite !== undefined ? w.dividendenrendite + '%' : '-';
+                    let uwText = w.umsatzwachstum_yoy !== undefined ? w.umsatzwachstum_yoy + '%' : '-';
+                    let gwText = w.gewinnwachstum_yoy !== undefined ? w.gewinnwachstum_yoy + '%' : '-';
+                    let ekText = w.eigenkapitalquote !== undefined ? w.eigenkapitalquote + '%' : '-';
+                    
+                    fundaHtml += `<tr>
+                        <td><strong>${w.wertpapier}</strong><br><small style="color:#666">${w.isin || ''}</small></td>
+                        <td>${getBadge(w.bewertung)}</td>
+                        <td>${w.risiko || '-'}</td>
+                        <td>${w.kgv || '-'}</td>
+                        <td>${divText}</td>
+                        <td>${uwText}</td>
+                        <td>${gwText}</td>
+                        <td>${ekText}</td>
+                        <td style="font-size:0.9em;">${w.begruendung}</td>
+                    </tr>`;
+                });
+                fundaHtml += `</table>`;
+            }
+        }
+        document.getElementById('funda').innerHTML = fundaHtml;
+
+        // --- TRANSAKTIONSHISTORIE ---
+        let transHtml = `<h2>Transaktionshistorie</h2><table>
             <tr>
                 <th>Datum</th>
                 <th>Typ</th>
@@ -1876,32 +1916,38 @@
                 <th>Steuern</th>
                 <th>Gewinn/Verlust</th>
                 <th>Gesamt</th>
-                <th>Notiz</th>
+                <th>Begründung</th>
             </tr>`;
-        
         if (d.transaktionshistorie) {
-            // Sortiere Transaktionen chronologisch absteigend (neueste zuerst)
             const transactionsRev = [...d.transaktionshistorie].sort((a, b) => new Date(b.datum) - new Date(a.datum));
             transactionsRev.forEach(t => {
-                let gvText = t.gewinn_verlust !== undefined ? t.gewinn_verlust.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}) : '-';
-                let steuernText = t.steuern !== undefined ? t.steuern.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}) : '-';
+                let typColor = t.typ === 'Kauf' ? 'color: #155724;' : 'color: #721c24;';
+                
+                // Color coding for G/V
+                let gv = '-';
+                if (t.gewinn_verlust !== undefined && t.gewinn_verlust !== 0 && t.typ === 'Verkauf') {
+                    let style = t.gewinn_verlust > 0 ? 'color: #155724; background-color: #d4edda; padding: 4px 6px; border-radius: 4px; font-weight:bold;' : 'color: #721c24; background-color: #f8d7da; padding: 4px 6px; border-radius: 4px; font-weight:bold;';
+                    gv = `<span style="${style}">${formatEURSign(t.gewinn_verlust)}</span>`;
+                }
+
+                let begruendung = t.begruendung || t.notiz || '';
+
                 transHtml += `<tr>
-                    <td>${t.datum}</td>
-                    <td><strong>${t.typ}</strong></td>
-                    <td><strong>${t.wertpapier}</strong><br><small style="color: #7f8c8d;">${t.isin || ''}</small></td>
+                    <td style="white-space: nowrap;">${t.datum}</td>
+                    <td style="${typColor}"><strong>${t.typ}</strong></td>
+                    <td><strong>${t.wertpapier}</strong><br><small style="color:#666">${t.isin || ''}</small></td>
                     <td>${t.stueck}</td>
-                    <td>${t.kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                    <td>${t.gebuehr.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                    <td>${steuernText}</td>
-                    <td>${gvText}</td>
-                    <td>${t.gesamt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                    <td><small>${t.notiz || ''}</small></td>
+                    <td>${formatEUR(t.kurs)}</td>
+                    <td>${formatEUR(t.gebuehr)}</td>
+                    <td>${formatEUR(t.steuern)}</td>
+                    <td>${gv}</td>
+                    <td><strong>${formatEUR(t.gesamt)}</strong></td>
+                    <td style="font-size: 0.85em; color: #555;">${begruendung}</td>
                 </tr>`;
             });
         }
         transHtml += `</table>`;
         document.getElementById('transaktionen').innerHTML = transHtml;
-
 
         // Tab Logic
         function openTab(evt, tabName) {
