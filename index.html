@@ -1780,79 +1780,86 @@
         document.getElementById('depot').innerHTML = depotHtml;
 
         // --- CHARTANALYSE ---
-        let chartHtml = `<h2>Chartanalyse (Technisch)</h2><table>
-            <tr>
-                <th>Wertpapier</th>
-                <th>Aktueller Kurs</th>
-                <th>Trend</th>
-                <th>Signal</th>
-                <th>RSI(14)</th>
-                <th>MACD</th>
-                <th>SMA 50</th>
-                <th>SMA 200</th>
-                <th>Unterstützung</th>
-                <th>Widerstand</th>
-                <th>Begründung</th>
-            </tr>`;
-        if (chartData.analysen) {
-            chartData.analysen.forEach(w => {
-                chartHtml += `<tr>
-                    <td><strong>${w.wertpapier}</strong><br><small style="color:#666">${w.isin || ''}</small></td>
-                    <td>${formatEUR(w.aktueller_kurs)}</td>
-                    <td>${w.trend || '-'}</td>
-                    <td>${getBadge(w.signal)}</td>
-                    <td>${w.rsi_14 || '-'}</td>
-                    <td>${w.macd || '-'}</td>
-                    <td>${formatEUR(w.sma_50)}</td>
-                    <td>${formatEUR(w.sma_200)}</td>
-                    <td style="color: green;">${formatEUR(w.unterstuetzung)}</td>
-                    <td style="color: red;">${formatEUR(w.widerstand)}</td>
-                    <td style="font-size:0.9em;">${w.begruendung}</td>
-                </tr>`;
-            });
+        let chartHtml = `<h2>Chartanalyse (Technisch)</h2>`;
+        if (chartData.sektoren) {
+            for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
+                chartHtml += `<h3 style="background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 30px;">${sektor}</h3>`;
+                chartHtml += `<table>
+                    <tr>
+                        <th>Wertpapier</th>
+                        <th>Aktueller Kurs</th>
+                        <th>Trend</th>
+                        <th>Signal</th>
+                        <th>RSI(14)</th>
+                        <th>MACD</th>
+                        <th>SMA 50</th>
+                        <th>SMA 200</th>
+                        <th>Unterstützung</th>
+                        <th>Widerstand</th>
+                        <th>Begründung</th>
+                    </tr>`;
+                werte.forEach(w => {
+                    chartHtml += `<tr>
+                        <td><strong>${w.wertpapier}</strong><br><small style="color:#666">${w.isin || ''}</small></td>
+                        <td>${formatEUR(w.aktueller_kurs)}</td>
+                        <td>${w.trend || '-'}</td>
+                        <td>${getBadge(w.signal)}</td>
+                        <td>${w.rsi_14 || '-'}</td>
+                        <td>${w.macd || '-'}</td>
+                        <td>${formatEUR(w.sma_50)}</td>
+                        <td>${formatEUR(w.sma_200)}</td>
+                        <td style="color: green;">${formatEUR(w.unterstuetzung)}</td>
+                        <td style="color: red;">${formatEUR(w.widerstand)}</td>
+                        <td style="font-size:0.9em;">${w.begruendung}</td>
+                    </tr>`;
+                });
+                chartHtml += `</table>`;
+            }
         }
-        chartHtml += `</table>`;
         document.getElementById('chart').innerHTML = chartHtml;
 
         // --- FUNDAMENTALANALYSE ---
-        let fundaHtml = `<h2>Fundamentalanalyse</h2><table>
-            <tr>
-                <th>Wertpapier</th>
-                <th>Bewertung</th>
-                <th>Risiko</th>
-                <th>KGV</th>
-                <th>Dividende</th>
-                <th>Umsatzwachstum (yoy)</th>
-                <th>Gewinnwachstum (yoy)</th>
-                <th>EK-Quote</th>
-                <th>Begründung</th>
-            </tr>`;
-        if (fundaData.analysen) {
-            fundaData.analysen.forEach(w => {
-                // Determine recommendation label to use in the badge based on bewertung
-                let empf = w.bewertung;
-                if(empf === "Attraktiv") empf = "Kaufen";
-                if(empf === "Teuer") empf = "Verkaufen";
-                
-                let divText = w.dividendenrendite !== undefined ? w.dividendenrendite + '%' : '-';
-                let uwText = w.umsatzwachstum_yoy !== undefined ? w.umsatzwachstum_yoy + '%' : '-';
-                let gwText = w.gewinnwachstum_yoy !== undefined ? w.gewinnwachstum_yoy + '%' : '-';
-                let ekText = w.eigenkapitalquote !== undefined ? w.eigenkapitalquote + '%' : '-';
-                
-                fundaHtml += `<tr>
-                    <td><strong>${w.wertpapier}</strong><br><small style="color:#666">${w.isin || ''}</small></td>
-                    <td>${getBadge(w.bewertung)}</td>
-                    <td>${w.risiko || '-'}</td>
-                    <td>${w.kgv || '-'}</td>
-                    <td>${divText}</td>
-                    <td>${uwText}</td>
-                    <td>${gwText}</td>
-                    <td>${ekText}</td>
-                    <td style="font-size:0.9em;">${w.begruendung}</td>
-                </tr>`;
-            });
+        let fundaHtml = `<h2>Fundamentalanalyse</h2>`;
+        if (fundaData.sektoren) {
+            for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
+                fundaHtml += `<h3 style="background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 30px;">${sektor}</h3>`;
+                fundaHtml += `<table>
+                    <tr>
+                        <th>Wertpapier</th>
+                        <th>Bewertung</th>
+                        <th>Risiko</th>
+                        <th>KGV</th>
+                        <th>Dividende</th>
+                        <th>Umsatzwachstum (yoy)</th>
+                        <th>Gewinnwachstum (yoy)</th>
+                        <th>EK-Quote</th>
+                        <th>Begründung</th>
+                    </tr>`;
+                werte.forEach(w => {
+                    let empf = w.bewertung;
+                    if(empf === "Attraktiv") empf = "Kaufen";
+                    if(empf === "Teuer") empf = "Verkaufen";
+                    
+                    let divText = w.dividendenrendite !== undefined ? w.dividendenrendite + '%' : '-';
+                    let uwText = w.umsatzwachstum_yoy !== undefined ? w.umsatzwachstum_yoy + '%' : '-';
+                    let gwText = w.gewinnwachstum_yoy !== undefined ? w.gewinnwachstum_yoy + '%' : '-';
+                    let ekText = w.eigenkapitalquote !== undefined ? w.eigenkapitalquote + '%' : '-';
+                    
+                    fundaHtml += `<tr>
+                        <td><strong>${w.wertpapier}</strong><br><small style="color:#666">${w.isin || ''}</small></td>
+                        <td>${getBadge(w.bewertung)}</td>
+                        <td>${w.risiko || '-'}</td>
+                        <td>${w.kgv || '-'}</td>
+                        <td>${divText}</td>
+                        <td>${uwText}</td>
+                        <td>${gwText}</td>
+                        <td>${ekText}</td>
+                        <td style="font-size:0.9em;">${w.begruendung}</td>
+                    </tr>`;
+                });
+                fundaHtml += `</table>`;
+            }
         }
-        fundaHtml += `</table>`;
         document.getElementById('funda').innerHTML = fundaHtml;
 
         // --- TRANSAKTIONSHISTORIE ---
