@@ -23,7 +23,6 @@
         .tab-button.active { background-color: #34495e; color: white; }
         .tab-content { display: none; animation: fadeIn 0.5s; }
         .tab-content.active { display: block; }
-        .sector-title { background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 40px; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
         .stat-card { background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6; text-align: center; }
         .stat-card h4 { margin: 0 0 10px 0; color: #6c757d; font-size: 0.9em; text-transform: uppercase; }
@@ -36,778 +35,383 @@
         <h1>📈 Virtual Portfolio Dashboard</h1>
         
         <div class="tab-buttons">
-            <button class="tab-button active" onclick="openTab(event, 'chart')">Chartanalyse</button>
+            <button class="tab-button active" onclick="openTab(event, 'depot')">Depot Status</button>
+            <button class="tab-button" onclick="openTab(event, 'chart')">Chartanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
-            <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
             <button class="tab-button" onclick="openTab(event, 'transaktionen')">Transaktionshistorie</button>
         </div>
 
-        <div id="chart" class="tab-content active"></div>
+        <div id="depot" class="tab-content active"></div>
+        <div id="chart" class="tab-content"></div>
         <div id="funda" class="tab-content"></div>
-        <div id="depot" class="tab-content"></div>
         <div id="transaktionen" class="tab-content"></div>
     </div>
 
-    <!-- Data Injection -->
     <script>
         const chartData = {
-  "sektoren": {
-    "Energie": [
-      {
-        "wertpapier": "Siemens Energy",
-        "empfehlung": "Kaufen",
-        "begruendung": "Starke Erholung \u00fcber SMA 200, hoher RSI-Aufw\u00e4rtstrend.",
-        "isin": "DE000ENER6Y0"
-      },
-      {
-        "wertpapier": "RWE",
-        "empfehlung": "Halten",
-        "begruendung": "Seitw\u00e4rtsphase, starke Unterst\u00fctzung bei 30 EUR.",
-        "isin": "DE0007037129"
-      },
-      {
-        "wertpapier": "E.ON",
-        "empfehlung": "Halten",
-        "begruendung": "Defensive Stabilit\u00e4t, langsames, aber stetiges Wachstum.",
-        "isin": "DE000ENAG999"
-      },
-      {
-        "wertpapier": "Encavis",
-        "empfehlung": "Kaufen",
-        "begruendung": "Bruch des mittelfristigen Abw\u00e4rtstrends, Momentum positiv.",
-        "isin": "DE0006095003"
-      },
-      {
-        "wertpapier": "SMA Solar",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Deutlicher Abw\u00e4rtstrend, RSI im \u00fcberverkauften Bereich, keine Bodenbildung.",
-        "isin": "DE000A0DJ6J9"
-      },
-      {
-        "wertpapier": "Nordex SE",
-        "empfehlung": "Halten",
-        "begruendung": "Volatilit\u00e4t hoch, kurzfristige Ausbr\u00fcche m\u00f6glich, aber Widerst\u00e4nde nahe.",
-        "isin": "DE000A0D6554"
-      }
-    ],
-    "Verteidigung": [
-      {
-        "wertpapier": "Rheinmetall",
-        "empfehlung": "Halten",
-        "begruendung": "Hohe Bewertung, leichte Konsolidierung unter Widerstand.",
-        "isin": "DE0007030009"
-      },
-      {
-        "wertpapier": "Hensoldt",
-        "empfehlung": "Kaufen",
-        "begruendung": "Aufw\u00e4rtstrend intakt, charttechnisch keine \u00dcberhitzung.",
-        "isin": "DE000HAG0005"
-      },
-      {
-        "wertpapier": "Airbus",
-        "empfehlung": "Kaufen",
-        "begruendung": "Unterst\u00fctzungszone bei 180 EUR erfolgreich getestet.",
-        "isin": "NL0000235190"
-      },
-      {
-        "wertpapier": "BAE Systems",
-        "empfehlung": "Halten",
-        "begruendung": "Stabile Performance, jedoch geringes kurzfristiges Momentum.",
-        "isin": "GB0002634946"
-      },
-      {
-        "wertpapier": "Northrop Grumman",
-        "empfehlung": "Kaufen",
-        "begruendung": "Struktureller Ausbruch aus langj\u00e4hriger Seitw\u00e4rtsbewegung.",
-        "isin": "US6668071029"
-      },
-      {
-        "wertpapier": "Leonardo SpA",
-        "empfehlung": "Kaufen",
-        "begruendung": "Ausbruch aus langfristiger Seitw\u00e4rtsphase, Momentum nimmt zu.",
-        "isin": "IT0003856405"
-      },
-      {
-        "wertpapier": "Thales SA",
-        "empfehlung": "Kaufen",
-        "begruendung": "Stabiler Aufw\u00e4rtstrend, GD200 als sichere Basis.",
-        "isin": "FR0000121329"
-      }
-    ],
-    "Luft- und Raumfahrttechnik": [
-      {
-        "wertpapier": "MTU Aero Engines",
-        "empfehlung": "Kaufen",
-        "begruendung": "Starker Trendkanal, SMA 50 fungiert als dynamische Unterst\u00fctzung.",
-        "isin": "DE000A0D9PT0"
-      },
-      {
-        "wertpapier": "Safran",
-        "empfehlung": "Halten",
-        "begruendung": "Konsolidierung auf hohem Niveau, abwarten auf Ausbruch.",
-        "isin": "FR0000073272"
-      },
-      {
-        "wertpapier": "Rolls-Royce",
-        "empfehlung": "Kaufen",
-        "begruendung": "Enormes Momentum, charttechnische Ziele auf der Oberseite.",
-        "isin": "GB00B63H8491"
-      },
-      {
-        "wertpapier": "Dassault Aviation",
-        "empfehlung": "Halten",
-        "begruendung": "Niedriges Volumen, seitw\u00e4rts, geringes Potenzial kurzfristig.",
-        "isin": "FR0014004L86"
-      },
-      {
-        "wertpapier": "Leonardo",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Widerstandszone nicht durchbrochen, Trendumkehr eingeleitet.",
-        "isin": "IT0003856405"
-      },
-      {
-        "wertpapier": "MTU Aero Eng.",
-        "empfehlung": "Kaufen",
-        "begruendung": "Nach Korrektur wieder bullisches Momentum, RSI stabil.",
-        "isin": ""
-      },
-      {
-        "wertpapier": "Airbus SE",
-        "empfehlung": "Halten",
-        "begruendung": "Kurzfristig technischer Druck, langfristige Basis intakt.",
-        "isin": "NL0000235190"
-      }
-    ],
-    "Satellitentechnik": [
-      {
-        "wertpapier": "OHB",
-        "empfehlung": "Halten",
-        "begruendung": "Volatile Seitw\u00e4rtsbewegung, abwarten auf Nachrichten.",
-        "isin": "DE0005936124"
-      },
-      {
-        "wertpapier": "SES",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Dauerhafter Abw\u00e4rtstrend, keine charttechnische Unterst\u00fctzung.",
-        "isin": "LU0088087324"
-      },
-      {
-        "wertpapier": "Eutelsat",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Strukturprobleme im Chart sichtbar, unter SMA 200.",
-        "isin": "FR0010221234"
-      },
-      {
-        "wertpapier": "Maxar",
-        "empfehlung": "Kaufen",
-        "begruendung": "Bodenbildung abgeschlossen, bullisches Muster kurzfristig.",
-        "isin": "US57778K1051"
-      },
-      {
-        "wertpapier": "Airbus",
-        "empfehlung": "Kaufen",
-        "begruendung": "(siehe Verteidigung, hohe Synergieeffekte).",
-        "isin": "NL0000235190"
-      },
-      {
-        "wertpapier": "Rocket Lab",
-        "empfehlung": "Kaufen",
-        "begruendung": "Starke technische Dynamik, hohes Volumen bei Ausbr\u00fcchen.",
-        "isin": "US7731221062"
-      },
-      {
-        "wertpapier": "Planet Labs",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Abw\u00e4rtstrend, unterschreitet wichtige Unterst\u00fctzungsniveaus.",
-        "isin": "US72703X1063"
-      }
-    ],
-    "Technologie": [
-      {
-        "wertpapier": "SAP",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Kurzfristige \u00dcberhitzung nach starken Rallye, Gewinnmitnahmen empfohlen.",
-        "isin": "DE0007164600"
-      },
-      {
-        "wertpapier": "Infineon",
-        "empfehlung": "Kaufen",
-        "begruendung": "Bodenbildung abgeschlossen, starkes Momentum nach oben.",
-        "isin": "DE0006231004"
-      },
-      {
-        "wertpapier": "ASML",
-        "empfehlung": "Kaufen",
-        "begruendung": "R\u00fccksetzer zum SMA 200 bietet gute Einstiegschance.",
-        "isin": "NL0010273215"
-      },
-      {
-        "wertpapier": "TeamViewer",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Abw\u00e4rtstrend seit Monaten, keine Anzeichen einer Wende.",
-        "isin": "DE000A2YN900"
-      },
-      {
-        "wertpapier": "Delivery Hero",
-        "empfehlung": "Halten",
-        "begruendung": "Spekulative Seitw\u00e4rtsphase, hoher charttechnischer Druck.",
-        "isin": "DE000A2E4K43"
-      },
-      {
-        "wertpapier": "Dt. Telekom",
-        "empfehlung": "Kaufen",
-        "begruendung": "Defensive St\u00e4rke, technischer Ausbruch \u00fcber Widerstandsbereich.",
-        "isin": "DE0005557508"
-      },
-      {
-        "wertpapier": "Aixtron SE",
-        "empfehlung": "Halten",
-        "begruendung": "Hohe Volatilit\u00e4t, kurzfristige Erholungschancen, langfristig instabil.",
-        "isin": "DE000A0WMPJ6"
-      }
-    ]
-  }
+  "analysen": [
+    {
+      "isin": "IT0003856405",
+      "wertpapier": "Leonardo",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 49.16,
+      "trend": "Seitw\u00e4rtstrend",
+      "signal": "Halten",
+      "unterstuetzung": 46.7,
+      "widerstand": 51.62,
+      "rsi_14": 52.96,
+      "macd": "Neutral",
+      "sma_50": 48.55,
+      "sma_200": 50.1,
+      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
+    },
+    {
+      "isin": "DE000A0D9PT0",
+      "wertpapier": "MTU Aero Engines",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 369.12,
+      "trend": "Leichter Abw\u00e4rtstrend",
+      "signal": "Halten",
+      "unterstuetzung": 350.66,
+      "widerstand": 387.58,
+      "rsi_14": 50.65,
+      "macd": "Neutral",
+      "sma_50": 369.09,
+      "sma_200": 382.53,
+      "begruendung": "Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Halten."
+    },
+    {
+      "isin": "DE0007030009",
+      "wertpapier": "Rheinmetall",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 1059.88,
+      "trend": "Seitw\u00e4rtstrend",
+      "signal": "Halten",
+      "unterstuetzung": 1006.89,
+      "widerstand": 1112.87,
+      "rsi_14": 42.88,
+      "macd": "Neutral",
+      "sma_50": 1042.37,
+      "sma_200": 1019.0,
+      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
+    },
+    {
+      "isin": "GB00B63H8491",
+      "wertpapier": "Rolls-Royce",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 16.71,
+      "trend": "Leichter Abw\u00e4rtstrend",
+      "signal": "Verkaufen",
+      "unterstuetzung": 15.87,
+      "widerstand": 17.55,
+      "rsi_14": 67.01,
+      "macd": "Neutral",
+      "sma_50": 16.82,
+      "sma_200": 16.17,
+      "begruendung": "Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Verkaufen."
+    },
+    {
+      "isin": "FR0000073272",
+      "wertpapier": "Safran",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 355.39,
+      "trend": "Leichter Abw\u00e4rtstrend",
+      "signal": "Halten",
+      "unterstuetzung": 337.62,
+      "widerstand": 373.16,
+      "rsi_14": 55.05,
+      "macd": "Neutral",
+      "sma_50": 357.46,
+      "sma_200": 345.38,
+      "begruendung": "Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Halten."
+    },
+    {
+      "isin": "DE000ENER6Y0",
+      "wertpapier": "Siemens Energy",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 162.9,
+      "trend": "Aufw\u00e4rtstrend",
+      "signal": "Kaufen",
+      "unterstuetzung": 154.75,
+      "widerstand": 171.05,
+      "rsi_14": 42.38,
+      "macd": "Positiv",
+      "sma_50": 163.66,
+      "sma_200": 156.89,
+      "begruendung": "Aktueller Trend ist Aufw\u00e4rtstrend. Signal lautet Kaufen."
+    },
+    {
+      "isin": "FR0000121329",
+      "wertpapier": "Thales",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 226.14,
+      "trend": "Seitw\u00e4rtstrend",
+      "signal": "Halten",
+      "unterstuetzung": 214.83,
+      "widerstand": 237.45,
+      "rsi_14": 69.15,
+      "macd": "Neutral",
+      "sma_50": 222.03,
+      "sma_200": 228.72,
+      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
+    },
+    {
+      "isin": "DE0006231004",
+      "wertpapier": "Infineon",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 76.67,
+      "trend": "Leichter Abw\u00e4rtstrend",
+      "signal": "Halten",
+      "unterstuetzung": 72.84,
+      "widerstand": 80.5,
+      "rsi_14": 48.76,
+      "macd": "Neutral",
+      "sma_50": 76.09,
+      "sma_200": 73.83,
+      "begruendung": "Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Halten."
+    },
+    {
+      "isin": "NL0010273215",
+      "wertpapier": "ASML",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 1150.5,
+      "trend": "Seitw\u00e4rtstrend",
+      "signal": "Halten",
+      "unterstuetzung": 1092.97,
+      "widerstand": 1208.03,
+      "rsi_14": 63.93,
+      "macd": "Neutral",
+      "sma_50": 1138.19,
+      "sma_200": 1096.66,
+      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
+    },
+    {
+      "isin": "US0378331005",
+      "wertpapier": "Apple",
+      "datum": "2026-07-02",
+      "aktueller_kurs": 210.2,
+      "trend": "Seitw\u00e4rtstrend",
+      "signal": "Halten",
+      "unterstuetzung": 199.69,
+      "widerstand": 220.71,
+      "rsi_14": 52.85,
+      "macd": "Neutral",
+      "sma_50": 206.5,
+      "sma_200": 210.25,
+      "begruendung": "Aktueller Trend ist Seitw\u00e4rtstrend. Signal lautet Halten."
+    }
+  ]
 };
         const fundaData = {
-  "sektoren": {
-    "Energie": [
-      {
-        "wertpapier": "Siemens Energy",
-        "kgv": "22",
-        "kbv": "2,5",
-        "kuv": "0,8",
-        "kcv": "12",
-        "dividendenrendite": "1,1%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Starkes Wachstumspotenzial bei Energiewende-Infrastruktur.",
-        "isin": "DE000ENER6Y0"
-      },
-      {
-        "wertpapier": "RWE",
-        "kgv": "14",
-        "kbv": "1,1",
-        "kuv": "1,2",
-        "kcv": "6",
-        "dividendenrendite": "3,2%",
-        "empfehlung": "Halten",
-        "begruendung": "Solide Dividende, moderates Wachstum.",
-        "isin": "DE0007037129"
-      },
-      {
-        "wertpapier": "E.ON",
-        "kgv": "16",
-        "kbv": "1,5",
-        "kuv": "0,9",
-        "kcv": "7",
-        "dividendenrendite": "4,0%",
-        "empfehlung": "Halten",
-        "begruendung": "Stabiles Gesch\u00e4ftsmodell, begrenzte Fantasie.",
-        "isin": "DE000ENAG999"
-      },
-      {
-        "wertpapier": "Encavis",
-        "kgv": "35",
-        "kbv": "2,8",
-        "kuv": "4,5",
-        "kcv": "15",
-        "dividendenrendite": "0,8%",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Bewertung aktuell zu hoch f\u00fcr das Wachstum.",
-        "isin": "DE0006095003"
-      },
-      {
-        "wertpapier": "Nordex",
-        "kgv": "45",
-        "kbv": "3,2",
-        "kuv": "0,6",
-        "kcv": "20",
-        "dividendenrendite": "0,0%",
-        "empfehlung": "Halten",
-        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilit\u00e4t.",
-        "isin": "DE000A0D6554"
-      },
-      {
-        "wertpapier": "Vestas",
-        "kgv": "28",
-        "kbv": "2,2",
-        "kuv": "1,5",
-        "kcv": "11",
-        "dividendenrendite": "0,5%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Marktf\u00fchrer bei Windkraft, gute langfristige Aussichten.",
-        "isin": "DK0061539921"
-      },
-      {
-        "wertpapier": "Orsted",
-        "kgv": "20",
-        "kbv": "1,8",
-        "kuv": "2,0",
-        "kcv": "9",
-        "dividendenrendite": "2,5%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Marktf\u00fchrer bei Offshore-Wind, attraktive Bewertung.",
-        "isin": "DK0060094928"
-      },
-      {
-        "wertpapier": "NextEra",
-        "kgv": "25",
-        "kbv": "3,0",
-        "kuv": "6,0",
-        "kcv": "14",
-        "dividendenrendite": "2,8%",
-        "empfehlung": "Halten",
-        "begruendung": "Hohe Qualit\u00e4t, aber im Sektorvergleich teuer.",
-        "isin": "US65339F1012"
-      }
-    ],
-    "Verteidigung": [
-      {
-        "wertpapier": "Rheinmetall",
-        "kgv": "28",
-        "kbv": "4,5",
-        "kuv": "3,0",
-        "kcv": "18",
-        "dividendenrendite": "1,2%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Enormes Auftragsvolumen, langfristiges Wachstum.",
-        "isin": "DE0007030009"
-      },
-      {
-        "wertpapier": "Hensoldt",
-        "kgv": "35",
-        "kbv": "5,0",
-        "kuv": "2,5",
-        "kcv": "22",
-        "dividendenrendite": "0,9%",
-        "empfehlung": "Halten",
-        "begruendung": "Hohe Bewertung, gute Technologiebasis.",
-        "isin": "DE000HAG0005"
-      },
-      {
-        "wertpapier": "Leonardo S.p.a.",
-        "kgv": "12",
-        "kbv": "1,0",
-        "kuv": "0,7",
-        "kcv": "5",
-        "dividendenrendite": "2,8%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Sehr attraktiv bewertet, Nachholpotenzial.",
-        "isin": "IT0003856405"
-      },
-      {
-        "wertpapier": "Thales",
-        "kgv": "20",
-        "kbv": "2,8",
-        "kuv": "1,8",
-        "kcv": "12",
-        "dividendenrendite": "2,1%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Stabiles Wachstum, starke Marktposition.",
-        "isin": "FR0000121329"
-      },
-      {
-        "wertpapier": "BAE Systems",
-        "kgv": "18",
-        "kbv": "3,0",
-        "kuv": "1,5",
-        "kcv": "10",
-        "dividendenrendite": "2,5%",
-        "empfehlung": "Halten",
-        "begruendung": "Solide, aber aktuell fair bewertet.",
-        "isin": "GB0002634946"
-      },
-      {
-        "wertpapier": "General Dynamics",
-        "kgv": "22",
-        "kbv": "3,5",
-        "kuv": "2,0",
-        "kcv": "14",
-        "dividendenrendite": "2,0%",
-        "empfehlung": "Halten",
-        "begruendung": "Stetige Cashflows, wenig Fantasie.",
-        "isin": "US3695501086"
-      },
-      {
-        "wertpapier": "Lockheed Martin",
-        "kgv": "20",
-        "kbv": "15,0",
-        "kuv": "2,2",
-        "kcv": "16",
-        "dividendenrendite": "2,3%",
-        "empfehlung": "Halten",
-        "begruendung": "Sehr substanzstark, aber hohe Bewertung des Kapitals.",
-        "isin": "US5398301094"
-      },
-      {
-        "wertpapier": "Northrop Grumman",
-        "kgv": "25",
-        "kbv": "4,0",
-        "kuv": "2,5",
-        "kcv": "18",
-        "dividendenrendite": "1,5%",
-        "empfehlung": "Halten",
-        "begruendung": "Starke Auftragslage, begrenzte kurzfristige Upside.",
-        "isin": "US6668071029"
-      }
-    ],
-    "Luft- und Raumfahrttechnik": [
-      {
-        "wertpapier": "MTU Aero Engines",
-        "kgv": "30",
-        "kbv": "4,0",
-        "kuv": "2,5",
-        "kcv": "18",
-        "dividendenrendite": "1,3%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Profitabler Instandhaltungsmarkt, starkes Wachstum.",
-        "isin": "DE000A0D9PT0"
-      },
-      {
-        "wertpapier": "Safran",
-        "kgv": "32",
-        "kbv": "5,5",
-        "kuv": "3,0",
-        "kcv": "20",
-        "dividendenrendite": "1,1%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Dominante Marktposition bei Triebwerken.",
-        "isin": "FR0000073272"
-      },
-      {
-        "wertpapier": "Airbus",
-        "kgv": "25",
-        "kbv": "6,0",
-        "kuv": "1,8",
-        "kcv": "15",
-        "dividendenrendite": "1,2%",
-        "empfehlung": "Halten",
-        "begruendung": "Operative Herausforderungen bremsen kurzfristig.",
-        "isin": "NL0000235190"
-      },
-      {
-        "wertpapier": "Boeing",
-        "kgv": "-",
-        "kbv": "12,0",
-        "kuv": "1,5",
-        "kcv": "-",
-        "dividendenrendite": "0,0%",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Hohe Verschuldung und operative Probleme.",
-        "isin": "US0970231058"
-      },
-      {
-        "wertpapier": "Dassault Aviation",
-        "kgv": "18",
-        "kbv": "1,5",
-        "kuv": "1,2",
-        "kcv": "10",
-        "dividendenrendite": "1,5%",
-        "empfehlung": "Halten",
-        "begruendung": "Konservativ, geringes Risiko, wenig Dynamik.",
-        "isin": "FR0014004L86"
-      },
-      {
-        "wertpapier": "Rolls-Royce",
-        "kgv": "22",
-        "kbv": "5,0",
-        "kuv": "1,5",
-        "kcv": "12",
-        "dividendenrendite": "0,0%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Erfolgreicher Turnaround, Cashflow verbessert.",
-        "isin": "GB00B63H8491"
-      },
-      {
-        "wertpapier": "AAR Corp.",
-        "kgv": "15",
-        "kbv": "1,8",
-        "kuv": "0,8",
-        "kcv": "8",
-        "dividendenrendite": "0,0%",
-        "empfehlung": "Kaufen",
-        "begruendung": "G\u00fcnstige Bewertung im Sektorvergleich.",
-        "isin": "US0003611052"
-      },
-      {
-        "wertpapier": "Hexcel",
-        "kgv": "26",
-        "kbv": "3,0",
-        "kuv": "2,8",
-        "kcv": "15",
-        "dividendenrendite": "0,6%",
-        "empfehlung": "Halten",
-        "begruendung": "Nischenplayer, abh\u00e4ngig von Flugzeugbauzyklen.",
-        "isin": "US4282911084"
-      }
-    ],
-    "Satellitentechnik": [
-      {
-        "wertpapier": "Rocket Lab",
-        "kgv": "-",
-        "kbv": "4,0",
-        "kuv": "10,0",
-        "kcv": "-",
-        "dividendenrendite": "0,0%",
-        "empfehlung": "Halten",
-        "begruendung": "Hohes Wachstum, hohe Bewertung, noch nicht profitabel.",
-        "isin": "US7731221062"
-      },
-      {
-        "wertpapier": "Planet Labs",
-        "kgv": "-",
-        "kbv": "2,0",
-        "kuv": "5,0",
-        "kcv": "-",
-        "dividendenrendite": "0,0%",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Hohe Cashburn-Rate, intensiver Wettbewerb.",
-        "isin": "US72703X1063"
-      },
-      {
-        "wertpapier": "OHB SE",
-        "kgv": "20",
-        "kbv": "1,5",
-        "kuv": "0,6",
-        "kcv": "7",
-        "dividendenrendite": "1,0%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Profitiert von \u00f6ffentlicher Raumfahrt-Nachfrage.",
-        "isin": "DE0005936124"
-      },
-      {
-        "wertpapier": "Eutelsat",
-        "kgv": "8",
-        "kbv": "0,4",
-        "kuv": "1,2",
-        "kcv": "3",
-        "dividendenrendite": "5,0%",
-        "empfehlung": "Verkaufen",
-        "begruendung": "Schrumpfender Kernmarkt, Strukturprobleme.",
-        "isin": "FR0010221234"
-      },
-      {
-        "wertpapier": "SES SA",
-        "kgv": "9",
-        "kbv": "0,6",
-        "kuv": "1,5",
-        "kcv": "4",
-        "dividendenrendite": "4,5%",
-        "empfehlung": "Halten",
-        "begruendung": "Dividendenwert mit begrenztem Wachstum.",
-        "isin": "LU0088087324"
-      },
-      {
-        "wertpapier": "Maxar",
-        "kgv": "-",
-        "kbv": "-",
-        "kuv": "-",
-        "kcv": "-",
-        "dividendenrendite": "-",
-        "empfehlung": "Keine Wertung",
-        "begruendung": "Von der B\u00f6rse genommen.",
-        "isin": "US57778K1051"
-      },
-      {
-        "wertpapier": "Iridium Comm.",
-        "kgv": "18",
-        "kbv": "3,5",
-        "kuv": "5,0",
-        "kcv": "12",
-        "dividendenrendite": "1,5%",
-        "empfehlung": "Halten",
-        "begruendung": "Stabiler Cashflow, aber hohe Investitionen.",
-        "isin": "US46269C1027"
-      },
-      {
-        "wertpapier": "Gilat Satellite",
-        "kgv": "15",
-        "kbv": "1,5",
-        "kuv": "1,2",
-        "kcv": "9",
-        "dividendenrendite": "0,0%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Nischenanbieter, gute technologische Basis.",
-        "isin": "IL0010825102"
-      }
-    ],
-    "Technologie": [
-      {
-        "wertpapier": "SAP",
-        "kgv": "32",
-        "kbv": "6,0",
-        "kuv": "6,5",
-        "kcv": "22",
-        "dividendenrendite": "1,0%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Starke Cloud-Transformation, langfristig attraktiv.",
-        "isin": "DE0007164600"
-      },
-      {
-        "wertpapier": "Infineon",
-        "kgv": "18",
-        "kbv": "2,5",
-        "kuv": "3,0",
-        "kcv": "10",
-        "dividendenrendite": "1,2%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Attraktive Bewertung, starke Nachfrage im Automotive-Sektor.",
-        "isin": "DE0006231004"
-      },
-      {
-        "wertpapier": "ASML",
-        "kgv": "35",
-        "kbv": "15,0",
-        "kuv": "10,0",
-        "kcv": "25",
-        "dividendenrendite": "0,8%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Monopolartige Stellung, technologisch f\u00fchrend.",
-        "isin": "NL0010273215"
-      },
-      {
-        "wertpapier": "Salesforce",
-        "kgv": "30",
-        "kbv": "4,0",
-        "kuv": "7,0",
-        "kcv": "20",
-        "dividendenrendite": "0,0%",
-        "empfehlung": "Halten",
-        "begruendung": "Solides Wachstum, Bewertung mittlerweile fair.",
-        "isin": "US79466L3024"
-      },
-      {
-        "wertpapier": "Oracle",
-        "kgv": "25",
-        "kbv": "8,0",
-        "kuv": "6,0",
-        "kcv": "16",
-        "dividendenrendite": "1,3%",
-        "empfehlung": "Halten",
-        "begruendung": "Cloud-Gesch\u00e4ft w\u00e4chst, aber hoher Wettbewerb.",
-        "isin": "US68389X1054"
-      },
-      {
-        "wertpapier": "Nvidia",
-        "kgv": "45",
-        "kbv": "25,0",
-        "kuv": "20,0",
-        "kcv": "35",
-        "dividendenrendite": "0,0%",
-        "empfehlung": "Halten",
-        "begruendung": "Exzellentes Unternehmen, aber sehr hohe Bewertung.",
-        "isin": "US67066G1040"
-      },
-      {
-        "wertpapier": "Microsoft",
-        "kgv": "30",
-        "kbv": "10,0",
-        "kuv": "9,0",
-        "kcv": "22",
-        "dividendenrendite": "0,8%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Extrem breit aufgestellt, verl\u00e4ssliches Wachstum.",
-        "isin": "US5949181045"
-      },
-      {
-        "wertpapier": "Alphabet",
-        "kgv": "22",
-        "kbv": "6,0",
-        "kuv": "5,5",
-        "kcv": "15",
-        "dividendenrendite": "0,4%",
-        "empfehlung": "Kaufen",
-        "begruendung": "Bewertung attraktiv im Vergleich zu anderen Techs.",
-        "isin": "US02079K3059"
-      }
-    ]
-  }
+  "analysen": [
+    {
+      "isin": "IT0003856405",
+      "wertpapier": "Leonardo",
+      "datum": "2026-07-02",
+      "kgv": 33.34,
+      "dividendenrendite": 2.84,
+      "umsatzwachstum_yoy": 19.18,
+      "gewinnwachstum_yoy": 13.46,
+      "eigenkapitalquote": 42.58,
+      "bewertung": "Attraktiv",
+      "risiko": "Hoch",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    },
+    {
+      "isin": "DE000A0D9PT0",
+      "wertpapier": "MTU Aero Engines",
+      "datum": "2026-07-02",
+      "kgv": 18.49,
+      "dividendenrendite": 1.25,
+      "umsatzwachstum_yoy": 9.08,
+      "gewinnwachstum_yoy": 9.48,
+      "eigenkapitalquote": 48.54,
+      "bewertung": "Teuer",
+      "risiko": "Hoch",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    },
+    {
+      "isin": "DE0007030009",
+      "wertpapier": "Rheinmetall",
+      "datum": "2026-07-02",
+      "kgv": 19.71,
+      "dividendenrendite": 3.84,
+      "umsatzwachstum_yoy": 12.44,
+      "gewinnwachstum_yoy": 21.93,
+      "eigenkapitalquote": 57.92,
+      "bewertung": "Attraktiv",
+      "risiko": "Mittel",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    },
+    {
+      "isin": "GB00B63H8491",
+      "wertpapier": "Rolls-Royce",
+      "datum": "2026-07-02",
+      "kgv": 15.82,
+      "dividendenrendite": 1.32,
+      "umsatzwachstum_yoy": 5.26,
+      "gewinnwachstum_yoy": 22.6,
+      "eigenkapitalquote": 45.38,
+      "bewertung": "Fair",
+      "risiko": "Mittel",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    },
+    {
+      "isin": "FR0000073272",
+      "wertpapier": "Safran",
+      "datum": "2026-07-02",
+      "kgv": 20.94,
+      "dividendenrendite": 2.94,
+      "umsatzwachstum_yoy": 9.15,
+      "gewinnwachstum_yoy": 6.04,
+      "eigenkapitalquote": 33.17,
+      "bewertung": "Attraktiv",
+      "risiko": "Hoch",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    },
+    {
+      "isin": "DE000ENER6Y0",
+      "wertpapier": "Siemens Energy",
+      "datum": "2026-07-02",
+      "kgv": 21.52,
+      "dividendenrendite": 1.1,
+      "umsatzwachstum_yoy": 8.17,
+      "gewinnwachstum_yoy": 8.56,
+      "eigenkapitalquote": 44.39,
+      "bewertung": "Teuer",
+      "risiko": "Mittel",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    },
+    {
+      "isin": "FR0000121329",
+      "wertpapier": "Thales",
+      "datum": "2026-07-02",
+      "kgv": 17.45,
+      "dividendenrendite": 2.65,
+      "umsatzwachstum_yoy": 14.6,
+      "gewinnwachstum_yoy": 20.38,
+      "eigenkapitalquote": 44.31,
+      "bewertung": "Attraktiv",
+      "risiko": "Niedrig",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    },
+    {
+      "isin": "DE0006231004",
+      "wertpapier": "Infineon",
+      "datum": "2026-07-02",
+      "kgv": 26.06,
+      "dividendenrendite": 1.67,
+      "umsatzwachstum_yoy": 19.28,
+      "gewinnwachstum_yoy": 9.66,
+      "eigenkapitalquote": 41.16,
+      "bewertung": "Fair",
+      "risiko": "Mittel",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    },
+    {
+      "isin": "NL0010273215",
+      "wertpapier": "ASML",
+      "datum": "2026-07-02",
+      "kgv": 30.04,
+      "dividendenrendite": 2.93,
+      "umsatzwachstum_yoy": 15.15,
+      "gewinnwachstum_yoy": 22.61,
+      "eigenkapitalquote": 47.02,
+      "bewertung": "Fair",
+      "risiko": "Hoch",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    },
+    {
+      "isin": "US0378331005",
+      "wertpapier": "Apple",
+      "datum": "2026-07-02",
+      "kgv": 34.5,
+      "dividendenrendite": 2.81,
+      "umsatzwachstum_yoy": 13.29,
+      "gewinnwachstum_yoy": 20.55,
+      "eigenkapitalquote": 33.16,
+      "bewertung": "Teuer",
+      "risiko": "Hoch",
+      "begruendung": "Das KGV ist moderat, Wachstum ist stabil."
+    }
+  ]
 };
         const depotData = {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 19.49,
-    "portfoliowert": 10107.9,
-    "gesamtvermoegen": 10127.39,
+    "aktueller_barbestand": 1501.68,
+    "portfoliowert": 8603.34,
+    "gesamtvermoegen": 10105.02,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 48.76,
+        "boersenkurs": 49.16,
         "investiert": 1484.16,
-        "boersenwert": 1560.32,
-        "gewinn_verlust": 76.16
+        "boersenwert": 1573.12,
+        "gewinn_verlust": 88.96
       },
       {
         "isin": "DE000A0D9PT0",
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 369.7,
+        "boersenkurs": 369.12,
         "investiert": 1453.2,
-        "boersenwert": 1478.8,
-        "gewinn_verlust": 25.6
+        "boersenwert": 1476.48,
+        "gewinn_verlust": 23.28
       },
       {
         "isin": "DE0007030009",
         "wertpapier": "Rheinmetall",
         "stueck": 1,
         "kaufkurs": 975.6,
-        "boersenkurs": 1050.6,
+        "boersenkurs": 1059.88,
         "investiert": 975.6,
-        "boersenwert": 1050.6,
-        "gewinn_verlust": 75.0
-      },
-      {
-        "isin": "GB00B63H8491",
-        "wertpapier": "Rolls-Royce",
-        "stueck": 89,
-        "kaufkurs": 16.72,
-        "boersenkurs": 17.044,
-        "investiert": 1488.08,
-        "boersenwert": 1516.92,
-        "gewinn_verlust": 28.84
+        "boersenwert": 1059.88,
+        "gewinn_verlust": 84.28
       },
       {
         "isin": "FR0000073272",
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 349.9,
+        "boersenkurs": 355.39,
         "investiert": 1380.0,
-        "boersenwert": 1399.6,
-        "gewinn_verlust": 19.6
+        "boersenwert": 1421.56,
+        "gewinn_verlust": 41.56
       },
       {
         "isin": "DE000ENER6Y0",
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 163.34,
+        "boersenkurs": 162.9,
         "investiert": 1492.2,
-        "boersenwert": 1470.06,
-        "gewinn_verlust": -22.14
+        "boersenwert": 1466.1,
+        "gewinn_verlust": -26.1
       },
       {
         "isin": "FR0000121329",
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 229.4,
+        "boersenkurs": 226.14,
         "investiert": 224.8,
-        "boersenwert": 229.4,
-        "gewinn_verlust": 4.6
+        "boersenwert": 226.14,
+        "gewinn_verlust": 1.34
       },
       {
         "isin": "DE0006231004",
         "wertpapier": "Infineon",
         "stueck": 18,
         "kaufkurs": 81.67,
-        "boersenkurs": 77.9,
+        "boersenkurs": 76.67,
         "investiert": 1470.06,
-        "boersenwert": 1402.2,
-        "gewinn_verlust": -67.86
+        "boersenwert": 1380.06,
+        "gewinn_verlust": -90.0
       }
     ],
     "transaktionshistorie": [
@@ -908,85 +512,45 @@
         "gesamt": 1475.06,
         "notiz": "Neukauf (Kauf-Signal)",
         "begruendung": "Chartanalyse: Bodenbildung abgeschlossen, starkes Momentum nach oben. | Fundamentalanalyse: Attraktive Bewertung, starke Nachfrage im Automotive-Sektor."
+      },
+      {
+        "datum": "2026-07-02",
+        "typ": "Verkauf",
+        "isin": "GB00B63H8491",
+        "wertpapier": "Rolls-Royce",
+        "stueck": 89,
+        "kurs": 16.71,
+        "gebuehr": 5.0,
+        "steuern": 0,
+        "gewinn_verlust": -5.89,
+        "gesamt": 1482.19,
+        "notiz": "Strategischer Verkauf",
+        "begruendung": "Signal Verkaufen. Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Verkaufen."
       }
     ]
   }
 };
 
         function getBadge(rating) {
+            if (!rating) return '';
             const r = rating.toLowerCase();
-            if (r.includes("verkauf")) return `<span class="badge sell">Verkaufen</span>`;
             if (r.includes("kauf")) return `<span class="badge buy">Kaufen</span>`;
             if (r.includes("halt")) return `<span class="badge hold">Halten</span>`;
+            if (r.includes("verkauf")) return `<span class="badge sell">Verkaufen</span>`;
             return `<span class="badge" style="background:#e2e3e5">${rating}</span>`;
         }
-
-        // Render Chartanalyse
-        let chartHtml = `<h2>Ergebnisse der Chartanalyse</h2><p>Übersicht der kurz-, mittel- und langfristigen Trendbewertungen.</p>`;
-        for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
-            chartHtml += `<h3 class="sector-title">${sektor}</h3>
-            <table>
-                <tr>
-                    <th style="width: 35%">Wertpapier</th>
-                    <th style="width: 15%">Empfehlung</th>
-                    <th style="width: 50%">Charttechnische Begründung</th>
-                </tr>`;
-            werte.forEach(w => {
-                chartHtml += `<tr>
-                    <td><strong>${w.wertpapier}</strong><br><small style="color: #7f8c8d;">${w.isin || ''}</small></td>
-                    <td>${getBadge(w.empfehlung)}</td>
-                    <td>${w.begruendung}</td>
-                </tr>`;
-            });
-            chartHtml += `</table>`;
-        }
-        document.getElementById('chart').innerHTML = chartHtml;
-
-        // Render Fundamentalanalyse
-        let fundaHtml = `<h2>Ergebnisse der Fundamentalanalyse</h2><p>Vergleichende Gegenüberstellung nach der Commerzbank-Methodik.</p>`;
-        for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
-            fundaHtml += `<h3 class="sector-title">${sektor}</h3>
-            <table>
-                <tr>
-                    <th>Wertpapier</th>
-                    <th>KGV</th>
-                    <th>KBV</th>
-                    <th>KUV</th>
-                    <th>KCV</th>
-                    <th>Dividende</th>
-                    <th>Empfehlung</th>
-                    <th style="width: 35%">Begründung</th>
-                </tr>`;
-            werte.forEach(w => {
-                fundaHtml += `<tr>
-                    <td><strong>${w.wertpapier}</strong><br><small style="color: #7f8c8d;">${w.isin || ''}</small></td>
-                    <td>${w.kgv}</td>
-                    <td>${w.kbv}</td>
-                    <td>${w.kuv}</td>
-                    <td>${w.kcv}</td>
-                    <td>${w.dividendenrendite}</td>
-                    <td>${getBadge(w.empfehlung)}</td>
-                    <td>${w.begruendung}</td>
-                </tr>`;
-            });
-            fundaHtml += `</table>`;
-        }
-        document.getElementById('funda').innerHTML = fundaHtml;
 
         // Render Depot Status
         const d = depotData.depot;
         let depotHtml = `<h2>Aktueller Depot-Status</h2>
-        
         <div class="stats-grid">
             <div class="stat-card"><h4>Gesamtvermögen</h4><p>${d.gesamtvermoegen.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
             <div class="stat-card"><h4>Barbestand</h4><p>${d.aktueller_barbestand.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
             <div class="stat-card"><h4>Portfoliowert</h4><p>${d.portfoliowert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
-            <div class="stat-card"><h4>Startkapital</h4><p>${d.startkapital.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</p></div>
         </div>
-        
-        <h3 class="sector-title">Aktuelle Positionen (Wertpapiere)</h3>
         <table>
             <tr>
+                <th>ISIN</th>
                 <th>Wertpapier</th>
                 <th>Stück</th>
                 <th>Kaufkurs</th>
@@ -995,61 +559,93 @@
                 <th>Börsenwert</th>
                 <th>Gewinn/Verlust</th>
             </tr>`;
-        d.positionen.forEach(p => {
-            let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
-            let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
-            depotHtml += `<tr>
-                <td><strong>${p.wertpapier}</strong><br><small style="color: #7f8c8d;">${p.isin || ''}</small></td>
-                <td>${p.stueck}</td>
-                <td>${p.kaufkurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td>${(p.boersenkurs || p.kaufkurs).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td>${p.investiert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td>${(p.boersenwert || p.investiert).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${(p.gewinn_verlust || 0).toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'})}</span></td>
-            </tr>`;
-        });
+        if (d.positionen && d.positionen.length > 0) {
+            d.positionen.forEach(p => {
+                let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
+                let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
+                depotHtml += `<tr>
+                    <td>${p.isin || ''}</td>
+                    <td><strong>${p.wertpapier}</strong></td>
+                    <td>${p.stueck}</td>
+                    <td>${p.kaufkurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td>${p.boersenkurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td>${p.investiert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td>${p.boersenwert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+                    <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${p.gewinn_verlust.toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'})}</span></td>
+                </tr>`;
+            });
+        }
         depotHtml += `</table>`;
         document.getElementById('depot').innerHTML = depotHtml;
 
+        // Render Chartanalyse
+        let chartHtml = `<h2>Chartanalyse</h2><table><tr><th>ISIN</th><th>Wertpapier</th><th>Empfehlung</th><th>Begründung</th></tr>`;
+        if (chartData.analysen) {
+            chartData.analysen.forEach(w => {
+                chartHtml += `<tr>
+                    <td>${w.isin || ''}</td>
+                    <td><strong>${w.wertpapier}</strong></td>
+                    <td>${getBadge(w.signal)}</td>
+                    <td>${w.begruendung}</td>
+                </tr>`;
+            });
+        } else if (chartData.sektoren) {
+            for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
+                werte.forEach(w => {
+                    chartHtml += `<tr><td>${w.isin || ''}</td><td><strong>${w.wertpapier}</strong></td><td>${getBadge(w.empfehlung)}</td><td>${w.begruendung}</td></tr>`;
+                });
+            }
+        }
+        chartHtml += `</table>`;
+        document.getElementById('chart').innerHTML = chartHtml;
+
+        // Render Fundamentalanalyse
+        let fundaHtml = `<h2>Fundamentalanalyse</h2><table><tr><th>ISIN</th><th>Wertpapier</th><th>KGV</th><th>Dividende</th><th>Empfehlung</th><th>Begründung</th></tr>`;
+        if (fundaData.analysen) {
+            fundaData.analysen.forEach(w => {
+                // Determine recommendation based on bewertung/risiko if no signal is explicitly given
+                let empf = "Halten";
+                if (w.bewertung === "Attraktiv") empf = "Kaufen";
+                if (w.bewertung === "Teuer") empf = "Verkaufen";
+                
+                fundaHtml += `<tr>
+                    <td>${w.isin || ''}</td>
+                    <td><strong>${w.wertpapier}</strong></td>
+                    <td>${w.kgv}</td>
+                    <td>${w.dividendenrendite}%</td>
+                    <td>${getBadge(empf)}</td>
+                    <td>${w.begruendung}</td>
+                </tr>`;
+            });
+        } else if (fundaData.sektoren) {
+            for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
+                werte.forEach(w => {
+                    fundaHtml += `<tr><td>${w.isin || ''}</td><td><strong>${w.wertpapier}</strong></td><td>${w.kgv}</td><td>${w.dividendenrendite}</td><td>${getBadge(w.empfehlung)}</td><td>${w.begruendung}</td></tr>`;
+                });
+            }
+        }
+        fundaHtml += `</table>`;
+        document.getElementById('funda').innerHTML = fundaHtml;
+
         // Render Transaktionshistorie
-        let transHtml = `<h2>Transaktionshistorie</h2>
-        <table>
-            <tr>
-                <th>Datum</th>
-                <th>Typ</th>
-                <th>Wertpapier</th>
-                <th>Stück</th>
-                <th>Kurs</th>
-                <th>Gebühr</th>
-                <th>Steuern</th>
-                <th>Gewinn/Verlust</th>
-                <th>Gesamt</th>
-                <th>Notiz</th>
-            </tr>`;
-        
+        let transHtml = `<h2>Transaktionshistorie</h2><table><tr><th>Datum</th><th>Typ</th><th>ISIN</th><th>Wertpapier</th><th>Stück</th><th>Kurs</th><th>Gesamt</th></tr>`;
         if (d.transaktionshistorie) {
-            // Sortiere Transaktionen chronologisch absteigend (neueste zuerst)
             const transactionsRev = [...d.transaktionshistorie].sort((a, b) => new Date(b.datum) - new Date(a.datum));
             transactionsRev.forEach(t => {
-                let gvText = t.gewinn_verlust !== undefined ? t.gewinn_verlust.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}) : '-';
-                let steuernText = t.steuern !== undefined ? t.steuern.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}) : '-';
+                let typColor = t.typ === 'Kauf' ? 'color: #155724;' : 'color: #721c24;';
                 transHtml += `<tr>
-                    <td>${t.datum}</td>
-                    <td><strong>${t.typ}</strong></td>
-                    <td><strong>${t.wertpapier}</strong><br><small style="color: #7f8c8d;">${t.isin || ''}</small></td>
+                    <td style="white-space: nowrap;">${t.datum}</td>
+                    <td style="${typColor}"><strong>${t.typ}</strong></td>
+                    <td>${t.isin || ''}</td>
+                    <td><strong>${t.wertpapier}</strong></td>
                     <td>${t.stueck}</td>
                     <td>${t.kurs.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                    <td>${t.gebuehr.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                    <td>${steuernText}</td>
-                    <td>${gvText}</td>
-                    <td>${t.gesamt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-                    <td><small>${t.notiz || ''}</small></td>
+                    <td><strong>${t.gesamt.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</strong></td>
                 </tr>`;
             });
         }
         transHtml += `</table>`;
         document.getElementById('transaktionen').innerHTML = transHtml;
-
 
         // Tab Logic
         function openTab(evt, tabName) {
