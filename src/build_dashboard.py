@@ -79,7 +79,13 @@ html_template = """<!DOCTYPE html>
         
         function formatEURSign(val) {
             if (val === undefined || val === null) return '-';
-            return val.toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'});
+            try {
+                return val.toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'});
+            } catch (e) {
+                // Fallback if signDisplay is not supported
+                let formatted = val.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'});
+                return val > 0 ? '+' + formatted : formatted;
+            }
         }
 
         // --- DEPOT STATUS ---
