@@ -226,7 +226,7 @@ html_template = """<!DOCTYPE html>
                 <th>Begründung</th>
             </tr>`;
         if (d.transaktionshistorie) {
-            const transactionsRev = [...d.transaktionshistorie].sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
+            const transactionsRev = d.transaktionshistorie.slice().sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
             transactionsRev.forEach(t => {
                 let typColor = t.typ === 'Kauf' ? 'color: #155724;' : 'color: #721c24;';
                 
