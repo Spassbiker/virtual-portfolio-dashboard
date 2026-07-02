@@ -73,18 +73,19 @@ html_template = """<!DOCTYPE html>
         }
         
         function formatEUR(val) {
-            if (val === undefined || val === null) return '-';
-            return val.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'});
+            if (val === undefined || val === null || val === '') return '-';
+            return Number(val).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'});
         }
         
         function formatEURSign(val) {
-            if (val === undefined || val === null) return '-';
+            if (val === undefined || val === null || val === '') return '-';
+            let num = Number(val);
             try {
-                return val.toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'});
+                return num.toLocaleString('de-DE', {style: 'currency', currency: 'EUR', signDisplay: 'always'});
             } catch (e) {
                 // Fallback if signDisplay is not supported
-                let formatted = val.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'});
-                return val > 0 ? '+' + formatted : formatted;
+                let formatted = num.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'});
+                return num > 0 ? '+' + formatted : formatted;
             }
         }
 
@@ -130,7 +131,7 @@ html_template = """<!DOCTYPE html>
         // --- CHARTANALYSE ---
         let chartHtml = `<h2>Chartanalyse (Technisch)</h2>`;
         if (chartData.sektoren) {
-            for (const [sektor, werte] of Object.entries(chartData.sektoren)) {
+            Object.keys(chartData.sektoren).forEach(sektor => { const werte = chartData.sektoren[sektor];
                 chartHtml += `<h3 style="background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 30px;">${sektor}</h3>`;
                 chartHtml += `<table>
                     <tr>
@@ -162,14 +163,14 @@ html_template = """<!DOCTYPE html>
                     </tr>`;
                 });
                 chartHtml += `</table>`;
-            }
+            });
         }
         document.getElementById('chart').innerHTML = chartHtml;
 
         // --- FUNDAMENTALANALYSE ---
         let fundaHtml = `<h2>Fundamentalanalyse</h2>`;
         if (fundaData.sektoren) {
-            for (const [sektor, werte] of Object.entries(fundaData.sektoren)) {
+            Object.keys(fundaData.sektoren).forEach(sektor => { const werte = fundaData.sektoren[sektor];
                 fundaHtml += `<h3 style="background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 30px;">${sektor}</h3>`;
                 fundaHtml += `<table>
                     <tr>
@@ -206,7 +207,7 @@ html_template = """<!DOCTYPE html>
                     </tr>`;
                 });
                 fundaHtml += `</table>`;
-            }
+            });
         }
         document.getElementById('funda').innerHTML = fundaHtml;
 
@@ -225,7 +226,7 @@ html_template = """<!DOCTYPE html>
                 <th>Begründung</th>
             </tr>`;
         if (d.transaktionshistorie) {
-            const transactionsRev = [...d.transaktionshistorie].sort((a, b) => new Date(b.datum) - new Date(a.datum));
+            const transactionsRev = [...d.transaktionshistorie].sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
             transactionsRev.forEach(t => {
                 let typColor = t.typ === 'Kauf' ? 'color: #155724;' : 'color: #721c24;';
                 
