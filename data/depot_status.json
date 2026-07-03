@@ -1,9 +1,9 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 1501.68,
-    "portfoliowert": 8792.56,
-    "gesamtvermoegen": 10294.24,
+    "aktueller_barbestand": 860.91,
+    "portfoliowert": 9386.56,
+    "gesamtvermoegen": 10247.47,
     "positionen": [
       {
         "isin": "IT0003856405",
@@ -24,16 +24,6 @@
         "investiert": 1453.2,
         "boersenwert": 1495.2,
         "gewinn_verlust": 42.0
-      },
-      {
-        "isin": "DE0007030009",
-        "wertpapier": "Rheinmetall",
-        "stueck": 1,
-        "kaufkurs": 975.6,
-        "boersenkurs": 1115.0,
-        "investiert": 975.6,
-        "boersenwert": 1115.0,
-        "gewinn_verlust": 139.4
       },
       {
         "isin": "FR0000073272",
@@ -74,6 +64,16 @@
         "investiert": 1470.06,
         "boersenwert": 1374.3,
         "gewinn_verlust": -95.76
+      },
+      {
+        "isin": "US67066G1040",
+        "wertpapier": "Nvidia",
+        "stueck": 10,
+        "kaufkurs": 170.9,
+        "boersenkurs": 170.9,
+        "investiert": 1709.0,
+        "boersenwert": 1709.0,
+        "gewinn_verlust": 0.0
       }
     ],
     "transaktionshistorie": [
@@ -103,7 +103,7 @@
         "gewinn_verlust": 16.6,
         "gesamt": 1502.62,
         "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
-        "begruendung": "Chartanalyse: Abw\u00e4rtstrend, unterschreitet wichtige Unterst\u00fctzungsniveaus. | Fundamentalanalyse: Hohe Cashburn-Rate, intensiver Wettbewerb."
+        "begruendung": "Chartanalyse: Abwärtstrend, unterschreitet wichtige Unterstützungsniveaus. | Fundamentalanalyse: Hohe Cashburn-Rate, intensiver Wettbewerb."
       },
       {
         "datum": "2026-06-30",
@@ -131,7 +131,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 1497.2,
         "notiz": "Neukauf (Kauf-Signal)",
-        "begruendung": "Chartanalyse: Starke Erholung \u00fcber SMA 200, hoher RSI-Aufw\u00e4rtstrend. | Fundamentalanalyse: Starkes Wachstumspotenzial bei Energiewende-Infrastruktur."
+        "begruendung": "Chartanalyse: Starke Erholung über SMA 200, hoher RSI-Aufwärtstrend. | Fundamentalanalyse: Starkes Wachstumspotenzial bei Energiewende-Infrastruktur."
       },
       {
         "datum": "2026-06-30",
@@ -145,7 +145,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 229.8,
         "notiz": "Neukauf (Kauf-Signal)",
-        "begruendung": "Chartanalyse: Stabiler Aufw\u00e4rtstrend, GD200 als sichere Basis. | Fundamentalanalyse: Stabiles Wachstum, starke Marktposition."
+        "begruendung": "Chartanalyse: Stabiler Aufwärtstrend, GD200 als sichere Basis. | Fundamentalanalyse: Stabiles Wachstum, starke Marktposition."
       },
       {
         "datum": "2026-07-01",
@@ -159,7 +159,7 @@
         "gewinn_verlust": -8.08,
         "gesamt": 1469.0,
         "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
-        "begruendung": "Chartanalyse: Kurzfristige \u00dcberhitzung nach starken Rallye, Gewinnmitnahmen empfohlen. | Fundamentalanalyse: Starke Cloud-Transformation, langfristig attraktiv."
+        "begruendung": "Chartanalyse: Kurzfristige Überhitzung nach starken Rallye, Gewinnmitnahmen empfohlen. | Fundamentalanalyse: Starke Cloud-Transformation, langfristig attraktiv."
       },
       {
         "datum": "2026-07-01",
@@ -187,7 +187,35 @@
         "gewinn_verlust": -5.89,
         "gesamt": 1482.19,
         "notiz": "Strategischer Verkauf",
-        "begruendung": "Signal Verkaufen. Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Verkaufen."
+        "begruendung": "Signal Verkaufen. Aktueller Trend ist Leichter Abwärtstrend. Signal lautet Verkaufen."
+      },
+      {
+        "datum": "2026-07-03",
+        "typ": "Verkauf",
+        "isin": "DE0007030009",
+        "wertpapier": "Rheinmetall",
+        "stueck": 1,
+        "kurs": 1115.0,
+        "gebuehr": 5.0,
+        "steuern": 36.77,
+        "gewinn_verlust": 139.4,
+        "gesamt": 1073.23,
+        "notiz": "Strategische Gewinnmitnahme",
+        "begruendung": "Chartanalyse: Gewinnmitnahme nach sehr starkem Lauf. | Fundamentalanalyse: Bewertung aktuell historisch hoch."
+      },
+      {
+        "datum": "2026-07-03",
+        "typ": "Kauf",
+        "isin": "US67066G1040",
+        "wertpapier": "Nvidia",
+        "stueck": 10,
+        "kurs": 170.9,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 1714.0,
+        "notiz": "Neukauf (Kauf-Signal)",
+        "begruendung": "Chartanalyse: Starke Dynamik | Fundamentalanalyse: Top-Pick im KI-Sektor."
       }
     ]
   }

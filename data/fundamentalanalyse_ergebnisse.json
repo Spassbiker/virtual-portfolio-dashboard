@@ -31,7 +31,7 @@
       {
         "wertpapier": "E.ON",
         "isin": "DE000ENAG999",
-        "begruendung": "Stabiles Gesch\u00e4ftsmodell, begrenzte Fantasie.",
+        "begruendung": "Stabiles Geschäftsmodell, begrenzte Fantasie.",
         "kgv": "16",
         "dividendenrendite": 4.0,
         "umsatzwachstum_yoy": 9.49,
@@ -45,7 +45,7 @@
       {
         "wertpapier": "Encavis",
         "isin": "DE0006095003",
-        "begruendung": "Bewertung aktuell zu hoch f\u00fcr das Wachstum.",
+        "begruendung": "Bewertung aktuell zu hoch für das Wachstum.",
         "kgv": "35",
         "dividendenrendite": 0.8,
         "umsatzwachstum_yoy": -2.8,
@@ -59,7 +59,7 @@
       {
         "wertpapier": "SMA Solar",
         "isin": "DE000A0DJ6J9",
-        "begruendung": "Deutlicher Abw\u00e4rtstrend, RSI im \u00fcberverkauften Bereich, keine Bodenbildung.",
+        "begruendung": "Deutlicher Abwärtstrend, RSI im überverkauften Bereich, keine Bodenbildung.",
         "kgv": 47.72,
         "dividendenrendite": 4.67,
         "umsatzwachstum_yoy": 11.66,
@@ -73,7 +73,7 @@
       {
         "wertpapier": "Nordex SE",
         "isin": "DE000A0D6554",
-        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilit\u00e4t.",
+        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilität.",
         "kgv": "45",
         "dividendenrendite": 0.0,
         "umsatzwachstum_yoy": 12.41,
@@ -87,7 +87,7 @@
       {
         "wertpapier": "Microsoft",
         "isin": "US5949181045",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 46.17,
         "dividendenrendite": 4.08,
         "umsatzwachstum_yoy": -4.7,
@@ -101,7 +101,7 @@
       {
         "wertpapier": "Alphabet",
         "isin": "US02079K3059",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 20.48,
         "dividendenrendite": 2.74,
         "umsatzwachstum_yoy": 0.48,
@@ -115,7 +115,7 @@
       {
         "wertpapier": "L3Harris Technologies",
         "isin": "US5024311095",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 38.78,
         "dividendenrendite": 4.83,
         "umsatzwachstum_yoy": 24.16,
@@ -129,7 +129,7 @@
       {
         "wertpapier": "Raytheon",
         "isin": "US75513E1010",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 35.23,
         "dividendenrendite": 0.53,
         "umsatzwachstum_yoy": 23.54,
@@ -172,7 +172,7 @@
       {
         "wertpapier": "Airbus",
         "isin": "NL0000235190",
-        "begruendung": "Unterst\u00fctzungszone bei 180 EUR erfolgreich getestet.",
+        "begruendung": "Unterstützungszone bei 180 EUR erfolgreich getestet.",
         "kgv": 38.95,
         "dividendenrendite": 1.26,
         "umsatzwachstum_yoy": 22.3,
@@ -240,7 +240,7 @@
       {
         "wertpapier": "NextEra Energy",
         "isin": "US65339F1012",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 26.41,
         "dividendenrendite": 3.89,
         "umsatzwachstum_yoy": 2.6,
@@ -254,7 +254,7 @@
       {
         "wertpapier": "Tesla",
         "isin": "US88160R1014",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 37.56,
         "dividendenrendite": 0.52,
         "umsatzwachstum_yoy": 13.87,
@@ -268,7 +268,7 @@
       {
         "wertpapier": "Gilat Satellite",
         "isin": "IL0010825102",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 22.59,
         "dividendenrendite": 1.28,
         "umsatzwachstum_yoy": 23.09,
@@ -349,20 +349,6 @@
         "datum": "2026-07-02"
       },
       {
-        "wertpapier": "MTU Aero Eng.",
-        "isin": "",
-        "begruendung": "Nach Korrektur wieder bullisches Momentum, RSI stabil.",
-        "kgv": 46.78,
-        "dividendenrendite": 4.95,
-        "umsatzwachstum_yoy": 3.92,
-        "gewinnwachstum_yoy": 38.92,
-        "eigenkapitalquote": 36.83,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen"
-      },
-      {
         "wertpapier": "Airbus SE",
         "isin": "NL0000235190",
         "begruendung": "Operative Herausforderungen bremsen kurzfristig.",
@@ -379,7 +365,7 @@
       {
         "wertpapier": "Lockheed Martin",
         "isin": "US5398301094",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 15.12,
         "dividendenrendite": 0.67,
         "umsatzwachstum_yoy": 24.56,
@@ -393,7 +379,7 @@
       {
         "wertpapier": "General Dynamics",
         "isin": "US3695501086",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 24.85,
         "dividendenrendite": 3.07,
         "umsatzwachstum_yoy": -0.35,
@@ -407,7 +393,7 @@
       {
         "wertpapier": "Nvidia",
         "isin": "US67066G1040",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 36.36,
         "dividendenrendite": 1.27,
         "umsatzwachstum_yoy": 22.66,
@@ -423,7 +409,7 @@
       {
         "wertpapier": "OHB",
         "isin": "DE0005936124",
-        "begruendung": "Profitiert von \u00f6ffentlicher Raumfahrt-Nachfrage.",
+        "begruendung": "Profitiert von öffentlicher Raumfahrt-Nachfrage.",
         "kgv": "20",
         "dividendenrendite": 1.0,
         "umsatzwachstum_yoy": 23.81,
@@ -465,7 +451,7 @@
       {
         "wertpapier": "Maxar",
         "isin": "US57778K1051",
-        "begruendung": "Von der B\u00f6rse genommen.",
+        "begruendung": "Von der Börse genommen.",
         "kgv": "-",
         "dividendenrendite": 4.4,
         "umsatzwachstum_yoy": 25.69,
@@ -521,7 +507,7 @@
       {
         "wertpapier": "Boeing",
         "isin": "US0970231058",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 21.63,
         "dividendenrendite": 4.27,
         "umsatzwachstum_yoy": 5.41,
@@ -535,7 +521,7 @@
       {
         "wertpapier": "Tesla",
         "isin": "US88160R1014",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 48.03,
         "dividendenrendite": 0.7,
         "umsatzwachstum_yoy": 1.35,
@@ -549,7 +535,7 @@
       {
         "wertpapier": "Microsoft",
         "isin": "US5949181045",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 17.67,
         "dividendenrendite": 2.4,
         "umsatzwachstum_yoy": 16.16,
@@ -592,7 +578,7 @@
       {
         "wertpapier": "ASML",
         "isin": "NL0010273215",
-        "begruendung": "Monopolartige Stellung, technologisch f\u00fchrend.",
+        "begruendung": "Monopolartige Stellung, technologisch führend.",
         "kgv": "35",
         "dividendenrendite": 0.8,
         "umsatzwachstum_yoy": 7.18,
@@ -606,7 +592,7 @@
       {
         "wertpapier": "TeamViewer",
         "isin": "DE000A2YN900",
-        "begruendung": "Abw\u00e4rtstrend seit Monaten, keine Anzeichen einer Wende.",
+        "begruendung": "Abwärtstrend seit Monaten, keine Anzeichen einer Wende.",
         "kgv": 35.14,
         "dividendenrendite": 4.64,
         "umsatzwachstum_yoy": 29.73,
@@ -620,7 +606,7 @@
       {
         "wertpapier": "Delivery Hero",
         "isin": "DE000A2E4K43",
-        "begruendung": "Spekulative Seitw\u00e4rtsphase, hoher charttechnischer Druck.",
+        "begruendung": "Spekulative Seitwärtsphase, hoher charttechnischer Druck.",
         "kgv": 31.52,
         "dividendenrendite": 3.12,
         "umsatzwachstum_yoy": 3.75,
@@ -634,7 +620,7 @@
       {
         "wertpapier": "Dt. Telekom",
         "isin": "DE0005557508",
-        "begruendung": "Defensive St\u00e4rke, technischer Ausbruch \u00fcber Widerstandsbereich.",
+        "begruendung": "Defensive Stärke, technischer Ausbruch über Widerstandsbereich.",
         "kgv": 22.78,
         "dividendenrendite": 4.61,
         "umsatzwachstum_yoy": 5.37,
@@ -648,7 +634,7 @@
       {
         "wertpapier": "Aixtron SE",
         "isin": "DE000A0WMPJ6",
-        "begruendung": "Hohe Volatilit\u00e4t, kurzfristige Erholungschancen, langfristig instabil.",
+        "begruendung": "Hohe Volatilität, kurzfristige Erholungschancen, langfristig instabil.",
         "kgv": 19.21,
         "dividendenrendite": 4.31,
         "umsatzwachstum_yoy": -3.57,
@@ -662,7 +648,7 @@
       {
         "wertpapier": "Meta Platforms",
         "isin": "US30303M1027",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 49.0,
         "dividendenrendite": 3.7,
         "umsatzwachstum_yoy": 17.9,
@@ -676,7 +662,7 @@
       {
         "wertpapier": "NextEra Energy",
         "isin": "US65339F1012",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 18.14,
         "dividendenrendite": 1.51,
         "umsatzwachstum_yoy": 20.7,
@@ -690,7 +676,7 @@
       {
         "wertpapier": "Dassault Aviation",
         "isin": "FR0014004L86",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 16.11,
         "dividendenrendite": 0.43,
         "umsatzwachstum_yoy": 10.94,
@@ -699,6 +685,20 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-02",
+        "empfehlung": "Kaufen"
+      },
+      {
+        "wertpapier": "Nvidia",
+        "isin": "US67066G1040",
+        "begruendung": "Monopolartige Stellung im KI-Chipmarkt mit extrem hohen Margen.",
+        "kgv": "45",
+        "dividendenrendite": 0.1,
+        "umsatzwachstum_yoy": 120.5,
+        "gewinnwachstum_yoy": 150.2,
+        "eigenkapitalquote": 65.4,
+        "bewertung": "Moderat",
+        "risiko": "Mittel",
+        "datum": "2026-07-03",
         "empfehlung": "Kaufen"
       }
     ]
