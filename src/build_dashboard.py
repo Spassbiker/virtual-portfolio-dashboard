@@ -175,6 +175,7 @@ html_template = """<!DOCTYPE html>
                 fundaHtml += `<table>
                     <tr>
                         <th>Wertpapier</th>
+                        <th>Aktueller Kurs</th>
                         <th>Bewertung</th>
                         <th>Risiko</th>
                         <th>KGV</th>
@@ -196,6 +197,7 @@ html_template = """<!DOCTYPE html>
                     
                     fundaHtml += `<tr>
                         <td><strong>${w.wertpapier}</strong><br><small style="color:#666">${w.isin || ''}</small></td>
+                        <td>${formatEUR(w.aktueller_kurs)}</td>
                         <td>${getBadge(w.bewertung)}</td>
                         <td>${w.risiko || '-'}</td>
                         <td>${w.kgv || '-'}</td>

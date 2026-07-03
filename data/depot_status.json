@@ -2,78 +2,78 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 860.91,
-    "portfoliowert": 9386.56,
-    "gesamtvermoegen": 10247.47,
+    "portfoliowert": 9671.13,
+    "gesamtvermoegen": 10532.04,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 51.94,
+        "boersenkurs": 51.86,
         "investiert": 1484.16,
-        "boersenwert": 1662.08,
-        "gewinn_verlust": 177.92
+        "boersenwert": 1659.52,
+        "gewinn_verlust": 175.36
       },
       {
         "isin": "DE000A0D9PT0",
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 373.8,
+        "boersenkurs": 378.2,
         "investiert": 1453.2,
-        "boersenwert": 1495.2,
-        "gewinn_verlust": 42.0
+        "boersenwert": 1512.8,
+        "gewinn_verlust": 59.6
       },
       {
         "isin": "FR0000073272",
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 353.3,
+        "boersenkurs": 355.4,
         "investiert": 1380.0,
-        "boersenwert": 1413.2,
-        "gewinn_verlust": 33.2
+        "boersenwert": 1421.6,
+        "gewinn_verlust": 41.6
       },
       {
         "isin": "DE000ENER6Y0",
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 165.82,
+        "boersenkurs": 166.86,
         "investiert": 1492.2,
-        "boersenwert": 1492.38,
-        "gewinn_verlust": 0.18
+        "boersenwert": 1501.74,
+        "gewinn_verlust": 9.54
       },
       {
         "isin": "FR0000121329",
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 240.4,
+        "boersenkurs": 240.9,
         "investiert": 224.8,
-        "boersenwert": 240.4,
-        "gewinn_verlust": 15.6
+        "boersenwert": 240.9,
+        "gewinn_verlust": 16.1
       },
       {
         "isin": "DE0006231004",
         "wertpapier": "Infineon",
         "stueck": 18,
         "kaufkurs": 81.67,
-        "boersenkurs": 76.35,
+        "boersenkurs": 77.015,
         "investiert": 1470.06,
-        "boersenwert": 1374.3,
-        "gewinn_verlust": -95.76
+        "boersenwert": 1386.27,
+        "gewinn_verlust": -83.79
       },
       {
         "isin": "US67066G1040",
         "wertpapier": "Nvidia",
         "stueck": 10,
         "kaufkurs": 170.9,
-        "boersenkurs": 170.9,
+        "boersenkurs": 194.83,
         "investiert": 1709.0,
-        "boersenwert": 1709.0,
-        "gewinn_verlust": 0.0
+        "boersenwert": 1948.3,
+        "gewinn_verlust": 239.3
       }
     ],
     "transaktionshistorie": [
@@ -103,7 +103,7 @@
         "gewinn_verlust": 16.6,
         "gesamt": 1502.62,
         "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
-        "begruendung": "Chartanalyse: Abwärtstrend, unterschreitet wichtige Unterstützungsniveaus. | Fundamentalanalyse: Hohe Cashburn-Rate, intensiver Wettbewerb."
+        "begruendung": "Chartanalyse: Abw\u00e4rtstrend, unterschreitet wichtige Unterst\u00fctzungsniveaus. | Fundamentalanalyse: Hohe Cashburn-Rate, intensiver Wettbewerb."
       },
       {
         "datum": "2026-06-30",
@@ -131,7 +131,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 1497.2,
         "notiz": "Neukauf (Kauf-Signal)",
-        "begruendung": "Chartanalyse: Starke Erholung über SMA 200, hoher RSI-Aufwärtstrend. | Fundamentalanalyse: Starkes Wachstumspotenzial bei Energiewende-Infrastruktur."
+        "begruendung": "Chartanalyse: Starke Erholung \u00fcber SMA 200, hoher RSI-Aufw\u00e4rtstrend. | Fundamentalanalyse: Starkes Wachstumspotenzial bei Energiewende-Infrastruktur."
       },
       {
         "datum": "2026-06-30",
@@ -145,7 +145,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 229.8,
         "notiz": "Neukauf (Kauf-Signal)",
-        "begruendung": "Chartanalyse: Stabiler Aufwärtstrend, GD200 als sichere Basis. | Fundamentalanalyse: Stabiles Wachstum, starke Marktposition."
+        "begruendung": "Chartanalyse: Stabiler Aufw\u00e4rtstrend, GD200 als sichere Basis. | Fundamentalanalyse: Stabiles Wachstum, starke Marktposition."
       },
       {
         "datum": "2026-07-01",
@@ -159,7 +159,7 @@
         "gewinn_verlust": -8.08,
         "gesamt": 1469.0,
         "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
-        "begruendung": "Chartanalyse: Kurzfristige Überhitzung nach starken Rallye, Gewinnmitnahmen empfohlen. | Fundamentalanalyse: Starke Cloud-Transformation, langfristig attraktiv."
+        "begruendung": "Chartanalyse: Kurzfristige \u00dcberhitzung nach starken Rallye, Gewinnmitnahmen empfohlen. | Fundamentalanalyse: Starke Cloud-Transformation, langfristig attraktiv."
       },
       {
         "datum": "2026-07-01",
@@ -187,7 +187,7 @@
         "gewinn_verlust": -5.89,
         "gesamt": 1482.19,
         "notiz": "Strategischer Verkauf",
-        "begruendung": "Signal Verkaufen. Aktueller Trend ist Leichter Abwärtstrend. Signal lautet Verkaufen."
+        "begruendung": "Signal Verkaufen. Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Verkaufen."
       },
       {
         "datum": "2026-07-03",
