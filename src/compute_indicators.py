@@ -1,0 +1,260 @@
+"""Deterministic technical indicators from Yahoo Finance history.
+
+Replaces the LLM-hallucinated SMA/RSI/MACD/Support/Resistance fields in
+chartanalyse_ergebnisse.json with real values computed from a 1-year daily
+history. Original values are preserved with `legacy_` prefix so nothing is lost
+if the Yahoo lookup fails or returns something odd.
+
+Trend and signal fields are LEFT AS-IS — those are LLM narrative and the daily
+manager cron can rewrite them on top of the fresh numbers.
+"""
+
+import urllib.request
+import json
+import os
+import math
+import datetime
+
+repo_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard"
+chart_path = os.path.join(repo_dir, "data", "chartanalyse_ergebnisse.json")
+
+EUR_SUFFIXES = ('.DE', '.F', '.MI', '.PA', '.AS', '.BR', '.LS', '.MC', '.VI', '.HE', '.CO', '.OL', '.ST')
+
+ISIN_TO_EUR_TICKER = {
+    'US67066G1040': 'NVD.DE',   # Nvidia (XETRA: NVD)
+    'US5949181045': 'MSF.DE',   # Microsoft
+    'US02079K3059': 'ABEA.DE',  # Alphabet class A
+    'US02079K1079': 'ABEC.DE',  # Alphabet class C
+    'US88160R1014': 'TL0.DE',   # Tesla
+    'US30303M1027': 'FB2A.DE',  # Meta Platforms
+    'US0970231058': 'BCO.DE',   # Boeing
+    'GB0002634946': 'BSP.DE',   # BAE Systems
+    'GB00B63H8491': 'RRU.DE',   # Rolls-Royce Holdings
+    'US5398301094': 'LOM.DE',   # Lockheed Martin
+    'US6668071029': 'NRT.DE',   # Northrop Grumman
+    'US75513E1010': 'RTX2.DE',  # Raytheon (RTX Corp)
+    'US4586221056': 'L3H.DE',   # L3Harris
+    'US65339F1012': 'NEXT.DE',  # NextEra Energy
+    'US3696043013': 'GDX.DE',   # General Dynamics
+    'US58551A1060': 'ME71.DE',  # Meta / MercadoLibre — verify
+    'US88033G4073': 'TN0.DE',   # Teradyne
+}
+
+VALID_INSTRUMENT_TYPES = ('EQUITY', 'ETF')
+
+LEGACY_FIELDS = ('rsi_14', 'macd', 'sma_50', 'sma_200', 'unterstuetzung', 'widerstand', 'aktueller_kurs')
+
+
+def http_json(url):
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        return json.loads(resp.read())
+
+
+def resolve_eur_ticker(isin):
+    """Returns a list of candidate tickers to try (most likely first)."""
+    if isin in ISIN_TO_EUR_TICKER:
+        return [ISIN_TO_EUR_TICKER[isin]]
+
+    try:
+        data = http_json(f"https://query2.finance.yahoo.com/v1/finance/search?q={isin}")
+    except Exception as e:
+        print(f"  ! search failed for {isin}: {e}")
+        return []
+    quotes = data.get('quotes', [])
+    candidates = []
+    for q in quotes:
+        sym = q.get('symbol', '')
+        if sym and any(sym.endswith(s) for s in EUR_SUFFIXES):
+            candidates.append(sym)
+    # Also try synthetic base+DE / base+F fallbacks
+    base_ticker = quotes[0].get('symbol') if quotes else None
+    if base_ticker:
+        root = base_ticker.split('.')[0]
+        for suffix in ('.DE', '.F'):
+            candidate = f"{root}{suffix}"
+            if candidate not in candidates:
+                candidates.append(candidate)
+    return candidates
+
+
+def fetch_history(ticker):
+    """Returns (closes, currency, meta) — closes is a list of daily closes,
+    oldest first, with None removed. meta.regularMarketPrice is the latest."""
+    data = http_json(
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+        f"?interval=1d&range=1y"
+    )
+    result = data['chart']['result'][0]
+    meta = result['meta']
+    if meta.get('instrumentType') not in VALID_INSTRUMENT_TYPES:
+        return None, None, None
+    if meta.get('currency') != 'EUR':
+        return None, meta.get('currency'), None
+    indicators = result.get('indicators', {}).get('quote', [{}])[0]
+    closes_raw = indicators.get('close', [])
+    closes = [c for c in closes_raw if c is not None]
+    return closes, 'EUR', meta
+
+
+def sma(values, window):
+    if len(values) < window:
+        return None
+    return round(sum(values[-window:]) / window, 3)
+
+
+def rsi(values, period=14):
+    """Wilder's smoothed RSI."""
+    if len(values) < period + 1:
+        return None
+    gains = 0.0
+    losses = 0.0
+    for i in range(1, period + 1):
+        change = values[i] - values[i - 1]
+        if change > 0:
+            gains += change
+        else:
+            losses -= change
+    avg_gain = gains / period
+    avg_loss = losses / period
+    for i in range(period + 1, len(values)):
+        change = values[i] - values[i - 1]
+        gain = change if change > 0 else 0.0
+        loss = -change if change < 0 else 0.0
+        avg_gain = (avg_gain * (period - 1) + gain) / period
+        avg_loss = (avg_loss * (period - 1) + loss) / period
+    if avg_loss == 0:
+        return 100.0
+    rs = avg_gain / avg_loss
+    return round(100 - 100 / (1 + rs), 2)
+
+
+def ema(values, period):
+    """EMA series (same length as values, first `period-1` entries are seed)."""
+    if len(values) < period:
+        return []
+    k = 2 / (period + 1)
+    ema_val = sum(values[:period]) / period
+    out = [None] * (period - 1) + [ema_val]
+    for v in values[period:]:
+        ema_val = v * k + ema_val * (1 - k)
+        out.append(ema_val)
+    return out
+
+
+def macd_label(values):
+    """Returns 'Positiv' / 'Negativ' / 'Neutral' based on MACD line vs. signal.
+
+    MACD = EMA(12) - EMA(26); signal = EMA(9) of MACD.
+    'Neutral' if the two are within 0.5% of the last close (noise band).
+    """
+    if len(values) < 35:
+        return None
+    ema12 = ema(values, 12)
+    ema26 = ema(values, 26)
+    macd_line = [
+        (a - b) if a is not None and b is not None else None
+        for a, b in zip(ema12, ema26)
+    ]
+    macd_clean = [m for m in macd_line if m is not None]
+    if len(macd_clean) < 10:
+        return None
+    signal_line = ema(macd_clean, 9)
+    if not signal_line or signal_line[-1] is None:
+        return None
+    diff = macd_clean[-1] - signal_line[-1]
+    noise = abs(values[-1]) * 0.005
+    if diff > noise:
+        return 'Positiv'
+    if diff < -noise:
+        return 'Negativ'
+    return 'Neutral'
+
+
+def support_resistance(values, window=60):
+    """Support = min of last `window` closes; resistance = max."""
+    tail = values[-window:] if len(values) >= window else values
+    if not tail:
+        return None, None
+    return round(min(tail), 2), round(max(tail), 2)
+
+
+def compute_all(closes, latest_price):
+    """closes must be at least ~35 long for full output; missing indicators -> None."""
+    values = closes + ([latest_price] if latest_price and (not closes or closes[-1] != latest_price) else [])
+    return {
+        'aktueller_kurs': round(latest_price, 3) if latest_price else None,
+        'sma_50': sma(values, 50),
+        'sma_200': sma(values, 200),
+        'rsi_14': rsi(values, 14),
+        'macd': macd_label(values),
+        'unterstuetzung': support_resistance(values)[0],
+        'widerstand': support_resistance(values)[1],
+    }
+
+
+def process_position(item):
+    isin = item.get('isin')
+    name = item.get('wertpapier', isin)
+    if not isin:
+        return False, 'no isin'
+    candidates = resolve_eur_ticker(isin)
+    if not candidates:
+        return False, 'no ticker'
+    closes, currency, meta, ticker = None, None, None, None
+    last_err = None
+    for cand in candidates:
+        try:
+            c, cur, m = fetch_history(cand)
+        except Exception as e:
+            last_err = f'{cand}: {e}'
+            continue
+        if cur == 'EUR' and c and m and m.get('regularMarketPrice'):
+            closes, currency, meta, ticker = c, cur, m, cand
+            break
+        last_err = f'{cand}: currency={cur}'
+    if not closes:
+        return False, f'no EUR ticker worked (last: {last_err})'
+    latest = meta.get('regularMarketPrice')
+    indicators = compute_all(closes, latest)
+
+    # Preserve original values under legacy_ prefix (only once, if not already saved).
+    for field in LEGACY_FIELDS:
+        legacy_key = f'legacy_{field}'
+        if field in item and legacy_key not in item:
+            item[legacy_key] = item[field]
+
+    # Overwrite with deterministic values (skip None to keep old value if calc failed).
+    for field, value in indicators.items():
+        if value is not None:
+            item[field] = value
+
+    item['indicators_computed_at'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+    item['indicators_source'] = f'yahoo:{ticker}'
+    return True, f'ticker={ticker}, price={latest}, closes={len(closes)}'
+
+
+def main():
+    with open(chart_path, 'r', encoding='utf-8') as f:
+        chart_data = json.load(f)
+
+    ok, fail = 0, 0
+    for sector, items in chart_data.get('sektoren', {}).items():
+        for item in items:
+            success, detail = process_position(item)
+            name = item.get('wertpapier', item.get('isin', '?'))
+            if success:
+                ok += 1
+                print(f"  OK  {name}: {detail}")
+            else:
+                fail += 1
+                print(f"  !!  {name}: {detail}")
+
+    with open(chart_path, 'w', encoding='utf-8') as f:
+        json.dump(chart_data, f, indent=2, ensure_ascii=False)
+
+    print(f"\nDone. {ok} updated, {fail} skipped/failed.")
+
+
+if __name__ == '__main__':
+    main()

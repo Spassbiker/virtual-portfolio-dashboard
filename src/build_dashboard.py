@@ -76,6 +76,9 @@ html_template = """<!DOCTYPE html>
 
         .perfect-setup { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 3px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; margin-left: 6px; }
         .in-depot { background: #17a2b8; color: white; padding: 3px 8px; border-radius: 12px; font-size: 0.75em; margin-left: 6px; }
+        .data-warning { background: #f8d7da; color: #721c24; padding: 3px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; margin-left: 6px; cursor: help; border: 1px solid #f5c6cb; }
+        tr.inconsistent-row { background: #fdf5f5; }
+        tr.inconsistent-row:hover { background: #fbecec; }
 
         .weights-info { background: #e7f3ff; border-left: 4px solid #0066cc; padding: 10px 15px; margin-bottom: 20px; border-radius: 4px; font-size: 0.9em; color: #004085; }
         .weights-info strong { color: #002752; }
@@ -258,6 +261,52 @@ html_template = """<!DOCTYPE html>
             return null;
         }
 
+        // Detects LLM-halluzinated or stale technical indicators.
+        // Returns list of warning strings; empty list means data looks consistent.
+        function dataConsistency(f, c) {
+            const warnings = [];
+            const price = numOrNull((c && c.aktueller_kurs) || (f && f.aktueller_kurs));
+            const sma50 = numOrNull(c && c.sma_50);
+            const sma200 = numOrNull(c && c.sma_200);
+            const support = numOrNull(c && c.unterstuetzung);
+            const resistance = numOrNull(c && c.widerstand);
+
+            // 1. SMA sanity: price should be within +/- 30% of SMAs.
+            if (price !== null && sma50 !== null && sma50 > 0) {
+                const dev = Math.abs(price - sma50) / sma50;
+                if (dev > 0.30) warnings.push(`SMA50 ${sma50} weit weg von Kurs ${price} (${Math.round(dev*100)}% Abweichung)`);
+            }
+            if (price !== null && sma200 !== null && sma200 > 0) {
+                const dev = Math.abs(price - sma200) / sma200;
+                if (dev > 0.30) warnings.push(`SMA200 ${sma200} weit weg von Kurs ${price} (${Math.round(dev*100)}% Abweichung)`);
+            }
+            // 2. Support/Resistance sanity: price should be between (loose bracket allowed).
+            if (price !== null && support !== null && support > 0 && price < support * 0.5) {
+                warnings.push(`Kurs ${price} weit unter Unterstützung ${support}`);
+            }
+            if (price !== null && resistance !== null && resistance > 0 && price > resistance * 2) {
+                warnings.push(`Kurs ${price} weit über Widerstand ${resistance}`);
+            }
+            // 3. Trend/Kurs-Konsistenz: Aufwärtstrend behauptet, aber Kurs unter SMA_50.
+            const trend = (c && c.trend || '').toLowerCase();
+            if (trend.includes('aufw') && price !== null && sma50 !== null && sma50 > 0 && price < sma50 * 0.85) {
+                warnings.push(`"Aufwärtstrend" behauptet, aber Kurs deutlich unter SMA50`);
+            }
+            if (trend.includes('abw') && price !== null && sma50 !== null && sma50 > 0 && price > sma50 * 1.15) {
+                warnings.push(`"Abwärtstrend" behauptet, aber Kurs deutlich über SMA50`);
+            }
+            // 4. Text-Sentiment vs. Signal-Konflikt: Begründung negativ, aber Signal Kaufen.
+            const bruendungF = ((f && f.begruendung) || '').toLowerCase();
+            const bruendungC = ((c && c.begruendung) || '').toLowerCase();
+            const signal = ((c && (c.signal || c.empfehlung)) || (f && f.empfehlung) || '').toLowerCase();
+            const negPatterns = ['abwärts', 'abwaerts', 'sinkflug', 'einbruch', 'keine wende', 'keine bodenbildung', 'verlust', 'abschwung', 'bearish', 'schwach'];
+            const hasNeg = negPatterns.some(p => bruendungF.includes(p) || bruendungC.includes(p));
+            if (hasNeg && signal.includes('kauf')) {
+                warnings.push(`Begründung klingt negativ, aber Signal "Kaufen"`);
+            }
+            return warnings;
+        }
+
         function perfectSetupScore(f, c) {
             // Perfect if: Bewertung=Attraktiv AND Signal=Kaufen AND RSI in [30, 55] AND Trend Aufwärts
             let s = 0, n = 0;
@@ -274,6 +323,7 @@ html_template = """<!DOCTYPE html>
         }
 
         function isPerfectSetup(f, c) {
+            if (dataConsistency(f, c).length > 0) return false;
             const bewert = (f && f.bewertung || '').toLowerCase();
             const signal = (c && (c.signal || c.empfehlung) || '').toLowerCase();
             const rsi = numOrNull(c && c.rsi_14);
@@ -287,16 +337,24 @@ html_template = """<!DOCTYPE html>
             const fs = fundamentalScore(f);
             const cs = chartScore(c);
             const rs = riskScore(f && f.risiko);
-            const ps = perfectSetupScore(f, c);
+            let ps = perfectSetupScore(f, c);
+
+            const warnings = dataConsistency(f, c);
+            const inconsistent = warnings.length > 0;
+
+            // If chart data is inconsistent, penalize its trust: halve chart score, kill Perfect Setup.
+            let chartAdj = cs.score;
+            if (inconsistent && chartAdj !== null) chartAdj = chartAdj * 0.5;
+            if (inconsistent) ps = 0;
 
             let totalW = 0, sum = 0;
-            if (fs.score !== null) { sum += WEIGHTS.fundamental * fs.score; totalW += WEIGHTS.fundamental; }
-            if (cs.score !== null) { sum += WEIGHTS.chart * cs.score; totalW += WEIGHTS.chart; }
-            if (rs !== null)       { sum += WEIGHTS.risiko * rs;      totalW += WEIGHTS.risiko; }
-            if (ps !== null)       { sum += WEIGHTS.perfect * ps;     totalW += WEIGHTS.perfect; }
+            if (fs.score !== null)  { sum += WEIGHTS.fundamental * fs.score; totalW += WEIGHTS.fundamental; }
+            if (chartAdj !== null)  { sum += WEIGHTS.chart * chartAdj;       totalW += WEIGHTS.chart; }
+            if (rs !== null)        { sum += WEIGHTS.risiko * rs;            totalW += WEIGHTS.risiko; }
+            if (ps !== null)        { sum += WEIGHTS.perfect * ps;           totalW += WEIGHTS.perfect; }
 
             const score = totalW > 0 ? sum / totalW : null;
-            return { composite: score, fund: fs.score, chart: cs.score, risiko: rs, perfect: ps, fundParts: fs.parts, chartParts: cs.parts };
+            return { composite: score, fund: fs.score, chart: chartAdj, chartRaw: cs.score, risiko: rs, perfect: ps, fundParts: fs.parts, chartParts: cs.parts, warnings, inconsistent };
         }
 
         function scoreClass(s) {
@@ -405,7 +463,8 @@ html_template = """<!DOCTYPE html>
             minScore: 0,
             onlyPerfect: false,
             excludeDepot: false,
-            onlyKaufen: false
+            onlyKaufen: false,
+            hideInconsistent: false
         };
 
         function renderRankingTab() {
@@ -417,6 +476,8 @@ html_template = """<!DOCTYPE html>
                 <div class="weights-info">
                     <strong>Composite-Score</strong> — Gewichtung: Fundamental 40 % · Chart 30 % · Risiko 15 % · Perfect-Setup-Bonus 15 %.
                     Perfect Setup: Bewertung <em>Attraktiv</em> + Signal <em>Kaufen</em> + RSI 30–55 + Trend <em>Aufwärts</em>.
+                    <br>
+                    <strong>⚠️ Daten prüfen</strong> — Sanity-Check erkennt inkonsistente Analyse-Daten (z. B. Kurs weit weg von SMA, Aufwärtstrend bei fallendem Kurs, negative Begründung bei Kaufen-Signal). Bei Warnung wird Chart-Score halbiert und Perfect Setup entfernt.
                 </div>
                 <div class="filter-bar">
                     <div class="filter-group">
@@ -437,6 +498,7 @@ html_template = """<!DOCTYPE html>
                     </div>
                     <div class="filter-group">
                         <label><input type="checkbox" id="f-nodepot"${uiState.excludeDepot?' checked':''}> nicht im Depot</label>
+                        <label><input type="checkbox" id="f-noinconsistent"${uiState.hideInconsistent?' checked':''}> ⚠️ Inkonsistente verstecken</label>
                         <button class="filter-reset" id="f-reset">Filter zurücksetzen</button>
                     </div>
                 </div>
@@ -479,8 +541,9 @@ html_template = """<!DOCTYPE html>
             document.getElementById('f-perfect').addEventListener('change', e => { uiState.onlyPerfect = e.target.checked; refreshRankingBody(); });
             document.getElementById('f-kaufen').addEventListener('change', e => { uiState.onlyKaufen = e.target.checked; refreshRankingBody(); });
             document.getElementById('f-nodepot').addEventListener('change', e => { uiState.excludeDepot = e.target.checked; refreshRankingBody(); });
+            document.getElementById('f-noinconsistent').addEventListener('change', e => { uiState.hideInconsistent = e.target.checked; refreshRankingBody(); });
             document.getElementById('f-reset').addEventListener('click', () => {
-                uiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', risiko: 'Alle', minScore: 0, onlyPerfect: false, excludeDepot: false, onlyKaufen: false };
+                uiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', risiko: 'Alle', minScore: 0, onlyPerfect: false, excludeDepot: false, onlyKaufen: false, hideInconsistent: false };
                 renderRankingTab();
             });
             document.querySelectorAll('#ranking-table th.sortable').forEach(th => {
@@ -506,6 +569,7 @@ html_template = """<!DOCTYPE html>
                 const sig = ((r.c && (r.c.signal || r.c.empfehlung)) || '').toLowerCase();
                 return sig.includes('kauf');
             });
+            if (uiState.hideInconsistent) rows = rows.filter(r => !(r.scores.warnings && r.scores.warnings.length));
 
             // sort
             const sortKey = uiState.sort;
@@ -534,11 +598,17 @@ html_template = """<!DOCTYPE html>
 
             const body = rows.map(r => {
                 const kurs = (r.c && r.c.aktueller_kurs) || r.f.aktueller_kurs;
-                const badges = (r.perfect ? '<span class="perfect-setup" title="Fundamental Attraktiv + Signal Kaufen + RSI 30–55 + Aufwärtstrend">⭐ Perfect</span>' : '')
+                const warnings = (r.scores.warnings || []);
+                const warnBadge = warnings.length
+                    ? `<span class="data-warning" title="${warnings.join('\n').replace(/"/g,'&quot;')}">⚠️ Daten prüfen</span>`
+                    : '';
+                const badges = warnBadge
+                             + (r.perfect ? '<span class="perfect-setup" title="Fundamental Attraktiv + Signal Kaufen + RSI 30–55 + Aufwärtstrend">⭐ Perfect</span>' : '')
                              + (r.inDepot ? '<span class="in-depot" title="bereits im Depot">Im Depot</span>' : '');
                 const signal = (r.c && (r.c.signal || r.c.empfehlung)) || '-';
                 const begruendung = ((r.f && r.f.begruendung) || '') + ((r.c && r.c.begruendung) ? ' · ' + r.c.begruendung : '');
-                return `<tr>
+                const rowCls = warnings.length ? ' class="inconsistent-row"' : '';
+                return `<tr${rowCls}>
                     <td><strong>${r.wertpapier}</strong>${badges}<br><small style="color:#666">${r.isin}</small></td>
                     <td>${r.sektor}</td>
                     <td>${scoreCell(r.scores.composite)}</td>
