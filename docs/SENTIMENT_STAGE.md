@@ -8,16 +8,24 @@ Steuern, Ordergröße) bleibt zu 100 % deterministisch in Python.
 ## Pipeline-Reihenfolge
 
 ```
-1. update_prices.py        Live-Kurse
-2. compute_indicators.py   RSI/MACD/SMA (deterministisch)
-3. (Fundamentalanalyse)    funda-Kennzahlen
-4. fetch_news.py           Schlagzeilen  ->  data/news_raw.json     [Python, kein LLM]
-5. AGENT-SCHRITT           news_raw.json ->  data/sentiment_scores.json  [LLM]
-6. update_depot.py         liest sentiment_scores.json, handelt        [Python]
+1. update_prices.py            Live-Kurse
+2. compute_indicators.py       RSI/MACD/SMA (deterministisch)
+3. (Fundamentalanalyse)        funda-Kennzahlen
+4. fetch_news.py               Schlagzeilen  ->  data/news_raw.json          [Python]
+5. AGENT-SCHRITT               news_raw.json ->  data/sentiment_scores.json  [LLM]
+6. update_depot.py --recommend Score+Sentiment+Veto -> data/trade_recommendations.json  [Python, ändert Depot NICHT]
+7. AGENT-ENTSCHEIDUNG          entscheidet autonom, bucht Trades -> data/depot_status.json  [LLM]
 ```
 
-Schritt 5 ist der einzige LLM-Schritt. Fehlt `sentiment_scores.json`, läuft
-`update_depot.py` unverändert rein deterministisch weiter (Rückwärtskompatibel).
+Schritte 5 und 7 sind die LLM-Schritte. Das regelbasierte System liefert in
+Schritt 6 nur einen **Vorschlag** (`--recommend`) — die finale Kauf-/
+Verkaufsentscheidung trifft der autonome Portfoliomanager-Agent in Schritt 7.
+Er darf den Vorschlägen folgen, abweichen oder eigene Trades ergänzen.
+
+Fehlt `sentiment_scores.json`, rechnet Schritt 6 rein deterministisch
+(Chart + Funda) weiter — nichts bricht. Wer den Vorschlag 1:1 buchen will,
+kann `update_depot.py` ohne `--recommend` laufen lassen (deterministische
+Ausführung mit korrekter Gebühren-/Steuerrechnung).
 
 ## Datenvertrag `data/sentiment_scores.json`
 
