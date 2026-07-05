@@ -19,6 +19,35 @@ with open(os.path.join(base_dir, "chartanalyse_ergebnisse.json"), "r") as f:
 with open(os.path.join(base_dir, "fundamentalanalyse_ergebnisse.json"), "r") as f:
     funda_data = json.load(f)
 
+# KI-Sentiment (Stufe 1 + 2), vom Portfoliomanager-Agent erzeugt.
+# Optional: fehlt die Datei, läuft alles rein deterministisch weiter.
+# Vertrag:
+#   { "generated_at": "...",
+#     "scores": { "<ISIN>": {"sentiment_score": int(-3..3),
+#                            "veto": bool, "begruendung": str} } }
+sentiment_data = {"scores": {}}
+sentiment_path = os.path.join(base_dir, "sentiment_scores.json")
+if os.path.exists(sentiment_path):
+    try:
+        with open(sentiment_path, "r", encoding="utf-8") as f:
+            sentiment_data = json.load(f)
+    except Exception:
+        sentiment_data = {"scores": {}}
+
+SENTIMENT_MIN, SENTIMENT_MAX = -3, 3
+
+def get_sentiment(isin):
+    """Returns (score, veto, begruendung) — geklemmt und defensiv."""
+    entry = sentiment_data.get("scores", {}).get(isin)
+    if not entry:
+        return 0, False, ""
+    try:
+        s = int(round(float(entry.get("sentiment_score", 0))))
+    except (TypeError, ValueError):
+        s = 0
+    s = max(SENTIMENT_MIN, min(SENTIMENT_MAX, s))
+    return s, bool(entry.get("veto", False)), entry.get("begruendung", "")
+
 # ==========================================
 # SCORING-SYSTEM
 # ==========================================
@@ -142,19 +171,26 @@ def compute_funda_score(isin):
 def total_score(isin):
     cs, cd = compute_chart_score(isin)
     fs, fd = compute_funda_score(isin)
-    return cs + fs, cs, cd, fs, fd
+    ss, _, _ = get_sentiment(isin)
+    sd = [f"KI-Sentiment{'+' if ss >= 0 else ''}{ss}"] if ss != 0 else []
+    return cs + fs + ss, cs, cd, fs, fd, ss, sd
 
 def score_reason(isin):
-    ts, cs, cd, fs, fd = total_score(isin)
+    ts, cs, cd, fs, fd, ss, sd = total_score(isin)
     c_item = get_chart_item(isin)
     f_item = get_funda_item(isin)
     c_text = c_item.get("begruendung", "") if c_item else ""
     f_text = f_item.get("begruendung", "") if f_item else ""
-    indicators = ", ".join(cd + fd)
-    return (
-        f"Score={ts} (Chart={cs}: {', '.join(cd)}; Funda={fs}: {', '.join(fd)}) | "
-        f"Chart: {c_text} | Funda: {f_text}"
+    _, _, s_text = get_sentiment(isin)
+    reason = (
+        f"Score={ts} (Chart={cs}: {', '.join(cd)}; Funda={fs}: {', '.join(fd)}"
     )
+    if ss != 0:
+        reason += f"; KI-Sentiment={ss}"
+    reason += f") | Chart: {c_text} | Funda: {f_text}"
+    if s_text:
+        reason += f" | KI: {s_text}"
+    return reason
 
 def budget_for_score(ts):
     """Positionsgröße proportional zum Score: 1000€ Basis + 100€ je Punkt über Schwellwert, max 2500€."""
@@ -224,7 +260,12 @@ for isin in all_isins:
     f_emp = (f_item.get("empfehlung") or "").lower()
     if "verkauf" in c_emp or "verkauf" in f_emp:
         continue
-    ts, cs, cd, fs, fd = total_score(isin)
+    # Stufe 2: KI-Veto blockiert Neukäufe (kann nie welche erzeugen).
+    _, veto, veto_reason = get_sentiment(isin)
+    if veto:
+        summary.append(f"KI-Veto: Kauf von {c_item.get('wertpapier', isin)} ({isin}) blockiert. {veto_reason}")
+        continue
+    ts = total_score(isin)[0]
     if ts >= BUY_THRESHOLD:
         scored_candidates.append((isin, ts))
 
@@ -254,7 +295,7 @@ for p in positions:
     f_item = get_funda_item(isin)
     c_emp = c_item.get("empfehlung", "").lower() if c_item else ""
     f_emp = (f_item.get("empfehlung") or "").lower() if f_item else ""
-    ts, _, _, _, _ = total_score(isin)
+    ts = total_score(isin)[0]
 
     current_price = live_prices.get(isin) or get_live_price(isin) or p.get("boersenkurs", 0)
     if current_price:

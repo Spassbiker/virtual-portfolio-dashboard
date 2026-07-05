@@ -1,0 +1,1756 @@
+{
+  "generated_at": "2026-07-05 09:41",
+  "items": {
+    "DE0005557508": {
+      "name": "Dt. Telekom",
+      "ticker": "DTE.DE",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "DE0005936124": {
+      "name": "OHB",
+      "ticker": "OHB.DE",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "DE0006095003": {
+      "name": "Encavis",
+      "ticker": "ECV.DE",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "DE0006231004": {
+      "name": "Infineon",
+      "ticker": "IFX.DE",
+      "headlines": [
+        {
+          "title": "European Chip Stocks Rebound After Thursday Selloff",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/84b46356-9090-3b9d-bca6-7bd6b2833051/european-chip-stocks-rebound.html"
+        },
+        {
+          "title": "Infineon completes €570m ams Osram sensor portfolio acquisition",
+          "publisher": "Just Auto",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/m/7d39a8d4-7f31-31e4-b0a8-9ef8d63d9d2a/infineon-completes-%E2%82%AC570m-ams.html"
+        },
+        {
+          "title": "Innoscience Secures Removal of Court-Enjoined Infineon GaN Products from Display at electronica China 2026",
+          "publisher": "PR Newswire",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/technology/articles/innoscience-secures-removal-court-enjoined-150900559.html"
+        },
+        {
+          "title": "Infineon opens the world's largest fab for power semiconductors and analog/mixed-signal technologies in Dresden",
+          "publisher": "PR Newswire",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/technology/articles/infineon-opens-worlds-largest-fab-142300982.html"
+        },
+        {
+          "title": "Goldman’s Top Strategist Says Europe Is Quietly Keeping Pace With the S&P 500. Here’s the AI Spillover Nobody’s Watching",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/m/0c67c31d-d4ca-3e5a-be23-92edb8d47d2c/goldman%E2%80%99s-top-strategist-says.html"
+        },
+        {
+          "title": "Germany's Infineon opens major chip plant as EU seeks tech autonomy",
+          "publisher": "AFP",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/technology/articles/germanys-infineon-opens-major-chip-111735721.html"
+        }
+      ],
+      "error": null
+    },
+    "DE0007037129": {
+      "name": "RWE",
+      "ticker": "RWE.DE",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "DE0007164600": {
+      "name": "SAP",
+      "ticker": "SAP.DE",
+      "headlines": [
+        {
+          "title": "Is SAP SE (SAP) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sap-se-sap-good-stock-233412549.html"
+        },
+        {
+          "title": "SAP (XTRA:SAP) Stock Fair Value Falls As Analysts Split On AI And Valuation",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sap-xtra-sap-stock-fair-181028748.html"
+        },
+        {
+          "title": "Why SAP (XTRA:SAP) Is Up 7.1% After AI-Focused Overhaul And New Consumption-Based Pricing",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/technology/ai/articles/why-sap-xtra-sap-7-171352512.html"
+        },
+        {
+          "title": "SAP Celebrates America's 250th with Investment in the Next Generation",
+          "publisher": "PR Newswire",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/small-business/articles/sap-celebrates-americas-250th-investment-160000769.html"
+        },
+        {
+          "title": "GWRE Stock Looks Stronger as Cash Flow Growth Backs Execution",
+          "publisher": "Zacks",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/gwre-stock-looks-stronger-cash-132600720.html"
+        },
+        {
+          "title": "Guidewire Growth Trends Show How AI and Services Are Evolving",
+          "publisher": "Zacks",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/technology/ai/articles/guidewire-growth-trends-show-ai-132500477.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000A0D6554": {
+      "name": "Nordex SE",
+      "ticker": "NDX1.DE",
+      "headlines": [
+        {
+          "title": "The Nordex Group Receives New Orders Totalling More Than 197 MW From ENOVA and BMR in Germany",
+          "publisher": "NewMediaWire",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/energy/articles/nordex-group-receives-orders-totalling-212336078.html"
+        },
+        {
+          "title": "The Nordex Group receives new orders totalling more than 197 MW in Germany",
+          "publisher": "Energy Global",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/m/475a5e9e-c2f3-307d-95c5-99dc3fe74246/the-nordex-group-receives-new.html"
+        },
+        {
+          "title": "Nordex Group scores 325 MW order in the US",
+          "publisher": "PR Newswire",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/energy/articles/nordex-group-scores-325-mw-063600580.html"
+        },
+        {
+          "title": "Nordex Group receives 112 MW order from NeXtWind for wind farm in Germany",
+          "publisher": "Energy Global",
+          "published": "2026-06-24",
+          "link": "https://finance.yahoo.com/m/2e3fbef9-20ed-3156-b182-2db9497bc1cf/nordex-group-receives-112-mw.html"
+        },
+        {
+          "title": "Nordex Group secures new US orders totalling 484 MW",
+          "publisher": "Energy Global",
+          "published": "2026-06-22",
+          "link": "https://finance.yahoo.com/m/2d425d5f-25a1-366e-9b72-58e838fa822d/nordex-group-secures-new-us.html"
+        },
+        {
+          "title": "If EPS Growth Is Important To You, Nordex (ETR:NDX1) Presents An Opportunity",
+          "publisher": "Simply Wall St.",
+          "published": "2026-06-10",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/eps-growth-important-nordex-etr-074048927.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000A0D9PT0": {
+      "name": "MTU Aero Engines",
+      "ticker": "MTX.DE",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000A0DJ6J9": {
+      "name": "SMA Solar",
+      "ticker": "S92.DE",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000A0WMPJ6": {
+      "name": "Aixtron SE",
+      "ticker": "AIXA.DE",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000A2E4K43": {
+      "name": "Delivery Hero",
+      "ticker": "DHER.DE",
+      "headlines": [
+        {
+          "title": "Delivery Hero SE Concludes 2026 Annual General Meeting; All Proposed Resolutions Approved",
+          "publisher": "NewMediaWire",
+          "published": "2026-06-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/delivery-hero-se-concludes-2026-205524412.html"
+        },
+        {
+          "title": "Forget SpaceX: Redditors Think This Asian Stock Has 10X Potential",
+          "publisher": "Insider Monkey",
+          "published": "2026-06-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/forget-spacex-redditors-think-asian-194900562.html"
+        },
+        {
+          "title": "Market Chatter: Uber Explores Delivery Hero Asset Sales to Ease Takeover Approval",
+          "publisher": "MT Newswires",
+          "published": "2026-06-12",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-uber-explores-delivery-143544747.html"
+        },
+        {
+          "title": "Update: Market Chatter: Uber's Delivery Hero Pursuit Faces Challenge From Saudi Startup",
+          "publisher": "MT Newswires",
+          "published": "2026-06-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-uber-apos-delivery-164041992.html"
+        },
+        {
+          "title": "Uber Delivery Hero Dispute Puts Expansion And Valuation Thesis Under Scrutiny",
+          "publisher": "Simply Wall St.",
+          "published": "2026-06-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/uber-delivery-hero-dispute-puts-161122493.html"
+        },
+        {
+          "title": "Market Chatter: Uber's Delivery Hero Pursuit Faces Challenge From Saudi Startup",
+          "publisher": "MT Newswires",
+          "published": "2026-06-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-uber-apos-delivery-141150558.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000A2YN900": {
+      "name": "TeamViewer",
+      "ticker": "TMV.DE",
+      "headlines": [
+        {
+          "title": "TeamViewer Tops Frost & Sullivan's 2026 AR-Centric Augmented Connected Worker Rankings",
+          "publisher": "PR Newswire",
+          "published": "2026-07-01",
+          "link": "https://finance.yahoo.com/technology/ai/articles/teamviewer-tops-frost-sullivans-2026-120000146.html"
+        },
+        {
+          "title": "Assessing TeamViewer (XTRA:TMV) Valuation After Recent Share Price Momentum And Fair Value Gap",
+          "publisher": "Simply Wall St.",
+          "published": "2026-06-10",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/assessing-teamviewer-xtra-tmv-valuation-211734981.html"
+        },
+        {
+          "title": "/C O R R E C T I O N -- TeamViewer Germany GmbH/",
+          "publisher": "PR Newswire",
+          "published": "2026-06-10",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/c-o-r-r-e-150000303.html"
+        },
+        {
+          "title": "TeamViewer Named a Leader in the Gartner® Magic Quadrant™ for Digital Employee Experience (DEX) Management Tools 2026 for the Third Consecutive Year",
+          "publisher": "PR Newswire",
+          "published": "2026-06-10",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/teamviewer-named-leader-gartner-magic-150000889.html"
+        },
+        {
+          "title": "TeamViewer Achieves FedRAMP \"In Process\" Designation for DEX Platform",
+          "publisher": "CNW Group",
+          "published": "2026-06-09",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/teamviewer-achieves-fedramp-process-designation-120000554.html"
+        },
+        {
+          "title": "TeamViewer brings Windows AI API to Assist AR for clearer, smarter remote assistance to frontline workers",
+          "publisher": "PR Newswire",
+          "published": "2026-06-03",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/teamviewer-brings-windows-ai-api-130000028.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000ENAG999": {
+      "name": "E.ON",
+      "ticker": "EOAN.DE",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000ENER6Y0": {
+      "name": "Siemens Energy",
+      "ticker": "ENR.DE",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000HAG0005": {
+      "name": "Hensoldt",
+      "ticker": "HAG.DE",
+      "headlines": [
+        {
+          "title": "European Stocks That May Be Trading Below Their Estimated Value In June 2026",
+          "publisher": "Simply Wall St.",
+          "published": "2026-06-12",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/european-stocks-may-trading-below-103801478.html"
+        },
+        {
+          "title": "We Like The Quality Of Hensoldt's (ETR:HAG) Earnings",
+          "publisher": "Simply Wall St.",
+          "published": "2026-05-13",
+          "link": "https://finance.yahoo.com/news/quality-hensoldts-etr-hag-earnings-053134245.html"
+        },
+        {
+          "title": "Hensoldt AG (ETR:HAG) First-Quarter Results: Here's What Analysts Are Forecasting For This Year",
+          "publisher": "Simply Wall St.",
+          "published": "2026-05-09",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/hensoldt-ag-etr-hag-first-083301427.html"
+        },
+        {
+          "title": "European Value Stocks Priced Below Estimated Worth In May 2026",
+          "publisher": "Simply Wall St.",
+          "published": "2026-05-04",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/european-value-stocks-priced-below-053807661.html"
+        }
+      ],
+      "error": null
+    },
+    "FR0000073272": {
+      "name": "Safran",
+      "ticker": "SAF.PA",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "FR0000121329": {
+      "name": "Thales SA",
+      "ticker": "HO.PA",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "FR0010221234": {
+      "name": "Eutelsat",
+      "ticker": "ETL.PA",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "FR0014004L86": {
+      "name": "Dassault Aviation",
+      "ticker": "AM.PA",
+      "headlines": [
+        {
+          "title": "Dassault Aviation: Total number of shares and voting rights - 30 06 26",
+          "publisher": "GlobeNewswire",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/dassault-aviation-total-number-shares-133500888.html"
+        },
+        {
+          "title": "1 Healthcare Stock with Impressive Fundamentals and 2 We Turn Down",
+          "publisher": "StockStory",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/healthcare/articles/1-healthcare-stock-impressive-fundamentals-084424123.html"
+        },
+        {
+          "title": "1 Momentum  Stock with Impressive Fundamentals and 2 We Find Risky",
+          "publisher": "StockStory",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/1-momentum-stock-impressive-fundamentals-082545228.html"
+        },
+        {
+          "title": "2 Profitable Stocks to Target This Week and 1 We Turn Down",
+          "publisher": "StockStory",
+          "published": "2026-06-26",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/2-profitable-stocks-target-week-103225669.html"
+        },
+        {
+          "title": "The Bull Case For AMN Healthcare Services (AMN) Could Change Following New AI Talent Partnership And C-Suite Hires",
+          "publisher": "Simply Wall St.",
+          "published": "2026-06-26",
+          "link": "https://finance.yahoo.com/healthcare/articles/bull-case-amn-healthcare-services-070857848.html"
+        },
+        {
+          "title": "AMN Healthcare (AMN) Partners With Brightfield And Adds Two Key Executives",
+          "publisher": "Simply Wall St.",
+          "published": "2026-06-25",
+          "link": "https://finance.yahoo.com/healthcare/articles/amn-healthcare-amn-partners-brightfield-190608040.html"
+        }
+      ],
+      "error": null
+    },
+    "GB0002634946": {
+      "name": "BAE Systems",
+      "ticker": "BA.L",
+      "headlines": [
+        {
+          "title": "U.K., Italian, Japanese Fighter Jet Venture Wins $6.14 Billion Contract",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/a74b46d3-c5c0-3c78-b301-27e55220dd5d/u.k.%2C-italian%2C-japanese.html"
+        },
+        {
+          "title": "Is BAE Systems (LSE:BA.) Still A Bargain After Its 324% Run?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/bae-systems-lse-ba-still-070934228.html"
+        },
+        {
+          "title": "Defense ETFs Under Spotlight as UK Unveils $20B Military Overhaul",
+          "publisher": "Zacks",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/economy/policy/articles/defense-etfs-under-spotlight-uk-181100561.html"
+        },
+        {
+          "title": "Is General Dynamics Expanding Its Presence in the Submarine Market?",
+          "publisher": "Zacks",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-expanding-presence-submarine-142100364.html"
+        },
+        {
+          "title": "Allison Transmission (ALSN) Soars 4.2%: Is Further Upside Left in the Stock?",
+          "publisher": "Zacks",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/allison-transmission-alsn-soars-4-100100843.html"
+        },
+        {
+          "title": "Is HII Expanding Its Presence in the Naval Sustainment Market?",
+          "publisher": "Zacks",
+          "published": "2026-07-01",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/hii-expanding-presence-naval-sustainment-155500629.html"
+        }
+      ],
+      "error": null
+    },
+    "GB00B63H8491": {
+      "name": "Rolls-Royce",
+      "ticker": "RRU.DE",
+      "headlines": [
+        {
+          "title": "Rolls-Royce (LSE:RR.) Adds New Directors And Teams Up With Bombardier On Engine Monitoring",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-lse-rr-adds-171437421.html"
+        },
+        {
+          "title": "Rolls Royce (LSE:RR.) Stock Looks Like A Bargain On Earnings But Fully Priced On Broader Checks",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-lse-rr-stock-151117449.html"
+        },
+        {
+          "title": "Defense ETFs Under Spotlight as UK Unveils $20B Military Overhaul",
+          "publisher": "Zacks",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/economy/policy/articles/defense-etfs-under-spotlight-uk-181100561.html"
+        },
+        {
+          "title": "Small-Engine Makers Gain Big Momentum in Data Centers",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-01",
+          "link": "https://finance.yahoo.com/m/9396ddb1-d8f3-34bc-919d-eb12b47786bc/small-engine-makers-gain-big.html"
+        },
+        {
+          "title": "Bombardier, Rolls-Royce Upgrade Aircraft Health Monitoring System",
+          "publisher": "MT Newswires",
+          "published": "2026-06-25",
+          "link": "https://finance.yahoo.com/technology/articles/bombardier-rolls-royce-upgrade-aircraft-120754236.html"
+        },
+        {
+          "title": "Bombardier and Rolls-Royce Elevate Aircraft Health Monitoring for New and In-Service Global 5500 and 6500 Aircraft, Upgrade Now Available Across Bombardier’s Service Centre Network",
+          "publisher": "GlobeNewswire",
+          "published": "2026-06-25",
+          "link": "https://finance.yahoo.com/technology/articles/bombardier-rolls-royce-elevate-aircraft-113000694.html"
+        }
+      ],
+      "error": null
+    },
+    "IL0010825102": {
+      "name": "Gilat Satellite",
+      "ticker": "GILT",
+      "headlines": [
+        {
+          "title": "Gilat Satellite Networks (GILT) Is Up 8.8% After Winning Custom European Defense SATCOM Order - What's Changed",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-01",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/gilat-satellite-networks-gilt-8-091556239.html"
+        },
+        {
+          "title": "Iridium (IRDM) Soars 25.4%: Is Further Upside Left in the Stock?",
+          "publisher": "Zacks",
+          "published": "2026-06-30",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/iridium-irdm-soars-25-4-114400723.html"
+        },
+        {
+          "title": "Comtech Telecom (CMTL) to Sell S&S Segment to Gilat Satellite Networks for $157.5M",
+          "publisher": "Insider Monkey",
+          "published": "2026-06-30",
+          "link": "https://finance.yahoo.com/technology/articles/comtech-telecom-cmtl-sell-segment-111609132.html"
+        },
+        {
+          "title": "Gilat Satellite Receives $43 Million of Additional Sidewinder Orders",
+          "publisher": "MT Newswires",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/technology/articles/gilat-satellite-receives-43-million-141740655.html"
+        },
+        {
+          "title": "Gilat Receives $43 Million of Additional Sidewinder ESA Orders from Leading In-flight Connectivity Service Provider",
+          "publisher": "GlobeNewswire",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/technology/articles/gilat-receives-43-million-additional-110400977.html"
+        },
+        {
+          "title": "Gilat Receives Satcom Terminal Order From European Defense Ministry",
+          "publisher": "MT Newswires",
+          "published": "2026-06-24",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/gilat-receives-satcom-terminal-order-112218684.html"
+        }
+      ],
+      "error": null
+    },
+    "IT0003856405": {
+      "name": "Leonardo SpA",
+      "ticker": "LDO.MI",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "LU0088087324": {
+      "name": "SES",
+      "ticker": "SESG.PA",
+      "headlines": [
+        {
+          "title": "--SES AI Added to Russell 3000 Index Effective Monday",
+          "publisher": "MT Newswires",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ses-ai-added-russell-3000-191411006.html"
+        },
+        {
+          "title": "SES AI Announces Inclusion in Russell 3000®Index",
+          "publisher": "Business Wire",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ses-ai-announces-inclusion-russell-110000327.html"
+        },
+        {
+          "title": "SueWallSt Reminds SES AI Corporation Investors of the Pending Class Action Lawsuit With a Lead Plaintiff Deadline of June 26, 2026 - SES",
+          "publisher": "PR Newswire",
+          "published": "2026-06-18",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/suewallst-reminds-ses-ai-corporation-140900254.html"
+        },
+        {
+          "title": "Stonegate Initiates Coverage on SES AI Corp. (SES)",
+          "publisher": "TMX Newsfile",
+          "published": "2026-06-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/stonegate-initiates-coverage-ses-ai-134600123.html"
+        },
+        {
+          "title": "NeoVolta Appoints Jing Nealis as Chief Financial Officer",
+          "publisher": "GlobeNewswire",
+          "published": "2026-05-14",
+          "link": "https://finance.yahoo.com/sectors/energy/articles/neovolta-appoints-jing-nealis-chief-203000121.html"
+        },
+        {
+          "title": "Spotlight On Penny Stocks To Consider In May 2026",
+          "publisher": "Simply Wall St.",
+          "published": "2026-05-14",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/spotlight-penny-stocks-consider-may-180504780.html"
+        }
+      ],
+      "error": null
+    },
+    "NL0000235190": {
+      "name": "Airbus",
+      "ticker": "AIR.PA",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "NL0010273215": {
+      "name": "ASML",
+      "ticker": "ASML.AS",
+      "headlines": [
+        {
+          "title": "Hovering Around $1,800 a Share, Is an ASML Stock Split Imminent?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/8e8834f8-4f58-3b03-b4ad-86df7de01223/hovering-around-%241%2C800-a.html"
+        },
+        {
+          "title": "What is Mistral AI? Everything to know about the OpenAI competitor",
+          "publisher": "TechCrunch",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/technology/ai/articles/mistral-ai-everything-know-openai-194318445.html"
+        },
+        {
+          "title": "Tech Stocks Deliver Boost to Global Markets as Rate-Hike Worries Fade",
+          "publisher": "Barrons.com",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/1c4aa6c5-de92-3b43-b5c1-ae2daa1892a5/tech-stocks-deliver-boost-to.html"
+        },
+        {
+          "title": "NEVIR Dutch IR awards 2026 winners announced",
+          "publisher": "GlobeNewswire",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/nevir-dutch-ir-awards-2026-103300464.html"
+        },
+        {
+          "title": "European Chip Stocks Rebound After Thursday Selloff",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/84b46356-9090-3b9d-bca6-7bd6b2833051/european-chip-stocks-rebound.html"
+        },
+        {
+          "title": "ASML (ASML) Stock Moves -3.97%: What You Should Know",
+          "publisher": "Zacks",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/asml-asml-stock-moves-3-214504417.html"
+        }
+      ],
+      "error": null
+    },
+    "US02079K3059": {
+      "name": "Alphabet",
+      "ticker": "GOOG",
+      "headlines": [
+        {
+          "title": "Bill Ackman reveals why he still likes Alphabet, Amazon, and Meta stocks",
+          "publisher": "TheStreet",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/4112b907-3ab5-380a-b492-e1a34da92188/bill-ackman-reveals-why-he.html"
+        },
+        {
+          "title": "Warren Buffett's Berkshire Hathaway Owns $41 Billion of Alphabet Stock: Here Are 3 Possible Reasons Why",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/11ff24ff-f075-3245-b58e-c918c20b3f84/warren-buffett%27s-berkshire.html"
+        },
+        {
+          "title": "Why Arm Is a Strong Buy Despite the 35% Pullback From Peak Levels",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/aea3713f-016c-39a7-9cf7-6d5bc3657252/why-arm-is-a-strong-buy.html"
+        },
+        {
+          "title": "Reddit (RDDT) Eyes Higher AI Data Fees And Launches Shopping Ad Tools",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/technology/ai/articles/reddit-rddt-eyes-higher-ai-161412422.html"
+        },
+        {
+          "title": "1 Unstoppable Stock to Buy Before It Joins Google, Apple, Microsoft, and Nvidia in the $3 Trillion Club",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/4c06cd36-b943-38b3-8e91-b388f69f49c0/1-unstoppable-stock-to-buy.html"
+        },
+        {
+          "title": "It Quietly Exited Bitcoin Mining Last Year — Now This AI Supplier To Meta Is Chasing A $30 Billion Valuation",
+          "publisher": "Stocktwits",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/1d6ac9ef-bbbb-3a3b-ad64-b97849921477/it-quietly-exited-bitcoin.html"
+        }
+      ],
+      "error": null
+    },
+    "US0970231058": {
+      "name": "Boeing",
+      "ticker": "BA",
+      "headlines": [
+        {
+          "title": "Trump marks America’s 250th birthday with National Mall address",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/23f95efe-a505-3044-8e78-86d2185af5df/trump-marks-america%E2%80%99s-250th.html"
+        },
+        {
+          "title": "Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/b5343327-012f-36b6-bbd0-f392f015783e/vertical-aerospace-just.html"
+        },
+        {
+          "title": "Gavin Newsom Calls Trump's $400 Million Qatari Jet 'Air Fraud One' as Bernie Sanders, Elizabeth Warren Slam President",
+          "publisher": "Benzinga",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/521bca8c-dbb5-381d-abca-d4e44b5bcaeb/gavin-newsom-calls-trump%27s.html"
+        },
+        {
+          "title": "Is The Boeing Company (BA) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/boeing-company-ba-good-stock-233211886.html"
+        },
+        {
+          "title": "Boeing Says ‘Unplanned IT Outage’ Hit Computer Systems as Factory Work From Washington to Florida was Disrupted",
+          "publisher": "Benzinga",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/technology/articles/boeing-says-unplanned-outage-hit-150058744.html"
+        },
+        {
+          "title": "Global Jetliner Market Analysis: Evaluating Commercial Jet Trends and Forecasts",
+          "publisher": "GlobeNewswire",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/global-jetliner-market-analysis-evaluating-140500384.html"
+        }
+      ],
+      "error": null
+    },
+    "US30303M1027": {
+      "name": "Meta Platforms",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "Meta’s next AI bet has one major catch for investors",
+          "publisher": "TheStreet",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/cecb2a24-2d80-36ff-bd80-9419d49893d0/meta%E2%80%99s-next-ai-bet-has-one.html"
+        },
+        {
+          "title": "Bill Ackman reveals why he still likes Alphabet, Amazon, and Meta stocks",
+          "publisher": "TheStreet",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/4112b907-3ab5-380a-b492-e1a34da92188/bill-ackman-reveals-why-he.html"
+        },
+        {
+          "title": "Bill Ackman Drives a Tesla: Here's Why He Won't Buy the Stock",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/0e5930e5-b8ff-3b87-ae9f-97ed354f083c/bill-ackman-drives-a-tesla%3A.html"
+        },
+        {
+          "title": "Why Arm Is a Strong Buy Despite the 35% Pullback From Peak Levels",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/aea3713f-016c-39a7-9cf7-6d5bc3657252/why-arm-is-a-strong-buy.html"
+        },
+        {
+          "title": "It Quietly Exited Bitcoin Mining Last Year — Now This AI Supplier To Meta Is Chasing A $30 Billion Valuation",
+          "publisher": "Stocktwits",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/1d6ac9ef-bbbb-3a3b-ad64-b97849921477/it-quietly-exited-bitcoin.html"
+        },
+        {
+          "title": "Jim Cramer Explains Why He Thinks Meta Has “More Room to Run”",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-explains-why-thinks-141944498.html"
+        }
+      ],
+      "error": null
+    },
+    "US3695501086": {
+      "name": "General Dynamics",
+      "ticker": "GD",
+      "headlines": [
+        {
+          "title": "Get Paid 8.1% A Year To Hold RTX Stock You Already Own",
+          "publisher": "Trefis",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/m/bae9a4dd-ea73-397a-ba93-53daeb48a864/get-paid-8.1%25-a-year-to-hold.html"
+        },
+        {
+          "title": "General Dynamics Vs. Lockheed Martin: Buy General Dynamics for Deep Marine Backlogs",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/m/3354ed89-7474-304c-a990-d3332b5d2a0f/general-dynamics-vs.-lockheed.html"
+        },
+        {
+          "title": "1 Profitable Stock on Our Watchlist and 2 We Question",
+          "publisher": "StockStory",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-watchlist-2-150024946.html"
+        },
+        {
+          "title": "Is General Dynamics Expanding Its Presence in the Submarine Market?",
+          "publisher": "Zacks",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-expanding-presence-submarine-142100364.html"
+        },
+        {
+          "title": "General Dynamics (GD) Rises Higher Than Market: Key Facts",
+          "publisher": "Zacks",
+          "published": "2026-06-30",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-gd-rises-higher-221503497.html"
+        },
+        {
+          "title": "Is Northrop Grumman Expanding Its Presence in the SEWIP Market?",
+          "publisher": "Zacks",
+          "published": "2026-06-30",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/northrop-grumman-expanding-presence-sewip-182400538.html"
+        }
+      ],
+      "error": null
+    },
+    "US5024311095": {
+      "name": "L3Harris Technologies",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "AEVEX Lands A New Deal, And A New Narrative",
+          "publisher": "Trefis",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/m/75e84001-d7f3-31d5-84eb-d7b0ad9978e3/aevex-lands-a-new-deal%2C-and-a.html"
+        },
+        {
+          "title": "Rocket Lab Stock Offers A Different Orbit",
+          "publisher": "Trefis",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/m/10623301-06ea-3146-9cca-d9c41a2d5cc8/rocket-lab-stock-offers-a.html"
+        },
+        {
+          "title": "Trump Takes Maiden Flight on Qatari-Gifted Air Force One. We Were on Board.",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-01",
+          "link": "https://finance.yahoo.com/m/cd9eeb8d-f1f6-385e-abc9-7f337de16143/trump-takes-maiden-flight-on.html"
+        },
+        {
+          "title": "How Is Rocket Lab Expanding Through Space Mission Software?",
+          "publisher": "Zacks",
+          "published": "2026-07-01",
+          "link": "https://finance.yahoo.com/technology/articles/rocket-lab-expanding-space-mission-142000146.html"
+        },
+        {
+          "title": "Earnings Preview: What To Expect From L3Harris Technologies' Report",
+          "publisher": "Barchart",
+          "published": "2026-07-01",
+          "link": "https://finance.yahoo.com/m/68daf937-4d14-3476-bfe6-2d3580448970/earnings-preview%3A-what-to.html"
+        },
+        {
+          "title": "The Pentagon On-Ramp That Pointed to RKLB Stock's Surge",
+          "publisher": "Trefis",
+          "published": "2026-06-30",
+          "link": "https://finance.yahoo.com/m/1a3db514-5cc3-3545-bd83-256ed7c3e43e/the-pentagon-on-ramp-that.html"
+        }
+      ],
+      "error": null
+    },
+    "US5398301094": {
+      "name": "Lockheed Martin",
+      "ticker": "LMT",
+      "headlines": [
+        {
+          "title": "Trump marks America’s 250th birthday with National Mall address",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/23f95efe-a505-3044-8e78-86d2185af5df/trump-marks-america%E2%80%99s-250th.html"
+        },
+        {
+          "title": "Trump, Putin discuss Ukraine, Iran ahead of NATO summit",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/dfbf9995-8896-3294-9e05-f1460dd3934e/trump%2C-putin-discuss-ukraine%2C.html"
+        },
+        {
+          "title": "North Korea’s Kim oversees cruise missile launch from new naval destroyer",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/5d395a40-c75f-3deb-8a2f-f1d82a1d71ae/north-korea%E2%80%99s-kim-oversees.html"
+        },
+        {
+          "title": "Is Lockheed Martin (LMT) Still Trading At A Discount After Contract Wins?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-still-trading-180930017.html"
+        },
+        {
+          "title": "GE Aerospace or Lockheed Martin: Which Aerospace and Defense Stock Is a Better Buy for 2026?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/d042830b-e962-3dac-bf0e-3210f58689f0/ge-aerospace-or-lockheed.html"
+        },
+        {
+          "title": "America’s 250th Birthday Bash and Severe Weather Spark Travel Chaos",
+          "publisher": "Barrons.com",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/cdbbefa6-0132-39d5-b6de-372fedc884ba/america%E2%80%99s-250th-birthday-bash.html"
+        }
+      ],
+      "error": null
+    },
+    "US57778K1051": {
+      "name": "Maxar",
+      "ticker": "MAXR",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "Zscaler (ZS) Lands Multi Year Cybersecurity Deal With Aston Martin Aramco F1 Team",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-lands-multi-cybersecurity-070907323.html"
+        },
+        {
+          "title": "Albertsons (ACI) Stock Looks Fairly Valued While Broader Checks Stay Weak",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/albertsons-aci-stock-looks-fairly-070906015.html"
+        },
+        {
+          "title": "Is Avantor (AVTR) Stock Cheap After A 71% Five Year Fall?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/avantor-avtr-stock-cheap-71-070840667.html"
+        },
+        {
+          "title": "FuelCell Energy (FCEL) Stock Looks Fully Priced After Its 411% Run",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-fcel-stock-looks-070837552.html"
+        },
+        {
+          "title": "Liquidia (LQDA) Was Dropped From Russell Indexes And That Could Reshape Its Shareholders",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/liquidia-lqda-dropped-russell-indexes-070828593.html"
+        }
+      ],
+      "error": null
+    },
+    "US5949181045": {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "headlines": [
+        {
+          "title": "ChatGPT-Maker OpenAI Is Headed for a $1 Trillion IPO. The Biggest Winner Could Be Microsoft Stock.",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/250b3014-9952-34e3-85f8-6008ef37cdbe/chatgpt-maker-openai-is.html"
+        },
+        {
+          "title": "Nvidia (NVDA) Backs Verkada And Brings In A Microsoft Veteran To Lead Sales",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-backs-verkada-brings-210955795.html"
+        },
+        {
+          "title": "AI Can't Thrive Without This Stock (Hint: It's Not Nvidia)",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/2487d2cf-0e9b-3112-86fe-83a0b4f4da69/ai-can%27t-thrive-without-this.html"
+        },
+        {
+          "title": "Bill Ackman Drives a Tesla: Here's Why He Won't Buy the Stock",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/0e5930e5-b8ff-3b87-ae9f-97ed354f083c/bill-ackman-drives-a-tesla%3A.html"
+        },
+        {
+          "title": "Why Arm Is a Strong Buy Despite the 35% Pullback From Peak Levels",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/aea3713f-016c-39a7-9cf7-6d5bc3657252/why-arm-is-a-strong-buy.html"
+        },
+        {
+          "title": "1 Unstoppable Stock to Buy Before It Joins Google, Apple, Microsoft, and Nvidia in the $3 Trillion Club",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/4c06cd36-b943-38b3-8e91-b388f69f49c0/1-unstoppable-stock-to-buy.html"
+        }
+      ],
+      "error": null
+    },
+    "US65339F1012": {
+      "name": "NextEra Energy",
+      "ticker": "NEE",
+      "headlines": [
+        {
+          "title": "The Portfolio That Lets You Go Part-Time Five Years Early",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/2d613603-f809-3347-9c7e-465819d4fc1f/the-portfolio-that-lets-you.html"
+        },
+        {
+          "title": "What A $750,000 Dividend Portfolio Actually Pays After Taxes, Medicare Premiums, And Reality",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/6a1a20c2-a865-319f-b0f6-42af6fe2d8fd/what-a-%24750%2C000-dividend.html"
+        },
+        {
+          "title": "What Happens When Medicare Premiums Are No Longer Your Problem?",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/db9cb799-7c25-3ffc-bc00-f78116f086f0/what-happens-when-medicare.html"
+        },
+        {
+          "title": "Jim Cramer Says He Happens to “Like NextEra Very Much”",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-happens-nextera-142330726.html"
+        },
+        {
+          "title": "The Dividend Portfolio That Can Cover a Silicon Valley House Payment",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/f2e6c1bb-7754-32d4-a502-01ac4df9b9c6/the-dividend-portfolio-that.html"
+        },
+        {
+          "title": "Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval",
+          "publisher": "Zacks",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/energy/articles/oklo-advances-groves-isotope-test-123300704.html"
+        }
+      ],
+      "error": null
+    },
+    "US6668071029": {
+      "name": "Northrop Grumman",
+      "ticker": "NOC",
+      "headlines": [
+        {
+          "title": "Trump marks America’s 250th birthday with National Mall address",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/23f95efe-a505-3044-8e78-86d2185af5df/trump-marks-america%E2%80%99s-250th.html"
+        },
+        {
+          "title": "Trump, Putin discuss Ukraine, Iran ahead of NATO summit",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/dfbf9995-8896-3294-9e05-f1460dd3934e/trump%2C-putin-discuss-ukraine%2C.html"
+        },
+        {
+          "title": "North Korea’s Kim oversees cruise missile launch from new naval destroyer",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/5d395a40-c75f-3deb-8a2f-f1d82a1d71ae/north-korea%E2%80%99s-kim-oversees.html"
+        },
+        {
+          "title": "3 Resilient Defense Stocks to Buy in July",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/074c445c-7a35-3cc1-9492-dfe9643c8db3/3-resilient-defense-stocks-to.html"
+        },
+        {
+          "title": "Trump marks Fourth of July with Mount Rushmore speech ahead of midterms",
+          "publisher": "Investing.com",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/fdfecb89-0403-3223-a497-b09aae1552e8/trump-marks-fourth-of-july.html"
+        },
+        {
+          "title": "Russian forces claim capture of Kostiantynivka in eastern Ukraine",
+          "publisher": "Investing.com",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/cc6842ae-3c99-3b7b-9f75-91f775750d5c/russian-forces-claim-capture.html"
+        }
+      ],
+      "error": null
+    },
+    "US67066G1040": {
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "headlines": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/a9cbe9b0-7630-3727-8c7e-640cc4f14e30/3-magnificent-growth-stocks.html"
+        },
+        {
+          "title": "How SoFi's Bank Charter Could Pay Off for Long-Term Investors",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/c28ace2c-ecdf-3877-8ede-3dd17edcbbfc/how-sofi%27s-bank-charter-could.html"
+        },
+        {
+          "title": "Should You Put $500 a Month Into This Vanguard ETF? Here's How Much You Could Gain.",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/18e9d49d-d7eb-3429-9bd5-0a2b847afad6/should-you-put-%24500-a-month.html"
+        },
+        {
+          "title": "Vanguard Is Bullish on Value Stocks and Fixed Income. Are These 2 ETFs a Good Buy?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/9bdfb514-ed50-3e5d-b3b5-28a87a66faab/vanguard-is-bullish-on-value.html"
+        },
+        {
+          "title": "Is AMD Stock a Buy Before July 22?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/e5498b98-5dbc-3c39-9f1e-d46ce5487fec/is-amd-stock-a-buy-before.html"
+        },
+        {
+          "title": "How Much Could $1,000 Invested in Viking Therapeutics Be Worth by 2030?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/9578a0be-fb0f-3540-8a1f-3583fe6639a5/how-much-could-%241%2C000.html"
+        }
+      ],
+      "error": null
+    },
+    "US72703X1063": {
+      "name": "Planet Labs",
+      "ticker": "85H1.DE",
+      "headlines": [
+        {
+          "title": "Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/why-planet-labs-pl-one-022439347.html"
+        },
+        {
+          "title": "Planet Labs Stock Is Down 37% Over the Past Month. Here's What's Sending the Stock Lower.",
+          "publisher": "Motley Fool",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/22612983-a6ed-3ebf-8270-2c6f809b0e16/planet-labs-stock-is-down-37%25.html"
+        },
+        {
+          "title": "Planet Labs Insider Sold Shares Worth $379,475, According to a Recent SEC Filing",
+          "publisher": "MT Newswires",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-insider-sold-shares-201109951.html"
+        },
+        {
+          "title": "PL Stock Lags Industry, Trades at Premium: What Should Investors Know?",
+          "publisher": "Zacks",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/pl-stock-lags-industry-trades-172600939.html"
+        },
+        {
+          "title": "Planet Labs PBC's Germany Unit Signs Launch Deal With Isar Aerospace",
+          "publisher": "MT Newswires",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/technology/articles/planet-labs-pbc-apos-germany-134359907.html"
+        },
+        {
+          "title": "Rocket Lab Stock Offers A Different Orbit",
+          "publisher": "Trefis",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/m/10623301-06ea-3146-9cca-d9c41a2d5cc8/rocket-lab-stock-offers-a.html"
+        }
+      ],
+      "error": null
+    },
+    "US75513E1010": {
+      "name": "Raytheon",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "Trump, Putin discuss Ukraine, Iran ahead of NATO summit",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/dfbf9995-8896-3294-9e05-f1460dd3934e/trump%2C-putin-discuss-ukraine%2C.html"
+        },
+        {
+          "title": "North Korea’s Kim oversees cruise missile launch from new naval destroyer",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/5d395a40-c75f-3deb-8a2f-f1d82a1d71ae/north-korea%E2%80%99s-kim-oversees.html"
+        },
+        {
+          "title": "3 Resilient Defense Stocks to Buy in July",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/074c445c-7a35-3cc1-9492-dfe9643c8db3/3-resilient-defense-stocks-to.html"
+        },
+        {
+          "title": "Is RTX Corporation (RTX) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/rtx-corporation-rtx-good-stock-233446315.html"
+        },
+        {
+          "title": "RTX (RTX): Buy, Sell, or Hold Post Q1 Earnings?",
+          "publisher": "StockStory",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/rtx-rtx-buy-sell-hold-174606242.html"
+        },
+        {
+          "title": "Is ISSC Building a One-Stop Cockpit Modernization Platform?",
+          "publisher": "Zacks",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/technology/articles/issc-building-one-stop-cockpit-174000700.html"
+        }
+      ],
+      "error": null
+    },
+    "US7731221062": {
+      "name": "Rocket Lab",
+      "ticker": "RKLB",
+      "headlines": [
+        {
+          "title": "Axon and Rocket Lab rallied while chip stocks sank",
+          "publisher": "TheStreet",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/f3fa340c-c3ce-34be-9a4d-ea35634f99cf/axon-and-rocket-lab-rallied.html"
+        },
+        {
+          "title": "Why Rocket Lab Stock Skyrocketed Last Week",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/3fbca3c9-0078-38fd-a6ee-46ff28580ff6/why-rocket-lab-stock.html"
+        },
+        {
+          "title": "Here's Why The Latest Rocket Lab Acquisition Could Shake Up The Entire Space Economy",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/0ba20a7d-9a83-326d-946a-1ce436a76214/here%27s-why-the-latest-rocket.html"
+        },
+        {
+          "title": "Is Rocket Lab (RKLB) is One of the Best NASDAQ Stocks to Invest In For Long Term?",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-one-best-125611792.html"
+        },
+        {
+          "title": "Rocket Lab Announces a Massive $8 Billion Satellite Acquisition. Now What?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/faacdb9a-ae31-3652-9470-aa9c91b6c63f/rocket-lab-announces-a.html"
+        },
+        {
+          "title": "Is Rocket Lab (RKLB) The Best Space Stock to Buy Now?",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-best-space-153110214.html"
+        }
+      ],
+      "error": null
+    },
+    "US88160R1014": {
+      "name": "Tesla",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "EV battery durability exceeds expectations as replacement fears persist",
+          "publisher": "Investing.com",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/bd8e1a55-c0fd-3aea-ac75-ac9713156426/ev-battery-durability-exceeds.html"
+        },
+        {
+          "title": "\"Big Short\" Investor Michael Burry Is Now Betting Against Micron, Nvidia, and Tesla. Should You Be Worried?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/c505ab45-4704-3bbc-b99f-590e0567e7ac/%22big-short%22-investor-michael.html"
+        },
+        {
+          "title": "Cathie Wood buys $38.1 million of tumbling megacap stock",
+          "publisher": "TheStreet",
+          "published": "2026-07-05",
+          "link": "https://finance.yahoo.com/m/1b8e61fd-3c5a-3c76-8e0b-52f97db71bea/cathie-wood-buys-%2438.1.html"
+        },
+        {
+          "title": "Rivian Just Raised Its 2026 Outlook While Tesla Stock Stumbled. Is the Electric Vehicle Underdog Finally a Buy?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/3fba89a5-4d92-368c-a0d8-51b73128364c/rivian-just-raised-its-2026.html"
+        },
+        {
+          "title": "Bill Ackman Drives a Tesla: Here's Why He Won't Buy the Stock",
+          "publisher": "Motley Fool",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/0e5930e5-b8ff-3b87-ae9f-97ed354f083c/bill-ackman-drives-a-tesla%3A.html"
+        },
+        {
+          "title": "Elizabeth Warren Says ‘Wealth Is Funneled to the Wealthy’ — Elon Musk Can Be a Trillionaire But Millions of Americans Can’t Afford to See a Doctor",
+          "publisher": "Benzinga",
+          "published": "2026-07-04",
+          "link": "https://finance.yahoo.com/m/87152f75-55ac-3ea1-b106-3ca684e1e401/elizabeth-warren-says-%E2%80%98wealth.html"
+        }
+      ],
+      "error": null
+    }
+  }
+}
