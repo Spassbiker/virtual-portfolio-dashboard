@@ -600,7 +600,7 @@ html_template = """<!DOCTYPE html>
                 const kurs = (r.c && r.c.aktueller_kurs) || r.f.aktueller_kurs;
                 const warnings = (r.scores.warnings || []);
                 const warnBadge = warnings.length
-                    ? `<span class="data-warning" title="${warnings.join('\n').replace(/"/g,'&quot;')}">⚠️ Daten prüfen</span>`
+                    ? `<span class="data-warning" title="${warnings.join(' | ').replace(/"/g,'&quot;')}">⚠️ Daten prüfen</span>`
                     : '';
                 const badges = warnBadge
                              + (r.perfect ? '<span class="perfect-setup" title="Fundamental Attraktiv + Signal Kaufen + RSI 30–55 + Aufwärtstrend">⭐ Perfect</span>' : '')
