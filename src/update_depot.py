@@ -1,10 +1,18 @@
 import json
 import os
+import sys
 import urllib.request
 from datetime import datetime
 
+# Empfehlungs-Modus: berechnet Score/Sentiment/Veto und die Trades, die das
+# regelbasierte System vorschlagen WÜRDE, schreibt sie nach
+# data/trade_recommendations.json und lässt depot_status.json unangetastet.
+# So bleibt die finale Kauf-/Verkaufsentscheidung beim autonomen Agenten.
+RECOMMEND = any(a in ("--recommend", "--dry-run") for a in sys.argv[1:])
+
 base_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data"
 depot_path = os.path.join(base_dir, "depot_status.json")
+recommend_path = os.path.join(base_dir, "trade_recommendations.json")
 
 with open(depot_path, "r") as f:
     data = json.load(f)
@@ -13,6 +21,7 @@ depot = data.get("depot", {})
 current_cash = depot.get("aktueller_barbestand", 10000.0)
 positions = depot.get("positionen", [])
 transactions = depot.get("transaktionshistorie", [])
+initial_tx_count = len(transactions)  # neue Trades dieses Laufs = ab hier
 
 with open(os.path.join(base_dir, "chartanalyse_ergebnisse.json"), "r") as f:
     chart_data = json.load(f)
@@ -434,17 +443,39 @@ for isin, ts in unowned_targets:
         summary.append(f"Kauf: {units_to_buy}x {stock} ({isin}) zu {price:.2f} EUR, Score={ts}, Budget={budget:.0f}€.")
 
 portfolio_value = sum(p.get("boersenwert", 0) for p in positions)
-depot["aktueller_barbestand"] = round(current_cash, 2)
-depot["portfoliowert"] = round(portfolio_value, 2)
-depot["gesamtvermoegen"] = round(current_cash + portfolio_value, 2)
-depot["positionen"] = positions
-depot["transaktionshistorie"] = transactions
-data["depot"] = depot
 
-with open(depot_path, "w") as f:
-    json.dump(data, f, indent=2)
-
-if summary:
-    print("\n".join(summary))
+if RECOMMEND:
+    # Nichts am Depot ändern — nur Vorschläge als Entscheidungsgrundlage schreiben.
+    new_trades = transactions[initial_tx_count:]
+    recommendation = {
+        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "hinweis": ("Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). "
+                    "Der Agent entscheidet autonom und kann abweichen."),
+        "vorgeschlagene_trades": new_trades,
+        "zusammenfassung": summary,
+        "resultierender_barbestand": round(current_cash, 2),
+        "resultierender_portfoliowert": round(portfolio_value, 2),
+        "resultierendes_gesamtvermoegen": round(current_cash + portfolio_value, 2),
+    }
+    with open(recommend_path, "w", encoding="utf-8") as f:
+        json.dump(recommendation, f, indent=2, ensure_ascii=False)
+    print(f"[EMPFEHLUNGS-MODUS] {len(new_trades)} Trade-Vorschläge -> {recommend_path}")
+    if summary:
+        print("\n".join(summary))
+    else:
+        print("Vorschlag: keine Trades nötig, Zielportfolio erreicht.")
 else:
-    print("Keine Transaktionen notwendig. Zielportfolio ist erreicht.")
+    depot["aktueller_barbestand"] = round(current_cash, 2)
+    depot["portfoliowert"] = round(portfolio_value, 2)
+    depot["gesamtvermoegen"] = round(current_cash + portfolio_value, 2)
+    depot["positionen"] = positions
+    depot["transaktionshistorie"] = transactions
+    data["depot"] = depot
+
+    with open(depot_path, "w") as f:
+        json.dump(data, f, indent=2)
+
+    if summary:
+        print("\n".join(summary))
+    else:
+        print("Keine Transaktionen notwendig. Zielportfolio ist erreicht.")
