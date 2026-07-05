@@ -9,6 +9,15 @@ with open(os.path.join(repo_dir, 'data', 'fundamentalanalyse_ergebnisse.json'), 
 with open(os.path.join(repo_dir, 'data', 'depot_status.json'), 'r', encoding='utf-8') as f:
     depot_data = f.read()
 
+# KI-Sentiment (optional): fehlt die Datei, wird ein leeres Objekt injiziert,
+# damit das Dashboard ohne Sentiment-Stufe trotzdem funktioniert.
+sentiment_path = os.path.join(repo_dir, 'data', 'sentiment_scores.json')
+if os.path.exists(sentiment_path):
+    with open(sentiment_path, 'r', encoding='utf-8') as f:
+        sentiment_data = f.read()
+else:
+    sentiment_data = '{"scores": {}}'
+
 build_date = datetime.date.today().strftime("%d.%m.%Y")
 
 html_template = """<!DOCTYPE html>
@@ -93,6 +102,7 @@ html_template = """<!DOCTYPE html>
             <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
             <button class="tab-button" onclick="openTab(event, 'chart')">Chartanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
+            <button class="tab-button" onclick="openTab(event, 'sentiment')">🤖 KI-Sentiment</button>
             <button class="tab-button" onclick="openTab(event, 'transaktionen')">Transaktionshistorie</button>
         </div>
 
@@ -100,6 +110,7 @@ html_template = """<!DOCTYPE html>
         <div id="depot" class="tab-content"></div>
         <div id="chart" class="tab-content"></div>
         <div id="funda" class="tab-content"></div>
+        <div id="sentiment" class="tab-content"></div>
         <div id="transaktionen" class="tab-content"></div>
     </div>
 
@@ -107,6 +118,26 @@ html_template = """<!DOCTYPE html>
         const chartData = CHART_DATA_PLACEHOLDER;
         const fundaData = FUNDA_DATA_PLACEHOLDER;
         const depotData = DEPOT_DATA_PLACEHOLDER;
+        const sentimentData = SENTIMENT_DATA_PLACEHOLDER;
+        const sentimentScores = (sentimentData && sentimentData.scores) ? sentimentData.scores : {};
+
+        function getSentiment(isin) {
+            return (isin && sentimentScores[isin]) ? sentimentScores[isin] : null;
+        }
+        // Kompaktes Sentiment-Badge (Pfeil + Wert) + optionales Veto, mit Begründung als Tooltip.
+        function sentimentBadge(isin) {
+            const s = getSentiment(isin);
+            if (!s) return '<span style="color:#adb5bd;">–</span>';
+            const val = (typeof s.sentiment_score === 'number') ? s.sentiment_score : 0;
+            const tip = (s.begruendung || '').replace(/"/g, '&quot;');
+            let color = '#6c757d', arrow = '→';
+            if (val > 0) { color = '#155724'; arrow = '▲'; }
+            else if (val < 0) { color = '#721c24'; arrow = '▼'; }
+            const sign = val > 0 ? '+' : '';
+            let html = `<span title="${tip}" style="font-weight:bold;color:${color};">${arrow} ${sign}${val}</span>`;
+            if (s.veto) html += ` <span class="badge sell" title="${tip}" style="min-width:auto;">🚫 Veto</span>`;
+            return html;
+        }
 
         function getBadge(rating) {
             if (!rating) return '';
@@ -651,6 +682,7 @@ html_template = """<!DOCTYPE html>
                 <th>Investiert</th>
                 <th>Börsenwert</th>
                 <th>Gewinn/Verlust</th>
+                <th>🤖 KI-Sentiment</th>
             </tr>`;
         if (d.positionen && d.positionen.length > 0) {
             d.positionen.forEach(p => {
@@ -665,11 +697,69 @@ html_template = """<!DOCTYPE html>
                     <td>${formatEUR(p.investiert)}</td>
                     <td>${formatEUR(p.boersenwert)}</td>
                     <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${formatEURSign(p.gewinn_verlust)}</span></td>
+                    <td>${sentimentBadge(p.isin)}</td>
                 </tr>`;
             });
         }
         depotHtml += `</table>`;
         document.getElementById('depot').innerHTML = depotHtml;
+
+        // ==========================================
+        // KI-SENTIMENT (Stufe 1 + 2)
+        // ==========================================
+        (function renderSentiment() {
+            // ISIN -> Name aus Chart-/Fundamentaldaten ableiten.
+            const nameByIsin = {};
+            [chartData, fundaData].forEach(ds => {
+                if (ds && ds.sektoren) Object.keys(ds.sektoren).forEach(sek => {
+                    (ds.sektoren[sek] || []).forEach(w => {
+                        if (w.isin && !nameByIsin[w.isin]) nameByIsin[w.isin] = w.wertpapier || w.isin;
+                    });
+                });
+            });
+            const depotIsinSet = new Set((depotData.depot.positionen || []).map(p => p.isin));
+            const isins = Object.keys(sentimentScores);
+            const gen = (sentimentData && sentimentData.generated_at) ? sentimentData.generated_at : null;
+
+            let html = `<h2>🤖 KI-Sentiment <small style="font-size:0.5em; color:#6c757d;">(News-Stimmung pro Wert, −3 bis +3 · fließt als dritter Score-Faktor in die Trade-Entscheidung)</small></h2>`;
+            if (!isins.length) {
+                html += `<p style="color:#6c757d;">Noch keine KI-Sentiment-Daten vorhanden. Werden beim nächsten Portfoliomanager-Lauf erzeugt (Schritt 5: news_raw.json → sentiment_scores.json).</p>`;
+                document.getElementById('sentiment').innerHTML = html;
+                return;
+            }
+            if (gen) html += `<p style="color:#6c757d; font-size:0.9em;">Stand: ${gen}</p>`;
+
+            // Sortiert: Veto zuerst, dann nach Score absteigend.
+            isins.sort((a, b) => {
+                const sa = sentimentScores[a], sb = sentimentScores[b];
+                if (!!sb.veto - !!sa.veto) return (!!sb.veto) - (!!sa.veto);
+                return (sb.sentiment_score || 0) - (sa.sentiment_score || 0);
+            });
+
+            html += `<table>
+                <tr>
+                    <th>Wertpapier</th>
+                    <th>ISIN</th>
+                    <th>Im Depot?</th>
+                    <th>Sentiment</th>
+                    <th>Begründung</th>
+                </tr>`;
+            isins.forEach(isin => {
+                const s = sentimentScores[isin];
+                const name = nameByIsin[isin] || '<span style="color:#adb5bd">?</span>';
+                const inDepot = depotIsinSet.has(isin)
+                    ? '<span class="badge buy" style="min-width:auto;">✓</span>' : '';
+                html += `<tr>
+                    <td><strong>${name}</strong></td>
+                    <td style="color:#666;">${isin}</td>
+                    <td>${inDepot}</td>
+                    <td>${sentimentBadge(isin)}</td>
+                    <td style="font-size:0.9em;">${(s.begruendung || '').replace(/</g,'&lt;')}</td>
+                </tr>`;
+            });
+            html += `</table>`;
+            document.getElementById('sentiment').innerHTML = html;
+        })();
 
         // ==========================================
         // CHARTANALYSE
@@ -834,6 +924,7 @@ html_template = """<!DOCTYPE html>
 html_output = html_template.replace("CHART_DATA_PLACEHOLDER", chart_data)
 html_output = html_output.replace("FUNDA_DATA_PLACEHOLDER", funda_data)
 html_output = html_output.replace("DEPOT_DATA_PLACEHOLDER", depot_data)
+html_output = html_output.replace("SENTIMENT_DATA_PLACEHOLDER", sentiment_data)
 html_output = html_output.replace("BUILD_DATE_PLACEHOLDER", build_date)
 
 with open(os.path.join(repo_dir, 'index.html'), 'w', encoding='utf-8') as f:
