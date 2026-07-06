@@ -13,7 +13,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-06",
-        "aktueller_kurs": 165.8,
+        "aktueller_kurs": 165.5,
         "empfehlung": "Kaufen"
       },
       {
@@ -29,7 +29,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 57.28
+        "aktueller_kurs": 57.3
       },
       {
         "wertpapier": "E.ON",
@@ -44,7 +44,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 19.065
+        "aktueller_kurs": 19.045
       },
       {
         "wertpapier": "Encavis",
@@ -88,7 +88,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 42.8
+        "aktueller_kurs": 42.89
       },
       {
         "wertpapier": "Microsoft",
@@ -164,7 +164,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-06",
-        "aktueller_kurs": 1114.2,
+        "aktueller_kurs": 1114.6,
         "empfehlung": "Kaufen"
       },
       {
@@ -180,7 +180,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 77.96
+        "aktueller_kurs": 77.94
       },
       {
         "wertpapier": "Airbus",
@@ -254,7 +254,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
         "datum": "2026-07-06",
-        "aktueller_kurs": 242.3,
+        "aktueller_kurs": 242.4,
         "empfehlung": "Kaufen"
       },
       {
@@ -316,7 +316,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-06",
-        "aktueller_kurs": 376.5,
+        "aktueller_kurs": 376.4,
         "empfehlung": "Kaufen"
       },
       {
@@ -331,7 +331,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-06",
-        "aktueller_kurs": 357.5,
+        "aktueller_kurs": 357.6,
         "empfehlung": "Halten"
       },
       {
@@ -362,7 +362,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 310.6
+        "aktueller_kurs": 309.8
       },
       {
         "wertpapier": "Leonardo",
@@ -437,7 +437,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 171.14
+        "aktueller_kurs": 171.2
       }
     ],
     "Satellitentechnik": [
@@ -469,7 +469,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 8.175
+        "aktueller_kurs": 8.19
       },
       {
         "wertpapier": "Eutelsat",
@@ -484,7 +484,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 2.562
+        "aktueller_kurs": 2.568
       },
       {
         "wertpapier": "Maxar",
@@ -605,7 +605,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 140.14
+        "aktueller_kurs": 140.02
       },
       {
         "wertpapier": "Infineon",
@@ -619,7 +619,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-06",
-        "aktueller_kurs": 76.33,
+        "aktueller_kurs": 76.22,
         "empfehlung": "Kaufen"
       },
       {
@@ -635,7 +635,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 1614.8
+        "aktueller_kurs": 1614.0
       },
       {
         "wertpapier": "TeamViewer",
@@ -650,7 +650,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 5.27
+        "aktueller_kurs": 5.28
       },
       {
         "wertpapier": "Delivery Hero",
@@ -665,7 +665,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 36.82
+        "aktueller_kurs": 36.84
       },
       {
         "wertpapier": "Dt. Telekom",
@@ -680,7 +680,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 25.45
+        "aktueller_kurs": 25.43
       },
       {
         "wertpapier": "Aixtron SE",
@@ -695,7 +695,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 48.64
+        "aktueller_kurs": 48.59
       },
       {
         "wertpapier": "Meta Platforms",
@@ -740,7 +740,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 310.6
+        "aktueller_kurs": 309.8
       },
       {
         "wertpapier": "Nvidia",
@@ -755,7 +755,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 171.14
+        "aktueller_kurs": 171.2
       }
     ]
   }
