@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-07-06 09:49",
+  "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
+  "vorgeschlagene_trades": [
+    {
+      "datum": "2026-07-06",
+      "typ": "Kauf",
+      "isin": "US5398301094",
+      "wertpapier": "Lockheed Martin",
+      "stueck": 1,
+      "kurs": 545.91,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 550.91,
+      "notiz": "Neukauf (Score=18)",
+      "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+1(62), MACD+2, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(16%); KI-Sentiment=2) | Chart: Konsolidierung über dem SMA 200, langfristig positiv. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Positive Impulse durch aktuelle News."
+    },
+    {
+      "datum": "2026-07-06",
+      "typ": "Kauf",
+      "isin": "DE000A0DJ6J9",
+      "wertpapier": "SMA Solar",
+      "stueck": 5,
+      "kurs": 55.35,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 281.75,
+      "notiz": "Neukauf (Score=18)",
+      "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+2(48), MACD+2, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+1, GW+2(21%); KI-Sentiment=2) | Chart: Konsolidierung über dem SMA 200, langfristig positiv. | Funda: Deutlicher Abwärtstrend, RSI im überverkauften Bereich, keine Bodenbildung. | KI: Positive Impulse durch aktuelle News."
+    },
+    {
+      "datum": "2026-07-06",
+      "typ": "Kauf",
+      "isin": "FR0010221234",
+      "wertpapier": "Eutelsat",
+      "stueck": 9,
+      "kurs": 2.535,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 27.82,
+      "notiz": "Neukauf (Score=16)",
+      "begruendung": "Score=16 (Chart=7: Empf.+3, RSI+2(45), MACD+2; Funda=7: Empf.+3, Bew.+2, Risiko+1, GW+1(18%); KI-Sentiment=2) | Chart: Kurs schwankt unter dem SMA 200, weiterhin neutrale bis negative Tendenz. | Funda: Schrumpfender Kernmarkt, Strukturprobleme. | KI: Positive Impulse durch aktuelle News."
+    }
+  ],
+  "zusammenfassung": [
+    "KI-Veto: Kauf von Planet Labs (US72703X1063) blockiert. Negative Schlagzeilen belasten.",
+    "Kauf: 1x Lockheed Martin (US5398301094) zu 545.91 EUR, Score=18, Budget=2000€.",
+    "Kauf: 5x SMA Solar (DE000A0DJ6J9) zu 55.35 EUR, Score=18, Budget=2000€.",
+    "Kauf: 9x Eutelsat (FR0010221234) zu 2.54 EUR, Score=16, Budget=1800€."
+  ],
+  "resultierender_barbestand": 0.43,
+  "resultierender_portfoliowert": 10581.38,
+  "resultierendes_gesamtvermoegen": 10581.81
+}

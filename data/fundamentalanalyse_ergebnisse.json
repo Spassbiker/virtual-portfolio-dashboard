@@ -12,8 +12,9 @@
         "eigenkapitalquote": 43.08,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "aktueller_kurs": 168.12
+        "datum": "2026-07-06",
+        "aktueller_kurs": 164.96,
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "RWE",
@@ -26,9 +27,9 @@
         "eigenkapitalquote": 20.97,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 57.82
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 57.14
       },
       {
         "wertpapier": "E.ON",
@@ -41,9 +42,9 @@
         "eigenkapitalquote": 57.55,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 19.175
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 19.225
       },
       {
         "wertpapier": "Encavis",
@@ -56,8 +57,8 @@
         "eigenkapitalquote": 40.45,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen"
+        "datum": "2026-07-06",
+        "empfehlung": "Halten"
       },
       {
         "wertpapier": "SMA Solar",
@@ -70,9 +71,9 @@
         "eigenkapitalquote": 51.79,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 60.15
+        "aktueller_kurs": 55.35
       },
       {
         "wertpapier": "Nordex SE",
@@ -85,9 +86,9 @@
         "eigenkapitalquote": 58.78,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 45.52
+        "aktueller_kurs": 43.92
       },
       {
         "wertpapier": "Microsoft",
@@ -100,9 +101,9 @@
         "eigenkapitalquote": 27.17,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 6.941
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 6.983
       },
       {
         "wertpapier": "Alphabet",
@@ -115,8 +116,8 @@
         "eigenkapitalquote": 37.15,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
         "aktueller_kurs": 314.2
       },
       {
@@ -130,8 +131,8 @@
         "eigenkapitalquote": 26.91,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
         "aktueller_kurs": 302.07
       },
       {
@@ -145,7 +146,7 @@
         "eigenkapitalquote": 51.81,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
         "aktueller_kurs": 199.25
       }
@@ -162,8 +163,9 @@
         "eigenkapitalquote": 25.06,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "aktueller_kurs": 1093.4
+        "datum": "2026-07-06",
+        "aktueller_kurs": 1121.0,
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Hensoldt",
@@ -176,9 +178,9 @@
         "eigenkapitalquote": 51.51,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 75.58
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 77.1
       },
       {
         "wertpapier": "Airbus",
@@ -191,9 +193,9 @@
         "eigenkapitalquote": 39.1,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 206.15
+        "aktueller_kurs": 208.75
       },
       {
         "wertpapier": "BAE Systems",
@@ -206,8 +208,8 @@
         "eigenkapitalquote": 46.55,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
         "aktueller_kurs": 1980.0
       },
       {
@@ -221,8 +223,8 @@
         "eigenkapitalquote": 35.93,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
         "aktueller_kurs": 229.1
       },
       {
@@ -236,8 +238,9 @@
         "eigenkapitalquote": 43.07,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "aktueller_kurs": 52.53
+        "datum": "2026-07-06",
+        "aktueller_kurs": 54.99,
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Thales SA",
@@ -250,8 +253,9 @@
         "eigenkapitalquote": 45.82,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
-        "aktueller_kurs": 238.2
+        "datum": "2026-07-06",
+        "aktueller_kurs": 240.5,
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "NextEra Energy",
@@ -264,8 +268,8 @@
         "eigenkapitalquote": 49.64,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
         "aktueller_kurs": 0.535
       },
       {
@@ -279,9 +283,9 @@
         "eigenkapitalquote": 49.07,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 8.599
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 8.565
       },
       {
         "wertpapier": "Gilat Satellite",
@@ -294,7 +298,7 @@
         "eigenkapitalquote": 44.53,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
         "aktueller_kurs": 12.88
       }
@@ -311,8 +315,9 @@
         "eigenkapitalquote": 20.15,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "aktueller_kurs": 378.6
+        "datum": "2026-07-06",
+        "aktueller_kurs": 378.3,
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Safran",
@@ -325,8 +330,9 @@
         "eigenkapitalquote": 56.44,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "aktueller_kurs": 356.7
+        "datum": "2026-07-06",
+        "aktueller_kurs": 359.3,
+        "empfehlung": "Halten"
       },
       {
         "wertpapier": "Rolls-Royce",
@@ -339,7 +345,7 @@
         "eigenkapitalquote": 53.84,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
         "aktueller_kurs": 1497.4
       },
@@ -354,9 +360,9 @@
         "eigenkapitalquote": 54.67,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 306.0
+        "aktueller_kurs": 310.6
       },
       {
         "wertpapier": "Leonardo",
@@ -369,8 +375,9 @@
         "eigenkapitalquote": 48.94,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "aktueller_kurs": 52.53
+        "datum": "2026-07-06",
+        "aktueller_kurs": 54.99,
+        "empfehlung": "Halten"
       },
       {
         "wertpapier": "Airbus SE",
@@ -383,9 +390,9 @@
         "eigenkapitalquote": 21.41,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 206.15
+        "aktueller_kurs": 208.75
       },
       {
         "wertpapier": "Lockheed Martin",
@@ -398,7 +405,7 @@
         "eigenkapitalquote": 44.1,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
         "aktueller_kurs": 545.91
       },
@@ -413,8 +420,8 @@
         "eigenkapitalquote": 28.3,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
+        "datum": "2026-07-06",
+        "empfehlung": "Verkaufen",
         "aktueller_kurs": 373.54
       },
       {
@@ -428,9 +435,9 @@
         "eigenkapitalquote": 45.94,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 171.52
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 170.6
       }
     ],
     "Satellitentechnik": [
@@ -445,9 +452,9 @@
         "eigenkapitalquote": 58.72,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 297.0
+        "aktueller_kurs": 294.0
       },
       {
         "wertpapier": "SES",
@@ -460,9 +467,9 @@
         "eigenkapitalquote": 21.31,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 8.26
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 8.11
       },
       {
         "wertpapier": "Eutelsat",
@@ -475,9 +482,9 @@
         "eigenkapitalquote": 46.36,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 2.542
+        "aktueller_kurs": 2.535
       },
       {
         "wertpapier": "Maxar",
@@ -490,7 +497,7 @@
         "eigenkapitalquote": 41.51,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen"
       },
       {
@@ -504,9 +511,9 @@
         "eigenkapitalquote": 46.68,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 206.15
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 208.75
       },
       {
         "wertpapier": "Rocket Lab",
@@ -519,8 +526,8 @@
         "eigenkapitalquote": 42.1,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
         "aktueller_kurs": 100.46
       },
       {
@@ -534,7 +541,7 @@
         "eigenkapitalquote": 32.58,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
         "aktueller_kurs": 31.38
       },
@@ -549,7 +556,7 @@
         "eigenkapitalquote": 50.44,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
         "aktueller_kurs": 226.49
       },
@@ -564,9 +571,9 @@
         "eigenkapitalquote": 25.95,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 8.599
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 8.565
       },
       {
         "wertpapier": "Microsoft",
@@ -579,9 +586,9 @@
         "eigenkapitalquote": 57.11,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 6.941
+        "aktueller_kurs": 6.983
       }
     ],
     "Technologie": [
@@ -596,9 +603,9 @@
         "eigenkapitalquote": 30.82,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 139.64
+        "aktueller_kurs": 141.98
       },
       {
         "wertpapier": "Infineon",
@@ -611,8 +618,9 @@
         "eigenkapitalquote": 29.15,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
-        "aktueller_kurs": 77.38
+        "datum": "2026-07-06",
+        "aktueller_kurs": 75.09,
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "ASML",
@@ -625,9 +633,9 @@
         "eigenkapitalquote": 54.7,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 1634.4
+        "aktueller_kurs": 1607.6
       },
       {
         "wertpapier": "TeamViewer",
@@ -640,9 +648,9 @@
         "eigenkapitalquote": 58.15,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 5.16
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 5.28
       },
       {
         "wertpapier": "Delivery Hero",
@@ -655,9 +663,9 @@
         "eigenkapitalquote": 21.54,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 36.92
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 37.14
       },
       {
         "wertpapier": "Dt. Telekom",
@@ -670,9 +678,9 @@
         "eigenkapitalquote": 49.19,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 25.14
+        "aktueller_kurs": 25.36
       },
       {
         "wertpapier": "Aixtron SE",
@@ -685,9 +693,9 @@
         "eigenkapitalquote": 34.15,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 49.28
+        "datum": "2026-07-06",
+        "empfehlung": "Verkaufen",
+        "aktueller_kurs": 49.47
       },
       {
         "wertpapier": "Meta Platforms",
@@ -700,9 +708,9 @@
         "eigenkapitalquote": 41.42,
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
-        "datum": "2026-07-02",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 35.345
+        "datum": "2026-07-06",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 35.205
       },
       {
         "wertpapier": "NextEra Energy",
@@ -715,7 +723,7 @@
         "eigenkapitalquote": 33.22,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
         "aktueller_kurs": 0.535
       },
@@ -730,9 +738,9 @@
         "eigenkapitalquote": 57.65,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-02",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 306.0
+        "aktueller_kurs": 310.6
       },
       {
         "wertpapier": "Nvidia",
@@ -745,9 +753,9 @@
         "eigenkapitalquote": 65.4,
         "bewertung": "Moderat",
         "risiko": "Mittel",
-        "datum": "2026-07-03",
+        "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 171.52
+        "aktueller_kurs": 170.6
       }
     ]
   }

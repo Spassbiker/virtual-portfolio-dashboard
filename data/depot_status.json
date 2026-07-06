@@ -1,79 +1,119 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 860.91,
-    "portfoliowert": 9481.48,
-    "gesamtvermoegen": 10342.39,
+    "aktueller_barbestand": 0.43,
+    "portfoliowert": 10581.38,
+    "gesamtvermoegen": 10581.81,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 52.53,
+        "boersenkurs": 54.85,
         "investiert": 1484.16,
-        "boersenwert": 1680.96,
-        "gewinn_verlust": 196.8
+        "boersenwert": 1755.2,
+        "gewinn_verlust": 271.04,
+        "score": 18
       },
       {
         "isin": "DE000A0D9PT0",
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 378.6,
+        "boersenkurs": 378.3,
         "investiert": 1453.2,
-        "boersenwert": 1514.4,
-        "gewinn_verlust": 61.2
+        "boersenwert": 1513.2,
+        "gewinn_verlust": 60.0,
+        "score": 15
       },
       {
         "isin": "FR0000073272",
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 356.7,
+        "boersenkurs": 359.2,
         "investiert": 1380.0,
-        "boersenwert": 1426.8,
-        "gewinn_verlust": 46.8
+        "boersenwert": 1436.8,
+        "gewinn_verlust": 56.8,
+        "score": 11
       },
       {
         "isin": "DE000ENER6Y0",
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 168.12,
+        "boersenkurs": 165.32,
         "investiert": 1492.2,
-        "boersenwert": 1513.08,
-        "gewinn_verlust": 20.88
+        "boersenwert": 1487.88,
+        "gewinn_verlust": -4.32,
+        "score": 18
       },
       {
         "isin": "FR0000121329",
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 238.2,
+        "boersenkurs": 240.2,
         "investiert": 224.8,
-        "boersenwert": 238.2,
-        "gewinn_verlust": 13.4
+        "boersenwert": 240.2,
+        "gewinn_verlust": 15.4,
+        "score": 15
       },
       {
         "isin": "DE0006231004",
         "wertpapier": "Infineon",
         "stueck": 18,
         "kaufkurs": 81.67,
-        "boersenkurs": 77.38,
+        "boersenkurs": 75.24,
         "investiert": 1470.06,
-        "boersenwert": 1392.84,
-        "gewinn_verlust": -77.22
+        "boersenwert": 1354.32,
+        "gewinn_verlust": -115.74,
+        "score": 17
       },
       {
         "isin": "US67066G1040",
         "wertpapier": "Nvidia",
         "stueck": 10,
         "kaufkurs": 170.9,
-        "boersenkurs": 171.52,
+        "boersenkurs": 194.83,
         "investiert": 1709.0,
-        "boersenwert": 1715.2,
-        "gewinn_verlust": 6.2
+        "boersenwert": 1948.3,
+        "gewinn_verlust": 239.3,
+        "score": 11
+      },
+      {
+        "isin": "US5398301094",
+        "wertpapier": "Lockheed Martin",
+        "stueck": 1,
+        "kaufkurs": 545.91,
+        "boersenkurs": 545.91,
+        "investiert": 545.91,
+        "boersenwert": 545.91,
+        "gewinn_verlust": 0.0,
+        "score": 18
+      },
+      {
+        "isin": "DE000A0DJ6J9",
+        "wertpapier": "SMA Solar",
+        "stueck": 5,
+        "kaufkurs": 55.35,
+        "boersenkurs": 55.35,
+        "investiert": 276.75,
+        "boersenwert": 276.75,
+        "gewinn_verlust": 0.0,
+        "score": 18
+      },
+      {
+        "isin": "FR0010221234",
+        "wertpapier": "Eutelsat",
+        "stueck": 9,
+        "kaufkurs": 2.535,
+        "boersenkurs": 2.535,
+        "investiert": 22.82,
+        "boersenwert": 22.82,
+        "gewinn_verlust": 0.0,
+        "score": 16
       }
     ],
     "transaktionshistorie": [
@@ -216,6 +256,48 @@
         "gesamt": 1714.0,
         "notiz": "Neukauf (Kauf-Signal)",
         "begruendung": "Chartanalyse: Starke Dynamik | Fundamentalanalyse: Top-Pick im KI-Sektor."
+      },
+      {
+        "datum": "2026-07-06",
+        "typ": "Kauf",
+        "isin": "US5398301094",
+        "wertpapier": "Lockheed Martin",
+        "stueck": 1,
+        "kurs": 545.91,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 550.91,
+        "notiz": "Neukauf (Score=18)",
+        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+1(62), MACD+2, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(16%); KI-Sentiment=2) | Chart: Konsolidierung \u00fcber dem SMA 200, langfristig positiv. | Funda: Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse. | KI: Positive Impulse durch aktuelle News."
+      },
+      {
+        "datum": "2026-07-06",
+        "typ": "Kauf",
+        "isin": "DE000A0DJ6J9",
+        "wertpapier": "SMA Solar",
+        "stueck": 5,
+        "kurs": 55.35,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 281.75,
+        "notiz": "Neukauf (Score=18)",
+        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+2(48), MACD+2, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+1, GW+2(21%); KI-Sentiment=2) | Chart: Konsolidierung \u00fcber dem SMA 200, langfristig positiv. | Funda: Deutlicher Abw\u00e4rtstrend, RSI im \u00fcberverkauften Bereich, keine Bodenbildung. | KI: Positive Impulse durch aktuelle News."
+      },
+      {
+        "datum": "2026-07-06",
+        "typ": "Kauf",
+        "isin": "FR0010221234",
+        "wertpapier": "Eutelsat",
+        "stueck": 9,
+        "kurs": 2.535,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 27.82,
+        "notiz": "Neukauf (Score=16)",
+        "begruendung": "Score=16 (Chart=7: Empf.+3, RSI+2(45), MACD+2; Funda=7: Empf.+3, Bew.+2, Risiko+1, GW+1(18%); KI-Sentiment=2) | Chart: Kurs schwankt unter dem SMA 200, weiterhin neutrale bis negative Tendenz. | Funda: Schrumpfender Kernmarkt, Strukturprobleme. | KI: Positive Impulse durch aktuelle News."
       }
     ]
   }
