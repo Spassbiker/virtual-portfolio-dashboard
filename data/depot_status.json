@@ -2,18 +2,18 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 0.43,
-    "portfoliowert": 10361.73,
-    "gesamtvermoegen": 10362.16,
+    "portfoliowert": 10362.59,
+    "gesamtvermoegen": 10363.02,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 54.78,
+        "boersenkurs": 54.79,
         "investiert": 1484.16,
-        "boersenwert": 1752.96,
-        "gewinn_verlust": 268.8,
+        "boersenwert": 1753.28,
+        "gewinn_verlust": 269.12,
         "score": 18
       },
       {
@@ -43,10 +43,10 @@
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 165.78,
+        "boersenkurs": 165.8,
         "investiert": 1492.2,
-        "boersenwert": 1492.02,
-        "gewinn_verlust": -0.18,
+        "boersenwert": 1492.2,
+        "gewinn_verlust": 0.0,
         "score": 18
       },
       {
@@ -65,10 +65,10 @@
         "wertpapier": "Infineon",
         "stueck": 18,
         "kaufkurs": 81.67,
-        "boersenkurs": 76.31,
+        "boersenkurs": 76.33,
         "investiert": 1470.06,
-        "boersenwert": 1373.58,
-        "gewinn_verlust": -96.48,
+        "boersenwert": 1373.94,
+        "gewinn_verlust": -96.12,
         "score": 17
       },
       {

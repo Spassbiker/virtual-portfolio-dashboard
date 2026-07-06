@@ -13,7 +13,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-06",
-        "aktueller_kurs": 165.78,
+        "aktueller_kurs": 165.8,
         "empfehlung": "Kaufen"
       },
       {
@@ -195,7 +195,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 209.3
+        "aktueller_kurs": 209.35
       },
       {
         "wertpapier": "BAE Systems",
@@ -239,7 +239,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-06",
-        "aktueller_kurs": 54.78,
+        "aktueller_kurs": 54.79,
         "empfehlung": "Kaufen"
       },
       {
@@ -376,7 +376,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-06",
-        "aktueller_kurs": 54.78,
+        "aktueller_kurs": 54.79,
         "empfehlung": "Halten"
       },
       {
@@ -392,7 +392,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 209.3
+        "aktueller_kurs": 209.35
       },
       {
         "wertpapier": "Lockheed Martin",
@@ -513,7 +513,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 209.3
+        "aktueller_kurs": 209.35
       },
       {
         "wertpapier": "Rocket Lab",
@@ -605,7 +605,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 140.24
+        "aktueller_kurs": 140.14
       },
       {
         "wertpapier": "Infineon",
@@ -619,7 +619,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-06",
-        "aktueller_kurs": 76.31,
+        "aktueller_kurs": 76.33,
         "empfehlung": "Kaufen"
       },
       {
@@ -635,7 +635,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 1614.6
+        "aktueller_kurs": 1614.8
       },
       {
         "wertpapier": "TeamViewer",
@@ -695,7 +695,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 48.61
+        "aktueller_kurs": 48.64
       },
       {
         "wertpapier": "Meta Platforms",
