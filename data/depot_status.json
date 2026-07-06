@@ -2,18 +2,18 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 0.43,
-    "portfoliowert": 10362.48,
-    "gesamtvermoegen": 10362.91,
+    "portfoliowert": 10425.13,
+    "gesamtvermoegen": 10425.56,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 55.05,
+        "boersenkurs": 55.15,
         "investiert": 1484.16,
-        "boersenwert": 1761.6,
-        "gewinn_verlust": 277.44,
+        "boersenwert": 1764.8,
+        "gewinn_verlust": 280.64,
         "score": 18
       },
       {
@@ -21,10 +21,10 @@
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 376.2,
+        "boersenkurs": 375.9,
         "investiert": 1453.2,
-        "boersenwert": 1504.8,
-        "gewinn_verlust": 51.6,
+        "boersenwert": 1503.6,
+        "gewinn_verlust": 50.4,
         "score": 15
       },
       {
@@ -32,10 +32,10 @@
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 357.3,
+        "boersenkurs": 357.7,
         "investiert": 1380.0,
-        "boersenwert": 1429.2,
-        "gewinn_verlust": 49.2,
+        "boersenwert": 1430.8,
+        "gewinn_verlust": 50.8,
         "score": 11
       },
       {
@@ -43,10 +43,10 @@
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 165.29,
+        "boersenkurs": 169.52,
         "investiert": 1492.2,
-        "boersenwert": 1487.61,
-        "gewinn_verlust": -4.59,
+        "boersenwert": 1525.68,
+        "gewinn_verlust": 33.48,
         "score": 18
       },
       {
@@ -54,10 +54,10 @@
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 242.5,
+        "boersenkurs": 241.6,
         "investiert": 224.8,
-        "boersenwert": 242.5,
-        "gewinn_verlust": 17.7,
+        "boersenwert": 241.6,
+        "gewinn_verlust": 16.8,
         "score": 15
       },
       {
@@ -65,10 +65,10 @@
         "wertpapier": "Infineon",
         "stueck": 18,
         "kaufkurs": 81.67,
-        "boersenkurs": 76.18,
+        "boersenkurs": 77.03,
         "investiert": 1470.06,
-        "boersenwert": 1371.24,
-        "gewinn_verlust": -98.82,
+        "boersenwert": 1386.54,
+        "gewinn_verlust": -83.52,
         "score": 17
       },
       {
@@ -76,10 +76,10 @@
         "wertpapier": "Nvidia",
         "stueck": 10,
         "kaufkurs": 170.9,
-        "boersenkurs": 171.28,
+        "boersenkurs": 171.22,
         "investiert": 1709.0,
-        "boersenwert": 1712.8,
-        "gewinn_verlust": 3.8,
+        "boersenwert": 1712.2,
+        "gewinn_verlust": 3.2,
         "score": 11
       },
       {
@@ -98,10 +98,10 @@
         "wertpapier": "SMA Solar",
         "stueck": 5,
         "kaufkurs": 55.35,
-        "boersenkurs": 56.75,
+        "boersenkurs": 58.2,
         "investiert": 276.75,
-        "boersenwert": 283.75,
-        "gewinn_verlust": 7.0,
+        "boersenwert": 291.0,
+        "gewinn_verlust": 14.25,
         "score": 18
       },
       {
@@ -109,10 +109,10 @@
         "wertpapier": "Eutelsat",
         "stueck": 9,
         "kaufkurs": 2.535,
-        "boersenkurs": 2.563,
+        "boersenkurs": 2.555,
         "investiert": 22.82,
-        "boersenwert": 23.07,
-        "gewinn_verlust": 0.25,
+        "boersenwert": 23.0,
+        "gewinn_verlust": 0.18,
         "score": 16
       }
     ],
