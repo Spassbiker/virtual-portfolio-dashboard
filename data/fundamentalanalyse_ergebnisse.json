@@ -4,7 +4,7 @@
       {
         "wertpapier": "Siemens Energy",
         "isin": "DE000ENER6Y0",
-        "begruendung": "Starkes Wachstumspotenzial bei Energiewende-Infrastruktur.",
+        "begruendung": "Starkes Umsatz- und Gewinnwachstum dank Energiewende-Infrastruktur; intakter Aufwärtstrend.",
         "kgv": "22",
         "dividendenrendite": 1.1,
         "umsatzwachstum_yoy": 29.44,
@@ -12,8 +12,8 @@
         "eigenkapitalquote": 43.08,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-06",
-        "aktueller_kurs": 169.52,
+        "datum": "2026-07-07",
+        "aktueller_kurs": 170.44,
         "empfehlung": "Kaufen"
       },
       {
@@ -34,7 +34,7 @@
       {
         "wertpapier": "E.ON",
         "isin": "DE000ENAG999",
-        "begruendung": "Stabiles Gesch\u00e4ftsmodell, begrenzte Fantasie.",
+        "begruendung": "Stabiles Geschäftsmodell, begrenzte Fantasie.",
         "kgv": "16",
         "dividendenrendite": 4.0,
         "umsatzwachstum_yoy": 9.49,
@@ -44,12 +44,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 18.99
+        "aktueller_kurs": 18.995
       },
       {
         "wertpapier": "Encavis",
         "isin": "DE0006095003",
-        "begruendung": "Bewertung aktuell zu hoch f\u00fcr das Wachstum.",
+        "begruendung": "Bewertung aktuell zu hoch für das Wachstum.",
         "kgv": "35",
         "dividendenrendite": 0.8,
         "umsatzwachstum_yoy": -2.8,
@@ -63,7 +63,7 @@
       {
         "wertpapier": "SMA Solar",
         "isin": "DE000A0DJ6J9",
-        "begruendung": "Deutlicher Abw\u00e4rtstrend, RSI im \u00fcberverkauften Bereich, keine Bodenbildung.",
+        "begruendung": "Wachstumstreiber Solarmarkt intakt; Kurs knapp unter SMA50, weiteres Potenzial vorhanden.",
         "kgv": 47.72,
         "dividendenrendite": 4.67,
         "umsatzwachstum_yoy": 11.66,
@@ -71,14 +71,14 @@
         "eigenkapitalquote": 51.79,
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-06",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 58.2
+        "datum": "2026-07-07",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 57.8
       },
       {
         "wertpapier": "Nordex SE",
         "isin": "DE000A0D6554",
-        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilit\u00e4t.",
+        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilität.",
         "kgv": "45",
         "dividendenrendite": 0.0,
         "umsatzwachstum_yoy": 12.41,
@@ -88,12 +88,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 43.58
+        "aktueller_kurs": 43.88
       },
       {
         "wertpapier": "Microsoft",
         "isin": "US5949181045",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 46.17,
         "dividendenrendite": 4.08,
         "umsatzwachstum_yoy": -4.7,
@@ -103,12 +103,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 6.983
+        "aktueller_kurs": 6.943
       },
       {
         "wertpapier": "Alphabet",
         "isin": "US02079K3059",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 20.48,
         "dividendenrendite": 2.74,
         "umsatzwachstum_yoy": 0.48,
@@ -123,7 +123,7 @@
       {
         "wertpapier": "L3Harris Technologies",
         "isin": "US5024311095",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 38.78,
         "dividendenrendite": 4.83,
         "umsatzwachstum_yoy": 24.16,
@@ -138,7 +138,7 @@
       {
         "wertpapier": "Raytheon",
         "isin": "US75513E1010",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 35.23,
         "dividendenrendite": 0.53,
         "umsatzwachstum_yoy": 23.54,
@@ -164,7 +164,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-06",
-        "aktueller_kurs": 1130.4,
+        "aktueller_kurs": 1130.0,
         "empfehlung": "Kaufen"
       },
       {
@@ -180,12 +180,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 80.22
+        "aktueller_kurs": 80.18
       },
       {
         "wertpapier": "Airbus",
         "isin": "NL0000235190",
-        "begruendung": "Unterst\u00fctzungszone bei 180 EUR erfolgreich getestet.",
+        "begruendung": "Unterstützungszone bei 180 EUR erfolgreich getestet.",
         "kgv": 38.95,
         "dividendenrendite": 1.26,
         "umsatzwachstum_yoy": 22.3,
@@ -195,7 +195,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 210.05
+        "aktueller_kurs": 209.4
       },
       {
         "wertpapier": "BAE Systems",
@@ -230,37 +230,37 @@
       {
         "wertpapier": "Leonardo SpA",
         "isin": "IT0003856405",
-        "begruendung": "Sehr attraktiv bewertet, Nachholpotenzial.",
+        "begruendung": "Starkes Umsatzwachstum durch europäische Rüstungsaufträge, diversifiziertes Portfolio.",
         "kgv": "12",
         "dividendenrendite": 2.8,
         "umsatzwachstum_yoy": 30.0,
         "gewinnwachstum_yoy": 8.7,
         "eigenkapitalquote": 43.07,
         "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-06",
-        "aktueller_kurs": 55.15,
+        "risiko": "Mittel",
+        "datum": "2026-07-07",
+        "aktueller_kurs": 54.92,
         "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Thales SA",
         "isin": "FR0000121329",
-        "begruendung": "Stabiles Wachstum, starke Marktposition.",
+        "begruendung": "Kurs knapp unter SMA200; Rüstungsnachfrage stützend, aber Momentum fehlt.",
         "kgv": "20",
         "dividendenrendite": 2.1,
         "umsatzwachstum_yoy": 8.78,
         "gewinnwachstum_yoy": 40.0,
         "eigenkapitalquote": 45.82,
-        "bewertung": "Attraktiv",
-        "risiko": "Hoch",
-        "datum": "2026-07-06",
-        "aktueller_kurs": 241.6,
-        "empfehlung": "Kaufen"
+        "bewertung": "Neutral",
+        "risiko": "Mittel",
+        "datum": "2026-07-07",
+        "aktueller_kurs": 241.1,
+        "empfehlung": "Halten"
       },
       {
         "wertpapier": "NextEra Energy",
         "isin": "US65339F1012",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 26.41,
         "dividendenrendite": 3.89,
         "umsatzwachstum_yoy": 2.6,
@@ -275,7 +275,7 @@
       {
         "wertpapier": "Tesla",
         "isin": "US88160R1014",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 37.56,
         "dividendenrendite": 0.52,
         "umsatzwachstum_yoy": 13.87,
@@ -285,12 +285,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 8.56
+        "aktueller_kurs": 8.844
       },
       {
         "wertpapier": "Gilat Satellite",
         "isin": "IL0010825102",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 22.59,
         "dividendenrendite": 1.28,
         "umsatzwachstum_yoy": 23.09,
@@ -307,31 +307,31 @@
       {
         "wertpapier": "MTU Aero Engines",
         "isin": "DE000A0D9PT0",
-        "begruendung": "Profitabler Instandhaltungsmarkt, starkes Wachstum.",
+        "begruendung": "Rekordauftragsbestand durch MRO-Boom; hohe Bewertung bereits eingepreist.",
         "kgv": "30",
         "dividendenrendite": 1.3,
         "umsatzwachstum_yoy": 15.64,
         "gewinnwachstum_yoy": 30.83,
         "eigenkapitalquote": 20.15,
         "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-06",
-        "aktueller_kurs": 375.9,
-        "empfehlung": "Kaufen"
+        "risiko": "Niedrig",
+        "datum": "2026-07-07",
+        "aktueller_kurs": 376.3,
+        "empfehlung": "Halten"
       },
       {
         "wertpapier": "Safran",
         "isin": "FR0000073272",
-        "begruendung": "Dominante Marktposition bei Triebwerken.",
+        "begruendung": "Starker Auftragsrückstau in Triebwerken; hohe Marge, RSI überkauft.",
         "kgv": "32",
         "dividendenrendite": 1.1,
         "umsatzwachstum_yoy": 1.71,
         "gewinnwachstum_yoy": 35.38,
         "eigenkapitalquote": 56.44,
         "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-06",
-        "aktueller_kurs": 357.7,
+        "risiko": "Niedrig",
+        "datum": "2026-07-07",
+        "aktueller_kurs": 357.1,
         "empfehlung": "Halten"
       },
       {
@@ -362,22 +362,22 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 310.4
+        "aktueller_kurs": 311.2
       },
       {
         "wertpapier": "Leonardo",
         "isin": "IT0003856405",
-        "begruendung": "Widerstandszone nicht durchbrochen, Trendumkehr eingeleitet.",
+        "begruendung": "Starkes Umsatzwachstum durch europäische Rüstungsaufträge, diversifiziertes Portfolio.",
         "kgv": 27.44,
         "dividendenrendite": 3.08,
         "umsatzwachstum_yoy": 0.27,
         "gewinnwachstum_yoy": 10.63,
         "eigenkapitalquote": 48.94,
         "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-06",
-        "aktueller_kurs": 55.15,
-        "empfehlung": "Halten"
+        "risiko": "Mittel",
+        "datum": "2026-07-07",
+        "aktueller_kurs": 54.92,
+        "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Airbus SE",
@@ -392,27 +392,27 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 210.05
+        "aktueller_kurs": 209.4
       },
       {
         "wertpapier": "Lockheed Martin",
         "isin": "US5398301094",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Stabile US-Verteidigungsaufträge; Kurs auf Kaufkursniveau, Dividendenstärke.",
         "kgv": 15.12,
         "dividendenrendite": 0.67,
         "umsatzwachstum_yoy": 24.56,
         "gewinnwachstum_yoy": 16.38,
         "eigenkapitalquote": 44.1,
-        "bewertung": "Attraktiv",
+        "bewertung": "Neutral",
         "risiko": "Niedrig",
-        "datum": "2026-07-06",
-        "empfehlung": "Kaufen",
+        "datum": "2026-07-07",
+        "empfehlung": "Halten",
         "aktueller_kurs": 545.91
       },
       {
         "wertpapier": "General Dynamics",
         "isin": "US3695501086",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 24.85,
         "dividendenrendite": 3.07,
         "umsatzwachstum_yoy": -0.35,
@@ -427,24 +427,24 @@
       {
         "wertpapier": "Nvidia",
         "isin": "US67066G1040",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Fundamentalstärke ungebrochen (KI-Infrastruktur), Kurs kurzfristig unter SMA50 – Halten.",
         "kgv": 36.36,
         "dividendenrendite": 1.27,
         "umsatzwachstum_yoy": 22.66,
         "gewinnwachstum_yoy": 4.15,
         "eigenkapitalquote": 45.94,
         "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-06",
+        "risiko": "Mittel",
+        "datum": "2026-07-07",
         "empfehlung": "Halten",
-        "aktueller_kurs": 171.22
+        "aktueller_kurs": 171.96
       }
     ],
     "Satellitentechnik": [
       {
         "wertpapier": "OHB",
         "isin": "DE0005936124",
-        "begruendung": "Profitiert von \u00f6ffentlicher Raumfahrt-Nachfrage.",
+        "begruendung": "Profitiert von öffentlicher Raumfahrt-Nachfrage.",
         "kgv": "20",
         "dividendenrendite": 1.0,
         "umsatzwachstum_yoy": 23.81,
@@ -454,7 +454,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 285.0
+        "aktueller_kurs": 289.5
       },
       {
         "wertpapier": "SES",
@@ -469,27 +469,27 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 8.15
+        "aktueller_kurs": 8.11
       },
       {
         "wertpapier": "Eutelsat",
         "isin": "FR0010221234",
-        "begruendung": "Schrumpfender Kernmarkt, Strukturprobleme.",
+        "begruendung": "Abwärtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten.",
         "kgv": "8",
         "dividendenrendite": 5.0,
         "umsatzwachstum_yoy": 25.14,
         "gewinnwachstum_yoy": 17.74,
         "eigenkapitalquote": 46.36,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-06",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 2.555
+        "bewertung": "Spekulativ",
+        "risiko": "Hoch",
+        "datum": "2026-07-07",
+        "empfehlung": "Verkaufen",
+        "aktueller_kurs": 2.55
       },
       {
         "wertpapier": "Maxar",
         "isin": "US57778K1051",
-        "begruendung": "Von der B\u00f6rse genommen.",
+        "begruendung": "Von der Börse genommen.",
         "kgv": "-",
         "dividendenrendite": 4.4,
         "umsatzwachstum_yoy": 25.69,
@@ -513,7 +513,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 210.05
+        "aktueller_kurs": 209.4
       },
       {
         "wertpapier": "Rocket Lab",
@@ -548,7 +548,7 @@
       {
         "wertpapier": "Boeing",
         "isin": "US0970231058",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 21.63,
         "dividendenrendite": 4.27,
         "umsatzwachstum_yoy": 5.41,
@@ -563,7 +563,7 @@
       {
         "wertpapier": "Tesla",
         "isin": "US88160R1014",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 48.03,
         "dividendenrendite": 0.7,
         "umsatzwachstum_yoy": 1.35,
@@ -573,12 +573,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 8.56
+        "aktueller_kurs": 8.844
       },
       {
         "wertpapier": "Microsoft",
         "isin": "US5949181045",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 17.67,
         "dividendenrendite": 2.4,
         "umsatzwachstum_yoy": 16.16,
@@ -588,7 +588,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 6.983
+        "aktueller_kurs": 6.943
       }
     ],
     "Technologie": [
@@ -605,27 +605,27 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 140.02
+        "aktueller_kurs": 140.06
       },
       {
         "wertpapier": "Infineon",
         "isin": "DE0006231004",
-        "begruendung": "Attraktive Bewertung, starke Nachfrage im Automotive-Sektor.",
+        "begruendung": "Erholung im Halbleiterzyklus; Kurs über SMA50 und SMA200, leichter Verlust noch aufholbar.",
         "kgv": "18",
         "dividendenrendite": 1.2,
         "umsatzwachstum_yoy": 19.85,
         "gewinnwachstum_yoy": 22.95,
         "eigenkapitalquote": 29.15,
         "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-06",
-        "aktueller_kurs": 77.03,
+        "risiko": "Mittel",
+        "datum": "2026-07-07",
+        "aktueller_kurs": 77.21,
         "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "ASML",
         "isin": "NL0010273215",
-        "begruendung": "Monopolartige Stellung, technologisch f\u00fchrend.",
+        "begruendung": "Monopolartige Stellung, technologisch führend.",
         "kgv": "35",
         "dividendenrendite": 0.8,
         "umsatzwachstum_yoy": 7.18,
@@ -635,12 +635,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 1620.6
+        "aktueller_kurs": 1628.4
       },
       {
         "wertpapier": "TeamViewer",
         "isin": "DE000A2YN900",
-        "begruendung": "Abw\u00e4rtstrend seit Monaten, keine Anzeichen einer Wende.",
+        "begruendung": "Abwärtstrend seit Monaten, keine Anzeichen einer Wende.",
         "kgv": 35.14,
         "dividendenrendite": 4.64,
         "umsatzwachstum_yoy": 29.73,
@@ -650,12 +650,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 5.325
+        "aktueller_kurs": 5.35
       },
       {
         "wertpapier": "Delivery Hero",
         "isin": "DE000A2E4K43",
-        "begruendung": "Spekulative Seitw\u00e4rtsphase, hoher charttechnischer Druck.",
+        "begruendung": "Spekulative Seitwärtsphase, hoher charttechnischer Druck.",
         "kgv": 31.52,
         "dividendenrendite": 3.12,
         "umsatzwachstum_yoy": 3.75,
@@ -665,12 +665,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 36.63
+        "aktueller_kurs": 36.73
       },
       {
         "wertpapier": "Dt. Telekom",
         "isin": "DE0005557508",
-        "begruendung": "Defensive St\u00e4rke, technischer Ausbruch \u00fcber Widerstandsbereich.",
+        "begruendung": "Defensive Stärke, technischer Ausbruch über Widerstandsbereich.",
         "kgv": 22.78,
         "dividendenrendite": 4.61,
         "umsatzwachstum_yoy": 5.37,
@@ -680,12 +680,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 25.37
+        "aktueller_kurs": 25.44
       },
       {
         "wertpapier": "Aixtron SE",
         "isin": "DE000A0WMPJ6",
-        "begruendung": "Hohe Volatilit\u00e4t, kurzfristige Erholungschancen, langfristig instabil.",
+        "begruendung": "Hohe Volatilität, kurzfristige Erholungschancen, langfristig instabil.",
         "kgv": 19.21,
         "dividendenrendite": 4.31,
         "umsatzwachstum_yoy": -3.57,
@@ -695,12 +695,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-06",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 49.76
+        "aktueller_kurs": 50.02
       },
       {
         "wertpapier": "Meta Platforms",
         "isin": "US30303M1027",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 49.0,
         "dividendenrendite": 3.7,
         "umsatzwachstum_yoy": 17.9,
@@ -710,12 +710,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-06",
         "empfehlung": "Halten",
-        "aktueller_kurs": 35.205
+        "aktueller_kurs": 35.595
       },
       {
         "wertpapier": "NextEra Energy",
         "isin": "US65339F1012",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 18.14,
         "dividendenrendite": 1.51,
         "umsatzwachstum_yoy": 20.7,
@@ -730,7 +730,7 @@
       {
         "wertpapier": "Dassault Aviation",
         "isin": "FR0014004L86",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 16.11,
         "dividendenrendite": 0.43,
         "umsatzwachstum_yoy": 10.94,
@@ -740,22 +740,22 @@
         "risiko": "Niedrig",
         "datum": "2026-07-06",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 310.4
+        "aktueller_kurs": 311.2
       },
       {
         "wertpapier": "Nvidia",
         "isin": "US67066G1040",
-        "begruendung": "Monopolartige Stellung im KI-Chipmarkt mit extrem hohen Margen.",
+        "begruendung": "Fundamentalstärke ungebrochen (KI-Infrastruktur), Kurs kurzfristig unter SMA50 – Halten.",
         "kgv": "45",
         "dividendenrendite": 0.1,
         "umsatzwachstum_yoy": 120.5,
         "gewinnwachstum_yoy": 150.2,
         "eigenkapitalquote": 65.4,
-        "bewertung": "Moderat",
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
-        "datum": "2026-07-06",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 171.22
+        "datum": "2026-07-07",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 171.96
       }
     ]
   }

@@ -1,130 +1,55 @@
 {
-  "generated_at": "2026-07-06 09:50",
+  "generated_at": "2026-07-07 09:10",
   "scores": {
-    "DE0005557508": {
-      "sentiment_score": 2,
+    "IT0003856405": {
+      "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "DE0005936124": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "DE0006231004": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Gemischte News."
-    },
-    "DE0007164600": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "DE000A0D6554": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
+      "begruendung": "Keine spezifischen Leonardo-Meldungen; allg. positiver Rüstungssektor-Grundton durch Verteidigungsnachfrage."
     },
     "DE000A0D9PT0": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
+      "begruendung": "MTU: Kaufzeitpunkt-Artikel, Dividende €3.60 bestätigt, Q1-Earnings-Highlights positiv, Gewinnwachstum bestätigt."
     },
-    "DE000A0DJ6J9": {
-      "sentiment_score": 2,
+    "FR0000073272": {
+      "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
+      "begruendung": "Safran: Keine spezifischen Nachrichten; allg. Luftfahrtsektor-Stimmung durch 'Bestes Quartal seit Jahren' leicht positiv."
     },
     "DE000ENER6Y0": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "FR0000073272": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Gemischte News."
+      "begruendung": "Siemens Energy sichert Langzeit-Servicevertrag in Oman – starkes Auftragszeichen; Bewertung diskontiert auf Cash-Flow-Basis."
     },
     "FR0000121329": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "FR0010221234": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "FR0014004L86": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Gemischte News."
+      "begruendung": "Thales: Nur generische Marktnachrichten, keine spezifischen Thales-Meldungen – neutrales Sentiment."
     },
-    "GB00B63H8491": {
+    "DE0006231004": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "IL0010825102": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "IT0003856405": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "NL0000235190": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "NL0010273215": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Gemischte News."
-    },
-    "US0970231058": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Gemischte News."
-    },
-    "US5398301094": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "US57778K1051": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Positive Impulse durch aktuelle News."
-    },
-    "US5949181045": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Gemischte News."
-    },
-    "US65339F1012": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Gemischte News."
+      "begruendung": "Infineon: US-ITC bannt GaN-Konkurrenz Innoscience vom US-Markt (positiv); €570m Akquisition abgeschlossen (Wachstum)."
     },
     "US67066G1040": {
+      "sentiment_score": 1,
+      "veto": false,
+      "begruendung": "Nvidia: Allg. KI-Aktie auf All-Time-High-Bericht – indirekt positiv für den Sektor; kein spezifisches Nvidia-Risiko."
+    },
+    "US5398301094": {
+      "sentiment_score": 3,
+      "veto": false,
+      "begruendung": "Lockheed Martin: $142.9M Air Force Contract gemeldet; Verteidigungsaktien-Treiber analysiert; US bricht Chinas Seltene-Erden-Dominanz (positiv für Defense)."
+    },
+    "DE000A0DJ6J9": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Gemischte News."
+      "begruendung": "SMA Solar: Keine relevanten SMA-spezifischen Meldungen; generische Marktartikel ohne Sektorbezug."
     },
-    "US72703X1063": {
-      "sentiment_score": -2,
-      "veto": true,
-      "begruendung": "Negative Schlagzeilen belasten."
-    },
-    "US75513E1010": {
-      "sentiment_score": 0,
+    "FR0010221234": {
+      "sentiment_score": -1,
       "veto": false,
-      "begruendung": "Gemischte News."
+      "begruendung": "Eutelsat: Keine spezifischen News; Fundamentaldruck (Verschuldung, LEO-Integration) drückt Grundstimmung leicht negativ."
     }
   }
 }

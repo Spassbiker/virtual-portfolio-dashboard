@@ -1,57 +1,41 @@
 {
-  "generated_at": "2026-07-06 09:49",
+  "generated_at": "2026-07-07 09:04",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [
     {
-      "datum": "2026-07-06",
-      "typ": "Kauf",
-      "isin": "US5398301094",
-      "wertpapier": "Lockheed Martin",
-      "stueck": 1,
-      "kurs": 545.91,
-      "gebuehr": 5.0,
-      "steuern": 0.0,
-      "gewinn_verlust": 0.0,
-      "gesamt": 550.91,
-      "notiz": "Neukauf (Score=18)",
-      "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+1(62), MACD+2, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(16%); KI-Sentiment=2) | Chart: Konsolidierung über dem SMA 200, langfristig positiv. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Positive Impulse durch aktuelle News."
-    },
-    {
-      "datum": "2026-07-06",
-      "typ": "Kauf",
-      "isin": "DE000A0DJ6J9",
-      "wertpapier": "SMA Solar",
-      "stueck": 5,
-      "kurs": 55.35,
-      "gebuehr": 5.0,
-      "steuern": 0.0,
-      "gewinn_verlust": 0.0,
-      "gesamt": 281.75,
-      "notiz": "Neukauf (Score=18)",
-      "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+2(48), MACD+2, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+1, GW+2(21%); KI-Sentiment=2) | Chart: Konsolidierung über dem SMA 200, langfristig positiv. | Funda: Deutlicher Abwärtstrend, RSI im überverkauften Bereich, keine Bodenbildung. | KI: Positive Impulse durch aktuelle News."
-    },
-    {
-      "datum": "2026-07-06",
-      "typ": "Kauf",
+      "datum": "2026-07-07",
+      "typ": "Verkauf",
       "isin": "FR0010221234",
       "wertpapier": "Eutelsat",
       "stueck": 9,
-      "kurs": 2.535,
+      "kurs": 2.55,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -4.87,
+      "gesamt": 17.95,
+      "notiz": "Strategischer Verkauf (Explizites Verkaufen-Signal (Score=9))",
+      "begruendung": "Explizites Verkaufen-Signal (Score=9) | Score=9 (Chart=7: Empf.+3, RSI+2(45), MACD+2; Funda=3: Empf.+3, Risiko-1, GW+1(18%); KI-Sentiment=-1) | Chart: Unklare Trendlage bei Kurs 2.55, SMA50 2.95, SMA200 2.63. | Funda: Abwärtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten. | KI: Eutelsat: Keine spezifischen News; Fundamentaldruck (Verschuldung, LEO-Integration) drückt Grundstimmung leicht negativ."
+    },
+    {
+      "datum": "2026-07-07",
+      "typ": "Kauf",
+      "isin": "LU0088087324",
+      "wertpapier": "SES",
+      "stueck": 1,
+      "kurs": 8.11,
       "gebuehr": 5.0,
       "steuern": 0.0,
       "gewinn_verlust": 0.0,
-      "gesamt": 27.82,
-      "notiz": "Neukauf (Score=16)",
-      "begruendung": "Score=16 (Chart=7: Empf.+3, RSI+2(45), MACD+2; Funda=7: Empf.+3, Bew.+2, Risiko+1, GW+1(18%); KI-Sentiment=2) | Chart: Kurs schwankt unter dem SMA 200, weiterhin neutrale bis negative Tendenz. | Funda: Schrumpfender Kernmarkt, Strukturprobleme. | KI: Positive Impulse durch aktuelle News."
+      "gesamt": 13.11,
+      "notiz": "Neukauf (Score=13)",
+      "begruendung": "Score=13 (Chart=10: Empf.+3, Trend+2, RSI+1(57), MACD+2, SMA50+1, SMA200+1; Funda=3: Bew.+2, Risiko+2, GW-1(-8%)) | Chart: Klarer Aufwärtstrend: Kurs (8.11) > SMA50 (7.88) > SMA200 (6.58), Kaufsignal intakt. | Funda: Dividendenwert mit begrenztem Wachstum."
     }
   ],
   "zusammenfassung": [
-    "KI-Veto: Kauf von Planet Labs (US72703X1063) blockiert. Negative Schlagzeilen belasten.",
-    "Kauf: 1x Lockheed Martin (US5398301094) zu 545.91 EUR, Score=18, Budget=2000€.",
-    "Kauf: 5x SMA Solar (DE000A0DJ6J9) zu 55.35 EUR, Score=18, Budget=2000€.",
-    "Kauf: 9x Eutelsat (FR0010221234) zu 2.54 EUR, Score=16, Budget=1800€."
+    "Strategischer Verkauf: 9x Eutelsat (FR0010221234) zu 2.55 EUR. Explizites Verkaufen-Signal (Score=9).",
+    "Kauf: 1x SES (LU0088087324) zu 8.11 EUR, Score=13, Budget=1500€."
   ],
-  "resultierender_barbestand": 0.43,
-  "resultierender_portfoliowert": 10581.38,
-  "resultierendes_gesamtvermoegen": 10581.81
+  "resultierender_barbestand": 5.27,
+  "resultierender_portfoliowert": 10646.49,
+  "resultierendes_gesamtvermoegen": 10651.76
 }
