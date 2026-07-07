@@ -1,55 +1,55 @@
 {
-  "generated_at": "2026-07-07 09:10",
+  "generated_at": "2026-07-07 09:05",
   "scores": {
-    "IT0003856405": {
-      "sentiment_score": 1,
-      "veto": false,
-      "begruendung": "Keine spezifischen Leonardo-Meldungen; allg. positiver Rüstungssektor-Grundton durch Verteidigungsnachfrage."
-    },
-    "DE000A0D9PT0": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "MTU: Kaufzeitpunkt-Artikel, Dividende €3.60 bestätigt, Q1-Earnings-Highlights positiv, Gewinnwachstum bestätigt."
-    },
-    "FR0000073272": {
-      "sentiment_score": 1,
-      "veto": false,
-      "begruendung": "Safran: Keine spezifischen Nachrichten; allg. Luftfahrtsektor-Stimmung durch 'Bestes Quartal seit Jahren' leicht positiv."
-    },
     "DE000ENER6Y0": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Siemens Energy sichert Langzeit-Servicevertrag in Oman – starkes Auftragszeichen; Bewertung diskontiert auf Cash-Flow-Basis."
-    },
-    "FR0000121329": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Thales: Nur generische Marktnachrichten, keine spezifischen Thales-Meldungen – neutrales Sentiment."
-    },
-    "DE0006231004": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Infineon: US-ITC bannt GaN-Konkurrenz Innoscience vom US-Markt (positiv); €570m Akquisition abgeschlossen (Wachstum)."
-    },
-    "US67066G1040": {
-      "sentiment_score": 1,
-      "veto": false,
-      "begruendung": "Nvidia: Allg. KI-Aktie auf All-Time-High-Bericht – indirekt positiv für den Sektor; kein spezifisches Nvidia-Risiko."
-    },
-    "US5398301094": {
-      "sentiment_score": 3,
-      "veto": false,
-      "begruendung": "Lockheed Martin: $142.9M Air Force Contract gemeldet; Verteidigungsaktien-Treiber analysiert; US bricht Chinas Seltene-Erden-Dominanz (positiv für Defense)."
+      "begruendung": "Siemens Energy gewinnt langfristige Oman-Stromverträge – klar positives Signal. Bewertungsdiskussion neutral."
     },
     "DE000A0DJ6J9": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "SMA Solar: Keine relevanten SMA-spezifischen Meldungen; generische Marktartikel ohne Sektorbezug."
+      "begruendung": "SMA Solar: Keine spezifischen News, allgemeine Solarmarkt-Nachrichten neutral."
     },
-    "FR0010221234": {
+    "IT0003856405": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Leonardo SpA: Headlines weitgehend nicht relevant (Krypto, Mining). Kein konkreter Impuls."
+    },
+    "FR0000121329": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Thales SA: Keine spezifischen Headlines. Rüstungsmarkt allgemein stabil."
+    },
+    "DE000A0D9PT0": {
+      "sentiment_score": 1,
+      "veto": false,
+      "begruendung": "MTU: Dividendenankündigung (3,60 EUR), Q1-Earnings-Highlights leicht positiv. Kaufzeitpunkt-Analyse neutral."
+    },
+    "FR0000073272": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Safran: Headlines nicht direkt relevant (Embraer-Beteiligung, Quantencomputing). Kein klarer Impuls."
+    },
+    "US5398301094": {
+      "sentiment_score": 2,
+      "veto": false,
+      "begruendung": "Lockheed Martin: $142.9M Air Force Vertrag + Defense-Rally-Artikel positiv. US-Seltenerd-Strategie stützt Sektor."
+    },
+    "DE0006231004": {
+      "sentiment_score": -2,
+      "veto": true,
+      "begruendung": "Infineon: US-ITC bestätigt Importverbot – signifikantes regulatorisches Risiko. Veto gegen Aufstockung. ams-Osram-Akquisition langfristig positiv, kurzfristig überschattet."
+    },
+    "US67066G1040": {
       "sentiment_score": -1,
       "veto": false,
-      "begruendung": "Eutelsat: Keine spezifischen News; Fundamentaldruck (Verschuldung, LEO-Integration) drückt Grundstimmung leicht negativ."
+      "begruendung": "Nvidia: Kyber-Rack-Verzögerung bis 2028 gibt Konkurrenten Chance – leicht negativ. Best-Quarter-News kompensiert teilweise."
+    },
+    "LU0088087324": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "SES Satellite: Headlines beziehen sich auf SES AI (anderes Unternehmen). Keine relevanten News für SES SA."
     }
   }
 }

@@ -4,7 +4,7 @@
       {
         "wertpapier": "Siemens Energy",
         "isin": "DE000ENER6Y0",
-        "begruendung": "Starkes Umsatz- und Gewinnwachstum dank Energiewende-Infrastruktur; intakter Aufwärtstrend.",
+        "begruendung": "Oman-Vertragsgewinn bestätigt starkes Wachstum; Energiewende-Infrastruktur treibt Umsatz. Aufwärtstrend intakt.",
         "kgv": "22",
         "dividendenrendite": 1.1,
         "umsatzwachstum_yoy": 29.44,
@@ -397,7 +397,7 @@
       {
         "wertpapier": "Lockheed Martin",
         "isin": "US5398301094",
-        "begruendung": "Stabile US-Verteidigungsaufträge; Kurs auf Kaufkursniveau, Dividendenstärke.",
+        "begruendung": "$142.9M Air Force Vertrag neu. Starke US-Verteidigungsaufträge; strategische Dividendenstärke.",
         "kgv": 15.12,
         "dividendenrendite": 0.67,
         "umsatzwachstum_yoy": 24.56,
@@ -406,7 +406,7 @@
         "bewertung": "Neutral",
         "risiko": "Niedrig",
         "datum": "2026-07-07",
-        "empfehlung": "Halten",
+        "empfehlung": "Kaufen",
         "aktueller_kurs": 545.91
       },
       {
@@ -427,7 +427,7 @@
       {
         "wertpapier": "Nvidia",
         "isin": "US67066G1040",
-        "begruendung": "Fundamentalstärke ungebrochen (KI-Infrastruktur), Kurs kurzfristig unter SMA50 – Halten.",
+        "begruendung": "Kyber-Rack-Verzögerung bis 2028 leicht negativ; fundamentale KI-Stärke bleibt ungebrochen.",
         "kgv": 36.36,
         "dividendenrendite": 1.27,
         "umsatzwachstum_yoy": 22.66,
@@ -467,7 +467,7 @@
         "eigenkapitalquote": 21.31,
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
-        "datum": "2026-07-06",
+        "datum": "2026-07-07",
         "empfehlung": "Halten",
         "aktueller_kurs": 8.11
       },
@@ -610,7 +610,7 @@
       {
         "wertpapier": "Infineon",
         "isin": "DE0006231004",
-        "begruendung": "Erholung im Halbleiterzyklus; Kurs über SMA50 und SMA200, leichter Verlust noch aufholbar.",
+        "begruendung": "ITC-Importverbot-News belastet kurzfristig; Infineon schließt ams-Osram-Akquisition ab (positiv langfristig). Risiko erhöht.",
         "kgv": "18",
         "dividendenrendite": 1.2,
         "umsatzwachstum_yoy": 19.85,
@@ -620,7 +620,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-07",
         "aktueller_kurs": 77.21,
-        "empfehlung": "Kaufen"
+        "empfehlung": "Halten"
       },
       {
         "wertpapier": "ASML",
@@ -745,7 +745,7 @@
       {
         "wertpapier": "Nvidia",
         "isin": "US67066G1040",
-        "begruendung": "Fundamentalstärke ungebrochen (KI-Infrastruktur), Kurs kurzfristig unter SMA50 – Halten.",
+        "begruendung": "Kyber-Rack-Verzögerung bis 2028 leicht negativ; fundamentale KI-Stärke bleibt ungebrochen.",
         "kgv": "45",
         "dividendenrendite": 0.1,
         "umsatzwachstum_yoy": 120.5,

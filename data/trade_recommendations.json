@@ -1,41 +1,57 @@
 {
-  "generated_at": "2026-07-07 09:04",
+  "generated_at": "2026-07-07 09:08",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [
     {
       "datum": "2026-07-07",
       "typ": "Verkauf",
-      "isin": "FR0010221234",
-      "wertpapier": "Eutelsat",
-      "stueck": 9,
-      "kurs": 2.55,
+      "isin": "DE0006231004",
+      "wertpapier": "Infineon",
+      "stueck": 18,
+      "kurs": 77.21,
       "gebuehr": 5.0,
       "steuern": 0.0,
-      "gewinn_verlust": -4.87,
-      "gesamt": 17.95,
-      "notiz": "Strategischer Verkauf (Explizites Verkaufen-Signal (Score=9))",
-      "begruendung": "Explizites Verkaufen-Signal (Score=9) | Score=9 (Chart=7: Empf.+3, RSI+2(45), MACD+2; Funda=3: Empf.+3, Risiko-1, GW+1(18%); KI-Sentiment=-1) | Chart: Unklare Trendlage bei Kurs 2.55, SMA50 2.95, SMA200 2.63. | Funda: Abwärtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten. | KI: Eutelsat: Keine spezifischen News; Fundamentaldruck (Verschuldung, LEO-Integration) drückt Grundstimmung leicht negativ."
+      "gewinn_verlust": -85.28,
+      "gesamt": 1384.78,
+      "notiz": "Rebalancing (Kapitalbeschaffung für Neukäufe)",
+      "begruendung": "Rebalancing | Score=11 (Chart=8: Empf.+3, Trend+2, RSI+2(50), MACD-1, SMA50+1, SMA200+1; Funda=5: Bew.+2, Risiko+1, GW+2(23%); KI-Sentiment=-2) | Chart: Kurs (77.21) > SMA50 (72.96) > SMA200 (47.23). RSI und MACD positiv. ACHTUNG: ITC-Importverbot-News beobachten. | Funda: ITC-Importverbot-News belastet kurzfristig; Infineon schließt ams-Osram-Akquisition ab (positiv langfristig). Risiko erhöht. | KI: Infineon: US-ITC bestätigt Importverbot – signifikantes regulatorisches Risiko. Veto gegen Aufstockung. ams-Osram-Akquisition langfristig positiv, kurzfristig überschattet."
     },
     {
       "datum": "2026-07-07",
       "typ": "Kauf",
-      "isin": "LU0088087324",
-      "wertpapier": "SES",
-      "stueck": 1,
-      "kurs": 8.11,
+      "isin": "US0970231058",
+      "wertpapier": "Boeing",
+      "stueck": 5,
+      "kurs": 234.54,
       "gebuehr": 5.0,
       "steuern": 0.0,
       "gewinn_verlust": 0.0,
-      "gesamt": 13.11,
-      "notiz": "Neukauf (Score=13)",
-      "begruendung": "Score=13 (Chart=10: Empf.+3, Trend+2, RSI+1(57), MACD+2, SMA50+1, SMA200+1; Funda=3: Bew.+2, Risiko+2, GW-1(-8%)) | Chart: Klarer Aufwärtstrend: Kurs (8.11) > SMA50 (7.88) > SMA200 (6.58), Kaufsignal intakt. | Funda: Dividendenwert mit begrenztem Wachstum."
+      "gesamt": 1177.7,
+      "notiz": "Neukauf (Score=17)",
+      "begruendung": "Score=17 (Chart=9: Empf.+3, Trend+2, RSI+1(63), MACD+1, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+1, GW+2(20%)) | Chart: Klarer Aufwärtstrend: Kurs (203.65) > SMA50 (192.91) > SMA200 (187.59), Kaufsignal intakt. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse."
+    },
+    {
+      "datum": "2026-07-07",
+      "typ": "Kauf",
+      "isin": "US72703X1063",
+      "wertpapier": "Planet Labs",
+      "stueck": 7,
+      "kurs": 27.8,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 199.6,
+      "notiz": "Neukauf (Score=15)",
+      "begruendung": "Score=15 (Chart=10: Empf.+3, Trend+2, RSI+2(45), MACD+1, SMA50+1, SMA200+1; Funda=5: Empf.+3, Bew.+2, Risiko-1, GW+1(5%)) | Chart: Klarer Aufwärtstrend: Kurs (31.38) > SMA50 (26.60) > SMA200 (25.20), Kaufsignal intakt. | Funda: Hohe Cashburn-Rate, intensiver Wettbewerb."
     }
   ],
   "zusammenfassung": [
-    "Strategischer Verkauf: 9x Eutelsat (FR0010221234) zu 2.55 EUR. Explizites Verkaufen-Signal (Score=9).",
-    "Kauf: 1x SES (LU0088087324) zu 8.11 EUR, Score=13, Budget=1500€."
+    "KI-Veto: Kauf von Infineon (DE0006231004) blockiert. Infineon: US-ITC bestätigt Importverbot – signifikantes regulatorisches Risiko. Veto gegen Aufstockung. ams-Osram-Akquisition langfristig positiv, kurzfristig überschattet.",
+    "Rebalancing-Verkauf: 18x Infineon (DE0006231004) zu 77.21 EUR (Score=11).",
+    "Kauf: 5x Boeing (US0970231058) zu 234.54 EUR, Score=17, Budget=1900€.",
+    "Kauf: 7x Planet Labs (US72703X1063) zu 27.80 EUR, Score=15, Budget=1700€."
   ],
-  "resultierender_barbestand": 5.27,
-  "resultierender_portfoliowert": 10646.49,
-  "resultierendes_gesamtvermoegen": 10651.76
+  "resultierender_barbestand": 12.75,
+  "resultierender_portfoliowert": 10624.01,
+  "resultierendes_gesamtvermoegen": 10636.76
 }
