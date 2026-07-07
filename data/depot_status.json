@@ -2,18 +2,18 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 212.35,
-    "portfoliowert": 10193.51,
-    "gesamtvermoegen": 10405.86,
+    "portfoliowert": 9880.33,
+    "gesamtvermoegen": 10092.68,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 54.92,
+        "boersenkurs": 53.84,
         "investiert": 1484.16,
-        "boersenwert": 1757.44,
-        "gewinn_verlust": 273.28,
+        "boersenwert": 1722.88,
+        "gewinn_verlust": 238.72,
         "score": 16
       },
       {
@@ -21,10 +21,10 @@
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 376.3,
+        "boersenkurs": 366.8,
         "investiert": 1453.2,
-        "boersenwert": 1505.2,
-        "gewinn_verlust": 52.0,
+        "boersenwert": 1467.2,
+        "gewinn_verlust": 14.0,
         "score": 15
       },
       {
@@ -32,10 +32,10 @@
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 357.1,
+        "boersenkurs": 347.6,
         "investiert": 1380.0,
-        "boersenwert": 1428.4,
-        "gewinn_verlust": 48.4,
+        "boersenwert": 1390.4,
+        "gewinn_verlust": 10.4,
         "score": 11
       },
       {
@@ -43,10 +43,10 @@
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 170.44,
+        "boersenkurs": 154.2,
         "investiert": 1492.2,
-        "boersenwert": 1533.96,
-        "gewinn_verlust": 41.76,
+        "boersenwert": 1387.8,
+        "gewinn_verlust": -104.4,
         "score": 21
       },
       {
@@ -54,10 +54,10 @@
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 241.1,
+        "boersenkurs": 237.6,
         "investiert": 224.8,
-        "boersenwert": 241.1,
-        "gewinn_verlust": 16.3,
+        "boersenwert": 237.6,
+        "gewinn_verlust": 12.8,
         "score": 11
       },
       {
@@ -65,10 +65,10 @@
         "wertpapier": "Nvidia",
         "stueck": 10,
         "kaufkurs": 170.9,
-        "boersenkurs": 171.96,
+        "boersenkurs": 168.64,
         "investiert": 1709.0,
-        "boersenwert": 1719.6,
-        "gewinn_verlust": 10.6,
+        "boersenwert": 1686.4,
+        "gewinn_verlust": -22.6,
         "score": 11
       },
       {
@@ -87,10 +87,10 @@
         "wertpapier": "SMA Solar",
         "stueck": 5,
         "kaufkurs": 55.35,
-        "boersenkurs": 57.8,
+        "boersenkurs": 53.9,
         "investiert": 276.75,
-        "boersenwert": 289.0,
-        "gewinn_verlust": 12.25,
+        "boersenwert": 269.5,
+        "gewinn_verlust": -7.25,
         "score": 12
       },
       {
@@ -98,10 +98,10 @@
         "wertpapier": "SES",
         "stueck": 1,
         "kaufkurs": 8.11,
-        "boersenkurs": 8.11,
+        "boersenkurs": 7.85,
         "investiert": 8.11,
-        "boersenwert": 8.11,
-        "gewinn_verlust": 0.0,
+        "boersenwert": 7.85,
+        "gewinn_verlust": -0.26,
         "score": 13
       },
       {
@@ -143,7 +143,7 @@
         "gewinn_verlust": 16.6,
         "gesamt": 1502.62,
         "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
-        "begruendung": "Chartanalyse: Abwärtstrend, unterschreitet wichtige Unterstützungsniveaus. | Fundamentalanalyse: Hohe Cashburn-Rate, intensiver Wettbewerb."
+        "begruendung": "Chartanalyse: Abw\u00e4rtstrend, unterschreitet wichtige Unterst\u00fctzungsniveaus. | Fundamentalanalyse: Hohe Cashburn-Rate, intensiver Wettbewerb."
       },
       {
         "datum": "2026-06-30",
@@ -171,7 +171,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 1497.2,
         "notiz": "Neukauf (Kauf-Signal)",
-        "begruendung": "Chartanalyse: Starke Erholung über SMA 200, hoher RSI-Aufwärtstrend. | Fundamentalanalyse: Starkes Wachstumspotenzial bei Energiewende-Infrastruktur."
+        "begruendung": "Chartanalyse: Starke Erholung \u00fcber SMA 200, hoher RSI-Aufw\u00e4rtstrend. | Fundamentalanalyse: Starkes Wachstumspotenzial bei Energiewende-Infrastruktur."
       },
       {
         "datum": "2026-06-30",
@@ -185,7 +185,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 229.8,
         "notiz": "Neukauf (Kauf-Signal)",
-        "begruendung": "Chartanalyse: Stabiler Aufwärtstrend, GD200 als sichere Basis. | Fundamentalanalyse: Stabiles Wachstum, starke Marktposition."
+        "begruendung": "Chartanalyse: Stabiler Aufw\u00e4rtstrend, GD200 als sichere Basis. | Fundamentalanalyse: Stabiles Wachstum, starke Marktposition."
       },
       {
         "datum": "2026-07-01",
@@ -199,7 +199,7 @@
         "gewinn_verlust": -8.08,
         "gesamt": 1469.0,
         "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
-        "begruendung": "Chartanalyse: Kurzfristige Überhitzung nach starken Rallye, Gewinnmitnahmen empfohlen. | Fundamentalanalyse: Starke Cloud-Transformation, langfristig attraktiv."
+        "begruendung": "Chartanalyse: Kurzfristige \u00dcberhitzung nach starken Rallye, Gewinnmitnahmen empfohlen. | Fundamentalanalyse: Starke Cloud-Transformation, langfristig attraktiv."
       },
       {
         "datum": "2026-07-01",
@@ -227,7 +227,7 @@
         "gewinn_verlust": -5.89,
         "gesamt": 1482.19,
         "notiz": "Strategischer Verkauf",
-        "begruendung": "Signal Verkaufen. Aktueller Trend ist Leichter Abwärtstrend. Signal lautet Verkaufen."
+        "begruendung": "Signal Verkaufen. Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Verkaufen."
       },
       {
         "datum": "2026-07-03",
@@ -269,7 +269,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 550.91,
         "notiz": "Neukauf (Score=18)",
-        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+1(62), MACD+2, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(16%); KI-Sentiment=2) | Chart: Konsolidierung über dem SMA 200, langfristig positiv. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Positive Impulse durch aktuelle News."
+        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+1(62), MACD+2, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(16%); KI-Sentiment=2) | Chart: Konsolidierung \u00fcber dem SMA 200, langfristig positiv. | Funda: Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse. | KI: Positive Impulse durch aktuelle News."
       },
       {
         "datum": "2026-07-06",
@@ -283,7 +283,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 281.75,
         "notiz": "Neukauf (Score=18)",
-        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+2(48), MACD+2, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+1, GW+2(21%); KI-Sentiment=2) | Chart: Konsolidierung über dem SMA 200, langfristig positiv. | Funda: Deutlicher Abwärtstrend, RSI im überverkauften Bereich, keine Bodenbildung. | KI: Positive Impulse durch aktuelle News."
+        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+2(48), MACD+2, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+1, GW+2(21%); KI-Sentiment=2) | Chart: Konsolidierung \u00fcber dem SMA 200, langfristig positiv. | Funda: Deutlicher Abw\u00e4rtstrend, RSI im \u00fcberverkauften Bereich, keine Bodenbildung. | KI: Positive Impulse durch aktuelle News."
       },
       {
         "datum": "2026-07-06",
@@ -311,7 +311,7 @@
         "gewinn_verlust": -4.87,
         "gesamt": 17.95,
         "notiz": "Strategischer Verkauf (Explizites Verkaufen-Signal (Score=9))",
-        "begruendung": "Explizites Verkaufen-Signal (Score=9) | Score=9 (Chart=7: Empf.+3, RSI+2(45), MACD+2; Funda=3: Empf.+3, Risiko-1, GW+1(18%); KI-Sentiment=-1) | Chart: Unklare Trendlage bei Kurs 2.55, SMA50 2.95, SMA200 2.63. | Funda: Abwärtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten. | KI: Eutelsat: Keine spezifischen News; Fundamentaldruck (Verschuldung, LEO-Integration) drückt Grundstimmung leicht negativ."
+        "begruendung": "Explizites Verkaufen-Signal (Score=9) | Score=9 (Chart=7: Empf.+3, RSI+2(45), MACD+2; Funda=3: Empf.+3, Risiko-1, GW+1(18%); KI-Sentiment=-1) | Chart: Unklare Trendlage bei Kurs 2.55, SMA50 2.95, SMA200 2.63. | Funda: Abw\u00e4rtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten. | KI: Eutelsat: Keine spezifischen News; Fundamentaldruck (Verschuldung, LEO-Integration) dr\u00fcckt Grundstimmung leicht negativ."
       },
       {
         "datum": "2026-07-07",
@@ -325,7 +325,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 13.11,
         "notiz": "Neukauf (Score=13)",
-        "begruendung": "Score=13 (Chart=10: Empf.+3, Trend+2, RSI+1(57), MACD+2, SMA50+1, SMA200+1; Funda=3: Bew.+2, Risiko+2, GW-1(-8%)) | Chart: Klarer Aufwärtstrend: Kurs (8.11) > SMA50 (7.88) > SMA200 (6.58), Kaufsignal intakt. | Funda: Dividendenwert mit begrenztem Wachstum."
+        "begruendung": "Score=13 (Chart=10: Empf.+3, Trend+2, RSI+1(57), MACD+2, SMA50+1, SMA200+1; Funda=3: Bew.+2, Risiko+2, GW-1(-8%)) | Chart: Klarer Aufw\u00e4rtstrend: Kurs (8.11) > SMA50 (7.88) > SMA200 (6.58), Kaufsignal intakt. | Funda: Dividendenwert mit begrenztem Wachstum."
       },
       {
         "datum": "2026-07-07",
@@ -339,7 +339,7 @@
         "gewinn_verlust": -80.28,
         "gesamt": 1384.78,
         "notiz": "KI-Veto: ITC-Importverbot + Rebalancing",
-        "begruendung": "ITC-Importverbot bestätigt (US-Gericht). Erhöhtes regulatorisches Risiko. ams-Osram-Akquisition langfristig positiv, kurzfristig überschattet. Verlust realisiert."
+        "begruendung": "ITC-Importverbot best\u00e4tigt (US-Gericht). Erh\u00f6htes regulatorisches Risiko. ams-Osram-Akquisition langfristig positiv, kurzfristig \u00fcberschattet. Verlust realisiert."
       },
       {
         "datum": "2026-07-07",
@@ -353,7 +353,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 1177.7,
         "notiz": "Neukauf (Score=17)",
-        "begruendung": "Klarer Aufwärtstrend (Kurs > SMA50 > SMA200). Luftfahrt-Recovery, starkes Orderbook. Score=17 (Chart=9, Funda=8). Planet Labs Skip: Score=15, Cashburn-Risiko zu hoch."
+        "begruendung": "Klarer Aufw\u00e4rtstrend (Kurs > SMA50 > SMA200). Luftfahrt-Recovery, starkes Orderbook. Score=17 (Chart=9, Funda=8). Planet Labs Skip: Score=15, Cashburn-Risiko zu hoch."
       }
     ]
   }
