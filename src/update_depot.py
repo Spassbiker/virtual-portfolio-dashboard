@@ -68,6 +68,10 @@ SELL_THRESHOLD = 4
 # Stop-Loss: Position verkaufen, wenn der Kurs mehr als X unter dem Kaufkurs
 # liegt — unabhängig vom Score, um Verluste zu begrenzen (Risikomanagement).
 STOP_LOSS_PCT = -0.15
+# Cash-Management: Mindest-Barreserve nie unterschreiten, und keine Mini-Käufe
+# (Gebühren-Drag). Bei 5 € Gebühr wären 100 € Order = 5 % Reibung.
+MIN_CASH_RESERVE = 25.0
+MIN_ORDER_VALUE = 100.0
 
 def get_chart_item(isin):
     if not isin: return None
@@ -138,11 +142,25 @@ def compute_chart_score(isin):
 
     return score, details
 
+# Marker-Texte, die eine Fundamental-Analyse als Platzhalter (keine echten
+# Kennzahlen) ausweisen — solche Einträge dürfen den Score nicht aufblähen.
+_FUNDA_PLACEHOLDER_MARKERS = ("vervollständigung", "ergänzt zur", "platzhalter")
+
+
+def is_funda_placeholder(item):
+    b = (item.get("begruendung") or "").lower()
+    return any(m in b for m in _FUNDA_PLACEHOLDER_MARKERS)
+
+
 def compute_funda_score(isin):
     """Fundamental-Score (max ~9, min ~-7)."""
     item = get_funda_item(isin)
     if not item:
         return 0, []
+    # Platzhalter-Fundamentaldaten neutral werten (keine erfundenen Kennzahlen
+    # ins Scoring einfließen lassen).
+    if is_funda_placeholder(item):
+        return 0, ["Funda=Platzhalter→0"]
     score = 0
     details = []
 
@@ -410,10 +428,15 @@ for isin, ts in unowned_targets:
     price = live_prices[isin]
     stock = isin_to_name.get(isin, isin)
     budget = budget_for_score(ts)
-    budget_for_this = min(budget, current_cash)
+    # Mindest-Barreserve nie unterschreiten.
+    spendable = current_cash - MIN_CASH_RESERVE
+    budget_for_this = min(budget, spendable)
+    if budget_for_this < MIN_ORDER_VALUE + fee_per_trade:
+        continue  # zu wenig freies Kapital für eine sinnvolle Order
     units_to_buy = int((budget_for_this - fee_per_trade) / price)
-    if units_to_buy > 0:
-        total_cost = (units_to_buy * price) + fee_per_trade
+    order_value = units_to_buy * price
+    if units_to_buy > 0 and order_value >= MIN_ORDER_VALUE:
+        total_cost = order_value + fee_per_trade
         current_cash -= total_cost
         positions.append({
             "isin": isin,
