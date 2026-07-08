@@ -2,18 +2,18 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 8.05,
-    "portfoliowert": 9749.91,
-    "gesamtvermoegen": 9757.96,
+    "portfoliowert": 9711.1,
+    "gesamtvermoegen": 9719.15,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 52.85,
+        "boersenkurs": 53.37,
         "investiert": 1484.16,
-        "boersenwert": 1691.2,
-        "gewinn_verlust": 207.04,
+        "boersenwert": 1707.84,
+        "gewinn_verlust": 223.68,
         "score": 15
       },
       {
@@ -21,10 +21,10 @@
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 359.2,
+        "boersenkurs": 355.3,
         "investiert": 1453.2,
-        "boersenwert": 1436.8,
-        "gewinn_verlust": -16.4,
+        "boersenwert": 1421.2,
+        "gewinn_verlust": -32.0,
         "score": 15
       },
       {
@@ -32,10 +32,10 @@
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 335.7,
+        "boersenkurs": 332.5,
         "investiert": 1380.0,
-        "boersenwert": 1342.8,
-        "gewinn_verlust": -37.2,
+        "boersenwert": 1330.0,
+        "gewinn_verlust": -50.0,
         "score": 12
       },
       {
@@ -43,10 +43,10 @@
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 153.16,
+        "boersenkurs": 151.9,
         "investiert": 1492.2,
-        "boersenwert": 1378.44,
-        "gewinn_verlust": -113.76,
+        "boersenwert": 1367.1,
+        "gewinn_verlust": -125.1,
         "score": 17
       },
       {
@@ -54,10 +54,10 @@
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 233.2,
+        "boersenkurs": 233.7,
         "investiert": 224.8,
-        "boersenwert": 233.2,
-        "gewinn_verlust": 8.4,
+        "boersenwert": 233.7,
+        "gewinn_verlust": 8.9,
         "score": 12
       },
       {
@@ -65,10 +65,10 @@
         "wertpapier": "Nvidia",
         "stueck": 10,
         "kaufkurs": 170.9,
-        "boersenkurs": 170.94,
+        "boersenkurs": 173.32,
         "investiert": 1709.0,
-        "boersenwert": 1709.4,
-        "gewinn_verlust": 0.4,
+        "boersenwert": 1733.2,
+        "gewinn_verlust": 24.2,
         "score": 10
       },
       {
@@ -76,10 +76,10 @@
         "wertpapier": "Lockheed Martin",
         "stueck": 1,
         "kaufkurs": 545.91,
-        "boersenkurs": 473.1,
+        "boersenkurs": 464.6,
         "investiert": 545.91,
-        "boersenwert": 473.1,
-        "gewinn_verlust": -72.81,
+        "boersenwert": 464.6,
+        "gewinn_verlust": -81.31,
         "score": 19
       },
       {
@@ -87,10 +87,10 @@
         "wertpapier": "SMA Solar",
         "stueck": 5,
         "kaufkurs": 55.35,
-        "boersenkurs": 55.0,
+        "boersenkurs": 53.85,
         "investiert": 276.75,
-        "boersenwert": 275.0,
-        "gewinn_verlust": -1.75,
+        "boersenwert": 269.25,
+        "gewinn_verlust": -7.5,
         "score": 11
       },
       {
@@ -98,10 +98,10 @@
         "wertpapier": "SES",
         "stueck": 1,
         "kaufkurs": 8.11,
-        "boersenkurs": 7.675,
+        "boersenkurs": 7.875,
         "investiert": 8.11,
-        "boersenwert": 7.67,
-        "gewinn_verlust": -0.44,
+        "boersenwert": 7.88,
+        "gewinn_verlust": -0.23,
         "score": 10
       },
       {
@@ -109,10 +109,10 @@
         "wertpapier": "Boeing",
         "stueck": 5,
         "kaufkurs": 234.54,
-        "boersenkurs": 200.6,
+        "boersenkurs": 196.04,
         "investiert": 1172.7,
-        "boersenwert": 1003.0,
-        "gewinn_verlust": -169.7,
+        "boersenwert": 980.2,
+        "gewinn_verlust": -192.5,
         "score": 19
       },
       {
@@ -120,10 +120,10 @@
         "wertpapier": "Rolls-Royce",
         "stueck": 12,
         "kaufkurs": 16.608,
-        "boersenkurs": 16.608,
+        "boersenkurs": 16.344,
         "investiert": 199.3,
-        "boersenwert": 199.3,
-        "gewinn_verlust": 0.0,
+        "boersenwert": 196.13,
+        "gewinn_verlust": -3.17,
         "score": 16
       }
     ],
