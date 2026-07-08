@@ -23,7 +23,7 @@
         "legacy_unterstuetzung": 140.93,
         "legacy_widerstand": 182.38,
         "legacy_aktueller_kurs": 168.12,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:ENR.DE"
       },
       {
@@ -48,7 +48,7 @@
         "legacy_unterstuetzung": 165.18,
         "legacy_widerstand": 225.71,
         "legacy_aktueller_kurs": 57.82,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:RWE.DE"
       },
       {
@@ -73,7 +73,7 @@
         "legacy_unterstuetzung": 409.38,
         "legacy_widerstand": 506.27,
         "legacy_aktueller_kurs": 19.175,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:EOAN.DE"
       },
       {
@@ -114,7 +114,7 @@
         "legacy_unterstuetzung": 369.59,
         "legacy_widerstand": 463.39,
         "legacy_aktueller_kurs": 60.15,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:S92.DE"
       },
       {
@@ -139,7 +139,7 @@
         "legacy_unterstuetzung": 257.34,
         "legacy_widerstand": 311.09,
         "legacy_aktueller_kurs": 45.52,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:NDX1.DE"
       },
       {
@@ -164,7 +164,7 @@
         "legacy_unterstuetzung": 364.24,
         "legacy_widerstand": 436.92,
         "legacy_aktueller_kurs": 6.941,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:MSF.DE"
       },
       {
@@ -189,7 +189,7 @@
         "legacy_unterstuetzung": 373.94,
         "legacy_widerstand": 475.09,
         "legacy_aktueller_kurs": 314.2,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:ABEA.DE"
       },
       {
@@ -250,7 +250,7 @@
         "legacy_unterstuetzung": 900.9,
         "legacy_widerstand": 1165.87,
         "legacy_aktueller_kurs": 1093.4,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:RHM.DE"
       },
       {
@@ -275,7 +275,7 @@
         "legacy_unterstuetzung": 66.8,
         "legacy_widerstand": 89.28,
         "legacy_aktueller_kurs": 75.58,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:HAG.DE"
       },
       {
@@ -300,7 +300,7 @@
         "legacy_unterstuetzung": 413.06,
         "legacy_widerstand": 500.29,
         "legacy_aktueller_kurs": 206.15,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:AIR.PA"
       },
       {
@@ -325,7 +325,7 @@
         "legacy_unterstuetzung": 12.56,
         "legacy_widerstand": 17.35,
         "legacy_aktueller_kurs": 1980.0,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:BSP.DE"
       },
       {
@@ -367,7 +367,7 @@
         "legacy_unterstuetzung": 41.79,
         "legacy_widerstand": 54.08,
         "legacy_aktueller_kurs": 52.53,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:LDO.MI"
       },
       {
@@ -392,7 +392,7 @@
         "legacy_unterstuetzung": 191.08,
         "legacy_widerstand": 247.28,
         "legacy_aktueller_kurs": 238.2,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:HO.PA"
       },
       {
@@ -434,7 +434,7 @@
         "legacy_unterstuetzung": 10.41,
         "legacy_widerstand": 12.79,
         "legacy_aktueller_kurs": 8.599,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:TL0.DE"
       },
       {
@@ -478,7 +478,7 @@
         "legacy_unterstuetzung": 313.75,
         "legacy_widerstand": 406.03,
         "legacy_aktueller_kurs": 378.6,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:MTX.DE"
       },
       {
@@ -503,7 +503,7 @@
         "legacy_unterstuetzung": 293.25,
         "legacy_widerstand": 379.5,
         "legacy_aktueller_kurs": 356.7,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:SAF.PA"
       },
       {
@@ -528,7 +528,7 @@
         "legacy_unterstuetzung": 14.2,
         "legacy_widerstand": 18.38,
         "legacy_aktueller_kurs": 1497.4,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:RRU.DE"
       },
       {
@@ -553,7 +553,7 @@
         "legacy_unterstuetzung": 384.68,
         "legacy_widerstand": 502.92,
         "legacy_aktueller_kurs": 306.0,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:AM.PA"
       },
       {
@@ -578,7 +578,7 @@
         "legacy_unterstuetzung": 41.79,
         "legacy_widerstand": 54.08,
         "legacy_aktueller_kurs": 52.53,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:LDO.MI"
       },
       {
@@ -603,7 +603,7 @@
         "legacy_unterstuetzung": 433.42,
         "legacy_widerstand": 526.63,
         "legacy_aktueller_kurs": 206.15,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:AIR.PA"
       },
       {
@@ -628,7 +628,7 @@
         "legacy_unterstuetzung": 426.98,
         "legacy_widerstand": 503.54,
         "legacy_aktueller_kurs": 545.91,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:LOM.DE"
       },
       {
@@ -670,7 +670,7 @@
         "legacy_unterstuetzung": 380.02,
         "legacy_widerstand": 445.53,
         "legacy_aktueller_kurs": 171.52,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:NVD.DE"
       }
     ],
@@ -697,7 +697,7 @@
         "legacy_unterstuetzung": 399.54,
         "legacy_widerstand": 554.97,
         "legacy_aktueller_kurs": 297.0,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:OHB.DE"
       },
       {
@@ -722,7 +722,7 @@
         "legacy_unterstuetzung": 378.23,
         "legacy_widerstand": 524.55,
         "legacy_aktueller_kurs": 8.26,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:SESG.PA"
       },
       {
@@ -747,7 +747,7 @@
         "legacy_unterstuetzung": 2.05,
         "legacy_widerstand": 2.65,
         "legacy_aktueller_kurs": 2.542,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:ETL.PA"
       },
       {
@@ -789,7 +789,7 @@
         "legacy_unterstuetzung": 359.84,
         "legacy_widerstand": 457.75,
         "legacy_aktueller_kurs": 206.15,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:AIR.PA"
       },
       {
@@ -831,7 +831,7 @@
         "legacy_unterstuetzung": 23.8,
         "legacy_widerstand": 30.8,
         "legacy_aktueller_kurs": 24.4,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:85H1.DE"
       },
       {
@@ -856,7 +856,7 @@
         "legacy_unterstuetzung": 335.4,
         "legacy_widerstand": 447.35,
         "legacy_aktueller_kurs": 226.49,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:BCO.DE"
       },
       {
@@ -881,7 +881,7 @@
         "legacy_unterstuetzung": 60.93,
         "legacy_widerstand": 81.57,
         "legacy_aktueller_kurs": 8.599,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:TL0.DE"
       },
       {
@@ -906,7 +906,7 @@
         "legacy_unterstuetzung": 100.34,
         "legacy_widerstand": 118.25,
         "legacy_aktueller_kurs": 6.941,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:MSF.DE"
       }
     ],
@@ -933,7 +933,7 @@
         "legacy_unterstuetzung": 113.9,
         "legacy_widerstand": 147.4,
         "legacy_aktueller_kurs": 139.64,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:SAP.DE"
       },
       {
@@ -958,7 +958,7 @@
         "legacy_unterstuetzung": 69.42,
         "legacy_widerstand": 89.84,
         "legacy_aktueller_kurs": 77.38,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:IFX.DE"
       },
       {
@@ -983,7 +983,7 @@
         "legacy_unterstuetzung": 375.97,
         "legacy_widerstand": 511.74,
         "legacy_aktueller_kurs": 1634.4,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:ASML.AS"
       },
       {
@@ -1008,7 +1008,7 @@
         "legacy_unterstuetzung": 240.05,
         "legacy_widerstand": 292.44,
         "legacy_aktueller_kurs": 5.16,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:TMV.DE"
       },
       {
@@ -1033,7 +1033,7 @@
         "legacy_unterstuetzung": 414.67,
         "legacy_widerstand": 543.5,
         "legacy_aktueller_kurs": 36.92,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:DHER.DE"
       },
       {
@@ -1058,7 +1058,7 @@
         "legacy_unterstuetzung": 23.16,
         "legacy_widerstand": 27.62,
         "legacy_aktueller_kurs": 25.14,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:DTE.DE"
       },
       {
@@ -1083,7 +1083,7 @@
         "legacy_unterstuetzung": 343.94,
         "legacy_widerstand": 462.97,
         "legacy_aktueller_kurs": 49.28,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:AIXA.DE"
       },
       {
@@ -1108,7 +1108,7 @@
         "legacy_unterstuetzung": 111.43,
         "legacy_widerstand": 144.54,
         "legacy_aktueller_kurs": 35.345,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:FB2A.DE"
       },
       {
@@ -1150,7 +1150,7 @@
         "legacy_unterstuetzung": 74.03,
         "legacy_widerstand": 93.35,
         "legacy_aktueller_kurs": 306.0,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:AM.PA"
       },
       {
@@ -1175,7 +1175,7 @@
         "legacy_unterstuetzung": 160.0,
         "legacy_widerstand": 185.0,
         "legacy_aktueller_kurs": 171.52,
-        "indicators_computed_at": "2026-07-08 19:39",
+        "indicators_computed_at": "2026-07-08 19:40",
         "indicators_source": "yahoo:NVD.DE"
       }
     ]
