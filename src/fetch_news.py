@@ -11,9 +11,14 @@ qualitative evaluation happens in the LLM step so nothing here can hallucinate.
 
 import json
 import os
+import re
+import sys
 import urllib.request
 import urllib.parse
-from datetime import datetime
+from datetime import datetime, timezone
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ticker_map
 
 base_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data"
 depot_path = os.path.join(base_dir, "depot_status.json")
@@ -21,24 +26,41 @@ chart_path = os.path.join(base_dir, "chartanalyse_ergebnisse.json")
 funda_path = os.path.join(base_dir, "fundamentalanalyse_ergebnisse.json")
 out_path = os.path.join(base_dir, "news_raw.json")
 
-# Reuse the ISIN->EUR/US ticker map used elsewhere (kept in sync manually).
-isin_to_ticker = {
-    'IT0003856405': 'LDO.MI', 'DE000ENER6Y0': 'ENR.DE', 'GB00B63H8491': 'RRU.DE',
-    'FR0000121329': 'HO.PA', 'NL0010273215': 'ASML.AS', 'DE000A0D9PT0': 'MTX.DE',
-    'DE0007030009': 'RHM.DE', 'DE0007164600': 'SAP.DE', 'FR0000073272': 'SAF.PA',
-    'DE000ENAG999': 'EOAN.DE', 'DE0007037129': 'RWE.DE', 'DE0006231004': 'IFX.DE',
-    'NL0000235190': 'AIR.PA', 'US72703X1063': '85H1.DE', 'DE0006095003': 'ECV.DE',
-    'FR0010221234': 'ETL.PA', 'DE000HAG0005': 'HAG.DE', 'DE000A0DJ6J9': 'S92.DE',
-    'DE000A0D6554': 'NDX1.DE', 'DE0005936124': 'OHB.DE', 'DE000A2YN900': 'TMV.DE',
-    'DE000A2E4K43': 'DHER.DE', 'DE0005557508': 'DTE.DE', 'DE000A0WMPJ6': 'AIXA.DE',
-    'DK0061539921': 'VWS.CO', 'DK0060094928': 'ORSTED.CO', 'GB0002634946': 'BA.L',
-    'US65339F1012': 'NEE', 'US6668071029': 'NOC', 'US3695501086': 'GD',
-    'US5398301094': 'LMT', 'FR0014004L86': 'AM.PA', 'US0970231058': 'BA',
-    'US0003611052': 'AIR', 'US4282911084': 'HXL', 'LU0088087324': 'SESG.PA',
-    'US57778K1051': 'MAXR', 'US7731221062': 'RKLB', 'US46269C1027': 'IRDM',
-    'IL0010825102': 'GILT', 'US79466L3024': 'CRM', 'US68389X1054': 'ORCL',
-    'US67066G1040': 'NVDA', 'US5949181045': 'MSFT', 'US02079K3059': 'GOOG'
+# Ticker display/fallback comes from the shared source of truth (ticker_map).
+# No separate table here anymore — that divergence caused wrong/stale tickers.
+isin_to_ticker = ticker_map.ISIN_TO_EUR_TICKER
+
+# Legal-form / filler tokens that must NOT count as company keywords.
+_STOP_TOKENS = {
+    'the', 'and', 'für', 'ag', 'sa', 'se', 'nv', 'plc', 'spa', 'inc', 'corp',
+    'corporation', 'ltd', 'co', 'holding', 'holdings', 'group', 'gruppe',
+    'company', 'technologies', 'technology', 'international', 'systems',
+    'aktiengesellschaft', 'adr', 'nsa', 'oyj',
 }
+
+
+def company_keywords(name, ticker):
+    """Distinctive lowercase tokens that a relevant headline should contain."""
+    kws = set()
+    for tok in re.split(r"[^A-Za-zÀ-ÿ0-9]+", (name or "")):
+        t = tok.lower().strip(".")
+        if len(t) >= 3 and t not in _STOP_TOKENS:
+            kws.add(t)
+    root = (ticker or "").split(".")[0].lower()
+    if len(root) >= 2:
+        kws.add(root)
+    return kws
+
+
+def headline_relevant(title, keywords):
+    """True if the headline mentions the company as a whole word (not a substring).
+
+    Word-boundary matching avoids false hits like 'ses' inside 'businesses'.
+    """
+    if not keywords:
+        return True  # no basis to filter -> keep (defensive)
+    t = (title or "").lower()
+    return any(re.search(rf"(?<![a-z0-9]){re.escape(kw)}(?![a-z0-9])", t) for kw in keywords)
 
 
 def load_json(path):
@@ -100,7 +122,7 @@ def fetch_headlines(query, count=6):
         out.append({
             "title": n.get("title", ""),
             "publisher": n.get("publisher", ""),
-            "published": datetime.utcfromtimestamp(ts).strftime("%Y-%m-%d") if ts else None,
+            "published": datetime.fromtimestamp(ts, timezone.utc).strftime("%Y-%m-%d") if ts else None,
             "link": n.get("link", ""),
         })
     return out, None
@@ -116,9 +138,22 @@ def main():
         ticker = isin_to_ticker.get(isin, "")
         # Company name gives better-targeted headlines than the ticker.
         query = name or ticker or isin
-        headlines, err = fetch_headlines(query)
+        raw, err = fetch_headlines(query)
+
+        # Relevance filter: drop Yahoo's generic-feed noise so the sentiment
+        # stage only sees company-specific headlines (or an honest empty list).
+        kws = company_keywords(name, ticker)
+        headlines = [h for h in raw if headline_relevant(h.get("title", ""), kws)]
+        # If the name query returned only noise, retry once with the ticker —
+        # sometimes the ticker query hits the right company feed.
         if not headlines and ticker:
-            headlines, err = fetch_headlines(ticker)
+            raw2, err2 = fetch_headlines(ticker)
+            hl2 = [h for h in raw2 if headline_relevant(h.get("title", ""), kws)]
+            if hl2:
+                headlines, err = hl2, err2
+                raw = raw2
+        dropped = len(raw) - len(headlines)
+
         result["items"][isin] = {
             "name": name,
             "ticker": ticker,
@@ -129,7 +164,8 @@ def main():
             ok += 1
         else:
             empty += 1
-        print(f"  {isin} ({name or ticker}): {len(headlines)} Schlagzeilen"
+        print(f"  {isin} ({name or ticker}): {len(headlines)} relevant"
+              + (f", {dropped} Rausch verworfen" if dropped else "")
               + (f" [!{err}]" if err else ""))
 
     with open(out_path, "w", encoding="utf-8") as f:

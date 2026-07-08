@@ -1,138 +1,46 @@
 {
-  "generated_at": "2026-07-08 11:02",
+  "generated_at": "2026-07-08 19:21",
   "items": {
     "DE0005557508": {
       "name": "Dt. Telekom",
-      "ticker": "DTE.DE",
-      "headlines": [
-        {
-          "title": "Coveris gains RecyClass traceability certification for three sites",
-          "publisher": "Packaging Gateway",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/fb7cf6e0-355f-3e52-b64f-96e99e17bfc7/coveris-gains-recyclass.html"
-        },
-        {
-          "title": "Weir to supply crushing circuit for Brightstar’s Goldfield project",
-          "publisher": "Mining Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/e9f390b7-7cd2-38a3-9e64-d8a3a726f0e2/weir-to-supply-crushing.html"
-        },
-        {
-          "title": "Warren Buffett's Berkshire Successor, Greg Abel, Just Bought More of This Magnificent Tech Stock",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/afa87138-3e4b-3f90-875a-fad0638d1457/warren-buffett%27s-berkshire.html"
-        },
-        {
-          "title": "The hotel industry’s biggest success story",
-          "publisher": "Hotel Management Network",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/41d5a3fb-26e4-3647-8149-57f3e59e7a91/the-hotel-industry%E2%80%99s-biggest.html"
-        },
-        {
-          "title": "FCA report signals new era for AI in retail finance",
-          "publisher": "Retail Insight Network",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/480b92b0-d99d-3654-aff8-90fc22f7ba37/fca-report-signals-new-era.html"
-        },
-        {
-          "title": "How paperboard became packaging’s biggest success story",
-          "publisher": "Packaging Gateway",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/83fbb060-fefe-3bb9-93d9-1fc3cfaed8df/how-paperboard-became.html"
-        }
-      ],
+      "ticker": "",
+      "headlines": [],
       "error": null
     },
     "DE0005936124": {
       "name": "OHB",
-      "ticker": "OHB.DE",
-      "headlines": [
-        {
-          "title": "Biocytogen and Whitehawk partner to develop ADCs",
-          "publisher": "Pharmaceutical Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/f4bebd03-2f65-3693-b9e4-1998ec7b4b32/biocytogen-and-whitehawk.html"
-        },
-        {
-          "title": "Coveris gains RecyClass traceability certification for three sites",
-          "publisher": "Packaging Gateway",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/fb7cf6e0-355f-3e52-b64f-96e99e17bfc7/coveris-gains-recyclass.html"
-        },
-        {
-          "title": "Weir to supply crushing circuit for Brightstar’s Goldfield project",
-          "publisher": "Mining Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/e9f390b7-7cd2-38a3-9e64-d8a3a726f0e2/weir-to-supply-crushing.html"
-        },
-        {
-          "title": "OpenAI Set to Launch GPT-5.6 on Thursday",
-          "publisher": "MT Newswires",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/openai-set-launch-gpt-5-085423058.html"
-        },
-        {
-          "title": "Alibaba rallies 12% after report of narrowing losses sparks pre-earnings optimism",
-          "publisher": "Investing.com",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/alibaba-rallies-12-report-narrowing-085233353.html"
-        },
-        {
-          "title": "Warren Buffett's Berkshire Successor, Greg Abel, Just Bought More of This Magnificent Tech Stock",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/afa87138-3e4b-3f90-875a-fad0638d1457/warren-buffett%27s-berkshire.html"
-        }
-      ],
+      "ticker": "",
+      "headlines": [],
       "error": null
     },
     "DE0007164600": {
       "name": "SAP",
-      "ticker": "SAP.DE",
+      "ticker": "",
       "headlines": [
         {
-          "title": "Salesforce Down 6% in Three Months: Should Investors Retain the Stock?",
-          "publisher": "Zacks",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/salesforce-down-6-three-months-142600404.html"
-        },
-        {
-          "title": "Anaphora Events Now Available on SAP Store, Bringing On-Brand Event Execution into SAP CX Workflows",
-          "publisher": "GlobeNewswire",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/technology/articles/anaphora-events-now-available-sap-133000303.html"
-        },
-        {
-          "title": "What Does SAP’s (SAP) CTO Say About the Company’s New AI Monetization Strategy?",
+          "title": "This is Why SAP SE (SAP) is A Top AI Stock on Wall Street Radar amid Reorganization Drive",
           "publisher": "Insider Monkey",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/technology/ai/articles/does-sap-sap-cto-company-194356988.html"
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/technology/ai/articles/why-sap-se-sap-top-153859414.html"
         },
         {
-          "title": "The Anti-Magnificent Seven Trade? VGK Is Quietly Creeping Toward Record Highs",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/m/afc86afa-c93d-345f-9397-1b40e6e18184/the-anti-magnificent-seven.html"
+          "title": "Palantir Expands SAP Transformation Push With SNP Partnership",
+          "publisher": "GuruFocus.com",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/technology/ai/articles/palantir-expands-sap-transformation-push-121547284.html"
         },
         {
-          "title": "Transformation World 2026: The Best Data for Business AI",
+          "title": "SNP and Palantir Form Strategic Partnership to Accelerate Secure SAP Transformations",
           "publisher": "Business Wire",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/technology/ai/articles/transformation-world-2026-best-data-130000717.html"
-        },
-        {
-          "title": "Banzai Completes Acquisition of ConnectAndSell, Doubling Annual Revenue at 86% Gross Margin",
-          "publisher": "GlobeNewswire",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/technology/ai/articles/banzai-completes-acquisition-connectandsell-doubling-113000346.html"
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/technology/ai/articles/snp-palantir-form-strategic-partnership-091600539.html"
         }
       ],
       "error": null
     },
     "DE000A0D6554": {
       "name": "Nordex SE",
-      "ticker": "NDX1.DE",
+      "ticker": "",
       "headlines": [
         {
           "title": "Nordex Group receives orders totalling 700 MW from UKA in Germany",
@@ -175,14 +83,8 @@
     },
     "DE000A0D9PT0": {
       "name": "MTU Aero Engines",
-      "ticker": "MTX.DE",
+      "ticker": "",
       "headlines": [
-        {
-          "title": "Airbus to make first foray into engine manufacturing with hydrogen tie-up",
-          "publisher": "Financial Times",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/energy/articles/airbus-first-foray-engine-manufacturing-155001461.html"
-        },
         {
           "title": "When Should You Buy MTU Aero Engines AG (ETR:MTX)?",
           "publisher": "Simply Wall St.",
@@ -212,7 +114,7 @@
     },
     "DE000A0DJ6J9": {
       "name": "SMA Solar",
-      "ticker": "S92.DE",
+      "ticker": "",
       "headlines": [
         {
           "title": "SMA Solar Technology Q1 Earnings Call Highlights",
@@ -231,25 +133,19 @@
           "publisher": "GuruFocus.com",
           "published": "2026-05-15",
           "link": "https://finance.yahoo.com/sectors/energy/articles/sma-solar-technology-ag-smtgf-010134256.html"
-        },
-        {
-          "title": "European Value Stocks Priced Below Estimated Worth In April 2026",
-          "publisher": "Simply Wall St.",
-          "published": "2026-04-27",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/european-value-stocks-priced-below-053753261.html"
         }
       ],
       "error": null
     },
     "DE000ENER6Y0": {
       "name": "Siemens Energy",
-      "ticker": "ENR.DE",
+      "ticker": "",
       "headlines": [
         {
-          "title": "Why GE Vernova, Caterpillar Stocks Are Getting Crushed",
-          "publisher": "Barrons.com",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/b7c255b0-c54d-36d5-b4f0-052280c750b1/why-ge-vernova%2C-caterpillar.html"
+          "title": "Eaton Names Dan T. Simpson President, Global Energy Infrastructure Solutions",
+          "publisher": "Business Wire",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/energy/articles/eaton-names-dan-t-simpson-104500804.html"
         },
         {
           "title": "Siemens Energy (XTRA:ENR) Secures Oman Power Contracts With Decades Long Service Work",
@@ -262,153 +158,31 @@
           "publisher": "Simply Wall St.",
           "published": "2026-07-02",
           "link": "https://finance.yahoo.com/markets/stocks/articles/siemens-energy-xtra-enr-stock-131513036.html"
-        },
-        {
-          "title": "Hewlett Packard (HPE) Ranks Among Hot Stocks with the Highest Upside Potential",
-          "publisher": "Insider Monkey",
-          "published": "2026-07-01",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/hewlett-packard-hpe-ranks-among-212249816.html"
-        },
-        {
-          "title": "Can Atlassian's Enterprise Adoption Drive Higher Revenue Growth?",
-          "publisher": "Zacks",
-          "published": "2026-07-01",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/atlassians-enterprise-adoption-drive-higher-135200866.html"
-        },
-        {
-          "title": "Siemens Energy to supply technology for two Oman power plants",
-          "publisher": "Power Technology",
-          "published": "2026-07-01",
-          "link": "https://finance.yahoo.com/m/a62129c0-4c64-33e5-8eb4-e1ef31c323df/siemens-energy-to-supply.html"
         }
       ],
       "error": null
     },
     "FR0000073272": {
       "name": "Safran",
-      "ticker": "SAF.PA",
-      "headlines": [
-        {
-          "title": "Embraer Completes Acquisition of Additional Stake in Cabin Joint Venture",
-          "publisher": "MT Newswires",
-          "published": "2026-07-02",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/embraer-completes-acquisition-additional-stake-101736005.html"
-        },
-        {
-          "title": "Infleqtion Could Gain From Neutral Atom Quantum Demand, Partnerships, Wedbush Says",
-          "publisher": "MT Newswires",
-          "published": "2026-06-26",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/infleqtion-could-gain-neutral-atom-154053039.html"
-        },
-        {
-          "title": "GTA Holdings Berhad Secures Bursa Malaysia's Approval for ACE Market Listing",
-          "publisher": "ACCESS Newswire",
-          "published": "2026-06-26",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/gta-holdings-berhad-secures-bursa-094000402.html"
-        },
-        {
-          "title": "How to Invest in the Biggest European Defense Surge in Decades",
-          "publisher": "MarketBeat",
-          "published": "2026-06-19",
-          "link": "https://finance.yahoo.com/m/87214f7f-61c3-3159-aa2c-4fe5bd178537/how-to-invest-in-the-biggest.html"
-        },
-        {
-          "title": "Has Safran (SAFRY) Outpaced Other Aerospace Stocks This Year?",
-          "publisher": "Zacks",
-          "published": "2026-06-17",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/safran-safry-outpaced-other-aerospace-134004039.html"
-        },
-        {
-          "title": "Delta Air Lines (DAL) Might Drop Safran SA, Reports Bloomberg",
-          "publisher": "Insider Monkey",
-          "published": "2026-06-16",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/delta-air-lines-dal-might-192140931.html"
-        }
-      ],
+      "ticker": "",
+      "headlines": [],
       "error": null
     },
     "FR0000121329": {
       "name": "Thales SA",
-      "ticker": "HO.PA",
-      "headlines": [
-        {
-          "title": "Biocytogen and Whitehawk partner to develop ADCs",
-          "publisher": "Pharmaceutical Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/f4bebd03-2f65-3693-b9e4-1998ec7b4b32/biocytogen-and-whitehawk.html"
-        },
-        {
-          "title": "Coveris gains RecyClass traceability certification for three sites",
-          "publisher": "Packaging Gateway",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/fb7cf6e0-355f-3e52-b64f-96e99e17bfc7/coveris-gains-recyclass.html"
-        },
-        {
-          "title": "Weir to supply crushing circuit for Brightstar’s Goldfield project",
-          "publisher": "Mining Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/e9f390b7-7cd2-38a3-9e64-d8a3a726f0e2/weir-to-supply-crushing.html"
-        },
-        {
-          "title": "OpenAI Set to Launch GPT-5.6 on Thursday",
-          "publisher": "MT Newswires",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/openai-set-launch-gpt-5-085423058.html"
-        },
-        {
-          "title": "Alibaba rallies 12% after report of narrowing losses sparks pre-earnings optimism",
-          "publisher": "Investing.com",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/alibaba-rallies-12-report-narrowing-085233353.html"
-        },
-        {
-          "title": "Warren Buffett's Berkshire Successor, Greg Abel, Just Bought More of This Magnificent Tech Stock",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/afa87138-3e4b-3f90-875a-fad0638d1457/warren-buffett%27s-berkshire.html"
-        }
-      ],
+      "ticker": "",
+      "headlines": [],
       "error": null
     },
     "FR0014004L86": {
       "name": "Dassault Aviation",
-      "ticker": "AM.PA",
+      "ticker": "",
       "headlines": [
-        {
-          "title": "AMN Healthcare to Hold Second Quarter 2026 Earnings Conference Call on Thursday, August 6, 2026",
-          "publisher": "PR Newswire",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/healthcare/articles/amn-healthcare-hold-second-quarter-201500860.html"
-        },
-        {
-          "title": "Here's Why You Should Retain AMN Stock in Your Portfolio for Now",
-          "publisher": "Zacks",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/healthcare/articles/heres-why-retain-amn-stock-152000113.html"
-        },
         {
           "title": "Dassault Aviation: Total number of shares and voting rights - 30 06 26",
           "publisher": "GlobeNewswire",
           "published": "2026-07-02",
           "link": "https://finance.yahoo.com/markets/stocks/articles/dassault-aviation-total-number-shares-133500888.html"
-        },
-        {
-          "title": "1 Healthcare Stock with Impressive Fundamentals and 2 We Turn Down",
-          "publisher": "StockStory",
-          "published": "2026-07-02",
-          "link": "https://finance.yahoo.com/healthcare/articles/1-healthcare-stock-impressive-fundamentals-084424123.html"
-        },
-        {
-          "title": "1 Momentum  Stock with Impressive Fundamentals and 2 We Find Risky",
-          "publisher": "StockStory",
-          "published": "2026-06-29",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/1-momentum-stock-impressive-fundamentals-082545228.html"
-        },
-        {
-          "title": "2 Profitable Stocks to Target This Week and 1 We Turn Down",
-          "publisher": "StockStory",
-          "published": "2026-06-26",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/2-profitable-stocks-target-week-103225669.html"
         }
       ],
       "error": null
@@ -418,22 +192,10 @@
       "ticker": "RRU.DE",
       "headlines": [
         {
-          "title": "FTSE 100 Live: Stocks slide as oil spikes, Trump says Iran ceasefire 'over'",
-          "publisher": "Proactive",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/30c68668-e040-398a-8b53-b6163568aa6a/ftse-100-live%3A-stocks-slide.html"
-        },
-        {
           "title": "Fairbanks Morse Defense Establishes Official Canadian Headquarters Following Successful Rolls-Royce Acquisition",
           "publisher": "Business Wire",
           "published": "2026-07-07",
           "link": "https://finance.yahoo.com/technology/articles/fairbanks-morse-defense-establishes-official-120100241.html"
-        },
-        {
-          "title": "FTSE 100 Live: Shell and consumer giants make gains, while miners and defence sell off",
-          "publisher": "Proactive",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/fd081e47-3b5c-3a0a-8d1c-03edfa74a1e6/ftse-100-live%3A-shell-and.html"
         },
         {
           "title": "Rolls-Royce Holdings PLC (RYCEY) Is Up 5.48% in One Week: What You Should Know",
@@ -458,7 +220,7 @@
     },
     "IL0010825102": {
       "name": "Gilat Satellite",
-      "ticker": "GILT",
+      "ticker": "",
       "headlines": [
         {
           "title": "Gilat Satellite Wins $11 Million in US Defense Orders",
@@ -479,12 +241,6 @@
           "link": "https://finance.yahoo.com/markets/stocks/articles/gilat-satellite-networks-gilt-8-091556239.html"
         },
         {
-          "title": "Iridium (IRDM) Soars 25.4%: Is Further Upside Left in the Stock?",
-          "publisher": "Zacks",
-          "published": "2026-06-30",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/iridium-irdm-soars-25-4-114400723.html"
-        },
-        {
           "title": "Comtech Telecom (CMTL) to Sell S&S Segment to Gilat Satellite Networks for $157.5M",
           "publisher": "Insider Monkey",
           "published": "2026-06-30",
@@ -501,50 +257,13 @@
     },
     "IT0003856405": {
       "name": "Leonardo SpA",
-      "ticker": "LDO.MI",
-      "headlines": [
-        {
-          "title": "Biocytogen and Whitehawk partner to develop ADCs",
-          "publisher": "Pharmaceutical Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/f4bebd03-2f65-3693-b9e4-1998ec7b4b32/biocytogen-and-whitehawk.html"
-        },
-        {
-          "title": "Coveris gains RecyClass traceability certification for three sites",
-          "publisher": "Packaging Gateway",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/fb7cf6e0-355f-3e52-b64f-96e99e17bfc7/coveris-gains-recyclass.html"
-        },
-        {
-          "title": "Weir to supply crushing circuit for Brightstar’s Goldfield project",
-          "publisher": "Mining Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/e9f390b7-7cd2-38a3-9e64-d8a3a726f0e2/weir-to-supply-crushing.html"
-        },
-        {
-          "title": "OpenAI Set to Launch GPT-5.6 on Thursday",
-          "publisher": "MT Newswires",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/openai-set-launch-gpt-5-085423058.html"
-        },
-        {
-          "title": "Alibaba rallies 12% after report of narrowing losses sparks pre-earnings optimism",
-          "publisher": "Investing.com",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/alibaba-rallies-12-report-narrowing-085233353.html"
-        },
-        {
-          "title": "Warren Buffett's Berkshire Successor, Greg Abel, Just Bought More of This Magnificent Tech Stock",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/afa87138-3e4b-3f90-875a-fad0638d1457/warren-buffett%27s-berkshire.html"
-        }
-      ],
+      "ticker": "",
+      "headlines": [],
       "error": null
     },
     "LU0088087324": {
       "name": "SES",
-      "ticker": "SESG.PA",
+      "ticker": "",
       "headlines": [
         {
           "title": "--SES AI Added to Russell 3000 Index Effective Monday",
@@ -569,290 +288,126 @@
           "publisher": "TMX Newsfile",
           "published": "2026-06-02",
           "link": "https://finance.yahoo.com/markets/stocks/articles/stonegate-initiates-coverage-ses-ai-134600123.html"
-        },
-        {
-          "title": "NeoVolta Appoints Jing Nealis as Chief Financial Officer",
-          "publisher": "GlobeNewswire",
-          "published": "2026-05-14",
-          "link": "https://finance.yahoo.com/sectors/energy/articles/neovolta-appoints-jing-nealis-chief-203000121.html"
-        },
-        {
-          "title": "Spotlight On Penny Stocks To Consider In May 2026",
-          "publisher": "Simply Wall St.",
-          "published": "2026-05-14",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/spotlight-penny-stocks-consider-may-180504780.html"
         }
       ],
       "error": null
     },
     "NL0000235190": {
       "name": "Airbus",
-      "ticker": "AIR.PA",
-      "headlines": [
-        {
-          "title": "Biocytogen and Whitehawk partner to develop ADCs",
-          "publisher": "Pharmaceutical Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/f4bebd03-2f65-3693-b9e4-1998ec7b4b32/biocytogen-and-whitehawk.html"
-        },
-        {
-          "title": "Coveris gains RecyClass traceability certification for three sites",
-          "publisher": "Packaging Gateway",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/fb7cf6e0-355f-3e52-b64f-96e99e17bfc7/coveris-gains-recyclass.html"
-        },
-        {
-          "title": "Weir to supply crushing circuit for Brightstar’s Goldfield project",
-          "publisher": "Mining Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/e9f390b7-7cd2-38a3-9e64-d8a3a726f0e2/weir-to-supply-crushing.html"
-        },
-        {
-          "title": "OpenAI Set to Launch GPT-5.6 on Thursday",
-          "publisher": "MT Newswires",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/openai-set-launch-gpt-5-085423058.html"
-        },
-        {
-          "title": "Alibaba rallies 12% after report of narrowing losses sparks pre-earnings optimism",
-          "publisher": "Investing.com",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/alibaba-rallies-12-report-narrowing-085233353.html"
-        },
-        {
-          "title": "Warren Buffett's Berkshire Successor, Greg Abel, Just Bought More of This Magnificent Tech Stock",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/afa87138-3e4b-3f90-875a-fad0638d1457/warren-buffett%27s-berkshire.html"
-        }
-      ],
+      "ticker": "",
+      "headlines": [],
       "error": null
     },
     "NL0010273215": {
       "name": "ASML",
-      "ticker": "ASML.AS",
+      "ticker": "",
       "headlines": [
         {
-          "title": "Samsung saw a record quarter, but it's not enough for investors. Here's why.",
-          "publisher": "Yahoo Finance Video",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/video/samsung-saw-a-record-quarter-but-its-not-enough-for-investors-heres-why-203148500.html"
+          "title": "ASML Holding N.V. (ASML) Price Target Raised by Jefferies on Strong Semiconductor Outlook",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/asml-holding-n-v-asml-153817672.html"
+        },
+        {
+          "title": "Should You Buy ASML Holding Stock Before July 15?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/m/9a0f5fa5-088b-37b4-b6e9-c2f3df5eac8a/should-you-buy-asml-holding.html"
         },
         {
           "title": "Why ASML Stock Dropped Today",
           "publisher": "Motley Fool",
           "published": "2026-07-07",
           "link": "https://finance.yahoo.com/m/1aaaf8e3-a9b6-3c94-952c-04a2a8c463a2/why-asml-stock-dropped-today.html"
-        },
-        {
-          "title": "Chief Market Strategist Says Japan and South Korea Could Be Flashing Early Warning Signs for Investors",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/b734dd76-e9c6-34b5-a7a7-610a764f101e/chief-market-strategist-says.html"
-        },
-        {
-          "title": "Wall Street tech analyst explains why investors should look past Samsung selloff",
-          "publisher": "Investing.com",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-tech-analyst-explains-163203461.html"
-        },
-        {
-          "title": "Wall Street Analysts Think ASML (ASML) Is a Good Investment: Is It?",
-          "publisher": "Zacks",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-asml-133006673.html"
-        },
-        {
-          "title": "📉Global AI Stocks Tumble",
-          "publisher": "The Wall Street Journal",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/96773a77-c329-3c27-98df-2ce580c4d3e7/%F0%9F%93%89global-ai-stocks-tumble.html"
         }
       ],
       "error": null
     },
     "US0970231058": {
       "name": "Boeing",
-      "ticker": "BA",
+      "ticker": "BCO.DE",
       "headlines": [
         {
-          "title": "Jim Cramer says it’s time to buy another aerospace stock before it takes off",
-          "publisher": "TheStreet",
+          "title": "China Southern Airlines to lease Boeing 777-300 converted freighters",
+          "publisher": "FreightWaves",
           "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/bfc2cc65-4a74-3d7d-b0dc-e93c526f70ec/jim-cramer-says-it%E2%80%99s-time-to.html"
+          "link": "https://finance.yahoo.com/markets/commodities/articles/china-southern-airlines-lease-boeing-140254057.html"
         },
         {
-          "title": "Boeing (BA) Could Be 13% Undervalued As 737 MAX Output Ramps Up",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/boeing-ba-could-13-undervalued-202321014.html"
+          "title": "Investors Heavily Search The Boeing Company (BA): Here is What You Need to Know",
+          "publisher": "Zacks",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-boeing-company-130006027.html"
         },
         {
-          "title": "Philippine Airlines Eyes 20 Widebody Jets Split Between Boeing and Airbus",
-          "publisher": "GuruFocus.com",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/philippine-airlines-eyes-20-widebody-195345650.html"
-        },
-        {
-          "title": "Memory chip stocks fall into a bull market amid latest tech sell-off",
-          "publisher": "Yahoo Finance Video",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/video/memory-chip-stocks-fall-into-a-bull-market-amid-latest-tech-sell-off-191922938.html"
-        },
-        {
-          "title": "Stocks making big moves yesterday: Boeing, Lincoln Financial Group, Dell, NN, and Tesla",
-          "publisher": "StockStory",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-184952059.html"
-        },
-        {
-          "title": "Analyst Report: Southwest Airlines Co",
-          "publisher": "Argus Research",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/96ded749-9175-3dac-8f39-d0e2ddbf6cd7/analyst-report%3A-southwest.html"
+          "title": "AerCap Signs Lease Deals for 3 Boeing Freighters With China Southern Air Logistics",
+          "publisher": "MT Newswires",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/aercap-signs-lease-deals-3-112608162.html"
         }
       ],
       "error": null
     },
     "US5398301094": {
       "name": "Lockheed Martin",
-      "ticker": "LMT",
+      "ticker": "LOM.DE",
       "headlines": [
         {
-          "title": "Lockheed Martin Wins $607.4 Million in Defense Department Contracts",
-          "publisher": "MT Newswires",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/technology/articles/lockheed-martin-wins-607-4-215709631.html"
+          "title": "Trump Wants a 'Beauty': Lockheed Martin's Sikorsky to Fund New $6 Million White House Helipad After Marine One Takes a Toll on the Lawn",
+          "publisher": "Benzinga",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/m/974e9b61-7f48-390c-9564-e894259a6a12/trump-wants-a-%27beauty%27%3A.html"
         },
         {
-          "title": "Hormuz Tolls Are Just the Beginning: The World’s Busiest Shipping Route Could Be Next",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/1aa5f3fb-8e07-3399-99fd-4c25aa857dae/hormuz-tolls-are-just-the.html"
-        },
-        {
-          "title": "NATO Summit Centers On F-35 Sales, Defense Deals, Spending. Lockheed Boosts Production.",
-          "publisher": "Investor's Business Daily",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/d3cff280-1a68-32e3-a3f6-485deb0dc37a/nato-summit-centers-on-f-35.html"
-        },
-        {
-          "title": "Lockheed Martin seals $3.5B deal amid global defense spending spree",
-          "publisher": "TheStreet",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/afb856b2-5b49-3ceb-b317-a36e5d50af75/lockheed-martin-seals-%243.5b.html"
-        },
-        {
-          "title": "Lockheed Martin and 7 More Stocks That Could Benefit From the NATO Meeting in Turkey",
+          "title": "Northrop, Lockheed, Other Defense Stocks Fall as Trump Sparks Iran War Fears",
           "publisher": "Barrons.com",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/8f4fbf0b-7244-3415-bc51-ef8ad3f21f19/lockheed-martin-and-7-more.html"
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/m/2c114509-4af3-3378-9ff2-1281be3557ed/northrop%2C-lockheed%2C-other.html"
         },
         {
-          "title": "Beyond Lockheed's $3.5B Buyout: Naval Consolidation Reshaping Defense ETFs",
-          "publisher": "Zacks",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/beyond-lockheeds-3-5b-buyout-162500442.html"
+          "title": "Wells Fargo Adjusts Price Target on Lockheed Martin to $575 From $650",
+          "publisher": "MT Newswires",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/wells-fargo-adjusts-price-target-133107020.html"
         }
       ],
       "error": null
     },
     "US57778K1051": {
       "name": "Maxar",
-      "ticker": "MAXR",
-      "headlines": [
-        {
-          "title": "Biocytogen and Whitehawk partner to develop ADCs",
-          "publisher": "Pharmaceutical Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/f4bebd03-2f65-3693-b9e4-1998ec7b4b32/biocytogen-and-whitehawk.html"
-        },
-        {
-          "title": "Coveris gains RecyClass traceability certification for three sites",
-          "publisher": "Packaging Gateway",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/fb7cf6e0-355f-3e52-b64f-96e99e17bfc7/coveris-gains-recyclass.html"
-        },
-        {
-          "title": "Weir to supply crushing circuit for Brightstar’s Goldfield project",
-          "publisher": "Mining Technology",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/e9f390b7-7cd2-38a3-9e64-d8a3a726f0e2/weir-to-supply-crushing.html"
-        },
-        {
-          "title": "OpenAI Set to Launch GPT-5.6 on Thursday",
-          "publisher": "MT Newswires",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/openai-set-launch-gpt-5-085423058.html"
-        },
-        {
-          "title": "Alibaba rallies 12% after report of narrowing losses sparks pre-earnings optimism",
-          "publisher": "Investing.com",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/alibaba-rallies-12-report-narrowing-085233353.html"
-        },
-        {
-          "title": "Warren Buffett's Berkshire Successor, Greg Abel, Just Bought More of This Magnificent Tech Stock",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/afa87138-3e4b-3f90-875a-fad0638d1457/warren-buffett%27s-berkshire.html"
-        }
-      ],
+      "ticker": "",
+      "headlines": [],
       "error": null
     },
     "US5949181045": {
       "name": "Microsoft",
-      "ticker": "MSFT",
+      "ticker": "MSF.DE",
       "headlines": [
         {
-          "title": "OpenAI Set to Launch GPT-5.6 on Thursday",
-          "publisher": "MT Newswires",
+          "title": "Beaten Down Technology Stock to Buy: Microsoft Corporation (MSFT) Embarks on Cost Cuts",
+          "publisher": "Insider Monkey",
           "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/openai-set-launch-gpt-5-085423058.html"
+          "link": "https://finance.yahoo.com/technology/articles/beaten-down-technology-stock-buy-154452382.html"
         },
         {
-          "title": "One Great Chart: Will Anyone Blink in the AI Spending War?",
-          "publisher": "The Wall Street Journal",
+          "title": "Microsoft (MSFT) Unifies Copilot Strategy to Challenge ChatGPT and Claude",
+          "publisher": "Insider Monkey",
           "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/ef732867-90f1-369c-bb66-a00a481833ed/one-great-chart%3A-will-anyone.html"
+          "link": "https://finance.yahoo.com/technology/ai/articles/microsoft-msft-unifies-copilot-strategy-153524054.html"
         },
         {
-          "title": "Microsoft Cuts AI Bill by Replacing OpenAI and Anthropic in Software Products",
-          "publisher": "BeInCrypto",
+          "title": "Nokia (NOK) Taps SAP and Microsoft: Cloud and AI in Focus",
+          "publisher": "Insider Monkey",
           "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/67e8b91e-1614-36f0-8918-886fe79ca33f/microsoft-cuts-ai-bill-by.html"
-        },
-        {
-          "title": "Meta CEO Mark Zuckerberg Just Delivered Fantastic News for Investors",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/2b854204-c998-3b91-9127-f1e2ade95046/meta-ceo-mark-zuckerberg-just.html"
-        },
-        {
-          "title": "Why Today’s Dividend Yield May Be The Least Important Number In Your Portfolio",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/a7151909-c0d1-3682-ab19-3f91883da117/why-today%E2%80%99s-dividend-yield.html"
-        },
-        {
-          "title": "GoDaddy, Freshworks, and HubSpot Shares Are Soaring, What You Need To Know",
-          "publisher": "StockStory",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/godaddy-freshworks-hubspot-shares-soaring-230552374.html"
+          "link": "https://finance.yahoo.com/technology/ai/articles/nokia-nok-taps-sap-microsoft-153314352.html"
         }
       ],
       "error": null
     },
     "US65339F1012": {
       "name": "NextEra Energy",
-      "ticker": "NEE",
+      "ticker": "",
       "headlines": [
-        {
-          "title": "Why the AI Boom Is About to Break the U.S. Power Grid",
-          "publisher": "Oilprice.com",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/energy/articles/why-ai-boom-break-u-000000959.html"
-        },
         {
           "title": "Can PPL's Balanced Energy Portfolio Fuel Long-Term Earnings Growth?",
           "publisher": "Zacks",
@@ -870,61 +425,19 @@
           "publisher": "Zacks",
           "published": "2026-07-07",
           "link": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-nextera-energy-130004858.html"
-        },
-        {
-          "title": "Barclays Adjusts Price Target on NextEra Energy to $91 From $90",
-          "publisher": "MT Newswires",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/energy/articles/barclays-adjusts-price-target-nextera-104403524.html"
-        },
-        {
-          "title": "Exelon, FirstEnergy utilities’ RTO adder targeted by Maryland in FERC complaint",
-          "publisher": "Utility Dive",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/2bc23613-db6b-3c5b-9d55-9b494d9506d2/exelon%2C-firstenergy.html"
         }
       ],
       "error": null
     },
     "US67066G1040": {
       "name": "Nvidia",
-      "ticker": "NVDA",
+      "ticker": "NVD.DE",
       "headlines": [
         {
-          "title": "Warren Buffett's Berkshire Successor, Greg Abel, Just Bought More of This Magnificent Tech Stock",
-          "publisher": "Motley Fool",
+          "title": "Nvidia, Chip Stocks Waver Amid U.S.-Iran War Flare-Up",
+          "publisher": "Investor's Business Daily",
           "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/afa87138-3e4b-3f90-875a-fad0638d1457/warren-buffett%27s-berkshire.html"
-        },
-        {
-          "title": "Advanced FinTech AI Competition 2026 Kicks Off to Accelerate AI in Finance",
-          "publisher": "PR Newswire",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/advanced-fintech-ai-competition-2026-084700871.html"
-        },
-        {
-          "title": "2 Stocks Down Over 30% to Buy Right Now and Hold for the Next Decade",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/1c538358-a281-39e2-9fd3-c809266c2989/2-stocks-down-over-30%25-to-buy.html"
-        },
-        {
-          "title": "Why This Semiconductor ETF Might Be the Most Underrated AI Play Right Now",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/7b8aad01-232a-3cfa-83f7-9399b817cd92/why-this-semiconductor-etf.html"
-        },
-        {
-          "title": "The Federal Reserve's Initial July Inflation Forecast Looks Fantastic on the Surface, but Something Sinister Lurks in the Details",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/a4532c8d-f86f-38df-84c3-34564fde0730/the-federal-reserve%27s-initial.html"
-        },
-        {
-          "title": "SpaceX IPO: The Last Time a Company This Big Went Public, Here's What Happened to Investors 1 Year Later",
-          "publisher": "Motley Fool",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/8dd846e2-2771-378d-98cc-30586967998b/spacex-ipo%3A-the-last-time-a.html"
+          "link": "https://finance.yahoo.com/m/1c6389fd-2bc8-3313-ae10-a726a74493aa/nvidia%2C-chip-stocks-waver.html"
         }
       ],
       "error": null
@@ -940,12 +453,6 @@
           "link": "https://finance.yahoo.com/markets/stocks/articles/why-planet-labs-pl-stock-200152374.html"
         },
         {
-          "title": "Exchange-Traded Funds Lower, Equity Futures Mixed Amid Caution Over Chip Sector Outlook",
-          "publisher": "MT Newswires",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-lower-equity-132222461.html"
-        },
-        {
           "title": "Planet Labs Launches Pelican-11 Technology Demonstration Satellite",
           "publisher": "MT Newswires",
           "published": "2026-07-07",
@@ -956,18 +463,6 @@
           "publisher": "Business Wire",
           "published": "2026-07-07",
           "link": "https://finance.yahoo.com/technology/articles/planet-launches-pelican-11-satellite-093300505.html"
-        },
-        {
-          "title": "Rocket Lab Falls 7%, AST SpaceMobile Drops 5%, Intuitive Machines and SpaceX Slip 3% as Space Stocks Pull Back",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/m/b8f91c26-56f2-320b-91ac-11c323bebe57/rocket-lab-falls-7%25%2C-ast.html"
-        },
-        {
-          "title": "Wolfgang Schmidt, Former Head of German Chancellery, Joins Planet’s European Advisory Board",
-          "publisher": "Business Wire",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/technology/ai/articles/wolfgang-schmidt-former-head-german-130000957.html"
         }
       ],
       "error": null
@@ -975,44 +470,7 @@
     "US75513E1010": {
       "name": "Raytheon",
       "ticker": "",
-      "headlines": [
-        {
-          "title": "Hormuz Tolls Are Just the Beginning: The World’s Busiest Shipping Route Could Be Next",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/1aa5f3fb-8e07-3399-99fd-4c25aa857dae/hormuz-tolls-are-just-the.html"
-        },
-        {
-          "title": "Beyond Lockheed's $3.5B Buyout: Naval Consolidation Reshaping Defense ETFs",
-          "publisher": "Zacks",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/beyond-lockheeds-3-5b-buyout-162500442.html"
-        },
-        {
-          "title": "GD vs. RTX: Which Stock Should Value Investors Buy Now?",
-          "publisher": "Zacks",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/gd-vs-rtx-stock-value-154005773.html"
-        },
-        {
-          "title": "LUNR Falls 36.5% in the Past Month: How to Play the Stock?",
-          "publisher": "Zacks",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/lunr-falls-36-5-past-145600078.html"
-        },
-        {
-          "title": "Raytheon, NATO Move to Build Advanced AMRAAM Missile Components in Europe",
-          "publisher": "The Wall Street Journal",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/df3dc9ea-d52d-365d-9103-37baadb2815b/raytheon%2C-nato-move-to-build.html"
-        },
-        {
-          "title": "Defense stocks surge as governments boost spending on weapons, AI battlefield technology",
-          "publisher": "Yahoo Finance",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/article/defense-stocks-surge-as-governments-boost-spending-on-weapons-ai-battlefield-technology-132142444.html"
-        }
-      ],
+      "headlines": [],
       "error": null
     }
   }
