@@ -14,31 +14,13 @@ import json
 import os
 import math
 import datetime
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ticker_map
 
 repo_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard"
 chart_path = os.path.join(repo_dir, "data", "chartanalyse_ergebnisse.json")
-
-EUR_SUFFIXES = ('.DE', '.F', '.MI', '.PA', '.AS', '.BR', '.LS', '.MC', '.VI', '.HE', '.CO', '.OL', '.ST')
-
-ISIN_TO_EUR_TICKER = {
-    'US67066G1040': 'NVD.DE',   # Nvidia (XETRA: NVD)
-    'US5949181045': 'MSF.DE',   # Microsoft
-    'US02079K3059': 'ABEA.DE',  # Alphabet class A
-    'US02079K1079': 'ABEC.DE',  # Alphabet class C
-    'US88160R1014': 'TL0.DE',   # Tesla
-    'US30303M1027': 'FB2A.DE',  # Meta Platforms
-    'US0970231058': 'BCO.DE',   # Boeing
-    'GB0002634946': 'BSP.DE',   # BAE Systems
-    'GB00B63H8491': 'RRU.DE',   # Rolls-Royce Holdings
-    'US5398301094': 'LOM.DE',   # Lockheed Martin
-    'US6668071029': 'NRT.DE',   # Northrop Grumman
-    'US75513E1010': 'RTX2.DE',  # Raytheon (RTX Corp)
-    'US4586221056': 'L3H.DE',   # L3Harris
-    'US65339F1012': 'NEXT.DE',  # NextEra Energy
-    'US3696043013': 'GDX.DE',   # General Dynamics
-    'US58551A1060': 'ME71.DE',  # Meta / MercadoLibre — verify
-    'US88033G4073': 'TN0.DE',   # Teradyne
-}
 
 VALID_INSTRUMENT_TYPES = ('EQUITY', 'ETF')
 
@@ -52,30 +34,8 @@ def http_json(url):
 
 
 def resolve_eur_ticker(isin):
-    """Returns a list of candidate tickers to try (most likely first)."""
-    if isin in ISIN_TO_EUR_TICKER:
-        return [ISIN_TO_EUR_TICKER[isin]]
-
-    try:
-        data = http_json(f"https://query2.finance.yahoo.com/v1/finance/search?q={isin}")
-    except Exception as e:
-        print(f"  ! search failed for {isin}: {e}")
-        return []
-    quotes = data.get('quotes', [])
-    candidates = []
-    for q in quotes:
-        sym = q.get('symbol', '')
-        if sym and any(sym.endswith(s) for s in EUR_SUFFIXES):
-            candidates.append(sym)
-    # Also try synthetic base+DE / base+F fallbacks
-    base_ticker = quotes[0].get('symbol') if quotes else None
-    if base_ticker:
-        root = base_ticker.split('.')[0]
-        for suffix in ('.DE', '.F'):
-            candidate = f"{root}{suffix}"
-            if candidate not in candidates:
-                candidates.append(candidate)
-    return candidates
+    """Candidate EUR tickers from the shared map ([] if the ISIN is skipped)."""
+    return ticker_map.candidates(isin)
 
 
 def fetch_history(ticker):
@@ -217,6 +177,12 @@ def process_position(item):
         return False, f'no EUR ticker worked (last: {last_err})'
     latest = meta.get('regularMarketPrice')
     indicators = compute_all(closes, latest)
+
+    # Plausibility guard: reject wrong-instrument data (price wildly off its own
+    # SMA50) so a bad ticker never poisons the recommendation engine.
+    if not ticker_map.plausible(latest, indicators.get('sma_50')):
+        return False, (f'IMPLAUSIBEL verworfen ({ticker}): Kurs {latest} vs. '
+                       f"SMA50 {indicators.get('sma_50')} — vermutlich falsches Instrument")
 
     # Preserve original values under legacy_ prefix (only once, if not already saved).
     for field in LEGACY_FIELDS:

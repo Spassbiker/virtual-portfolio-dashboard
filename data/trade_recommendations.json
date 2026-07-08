@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-07-08 11:04",
+  "generated_at": "2026-07-08 14:32",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [
     {
       "datum": "2026-07-08",
       "typ": "Kauf",
-      "isin": "IL0010825102",
-      "wertpapier": "Gilat Satellite",
-      "stueck": 16,
-      "kurs": 12.36,
+      "isin": "GB00B63H8491",
+      "wertpapier": "Rolls-Royce",
+      "stueck": 12,
+      "kurs": 16.63,
       "gebuehr": 5.0,
       "steuern": 0.0,
       "gewinn_verlust": 0.0,
-      "gesamt": 202.76,
-      "notiz": "Neukauf (Score=15)",
-      "begruendung": "Score=15 (Chart=4: Empf.+3, Trend-1, MACD+2; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(5%); KI-Sentiment=3) | Chart: Kurs 12.88 vs. SMA50 174.59 / SMA200 164.06 → Leichter Abwärtstrend. RSI 66, MACD Positiv. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Mehrere Defense-Aufträge: 11 Mio USD DoW, 43 Mio USD Sidewinder, europäischer SATCOM-Auftrag; Kurs +8,8%."
+      "gesamt": 204.56,
+      "notiz": "Neukauf (Score=16)",
+      "begruendung": "Score=16 (Chart=9: Empf.+3, Trend+2, RSI+1(58), MACD+1, SMA50+1, SMA200+1; Funda=6: Empf.+3, Bew.+2, Risiko-1, GW+2(23%); KI-Sentiment=1) | Chart: Kurs 16.33 vs. SMA50 15.16 / SMA200 14.12 → Aufwärtstrend. RSI 53, MACD Negativ. | Funda: Erfolgreicher Turnaround, Cashflow verbessert. | KI: Rolls-Royce +5,5% auf Wochensicht, Bombardier-Kooperation, 'Bargain on earnings'; leichter Marktgegenwind."
     }
   ],
   "zusammenfassung": [
     "KI-Veto: Kauf von Planet Labs (US72703X1063) blockiert. Kurs im 'Nosedive', Space-Sektor unter Druck; anhaltendes Cashburn-Risiko – Veto gegen Neukauf.",
-    "Kauf: 16x Gilat Satellite (IL0010825102) zu 12.36 EUR, Score=15, Budget=1700€."
+    "Kauf: 12x Rolls-Royce (GB00B63H8491) zu 16.63 EUR, Score=16, Budget=1800€."
   ],
-  "resultierender_barbestand": 9.59,
-  "resultierender_portfoliowert": 10184.78,
-  "resultierendes_gesamtvermoegen": 10194.37
+  "resultierender_barbestand": 7.79,
+  "resultierender_portfoliowert": 9753.16,
+  "resultierendes_gesamtvermoegen": 9760.95
 }

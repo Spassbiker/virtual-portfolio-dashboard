@@ -207,23 +207,8 @@ def budget_for_score(ts):
     bonus = max(0, ts - BUY_THRESHOLD) * 100.0
     return min(2500.0, base + bonus)
 
-isin_to_ticker = {
-    'IT0003856405': 'LDO.MI', 'DE000ENER6Y0': 'ENR.DE', 'GB00B63H8491': 'RRU.DE',
-    'FR0000121329': 'HO.PA', 'NL0010273215': 'ASML.AS', 'DE000A0D9PT0': 'MTX.DE',
-    'DE0007030009': 'RHM.DE', 'DE0007164600': 'SAP.DE', 'FR0000073272': 'SAF.PA',
-    'DE000ENAG999': 'EOAN.DE', 'DE0007037129': 'RWE.DE', 'DE0006231004': 'IFX.DE',
-    'NL0000235190': 'AIR.PA', 'US72703X1063': '85H1.DE', 'DE0006095003': 'ECV.DE',
-    'FR0010221234': 'ETL.PA', 'DE000HAG0005': 'HAG.DE', 'DE000A0DJ6J9': 'S92.DE',
-    'DE000A0D6554': 'NDX1.DE', 'DE0005936124': 'OHB.DE', 'DE000A2YN900': 'TMV.DE',
-    'DE000A2E4K43': 'DHER.DE', 'DE0005557508': 'DTE.DE', 'DE000A0WMPJ6': 'AIXA.DE',
-    'DK0061539921': 'VWS.CO', 'DK0060094928': 'ORSTED.CO', 'GB0002634946': 'BA.L',
-    'US65339F1012': 'NEE', 'US6668071029': 'NOC', 'US3695501086': 'GD',
-    'US5398301094': 'LMT', 'FR0014004L86': 'AM.PA', 'US0970231058': 'BA',
-    'US0003611052': 'AIR', 'US4282911084': 'HXL', 'LU0088087324': 'SESG.PA',
-    'US57778K1051': 'MAXR', 'US7731221062': 'RKLB', 'US46269C1027': 'IRDM',
-    'IL0010825102': 'GILT', 'US79466L3024': 'CRM', 'US68389X1054': 'ORCL',
-    'US67066G1040': 'NVDA', 'US5949181045': 'MSFT', 'US02079K3059': 'GOOG'
-}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ticker_map
 
 isin_to_name = {}
 for data_set in [chart_data, funda_data]:
@@ -233,16 +218,20 @@ for data_set in [chart_data, funda_data]:
                 isin_to_name[item["isin"]] = item.get("wertpapier", "Unbekannt").replace(" (Teil 2)", "")
 
 def get_live_price(isin):
-    if isin not in isin_to_ticker: return None
-    ticker = isin_to_ticker[isin]
-    url = f"https://query2.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d&range=1d"
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    try:
-        with urllib.request.urlopen(req) as response:
-            jdata = json.loads(response.read().decode())
-            return jdata['chart']['result'][0]['meta']['regularMarketPrice']
-    except:
-        return None
+    """EUR live price via the shared ticker map, guarded against wrong instruments.
+
+    Returns None for ISINs without a reliable EUR listing (they must not become
+    buy candidates) or when the price is implausible vs. the chart SMA50.
+    """
+    for cand in ticker_map.candidates(isin):
+        price, currency = ticker_map.fetch_price(cand)
+        if price is None or currency != 'EUR':
+            continue
+        c_item = get_chart_item(isin) or {}
+        if not ticker_map.plausible(price, c_item.get('sma_50')):
+            continue
+        return price
+    return None
 
 fee_per_trade = 5.00
 summary = []
