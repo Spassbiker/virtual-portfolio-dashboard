@@ -65,6 +65,9 @@ def get_sentiment(isin):
 BUY_THRESHOLD = 8
 # Score below this triggers Verkauf für bestehende Positionen
 SELL_THRESHOLD = 4
+# Stop-Loss: Position verkaufen, wenn der Kurs mehr als X unter dem Kaufkurs
+# liegt — unabhängig vom Score, um Verluste zu begrenzen (Risikomanagement).
+STOP_LOSS_PCT = -0.15
 
 def get_chart_item(isin):
     if not isin: return None
@@ -285,6 +288,7 @@ target_isins = [isin for isin, _ in target_isins_scored]
 # Auslöser: empfehlung=Verkaufen ODER Score < SELL_THRESHOLD
 # ==========================================
 positions_to_keep = []
+sold_isins = set()  # in diesem Lauf verkauft -> kein Rückkauf im selben Lauf
 for p in positions:
     isin = p.get("isin")
     stock = p.get("wertpapier", isin)
@@ -299,11 +303,17 @@ for p in positions:
     if current_price:
         live_prices[isin] = current_price
 
+    kaufkurs = p.get("kaufkurs", 0) or 0
+    drawdown = ((current_price - kaufkurs) / kaufkurs) if (kaufkurs and current_price) else 0.0
+
     sell = False
     sell_reason = ""
     if "verkauf" in c_emp or "verkauf" in f_emp:
         sell = True
         sell_reason = f"Explizites Verkaufen-Signal (Score={ts})"
+    elif drawdown <= STOP_LOSS_PCT:
+        sell = True
+        sell_reason = f"Stop-Loss ausgelöst ({drawdown*100:.1f}% ≤ {STOP_LOSS_PCT*100:.0f}%)"
     elif ts < SELL_THRESHOLD:
         sell = True
         sell_reason = f"Score unter Schwellwert ({ts} < {SELL_THRESHOLD})"
@@ -317,6 +327,7 @@ for p in positions:
         if gewinn_verlust_brutto > 0:
             steuern = round(gewinn_verlust_brutto * 0.26375, 2)
         current_cash += (revenue - steuern)
+        sold_isins.add(isin)
         begruendung = sell_reason + " | " + score_reason(isin)
         summary.append(f"Strategischer Verkauf: {units}x {stock} ({isin}) zu {current_price:.2f} EUR. {sell_reason}.")
         transactions.append({
@@ -347,7 +358,8 @@ positions = positions_to_keep
 # Positionsgröße ist score-abhängig
 # ==========================================
 unowned_targets = [(isin, ts) for isin, ts in target_isins_scored
-                   if not any(p.get("isin") == isin for p in positions)]
+                   if not any(p.get("isin") == isin for p in positions)
+                   and isin not in sold_isins]
 total_needed_cash = sum(budget_for_score(ts) for _, ts in unowned_targets)
 
 # ==========================================
