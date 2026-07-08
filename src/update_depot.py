@@ -244,15 +244,13 @@ def get_live_price(isin):
     Returns None for ISINs without a reliable EUR listing (they must not become
     buy candidates) or when the price is implausible vs. the chart SMA50.
     """
-    for cand in ticker_map.candidates(isin):
-        price, currency = ticker_map.fetch_price(cand)
-        if price is None or currency != 'EUR':
-            continue
-        c_item = get_chart_item(isin) or {}
-        if not ticker_map.plausible(price, c_item.get('sma_50')):
-            continue
-        return price
-    return None
+    price, _src = ticker_map.eur_price(isin)
+    if price is None:
+        return None
+    c_item = get_chart_item(isin) or {}
+    if not ticker_map.plausible(price, c_item.get('sma_50')):
+        return None
+    return price
 
 fee_per_trade = 5.00
 summary = []

@@ -8,10 +8,13 @@ instruments (SMA 174 vs. price 12). This module unifies resolution.
 
 Rules:
   * European ISINs auto-resolve via their native EUR exchange (Yahoo search).
-  * US/IL/other non-EUR home ISINs REQUIRE an explicit, verified EUR ticker
-    (see ISIN_TO_EUR_TICKER). Without one they are skipped — never guessed —
-    so we don't accidentally price a USD listing or a wrong instrument.
+  * US/IL/other non-EUR home ISINs REQUIRE either an explicit, verified EUR
+    ticker (ISIN_TO_EUR_TICKER) or a verified USD ticker (USD_TICKER) that is
+    then converted to EUR via the live USD->EUR rate. Without either they are
+    skipped — never guessed — so we don't price a wrong instrument.
   * plausible() guards against wrong-instrument data (price vs. its own SMA50).
+  * eur_price()/eur_history() are the entry points: they return EUR values
+    regardless of whether the source listing is in EUR or USD.
 """
 
 import urllib.request
@@ -42,26 +45,30 @@ ISIN_TO_EUR_TICKER = {
     'US72703X1063': '85H1.DE',   # Planet Labs (Frankfurt)
 }
 
-# ISINs with NO reliable EUR listing on Yahoo — skip entirely (never price,
-# never recommend as a buy). Verified 2026-07-08: only USD listings or the
-# apparent EUR tickers are wrong instruments (e.g. NEE.F=0.55, L3H.F=72).
+# USD-Ticker für Namen ohne verlässliches EUR-Listing — werden über den
+# Live-USD->EUR-Kurs umgerechnet und bleiben so im handelbaren Universum.
+# Alle 2026-07-08 auf Yahoo als USD/EQUITY verifiziert.
+USD_TICKER = {
+    'IL0010825102': 'GILT',   # Gilat Satellite
+    'US75513E1010': 'RTX',    # Raytheon (RTX Corp)
+    'US6668071029': 'NOC',    # Northrop Grumman
+    'US4586221056': 'LHX',    # L3Harris (Ticker LHX, nicht mehr LLL)
+    'US65339F1012': 'NEE',    # NextEra Energy
+    'US88033G4073': 'TER',    # Teradyne
+    'US58551A1060': 'MELI',   # MercadoLibre
+    'US3695501086': 'GD',     # General Dynamics
+    'US7731221062': 'RKLB',   # Rocket Lab
+    'US46269C1027': 'IRDM',   # Iridium
+    'US79466L3024': 'CRM',    # Salesforce
+    'US68389X1054': 'ORCL',   # Oracle
+    'US4282911084': 'HXL',    # Hexcel
+}
+
+# ISINs mit weder EUR- noch verlässlichem USD-Listing — komplett überspringen.
 NO_EUR_LISTING = {
-    'IL0010825102',  # Gilat Satellite (nur NASDAQ USD)
-    'US75513E1010',  # Raytheon / RTX
-    'US6668071029',  # Northrop Grumman
-    'US4586221056',  # L3Harris
-    'US65339F1012',  # NextEra Energy
-    'US88033G4073',  # Teradyne
-    'US58551A1060',  # MercadoLibre
-    'US3695501086',  # General Dynamics
-    'US3696043013',  # (war fälschlich GDX.DE = Gold-Miners-ETF)
-    'US57778K1051',  # Maxar
-    'US7731221062',  # Rocket Lab
-    'US46269C1027',  # Iridium
-    'US79466L3024',  # Salesforce
-    'US68389X1054',  # Oracle
-    'US0003611052',  # (US-Platzhalter ohne verlässliches EUR-Listing)
-    'US4282911084',  # Hexcel
+    'US3696043013',  # unklare Zuordnung (war fälschlich GDX.DE = Gold-ETF)
+    'US57778K1051',  # Maxar (übernommen/delisted)
+    'US0003611052',  # US-Platzhalter ohne verlässliches Listing
 }
 
 
@@ -72,25 +79,28 @@ def _http(url):
 
 
 def is_skipped(isin):
-    """True if this ISIN should never be priced/traded (no EUR listing)."""
+    """True if this ISIN can't be priced at all (neither EUR nor USD listing)."""
     if not isin:
         return True
-    if isin in ISIN_TO_EUR_TICKER:
+    if isin in ISIN_TO_EUR_TICKER or isin in USD_TICKER:
         return False
     if isin in NO_EUR_LISTING:
         return True
-    # US/other non-EUR home without an explicit verified EUR ticker -> skip.
+    # US/other non-EUR home without an explicit verified EUR/USD ticker -> skip.
     if isin[:2] in NON_EUR_PREFIXES:
         return True
     return False
 
 
 def candidates(isin):
-    """Ordered list of EUR ticker candidates to try; [] if the ISIN is skipped."""
+    """Ordered list of EUR ticker candidates to try; [] if none / USD-only."""
     if is_skipped(isin):
         return []
     if isin in ISIN_TO_EUR_TICKER:
         return [ISIN_TO_EUR_TICKER[isin]]
+    # Reine USD-Namen haben kein EUR-Listing -> kein EUR-Kandidat (USD-Pfad greift).
+    if isin in USD_TICKER:
+        return []
     # European ISIN: resolve via Yahoo search, prefer EUR-suffixed symbols.
     try:
         data = _http(f"https://query2.finance.yahoo.com/v1/finance/search?q={isin}")
@@ -137,3 +147,80 @@ def fetch_price(ticker):
         return round(meta['regularMarketPrice'], 3), meta.get('currency', '')
     except Exception:
         return None, None
+
+
+_fx_cache = {}
+
+
+def usd_to_eur_rate():
+    """Live USD->EUR rate (EUR per 1 USD), cached per process. None if unavailable."""
+    if 'usd_eur' in _fx_cache:
+        return _fx_cache['usd_eur']
+    rate = None
+    try:
+        data = _http("https://query1.finance.yahoo.com/v8/finance/chart/"
+                     "USDEUR=X?interval=1d&range=1d")
+        r = data['chart']['result'][0]['meta'].get('regularMarketPrice')
+        if r and 0.5 < r < 1.5:   # Sanity: EUR/USD liegt realistisch um ~0.9
+            rate = round(r, 5)
+    except Exception:
+        rate = None
+    _fx_cache['usd_eur'] = rate
+    return rate
+
+
+def fetch_history(ticker, rng="1y"):
+    """Return (closes, currency, meta) for a ticker; closes oldest-first, no None."""
+    try:
+        data = _http(f"https://query1.finance.yahoo.com/v8/finance/chart/"
+                     f"{ticker}?interval=1d&range={rng}")
+        result = data['chart']['result'][0]
+        meta = result['meta']
+        if meta.get('instrumentType') not in VALID_INSTRUMENT_TYPES:
+            return None, None, None
+        quote = result.get('indicators', {}).get('quote', [{}])[0]
+        closes = [c for c in quote.get('close', []) if c is not None]
+        return closes, meta.get('currency', ''), meta
+    except Exception:
+        return None, None, None
+
+
+def eur_price(isin):
+    """EUR spot price for an ISIN. Returns (price_eur, source) or (None, None).
+
+    Tries an EUR listing first; falls back to the USD listing converted via the
+    live USD->EUR rate.
+    """
+    for cand in candidates(isin):
+        price, cur = fetch_price(cand)
+        if price is not None and cur == 'EUR':
+            return price, cand
+    usd_t = USD_TICKER.get(isin)
+    if usd_t:
+        price, cur = fetch_price(usd_t)
+        rate = usd_to_eur_rate()
+        if price is not None and cur == 'USD' and rate:
+            return round(price * rate, 3), f"{usd_t}·USD→EUR"
+    return None, None
+
+
+def eur_history(isin):
+    """EUR daily closes + latest for an ISIN. Returns (closes, latest, source).
+
+    USD listings are converted with the current USD->EUR rate. A constant FX
+    factor leaves trend/SMA/RSI relationships intact and yields EUR-denominated
+    levels for display and valuation.
+    """
+    for cand in candidates(isin):
+        closes, cur, meta = fetch_history(cand)
+        if cur == 'EUR' and closes and meta and meta.get('regularMarketPrice'):
+            return closes, meta['regularMarketPrice'], cand
+    usd_t = USD_TICKER.get(isin)
+    if usd_t:
+        closes, cur, meta = fetch_history(usd_t)
+        rate = usd_to_eur_rate()
+        if cur == 'USD' and closes and meta and meta.get('regularMarketPrice') and rate:
+            closes_eur = [round(c * rate, 4) for c in closes]
+            latest_eur = round(meta['regularMarketPrice'] * rate, 4)
+            return closes_eur, latest_eur, f"{usd_t}·USD→EUR"
+    return None, None, None

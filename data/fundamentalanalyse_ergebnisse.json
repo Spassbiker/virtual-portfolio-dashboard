@@ -148,7 +148,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 199.25
+        "aktueller_kurs": 170.644
       }
     ],
     "Verteidigung": [
@@ -225,7 +225,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 229.1
+        "aktueller_kurs": 477.244
       },
       {
         "wertpapier": "Leonardo SpA",
@@ -270,7 +270,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 0.55
+        "aktueller_kurs": 76.554
       },
       {
         "wertpapier": "Tesla",
@@ -300,7 +300,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 12.88
+        "aktueller_kurs": 10.69
       }
     ],
     "Luft- und Raumfahrttechnik": [
@@ -422,7 +422,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 373.54
+        "aktueller_kurs": 327.708
       },
       {
         "wertpapier": "Nvidia",
@@ -528,7 +528,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 100.46
+        "aktueller_kurs": 72.973
       },
       {
         "wertpapier": "Planet Labs",
@@ -725,7 +725,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 0.55
+        "aktueller_kurs": 76.554
       },
       {
         "wertpapier": "Dassault Aviation",

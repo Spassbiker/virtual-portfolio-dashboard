@@ -1,27 +1,42 @@
 {
-  "generated_at": "2026-07-08 14:32",
+  "generated_at": "2026-07-09 00:44",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [
     {
-      "datum": "2026-07-08",
+      "datum": "2026-07-09",
+      "typ": "Verkauf",
+      "isin": "US0970231058",
+      "wertpapier": "Boeing",
+      "stueck": 5,
+      "kurs": 196.04,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -197.5,
+      "gesamt": 975.2,
+      "notiz": "Strategischer Verkauf (Stop-Loss ausgelöst (-16.4% ≤ -15%))",
+      "begruendung": "Stop-Loss ausgelöst (-16.4% ≤ -15%) | Score=11 (Chart=9: Empf.+3, Trend+2, RSI+1(52), MACD+1, SMA50+1, SMA200+1; Funda=0: Funda=Platzhalter→0; KI-Sentiment=2) | Chart: Kurs 199.12 vs. SMA50 193.31 / SMA200 187.87 → Aufwärtstrend. RSI 56, MACD Neutral. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Positiv: Cramer-Kaufempfehlung, '13% unterbewertet' bei 737-MAX-Produktionshochlauf."
+    },
+    {
+      "datum": "2026-07-09",
       "typ": "Kauf",
-      "isin": "GB00B63H8491",
-      "wertpapier": "Rolls-Royce",
-      "stueck": 12,
-      "kurs": 16.63,
+      "isin": "FR0014004L86",
+      "wertpapier": "Dassault Aviation",
+      "stueck": 3,
+      "kurs": 297.2,
       "gebuehr": 5.0,
       "steuern": 0.0,
       "gewinn_verlust": 0.0,
-      "gesamt": 204.56,
-      "notiz": "Neukauf (Score=16)",
-      "begruendung": "Score=16 (Chart=9: Empf.+3, Trend+2, RSI+1(58), MACD+1, SMA50+1, SMA200+1; Funda=6: Empf.+3, Bew.+2, Risiko-1, GW+2(23%); KI-Sentiment=1) | Chart: Kurs 16.33 vs. SMA50 15.16 / SMA200 14.12 → Aufwärtstrend. RSI 53, MACD Negativ. | Funda: Erfolgreicher Turnaround, Cashflow verbessert. | KI: Rolls-Royce +5,5% auf Wochensicht, Bombardier-Kooperation, 'Bargain on earnings'; leichter Marktgegenwind."
+      "gesamt": 896.6,
+      "notiz": "Neukauf (Score=15)",
+      "begruendung": "Score=15 (Chart=8: Empf.+3, Trend+1, RSI+2(50), MACD+1, SMA50+1; Funda=7: Empf.+3, Bew.+2, Risiko+1, GW+1(5%)) | Chart: Kurs 296.20 vs. SMA50 294.34 / SMA200 300.60 → Leichter Aufwärtstrend. RSI 49, MACD Neutral. | Funda: Konservativ, geringes Risiko, wenig Dynamik. | KI: Überwiegend nicht zugehörige Schlagzeilen; nur Meldung zur Aktienanzahl – neutral."
     }
   ],
   "zusammenfassung": [
     "KI-Veto: Kauf von Planet Labs (US72703X1063) blockiert. Kurs im 'Nosedive', Space-Sektor unter Druck; anhaltendes Cashburn-Risiko – Veto gegen Neukauf.",
-    "Kauf: 12x Rolls-Royce (GB00B63H8491) zu 16.63 EUR, Score=16, Budget=1800€."
+    "Strategischer Verkauf: 5x Boeing (US0970231058) zu 196.04 EUR. Stop-Loss ausgelöst (-16.4% ≤ -15%).",
+    "Kauf: 3x Dassault Aviation (FR0014004L86) zu 297.20 EUR, Score=15, Budget=1700€."
   ],
-  "resultierender_barbestand": 7.79,
-  "resultierender_portfoliowert": 9753.16,
-  "resultierendes_gesamtvermoegen": 9760.95
+  "resultierender_barbestand": 86.65,
+  "resultierender_portfoliowert": 9622.5,
+  "resultierendes_gesamtvermoegen": 9709.15
 }

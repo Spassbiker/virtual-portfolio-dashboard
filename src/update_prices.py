@@ -37,29 +37,18 @@ for sector, items in chart_data.get('sektoren', {}).items():
         if item.get('isin'):
             isins_to_fetch.add(item['isin'])
 
-def fetch_eur_price(isin):
-    """Returns an EUR price via the shared ticker map, or None if skipped/unresolved."""
-    cands = ticker_map.candidates(isin)
-    if not cands:
-        return None, None
-    for cand in cands:
-        price, currency = ticker_map.fetch_price(cand)
-        if price is not None and currency == 'EUR':
-            return price, cand
-    return None, None
-
 prices = {}
 for isin in isins_to_fetch:
     try:
         if ticker_map.is_skipped(isin):
-            print(f"  SKIP {isin}: kein verlässliches EUR-Listing (übersprungen)")
+            print(f"  SKIP {isin}: kein verlässliches EUR-/USD-Listing (übersprungen)")
             continue
-        price, used = fetch_eur_price(isin)
+        price, used = ticker_map.eur_price(isin)
         if price is not None:
             prices[isin] = price
             print(f"  OK {isin}: {price} EUR ({used})")
         else:
-            print(f"  SKIP {isin}: kein EUR-Ticker aufgelöst")
+            print(f"  SKIP {isin}: kein Kurs aufgelöst")
     except Exception as e:
         print(f"  ERROR {isin}: {e}")
 

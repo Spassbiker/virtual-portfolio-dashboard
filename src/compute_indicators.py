@@ -158,24 +158,10 @@ def process_position(item):
     name = item.get('wertpapier', isin)
     if not isin:
         return False, 'no isin'
-    candidates = resolve_eur_ticker(isin)
-    if not candidates:
-        return False, 'no ticker'
-    closes, currency, meta, ticker = None, None, None, None
-    last_err = None
-    for cand in candidates:
-        try:
-            c, cur, m = fetch_history(cand)
-        except Exception as e:
-            last_err = f'{cand}: {e}'
-            continue
-        if cur == 'EUR' and c and m and m.get('regularMarketPrice'):
-            closes, currency, meta, ticker = c, cur, m, cand
-            break
-        last_err = f'{cand}: currency={cur}'
-    if not closes:
-        return False, f'no EUR ticker worked (last: {last_err})'
-    latest = meta.get('regularMarketPrice')
+    # EUR-Historie über die gemeinsame Quelle (inkl. USD->EUR-Umrechnung).
+    closes, latest, ticker = ticker_map.eur_history(isin)
+    if not closes or not latest:
+        return False, 'kein EUR-/USD-Kurs auflösbar'
     indicators = compute_all(closes, latest)
 
     # Plausibility guard: reject wrong-instrument data (price wildly off its own
