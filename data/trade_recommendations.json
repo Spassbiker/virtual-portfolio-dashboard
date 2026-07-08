@@ -1,57 +1,27 @@
 {
-  "generated_at": "2026-07-07 09:08",
+  "generated_at": "2026-07-08 11:04",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [
     {
-      "datum": "2026-07-07",
-      "typ": "Verkauf",
-      "isin": "DE0006231004",
-      "wertpapier": "Infineon",
-      "stueck": 18,
-      "kurs": 77.21,
-      "gebuehr": 5.0,
-      "steuern": 0.0,
-      "gewinn_verlust": -85.28,
-      "gesamt": 1384.78,
-      "notiz": "Rebalancing (Kapitalbeschaffung für Neukäufe)",
-      "begruendung": "Rebalancing | Score=11 (Chart=8: Empf.+3, Trend+2, RSI+2(50), MACD-1, SMA50+1, SMA200+1; Funda=5: Bew.+2, Risiko+1, GW+2(23%); KI-Sentiment=-2) | Chart: Kurs (77.21) > SMA50 (72.96) > SMA200 (47.23). RSI und MACD positiv. ACHTUNG: ITC-Importverbot-News beobachten. | Funda: ITC-Importverbot-News belastet kurzfristig; Infineon schließt ams-Osram-Akquisition ab (positiv langfristig). Risiko erhöht. | KI: Infineon: US-ITC bestätigt Importverbot – signifikantes regulatorisches Risiko. Veto gegen Aufstockung. ams-Osram-Akquisition langfristig positiv, kurzfristig überschattet."
-    },
-    {
-      "datum": "2026-07-07",
+      "datum": "2026-07-08",
       "typ": "Kauf",
-      "isin": "US0970231058",
-      "wertpapier": "Boeing",
-      "stueck": 5,
-      "kurs": 234.54,
+      "isin": "IL0010825102",
+      "wertpapier": "Gilat Satellite",
+      "stueck": 16,
+      "kurs": 12.36,
       "gebuehr": 5.0,
       "steuern": 0.0,
       "gewinn_verlust": 0.0,
-      "gesamt": 1177.7,
-      "notiz": "Neukauf (Score=17)",
-      "begruendung": "Score=17 (Chart=9: Empf.+3, Trend+2, RSI+1(63), MACD+1, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+1, GW+2(20%)) | Chart: Klarer Aufwärtstrend: Kurs (203.65) > SMA50 (192.91) > SMA200 (187.59), Kaufsignal intakt. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse."
-    },
-    {
-      "datum": "2026-07-07",
-      "typ": "Kauf",
-      "isin": "US72703X1063",
-      "wertpapier": "Planet Labs",
-      "stueck": 7,
-      "kurs": 27.8,
-      "gebuehr": 5.0,
-      "steuern": 0.0,
-      "gewinn_verlust": 0.0,
-      "gesamt": 199.6,
+      "gesamt": 202.76,
       "notiz": "Neukauf (Score=15)",
-      "begruendung": "Score=15 (Chart=10: Empf.+3, Trend+2, RSI+2(45), MACD+1, SMA50+1, SMA200+1; Funda=5: Empf.+3, Bew.+2, Risiko-1, GW+1(5%)) | Chart: Klarer Aufwärtstrend: Kurs (31.38) > SMA50 (26.60) > SMA200 (25.20), Kaufsignal intakt. | Funda: Hohe Cashburn-Rate, intensiver Wettbewerb."
+      "begruendung": "Score=15 (Chart=4: Empf.+3, Trend-1, MACD+2; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(5%); KI-Sentiment=3) | Chart: Kurs 12.88 vs. SMA50 174.59 / SMA200 164.06 → Leichter Abwärtstrend. RSI 66, MACD Positiv. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Mehrere Defense-Aufträge: 11 Mio USD DoW, 43 Mio USD Sidewinder, europäischer SATCOM-Auftrag; Kurs +8,8%."
     }
   ],
   "zusammenfassung": [
-    "KI-Veto: Kauf von Infineon (DE0006231004) blockiert. Infineon: US-ITC bestätigt Importverbot – signifikantes regulatorisches Risiko. Veto gegen Aufstockung. ams-Osram-Akquisition langfristig positiv, kurzfristig überschattet.",
-    "Rebalancing-Verkauf: 18x Infineon (DE0006231004) zu 77.21 EUR (Score=11).",
-    "Kauf: 5x Boeing (US0970231058) zu 234.54 EUR, Score=17, Budget=1900€.",
-    "Kauf: 7x Planet Labs (US72703X1063) zu 27.80 EUR, Score=15, Budget=1700€."
+    "KI-Veto: Kauf von Planet Labs (US72703X1063) blockiert. Kurs im 'Nosedive', Space-Sektor unter Druck; anhaltendes Cashburn-Risiko – Veto gegen Neukauf.",
+    "Kauf: 16x Gilat Satellite (IL0010825102) zu 12.36 EUR, Score=15, Budget=1700€."
   ],
-  "resultierender_barbestand": 12.75,
-  "resultierender_portfoliowert": 10624.01,
-  "resultierendes_gesamtvermoegen": 10636.76
+  "resultierender_barbestand": 9.59,
+  "resultierender_portfoliowert": 10184.78,
+  "resultierendes_gesamtvermoegen": 10194.37
 }
