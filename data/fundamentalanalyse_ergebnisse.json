@@ -13,7 +13,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "aktueller_kurs": 151.9,
+        "aktueller_kurs": 156.76,
         "empfehlung": "Kaufen"
       },
       {
@@ -29,7 +29,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 56.12
+        "aktueller_kurs": 56.54
       },
       {
         "wertpapier": "E.ON",
@@ -44,7 +44,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 19.205
+        "aktueller_kurs": 19.26
       },
       {
         "wertpapier": "Encavis",
@@ -73,7 +73,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 53.85
+        "aktueller_kurs": 54.85
       },
       {
         "wertpapier": "Nordex SE",
@@ -88,7 +88,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 40.52
+        "aktueller_kurs": 42.82
       },
       {
         "wertpapier": "Microsoft",
@@ -103,7 +103,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 335.35
+        "aktueller_kurs": 332.3
       },
       {
         "wertpapier": "Alphabet",
@@ -118,7 +118,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 316.05
+        "aktueller_kurs": 308.5
       },
       {
         "wertpapier": "L3Harris Technologies",
@@ -148,7 +148,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 170.351
+        "aktueller_kurs": 170.219
       }
     ],
     "Verteidigung": [
@@ -164,7 +164,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "aktueller_kurs": 1058.8,
+        "aktueller_kurs": 1015.8,
         "empfehlung": "Kaufen"
       },
       {
@@ -180,7 +180,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 78.68
+        "aktueller_kurs": 74.74
       },
       {
         "wertpapier": "Airbus",
@@ -195,7 +195,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 197.36
+        "aktueller_kurs": 196.4
       },
       {
         "wertpapier": "BAE Systems",
@@ -210,7 +210,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 22.51
+        "aktueller_kurs": 21.69
       },
       {
         "wertpapier": "Northrop Grumman",
@@ -225,7 +225,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 476.426
+        "aktueller_kurs": 463.922
       },
       {
         "wertpapier": "Leonardo SpA",
@@ -239,7 +239,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "aktueller_kurs": 53.37,
+        "aktueller_kurs": 52.01,
         "empfehlung": "Kaufen"
       },
       {
@@ -254,7 +254,7 @@
         "bewertung": "Neutral",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "aktueller_kurs": 233.7,
+        "aktueller_kurs": 226.7,
         "empfehlung": "Halten"
       },
       {
@@ -270,7 +270,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 76.423
+        "aktueller_kurs": 76.541
       },
       {
         "wertpapier": "Tesla",
@@ -285,7 +285,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 344.4
+        "aktueller_kurs": 346.0
       },
       {
         "wertpapier": "Gilat Satellite",
@@ -300,7 +300,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 10.672
+        "aktueller_kurs": 10.637
       }
     ],
     "Luft- und Raumfahrttechnik": [
@@ -316,7 +316,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "aktueller_kurs": 355.3,
+        "aktueller_kurs": 362.7,
         "empfehlung": "Halten"
       },
       {
@@ -331,7 +331,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "aktueller_kurs": 332.5,
+        "aktueller_kurs": 340.2,
         "empfehlung": "Halten"
       },
       {
@@ -347,7 +347,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 16.344
+        "aktueller_kurs": 16.876
       },
       {
         "wertpapier": "Dassault Aviation",
@@ -362,7 +362,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 297.2
+        "aktueller_kurs": 289.8
       },
       {
         "wertpapier": "Leonardo",
@@ -376,7 +376,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "aktueller_kurs": 53.37,
+        "aktueller_kurs": 52.01,
         "empfehlung": "Kaufen"
       },
       {
@@ -392,7 +392,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 197.36
+        "aktueller_kurs": 196.4
       },
       {
         "wertpapier": "Lockheed Martin",
@@ -407,7 +407,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 464.6
+        "aktueller_kurs": 454.2
       },
       {
         "wertpapier": "General Dynamics",
@@ -422,7 +422,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 327.147
+        "aktueller_kurs": 325.355
       },
       {
         "wertpapier": "Nvidia",
@@ -437,7 +437,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 173.32
+        "aktueller_kurs": 176.1
       }
     ],
     "Satellitentechnik": [
@@ -454,7 +454,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 279.0
+        "aktueller_kurs": 269.0
       },
       {
         "wertpapier": "SES",
@@ -469,7 +469,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 7.875
+        "aktueller_kurs": 7.79
       },
       {
         "wertpapier": "Eutelsat",
@@ -484,7 +484,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 2.482
+        "aktueller_kurs": 2.435
       },
       {
         "wertpapier": "Maxar",
@@ -513,7 +513,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 197.36
+        "aktueller_kurs": 196.4
       },
       {
         "wertpapier": "Rocket Lab",
@@ -528,7 +528,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 72.848
+        "aktueller_kurs": 73.973
       },
       {
         "wertpapier": "Planet Labs",
@@ -558,7 +558,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 196.04
+        "aktueller_kurs": 195.44
       },
       {
         "wertpapier": "Tesla",
@@ -573,7 +573,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 344.4
+        "aktueller_kurs": 346.0
       },
       {
         "wertpapier": "Microsoft",
@@ -588,7 +588,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 335.35
+        "aktueller_kurs": 332.3
       }
     ],
     "Technologie": [
@@ -605,7 +605,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 137.96
+        "aktueller_kurs": 137.46
       },
       {
         "wertpapier": "Infineon",
@@ -619,7 +619,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "aktueller_kurs": 70.3,
+        "aktueller_kurs": 73.33,
         "empfehlung": "Halten"
       },
       {
@@ -635,7 +635,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 1529.0
+        "aktueller_kurs": 1601.8
       },
       {
         "wertpapier": "TeamViewer",
@@ -650,7 +650,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 5.22
+        "aktueller_kurs": 5.265
       },
       {
         "wertpapier": "Delivery Hero",
@@ -665,7 +665,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 36.67
+        "aktueller_kurs": 37.0
       },
       {
         "wertpapier": "Dt. Telekom",
@@ -680,7 +680,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 25.54
+        "aktueller_kurs": 25.23
       },
       {
         "wertpapier": "Aixtron SE",
@@ -695,7 +695,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 42.75
+        "aktueller_kurs": 45.24
       },
       {
         "wertpapier": "Meta Platforms",
@@ -710,7 +710,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 529.6
+        "aktueller_kurs": 528.6
       },
       {
         "wertpapier": "NextEra Energy",
@@ -725,7 +725,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 76.423
+        "aktueller_kurs": 76.541
       },
       {
         "wertpapier": "Dassault Aviation",
@@ -740,7 +740,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 297.2
+        "aktueller_kurs": 289.8
       },
       {
         "wertpapier": "Nvidia",
@@ -755,7 +755,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 173.32
+        "aktueller_kurs": 176.1
       }
     ]
   }
