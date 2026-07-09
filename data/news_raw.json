@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09 09:03",
+  "generated_at": "2026-07-09 09:09",
   "items": {
     "DE0005557508": {
       "name": "Dt. Telekom",
@@ -146,7 +146,20 @@
     "FR0000073272": {
       "name": "Safran",
       "ticker": "",
-      "headlines": [],
+      "headlines": [
+        {
+          "title": "Has Safran (SAFRY) Outpaced Other Aerospace Stocks This Year?",
+          "publisher": "Zacks",
+          "published": "2026-06-17",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/safran-safry-outpaced-other-aerospace-134004039.html"
+        },
+        {
+          "title": "Delta Air Lines (DAL) Might Drop Safran SA, Reports Bloomberg",
+          "publisher": "Insider Monkey",
+          "published": "2026-06-16",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/delta-air-lines-dal-might-192140931.html"
+        }
+      ],
       "error": null
     },
     "FR0000121329": {
