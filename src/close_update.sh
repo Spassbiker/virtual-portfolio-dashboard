@@ -15,6 +15,7 @@ fi
 python3 src/update_prices.py >/dev/null 2>&1
 python3 src/compute_indicators.py >/dev/null 2>&1
 python3 src/build_dashboard.py >/dev/null 2>&1
+python3 src/risk_report.py >/dev/null 2>&1
 
 git add data/*.json index.html
 if git commit -q -m "Update Schlusskurse" 2>/dev/null; then
@@ -25,9 +26,13 @@ fi
 
 python3 - "$warn" "$push" <<'PY'
 import json, sys
+sys.path.insert(0, "src")
+import risk_report
 warn, push = sys.argv[1], sys.argv[2]
 d = json.load(open("data/depot_status.json"))["depot"]
 print("%s📊 Nachbörsen-Update — Gesamtvermögen %.2f € | Portfoliowert %.2f € | "
       "Barbestand %.2f € (%s)" % (warn, d["gesamtvermoegen"], d["portfoliowert"],
                                    d["aktueller_barbestand"], push))
+for line in risk_report.format_lines(d.get("risiko", {}), d.get("benchmark", {})):
+    print(line)
 PY

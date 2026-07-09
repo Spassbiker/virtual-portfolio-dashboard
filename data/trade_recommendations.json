@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-09 11:53",
+  "generated_at": "2026-07-09 22:40",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [],
   "zusammenfassung": [],
   "resultierender_barbestand": 86.65,
-  "resultierender_portfoliowert": 9633.72,
-  "resultierendes_gesamtvermoegen": 9720.37
+  "resultierender_portfoliowert": 9680.95,
+  "resultierendes_gesamtvermoegen": 9767.6
 }

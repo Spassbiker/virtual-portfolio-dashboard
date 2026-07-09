@@ -450,6 +450,14 @@ for p in positions:
         if dax_now and current_price and (not p.get("dax_ref") or not p.get("stop_ref_kurs")):
             p["dax_ref"] = round(dax_now, 2)
             p["stop_ref_kurs"] = round(current_price, 4)
+        # TRAILING-STOP: macht die Position ein neues Hoch, wandert das Anker-Paar
+        # (Höchststand-Referenz) mit nach oben. Der relative Stop misst den
+        # beta-bereinigten Rückgang dann vom PEAK statt vom Einstieg — aufgelaufene
+        # Gewinne werden so mitgesichert. Anker nur nach oben (Ratchet), nie zurück,
+        # daher werden Gewinne nie wieder komplett hergegeben, bevor der Stop greift.
+        elif dax_now and current_price and current_price > (p.get("stop_ref_kurs") or 0):
+            p["stop_ref_kurs"] = round(current_price, 4)
+            p["dax_ref"] = round(dax_now, 2)
         positions_to_keep.append(p)
 
 positions = positions_to_keep

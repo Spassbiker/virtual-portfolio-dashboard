@@ -33,6 +33,7 @@ if [ "$traded" = "1" ]; then
 fi
 
 python3 src/build_dashboard.py >/dev/null 2>&1
+python3 src/risk_report.py >/dev/null 2>&1
 
 git add data/*.json index.html
 if git commit -q -m "Daily 09:00: Portfolio-Manager (Stop-Loss + regelbasierte Trades)" 2>/dev/null; then
@@ -43,6 +44,8 @@ fi
 
 python3 - "$warn" "$push" "$TODAY" <<'PY'
 import json, sys
+sys.path.insert(0, "src")
+import risk_report
 warn, push, today = sys.argv[1], sys.argv[2], sys.argv[3]
 d = json.load(open("data/depot_status.json"))["depot"]
 hist = d.get("transaktionshistorie", [])
@@ -61,4 +64,6 @@ else:
 print("%s📊 Tages-Lauf 09:00 — %s | Gesamtvermögen %.2f € | Portfoliowert %.2f € | "
       "Barbestand %.2f € (%s)" % (warn, trades, d["gesamtvermoegen"], d["portfoliowert"],
                                    d["aktueller_barbestand"], push))
+for line in risk_report.format_lines(d.get("risiko", {}), d.get("benchmark", {})):
+    print(line)
 PY
