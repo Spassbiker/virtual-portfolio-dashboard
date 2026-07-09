@@ -65,9 +65,16 @@ def get_sentiment(isin):
 BUY_THRESHOLD = 8
 # Score below this triggers Verkauf für bestehende Positionen
 SELL_THRESHOLD = 4
-# Stop-Loss: Position verkaufen, wenn der Kurs mehr als X unter dem Kaufkurs
-# liegt — unabhängig vom Score, um Verluste zu begrenzen (Risikomanagement).
-STOP_LOSS_PCT = -0.15
+# Zweistufiger Stop-Loss (marktbereinigt):
+#  1) ABSOLUTER HARD-STOP: fällt eine Position absolut um mehr als X unter den
+#     Kaufkurs, wird IMMER verkauft — Katastrophenschutz, auch wenn der ganze
+#     Markt fällt. Der Hauptjob des Stops bleibt Kapitalschutz.
+#  2) RELATIVER STOP: greift nur, wenn die Position im Minus ist UND ihre
+#     beta-bereinigte Underperformance ggü. dem DAX (Alpha) unter -REL_STOP_PCT
+#     liegt. So wird man bei breiten Marktdips NICHT rausgekegelt, aber echte
+#     unternehmensspezifische Schwäche früher erkannt.
+ABS_HARD_STOP_PCT = -0.20   # absoluter Notausgang (Katastrophenschutz)
+REL_STOP_PCT = -0.12        # beta-bereinigte Underperformance vs. DAX
 # Cash-Management: Mindest-Barreserve nie unterschreiten, und keine Mini-Käufe
 # (Gebühren-Drag). Bei 5 € Gebühr wären 100 € Order = 5 % Reibung.
 MIN_CASH_RESERVE = 25.0
@@ -252,6 +259,56 @@ def get_live_price(isin):
         return None
     return price
 
+# ==========================================
+# MARKT-REFERENZ (DAX) + AUTO-BETA für den relativen Stop-Loss
+# ==========================================
+# DAX als Benchmark. Beta wird pro Position automatisch aus ~1 Jahr
+# Tagesrenditen geschätzt (Regression Aktie vs. DAX). Ohne verlässliche Daten
+# fällt Beta auf 1.0 zurück ("im ersten Schritt 1:1, aber automatisch anpassend").
+DAX_SYMBOL = "^GDAXI"
+BETA_MIN, BETA_MAX, BETA_DEFAULT = 0.3, 2.5, 1.0
+dax_now, dax_closes = ticker_map.fetch_index(DAX_SYMBOL)
+_beta_cache = {}
+
+
+def _daily_returns(closes):
+    out = []
+    for i in range(1, len(closes)):
+        prev = closes[i - 1]
+        if prev:
+            out.append((closes[i] - prev) / prev)
+    return out
+
+
+def get_beta(isin):
+    """Auto-Beta der Position ggü. DAX via Kovarianz/Varianz der Tagesrenditen.
+    Geklemmt auf [BETA_MIN, BETA_MAX]; Fallback BETA_DEFAULT (1.0) bei zu wenig
+    oder unzuverlässigen Daten."""
+    if isin in _beta_cache:
+        return _beta_cache[isin]
+    beta = BETA_DEFAULT
+    try:
+        if dax_closes and len(dax_closes) >= 61:
+            closes, _latest, _src = ticker_map.eur_history(isin)
+            if closes and len(closes) >= 61:
+                n = min(len(closes), len(dax_closes))
+                s = _daily_returns(closes[-n:])
+                d = _daily_returns(dax_closes[-n:])
+                m = min(len(s), len(d))
+                if m >= 60:
+                    s, d = s[-m:], d[-m:]
+                    md = sum(d) / m
+                    var = sum((x - md) ** 2 for x in d)   # Summe; /m kürzt sich
+                    if var > 0:
+                        ms = sum(s) / m
+                        cov = sum((s[i] - ms) * (d[i] - md) for i in range(m))
+                        beta = max(BETA_MIN, min(BETA_MAX, cov / var))
+    except Exception:
+        beta = BETA_DEFAULT
+    _beta_cache[isin] = round(beta, 3)
+    return _beta_cache[isin]
+
+
 fee_per_trade = 5.00
 summary = []
 
@@ -322,14 +379,36 @@ for p in positions:
     kaufkurs = p.get("kaufkurs", 0) or 0
     drawdown = ((current_price - kaufkurs) / kaufkurs) if (kaufkurs and current_price) else 0.0
 
+    # Marktbereinigung: Alpha = relativer Drawdown SEIT DEM ANKER minus die
+    # beta-erwartete DAX-Bewegung seit demselben Anker. Kurs- und DAX-Anker
+    # (stop_ref_kurs, dax_ref) werden IMMER gemeinsam gesetzt, damit beide
+    # denselben Zeithorizont haben (sonst würde ein Alt-Verlust fälschlich als
+    # Alpha gewertet). Neukäufe verankern beim Kauf, Altpositionen beim ersten
+    # Lauf auf heute (relative Uhr startet dann bei 0).
+    beta = get_beta(isin)
+    dax_ref = p.get("dax_ref")
+    ref_kurs = p.get("stop_ref_kurs")
+    rel_dd = None
+    r_dax = None
+    alpha = None
+    if dax_ref and ref_kurs and dax_now and current_price:
+        rel_dd = (current_price - ref_kurs) / ref_kurs
+        r_dax = (dax_now - dax_ref) / dax_ref
+        alpha = rel_dd - beta * r_dax
+
     sell = False
     sell_reason = ""
     if "verkauf" in c_emp or "verkauf" in f_emp:
         sell = True
         sell_reason = f"Explizites Verkaufen-Signal (Score={ts})"
-    elif drawdown <= STOP_LOSS_PCT:
+    elif drawdown <= ABS_HARD_STOP_PCT:
         sell = True
-        sell_reason = f"Stop-Loss ausgelöst ({drawdown*100:.1f}% ≤ {STOP_LOSS_PCT*100:.0f}%)"
+        sell_reason = f"Absoluter Hard-Stop ({drawdown*100:.1f}% ≤ {ABS_HARD_STOP_PCT*100:.0f}%)"
+    elif alpha is not None and rel_dd < 0 and alpha <= REL_STOP_PCT:
+        sell = True
+        sell_reason = (f"Relativer Stop: {alpha*100:.1f}% Underperformance vs. DAX "
+                       f"(β={beta:.2f}, seit Anker: Kurs {rel_dd*100:+.1f}% / "
+                       f"DAX {r_dax*100:+.1f}%) ≤ {REL_STOP_PCT*100:.0f}%")
     elif ts < SELL_THRESHOLD:
         sell = True
         sell_reason = f"Score unter Schwellwert ({ts} < {SELL_THRESHOLD})"
@@ -365,6 +444,12 @@ for p in positions:
         p["boersenwert"] = round(p["stueck"] * p["boersenkurs"], 2)
         p["gewinn_verlust"] = round(p["boersenwert"] - p["investiert"], 2)
         p["score"] = ts
+        p["beta"] = beta
+        # Anker-Paar (Kurs + DAX) gemeinsam auf heute setzen, falls (noch) nicht
+        # vorhanden — Altpositionen ohne Kaufdatum: relative Uhr startet bei 0.
+        if dax_now and current_price and (not p.get("dax_ref") or not p.get("stop_ref_kurs")):
+            p["dax_ref"] = round(dax_now, 2)
+            p["stop_ref_kurs"] = round(current_price, 4)
         positions_to_keep.append(p)
 
 positions = positions_to_keep
@@ -445,7 +530,10 @@ for isin, ts in unowned_targets:
             "investiert": round(units_to_buy * price, 2),
             "boersenwert": round(units_to_buy * price, 2),
             "gewinn_verlust": 0.0,
-            "score": ts
+            "score": ts,
+            "dax_ref": round(dax_now, 2) if dax_now else None,
+            "stop_ref_kurs": price,
+            "beta": get_beta(isin)
         })
         begruendung = score_reason(isin)
         transactions.append({

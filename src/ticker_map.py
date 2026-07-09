@@ -185,6 +185,24 @@ def fetch_history(ticker, rng="1y"):
         return None, None, None
 
 
+def fetch_index(symbol, rng="1y"):
+    """(price, closes) für einen Index wie ^GDAXI. Ohne instrumentType-Guard,
+    da Indizes weder EQUITY noch ETF sind. closes oldest-first, ohne None.
+    Rückgabe (None, None) bei Fehler."""
+    try:
+        sym = symbol.replace("^", "%5E")
+        data = _http(f"https://query1.finance.yahoo.com/v8/finance/chart/"
+                     f"{sym}?interval=1d&range={rng}")
+        result = data['chart']['result'][0]
+        meta = result['meta']
+        price = meta.get('regularMarketPrice')
+        quote = result.get('indicators', {}).get('quote', [{}])[0]
+        closes = [c for c in quote.get('close', []) if c is not None]
+        return price, closes
+    except Exception:
+        return None, None
+
+
 def eur_price(isin):
     """EUR spot price for an ISIN. Returns (price_eur, source) or (None, None).
 
