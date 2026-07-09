@@ -1,9 +1,9 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 8.05,
-    "portfoliowert": 9711.1,
-    "gesamtvermoegen": 9719.15,
+    "aktueller_barbestand": 86.65,
+    "portfoliowert": 9622.5,
+    "gesamtvermoegen": 9709.15,
     "positionen": [
       {
         "isin": "IT0003856405",
@@ -47,7 +47,7 @@
         "investiert": 1492.2,
         "boersenwert": 1367.1,
         "gewinn_verlust": -125.1,
-        "score": 17
+        "score": 16
       },
       {
         "isin": "FR0000121329",
@@ -69,7 +69,7 @@
         "investiert": 1709.0,
         "boersenwert": 1733.2,
         "gewinn_verlust": 24.2,
-        "score": 10
+        "score": 9
       },
       {
         "isin": "US5398301094",
@@ -80,7 +80,7 @@
         "investiert": 545.91,
         "boersenwert": 464.6,
         "gewinn_verlust": -81.31,
-        "score": 19
+        "score": 15
       },
       {
         "isin": "DE000A0DJ6J9",
@@ -102,18 +102,7 @@
         "investiert": 8.11,
         "boersenwert": 7.88,
         "gewinn_verlust": -0.23,
-        "score": 10
-      },
-      {
-        "isin": "US0970231058",
-        "wertpapier": "Boeing",
-        "stueck": 5,
-        "kaufkurs": 234.54,
-        "boersenkurs": 196.04,
-        "investiert": 1172.7,
-        "boersenwert": 980.2,
-        "gewinn_verlust": -192.5,
-        "score": 19
+        "score": 9
       },
       {
         "isin": "GB00B63H8491",
@@ -125,6 +114,17 @@
         "boersenwert": 196.13,
         "gewinn_verlust": -3.17,
         "score": 16
+      },
+      {
+        "isin": "FR0014004L86",
+        "wertpapier": "Dassault Aviation",
+        "stueck": 3,
+        "kaufkurs": 297.2,
+        "boersenkurs": 297.2,
+        "investiert": 891.6,
+        "boersenwert": 891.6,
+        "gewinn_verlust": 0.0,
+        "score": 15
       }
     ],
     "transaktionshistorie": [
@@ -379,6 +379,34 @@
         "gesamt": 204.3,
         "notiz": "Neukauf (Score=16)",
         "begruendung": "Score=16 (Chart=9: Empf.+3, Trend+2, RSI+1(58), MACD+1, SMA50+1, SMA200+1; Funda=6: Empf.+3, Bew.+2, Risiko-1, GW+2(23%); KI-Sentiment=1) | Chart: Kurs 16.33 vs. SMA50 15.16 / SMA200 14.12 \u2192 Aufw\u00e4rtstrend. RSI 53, MACD Negativ. | Funda: Erfolgreicher Turnaround, Cashflow verbessert. | KI: Rolls-Royce +5,5% auf Wochensicht, Bombardier-Kooperation, 'Bargain on earnings'; leichter Marktgegenwind."
+      },
+      {
+        "datum": "2026-07-09",
+        "typ": "Verkauf",
+        "isin": "US0970231058",
+        "wertpapier": "Boeing",
+        "stueck": 5,
+        "kurs": 196.04,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": -197.5,
+        "gesamt": 975.2,
+        "notiz": "Strategischer Verkauf (Stop-Loss ausgel\u00f6st (-16.4% \u2264 -15%))",
+        "begruendung": "Stop-Loss ausgel\u00f6st (-16.4% \u2264 -15%) | Score=8 (Chart=9: Empf.+3, Trend+2, RSI+1(52), MACD+1, SMA50+1, SMA200+1; Funda=0: Funda=Platzhalter\u21920; KI-Sentiment=-1) | Chart: Kurs 199.12 vs. SMA50 193.31 / SMA200 187.87 \u2192 Aufw\u00e4rtstrend. RSI 56, MACD Neutral. | Funda: Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse. | KI: Boeing handelt schwaecher; wird ohnehin per Stop-Loss ausgestoppt."
+      },
+      {
+        "datum": "2026-07-09",
+        "typ": "Kauf",
+        "isin": "FR0014004L86",
+        "wertpapier": "Dassault Aviation",
+        "stueck": 3,
+        "kurs": 297.2,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 896.6,
+        "notiz": "Neukauf (Score=15)",
+        "begruendung": "Score=15 (Chart=8: Empf.+3, Trend+1, RSI+2(50), MACD+1, SMA50+1; Funda=7: Empf.+3, Bew.+2, Risiko+1, GW+1(5%)) | Chart: Kurs 296.20 vs. SMA50 294.34 / SMA200 300.60 \u2192 Leichter Aufw\u00e4rtstrend. RSI 49, MACD Neutral. | Funda: Konservativ, geringes Risiko, wenig Dynamik."
       }
     ]
   }

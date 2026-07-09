@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09 00:44",
+  "generated_at": "2026-07-09 09:04",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [
     {
@@ -14,7 +14,7 @@
       "gewinn_verlust": -197.5,
       "gesamt": 975.2,
       "notiz": "Strategischer Verkauf (Stop-Loss ausgelöst (-16.4% ≤ -15%))",
-      "begruendung": "Stop-Loss ausgelöst (-16.4% ≤ -15%) | Score=11 (Chart=9: Empf.+3, Trend+2, RSI+1(52), MACD+1, SMA50+1, SMA200+1; Funda=0: Funda=Platzhalter→0; KI-Sentiment=2) | Chart: Kurs 199.12 vs. SMA50 193.31 / SMA200 187.87 → Aufwärtstrend. RSI 56, MACD Neutral. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Positiv: Cramer-Kaufempfehlung, '13% unterbewertet' bei 737-MAX-Produktionshochlauf."
+      "begruendung": "Stop-Loss ausgelöst (-16.4% ≤ -15%) | Score=8 (Chart=9: Empf.+3, Trend+2, RSI+1(52), MACD+1, SMA50+1, SMA200+1; Funda=0: Funda=Platzhalter→0; KI-Sentiment=-1) | Chart: Kurs 199.12 vs. SMA50 193.31 / SMA200 187.87 → Aufwärtstrend. RSI 56, MACD Neutral. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Boeing handelt schwaecher; wird ohnehin per Stop-Loss ausgestoppt."
     },
     {
       "datum": "2026-07-09",
@@ -28,11 +28,10 @@
       "gewinn_verlust": 0.0,
       "gesamt": 896.6,
       "notiz": "Neukauf (Score=15)",
-      "begruendung": "Score=15 (Chart=8: Empf.+3, Trend+1, RSI+2(50), MACD+1, SMA50+1; Funda=7: Empf.+3, Bew.+2, Risiko+1, GW+1(5%)) | Chart: Kurs 296.20 vs. SMA50 294.34 / SMA200 300.60 → Leichter Aufwärtstrend. RSI 49, MACD Neutral. | Funda: Konservativ, geringes Risiko, wenig Dynamik. | KI: Überwiegend nicht zugehörige Schlagzeilen; nur Meldung zur Aktienanzahl – neutral."
+      "begruendung": "Score=15 (Chart=8: Empf.+3, Trend+1, RSI+2(50), MACD+1, SMA50+1; Funda=7: Empf.+3, Bew.+2, Risiko+1, GW+1(5%)) | Chart: Kurs 296.20 vs. SMA50 294.34 / SMA200 300.60 → Leichter Aufwärtstrend. RSI 49, MACD Neutral. | Funda: Konservativ, geringes Risiko, wenig Dynamik."
     }
   ],
   "zusammenfassung": [
-    "KI-Veto: Kauf von Planet Labs (US72703X1063) blockiert. Kurs im 'Nosedive', Space-Sektor unter Druck; anhaltendes Cashburn-Risiko – Veto gegen Neukauf.",
     "Strategischer Verkauf: 5x Boeing (US0970231058) zu 196.04 EUR. Stop-Loss ausgelöst (-16.4% ≤ -15%).",
     "Kauf: 3x Dassault Aviation (FR0014004L86) zu 297.20 EUR, Score=15, Budget=1700€."
   ],

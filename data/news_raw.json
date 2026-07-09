@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08 19:21",
+  "generated_at": "2026-07-09 09:03",
   "items": {
     "DE0005557508": {
       "name": "Dt. Telekom",
@@ -18,22 +18,22 @@
       "ticker": "",
       "headlines": [
         {
+          "title": "SAP (XTRA:SAP) Stock Looks Below Fair Value Despite AI Hopes",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sap-xtra-sap-stock-looks-201446170.html"
+        },
+        {
+          "title": "SAP (XTRA:SAP) Leans On Its Cloud Narrative As Undervalued Calls Persist",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sap-xtra-sap-leans-cloud-191315910.html"
+        },
+        {
           "title": "This is Why SAP SE (SAP) is A Top AI Stock on Wall Street Radar amid Reorganization Drive",
           "publisher": "Insider Monkey",
           "published": "2026-07-08",
           "link": "https://finance.yahoo.com/technology/ai/articles/why-sap-se-sap-top-153859414.html"
-        },
-        {
-          "title": "Palantir Expands SAP Transformation Push With SNP Partnership",
-          "publisher": "GuruFocus.com",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/palantir-expands-sap-transformation-push-121547284.html"
-        },
-        {
-          "title": "SNP and Palantir Form Strategic Partnership to Accelerate Secure SAP Transformations",
-          "publisher": "Business Wire",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/snp-palantir-form-strategic-partnership-091600539.html"
         }
       ],
       "error": null
@@ -115,26 +115,7 @@
     "DE000A0DJ6J9": {
       "name": "SMA Solar",
       "ticker": "",
-      "headlines": [
-        {
-          "title": "SMA Solar Technology Q1 Earnings Call Highlights",
-          "publisher": "MarketBeat",
-          "published": "2026-05-18",
-          "link": "https://finance.yahoo.com/m/5aa10baa-5ce9-33a1-9825-ec1bd7891b45/sma-solar-technology-q1.html"
-        },
-        {
-          "title": "SMA Solar Technology AG Just Missed Earnings; Here's What Analysts Are Forecasting Now",
-          "publisher": "Simply Wall St.",
-          "published": "2026-05-16",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/sma-solar-technology-ag-just-070852168.html"
-        },
-        {
-          "title": "SMA Solar Technology AG (SMTGF) Q1 2026 Earnings Call Highlights: Strong Sales Growth Amidst ...",
-          "publisher": "GuruFocus.com",
-          "published": "2026-05-15",
-          "link": "https://finance.yahoo.com/sectors/energy/articles/sma-solar-technology-ag-smtgf-010134256.html"
-        }
-      ],
+      "headlines": [],
       "error": null
     },
     "DE000ENER6Y0": {
@@ -303,6 +284,18 @@
       "ticker": "",
       "headlines": [
         {
+          "title": "ASML (ASML) Gains As Market Dips: What You Should Know",
+          "publisher": "Zacks",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/asml-asml-gains-market-dips-215003814.html"
+        },
+        {
+          "title": "ASML Holding (ENXTAM:ASML) Swings On Analyst Sentiment, Is It 17% Overvalued?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/asml-holding-enxtam-asml-swings-191234749.html"
+        },
+        {
           "title": "ASML Holding N.V. (ASML) Price Target Raised by Jefferies on Strong Semiconductor Outlook",
           "publisher": "Insider Monkey",
           "published": "2026-07-08",
@@ -313,12 +306,6 @@
           "publisher": "Motley Fool",
           "published": "2026-07-08",
           "link": "https://finance.yahoo.com/m/9a0f5fa5-088b-37b4-b6e9-c2f3df5eac8a/should-you-buy-asml-holding.html"
-        },
-        {
-          "title": "Why ASML Stock Dropped Today",
-          "publisher": "Motley Fool",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/m/1aaaf8e3-a9b6-3c94-952c-04a2a8c463a2/why-asml-stock-dropped-today.html"
         }
       ],
       "error": null
@@ -328,22 +315,16 @@
       "ticker": "BCO.DE",
       "headlines": [
         {
+          "title": "Boeing, HEICO, and Ducommun Stocks Trade Down, What You Need To Know",
+          "publisher": "StockStory",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/boeing-heico-ducommun-stocks-trade-225844701.html"
+        },
+        {
           "title": "China Southern Airlines to lease Boeing 777-300 converted freighters",
           "publisher": "FreightWaves",
           "published": "2026-07-08",
           "link": "https://finance.yahoo.com/markets/commodities/articles/china-southern-airlines-lease-boeing-140254057.html"
-        },
-        {
-          "title": "Investors Heavily Search The Boeing Company (BA): Here is What You Need to Know",
-          "publisher": "Zacks",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-boeing-company-130006027.html"
-        },
-        {
-          "title": "AerCap Signs Lease Deals for 3 Boeing Freighters With China Southern Air Logistics",
-          "publisher": "MT Newswires",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/aercap-signs-lease-deals-3-112608162.html"
         }
       ],
       "error": null
@@ -353,22 +334,22 @@
       "ticker": "LOM.DE",
       "headlines": [
         {
-          "title": "Trump Wants a 'Beauty': Lockheed Martin's Sikorsky to Fund New $6 Million White House Helipad After Marine One Takes a Toll on the Lawn",
-          "publisher": "Benzinga",
+          "title": "Lockheed Martin (LMT) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
+          "publisher": "Zacks",
           "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/974e9b61-7f48-390c-9564-e894259a6a12/trump-wants-a-%27beauty%27%3A.html"
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-sees-more-220004496.html"
+        },
+        {
+          "title": "Lockheed Martin Wins $502.4 Million US Army Contract",
+          "publisher": "MT Newswires",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-wins-502-4-213941615.html"
         },
         {
           "title": "Northrop, Lockheed, Other Defense Stocks Fall as Trump Sparks Iran War Fears",
           "publisher": "Barrons.com",
           "published": "2026-07-08",
           "link": "https://finance.yahoo.com/m/2c114509-4af3-3378-9ff2-1281be3557ed/northrop%2C-lockheed%2C-other.html"
-        },
-        {
-          "title": "Wells Fargo Adjusts Price Target on Lockheed Martin to $575 From $650",
-          "publisher": "MT Newswires",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/wells-fargo-adjusts-price-target-133107020.html"
         }
       ],
       "error": null
@@ -384,22 +365,10 @@
       "ticker": "MSF.DE",
       "headlines": [
         {
-          "title": "Beaten Down Technology Stock to Buy: Microsoft Corporation (MSFT) Embarks on Cost Cuts",
-          "publisher": "Insider Monkey",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/articles/beaten-down-technology-stock-buy-154452382.html"
-        },
-        {
-          "title": "Microsoft (MSFT) Unifies Copilot Strategy to Challenge ChatGPT and Claude",
-          "publisher": "Insider Monkey",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/microsoft-msft-unifies-copilot-strategy-153524054.html"
-        },
-        {
-          "title": "Nokia (NOK) Taps SAP and Microsoft: Cloud and AI in Focus",
-          "publisher": "Insider Monkey",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/technology/ai/articles/nokia-nok-taps-sap-microsoft-153314352.html"
+          "title": "Trump Announced His AI Action Plan Declaring  ‘America Is Going to Win’ — The Same Day He Bought Millions in Nvidia, Apple and Microsoft",
+          "publisher": "Benzinga",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/technology/ai/articles/trump-announced-ai-action-plan-000108213.html"
         }
       ],
       "error": null
@@ -434,10 +403,16 @@
       "ticker": "NVD.DE",
       "headlines": [
         {
-          "title": "Nvidia, Chip Stocks Waver Amid U.S.-Iran War Flare-Up",
+          "title": "Billionaire Steve Cohen Sold Amazon and Nvidia but Loaded Up on This Beaten-Down Stock",
+          "publisher": "Motley Fool",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/m/ff731553-9b85-3ca3-90f8-afddbc4fe53e/billionaire-steve-cohen-sold.html"
+        },
+        {
+          "title": "Dow Jones Futures, Oil Prices Rise Amid Iran News; Nvidia, Valero, Dell, SpaceX In Focus",
           "publisher": "Investor's Business Daily",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/m/1c6389fd-2bc8-3313-ae10-a726a74493aa/nvidia%2C-chip-stocks-waver.html"
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/m/460a0d08-18ee-3417-83ad-76a56f707497/dow-jones-futures%2C-oil-prices.html"
         }
       ],
       "error": null
@@ -447,22 +422,28 @@
       "ticker": "85H1.DE",
       "headlines": [
         {
+          "title": "Planet Labs PBC (PL) After Pelican 11 Launch Faces A Wide Valuation Split",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pbc-pl-pelican-231144232.html"
+        },
+        {
+          "title": "Planet Labs (PL) Launches Pelican 11 As Its 30 Cm Imagery Push Takes Shape",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pl-launches-pelican-201314803.html"
+        },
+        {
+          "title": "Planet Labs, Magnite, and Ziff Davis Stocks Trade Down, What You Need To Know",
+          "publisher": "StockStory",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-magnite-ziff-davis-190644843.html"
+        },
+        {
           "title": "Why Planet Labs (PL) Stock Is Nosediving",
           "publisher": "StockStory",
           "published": "2026-07-07",
           "link": "https://finance.yahoo.com/markets/stocks/articles/why-planet-labs-pl-stock-200152374.html"
-        },
-        {
-          "title": "Planet Labs Launches Pelican-11 Technology Demonstration Satellite",
-          "publisher": "MT Newswires",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/technology/articles/planet-labs-launches-pelican-11-103003530.html"
-        },
-        {
-          "title": "Planet Launches Pelican-11 Satellite",
-          "publisher": "Business Wire",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/technology/articles/planet-launches-pelican-11-satellite-093300505.html"
         }
       ],
       "error": null
