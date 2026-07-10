@@ -107,15 +107,18 @@ def sync_sentiment(relevant_isins):
 
 
 def sync_news(relevant_isins):
+    """news_raw.json hat die Form {generated_at, items: {ISIN: [...]}}.
+    Nur den items-Teilbaum säubern; Metadaten unangetastet lassen."""
     if not os.path.exists(NEWS):
         return
     data = json.load(open(NEWS, encoding="utf-8"))
-    news_map = data.get("news") if isinstance(data.get("news"), dict) else data
-    if not isinstance(news_map, dict):
+    items = data.get("items")
+    if not isinstance(items, dict):
+        print("News: unbekanntes Format, übersprungen")
         return
-    orphans = [i for i in list(news_map.keys()) if i not in relevant_isins]
+    orphans = [i for i in list(items.keys()) if i not in relevant_isins]
     for isin in orphans:
-        news_map.pop(isin, None)
+        items.pop(isin, None)
     with open(NEWS, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
     print(f"News: {len(orphans)} Waisen entfernt")

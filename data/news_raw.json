@@ -1,1 +1,396 @@
-{}
+{
+  "generated_at": "2026-07-10 09:00",
+  "items": {
+    "DE0005557508": {
+      "name": "Dt. Telekom",
+      "ticker": "",
+      "headlines": [],
+      "error": null
+    },
+    "DE0005936124": {
+      "name": "OHB",
+      "ticker": "",
+      "headlines": [],
+      "error": null
+    },
+    "DE0007164600": {
+      "name": "SAP",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "SAP loosens ERP maintenance and support rules",
+          "publisher": "CIO Dive",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/m/7226751d-a4a7-3020-8f47-3ed043f6f5b8/sap-loosens-erp-maintenance.html"
+        },
+        {
+          "title": "SAP (XTRA:SAP) Stock Looks Below Fair Value Despite AI Hopes",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sap-xtra-sap-stock-looks-201446170.html"
+        },
+        {
+          "title": "SAP (XTRA:SAP) Leans On Its Cloud Narrative As Undervalued Calls Persist",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sap-xtra-sap-leans-cloud-191315910.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000A0D6554": {
+      "name": "Nordex SE",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "Nordex Welcomes the Filing of the IERMP and Reaffirms Its Commitment to the Future of Energy Development in Quebec",
+          "publisher": "CNW Group",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/energy/articles/nordex-welcomes-filing-iermp-reaffirms-080000563.html"
+        },
+        {
+          "title": "Nordex Group receives orders totalling 700 MW from UKA in Germany",
+          "publisher": "Energy Global",
+          "published": "2026-07-07",
+          "link": "https://finance.yahoo.com/m/1bc3fd12-2e61-3b7a-8c59-ae814b5900e2/nordex-group-receives-orders.html"
+        },
+        {
+          "title": "The Nordex Group Receives New Orders Totalling More Than 197 MW From ENOVA and BMR in Germany",
+          "publisher": "NewMediaWire",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/energy/articles/nordex-group-receives-orders-totalling-212336078.html"
+        },
+        {
+          "title": "The Nordex Group receives new orders totalling more than 197 MW in Germany",
+          "publisher": "Energy Global",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/m/475a5e9e-c2f3-307d-95c5-99dc3fe74246/the-nordex-group-receives-new.html"
+        },
+        {
+          "title": "Nordex Group scores 325 MW order in the US",
+          "publisher": "PR Newswire",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/energy/articles/nordex-group-scores-325-mw-063600580.html"
+        },
+        {
+          "title": "Nordex Group receives 112 MW order from NeXtWind for wind farm in Germany",
+          "publisher": "Energy Global",
+          "published": "2026-06-24",
+          "link": "https://finance.yahoo.com/m/2e3fbef9-20ed-3156-b182-2db9497bc1cf/nordex-group-receives-112-mw.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000A0D9PT0": {
+      "name": "MTU Aero Engines",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "When Should You Buy MTU Aero Engines AG (ETR:MTX)?",
+          "publisher": "Simply Wall St.",
+          "published": "2026-06-13",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/buy-mtu-aero-engines-ag-060223226.html"
+        },
+        {
+          "title": "MTU Aero Engines AG (ETR:MTX) Passed Our Checks, And It's About To Pay A €3.60 Dividend",
+          "publisher": "Simply Wall St.",
+          "published": "2026-05-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/mtu-aero-engines-ag-etr-065313217.html"
+        },
+        {
+          "title": "MTU Aero Engines Q1 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "published": "2026-04-30",
+          "link": "https://finance.yahoo.com/m/d1028840-9001-302a-9d3b-2c0be1795bfd/mtu-aero-engines-q1-earnings.html"
+        },
+        {
+          "title": "We Ran A Stock Scan For Earnings Growth And MTU Aero Engines (ETR:MTX) Passed With Ease",
+          "publisher": "Simply Wall St.",
+          "published": "2026-04-20",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ran-stock-scan-earnings-growth-063344526.html"
+        }
+      ],
+      "error": null
+    },
+    "DE000A0DJ6J9": {
+      "name": "SMA Solar",
+      "ticker": "",
+      "headlines": [],
+      "error": null
+    },
+    "DE000ENER6Y0": {
+      "name": "Siemens Energy",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "Eaton Names Dan T. Simpson President, Global Energy Infrastructure Solutions",
+          "publisher": "Business Wire",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/energy/articles/eaton-names-dan-t-simpson-104500804.html"
+        },
+        {
+          "title": "Siemens Energy (XTRA:ENR) Secures Oman Power Contracts With Decades Long Service Work",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/energy/articles/siemens-energy-xtra-enr-secures-221235695.html"
+        },
+        {
+          "title": "Siemens Energy (XTRA:ENR) Stock Trades At A Discount On Cash Flow But A Premium On Earnings",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/siemens-energy-xtra-enr-stock-131513036.html"
+        }
+      ],
+      "error": null
+    },
+    "FR0000073272": {
+      "name": "Safran",
+      "ticker": "",
+      "headlines": [],
+      "error": null
+    },
+    "FR0000121329": {
+      "name": "Thales SA",
+      "ticker": "",
+      "headlines": [],
+      "error": null
+    },
+    "FR0014004L86": {
+      "name": "Dassault Aviation",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "Dassault Aviation: Total number of shares and voting rights - 30 06 26",
+          "publisher": "GlobeNewswire",
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/dassault-aviation-total-number-shares-133500888.html"
+        }
+      ],
+      "error": null
+    },
+    "GB00B63H8491": {
+      "name": "Rolls-Royce",
+      "ticker": "RRU.DE",
+      "headlines": [
+        {
+          "title": "Fairbanks Morse Defense Establishes Official Canadian Headquarters Following Successful Rolls-Royce Acquisition",
+          "publisher": "Business Wire",
+          "published": "2026-07-07",
+          "link": "https://finance.yahoo.com/technology/articles/fairbanks-morse-defense-establishes-official-120100241.html"
+        },
+        {
+          "title": "Rolls-Royce Holdings PLC (RYCEY) Is Up 5.48% in One Week: What You Should Know",
+          "publisher": "Zacks",
+          "published": "2026-07-06",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-holdings-plc-rycey-160003884.html"
+        },
+        {
+          "title": "Rolls-Royce (LSE:RR.) Adds New Directors And Teams Up With Bombardier On Engine Monitoring",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-lse-rr-adds-171437421.html"
+        },
+        {
+          "title": "Rolls Royce (LSE:RR.) Stock Looks Like A Bargain On Earnings But Fully Priced On Broader Checks",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-lse-rr-stock-151117449.html"
+        }
+      ],
+      "error": null
+    },
+    "IT0003856405": {
+      "name": "Leonardo SpA",
+      "ticker": "",
+      "headlines": [],
+      "error": null
+    },
+    "LU0088087324": {
+      "name": "SES",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "--SES AI Added to Russell 3000 Index Effective Monday",
+          "publisher": "MT Newswires",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ses-ai-added-russell-3000-191411006.html"
+        },
+        {
+          "title": "SES AI Announces Inclusion in Russell 3000®Index",
+          "publisher": "Business Wire",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ses-ai-announces-inclusion-russell-110000327.html"
+        },
+        {
+          "title": "SueWallSt Reminds SES AI Corporation Investors of the Pending Class Action Lawsuit With a Lead Plaintiff Deadline of June 26, 2026 - SES",
+          "publisher": "PR Newswire",
+          "published": "2026-06-18",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/suewallst-reminds-ses-ai-corporation-140900254.html"
+        },
+        {
+          "title": "Stonegate Initiates Coverage on SES AI Corp. (SES)",
+          "publisher": "TMX Newsfile",
+          "published": "2026-06-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/stonegate-initiates-coverage-ses-ai-134600123.html"
+        }
+      ],
+      "error": null
+    },
+    "NL0000235190": {
+      "name": "Airbus",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "Analyst Report: Airbus SE",
+          "publisher": "Morningstar Research",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/m/ae5cbfdc-9196-3e05-880a-5d87e22b3211/analyst-report%3A-airbus-se.html"
+        },
+        {
+          "title": "Airbus Sees 90% Middle East Travel Recovery, Backs Long-Term Aviation Growth",
+          "publisher": "GuruFocus.com",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/economy/articles/airbus-sees-90-middle-east-163000208.html"
+        },
+        {
+          "title": "Airbus cuts 20-year jet demand forecast citing Iran war and tariffs",
+          "publisher": "Quartz",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/m/aed36e27-ea48-3f44-bce8-d61af760c6b2/airbus-cuts-20-year-jet.html"
+        },
+        {
+          "title": "Philippine Airlines Eyes 20 Widebody Jets Split Between Boeing and Airbus",
+          "publisher": "GuruFocus.com",
+          "published": "2026-07-07",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/philippine-airlines-eyes-20-widebody-195345650.html"
+        }
+      ],
+      "error": null
+    },
+    "NL0010273215": {
+      "name": "ASML",
+      "ticker": "",
+      "headlines": [
+        {
+          "title": "ASML (ASML) Outperforms Broader Market: What You Need to Know",
+          "publisher": "Zacks",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/asml-asml-outperforms-broader-market-214505160.html"
+        },
+        {
+          "title": "ASML Holdings (ASML): Best QQQ Stocks to Invest in",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/asml-holdings-asml-best-qqq-183745732.html"
+        },
+        {
+          "title": "Bernstein Raises its Price Target on ASML Holding (ASML)",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/bernstein-raises-price-target-asml-164506322.html"
+        }
+      ],
+      "error": null
+    },
+    "US0970231058": {
+      "name": "Boeing",
+      "ticker": "BCO.DE",
+      "headlines": [
+        {
+          "title": "BA Stock Edges Higher After Hours — Boeing’s 737 MAX 7 Reportedly Nears Key FAA Milestone After Long Delays",
+          "publisher": "Stocktwits",
+          "published": "2026-07-10",
+          "link": "https://finance.yahoo.com/m/4fa3c029-ded8-32d8-a0e0-dd8a5809964b/ba-stock-edges-higher-after.html"
+        },
+        {
+          "title": "Boeing’s Smallest MAX Jet Nears FAA Milestone After Years of Delays",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/m/37ea18b1-b4ee-3aef-b4fa-aa497e9a0b5f/boeing%E2%80%99s-smallest-max-jet.html"
+        },
+        {
+          "title": "Trump’s Plane Change Has The Media Dividend But Here’s The Common Factor: Boeing (BA)",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/trump-plane-change-media-dividend-115833143.html"
+        }
+      ],
+      "error": null
+    },
+    "US5398301094": {
+      "name": "Lockheed Martin",
+      "ticker": "LOM.DE",
+      "headlines": [
+        {
+          "title": "Lockheed Martin Wins Initial $86 Million Joint Laser Weapon System Agreements",
+          "publisher": "MT Newswires",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/technology/articles/lockheed-martin-wins-initial-86-150454002.html"
+        },
+        {
+          "title": "Lockheed Martin (LMT) Lands $502 Million Sensor Deal And Closes $3.5 Billion Buyout",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-lands-502-132038201.html"
+        }
+      ],
+      "error": null
+    },
+    "US5949181045": {
+      "name": "Microsoft",
+      "ticker": "MSF.DE",
+      "headlines": [
+        {
+          "title": "Starbucks (SBUX) Is Replacing Microsoft And IBM Software To Cut $400 Million Spend",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-10",
+          "link": "https://finance.yahoo.com/technology/ai/articles/starbucks-sbux-replacing-microsoft-ibm-051312835.html"
+        },
+        {
+          "title": "Microsoft offers laid-off employees generous package",
+          "publisher": "TheStreet",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/m/37868567-eb8c-356b-9530-bfebad0a6e09/microsoft-offers-laid-off.html"
+        }
+      ],
+      "error": null
+    },
+    "US67066G1040": {
+      "name": "Nvidia",
+      "ticker": "NVD.DE",
+      "headlines": [],
+      "error": null
+    },
+    "US72703X1063": {
+      "name": "Planet Labs",
+      "ticker": "85H1.DE",
+      "headlines": [
+        {
+          "title": "Planet Launches Pelican-11, Paving the Way for Its Next-Generation High-Resolution Satellite Fleet",
+          "publisher": "IPO-Edge.com",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/technology/articles/planet-launches-pelican-11-paving-162328827.html"
+        },
+        {
+          "title": "Planet Labs PBC (PL) After Pelican 11 Launch Faces A Wide Valuation Split",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pbc-pl-pelican-231144232.html"
+        },
+        {
+          "title": "Planet Labs (PL) Launches Pelican 11 As Its 30 Cm Imagery Push Takes Shape",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pl-launches-pelican-201314803.html"
+        },
+        {
+          "title": "Planet Labs, Magnite, and Ziff Davis Stocks Trade Down, What You Need To Know",
+          "publisher": "StockStory",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-magnite-ziff-davis-190644843.html"
+        }
+      ],
+      "error": null
+    }
+  }
+}
