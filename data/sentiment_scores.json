@@ -1,12 +1,105 @@
 {
-  "generated_at": "2026-07-09 09:05",
+  "generated_at": "2026-07-10 09:23",
   "scores": {
-    "DE000A0D9PT0": {"sentiment_score": 1, "veto": false, "begruendung": "MTU zahlt 3,60€ Dividende, positive Earnings-Growth-Checks – solide."},
-    "DE000ENER6Y0": {"sentiment_score": 1, "veto": false, "begruendung": "Siemens Energy sichert langfristige Oman-Stromvertraege, handelt mit Cashflow-Discount."},
-    "GB00B63H8491": {"sentiment_score": 1, "veto": false, "begruendung": "Rolls-Royce +5,5% in einer Woche, neue Directors, Bombardier-Kooperation."},
-    "US5398301094": {"sentiment_score": 0, "veto": false, "begruendung": "Gemischt: 502-Mio-Army-Auftrag positiv, aber Defense-Sektor faellt wegen Iran-Kriegsangst."},
-    "US67066G1040": {"sentiment_score": 0, "veto": false, "begruendung": "Gemischt: Cohen verkauft, aber Nvidia weiter im Fokus bei steigenden Futures."},
-    "US0970231058": {"sentiment_score": -1, "veto": false, "begruendung": "Boeing handelt schwaecher; wird ohnehin per Stop-Loss ausgestoppt."},
-    "LU0088087324": {"sentiment_score": 0, "veto": false, "begruendung": "Vorliegende News betreffen SES AI Corp (US-Batterie), nicht SES S.A. – irrelevant."}
+    "DE0005557508": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+    },
+    "DE0005936124": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+    },
+    "DE0007164600": {
+      "sentiment_score": 1,
+      "veto": false,
+      "begruendung": "Analysten sehen SAP trotz operativer Anpassungen als unterbewertet mit intakter Cloud/KI-Story."
+    },
+    "DE000A0D6554": {
+      "sentiment_score": 2,
+      "veto": false,
+      "begruendung": "Serie neuer Großaufträge (700 MW, mehrfach ~197 MW, 325 MW, 112 MW) zeigt starke Auftragsdynamik."
+    },
+    "DE000A0D9PT0": {
+      "sentiment_score": 1,
+      "veto": false,
+      "begruendung": "Mehrere positive Screening-/Dividenden-Artikel deuten auf solides Ertragswachstum hin."
+    },
+    "DE000A0DJ6J9": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+    },
+    "DE000ENER6Y0": {
+      "sentiment_score": 1,
+      "veto": false,
+      "begruendung": "Neuer Servicevertrag im Oman positiv, Bewertung laut Analysten aber schon anspruchsvoll (Eaton-News betrifft anderes Unternehmen, ignoriert)."
+    },
+    "FR0000073272": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+    },
+    "FR0000121329": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+    },
+    "FR0014004L86": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Nur formale Meldung zu Aktienzahl/Stimmrechten, keine Kursrelevanz."
+    },
+    "GB00B63H8491": {
+      "sentiment_score": 1,
+      "veto": false,
+      "begruendung": "Kursplus, neue Bombardier-Kooperation und abgeschlossener Verkauf einer Sparte an Fairbanks Morse stützen die Story leicht positiv."
+    },
+    "IT0003856405": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+    },
+    "LU0088087324": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Alle Schlagzeilen betreffen 'SES AI Corporation' (Batteriematerialien), nicht den Satellitenbetreiber SES S.A. - daher neutral."
+    },
+    "NL0000235190": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Gemischt: positive Reiseerholungs-Aussagen stehen einer gesenkten 20-Jahres-Nachfrageprognose (Iran-Krieg, Zölle) gegenüber."
+    },
+    "NL0010273215": {
+      "sentiment_score": 2,
+      "veto": false,
+      "begruendung": "Outperformance am Markt plus angehobenes Kursziel von Bernstein klar positiv."
+    },
+    "US0970231058": {
+      "sentiment_score": 1,
+      "veto": false,
+      "begruendung": "737 MAX 7 nähert sich laut Berichten einem wichtigen FAA-Meilenstein nach langen Verzögerungen - positiv."
+    },
+    "US5398301094": {
+      "sentiment_score": 2,
+      "veto": false,
+      "begruendung": "Neuer $86M-Laserwaffenauftrag sowie $502M-Sensordeal und abgeschlossene $3,5-Mrd-Übernahme stärken das Geschäft deutlich."
+    },
+    "US5949181045": {
+      "sentiment_score": -1,
+      "veto": false,
+      "begruendung": "Starbucks ersetzt Microsoft-Software zur Kosteneinsparung und Stellenabbau mit Abfindungspaketen belasten leicht."
+    },
+    "US67066G1040": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+    },
+    "US72703X1063": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Pelican-11-Start und Imagery-Fortschritt positiv, aber Bewertungsspaltung und Kursrückgang gleichen dies aus."
+    }
   }
 }
