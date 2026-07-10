@@ -11,16 +11,12 @@ Chart+Funda-Rating und wird woanders vergeben. Position ohne verlässlichen
 Kurs (aktueller_kurs None) bleibt unangetastet inkl. bestehendem Hinweistext.
 """
 
-import json
-import os
 import datetime
+import os
+import sys
 
-CHART_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)),
-    "..",
-    "data",
-    "chartanalyse_ergebnisse.json",
-)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import CHART as CHART_PATH, load_json, save_json
 
 
 def classify_trend(kurs, sma50, sma200):
@@ -74,8 +70,7 @@ def refresh_item(item):
 
 
 def main():
-    with open(CHART_PATH, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_json(CHART_PATH, {})
 
     updated = 0
     skipped = 0
@@ -86,8 +81,7 @@ def main():
             else:
                 skipped += 1
 
-    with open(CHART_PATH, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    save_json(CHART_PATH, data)
 
     print(f"Narrativ aktualisiert: {updated} Positionen, {skipped} übersprungen (keine Kurs-/SMA-Daten).")
 

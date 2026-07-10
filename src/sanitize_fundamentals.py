@@ -17,15 +17,11 @@ qualitative Aussagen (Marktposition, Auftragslage) braucht es einen
 LLM-Refresh, der separat gepflegt wird.
 """
 
-import json
 import os
+import sys
 
-FUNDA_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)),
-    "..",
-    "data",
-    "fundamentalanalyse_ergebnisse.json",
-)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import FUNDA as FUNDA_PATH, load_json, save_json
 
 PLACEHOLDER_MARKERS = ("vervollständigung", "ergänzt zur", "platzhalter")
 DELISTED_MARKERS = ("börse genommen", "delisted", "delisting")
@@ -54,8 +50,7 @@ def sanitize_item(item):
 
 
 def main():
-    with open(FUNDA_PATH, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_json(FUNDA_PATH, {})
 
     changes = []
     for sector, items in data.get("sektoren", {}).items():
@@ -64,8 +59,7 @@ def main():
             if reasons:
                 changes.append((sector, item.get("wertpapier", "?"), reasons))
 
-    with open(FUNDA_PATH, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    save_json(FUNDA_PATH, data)
 
     if changes:
         print(f"Fundamentals sanitisiert: {len(changes)} Einträge korrigiert")

@@ -24,10 +24,7 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ticker_map
-
-BASE_DIR = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data"
-DEPOT_PATH = os.path.join(BASE_DIR, "depot_status.json")
-CHART_PATH = os.path.join(BASE_DIR, "chartanalyse_ergebnisse.json")
+from paths import DEPOT as DEPOT_PATH, CHART as CHART_PATH, load_json, save_json
 
 # Schwellen für die Klumpenrisiko-Warnung (Anteil am Portfoliowert).
 MAX_POSITION_PCT = 0.20   # keine Einzelposition über 20 %
@@ -41,10 +38,8 @@ MSCI_SYMBOL = "EUNL.DE"
 
 def load_sector_map():
     """ISIN -> Sektor aus der Chartanalyse; fehlt eine Zuordnung -> 'Sonstige'."""
-    try:
-        with open(CHART_PATH, "r", encoding="utf-8") as f:
-            chart = json.load(f)
-    except Exception:
+    chart = load_json(CHART_PATH)
+    if chart is None:
         return {}
     mapping = {}
     for sektor, items in chart.get("sektoren", {}).items():
@@ -179,8 +174,7 @@ def format_lines(risiko, benchmark):
 
 
 def main():
-    with open(DEPOT_PATH, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_json(DEPOT_PATH, {})
     depot = data.get("depot", {})
     positions = depot.get("positionen", [])
     portfolio_value = depot.get("portfoliowert", 0) or sum(
@@ -194,8 +188,7 @@ def main():
     depot["risiko"] = risiko
     depot["benchmark"] = benchmark
     data["depot"] = depot
-    with open(DEPOT_PATH, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    save_json(DEPOT_PATH, data)
 
     lines = format_lines(risiko, benchmark)
     if lines:

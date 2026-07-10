@@ -19,12 +19,7 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ticker_map
-
-base_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data"
-depot_path = os.path.join(base_dir, "depot_status.json")
-chart_path = os.path.join(base_dir, "chartanalyse_ergebnisse.json")
-funda_path = os.path.join(base_dir, "fundamentalanalyse_ergebnisse.json")
-out_path = os.path.join(base_dir, "news_raw.json")
+from paths import DEPOT as depot_path, CHART as chart_path, FUNDA as funda_path, NEWS as out_path, load_json, save_json
 
 # Ticker display/fallback comes from the shared source of truth (ticker_map).
 # No separate table here anymore — that divergence caused wrong/stale tickers.
@@ -63,17 +58,11 @@ def headline_relevant(title, keywords):
     return any(re.search(rf"(?<![a-z0-9]){re.escape(kw)}(?![a-z0-9])", t) for kw in keywords)
 
 
-def load_json(path):
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
 def isin_to_name_map():
     names = {}
     for path in (chart_path, funda_path):
-        try:
-            data = load_json(path)
-        except Exception:
+        data = load_json(path)
+        if data is None:
             continue
         for _, items in data.get("sektoren", {}).items():
             for item in items:
@@ -86,23 +75,17 @@ def isin_to_name_map():
 def relevant_isins():
     """Depot positions + current buy candidates (both Kaufen-empfohlen)."""
     isins = set()
-    try:
-        depot = load_json(depot_path).get("depot", {})
-        for p in depot.get("positionen", []):
-            if p.get("isin"):
-                isins.add(p["isin"])
-    except Exception:
-        pass
-    try:
-        chart = load_json(chart_path)
-        funda = load_json(funda_path)
-        chart_buys = {i["isin"] for _, its in chart.get("sektoren", {}).items()
-                      for i in its if i.get("empfehlung", "").lower() == "kaufen" and i.get("isin")}
-        funda_buys = {i["isin"] for _, its in funda.get("sektoren", {}).items()
-                      for i in its if (i.get("empfehlung") or "").lower() == "kaufen" and i.get("isin")}
-        isins |= (chart_buys & funda_buys)
-    except Exception:
-        pass
+    depot = load_json(depot_path, {}).get("depot", {})
+    for p in depot.get("positionen", []):
+        if p.get("isin"):
+            isins.add(p["isin"])
+    chart = load_json(chart_path, {})
+    funda = load_json(funda_path, {})
+    chart_buys = {i["isin"] for _, its in chart.get("sektoren", {}).items()
+                  for i in its if i.get("empfehlung", "").lower() == "kaufen" and i.get("isin")}
+    funda_buys = {i["isin"] for _, its in funda.get("sektoren", {}).items()
+                  for i in its if (i.get("empfehlung") or "").lower() == "kaufen" and i.get("isin")}
+    isins |= (chart_buys & funda_buys)
     return sorted(isins)
 
 
@@ -168,8 +151,7 @@ def main():
               + (f", {dropped} Rausch verworfen" if dropped else "")
               + (f" [!{err}]" if err else ""))
 
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
+    save_json(out_path, result)
     print(f"\nDone. {ok} mit News, {empty} ohne. -> {out_path}")
 
 

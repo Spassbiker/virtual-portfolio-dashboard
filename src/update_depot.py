@@ -1,8 +1,10 @@
-import json
 import os
 import sys
 import urllib.request
 from datetime import datetime
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import DEPOT as depot_path, CHART, FUNDA, SENT as sentiment_path, TRADES as recommend_path, load_json, save_json
 
 # Empfehlungs-Modus: berechnet Score/Sentiment/Veto und die Trades, die das
 # regelbasierte System vorschlagen WÜRDE, schreibt sie nach
@@ -10,23 +12,15 @@ from datetime import datetime
 # So bleibt die finale Kauf-/Verkaufsentscheidung beim autonomen Agenten.
 RECOMMEND = any(a in ("--recommend", "--dry-run") for a in sys.argv[1:])
 
-base_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data"
-depot_path = os.path.join(base_dir, "depot_status.json")
-recommend_path = os.path.join(base_dir, "trade_recommendations.json")
-
-with open(depot_path, "r") as f:
-    data = json.load(f)
-
+data = load_json(depot_path, {})
 depot = data.get("depot", {})
 current_cash = depot.get("aktueller_barbestand", 10000.0)
 positions = depot.get("positionen", [])
 transactions = depot.get("transaktionshistorie", [])
 initial_tx_count = len(transactions)  # neue Trades dieses Laufs = ab hier
 
-with open(os.path.join(base_dir, "chartanalyse_ergebnisse.json"), "r") as f:
-    chart_data = json.load(f)
-with open(os.path.join(base_dir, "fundamentalanalyse_ergebnisse.json"), "r") as f:
-    funda_data = json.load(f)
+chart_data = load_json(CHART, {})
+funda_data = load_json(FUNDA, {})
 
 # KI-Sentiment (Stufe 1 + 2), vom Portfoliomanager-Agent erzeugt.
 # Optional: fehlt die Datei, läuft alles rein deterministisch weiter.
@@ -34,14 +28,7 @@ with open(os.path.join(base_dir, "fundamentalanalyse_ergebnisse.json"), "r") as 
 #   { "generated_at": "...",
 #     "scores": { "<ISIN>": {"sentiment_score": int(-3..3),
 #                            "veto": bool, "begruendung": str} } }
-sentiment_data = {"scores": {}}
-sentiment_path = os.path.join(base_dir, "sentiment_scores.json")
-if os.path.exists(sentiment_path):
-    try:
-        with open(sentiment_path, "r", encoding="utf-8") as f:
-            sentiment_data = json.load(f)
-    except Exception:
-        sentiment_data = {"scores": {}}
+sentiment_data = load_json(sentiment_path, {"scores": {}})
 
 SENTIMENT_MIN, SENTIMENT_MAX = -3, 3
 
@@ -365,7 +352,61 @@ def get_beta(isin):
 
 
 fee_per_trade = 5.00
+CAP_GAINS_TAX = 0.26375   # Kapitalertragsteuer + Soli, nur auf Gewinne
 summary = []
+
+
+def _today_iso():
+    return datetime.now().strftime("%Y-%m-%d")
+
+
+def _make_sell_record(p, price, notiz, begruendung):
+    """Berechne Netto-Erlös (nach Gebühr & Steuer) und baue Verkaufs-Transaktion.
+
+    Steuer greift nur bei tatsächlichem Gewinn (Brutto-Verlust ist steuerfrei).
+    Der zurückgegebene `net_cash` gehört auf `current_cash` addiert, `tx`
+    kommt in die Transaktionshistorie.
+    """
+    units = p["stueck"]
+    revenue = (units * price) - fee_per_trade
+    gv_brutto = revenue - p["investiert"]
+    steuern = round(gv_brutto * CAP_GAINS_TAX, 2) if gv_brutto > 0 else 0.0
+    net_cash = revenue - steuern
+    tx = {
+        "datum": _today_iso(),
+        "typ": "Verkauf",
+        "isin": p.get("isin"),
+        "wertpapier": p.get("wertpapier", p.get("isin")),
+        "stueck": units,
+        "kurs": price,
+        "gebuehr": fee_per_trade,
+        "steuern": steuern,
+        "gewinn_verlust": round(gv_brutto, 2),
+        "gesamt": round(net_cash, 2),
+        "notiz": notiz,
+        "begruendung": begruendung,
+    }
+    return tx, net_cash
+
+
+def _make_buy_record(isin, stock, units, price, ts, begruendung):
+    """Baue Kauf-Transaktion. Rückgabewert `total_cost` gehört von `current_cash` abgezogen."""
+    total_cost = units * price + fee_per_trade
+    tx = {
+        "datum": _today_iso(),
+        "typ": "Kauf",
+        "isin": isin,
+        "wertpapier": stock,
+        "stueck": units,
+        "kurs": price,
+        "gebuehr": fee_per_trade,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": round(total_cost, 2),
+        "notiz": f"Neukauf (Score={ts})",
+        "begruendung": begruendung,
+    }
+    return tx, total_cost
 
 # ==========================================
 # PLANUNGSPHASE: ZIELPORTFOLIO MIT SCORING
@@ -489,31 +530,14 @@ for p in positions:
         sell_reason = f"Score unter Schwellwert ({ts} < {SELL_THRESHOLD})"
 
     if sell:
-        units = p["stueck"]
-        revenue = (units * current_price) - fee_per_trade
-        investiert = p["investiert"]
-        gewinn_verlust_brutto = revenue - investiert
-        steuern = 0.0
-        if gewinn_verlust_brutto > 0:
-            steuern = round(gewinn_verlust_brutto * 0.26375, 2)
-        current_cash += (revenue - steuern)
-        sold_isins.add(isin)
         begruendung = sell_reason + " | " + score_reason(isin)
-        summary.append(f"Strategischer Verkauf: {units}x {stock} ({isin}) zu {current_price:.2f} EUR. {sell_reason}.")
-        transactions.append({
-            "datum": datetime.now().strftime("%Y-%m-%d"),
-            "typ": "Verkauf",
-            "isin": isin,
-            "wertpapier": stock,
-            "stueck": units,
-            "kurs": current_price,
-            "gebuehr": fee_per_trade,
-            "steuern": steuern,
-            "gewinn_verlust": round(gewinn_verlust_brutto, 2),
-            "gesamt": round(revenue - steuern, 2),
-            "notiz": f"Strategischer Verkauf ({sell_reason})",
-            "begruendung": begruendung
-        })
+        tx, net_cash = _make_sell_record(p, current_price,
+                                         notiz=f"Strategischer Verkauf ({sell_reason})",
+                                         begruendung=begruendung)
+        current_cash += net_cash
+        sold_isins.add(isin)
+        summary.append(f"Strategischer Verkauf: {p['stueck']}x {stock} ({isin}) zu {current_price:.2f} EUR. {sell_reason}.")
+        transactions.append(tx)
     else:
         p["boersenkurs"] = current_price
         p["boersenwert"] = round(p["stueck"] * p["boersenkurs"], 2)
@@ -560,31 +584,14 @@ for p in halten_positions:
         break
     isin = p.get("isin")
     stock = p.get("wertpapier", isin)
-    units = p["stueck"]
     price = p["boersenkurs"]
-    revenue = (units * price) - fee_per_trade
-    investiert = p["investiert"]
-    gewinn_verlust_brutto = revenue - investiert
-    steuern = 0.0
-    if gewinn_verlust_brutto > 0:
-        steuern = round(gewinn_verlust_brutto * 0.26375, 2)
-    current_cash += (revenue - steuern)
-    begruendung = f"Rebalancing | " + score_reason(isin)
-    summary.append(f"Rebalancing-Verkauf: {units}x {stock} ({isin}) zu {price:.2f} EUR (Score={p.get('score',0)}).")
-    transactions.append({
-        "datum": datetime.now().strftime("%Y-%m-%d"),
-        "typ": "Verkauf",
-        "isin": isin,
-        "wertpapier": stock,
-        "stueck": units,
-        "kurs": price,
-        "gebuehr": fee_per_trade,
-        "steuern": steuern,
-        "gewinn_verlust": round(gewinn_verlust_brutto, 2),
-        "gesamt": round(revenue - steuern, 2),
-        "notiz": "Rebalancing (Kapitalbeschaffung für Neukäufe)",
-        "begruendung": begruendung
-    })
+    begruendung = "Rebalancing | " + score_reason(isin)
+    tx, net_cash = _make_sell_record(p, price,
+                                     notiz="Rebalancing (Kapitalbeschaffung für Neukäufe)",
+                                     begruendung=begruendung)
+    current_cash += net_cash
+    summary.append(f"Rebalancing-Verkauf: {p['stueck']}x {stock} ({isin}) zu {price:.2f} EUR (Score={p.get('score',0)}).")
+    transactions.append(tx)
     positions.remove(p)
 
 # ==========================================
@@ -604,7 +611,8 @@ for isin, ts in unowned_targets:
     units_to_buy = int((budget_for_this - fee_per_trade) / price)
     order_value = units_to_buy * price
     if units_to_buy > 0 and order_value >= MIN_ORDER_VALUE:
-        total_cost = order_value + fee_per_trade
+        begruendung = score_reason(isin)
+        tx, total_cost = _make_buy_record(isin, stock, units_to_buy, price, ts, begruendung)
         current_cash -= total_cost
         positions.append({
             "isin": isin,
@@ -620,21 +628,7 @@ for isin, ts in unowned_targets:
             "stop_ref_kurs": price,
             "beta": get_beta(isin)
         })
-        begruendung = score_reason(isin)
-        transactions.append({
-            "datum": datetime.now().strftime("%Y-%m-%d"),
-            "typ": "Kauf",
-            "isin": isin,
-            "wertpapier": stock,
-            "stueck": units_to_buy,
-            "kurs": price,
-            "gebuehr": fee_per_trade,
-            "steuern": 0.0,
-            "gewinn_verlust": 0.0,
-            "gesamt": round(total_cost, 2),
-            "notiz": f"Neukauf (Score={ts})",
-            "begruendung": begruendung
-        })
+        transactions.append(tx)
         summary.append(f"Kauf: {units_to_buy}x {stock} ({isin}) zu {price:.2f} EUR, Score={ts}, Budget={budget:.0f}€.")
 
 portfolio_value = sum(p.get("boersenwert", 0) for p in positions)
@@ -652,8 +646,7 @@ if RECOMMEND:
         "resultierender_portfoliowert": round(portfolio_value, 2),
         "resultierendes_gesamtvermoegen": round(current_cash + portfolio_value, 2),
     }
-    with open(recommend_path, "w", encoding="utf-8") as f:
-        json.dump(recommendation, f, indent=2, ensure_ascii=False)
+    save_json(recommend_path, recommendation)
     print(f"[EMPFEHLUNGS-MODUS] {len(new_trades)} Trade-Vorschläge -> {recommend_path}")
     if summary:
         print("\n".join(summary))
@@ -667,8 +660,7 @@ else:
     depot["transaktionshistorie"] = transactions
     data["depot"] = depot
 
-    with open(depot_path, "w") as f:
-        json.dump(data, f, indent=2)
+    save_json(depot_path, data)
 
     if summary:
         print("\n".join(summary))

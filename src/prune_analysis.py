@@ -18,15 +18,11 @@ Regeln:
    oder Funda existieren, damit das Dashboard keine „?"-Waisen zeigt.
 """
 
-import json
 import os
+import sys
 
-BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-CHART = os.path.join(BASE, "data", "chartanalyse_ergebnisse.json")
-FUNDA = os.path.join(BASE, "data", "fundamentalanalyse_ergebnisse.json")
-DEPOT = os.path.join(BASE, "data", "depot_status.json")
-SENT = os.path.join(BASE, "data", "sentiment_scores.json")
-NEWS = os.path.join(BASE, "data", "news_raw.json")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import CHART, FUNDA, DEPOT, SENT, NEWS, load_json, save_json
 
 TARGET_PER_SECTOR = 15
 
@@ -106,8 +102,7 @@ def funda_priority(item, depot_isins):
 
 
 def prune_chart(depot_isins):
-    with open(CHART, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_json(CHART, {})
 
     dropped = []
     for sec, items in list(data.get("sektoren", {}).items()):
@@ -141,8 +136,7 @@ def prune_chart(depot_isins):
 
         data["sektoren"][sec] = deduped
 
-    with open(CHART, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    save_json(CHART, data)
 
     print(f"Chart: {len(dropped)} Positionen entfernt")
     for sec, name, reason in dropped:
@@ -152,8 +146,7 @@ def prune_chart(depot_isins):
 
 
 def prune_funda(depot_isins, chart_isins):
-    with open(FUNDA, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_json(FUNDA, {})
 
     dropped = []
     for sec, items in list(data.get("sektoren", {}).items()):
@@ -191,8 +184,7 @@ def prune_funda(depot_isins, chart_isins):
 
         data["sektoren"][sec] = deduped
 
-    with open(FUNDA, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    save_json(FUNDA, data)
 
     print(f"Fundamental: {len(dropped)} Positionen entfernt")
     for sec, name, reason in dropped:
@@ -202,27 +194,26 @@ def prune_funda(depot_isins, chart_isins):
 
 
 def collect_isins(path):
-    data = json.load(open(path, encoding="utf-8"))
+    data = load_json(path, {})
     return {i.get("isin") for sec in data.get("sektoren", {}).values() for i in sec if i.get("isin")}
 
 
 def sync_sentiment(relevant_isins):
-    if not os.path.exists(SENT):
+    data = load_json(SENT)
+    if data is None:
         return
-    data = json.load(open(SENT, encoding="utf-8"))
     scores = data.get("scores", {})
     orphans = [i for i in scores if i not in relevant_isins]
     for isin in orphans:
         scores.pop(isin, None)
-    with open(SENT, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    save_json(SENT, data)
     print(f"Sentiment: {len(orphans)} Waisen entfernt")
 
 
 def sync_news(relevant_isins):
-    if not os.path.exists(NEWS):
+    data = load_json(NEWS)
+    if data is None:
         return
-    data = json.load(open(NEWS, encoding="utf-8"))
     items = data.get("items")
     if not isinstance(items, dict):
         print("News: unbekanntes Format, übersprungen")
@@ -230,13 +221,12 @@ def sync_news(relevant_isins):
     orphans = [i for i in list(items.keys()) if i not in relevant_isins]
     for isin in orphans:
         items.pop(isin, None)
-    with open(NEWS, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    save_json(NEWS, data)
     print(f"News: {len(orphans)} Waisen entfernt")
 
 
 def main():
-    depot = json.load(open(DEPOT, encoding="utf-8"))
+    depot = load_json(DEPOT, {})
     depot_isins = {p.get("isin") for p in depot.get("depot", {}).get("positionen", []) if p.get("isin")}
     print(f"Depot-Schutz: {len(depot_isins)} ISINs")
     print(f"Sektor-Ziel: min. {TARGET_PER_SECTOR} pro Sektor (wenn Universum reicht)")

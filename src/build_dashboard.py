@@ -1,22 +1,23 @@
-import json, os, datetime
+import datetime
+import os
+import sys
 
-repo_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import CHART, FUNDA, DEPOT, SENT, INDEX_HTML
 
-with open(os.path.join(repo_dir, 'data', 'chartanalyse_ergebnisse.json'), 'r', encoding='utf-8') as f:
-    chart_data = f.read()
-with open(os.path.join(repo_dir, 'data', 'fundamentalanalyse_ergebnisse.json'), 'r', encoding='utf-8') as f:
-    funda_data = f.read()
-with open(os.path.join(repo_dir, 'data', 'depot_status.json'), 'r', encoding='utf-8') as f:
-    depot_data = f.read()
+
+def _read_text(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
+
+
+chart_data = _read_text(CHART)
+funda_data = _read_text(FUNDA)
+depot_data = _read_text(DEPOT)
 
 # KI-Sentiment (optional): fehlt die Datei, wird ein leeres Objekt injiziert,
 # damit das Dashboard ohne Sentiment-Stufe trotzdem funktioniert.
-sentiment_path = os.path.join(repo_dir, 'data', 'sentiment_scores.json')
-if os.path.exists(sentiment_path):
-    with open(sentiment_path, 'r', encoding='utf-8') as f:
-        sentiment_data = f.read()
-else:
-    sentiment_data = '{"scores": {}}'
+sentiment_data = _read_text(SENT) if os.path.exists(SENT) else '{"scores": {}}'
 
 build_date = datetime.date.today().strftime("%d.%m.%Y")
 
@@ -927,8 +928,8 @@ html_output = html_output.replace("DEPOT_DATA_PLACEHOLDER", depot_data)
 html_output = html_output.replace("SENTIMENT_DATA_PLACEHOLDER", sentiment_data)
 html_output = html_output.replace("BUILD_DATE_PLACEHOLDER", build_date)
 
-with open(os.path.join(repo_dir, 'index.html'), 'w', encoding='utf-8') as f:
+with open(INDEX_HTML, 'w', encoding='utf-8') as f:
     f.write(html_output)
 
 print(f"Dashboard index.html generiert. Build: {build_date}")
-print(f"Datei: {os.path.join(repo_dir, 'index.html')}")
+print(f"Datei: {INDEX_HTML}")

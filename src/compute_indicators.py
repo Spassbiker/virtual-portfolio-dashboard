@@ -18,9 +18,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ticker_map
-
-repo_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard"
-chart_path = os.path.join(repo_dir, "data", "chartanalyse_ergebnisse.json")
+from paths import CHART as chart_path, load_json, save_json
 
 VALID_INSTRUMENT_TYPES = ('EQUITY', 'ETF')
 
@@ -187,8 +185,7 @@ def process_position(item):
 
 
 def main():
-    with open(chart_path, 'r', encoding='utf-8') as f:
-        chart_data = json.load(f)
+    chart_data = load_json(chart_path, {})
 
     ok, fail = 0, 0
     for sector, items in chart_data.get('sektoren', {}).items():
@@ -202,8 +199,7 @@ def main():
                 fail += 1
                 print(f"  !!  {name}: {detail}")
 
-    with open(chart_path, 'w', encoding='utf-8') as f:
-        json.dump(chart_data, f, indent=2, ensure_ascii=False)
+    save_json(chart_path, chart_data)
 
     print(f"\nDone. {ok} updated, {fail} skipped/failed.")
 

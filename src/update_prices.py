@@ -1,24 +1,13 @@
-import json
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ticker_map
+from paths import DEPOT as depot_path, FUNDA as funda_path, CHART as chart_path, load_json, save_json
 
-base_dir = "/home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data"
-depot_path = os.path.join(base_dir, "depot_status.json")
-funda_path = os.path.join(base_dir, "fundamentalanalyse_ergebnisse.json")
-chart_path = os.path.join(base_dir, "chartanalyse_ergebnisse.json")
-
-# Load all files
-with open(depot_path, "r", encoding="utf-8") as f:
-    depot_data = json.load(f)
-
-with open(funda_path, "r", encoding="utf-8") as f:
-    funda_data = json.load(f)
-
-with open(chart_path, "r", encoding="utf-8") as f:
-    chart_data = json.load(f)
+depot_data = load_json(depot_path, {})
+funda_data = load_json(funda_path, {})
+chart_data = load_json(chart_path, {})
 
 # Collect all ISINs
 isins_to_fetch = set()
@@ -66,8 +55,7 @@ for p in depot_data['depot']['positionen']:
 depot_data['depot']['portfoliowert'] = round(portfoliowert, 2)
 depot_data['depot']['gesamtvermoegen'] = round(portfoliowert + depot_data['depot']['aktueller_barbestand'], 2)
 
-with open(depot_path, 'w', encoding='utf-8') as f:
-    json.dump(depot_data, f, indent=2)
+save_json(depot_path, depot_data)
 
 # Update Funda
 for sector, items in funda_data.get('sektoren', {}).items():
@@ -76,8 +64,7 @@ for sector, items in funda_data.get('sektoren', {}).items():
         if isin in prices:
             item['aktueller_kurs'] = prices[isin]
 
-with open(funda_path, 'w', encoding='utf-8') as f:
-    json.dump(funda_data, f, indent=2)
+save_json(funda_path, funda_data)
 
 # Update Chart
 for sector, items in chart_data.get('sektoren', {}).items():
@@ -86,7 +73,6 @@ for sector, items in chart_data.get('sektoren', {}).items():
         if isin in prices:
             item['aktueller_kurs'] = prices[isin]
 
-with open(chart_path, 'w', encoding='utf-8') as f:
-    json.dump(chart_data, f, indent=2)
+save_json(chart_path, chart_data)
 
 print(f"Prices updated successfully. Found {len(prices)} prices.")
