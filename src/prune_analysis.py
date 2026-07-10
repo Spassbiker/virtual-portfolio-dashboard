@@ -51,7 +51,7 @@ def should_drop_chart(item, depot_isins):
     return None
 
 
-def should_drop_funda(item, depot_isins):
+def should_drop_funda(item, depot_isins, chart_isins):
     if item.get("isin") in depot_isins:
         return None
     text = item.get("begruendung") or ""
@@ -61,10 +61,12 @@ def should_drop_funda(item, depot_isins):
         return "delisted"
     if (item.get("bewertung") or "").lower() != "attraktiv":
         return f"bewertung={item.get('bewertung') or '?'} (kein Kaufkandidat)"
+    if item.get("isin") not in chart_isins:
+        return "in Chart nicht mehr gelistet (nicht handelbar)"
     return None
 
 
-def prune_analysis(path, depot_isins, drop_fn, label):
+def prune_analysis(path, drop_fn, label):
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -72,7 +74,7 @@ def prune_analysis(path, depot_isins, drop_fn, label):
     for sec, items in list(data.get("sektoren", {}).items()):
         kept = []
         for item in items:
-            reason = drop_fn(item, depot_isins)
+            reason = drop_fn(item)
             if reason is None:
                 kept.append(item)
             else:
@@ -129,10 +131,12 @@ def main():
     depot_isins = {p.get("isin") for p in depot.get("depot", {}).get("positionen", []) if p.get("isin")}
     print(f"Depot-Schutz: {len(depot_isins)} ISINs")
 
-    prune_analysis(CHART, depot_isins, should_drop_chart, "Chart")
-    prune_analysis(FUNDA, depot_isins, should_drop_funda, "Fundamental")
+    prune_analysis(CHART, lambda item: should_drop_chart(item, depot_isins), "Chart")
 
-    relevant = collect_isins(CHART) | collect_isins(FUNDA) | depot_isins
+    chart_isins = collect_isins(CHART)
+    prune_analysis(FUNDA, lambda item: should_drop_funda(item, depot_isins, chart_isins), "Fundamental")
+
+    relevant = chart_isins | collect_isins(FUNDA) | depot_isins
     sync_sentiment(relevant)
     sync_news(relevant)
 

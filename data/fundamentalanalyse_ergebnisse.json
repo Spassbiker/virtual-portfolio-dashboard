@@ -93,21 +93,6 @@
     ],
     "Verteidigung": [
       {
-        "wertpapier": "Rheinmetall",
-        "isin": "DE0007030009",
-        "begruendung": "Enormes Auftragsvolumen, langfristiges Wachstum.",
-        "kgv": "28",
-        "dividendenrendite": 1.2,
-        "umsatzwachstum_yoy": 17.27,
-        "gewinnwachstum_yoy": 29.63,
-        "eigenkapitalquote": 25.06,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-08",
-        "aktueller_kurs": 1013.2,
-        "empfehlung": "Kaufen"
-      },
-      {
         "wertpapier": "Hensoldt",
         "isin": "DE000HAG0005",
         "begruendung": "Hohe Bewertung, gute Technologiebasis.",
@@ -151,21 +136,6 @@
         "datum": "2026-07-08",
         "empfehlung": "Halten",
         "aktueller_kurs": 21.67
-      },
-      {
-        "wertpapier": "Northrop Grumman",
-        "isin": "US6668071029",
-        "begruendung": "Starke Auftragslage, begrenzte kurzfristige Upside.",
-        "kgv": "25",
-        "dividendenrendite": 1.5,
-        "umsatzwachstum_yoy": 27.13,
-        "gewinnwachstum_yoy": -9.6,
-        "eigenkapitalquote": 35.93,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-08",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 465.009
       },
       {
         "wertpapier": "Leonardo SpA",
@@ -365,21 +335,6 @@
         "datum": "2026-07-08",
         "empfehlung": "Halten",
         "aktueller_kurs": 196.52
-      },
-      {
-        "wertpapier": "Rocket Lab",
-        "isin": "US7731221062",
-        "begruendung": "Hohes Wachstum, hohe Bewertung, noch nicht profitabel.",
-        "kgv": "-",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 1.78,
-        "gewinnwachstum_yoy": -9.13,
-        "eigenkapitalquote": 42.1,
-        "bewertung": "Attraktiv",
-        "risiko": "Hoch",
-        "datum": "2026-07-08",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 72.124
       },
       {
         "wertpapier": "Planet Labs",
