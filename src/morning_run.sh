@@ -26,6 +26,7 @@ python3 src/update_prices.py            >/dev/null 2>&1
 python3 src/compute_indicators.py       >/dev/null 2>&1
 python3 src/refresh_chart_narrative.py  >/dev/null 2>&1
 python3 src/sanitize_fundamentals.py    >/dev/null 2>&1
+python3 src/prune_analysis.py           >/dev/null 2>&1
 python3 src/fetch_news.py               >/dev/null 2>&1
 
 if [ "$traded" = "1" ]; then
