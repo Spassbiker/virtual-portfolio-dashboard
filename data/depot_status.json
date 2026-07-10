@@ -2,76 +2,76 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 86.65,
-    "portfoliowert": 9682.61,
-    "gesamtvermoegen": 9769.26,
+    "portfoliowert": 9680.95,
+    "gesamtvermoegen": 9767.6,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 52.01,
+        "boersenkurs": 52.19,
         "investiert": 1484.16,
-        "boersenwert": 1664.32,
-        "gewinn_verlust": 180.16,
+        "boersenwert": 1670.08,
+        "gewinn_verlust": 185.92,
         "score": 15,
-        "beta": 0.753,
-        "dax_ref": 24917.08,
-        "stop_ref_kurs": 52.11
+        "beta": 0.3,
+        "dax_ref": 25118.27,
+        "stop_ref_kurs": 52.19
       },
       {
         "isin": "DE000A0D9PT0",
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 362.7,
+        "boersenkurs": 362.0,
         "investiert": 1453.2,
-        "boersenwert": 1450.8,
-        "gewinn_verlust": -2.4,
+        "boersenwert": 1448.0,
+        "gewinn_verlust": -5.2,
         "score": 15,
-        "beta": 1.293,
-        "dax_ref": 24917.08,
-        "stop_ref_kurs": 355.2
+        "beta": 0.3,
+        "dax_ref": 25118.27,
+        "stop_ref_kurs": 362.0
       },
       {
         "isin": "FR0000073272",
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 340.2,
+        "boersenkurs": 340.0,
         "investiert": 1380.0,
-        "boersenwert": 1360.8,
-        "gewinn_verlust": -19.2,
+        "boersenwert": 1360.0,
+        "gewinn_verlust": -20.0,
         "score": 12,
-        "beta": 1.015,
-        "dax_ref": 24917.08,
-        "stop_ref_kurs": 334.8
+        "beta": 0.3,
+        "dax_ref": 25118.27,
+        "stop_ref_kurs": 340.0
       },
       {
         "isin": "DE000ENER6Y0",
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 156.76,
+        "boersenkurs": 156.24,
         "investiert": 1492.2,
-        "boersenwert": 1410.84,
-        "gewinn_verlust": -81.36,
+        "boersenwert": 1406.16,
+        "gewinn_verlust": -86.04,
         "score": 16,
-        "beta": 1.889,
-        "dax_ref": 24917.08,
-        "stop_ref_kurs": 154.56
+        "beta": 0.3,
+        "dax_ref": 25118.27,
+        "stop_ref_kurs": 156.24
       },
       {
         "isin": "FR0000121329",
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 226.7,
+        "boersenkurs": 226.8,
         "investiert": 224.8,
-        "boersenwert": 226.7,
-        "gewinn_verlust": 1.9,
-        "score": 12,
-        "beta": 0.488,
+        "boersenwert": 226.8,
+        "gewinn_verlust": 2.0,
+        "score": 11,
+        "beta": 0.3,
         "dax_ref": 24917.08,
         "stop_ref_kurs": 227.2
       },
@@ -80,12 +80,12 @@
         "wertpapier": "Nvidia",
         "stueck": 10,
         "kaufkurs": 170.9,
-        "boersenkurs": 176.1,
+        "boersenkurs": 176.24,
         "investiert": 1709.0,
-        "boersenwert": 1761.0,
-        "gewinn_verlust": 52.0,
-        "score": 9,
-        "beta": 0.832,
+        "boersenwert": 1762.4,
+        "gewinn_verlust": 53.4,
+        "score": 8,
+        "beta": 0.3,
         "dax_ref": 24917.08,
         "stop_ref_kurs": 178.72
       },
@@ -94,10 +94,10 @@
         "wertpapier": "Lockheed Martin",
         "stueck": 1,
         "kaufkurs": 545.91,
-        "boersenkurs": 454.2,
+        "boersenkurs": 454.6,
         "investiert": 545.91,
-        "boersenwert": 454.2,
-        "gewinn_verlust": -91.71,
+        "boersenwert": 454.6,
+        "gewinn_verlust": -91.31,
         "score": 15,
         "beta": 0.3,
         "dax_ref": 24917.08,
@@ -108,12 +108,12 @@
         "wertpapier": "SMA Solar",
         "stueck": 5,
         "kaufkurs": 55.35,
-        "boersenkurs": 54.85,
+        "boersenkurs": 54.8,
         "investiert": 276.75,
-        "boersenwert": 274.25,
-        "gewinn_verlust": -2.5,
+        "boersenwert": 274.0,
+        "gewinn_verlust": -2.75,
         "score": 11,
-        "beta": 1.339,
+        "beta": 0.3,
         "dax_ref": 24917.08,
         "stop_ref_kurs": 55.75
       },
@@ -122,7 +122,7 @@
         "wertpapier": "SES",
         "stueck": 1,
         "kaufkurs": 8.11,
-        "boersenkurs": 7.79,
+        "boersenkurs": 7.785,
         "investiert": 8.11,
         "boersenwert": 7.79,
         "gewinn_verlust": -0.32,
@@ -136,26 +136,26 @@
         "wertpapier": "Rolls-Royce",
         "stueck": 12,
         "kaufkurs": 16.608,
-        "boersenkurs": 16.876,
+        "boersenkurs": 16.86,
         "investiert": 199.3,
-        "boersenwert": 202.51,
-        "gewinn_verlust": 3.21,
+        "boersenwert": 202.32,
+        "gewinn_verlust": 3.02,
         "score": 16,
-        "beta": 1.573,
-        "dax_ref": 24917.08,
-        "stop_ref_kurs": 16.686
+        "beta": 0.3,
+        "dax_ref": 25118.27,
+        "stop_ref_kurs": 16.86
       },
       {
         "isin": "FR0014004L86",
         "wertpapier": "Dassault Aviation",
         "stueck": 3,
         "kaufkurs": 297.2,
-        "boersenkurs": 289.8,
+        "boersenkurs": 289.6,
         "investiert": 891.6,
-        "boersenwert": 869.4,
-        "gewinn_verlust": -22.2,
-        "score": 15,
-        "beta": 0.586,
+        "boersenwert": 868.8,
+        "gewinn_verlust": -22.8,
+        "score": 14,
+        "beta": 0.3,
         "dax_ref": 24917.08,
         "stop_ref_kurs": 290.4
       }
@@ -455,7 +455,7 @@
         {
           "wertpapier": "Leonardo",
           "isin": "IT0003856405",
-          "anteil_pct": 17.2
+          "anteil_pct": 17.3
         },
         {
           "wertpapier": "MTU Aero Engines",
@@ -465,12 +465,12 @@
         {
           "wertpapier": "Siemens Energy",
           "isin": "DE000ENER6Y0",
-          "anteil_pct": 14.6
+          "anteil_pct": 14.5
         },
         {
           "wertpapier": "Safran",
           "isin": "FR0000073272",
-          "anteil_pct": 14.1
+          "anteil_pct": 14.0
         },
         {
           "wertpapier": "Dassault Aviation",
@@ -510,7 +510,7 @@
         },
         {
           "sektor": "Verteidigung",
-          "anteil_pct": 19.5
+          "anteil_pct": 19.6
         },
         {
           "sektor": "Energie",
@@ -536,14 +536,14 @@
       "aktuell": {
         "dax": 25118.27,
         "msci": 125.71,
-        "vermoegen": 9769.26
+        "vermoegen": 9767.6
       },
       "rendite_pct": {
-        "depot": 0.0,
+        "depot": -0.02,
         "dax": 0.0,
         "msci_world": 0.0
       },
-      "stand": "2026-07-09 22:39"
+      "stand": "2026-07-10 09:00"
     }
   }
 }
