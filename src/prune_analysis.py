@@ -6,11 +6,12 @@ Regeln:
    Delistings, nicht handelbare Werte ("Kein verlässliches EUR-Listing") und
    Cross-Sektor-Duplikate ohne Zusatznutzen werden verworfen.
 2. **Depot-Schutz**: eine ISIN aus dem Depot bleibt IMMER in Chart und Funda.
-3. **Sektor-Minimum**: jeder Sektor soll mindestens `TARGET_PER_SECTOR = 10`
+3. **Sektor-Ziel**: jeder Sektor soll bis zu `TARGET_PER_SECTOR = 15`
    Wertpapiere zeigen, sofern das Universum genügend hergibt. Priorität pro
-   Sektor: Depot > Kaufen > Halten > Verkaufen. Wenn ein Sektor mehr als 10
-   Kandidaten hat, werden die schwächsten weggelassen. Weniger als 10 bleiben
-   unangetastet — auffüllen kann nur der wöchentliche Fundamental-Refresh.
+   Sektor: Depot > Watch (neu, noch keine Historie) > Kaufen > Halten > Verkaufen.
+   Bei Überlauf werden die schwächsten weggelassen. Auffüllen macht der
+   wöchentliche Fundamental-Refresh (Sonntag 20:00) plus der werktägliche
+   Opportunity-Scan (08:30).
 4. **Handelbarkeitsfilter Funda**: eine Funda-Position ohne Chart-Eintrag
    (kein EUR-Listing) fliegt raus — sie ist nicht handelbar.
 5. **Sentiment/News**: nach dem Prune auf ISINs beschränken, die in Chart
@@ -27,7 +28,12 @@ DEPOT = os.path.join(BASE, "data", "depot_status.json")
 SENT = os.path.join(BASE, "data", "sentiment_scores.json")
 NEWS = os.path.join(BASE, "data", "news_raw.json")
 
-TARGET_PER_SECTOR = 10
+TARGET_PER_SECTOR = 15
+
+# Marker im Fundamental-Text, dass ein Eintrag frisch per Opportunity-Scan
+# hinzugefügt wurde (noch keine Chart-Historie / kein Kurs). Solche Watch-
+# Kandidaten sollen NICHT bei Sektor-Überlauf rausgeworfen werden.
+WATCH_MARKER = ("watch-kandidat", "opportunity-scan")
 
 PLACEHOLDER = ("vervollständigung", "ergänzt zur", "platzhalter")
 DELISTED = ("börse genommen", "delisted", "delisting")
@@ -59,34 +65,44 @@ def is_funda_noise(item):
     return None
 
 
+def is_watch(item):
+    """Watch = Kandidat aus Opportunity-Scan (noch keine belastbare Historie)."""
+    text = item.get("begruendung") or ""
+    return contains(text, WATCH_MARKER)
+
+
 def chart_priority(item, depot_isins):
-    """0 = beste. Depot > Kaufen > Halten > Verkaufen > sonstige."""
+    """0 = beste. Depot > Watch > Kaufen > Halten > Verkaufen > sonstige."""
     if item.get("isin") in depot_isins:
         return 0
+    if is_watch(item):
+        return 1
     sig = (item.get("signal") or item.get("empfehlung") or "").lower()
     if "kauf" in sig:
-        return 1
-    if "halt" in sig:
         return 2
-    if "verkauf" in sig:
+    if "halt" in sig:
         return 3
-    return 4
+    if "verkauf" in sig:
+        return 4
+    return 5
 
 
 def funda_priority(item, depot_isins):
     if item.get("isin") in depot_isins:
         return 0
+    if is_watch(item):
+        return 1
     bew = (item.get("bewertung") or "").lower()
     emp = (item.get("empfehlung") or "").lower()
     if "attraktiv" in bew:
-        return 1
-    if emp == "kaufen":
-        return 1
-    if "neutral" in bew:
         return 2
+    if emp == "kaufen":
+        return 2
+    if "neutral" in bew:
+        return 3
     if "spekulativ" in bew or emp == "verkaufen":
-        return 4
-    return 3
+        return 5
+    return 4
 
 
 def prune_chart(depot_isins):
@@ -150,7 +166,8 @@ def prune_funda(depot_isins, chart_isins):
             if noise:
                 dropped.append((sec, it.get("wertpapier", "?"), noise))
                 continue
-            if it.get("isin") not in chart_isins:
+            # Watch-Kandidaten dürfen fehlen im Chart (compute_indicators füllt später).
+            if it.get("isin") not in chart_isins and not is_watch(it):
                 dropped.append((sec, it.get("wertpapier", "?"), "nicht in Chart (nicht handelbar)"))
                 continue
             cleaned.append(it)

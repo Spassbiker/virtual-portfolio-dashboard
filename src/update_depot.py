@@ -61,10 +61,27 @@ def get_sentiment(isin):
 # SCORING-SYSTEM
 # ==========================================
 
-# Minimum total score to enter target portfolio (Kauf-Kandidat)
-BUY_THRESHOLD = 8
+# Kauf-Schwelle: ADAPTIV. Fixer Floor = BUY_FLOOR, effektive Schwelle ist
+# max(BUY_FLOOR, 80er-Perzentil aller aktiven Kandidatenscores). Das hebt
+# die Latte in starken Märkten automatisch (mehr Auswahl → wähle die besten),
+# ohne in schwachen Märkten alle Käufe zu blockieren.
+BUY_FLOOR = 6
+BUY_PERCENTILE = 0.80       # nur die Top-20% werden Kauf-Kandidaten
+# Fallback wenn Kandidatenmenge zu klein für sinnvolles Perzentil ist.
+BUY_FALLBACK_THRESHOLD = 8
+BUY_MIN_CANDIDATES = 10     # unter dieser Anzahl greift der Fallback
 # Score below this triggers Verkauf für bestehende Positionen
 SELL_THRESHOLD = 4
+# Rebalancing-Schwelle: nur Halten-Positionen unter diesem festen Wert werden
+# zur Kapitalbeschaffung verkauft. Absichtlich NICHT die adaptive Kaufschwelle —
+# sonst würden in starken Märkten (adaptive Schwelle hoch) alle "guten aber
+# nicht Top-Kandidaten" abgeräumt.
+REBALANCE_THRESHOLD = 8
+# Watch-Modus: neu aufgenommene Papiere (Opportunity-Scan) haben oft noch
+# keine belastbare Chart-Historie (SMA200/RSI/MACD). Sie werden NICHT gekauft,
+# bleiben aber im Universum stehen, bis genug Daten da sind.
+WATCH_MIN_CLOSES = 200          # SMA200 braucht 200 Tage
+WATCH_MARKERS = ("watch-kandidat", "opportunity-scan")
 # Zweistufiger Stop-Loss (marktbereinigt):
 #  1) ABSOLUTER HARD-STOP: fällt eine Position absolut um mehr als X unter den
 #     Kaufkurs, wird IMMER verkauft — Katastrophenschutz, auch wenn der ganze
@@ -229,11 +246,49 @@ def score_reason(isin):
         reason += f" | KI: {s_text}"
     return reason
 
-def budget_for_score(ts):
+def budget_for_score(ts, buy_threshold):
     """Positionsgröße proportional zum Score: 1000€ Basis + 100€ je Punkt über Schwellwert, max 2500€."""
     base = 1000.0
-    bonus = max(0, ts - BUY_THRESHOLD) * 100.0
+    bonus = max(0, ts - buy_threshold) * 100.0
     return min(2500.0, base + bonus)
+
+
+def is_watch_candidate(isin, chart_item, funda_item):
+    """Kandidat noch nicht kaufbar (nicht genug Historie / Marker-Text).
+
+    Zwei Signale zählen:
+    1. Explizite Watch-Markierung im Fundamental- oder Chart-Text
+       (Opportunity-Scan hinterlässt sie beim Einfügen).
+    2. Chart-Indikatoren noch nicht belastbar: kein SMA200 vorhanden ODER
+       kein `indicators_source` gesetzt (noch nie durch compute_indicators
+       gelaufen). Dann fehlt die halbe Chart-Score-Basis.
+    """
+    for it in (chart_item, funda_item):
+        if it and any(m in ((it.get("begruendung") or "").lower()) for m in WATCH_MARKERS):
+            return True
+    if chart_item is not None:
+        if chart_item.get("sma_200") in (None, 0):
+            return True
+        if not chart_item.get("indicators_source"):
+            return True
+    return False
+
+
+def compute_adaptive_buy_threshold(scores):
+    """Adaptive Kaufschwelle aus den aktuellen Kandidatenscores.
+
+    scores = Liste aller Nicht-Verkaufen-Nicht-Watch-Scores. Ergebnis ist
+    max(BUY_FLOOR, 80er-Perzentil). Fallback auf BUY_FALLBACK_THRESHOLD,
+    wenn zu wenige Datenpunkte für sinnvolles Perzentil vorliegen.
+    """
+    active = [s for s in scores if s is not None]
+    if len(active) < BUY_MIN_CANDIDATES:
+        return BUY_FALLBACK_THRESHOLD
+    ordered = sorted(active)
+    # 80. Perzentil ~ oberste 20 %
+    idx = int(len(ordered) * BUY_PERCENTILE)
+    idx = min(idx, len(ordered) - 1)
+    return max(BUY_FLOOR, ordered[idx])
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ticker_map
@@ -314,8 +369,8 @@ summary = []
 
 # ==========================================
 # PLANUNGSPHASE: ZIELPORTFOLIO MIT SCORING
-# Kauf-Kandidaten: Score >= BUY_THRESHOLD,
-# kein explizites "Verkaufen" in chart UND funda
+# Kauf-Kandidaten: Score >= adaptivem BUY_THRESHOLD,
+# kein explizites "Verkaufen" in chart UND funda, nicht Watch.
 # ==========================================
 all_isins = set()
 for data_set in [chart_data, funda_data]:
@@ -324,7 +379,11 @@ for data_set in [chart_data, funda_data]:
             if item.get("isin"):
                 all_isins.add(item["isin"])
 
-scored_candidates = []
+# Schritt 1: alle aktiven Scores sammeln (Watch/Verkauf/Veto aussortieren).
+# Watch-Kandidaten wandern in eine Merkliste — sie werden nicht gekauft,
+# bleiben aber sichtbar für Reporting/Dashboard.
+active_scores = []
+watch_list = []
 for isin in all_isins:
     c_item = get_chart_item(isin)
     f_item = get_funda_item(isin)
@@ -339,12 +398,28 @@ for isin in all_isins:
     if veto:
         summary.append(f"KI-Veto: Kauf von {c_item.get('wertpapier', isin)} ({isin}) blockiert. {veto_reason}")
         continue
+    if is_watch_candidate(isin, c_item, f_item):
+        ts_watch = total_score(isin)[0]
+        watch_list.append((isin, ts_watch))
+        continue
     ts = total_score(isin)[0]
-    if ts >= BUY_THRESHOLD:
-        scored_candidates.append((isin, ts))
+    active_scores.append((isin, ts))
 
-# Sortiert nach Score absteigend
+# Schritt 2: adaptive Schwelle aus den aktiven Scores bestimmen.
+BUY_THRESHOLD = compute_adaptive_buy_threshold([ts for _, ts in active_scores])
+
+# Schritt 3: Kandidaten oberhalb der adaptiven Schwelle selektieren.
+scored_candidates = [(isin, ts) for isin, ts in active_scores if ts >= BUY_THRESHOLD]
 scored_candidates.sort(key=lambda x: -x[1])
+
+if watch_list:
+    watch_list.sort(key=lambda x: -x[1])
+    watch_names = [f"{isin_to_name.get(i, i)}({t})" for i, t in watch_list[:5]]
+    summary.append(f"Watch-Modus: {len(watch_list)} Kandidat(en) noch nicht kaufbar "
+                   f"(fehlende Historie). Top: {', '.join(watch_names)}.")
+summary.append(f"Adaptive Kaufschwelle: {BUY_THRESHOLD} "
+               f"(Floor {BUY_FLOOR}, {int(BUY_PERCENTILE*100)}er-Perzentil "
+               f"aus {len(active_scores)} aktiven Kandidaten).")
 
 live_prices = {}
 target_isins_scored = []
@@ -469,13 +544,15 @@ positions = positions_to_keep
 unowned_targets = [(isin, ts) for isin, ts in target_isins_scored
                    if not any(p.get("isin") == isin for p in positions)
                    and isin not in sold_isins]
-total_needed_cash = sum(budget_for_score(ts) for _, ts in unowned_targets)
+total_needed_cash = sum(budget_for_score(ts, BUY_THRESHOLD) for _, ts in unowned_targets)
 
 # ==========================================
 # 3. REBALANCING (Schwache Halten-Positionen verkaufen)
 # Sortiert nach schlechtestem Score (schwächste zuerst)
 # ==========================================
-halten_positions = [p for p in positions if p.get("isin") not in target_isins]
+halten_positions = [p for p in positions
+                    if p.get("isin") not in target_isins
+                    and p.get("score", 0) < REBALANCE_THRESHOLD]
 halten_positions.sort(key=lambda p: (p.get("score", 0), p["gewinn_verlust"] / p["investiert"] if p["investiert"] > 0 else 0))
 
 for p in halten_positions:
@@ -518,7 +595,7 @@ for isin, ts in unowned_targets:
         continue
     price = live_prices[isin]
     stock = isin_to_name.get(isin, isin)
-    budget = budget_for_score(ts)
+    budget = budget_for_score(ts, BUY_THRESHOLD)
     # Mindest-Barreserve nie unterschreiten.
     spendable = current_cash - MIN_CASH_RESERVE
     budget_for_this = min(budget, spendable)

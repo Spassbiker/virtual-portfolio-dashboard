@@ -45,12 +45,13 @@ News-Sentiment.
 
 ## Regeln für den Refresh-Agent
 
-1. **Positionen erhalten + Sektor-Minimum**: Alle bestehenden ISINs bleiben
-   drin. Zusätzlich soll jeder Sektor **mindestens 10 Wertpapiere** enthalten
-   – wenn ein Sektor darunter liegt, ergänzt der Refresh passende EU-handelbare
-   Kandidaten (EUR-Listing an XETRA/Euronext/Frankfurt). Nur ISINs mit
-   verifizierbarem EUR-Handel; keine reinen US-Werte, keine Platzhalter.
-   Wenn keine 10 sauberen Kandidaten existieren, soweit möglich ergänzen.
+1. **Positionen erhalten + Sektor-Ziel**: Alle bestehenden ISINs bleiben
+   drin. Jeder Sektor soll bis zu **15 Wertpapiere** enthalten (ehemals 10;
+   erweitert 2026-07-10 zusammen mit dem Opportunity-Scan). Liegt ein Sektor
+   darunter, ergänzt der Refresh passende EU-handelbare Kandidaten
+   (EUR-Listing an XETRA/Euronext/Frankfurt). Nur ISINs mit verifizierbarem
+   EUR-Handel; keine reinen US-Werte, keine Platzhalter. Wenn keine 15
+   sauberen Kandidaten existieren, soweit möglich ergänzen.
 2. **Cross-Sektor-Duplikate**: Kommt eine ISIN in mehreren Sektoren vor
    (z. B. Airbus in „Verteidigung" und „Satellitentechnik"), dürfen
    `kgv`, `umsatzwachstum_yoy`, `gewinnwachstum_yoy`, `eigenkapitalquote`,
