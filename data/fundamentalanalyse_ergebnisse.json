@@ -4,7 +4,7 @@
       {
         "wertpapier": "Siemens Energy",
         "isin": "DE000ENER6Y0",
-        "begruendung": "Oman-Vertragsgewinn best\u00e4tigt starkes Wachstum; Energiewende-Infrastruktur treibt Umsatz. Aufw\u00e4rtstrend intakt.",
+        "begruendung": "Oman-Vertragsgewinn bestätigt starkes Wachstum; Energiewende-Infrastruktur treibt Umsatz. Aufwärtstrend intakt.",
         "kgv": "22",
         "dividendenrendite": 1.1,
         "umsatzwachstum_yoy": 29.44,
@@ -34,7 +34,7 @@
       {
         "wertpapier": "E.ON",
         "isin": "DE000ENAG999",
-        "begruendung": "Stabiles Gesch\u00e4ftsmodell, begrenzte Fantasie.",
+        "begruendung": "Stabiles Geschäftsmodell, begrenzte Fantasie.",
         "kgv": "16",
         "dividendenrendite": 4.0,
         "umsatzwachstum_yoy": 9.49,
@@ -49,7 +49,7 @@
       {
         "wertpapier": "Encavis",
         "isin": "DE0006095003",
-        "begruendung": "Bewertung aktuell zu hoch f\u00fcr das Wachstum.",
+        "begruendung": "Bewertung aktuell zu hoch für das Wachstum.",
         "kgv": "35",
         "dividendenrendite": 0.8,
         "umsatzwachstum_yoy": -2.8,
@@ -78,7 +78,7 @@
       {
         "wertpapier": "Nordex SE",
         "isin": "DE000A0D6554",
-        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilit\u00e4t.",
+        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilität.",
         "kgv": "45",
         "dividendenrendite": 0.0,
         "umsatzwachstum_yoy": 12.41,
@@ -93,7 +93,7 @@
       {
         "wertpapier": "Microsoft",
         "isin": "US5949181045",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 46.17,
         "dividendenrendite": 4.08,
         "umsatzwachstum_yoy": -4.7,
@@ -102,13 +102,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
         "datum": "2026-07-08",
-        "empfehlung": "Halten",
+        "empfehlung": "N/A",
         "aktueller_kurs": 332.8
       },
       {
         "wertpapier": "Alphabet",
         "isin": "US02079K3059",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 20.48,
         "dividendenrendite": 2.74,
         "umsatzwachstum_yoy": 0.48,
@@ -117,13 +117,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "empfehlung": "Halten",
+        "empfehlung": "N/A",
         "aktueller_kurs": 309.5
       },
       {
         "wertpapier": "L3Harris Technologies",
         "isin": "US5024311095",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 38.78,
         "dividendenrendite": 4.83,
         "umsatzwachstum_yoy": 24.16,
@@ -132,13 +132,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "empfehlung": "Halten",
+        "empfehlung": "N/A",
         "aktueller_kurs": 302.07
       },
       {
         "wertpapier": "Raytheon",
         "isin": "US75513E1010",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 35.23,
         "dividendenrendite": 0.53,
         "umsatzwachstum_yoy": 23.54,
@@ -147,7 +147,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
+        "empfehlung": "N/A",
         "aktueller_kurs": 170.546
       }
     ],
@@ -185,7 +185,7 @@
       {
         "wertpapier": "Airbus",
         "isin": "NL0000235190",
-        "begruendung": "Unterst\u00fctzungszone bei 180 EUR erfolgreich getestet.",
+        "begruendung": "Unterstützungszone bei 180 EUR erfolgreich getestet.",
         "kgv": 38.95,
         "dividendenrendite": 1.26,
         "umsatzwachstum_yoy": 22.3,
@@ -230,7 +230,7 @@
       {
         "wertpapier": "Leonardo SpA",
         "isin": "IT0003856405",
-        "begruendung": "Starkes Umsatzwachstum durch europ\u00e4ische R\u00fcstungsauftr\u00e4ge, diversifiziertes Portfolio.",
+        "begruendung": "Starkes Umsatzwachstum durch europäische Rüstungsaufträge, diversifiziertes Portfolio.",
         "kgv": "12",
         "dividendenrendite": 2.8,
         "umsatzwachstum_yoy": 30.0,
@@ -245,7 +245,7 @@
       {
         "wertpapier": "Thales SA",
         "isin": "FR0000121329",
-        "begruendung": "Kurs knapp unter SMA200; R\u00fcstungsnachfrage st\u00fctzend, aber Momentum fehlt.",
+        "begruendung": "Kurs knapp unter SMA200; Rüstungsnachfrage stützend, aber Momentum fehlt.",
         "kgv": "20",
         "dividendenrendite": 2.1,
         "umsatzwachstum_yoy": 8.78,
@@ -260,7 +260,7 @@
       {
         "wertpapier": "NextEra Energy",
         "isin": "US65339F1012",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 26.41,
         "dividendenrendite": 3.89,
         "umsatzwachstum_yoy": 2.6,
@@ -269,13 +269,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "empfehlung": "Halten",
+        "empfehlung": "N/A",
         "aktueller_kurs": 76.099
       },
       {
         "wertpapier": "Tesla",
         "isin": "US88160R1014",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 37.56,
         "dividendenrendite": 0.52,
         "umsatzwachstum_yoy": 13.87,
@@ -284,13 +284,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
         "datum": "2026-07-08",
-        "empfehlung": "Halten",
+        "empfehlung": "N/A",
         "aktueller_kurs": 346.55
       },
       {
         "wertpapier": "Gilat Satellite",
         "isin": "IL0010825102",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 22.59,
         "dividendenrendite": 1.28,
         "umsatzwachstum_yoy": 23.09,
@@ -299,7 +299,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
+        "empfehlung": "N/A",
         "aktueller_kurs": 10.624
       }
     ],
@@ -322,7 +322,7 @@
       {
         "wertpapier": "Safran",
         "isin": "FR0000073272",
-        "begruendung": "Starker Auftragsr\u00fcckstau in Triebwerken; hohe Marge, RSI \u00fcberkauft.",
+        "begruendung": "Starker Auftragsrückstau in Triebwerken; hohe Marge, RSI überkauft.",
         "kgv": "32",
         "dividendenrendite": 1.1,
         "umsatzwachstum_yoy": 1.71,
@@ -367,7 +367,7 @@
       {
         "wertpapier": "Leonardo",
         "isin": "IT0003856405",
-        "begruendung": "Starkes Umsatzwachstum durch europ\u00e4ische R\u00fcstungsauftr\u00e4ge, diversifiziertes Portfolio.",
+        "begruendung": "Starkes Umsatzwachstum durch europäische Rüstungsaufträge, diversifiziertes Portfolio.",
         "kgv": 27.44,
         "dividendenrendite": 3.08,
         "umsatzwachstum_yoy": 0.27,
@@ -397,7 +397,7 @@
       {
         "wertpapier": "Lockheed Martin",
         "isin": "US5398301094",
-        "begruendung": "$142.9M Air Force Vertrag neu. Starke US-Verteidigungsauftr\u00e4ge; strategische Dividendenst\u00e4rke.",
+        "begruendung": "$142.9M Air Force Vertrag neu. Starke US-Verteidigungsaufträge; strategische Dividendenstärke.",
         "kgv": 15.12,
         "dividendenrendite": 0.67,
         "umsatzwachstum_yoy": 24.56,
@@ -412,7 +412,7 @@
       {
         "wertpapier": "General Dynamics",
         "isin": "US3695501086",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 24.85,
         "dividendenrendite": 3.07,
         "umsatzwachstum_yoy": -0.35,
@@ -421,13 +421,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "empfehlung": "Verkaufen",
+        "empfehlung": "N/A",
         "aktueller_kurs": 327.288
       },
       {
         "wertpapier": "Nvidia",
         "isin": "US67066G1040",
-        "begruendung": "Kyber-Rack-Verz\u00f6gerung bis 2028 leicht negativ; fundamentale KI-St\u00e4rke bleibt ungebrochen.",
+        "begruendung": "Kyber-Rack-Verzögerung bis 2028 leicht negativ; fundamentale KI-Stärke bleibt ungebrochen.",
         "kgv": 36.36,
         "dividendenrendite": 1.27,
         "umsatzwachstum_yoy": 22.66,
@@ -444,7 +444,7 @@
       {
         "wertpapier": "OHB",
         "isin": "DE0005936124",
-        "begruendung": "Profitiert von \u00f6ffentlicher Raumfahrt-Nachfrage.",
+        "begruendung": "Profitiert von öffentlicher Raumfahrt-Nachfrage.",
         "kgv": "20",
         "dividendenrendite": 1.0,
         "umsatzwachstum_yoy": 23.81,
@@ -474,7 +474,7 @@
       {
         "wertpapier": "Eutelsat",
         "isin": "FR0010221234",
-        "begruendung": "Abw\u00e4rtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten.",
+        "begruendung": "Abwärtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten.",
         "kgv": "8",
         "dividendenrendite": 5.0,
         "umsatzwachstum_yoy": 25.14,
@@ -489,7 +489,7 @@
       {
         "wertpapier": "Maxar",
         "isin": "US57778K1051",
-        "begruendung": "Von der B\u00f6rse genommen.",
+        "begruendung": "Von der Börse genommen.",
         "kgv": "-",
         "dividendenrendite": 4.4,
         "umsatzwachstum_yoy": 25.69,
@@ -498,7 +498,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "empfehlung": "Kaufen"
+        "empfehlung": "N/A"
       },
       {
         "wertpapier": "Airbus",
@@ -548,7 +548,7 @@
       {
         "wertpapier": "Boeing",
         "isin": "US0970231058",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 21.63,
         "dividendenrendite": 4.27,
         "umsatzwachstum_yoy": 5.41,
@@ -557,13 +557,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
+        "empfehlung": "N/A",
         "aktueller_kurs": 195.3
       },
       {
         "wertpapier": "Tesla",
         "isin": "US88160R1014",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 48.03,
         "dividendenrendite": 0.7,
         "umsatzwachstum_yoy": 1.35,
@@ -572,13 +572,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
         "datum": "2026-07-08",
-        "empfehlung": "Halten",
+        "empfehlung": "N/A",
         "aktueller_kurs": 346.55
       },
       {
         "wertpapier": "Microsoft",
         "isin": "US5949181045",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 17.67,
         "dividendenrendite": 2.4,
         "umsatzwachstum_yoy": 16.16,
@@ -587,7 +587,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
         "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
+        "empfehlung": "N/A",
         "aktueller_kurs": 332.8
       }
     ],
@@ -610,7 +610,7 @@
       {
         "wertpapier": "Infineon",
         "isin": "DE0006231004",
-        "begruendung": "ITC-Importverbot-News belastet kurzfristig; Infineon schlie\u00dft ams-Osram-Akquisition ab (positiv langfristig). Risiko erh\u00f6ht.",
+        "begruendung": "ITC-Importverbot-News belastet kurzfristig; Infineon schließt ams-Osram-Akquisition ab (positiv langfristig). Risiko erhöht.",
         "kgv": "18",
         "dividendenrendite": 1.2,
         "umsatzwachstum_yoy": 19.85,
@@ -625,7 +625,7 @@
       {
         "wertpapier": "ASML",
         "isin": "NL0010273215",
-        "begruendung": "Monopolartige Stellung, technologisch f\u00fchrend.",
+        "begruendung": "Monopolartige Stellung, technologisch führend.",
         "kgv": "35",
         "dividendenrendite": 0.8,
         "umsatzwachstum_yoy": 7.18,
@@ -640,7 +640,7 @@
       {
         "wertpapier": "TeamViewer",
         "isin": "DE000A2YN900",
-        "begruendung": "Abw\u00e4rtstrend seit Monaten, keine Anzeichen einer Wende.",
+        "begruendung": "Abwärtstrend seit Monaten, keine Anzeichen einer Wende.",
         "kgv": 35.14,
         "dividendenrendite": 4.64,
         "umsatzwachstum_yoy": 29.73,
@@ -655,7 +655,7 @@
       {
         "wertpapier": "Delivery Hero",
         "isin": "DE000A2E4K43",
-        "begruendung": "Spekulative Seitw\u00e4rtsphase, hoher charttechnischer Druck.",
+        "begruendung": "Spekulative Seitwärtsphase, hoher charttechnischer Druck.",
         "kgv": 31.52,
         "dividendenrendite": 3.12,
         "umsatzwachstum_yoy": 3.75,
@@ -670,7 +670,7 @@
       {
         "wertpapier": "Dt. Telekom",
         "isin": "DE0005557508",
-        "begruendung": "Defensive St\u00e4rke, technischer Ausbruch \u00fcber Widerstandsbereich.",
+        "begruendung": "Defensive Stärke, technischer Ausbruch über Widerstandsbereich.",
         "kgv": 22.78,
         "dividendenrendite": 4.61,
         "umsatzwachstum_yoy": 5.37,
@@ -685,7 +685,7 @@
       {
         "wertpapier": "Aixtron SE",
         "isin": "DE000A0WMPJ6",
-        "begruendung": "Hohe Volatilit\u00e4t, kurzfristige Erholungschancen, langfristig instabil.",
+        "begruendung": "Hohe Volatilität, kurzfristige Erholungschancen, langfristig instabil.",
         "kgv": 19.21,
         "dividendenrendite": 4.31,
         "umsatzwachstum_yoy": -3.57,
@@ -700,7 +700,7 @@
       {
         "wertpapier": "Meta Platforms",
         "isin": "US30303M1027",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 49.0,
         "dividendenrendite": 3.7,
         "umsatzwachstum_yoy": 17.9,
@@ -709,13 +709,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Hoch",
         "datum": "2026-07-08",
-        "empfehlung": "Halten",
+        "empfehlung": "N/A",
         "aktueller_kurs": 529.4
       },
       {
         "wertpapier": "NextEra Energy",
         "isin": "US65339F1012",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 18.14,
         "dividendenrendite": 1.51,
         "umsatzwachstum_yoy": 20.7,
@@ -724,13 +724,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
+        "empfehlung": "N/A",
         "aktueller_kurs": 76.099
       },
       {
         "wertpapier": "Dassault Aviation",
         "isin": "FR0014004L86",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 16.11,
         "dividendenrendite": 0.43,
         "umsatzwachstum_yoy": 10.94,
@@ -739,13 +739,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
+        "empfehlung": "N/A",
         "aktueller_kurs": 289.6
       },
       {
         "wertpapier": "Nvidia",
         "isin": "US67066G1040",
-        "begruendung": "Kyber-Rack-Verz\u00f6gerung bis 2028 leicht negativ; fundamentale KI-St\u00e4rke bleibt ungebrochen.",
+        "begruendung": "Kyber-Rack-Verzögerung bis 2028 leicht negativ; fundamentale KI-Stärke bleibt ungebrochen.",
         "kgv": "45",
         "dividendenrendite": 0.1,
         "umsatzwachstum_yoy": 120.5,
