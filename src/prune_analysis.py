@@ -46,8 +46,11 @@ def should_drop_chart(item, depot_isins):
         return "delisted"
     if contains(text, NO_LISTING):
         return "nicht handelbar (kein EUR-Listing)"
-    if (item.get("empfehlung") or "").lower() != "kaufen":
-        return f"empfehlung={item.get('empfehlung') or '?'} (kein Kaufkandidat)"
+    # Dashboard zeigt das deterministische signal-Feld (Fallback auf empfehlung).
+    # Filter analog: nur echte Kaufkandidaten bleiben, ohne Depot-Schutz.
+    sig = (item.get("signal") or item.get("empfehlung") or "").lower()
+    if sig != "kaufen":
+        return f"signal={item.get('signal') or item.get('empfehlung') or '?'} (kein Kaufkandidat)"
     return None
 
 

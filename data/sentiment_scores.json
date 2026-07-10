@@ -1,26 +1,6 @@
 {
   "generated_at": "2026-07-10 09:23",
   "scores": {
-    "DE0005557508": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
-    },
-    "DE0005936124": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
-    },
-    "DE0007164600": {
-      "sentiment_score": 1,
-      "veto": false,
-      "begruendung": "Analysten sehen SAP trotz operativer Anpassungen als unterbewertet mit intakter Cloud/KI-Story."
-    },
-    "DE000A0D6554": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Serie neuer Großaufträge (700 MW, mehrfach ~197 MW, 325 MW, 112 MW) zeigt starke Auftragsdynamik."
-    },
     "DE000A0D9PT0": {
       "sentiment_score": 1,
       "veto": false,
@@ -66,11 +46,6 @@
       "veto": false,
       "begruendung": "Alle Schlagzeilen betreffen 'SES AI Corporation' (Batteriematerialien), nicht den Satellitenbetreiber SES S.A. - daher neutral."
     },
-    "NL0000235190": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Gemischt: positive Reiseerholungs-Aussagen stehen einer gesenkten 20-Jahres-Nachfrageprognose (Iran-Krieg, Zölle) gegenüber."
-    },
     "NL0010273215": {
       "sentiment_score": 2,
       "veto": false,
@@ -86,20 +61,10 @@
       "veto": false,
       "begruendung": "Neuer $86M-Laserwaffenauftrag sowie $502M-Sensordeal und abgeschlossene $3,5-Mrd-Übernahme stärken das Geschäft deutlich."
     },
-    "US5949181045": {
-      "sentiment_score": -1,
-      "veto": false,
-      "begruendung": "Starbucks ersetzt Microsoft-Software zur Kosteneinsparung und Stellenabbau mit Abfindungspaketen belasten leicht."
-    },
     "US67066G1040": {
       "sentiment_score": 0,
       "veto": false,
       "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
-    },
-    "US72703X1063": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Pelican-11-Start und Imagery-Fortschritt positiv, aber Bewertungsspaltung und Kursrückgang gleichen dies aus."
     }
   }
 }

@@ -17,21 +17,6 @@
         "empfehlung": "Kaufen"
       },
       {
-        "wertpapier": "RWE",
-        "isin": "DE0007037129",
-        "begruendung": "Solide Dividende, moderates Wachstum.",
-        "kgv": "14",
-        "dividendenrendite": 3.2,
-        "umsatzwachstum_yoy": 17.8,
-        "gewinnwachstum_yoy": -9.86,
-        "eigenkapitalquote": 20.97,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-08",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 56.52
-      },
-      {
         "wertpapier": "E.ON",
         "isin": "DE000ENAG999",
         "begruendung": "Stabiles Geschäftsmodell, begrenzte Fantasie.",
@@ -47,20 +32,6 @@
         "aktueller_kurs": 19.24
       },
       {
-        "wertpapier": "Encavis",
-        "isin": "DE0006095003",
-        "begruendung": "Bewertung aktuell zu hoch für das Wachstum.",
-        "kgv": "35",
-        "dividendenrendite": 0.8,
-        "umsatzwachstum_yoy": -2.8,
-        "gewinnwachstum_yoy": 6.86,
-        "eigenkapitalquote": 40.45,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-08",
-        "empfehlung": "Halten"
-      },
-      {
         "wertpapier": "SMA Solar",
         "isin": "DE000A0DJ6J9",
         "begruendung": "Wachstumstreiber Solarmarkt intakt; Kurs knapp unter SMA50, weiteres Potenzial vorhanden.",
@@ -74,69 +45,9 @@
         "datum": "2026-07-08",
         "empfehlung": "Halten",
         "aktueller_kurs": 54.8
-      },
-      {
-        "wertpapier": "Nordex SE",
-        "isin": "DE000A0D6554",
-        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilität.",
-        "kgv": "45",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 12.41,
-        "gewinnwachstum_yoy": 20.03,
-        "eigenkapitalquote": 58.78,
-        "bewertung": "Attraktiv",
-        "risiko": "Hoch",
-        "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 42.46
       }
     ],
     "Verteidigung": [
-      {
-        "wertpapier": "Hensoldt",
-        "isin": "DE000HAG0005",
-        "begruendung": "Hohe Bewertung, gute Technologiebasis.",
-        "kgv": "35",
-        "dividendenrendite": 0.9,
-        "umsatzwachstum_yoy": 21.44,
-        "gewinnwachstum_yoy": 2.84,
-        "eigenkapitalquote": 51.51,
-        "bewertung": "Attraktiv",
-        "risiko": "Hoch",
-        "datum": "2026-07-08",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 74.22
-      },
-      {
-        "wertpapier": "Airbus",
-        "isin": "NL0000235190",
-        "begruendung": "Unterstützungszone bei 180 EUR erfolgreich getestet.",
-        "kgv": 38.95,
-        "dividendenrendite": 1.26,
-        "umsatzwachstum_yoy": 22.3,
-        "gewinnwachstum_yoy": 10.26,
-        "eigenkapitalquote": 39.1,
-        "bewertung": "Attraktiv",
-        "risiko": "Hoch",
-        "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 196.52
-      },
-      {
-        "wertpapier": "BAE Systems",
-        "isin": "GB0002634946",
-        "begruendung": "Solide, aber aktuell fair bewertet.",
-        "kgv": "18",
-        "dividendenrendite": 2.5,
-        "umsatzwachstum_yoy": 29.11,
-        "gewinnwachstum_yoy": -7.7,
-        "eigenkapitalquote": 46.55,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-08",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 21.67
-      },
       {
         "wertpapier": "Leonardo SpA",
         "isin": "IT0003856405",
@@ -245,21 +156,6 @@
         "empfehlung": "Kaufen"
       },
       {
-        "wertpapier": "Airbus SE",
-        "isin": "NL0000235190",
-        "begruendung": "Operative Herausforderungen bremsen kurzfristig.",
-        "kgv": "25",
-        "dividendenrendite": 1.2,
-        "umsatzwachstum_yoy": 28.5,
-        "gewinnwachstum_yoy": 8.78,
-        "eigenkapitalquote": 21.41,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 196.52
-      },
-      {
         "wertpapier": "Lockheed Martin",
         "isin": "US5398301094",
         "begruendung": "$142.9M Air Force Vertrag neu. Starke US-Verteidigungsaufträge; strategische Dividendenstärke.",
@@ -292,21 +188,6 @@
     ],
     "Satellitentechnik": [
       {
-        "wertpapier": "OHB",
-        "isin": "DE0005936124",
-        "begruendung": "Profitiert von öffentlicher Raumfahrt-Nachfrage.",
-        "kgv": "20",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 23.81,
-        "gewinnwachstum_yoy": 29.02,
-        "eigenkapitalquote": 58.72,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 271.0
-      },
-      {
         "wertpapier": "SES",
         "isin": "LU0088087324",
         "begruendung": "Dividendenwert mit begrenztem Wachstum.",
@@ -320,69 +201,9 @@
         "datum": "2026-07-08",
         "empfehlung": "Halten",
         "aktueller_kurs": 7.785
-      },
-      {
-        "wertpapier": "Airbus",
-        "isin": "NL0000235190",
-        "begruendung": "(siehe Verteidigung, hohe Synergieeffekte).",
-        "kgv": 36.78,
-        "dividendenrendite": 0.47,
-        "umsatzwachstum_yoy": 17.11,
-        "gewinnwachstum_yoy": 1.68,
-        "eigenkapitalquote": 46.68,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-08",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 196.52
-      },
-      {
-        "wertpapier": "Planet Labs",
-        "isin": "US72703X1063",
-        "begruendung": "Hohe Cashburn-Rate, intensiver Wettbewerb.",
-        "kgv": "-",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 5.31,
-        "gewinnwachstum_yoy": 5.05,
-        "eigenkapitalquote": 32.58,
-        "bewertung": "Attraktiv",
-        "risiko": "Hoch",
-        "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 24.4
       }
     ],
     "Technologie": [
-      {
-        "wertpapier": "SAP",
-        "isin": "DE0007164600",
-        "begruendung": "Starke Cloud-Transformation, langfristig attraktiv.",
-        "kgv": "32",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 5.51,
-        "gewinnwachstum_yoy": 36.02,
-        "eigenkapitalquote": 30.82,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 137.74
-      },
-      {
-        "wertpapier": "Infineon",
-        "isin": "DE0006231004",
-        "begruendung": "ITC-Importverbot-News belastet kurzfristig; Infineon schließt ams-Osram-Akquisition ab (positiv langfristig). Risiko erhöht.",
-        "kgv": "18",
-        "dividendenrendite": 1.2,
-        "umsatzwachstum_yoy": 19.85,
-        "gewinnwachstum_yoy": 22.95,
-        "eigenkapitalquote": 29.15,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-08",
-        "aktueller_kurs": 73.35,
-        "empfehlung": "Halten"
-      },
       {
         "wertpapier": "ASML",
         "isin": "NL0010273215",
@@ -399,21 +220,6 @@
         "aktueller_kurs": 1602.8
       },
       {
-        "wertpapier": "TeamViewer",
-        "isin": "DE000A2YN900",
-        "begruendung": "Abwärtstrend seit Monaten, keine Anzeichen einer Wende.",
-        "kgv": 35.14,
-        "dividendenrendite": 4.64,
-        "umsatzwachstum_yoy": 29.73,
-        "gewinnwachstum_yoy": 2.95,
-        "eigenkapitalquote": 58.15,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-08",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 5.26
-      },
-      {
         "wertpapier": "Delivery Hero",
         "isin": "DE000A2E4K43",
         "begruendung": "Spekulative Seitwärtsphase, hoher charttechnischer Druck.",
@@ -427,36 +233,6 @@
         "datum": "2026-07-08",
         "empfehlung": "Halten",
         "aktueller_kurs": 36.79
-      },
-      {
-        "wertpapier": "Dt. Telekom",
-        "isin": "DE0005557508",
-        "begruendung": "Defensive Stärke, technischer Ausbruch über Widerstandsbereich.",
-        "kgv": 22.78,
-        "dividendenrendite": 4.61,
-        "umsatzwachstum_yoy": 5.37,
-        "gewinnwachstum_yoy": 21.77,
-        "eigenkapitalquote": 49.19,
-        "bewertung": "Attraktiv",
-        "risiko": "Hoch",
-        "datum": "2026-07-08",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 25.34
-      },
-      {
-        "wertpapier": "Aixtron SE",
-        "isin": "DE000A0WMPJ6",
-        "begruendung": "Hohe Volatilität, kurzfristige Erholungschancen, langfristig instabil.",
-        "kgv": 19.21,
-        "dividendenrendite": 4.31,
-        "umsatzwachstum_yoy": -3.57,
-        "gewinnwachstum_yoy": -6.74,
-        "eigenkapitalquote": 34.15,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-08",
-        "empfehlung": "Verkaufen",
-        "aktueller_kurs": 45.27
       },
       {
         "wertpapier": "Dassault Aviation",
