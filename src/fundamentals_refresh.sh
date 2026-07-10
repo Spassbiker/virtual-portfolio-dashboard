@@ -23,14 +23,23 @@ PROMPT='Aufgabe: Aktualisiere die Fundamentaldaten in /home/ubuntu/.openclaw/wor
 
 Vorgehen:
 1. Lies das aktuelle JSON. Bestimme die Liste aller ISINs und ihre Sektor-Zuordnung.
-2. Für jede ISIN mit echter Recherchemoeglichkeit: web_search nach aktuellen Kennzahlen (KGV/Price-to-Earnings, Umsatzwachstum YoY, Gewinnwachstum YoY, Eigenkapitalquote, Dividendenrendite) und aktuellen Nachrichten (Auftragslage, Guidance, Risiken). Sucht typisch nach "<Firmenname> KGV" bzw. "<Firmenname> financial data 2026" oder Ähnlichem. Yahoo Finance, Boerse Frankfurt, finanzen.net sind gute Quellen.
-3. Fuer Cross-Sektor-Duplikate (gleiche ISIN in mehreren Sektoren): identische Kennzahlen verwenden, Text und empfehlung duerfen je nach Sektor-Rolle abweichen.
-4. Fuer Platzhalter-Eintraege (aktueller Text enthaelt "Ergaenzt zur Vervollstaendigung" o.ae.) und fuer delistete Papiere: begruendung stehen lassen bzw. Delisting erwaehnen, empfehlung="N/A".
+2. Für jede vorhandene ISIN: web_search nach aktuellen Kennzahlen (KGV/Price-to-Earnings, Umsatzwachstum YoY, Gewinnwachstum YoY, Eigenkapitalquote, Dividendenrendite) und aktuellen Nachrichten (Auftragslage, Guidance, Risiken). Yahoo Finance, Boerse Frankfurt, finanzen.net sind gute Quellen.
+3. Cross-Sektor-Duplikate (gleiche ISIN in mehreren Sektoren): identische Kennzahlen verwenden, Text und empfehlung duerfen je nach Sektor-Rolle abweichen.
+4. Delistete Papiere: begruendung erwaehnt das Delisting, empfehlung="N/A".
 5. Bewertung/Risiko/empfehlung nach den Regeln in FUNDA_STAGE.md ableiten.
 6. datum auf heute (YYYY-MM-DD) setzen. aktueller_kurs UNANGETASTET lassen.
-7. Schreibe die komplette Datei zurueck nach data/fundamentalanalyse_ergebnisse.json (UTF-8, indent=2, ensure_ascii=false). Alle bestehenden ISINs muessen erhalten bleiben, keine dazu, keine weg.
 
-Antworte am Ende NUR mit: FERTIG N ISINs (N = Anzahl aktualisierter Eintraege).'
+SEKTOR-MINIMUM: Jeder Sektor soll 10 Wertpapiere enthalten. Wenn ein Sektor jetzt weniger hat, ergaenze passende EU-handelbare Kandidaten (bevorzugt EUR-notiert oder mit EUR-Listing an XETRA/Euronext/Frankfurt) mit:
+- wertpapier, isin, sektor beibehalten
+- vollstaendige Fundamental-Kennzahlen (KGV, Wachstum, EK-Quote, Dividende)
+- realistische begruendung (1-2 Saetze, ohne Kursnennung)
+- bewertung/risiko/empfehlung sauber begruendet
+- aktueller_kurs auf null (wird vom Manager beim naechsten Lauf gefuellt)
+Nur ISINs mit VERIFIZIERBAREM EUR-Listing hinzufuegen - keine reinen US-Werte ohne EUR-Handelbarkeit. Wenn du keine 10 sauberen Kandidaten findest, ergaenze soweit moeglich; keine Platzhalter erfinden.
+
+Schreibe die komplette Datei zurueck nach data/fundamentalanalyse_ergebnisse.json (UTF-8, indent=2, ensure_ascii=false). Bestehende ISINs bleiben erhalten.
+
+Antworte am Ende NUR mit: FERTIG N ISINs (N = Gesamtzahl im JSON).'
 
 timeout 900 openclaw agent \
   --session-key "portfolio-fundamentals" \
