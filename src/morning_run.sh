@@ -22,9 +22,10 @@ if ! python3 src/healthcheck.py >/tmp/pf_health_am.log 2>&1; then
   traded=0
 fi
 
-python3 src/update_prices.py      >/dev/null 2>&1
-python3 src/compute_indicators.py >/dev/null 2>&1
-python3 src/fetch_news.py         >/dev/null 2>&1
+python3 src/update_prices.py            >/dev/null 2>&1
+python3 src/compute_indicators.py       >/dev/null 2>&1
+python3 src/refresh_chart_narrative.py  >/dev/null 2>&1
+python3 src/fetch_news.py               >/dev/null 2>&1
 
 if [ "$traded" = "1" ]; then
   # Regelbasierte Empfehlung (nutzt vorhandenes sentiment_scores.json), dann ausführen.
