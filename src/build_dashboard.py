@@ -1381,6 +1381,21 @@ html_template = """<!DOCTYPE html>
             const gvPct = start > 0 ? (gv / start) * 100 : 0;
             const barquote = gesamt > 0 ? (bar / gesamt) * 100 : 0;
 
+            // Aufteilung Aktien-Depot vs. ETF-Sleeve
+            const depGesamt = dep.gesamtvermoegen || 0;
+            const etfGesamt = etf.gesamtvermoegen || 0;
+            const depBar = dep.aktueller_barbestand || 0;
+            const etfBar = etf.aktueller_barbestand || 0;
+            const depStart = dep.startkapital || 0;
+            const etfStart = etf.startkapital || 0;
+            const depRend = depStart > 0 ? ((depGesamt - depStart) / depStart) * 100 : 0;
+            const etfRend = etfStart > 0 ? ((etfGesamt - etfStart) / etfStart) * 100 : 0;
+            const gesamtRend = gvPct;
+            const depShare = gesamt > 0 ? (depGesamt / gesamt) * 100 : 0;
+            const etfShare = gesamt > 0 ? (etfGesamt / gesamt) * 100 : 0;
+            const pctCol = v => v >= 0 ? 'var(--good-text)' : 'var(--critical-text)';
+            const pctTxt = v => `${v >= 0 ? '+' : ''}${v.toFixed(2)}%`;
+
             const risiko = dep.risiko || {};
             const limits = risiko.limits || { position_pct: 20, sektor_pct: 30 };
             const sektoren = (risiko.sektoren || []).slice().sort((a, b) => b.anteil_pct - a.anteil_pct);
@@ -1407,6 +1422,22 @@ html_template = """<!DOCTYPE html>
                     <div class="stat-card"><h4>Barbestand</h4><p>${formatEUR(bar)}</p><div class="delta" style="color:var(--text-muted)">${barquote.toFixed(1)}% Barquote</div></div>
                     <div class="stat-card"><h4>Startkapital gesamt</h4><p>${formatEUR(start)}</p></div>
                     <div class="stat-card"><h4>Rendite Depot</h4><p style="color:${(rendite.depot || 0) >= 0 ? 'var(--good-text)' : 'var(--critical-text)'}">${(rendite.depot || 0) >= 0 ? '+' : ''}${(rendite.depot || 0).toFixed(2)}%</p><div class="delta" style="color:var(--text-muted)">seit ${bench.anker ? bench.anker.datum : '–'}</div></div>
+                </div>
+
+                <div class="ov-card">
+                    <h3>🧭 Aufteilung: Aktien-Depot vs. ETF-Sleeve</h3>
+                    <div style="display:flex; height:28px; border-radius:6px; overflow:hidden; margin-bottom:16px; font-size:0.8em; font-weight:bold; color:#fff;">
+                        <div style="width:${depShare}%; background:var(--accent); display:flex; align-items:center; justify-content:center; white-space:nowrap;" title="Aktien-Depot: ${formatEUR(depGesamt)}">${depShare >= 14 ? `Aktien ${depShare.toFixed(1)}%` : ''}</div>
+                        <div style="width:${etfShare}%; background:#2e8b6e; display:flex; align-items:center; justify-content:center; white-space:nowrap;" title="ETF-Sleeve: ${formatEUR(etfGesamt)}">${etfShare >= 14 ? `ETFs ${etfShare.toFixed(1)}%` : ''}</div>
+                    </div>
+                    <table class="teaser-table">
+                        <tr><th>Kennzahl</th><th style="text-align:right;">Aktien-Depot</th><th style="text-align:right;">ETF-Sleeve</th><th style="text-align:right;">Gesamt</th></tr>
+                        <tr><td>Gesamtvermögen</td><td style="text-align:right;">${formatEUR(depGesamt)}</td><td style="text-align:right;">${formatEUR(etfGesamt)}</td><td style="text-align:right; font-weight:bold;">${formatEUR(gesamt)}</td></tr>
+                        <tr><td>Anteil am Vermögen</td><td style="text-align:right;">${depShare.toFixed(1)}%</td><td style="text-align:right;">${etfShare.toFixed(1)}%</td><td style="text-align:right; font-weight:bold;">100,0%</td></tr>
+                        <tr><td>Barbestand</td><td style="text-align:right;">${formatEUR(depBar)}</td><td style="text-align:right;">${formatEUR(etfBar)}</td><td style="text-align:right; font-weight:bold;">${formatEUR(bar)}</td></tr>
+                        <tr><td>Startkapital</td><td style="text-align:right;">${formatEUR(depStart)}</td><td style="text-align:right;">${formatEUR(etfStart)}</td><td style="text-align:right; font-weight:bold;">${formatEUR(start)}</td></tr>
+                        <tr><td>Rendite (seit Start)</td><td style="text-align:right; color:${pctCol(depRend)}; font-weight:bold;">${pctTxt(depRend)}</td><td style="text-align:right; color:${pctCol(etfRend)}; font-weight:bold;">${pctTxt(etfRend)}</td><td style="text-align:right; color:${pctCol(gesamtRend)}; font-weight:bold;">${pctTxt(gesamtRend)}</td></tr>
+                    </table>
                 </div>
 
                 <div class="ov-grid">
