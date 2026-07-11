@@ -3,7 +3,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from paths import CHART, FUNDA, DEPOT, SENT, INDEX_HTML
+from paths import CHART, FUNDA, DEPOT, SENT, ETF_SENT, INDEX_HTML
 
 
 def _read_text(path):
@@ -18,6 +18,10 @@ depot_data = _read_text(DEPOT)
 # KI-Sentiment (optional): fehlt die Datei, wird ein leeres Objekt injiziert,
 # damit das Dashboard ohne Sentiment-Stufe trotzdem funktioniert.
 sentiment_data = _read_text(SENT) if os.path.exists(SENT) else '{"scores": {}}'
+
+# ETF-Sentiment (Phase 1+2, optional): analog zum Aktien-Sentiment, fehlt die
+# Datei zeigt das Dashboard einfach keine Sentiment-Spalte im ETF-Sleeve.
+etf_sentiment_data = _read_text(ETF_SENT) if os.path.exists(ETF_SENT) else '{"scores": {}}'
 
 build_date = datetime.date.today().strftime("%d.%m.%Y")
 
@@ -123,6 +127,8 @@ html_template = """<!DOCTYPE html>
         const depotData = DEPOT_DATA_PLACEHOLDER;
         const sentimentData = SENTIMENT_DATA_PLACEHOLDER;
         const sentimentScores = (sentimentData && sentimentData.scores) ? sentimentData.scores : {};
+        const etfSentimentData = ETF_SENTIMENT_DATA_PLACEHOLDER;
+        const etfSentimentScores = (etfSentimentData && etfSentimentData.scores) ? etfSentimentData.scores : {};
 
         function getSentiment(isin) {
             return (isin && sentimentScores[isin]) ? sentimentScores[isin] : null;
@@ -140,6 +146,21 @@ html_template = """<!DOCTYPE html>
             let html = `<span title="${tip}" style="font-weight:bold;color:${color};">${arrow} ${sign}${val}</span>`;
             if (s.veto) html += ` <span class="badge sell" title="${tip}" style="min-width:auto;">🚫 Veto</span>`;
             return html;
+        }
+
+        // ETF-Sentiment-Badge (Themen-/Sektor-Score, kein Veto - der ETF-Sleeve
+        // ist Buy-and-Hold, siehe docs/ETF_SENTIMENT_STAGE.md).
+        function etfSentimentBadge(isin) {
+            const s = isin ? etfSentimentScores[isin] : null;
+            if (!s) return '<span style="color:#adb5bd;">–</span>';
+            const val = (typeof s.sentiment_score === 'number') ? s.sentiment_score : 0;
+            const tip = (s.begruendung || '').replace(/"/g, '&quot;');
+            let color = '#6c757d', arrow = '→';
+            if (val > 0) { color = '#155724'; arrow = '▲'; }
+            else if (val < 0) { color = '#721c24'; arrow = '▼'; }
+            const sign = val > 0 ? '+' : '';
+            const typTag = s.typ ? `<span style="color:#adb5bd; font-size:0.8em;"> (${s.typ})</span>` : '';
+            return `<span title="${tip}" style="font-weight:bold;color:${color};">${arrow} ${sign}${val}</span>${typTag}`;
         }
 
         function getBadge(rating) {
@@ -734,6 +755,7 @@ html_template = """<!DOCTYPE html>
                     <th>Investiert</th>
                     <th>Wert</th>
                     <th>Gewinn/Verlust</th>
+                    <th>KI-Sentiment</th>
                 </tr>`;
             (e.positionen || []).forEach(p => {
                 let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
@@ -748,9 +770,12 @@ html_template = """<!DOCTYPE html>
                     <td>${formatEUR(p.investiert)}</td>
                     <td>${formatEUR(p.boersenwert)}</td>
                     <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${formatEURSign(p.gewinn_verlust)}</span></td>
+                    <td>${etfSentimentBadge(p.isin)}</td>
                 </tr>`;
             });
             html += `</table>`;
+            const etfGen = (etfSentimentData && etfSentimentData.generated_at) ? etfSentimentData.generated_at : null;
+            if (etfGen) html += `<p style="color:#6c757d; font-size:0.85em;">KI-Sentiment Stand: ${etfGen} · (A) Themen-ETF, (B) Sektor-ETF · rein informativ, kein Auto-Trading im ETF-Sleeve</p>`;
             document.getElementById('etfsleeve').innerHTML = html;
         })();
 
@@ -974,6 +999,7 @@ html_template = """<!DOCTYPE html>
 html_output = html_template.replace("CHART_DATA_PLACEHOLDER", chart_data)
 html_output = html_output.replace("FUNDA_DATA_PLACEHOLDER", funda_data)
 html_output = html_output.replace("DEPOT_DATA_PLACEHOLDER", depot_data)
+html_output = html_output.replace("ETF_SENTIMENT_DATA_PLACEHOLDER", etf_sentiment_data)
 html_output = html_output.replace("SENTIMENT_DATA_PLACEHOLDER", sentiment_data)
 html_output = html_output.replace("BUILD_DATE_PLACEHOLDER", build_date)
 
