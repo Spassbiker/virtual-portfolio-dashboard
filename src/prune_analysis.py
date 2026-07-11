@@ -228,6 +228,7 @@ def sync_news(relevant_isins):
 def main():
     depot = load_json(DEPOT, {})
     depot_isins = {p.get("isin") for p in depot.get("depot", {}).get("positionen", []) if p.get("isin")}
+    depot_isins |= {p.get("isin") for p in depot.get("etf_depot", {}).get("positionen", []) if p.get("isin")}
     print(f"Depot-Schutz: {len(depot_isins)} ISINs")
     print(f"Sektor-Ziel: min. {TARGET_PER_SECTOR} pro Sektor (wenn Universum reicht)")
     print()
