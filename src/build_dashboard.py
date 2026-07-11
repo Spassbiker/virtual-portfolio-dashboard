@@ -101,6 +101,7 @@ html_template = """<!DOCTYPE html>
         <div class="tab-buttons">
             <button class="tab-button active" onclick="openTab(event, 'ranking')">🎯 Empfehlungen</button>
             <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
+            <button class="tab-button" onclick="openTab(event, 'etfsleeve')">📊 ETF-Sleeve</button>
             <button class="tab-button" onclick="openTab(event, 'chart')">Chartanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'sentiment')">🤖 KI-Sentiment</button>
@@ -109,6 +110,7 @@ html_template = """<!DOCTYPE html>
 
         <div id="ranking" class="tab-content active"></div>
         <div id="depot" class="tab-content"></div>
+        <div id="etfsleeve" class="tab-content"></div>
         <div id="chart" class="tab-content"></div>
         <div id="funda" class="tab-content"></div>
         <div id="sentiment" class="tab-content"></div>
@@ -704,6 +706,53 @@ html_template = """<!DOCTYPE html>
         }
         depotHtml += `</table>`;
         document.getElementById('depot').innerHTML = depotHtml;
+
+        // ==========================================
+        // ETF-SLEEVE (separates Budget, passiv)
+        // ==========================================
+        (function renderEtfSleeve() {
+            const e = depotData.etf_depot;
+            if (!e) {
+                document.getElementById('etfsleeve').innerHTML = '<p style="color:#6c757d;">Noch kein ETF-Sleeve angelegt.</p>';
+                return;
+            }
+            let html = `<h2>📊 ETF-Sleeve <small style="font-size:0.5em; color:#6c757d;">(separates Budget, passive Diversifikation je Sektor)</small></h2>
+            <div class="stats-grid">
+                <div class="stat-card"><h4>Gesamtvermögen (ETF)</h4><p>${formatEUR(e.gesamtvermoegen)}</p></div>
+                <div class="stat-card"><h4>Barbestand</h4><p>${formatEUR(e.aktueller_barbestand)}</p></div>
+                <div class="stat-card"><h4>ETF-Wert</h4><p>${formatEUR(e.portfoliowert)}</p></div>
+                <div class="stat-card"><h4>Budget (Start)</h4><p>${formatEUR(e.startkapital)}</p></div>
+            </div>
+            <table>
+                <tr>
+                    <th>Sektor</th>
+                    <th>ETF</th>
+                    <th>ISIN</th>
+                    <th>Stück</th>
+                    <th>Kaufkurs</th>
+                    <th>Kurs</th>
+                    <th>Investiert</th>
+                    <th>Wert</th>
+                    <th>Gewinn/Verlust</th>
+                </tr>`;
+            (e.positionen || []).forEach(p => {
+                let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
+                let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
+                html += `<tr>
+                    <td>${p.sektor}</td>
+                    <td><strong>${p.wertpapier}</strong></td>
+                    <td style="color:#666;">${p.isin || ''}</td>
+                    <td>${p.stueck}</td>
+                    <td>${formatEUR(p.kaufkurs)}</td>
+                    <td>${formatEUR(p.boersenkurs)}</td>
+                    <td>${formatEUR(p.investiert)}</td>
+                    <td>${formatEUR(p.boersenwert)}</td>
+                    <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${formatEURSign(p.gewinn_verlust)}</span></td>
+                </tr>`;
+            });
+            html += `</table>`;
+            document.getElementById('etfsleeve').innerHTML = html;
+        })();
 
         // ==========================================
         // KI-SENTIMENT (Stufe 1 + 2)

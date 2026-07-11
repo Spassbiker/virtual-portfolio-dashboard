@@ -73,11 +73,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>📈 Virtual Portfolio Dashboard <br><small style="font-size: 0.5em; color: #7f8c8d;">Build: 10.07.2026</small></h1>
+        <h1>📈 Virtual Portfolio Dashboard <br><small style="font-size: 0.5em; color: #7f8c8d;">Build: 11.07.2026</small></h1>
 
         <div class="tab-buttons">
             <button class="tab-button active" onclick="openTab(event, 'ranking')">🎯 Empfehlungen</button>
             <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
+            <button class="tab-button" onclick="openTab(event, 'etfsleeve')">📊 ETF-Sleeve</button>
             <button class="tab-button" onclick="openTab(event, 'chart')">Chartanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'sentiment')">🤖 KI-Sentiment</button>
@@ -86,6 +87,7 @@
 
         <div id="ranking" class="tab-content active"></div>
         <div id="depot" class="tab-content"></div>
+        <div id="etfsleeve" class="tab-content"></div>
         <div id="chart" class="tab-content"></div>
         <div id="funda" class="tab-content"></div>
         <div id="sentiment" class="tab-content"></div>
@@ -101,7 +103,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 54.30 vs. SMA50 58.86 / SMA200 40.52 → Leichter Abwärtstrend. RSI 46, MACD Neutral.",
         "isin": "DE000A0DJ6J9",
-        "aktueller_kurs": 54.05,
+        "aktueller_kurs": 54.15,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 46.0,
@@ -126,7 +128,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 153.38 vs. SMA50 165.00 / SMA200 141.69 → Leichter Abwärtstrend. RSI 44, MACD Negativ.",
         "isin": "DE000ENER6Y0",
-        "aktueller_kurs": 152.1,
+        "aktueller_kurs": 152.12,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 42.68,
@@ -151,7 +153,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 19.11 vs. SMA50 18.29 / SMA200 17.54 → Aufwärtstrend. RSI 61, MACD Positiv.",
         "isin": "DE000ENAG999",
-        "aktueller_kurs": 19.015,
+        "aktueller_kurs": 18.96,
         "trend": "Aufwärtstrend",
         "signal": "Kaufen",
         "rsi_14": 59.56,
@@ -176,7 +178,7 @@
         "isin": "US5949181045",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 338.35 vs. SMA50 347.85 / SMA200 378.26 → Abwärtstrend. RSI 50, MACD Positiv.",
-        "aktueller_kurs": 334.75,
+        "aktueller_kurs": 335.65,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 47.25,
@@ -201,7 +203,7 @@
         "isin": "US02079K3059",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 313.20 vs. SMA50 321.90 / SMA200 274.92 → Leichter Abwärtstrend. RSI 49, MACD Neutral.",
-        "aktueller_kurs": 309.85,
+        "aktueller_kurs": 309.75,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 46.81,
@@ -242,7 +244,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 40.74 vs. SMA50 43.59 / SMA200 35.91 → Leichter Abwärtstrend. RSI 42, MACD Negativ.",
         "isin": "DE000A0D6554",
-        "aktueller_kurs": 41.02,
+        "aktueller_kurs": 40.98,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 42.5,
@@ -267,7 +269,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 56.34 vs. SMA50 56.40 / SMA200 50.99 → Leichter Abwärtstrend. RSI 51, MACD Neutral.",
         "isin": "DE0007037129",
-        "aktueller_kurs": 56.34,
+        "aktueller_kurs": 56.06,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 50.52,
@@ -294,7 +296,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 51.58 vs. SMA50 51.52 / SMA200 53.56 → Leichter Aufwärtstrend. RSI 51, MACD Positiv.",
         "isin": "IT0003856405",
-        "aktueller_kurs": 51.51,
+        "aktueller_kurs": 51.82,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 50.49,
@@ -319,7 +321,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 222.20 vs. SMA50 229.71 / SMA200 243.42 → Abwärtstrend. RSI 42, MACD Neutral.",
         "isin": "FR0000121329",
-        "aktueller_kurs": 222.4,
+        "aktueller_kurs": 223.3,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 42.14,
@@ -344,7 +346,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 21.65 vs. SMA50 22.21 / SMA200 22.61 → Abwärtstrend. RSI 45, MACD Neutral.",
         "isin": "GB0002634946",
-        "aktueller_kurs": 21.76,
+        "aktueller_kurs": 21.81,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 46.49,
@@ -369,7 +371,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 73.82 vs. SMA50 76.84 / SMA200 81.68 → Abwärtstrend. RSI 48, MACD Positiv.",
         "isin": "DE000HAG0005",
-        "aktueller_kurs": 74.24,
+        "aktueller_kurs": 74.32,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 49.02,
@@ -394,7 +396,7 @@
         "empfehlung": "Verkaufen",
         "begruendung": "Kurs 994.20 vs. SMA50 1162.14 / SMA200 1532.80 → Abwärtstrend. RSI 37, MACD Neutral.",
         "isin": "DE0007030009",
-        "aktueller_kurs": 987.5,
+        "aktueller_kurs": 992.0,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 36.95,
@@ -419,7 +421,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 195.46 vs. SMA50 183.31 / SMA200 190.05 → Leichter Aufwärtstrend. RSI 55, MACD Neutral.",
         "isin": "NL0000235190",
-        "aktueller_kurs": 196.44,
+        "aktueller_kurs": 197.26,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 56.11,
@@ -444,7 +446,7 @@
         "isin": "US88160R1014",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 356.25 vs. SMA50 354.77 / SMA200 358.58 → Leichter Aufwärtstrend. RSI 52, MACD Neutral.",
-        "aktueller_kurs": 356.15,
+        "aktueller_kurs": 358.3,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 52.2,
@@ -471,7 +473,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 285.80 vs. SMA50 293.74 / SMA200 300.59 → Abwärtstrend. RSI 42, MACD Neutral.",
         "isin": "FR0014004L86",
-        "aktueller_kurs": 286.0,
+        "aktueller_kurs": 287.0,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 41.74,
@@ -496,7 +498,7 @@
         "empfehlung": "Verkaufen",
         "begruendung": "Kurs 51.58 vs. SMA50 51.52 / SMA200 53.56 → Leichter Aufwärtstrend. RSI 51, MACD Positiv.",
         "isin": "IT0003856405",
-        "aktueller_kurs": 51.51,
+        "aktueller_kurs": 51.82,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 50.49,
@@ -521,7 +523,7 @@
         "isin": "US5398301094",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 453.50 vs. SMA50 450.71 / SMA200 465.99 → Leichter Aufwärtstrend. RSI 48, MACD Neutral.",
-        "aktueller_kurs": 453.6,
+        "aktueller_kurs": 452.5,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 48.51,
@@ -546,7 +548,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 364.40 vs. SMA50 322.01 / SMA200 349.13 → Leichter Aufwärtstrend. RSI 62, MACD Neutral.",
         "isin": "DE000A0D9PT0",
-        "aktueller_kurs": 361.0,
+        "aktueller_kurs": 362.1,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 59.65,
@@ -571,7 +573,7 @@
         "isin": "US67066G1040",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 176.02 vs. SMA50 181.07 / SMA200 164.93 → Leichter Abwärtstrend. RSI 50, MACD Neutral.",
-        "aktueller_kurs": 181.8,
+        "aktueller_kurs": 182.48,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 57.51,
@@ -596,7 +598,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 16.75 vs. SMA50 15.29 / SMA200 14.15 → Aufwärtstrend. RSI 58, MACD Negativ.",
         "isin": "GB00B63H8491",
-        "aktueller_kurs": 16.824,
+        "aktueller_kurs": 16.836,
         "trend": "Aufwärtstrend",
         "signal": "Kaufen",
         "rsi_14": 58.76,
@@ -621,7 +623,7 @@
         "empfehlung": "Halten",
         "begruendung": "Kurs 338.20 vs. SMA50 310.41 / SMA200 305.68 → Aufwärtstrend. RSI 55, MACD Negativ.",
         "isin": "FR0000073272",
-        "aktueller_kurs": 335.7,
+        "aktueller_kurs": 336.1,
         "trend": "Aufwärtstrend",
         "signal": "Kaufen",
         "rsi_14": 53.8,
@@ -646,7 +648,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 195.46 vs. SMA50 183.31 / SMA200 190.05 → Leichter Aufwärtstrend. RSI 55, MACD Neutral.",
         "isin": "NL0000235190",
-        "aktueller_kurs": 196.46,
+        "aktueller_kurs": 197.26,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 56.13,
@@ -673,7 +675,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 7.74 vs. SMA50 7.97 / SMA200 6.62 → Leichter Abwärtstrend. RSI 50, MACD Positiv.",
         "isin": "LU0088087324",
-        "aktueller_kurs": 7.75,
+        "aktueller_kurs": 7.705,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 50.49,
@@ -698,7 +700,7 @@
         "isin": "US0970231058",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 197.06 vs. SMA50 193.38 / SMA200 187.97 → Aufwärtstrend. RSI 53, MACD Neutral.",
-        "aktueller_kurs": 193.96,
+        "aktueller_kurs": 194.14,
         "trend": "Aufwärtstrend",
         "signal": "Kaufen",
         "rsi_14": 49.65,
@@ -723,7 +725,7 @@
         "isin": "US5949181045",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 338.35 vs. SMA50 347.85 / SMA200 378.26 → Abwärtstrend. RSI 50, MACD Positiv.",
-        "aktueller_kurs": 334.75,
+        "aktueller_kurs": 335.65,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 47.25,
@@ -748,7 +750,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 195.42 vs. SMA50 183.31 / SMA200 190.05 → Leichter Aufwärtstrend. RSI 55, MACD Neutral.",
         "isin": "NL0000235190",
-        "aktueller_kurs": 196.46,
+        "aktueller_kurs": 197.26,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 56.13,
@@ -773,7 +775,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 2.42 vs. SMA50 2.92 / SMA200 2.61 → Leichter Abwärtstrend. RSI 41, MACD Positiv.",
         "isin": "FR0010221234",
-        "aktueller_kurs": 2.329,
+        "aktueller_kurs": 2.357,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 37.9,
@@ -798,7 +800,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 270.50 vs. SMA50 383.49 / SMA200 232.99 → Leichter Abwärtstrend. RSI 37, MACD Negativ.",
         "isin": "DE0005936124",
-        "aktueller_kurs": 269.0,
+        "aktueller_kurs": 269.5,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 36.79,
@@ -848,7 +850,7 @@
         "isin": "US88160R1014",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 356.25 vs. SMA50 354.77 / SMA200 358.58 → Leichter Aufwärtstrend. RSI 52, MACD Neutral.",
-        "aktueller_kurs": 356.15,
+        "aktueller_kurs": 358.3,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 52.2,
@@ -875,7 +877,7 @@
         "isin": "FR0014004L86",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 285.80 vs. SMA50 293.74 / SMA200 300.59 → Abwärtstrend. RSI 42, MACD Neutral.",
-        "aktueller_kurs": 286.0,
+        "aktueller_kurs": 287.0,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 41.74,
@@ -900,7 +902,7 @@
         "isin": "US67066G1040",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 176.02 vs. SMA50 181.07 / SMA200 164.93 → Leichter Abwärtstrend. RSI 50, MACD Neutral.",
-        "aktueller_kurs": 181.8,
+        "aktueller_kurs": 182.48,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 57.51,
@@ -925,7 +927,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 1565.60 vs. SMA50 1481.40 / SMA200 1162.06 → Aufwärtstrend. RSI 51, MACD Negativ.",
         "isin": "NL0010273215",
-        "aktueller_kurs": 1570.0,
+        "aktueller_kurs": 1569.0,
         "trend": "Aufwärtstrend",
         "signal": "Kaufen",
         "rsi_14": 50.93,
@@ -950,7 +952,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 36.61 vs. SMA50 34.31 / SMA200 24.13 → Aufwärtstrend. RSI 57, MACD Negativ.",
         "isin": "DE000A2E4K43",
-        "aktueller_kurs": 36.39,
+        "aktueller_kurs": 36.21,
         "trend": "Aufwärtstrend",
         "signal": "Kaufen",
         "rsi_14": 54.49,
@@ -975,7 +977,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 26.02 vs. SMA50 27.33 / SMA200 28.75 → Abwärtstrend. RSI 47, MACD Positiv.",
         "isin": "DE0005557508",
-        "aktueller_kurs": 26.05,
+        "aktueller_kurs": 26.12,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 47.45,
@@ -1025,7 +1027,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 5.47 vs. SMA50 5.48 / SMA200 5.67 → Abwärtstrend. RSI 56, MACD Positiv.",
         "isin": "DE000A2YN900",
-        "aktueller_kurs": 5.42,
+        "aktueller_kurs": 5.46,
         "trend": "Abwärtstrend",
         "signal": "Verkaufen",
         "rsi_14": 54.43,
@@ -1050,7 +1052,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 43.53 vs. SMA50 52.94 / SMA200 30.74 → Leichter Abwärtstrend. RSI 36, MACD Negativ.",
         "isin": "DE000A0WMPJ6",
-        "aktueller_kurs": 43.86,
+        "aktueller_kurs": 43.63,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 36.69,
@@ -1075,7 +1077,7 @@
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 71.77 vs. SMA50 74.60 / SMA200 48.18 → Leichter Abwärtstrend. RSI 43, MACD Negativ.",
         "isin": "DE0006231004",
-        "aktueller_kurs": 72.29,
+        "aktueller_kurs": 72.48,
         "trend": "Leichter Abwärtstrend",
         "signal": "Halten",
         "rsi_14": 43.98,
@@ -1100,7 +1102,7 @@
         "isin": "US30303M1027",
         "empfehlung": "Kaufen",
         "begruendung": "Kurs 568.30 vs. SMA50 518.38 / SMA200 549.95 → Leichter Aufwärtstrend. RSI 66, MACD Positiv.",
-        "aktueller_kurs": 589.2,
+        "aktueller_kurs": 589.4,
         "trend": "Leichter Aufwärtstrend",
         "signal": "Halten",
         "rsi_14": 69.64,
@@ -1139,12 +1141,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 54.05
+        "aktueller_kurs": 54.15
       },
       {
         "wertpapier": "Siemens Energy",
         "isin": "DE000ENER6Y0",
-        "begruendung": "Oman-Vertragsgewinn best\u00e4tigt starkes Wachstum; Energiewende-Infrastruktur treibt Umsatz. Aufw\u00e4rtstrend intakt.",
+        "begruendung": "Oman-Vertragsgewinn bestätigt starkes Wachstum; Energiewende-Infrastruktur treibt Umsatz. Aufwärtstrend intakt.",
         "kgv": "22",
         "dividendenrendite": 1.1,
         "umsatzwachstum_yoy": 29.44,
@@ -1153,13 +1155,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "aktueller_kurs": 152.16,
+        "aktueller_kurs": 152.12,
         "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "E.ON",
         "isin": "DE000ENAG999",
-        "begruendung": "Stabiles Gesch\u00e4ftsmodell, begrenzte Fantasie.",
+        "begruendung": "Stabiles Geschäftsmodell, begrenzte Fantasie.",
         "kgv": "16",
         "dividendenrendite": 4.0,
         "umsatzwachstum_yoy": 9.49,
@@ -1169,12 +1171,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 19.015
+        "aktueller_kurs": 18.96
       },
       {
         "wertpapier": "Encavis",
         "isin": "DE0006095003",
-        "begruendung": "Bewertung aktuell zu hoch f\u00fcr das Wachstum.",
+        "begruendung": "Bewertung aktuell zu hoch für das Wachstum.",
         "kgv": "35",
         "dividendenrendite": 0.8,
         "umsatzwachstum_yoy": -2.8,
@@ -1188,7 +1190,7 @@
       {
         "wertpapier": "Nordex SE",
         "isin": "DE000A0D6554",
-        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilit\u00e4t.",
+        "begruendung": "Turnaround in Arbeit, hohe Margen-Volatilität.",
         "kgv": "45",
         "dividendenrendite": 0.0,
         "umsatzwachstum_yoy": 12.41,
@@ -1198,7 +1200,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 41.02
+        "aktueller_kurs": 40.98
       },
       {
         "wertpapier": "RWE",
@@ -1213,14 +1215,14 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 56.34
+        "aktueller_kurs": 56.06
       }
     ],
     "Verteidigung": [
       {
         "wertpapier": "Leonardo SpA",
         "isin": "IT0003856405",
-        "begruendung": "Starkes Umsatzwachstum durch europ\u00e4ische R\u00fcstungsauftr\u00e4ge, diversifiziertes Portfolio.",
+        "begruendung": "Starkes Umsatzwachstum durch europäische Rüstungsaufträge, diversifiziertes Portfolio.",
         "kgv": "12",
         "dividendenrendite": 2.8,
         "umsatzwachstum_yoy": 30.0,
@@ -1229,13 +1231,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "aktueller_kurs": 51.53,
+        "aktueller_kurs": 51.82,
         "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Thales SA",
         "isin": "FR0000121329",
-        "begruendung": "Kurs knapp unter SMA200; R\u00fcstungsnachfrage st\u00fctzend, aber Momentum fehlt.",
+        "begruendung": "Kurs knapp unter SMA200; Rüstungsnachfrage stützend, aber Momentum fehlt.",
         "kgv": "20",
         "dividendenrendite": 2.1,
         "umsatzwachstum_yoy": 8.78,
@@ -1244,13 +1246,13 @@
         "bewertung": "Neutral",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "aktueller_kurs": 222.4,
+        "aktueller_kurs": 223.3,
         "empfehlung": "Halten"
       },
       {
         "wertpapier": "Airbus",
         "isin": "NL0000235190",
-        "begruendung": "Unterst\u00fctzungszone bei 180 EUR erfolgreich getestet.",
+        "begruendung": "Unterstützungszone bei 180 EUR erfolgreich getestet.",
         "kgv": 38.95,
         "dividendenrendite": 1.26,
         "umsatzwachstum_yoy": 22.3,
@@ -1260,7 +1262,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 196.64
+        "aktueller_kurs": 197.26
       },
       {
         "wertpapier": "BAE Systems",
@@ -1275,7 +1277,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 21.76
+        "aktueller_kurs": 21.81
       },
       {
         "wertpapier": "Hensoldt",
@@ -1290,7 +1292,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 74.24
+        "aktueller_kurs": 74.32
       },
       {
         "wertpapier": "Rheinmetall",
@@ -1304,7 +1306,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "aktueller_kurs": 988.0,
+        "aktueller_kurs": 992.0,
         "empfehlung": "Kaufen"
       }
     ],
@@ -1322,12 +1324,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 286.0
+        "aktueller_kurs": 287.0
       },
       {
         "wertpapier": "Leonardo",
         "isin": "IT0003856405",
-        "begruendung": "Starkes Umsatzwachstum durch europ\u00e4ische R\u00fcstungsauftr\u00e4ge, diversifiziertes Portfolio.",
+        "begruendung": "Starkes Umsatzwachstum durch europäische Rüstungsaufträge, diversifiziertes Portfolio.",
         "kgv": 27.44,
         "dividendenrendite": 3.08,
         "umsatzwachstum_yoy": 0.27,
@@ -1336,13 +1338,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "aktueller_kurs": 51.53,
+        "aktueller_kurs": 51.82,
         "empfehlung": "Kaufen"
       },
       {
         "wertpapier": "Lockheed Martin",
         "isin": "US5398301094",
-        "begruendung": "$142.9M Air Force Vertrag neu. Starke US-Verteidigungsauftr\u00e4ge; strategische Dividendenst\u00e4rke.",
+        "begruendung": "$142.9M Air Force Vertrag neu. Starke US-Verteidigungsaufträge; strategische Dividendenstärke.",
         "kgv": 15.12,
         "dividendenrendite": 0.67,
         "umsatzwachstum_yoy": 24.56,
@@ -1352,7 +1354,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 453.6
+        "aktueller_kurs": 452.5
       },
       {
         "wertpapier": "MTU Aero Engines",
@@ -1366,13 +1368,13 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "aktueller_kurs": 361.4,
+        "aktueller_kurs": 362.1,
         "empfehlung": "Halten"
       },
       {
         "wertpapier": "Nvidia",
         "isin": "US67066G1040",
-        "begruendung": "Kyber-Rack-Verz\u00f6gerung bis 2028 leicht negativ; fundamentale KI-St\u00e4rke bleibt ungebrochen.",
+        "begruendung": "Kyber-Rack-Verzögerung bis 2028 leicht negativ; fundamentale KI-Stärke bleibt ungebrochen.",
         "kgv": 36.36,
         "dividendenrendite": 1.27,
         "umsatzwachstum_yoy": 22.66,
@@ -1382,7 +1384,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 181.8
+        "aktueller_kurs": 182.48
       },
       {
         "wertpapier": "Rolls-Royce",
@@ -1397,12 +1399,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 16.824
+        "aktueller_kurs": 16.836
       },
       {
         "wertpapier": "Safran",
         "isin": "FR0000073272",
-        "begruendung": "Starker Auftragsr\u00fcckstau in Triebwerken; hohe Marge, RSI \u00fcberkauft.",
+        "begruendung": "Starker Auftragsrückstau in Triebwerken; hohe Marge, RSI überkauft.",
         "kgv": "32",
         "dividendenrendite": 1.1,
         "umsatzwachstum_yoy": 1.71,
@@ -1411,7 +1413,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-08",
-        "aktueller_kurs": 335.9,
+        "aktueller_kurs": 336.1,
         "empfehlung": "Halten"
       },
       {
@@ -1427,7 +1429,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 196.64
+        "aktueller_kurs": 197.26
       }
     ],
     "Satellitentechnik": [
@@ -1444,7 +1446,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 7.75
+        "aktueller_kurs": 7.705
       },
       {
         "wertpapier": "Airbus",
@@ -1459,12 +1461,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 196.64
+        "aktueller_kurs": 197.26
       },
       {
         "wertpapier": "OHB",
         "isin": "DE0005936124",
-        "begruendung": "Profitiert von \u00f6ffentlicher Raumfahrt-Nachfrage.",
+        "begruendung": "Profitiert von öffentlicher Raumfahrt-Nachfrage.",
         "kgv": "20",
         "dividendenrendite": 1.0,
         "umsatzwachstum_yoy": 23.81,
@@ -1474,7 +1476,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 269.0
+        "aktueller_kurs": 269.5
       },
       {
         "wertpapier": "Planet Labs",
@@ -1494,7 +1496,7 @@
       {
         "wertpapier": "Eutelsat",
         "isin": "FR0010221234",
-        "begruendung": "Abw\u00e4rtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten.",
+        "begruendung": "Abwärtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten.",
         "kgv": "8",
         "dividendenrendite": 5.0,
         "umsatzwachstum_yoy": 25.14,
@@ -1504,14 +1506,14 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 2.329
+        "aktueller_kurs": 2.357
       }
     ],
     "Technologie": [
       {
         "wertpapier": "Dassault Aviation",
         "isin": "FR0014004L86",
-        "begruendung": "Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse.",
+        "begruendung": "Ergänzt zur Vervollständigung der Sektor-Analyse.",
         "kgv": 16.11,
         "dividendenrendite": 0.43,
         "umsatzwachstum_yoy": 10.94,
@@ -1521,12 +1523,12 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "N/A",
-        "aktueller_kurs": 286.0
+        "aktueller_kurs": 287.0
       },
       {
         "wertpapier": "Nvidia",
         "isin": "US67066G1040",
-        "begruendung": "Kyber-Rack-Verz\u00f6gerung bis 2028 leicht negativ; fundamentale KI-St\u00e4rke bleibt ungebrochen.",
+        "begruendung": "Kyber-Rack-Verzögerung bis 2028 leicht negativ; fundamentale KI-Stärke bleibt ungebrochen.",
         "kgv": "45",
         "dividendenrendite": 0.1,
         "umsatzwachstum_yoy": 120.5,
@@ -1536,12 +1538,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 181.8
+        "aktueller_kurs": 182.48
       },
       {
         "wertpapier": "ASML",
         "isin": "NL0010273215",
-        "begruendung": "Monopolartige Stellung, technologisch f\u00fchrend.",
+        "begruendung": "Monopolartige Stellung, technologisch führend.",
         "kgv": "35",
         "dividendenrendite": 0.8,
         "umsatzwachstum_yoy": 7.18,
@@ -1551,12 +1553,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 1571.0
+        "aktueller_kurs": 1569.0
       },
       {
         "wertpapier": "Aixtron SE",
         "isin": "DE000A0WMPJ6",
-        "begruendung": "Hohe Volatilit\u00e4t, kurzfristige Erholungschancen, langfristig instabil.",
+        "begruendung": "Hohe Volatilität, kurzfristige Erholungschancen, langfristig instabil.",
         "kgv": 19.21,
         "dividendenrendite": 4.31,
         "umsatzwachstum_yoy": -3.57,
@@ -1566,12 +1568,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 43.86
+        "aktueller_kurs": 43.63
       },
       {
         "wertpapier": "Delivery Hero",
         "isin": "DE000A2E4K43",
-        "begruendung": "Spekulative Seitw\u00e4rtsphase, hoher charttechnischer Druck.",
+        "begruendung": "Spekulative Seitwärtsphase, hoher charttechnischer Druck.",
         "kgv": 31.52,
         "dividendenrendite": 3.12,
         "umsatzwachstum_yoy": 3.75,
@@ -1581,12 +1583,12 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 36.39
+        "aktueller_kurs": 36.21
       },
       {
         "wertpapier": "Dt. Telekom",
         "isin": "DE0005557508",
-        "begruendung": "Defensive St\u00e4rke, technischer Ausbruch \u00fcber Widerstandsbereich.",
+        "begruendung": "Defensive Stärke, technischer Ausbruch über Widerstandsbereich.",
         "kgv": 22.78,
         "dividendenrendite": 4.61,
         "umsatzwachstum_yoy": 5.37,
@@ -1596,12 +1598,12 @@
         "risiko": "Hoch",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 26.07
+        "aktueller_kurs": 26.12
       },
       {
         "wertpapier": "Infineon",
         "isin": "DE0006231004",
-        "begruendung": "ITC-Importverbot-News belastet kurzfristig; Infineon schlie\u00dft ams-Osram-Akquisition ab (positiv langfristig). Risiko erh\u00f6ht.",
+        "begruendung": "ITC-Importverbot-News belastet kurzfristig; Infineon schließt ams-Osram-Akquisition ab (positiv langfristig). Risiko erhöht.",
         "kgv": "18",
         "dividendenrendite": 1.2,
         "umsatzwachstum_yoy": 19.85,
@@ -1610,7 +1612,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-08",
-        "aktueller_kurs": 72.36,
+        "aktueller_kurs": 72.48,
         "empfehlung": "Halten"
       },
       {
@@ -1626,12 +1628,12 @@
         "risiko": "Niedrig",
         "datum": "2026-07-08",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 137.66
+        "aktueller_kurs": 137.58
       },
       {
         "wertpapier": "TeamViewer",
         "isin": "DE000A2YN900",
-        "begruendung": "Abw\u00e4rtstrend seit Monaten, keine Anzeichen einer Wende.",
+        "begruendung": "Abwärtstrend seit Monaten, keine Anzeichen einer Wende.",
         "kgv": 35.14,
         "dividendenrendite": 4.64,
         "umsatzwachstum_yoy": 29.73,
@@ -1641,7 +1643,159 @@
         "risiko": "Mittel",
         "datum": "2026-07-08",
         "empfehlung": "Halten",
-        "aktueller_kurs": 5.42
+        "aktueller_kurs": 5.46
+      }
+    ],
+    "Versorger": [
+      {
+        "wertpapier": "Iberdrola",
+        "isin": "ES0144580Y14",
+        "begruendung": "Groesster europaeischer Utility-Wert (Netze/Erneuerbare); Analysten ueberwiegend Overweight, defensiver Cashflow aus reguliertem Netzgeschaeft, Gewinn +12% YoY.",
+        "kgv": 19.78,
+        "dividendenrendite": 4.86,
+        "umsatzwachstum_yoy": 1.8,
+        "gewinnwachstum_yoy": 12.0,
+        "eigenkapitalquote": 38.0,
+        "bewertung": "Attraktiv",
+        "risiko": "Niedrig",
+        "datum": "2026-07-11",
+        "empfehlung": "Kaufen",
+        "aktueller_kurs": 20.9
+      },
+      {
+        "wertpapier": "Enel",
+        "isin": "IT0003128367",
+        "begruendung": "Groesster italienischer Versorger, hohe Dividendenrendite, aber Payout-Ratio ueber 100% und hoehere Verschuldung als Peers (boerse.de-Rating A).",
+        "kgv": 22.69,
+        "dividendenrendite": 5.52,
+        "umsatzwachstum_yoy": -2.0,
+        "gewinnwachstum_yoy": 5.0,
+        "eigenkapitalquote": 30.0,
+        "bewertung": "Neutral",
+        "risiko": "Mittel",
+        "datum": "2026-07-11",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 10.12
+      },
+      {
+        "wertpapier": "Terna",
+        "isin": "IT0003242622",
+        "begruendung": "Italienischer Stromnetzbetreiber (quasi-Monopol), stabile regulierte Ertraege, TheScreener stuft Risiko seit 2023 als niedrig ein.",
+        "kgv": 16.34,
+        "dividendenrendite": 4.38,
+        "umsatzwachstum_yoy": 3.8,
+        "gewinnwachstum_yoy": 3.8,
+        "eigenkapitalquote": 25.0,
+        "bewertung": "Attraktiv",
+        "risiko": "Niedrig",
+        "datum": "2026-07-11",
+        "empfehlung": "Kaufen",
+        "aktueller_kurs": 10.245
+      },
+      {
+        "wertpapier": "Engie",
+        "isin": "FR0010208488",
+        "begruendung": "Franzoesischer Multi-Utility-Konzern (Netze, Erneuerbare, Flexibilitaet); MarketScreener sieht kurzfristig fundamental attraktive Situation trotz hoher Nettoverschuldung.",
+        "kgv": 9.8,
+        "dividendenrendite": 6.02,
+        "umsatzwachstum_yoy": -2.5,
+        "gewinnwachstum_yoy": -6.8,
+        "eigenkapitalquote": 27.0,
+        "bewertung": "Attraktiv",
+        "risiko": "Mittel",
+        "datum": "2026-07-11",
+        "empfehlung": "Kaufen",
+        "aktueller_kurs": 26.88
+      },
+      {
+        "wertpapier": "Redeia Corporacion",
+        "isin": "ES0173093024",
+        "begruendung": "Spanischer Stromnetz-Monopolist (Red Electrica); nach dem Spanien-Blackout 2025 unter regulatorischer Beobachtung, Dividende zuletzt gekuerzt (Payout ueber 130%).",
+        "kgv": 14.0,
+        "dividendenrendite": 5.2,
+        "umsatzwachstum_yoy": 2.0,
+        "gewinnwachstum_yoy": -5.0,
+        "eigenkapitalquote": 30.0,
+        "bewertung": "Neutral",
+        "risiko": "Mittel",
+        "datum": "2026-07-11",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 15.39
+      },
+      {
+        "wertpapier": "Fortum",
+        "isin": "FI0009007132",
+        "begruendung": "Finnischer Versorger (Wasserkraft/Kernkraft/Wind), solide Eigenkapitalquote knapp 52%, aber Gewinn rueckluefig (-35% YoY) und zuletzt negative Analystenstimmung.",
+        "kgv": 21.32,
+        "dividendenrendite": 4.07,
+        "umsatzwachstum_yoy": -13.9,
+        "gewinnwachstum_yoy": -34.6,
+        "eigenkapitalquote": 51.93,
+        "bewertung": "Neutral",
+        "risiko": "Mittel",
+        "datum": "2026-07-11",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 19.545
+      },
+      {
+        "wertpapier": "Verbund",
+        "isin": "AT0000746409",
+        "begruendung": "Oesterreichs groesster Stromkonzern (90% Wasserkraft), defensiv, aber KGV steigt 2026e da Normalisierung der Strompreise die Gewinne drueckt; Analystenmeinungen zuletzt uneinheitlich.",
+        "kgv": 14.46,
+        "dividendenrendite": 5.08,
+        "umsatzwachstum_yoy": 0.0,
+        "gewinnwachstum_yoy": -10.0,
+        "eigenkapitalquote": 45.0,
+        "bewertung": "Neutral",
+        "risiko": "Niedrig",
+        "datum": "2026-07-11",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 57.3
+      },
+      {
+        "wertpapier": "EVN",
+        "isin": "AT0000741053",
+        "begruendung": "Niederoesterreichischer Regionalversorger (Strom/Gas/Waerme/Wasser/Abfall), diversifiziert und defensiv, aber wenig Wachstumsfantasie.",
+        "kgv": 13.0,
+        "dividendenrendite": 3.09,
+        "umsatzwachstum_yoy": 3.0,
+        "gewinnwachstum_yoy": 4.0,
+        "eigenkapitalquote": 45.0,
+        "bewertung": "Neutral",
+        "risiko": "Niedrig",
+        "datum": "2026-07-11",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 28.75
+      },
+      {
+        "wertpapier": "A2A",
+        "isin": "IT0001233417",
+        "begruendung": "Norditalienischer Multi-Utility-Konzern (Strom, Gas, Wasser, Abfall/Fernwaerme Mailand), diversifiziert und defensiv mit solider Investment-Grade-Bonitaet.",
+        "kgv": 13.5,
+        "dividendenrendite": 5.5,
+        "umsatzwachstum_yoy": 3.0,
+        "gewinnwachstum_yoy": 4.0,
+        "eigenkapitalquote": 32.0,
+        "bewertung": "Attraktiv",
+        "risiko": "Niedrig",
+        "datum": "2026-07-11",
+        "empfehlung": "Kaufen",
+        "aktueller_kurs": 2.314
+      },
+      {
+        "wertpapier": "Naturgy Energy Group",
+        "isin": "ES0116870314",
+        "begruendung": "Spanischer Gas-/Energiekonzern (Vertrieb, LNG, Erneuerbare), sehr hohe Dividendenrendite; Mehrheitseigner-Konsortium (CriteriaCaixa/GIP/CVC) sorgt fuer Stabilitaet.",
+        "kgv": 12.0,
+        "dividendenrendite": 7.5,
+        "umsatzwachstum_yoy": 2.0,
+        "gewinnwachstum_yoy": 3.0,
+        "eigenkapitalquote": 28.0,
+        "bewertung": "Attraktiv",
+        "risiko": "Mittel",
+        "datum": "2026-07-11",
+        "empfehlung": "Kaufen",
+        "aktueller_kurs": 28.04
       }
     ]
   }
@@ -1650,18 +1804,18 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 86.65,
-    "portfoliowert": 9639.49,
-    "gesamtvermoegen": 9726.14,
+    "portfoliowert": 9662.21,
+    "gesamtvermoegen": 9748.86,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 32,
         "kaufkurs": 46.38,
-        "boersenkurs": 51.53,
+        "boersenkurs": 51.82,
         "investiert": 1484.16,
-        "boersenwert": 1648.96,
-        "gewinn_verlust": 164.8,
+        "boersenwert": 1658.24,
+        "gewinn_verlust": 174.08,
         "score": 15,
         "beta": 0.3,
         "dax_ref": 25118.27,
@@ -1672,10 +1826,10 @@
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 361.4,
+        "boersenkurs": 362.1,
         "investiert": 1453.2,
-        "boersenwert": 1445.6,
-        "gewinn_verlust": -7.6,
+        "boersenwert": 1448.4,
+        "gewinn_verlust": -4.8,
         "score": 15,
         "beta": 0.3,
         "dax_ref": 25118.27,
@@ -1686,10 +1840,10 @@
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 335.9,
+        "boersenkurs": 336.1,
         "investiert": 1380.0,
-        "boersenwert": 1343.6,
-        "gewinn_verlust": -36.4,
+        "boersenwert": 1344.4,
+        "gewinn_verlust": -35.6,
         "score": 12,
         "beta": 0.3,
         "dax_ref": 25118.27,
@@ -1700,10 +1854,10 @@
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 152.16,
+        "boersenkurs": 152.12,
         "investiert": 1492.2,
-        "boersenwert": 1369.44,
-        "gewinn_verlust": -122.76,
+        "boersenwert": 1369.08,
+        "gewinn_verlust": -123.12,
         "score": 16,
         "beta": 0.3,
         "dax_ref": 25118.27,
@@ -1714,10 +1868,10 @@
         "wertpapier": "Thales",
         "stueck": 1,
         "kaufkurs": 224.8,
-        "boersenkurs": 222.4,
+        "boersenkurs": 223.3,
         "investiert": 224.8,
-        "boersenwert": 222.4,
-        "gewinn_verlust": -2.4,
+        "boersenwert": 223.3,
+        "gewinn_verlust": -1.5,
         "score": 11,
         "beta": 0.3,
         "dax_ref": 24917.08,
@@ -1728,10 +1882,10 @@
         "wertpapier": "Nvidia",
         "stueck": 10,
         "kaufkurs": 170.9,
-        "boersenkurs": 181.8,
+        "boersenkurs": 182.48,
         "investiert": 1709.0,
-        "boersenwert": 1818.0,
-        "gewinn_verlust": 109.0,
+        "boersenwert": 1824.8,
+        "gewinn_verlust": 115.8,
         "score": 8,
         "beta": 0.3,
         "dax_ref": 24917.08,
@@ -1742,10 +1896,10 @@
         "wertpapier": "Lockheed Martin",
         "stueck": 1,
         "kaufkurs": 545.91,
-        "boersenkurs": 453.6,
+        "boersenkurs": 452.5,
         "investiert": 545.91,
-        "boersenwert": 453.6,
-        "gewinn_verlust": -92.31,
+        "boersenwert": 452.5,
+        "gewinn_verlust": -93.41,
         "score": 15,
         "beta": 0.3,
         "dax_ref": 24917.08,
@@ -1756,10 +1910,10 @@
         "wertpapier": "SMA Solar",
         "stueck": 5,
         "kaufkurs": 55.35,
-        "boersenkurs": 54.05,
+        "boersenkurs": 54.15,
         "investiert": 276.75,
-        "boersenwert": 270.25,
-        "gewinn_verlust": -6.5,
+        "boersenwert": 270.75,
+        "gewinn_verlust": -6.0,
         "score": 11,
         "beta": 0.3,
         "dax_ref": 24917.08,
@@ -1770,10 +1924,10 @@
         "wertpapier": "SES",
         "stueck": 1,
         "kaufkurs": 8.11,
-        "boersenkurs": 7.75,
+        "boersenkurs": 7.705,
         "investiert": 8.11,
-        "boersenwert": 7.75,
-        "gewinn_verlust": -0.36,
+        "boersenwert": 7.71,
+        "gewinn_verlust": -0.4,
         "score": 9,
         "beta": 0.3,
         "dax_ref": 24917.08,
@@ -1784,10 +1938,10 @@
         "wertpapier": "Rolls-Royce",
         "stueck": 12,
         "kaufkurs": 16.608,
-        "boersenkurs": 16.824,
+        "boersenkurs": 16.836,
         "investiert": 199.3,
-        "boersenwert": 201.89,
-        "gewinn_verlust": 2.59,
+        "boersenwert": 202.03,
+        "gewinn_verlust": 2.73,
         "score": 16,
         "beta": 0.3,
         "dax_ref": 25118.27,
@@ -1798,10 +1952,10 @@
         "wertpapier": "Dassault Aviation",
         "stueck": 3,
         "kaufkurs": 297.2,
-        "boersenkurs": 286.0,
+        "boersenkurs": 287.0,
         "investiert": 891.6,
-        "boersenwert": 858.0,
-        "gewinn_verlust": -33.6,
+        "boersenwert": 861.0,
+        "gewinn_verlust": -30.6,
         "score": 14,
         "beta": 0.3,
         "dax_ref": 24917.08,
@@ -1835,7 +1989,7 @@
         "gewinn_verlust": 16.6,
         "gesamt": 1502.62,
         "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
-        "begruendung": "Chartanalyse: Abw\u00e4rtstrend, unterschreitet wichtige Unterst\u00fctzungsniveaus. | Fundamentalanalyse: Hohe Cashburn-Rate, intensiver Wettbewerb."
+        "begruendung": "Chartanalyse: Abwärtstrend, unterschreitet wichtige Unterstützungsniveaus. | Fundamentalanalyse: Hohe Cashburn-Rate, intensiver Wettbewerb."
       },
       {
         "datum": "2026-06-30",
@@ -1863,7 +2017,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 1497.2,
         "notiz": "Neukauf (Kauf-Signal)",
-        "begruendung": "Chartanalyse: Starke Erholung \u00fcber SMA 200, hoher RSI-Aufw\u00e4rtstrend. | Fundamentalanalyse: Starkes Wachstumspotenzial bei Energiewende-Infrastruktur."
+        "begruendung": "Chartanalyse: Starke Erholung über SMA 200, hoher RSI-Aufwärtstrend. | Fundamentalanalyse: Starkes Wachstumspotenzial bei Energiewende-Infrastruktur."
       },
       {
         "datum": "2026-06-30",
@@ -1877,7 +2031,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 229.8,
         "notiz": "Neukauf (Kauf-Signal)",
-        "begruendung": "Chartanalyse: Stabiler Aufw\u00e4rtstrend, GD200 als sichere Basis. | Fundamentalanalyse: Stabiles Wachstum, starke Marktposition."
+        "begruendung": "Chartanalyse: Stabiler Aufwärtstrend, GD200 als sichere Basis. | Fundamentalanalyse: Stabiles Wachstum, starke Marktposition."
       },
       {
         "datum": "2026-07-01",
@@ -1891,7 +2045,7 @@
         "gewinn_verlust": -8.08,
         "gesamt": 1469.0,
         "notiz": "Strategischer Verkauf ('Verkaufen'-Signal)",
-        "begruendung": "Chartanalyse: Kurzfristige \u00dcberhitzung nach starken Rallye, Gewinnmitnahmen empfohlen. | Fundamentalanalyse: Starke Cloud-Transformation, langfristig attraktiv."
+        "begruendung": "Chartanalyse: Kurzfristige Überhitzung nach starken Rallye, Gewinnmitnahmen empfohlen. | Fundamentalanalyse: Starke Cloud-Transformation, langfristig attraktiv."
       },
       {
         "datum": "2026-07-01",
@@ -1919,7 +2073,7 @@
         "gewinn_verlust": -5.89,
         "gesamt": 1482.19,
         "notiz": "Strategischer Verkauf",
-        "begruendung": "Signal Verkaufen. Aktueller Trend ist Leichter Abw\u00e4rtstrend. Signal lautet Verkaufen."
+        "begruendung": "Signal Verkaufen. Aktueller Trend ist Leichter Abwärtstrend. Signal lautet Verkaufen."
       },
       {
         "datum": "2026-07-03",
@@ -1961,7 +2115,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 550.91,
         "notiz": "Neukauf (Score=18)",
-        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+1(62), MACD+2, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(16%); KI-Sentiment=2) | Chart: Konsolidierung \u00fcber dem SMA 200, langfristig positiv. | Funda: Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse. | KI: Positive Impulse durch aktuelle News."
+        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+1(62), MACD+2, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(16%); KI-Sentiment=2) | Chart: Konsolidierung über dem SMA 200, langfristig positiv. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Positive Impulse durch aktuelle News."
       },
       {
         "datum": "2026-07-06",
@@ -1975,7 +2129,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 281.75,
         "notiz": "Neukauf (Score=18)",
-        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+2(48), MACD+2, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+1, GW+2(21%); KI-Sentiment=2) | Chart: Konsolidierung \u00fcber dem SMA 200, langfristig positiv. | Funda: Deutlicher Abw\u00e4rtstrend, RSI im \u00fcberverkauften Bereich, keine Bodenbildung. | KI: Positive Impulse durch aktuelle News."
+        "begruendung": "Score=18 (Chart=8: Empf.+3, RSI+2(48), MACD+2, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+1, GW+2(21%); KI-Sentiment=2) | Chart: Konsolidierung über dem SMA 200, langfristig positiv. | Funda: Deutlicher Abwärtstrend, RSI im überverkauften Bereich, keine Bodenbildung. | KI: Positive Impulse durch aktuelle News."
       },
       {
         "datum": "2026-07-06",
@@ -2003,7 +2157,7 @@
         "gewinn_verlust": -4.87,
         "gesamt": 17.95,
         "notiz": "Strategischer Verkauf (Explizites Verkaufen-Signal (Score=9))",
-        "begruendung": "Explizites Verkaufen-Signal (Score=9) | Score=9 (Chart=7: Empf.+3, RSI+2(45), MACD+2; Funda=3: Empf.+3, Risiko-1, GW+1(18%); KI-Sentiment=-1) | Chart: Unklare Trendlage bei Kurs 2.55, SMA50 2.95, SMA200 2.63. | Funda: Abw\u00e4rtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten. | KI: Eutelsat: Keine spezifischen News; Fundamentaldruck (Verschuldung, LEO-Integration) dr\u00fcckt Grundstimmung leicht negativ."
+        "begruendung": "Explizites Verkaufen-Signal (Score=9) | Score=9 (Chart=7: Empf.+3, RSI+2(45), MACD+2; Funda=3: Empf.+3, Risiko-1, GW+1(18%); KI-Sentiment=-1) | Chart: Unklare Trendlage bei Kurs 2.55, SMA50 2.95, SMA200 2.63. | Funda: Abwärtstrend setzt sich fort: Kurs unter SMA50 und SMA200; Verschuldung und LEO-Integration belasten. | KI: Eutelsat: Keine spezifischen News; Fundamentaldruck (Verschuldung, LEO-Integration) drückt Grundstimmung leicht negativ."
       },
       {
         "datum": "2026-07-07",
@@ -2017,7 +2171,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 13.11,
         "notiz": "Neukauf (Score=13)",
-        "begruendung": "Score=13 (Chart=10: Empf.+3, Trend+2, RSI+1(57), MACD+2, SMA50+1, SMA200+1; Funda=3: Bew.+2, Risiko+2, GW-1(-8%)) | Chart: Klarer Aufw\u00e4rtstrend: Kurs (8.11) > SMA50 (7.88) > SMA200 (6.58), Kaufsignal intakt. | Funda: Dividendenwert mit begrenztem Wachstum."
+        "begruendung": "Score=13 (Chart=10: Empf.+3, Trend+2, RSI+1(57), MACD+2, SMA50+1, SMA200+1; Funda=3: Bew.+2, Risiko+2, GW-1(-8%)) | Chart: Klarer Aufwärtstrend: Kurs (8.11) > SMA50 (7.88) > SMA200 (6.58), Kaufsignal intakt. | Funda: Dividendenwert mit begrenztem Wachstum."
       },
       {
         "datum": "2026-07-07",
@@ -2031,7 +2185,7 @@
         "gewinn_verlust": -80.28,
         "gesamt": 1384.78,
         "notiz": "KI-Veto: ITC-Importverbot + Rebalancing",
-        "begruendung": "ITC-Importverbot best\u00e4tigt (US-Gericht). Erh\u00f6htes regulatorisches Risiko. ams-Osram-Akquisition langfristig positiv, kurzfristig \u00fcberschattet. Verlust realisiert."
+        "begruendung": "ITC-Importverbot bestätigt (US-Gericht). Erhöhtes regulatorisches Risiko. ams-Osram-Akquisition langfristig positiv, kurzfristig überschattet. Verlust realisiert."
       },
       {
         "datum": "2026-07-07",
@@ -2045,7 +2199,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 1177.7,
         "notiz": "Neukauf (Score=17)",
-        "begruendung": "Klarer Aufw\u00e4rtstrend (Kurs > SMA50 > SMA200). Luftfahrt-Recovery, starkes Orderbook. Score=17 (Chart=9, Funda=8). Planet Labs Skip: Score=15, Cashburn-Risiko zu hoch."
+        "begruendung": "Klarer Aufwärtstrend (Kurs > SMA50 > SMA200). Luftfahrt-Recovery, starkes Orderbook. Score=17 (Chart=9, Funda=8). Planet Labs Skip: Score=15, Cashburn-Risiko zu hoch."
       },
       {
         "datum": "2026-07-08",
@@ -2059,7 +2213,7 @@
         "gewinn_verlust": 0.0,
         "gesamt": 204.3,
         "notiz": "Neukauf (Score=16)",
-        "begruendung": "Score=16 (Chart=9: Empf.+3, Trend+2, RSI+1(58), MACD+1, SMA50+1, SMA200+1; Funda=6: Empf.+3, Bew.+2, Risiko-1, GW+2(23%); KI-Sentiment=1) | Chart: Kurs 16.33 vs. SMA50 15.16 / SMA200 14.12 \u2192 Aufw\u00e4rtstrend. RSI 53, MACD Negativ. | Funda: Erfolgreicher Turnaround, Cashflow verbessert. | KI: Rolls-Royce +5,5% auf Wochensicht, Bombardier-Kooperation, 'Bargain on earnings'; leichter Marktgegenwind."
+        "begruendung": "Score=16 (Chart=9: Empf.+3, Trend+2, RSI+1(58), MACD+1, SMA50+1, SMA200+1; Funda=6: Empf.+3, Bew.+2, Risiko-1, GW+2(23%); KI-Sentiment=1) | Chart: Kurs 16.33 vs. SMA50 15.16 / SMA200 14.12 → Aufwärtstrend. RSI 53, MACD Negativ. | Funda: Erfolgreicher Turnaround, Cashflow verbessert. | KI: Rolls-Royce +5,5% auf Wochensicht, Bombardier-Kooperation, 'Bargain on earnings'; leichter Marktgegenwind."
       },
       {
         "datum": "2026-07-09",
@@ -2072,8 +2226,8 @@
         "steuern": 0.0,
         "gewinn_verlust": -197.5,
         "gesamt": 975.2,
-        "notiz": "Strategischer Verkauf (Stop-Loss ausgel\u00f6st (-16.4% \u2264 -15%))",
-        "begruendung": "Stop-Loss ausgel\u00f6st (-16.4% \u2264 -15%) | Score=8 (Chart=9: Empf.+3, Trend+2, RSI+1(52), MACD+1, SMA50+1, SMA200+1; Funda=0: Funda=Platzhalter\u21920; KI-Sentiment=-1) | Chart: Kurs 199.12 vs. SMA50 193.31 / SMA200 187.87 \u2192 Aufw\u00e4rtstrend. RSI 56, MACD Neutral. | Funda: Erg\u00e4nzt zur Vervollst\u00e4ndigung der Sektor-Analyse. | KI: Boeing handelt schwaecher; wird ohnehin per Stop-Loss ausgestoppt."
+        "notiz": "Strategischer Verkauf (Stop-Loss ausgelöst (-16.4% ≤ -15%))",
+        "begruendung": "Stop-Loss ausgelöst (-16.4% ≤ -15%) | Score=8 (Chart=9: Empf.+3, Trend+2, RSI+1(52), MACD+1, SMA50+1, SMA200+1; Funda=0: Funda=Platzhalter→0; KI-Sentiment=-1) | Chart: Kurs 199.12 vs. SMA50 193.31 / SMA200 187.87 → Aufwärtstrend. RSI 56, MACD Neutral. | Funda: Ergänzt zur Vervollständigung der Sektor-Analyse. | KI: Boeing handelt schwaecher; wird ohnehin per Stop-Loss ausgestoppt."
       },
       {
         "datum": "2026-07-09",
@@ -2087,23 +2241,23 @@
         "gewinn_verlust": 0.0,
         "gesamt": 896.6,
         "notiz": "Neukauf (Score=15)",
-        "begruendung": "Score=15 (Chart=8: Empf.+3, Trend+1, RSI+2(50), MACD+1, SMA50+1; Funda=7: Empf.+3, Bew.+2, Risiko+1, GW+1(5%)) | Chart: Kurs 296.20 vs. SMA50 294.34 / SMA200 300.60 \u2192 Leichter Aufw\u00e4rtstrend. RSI 49, MACD Neutral. | Funda: Konservativ, geringes Risiko, wenig Dynamik."
+        "begruendung": "Score=15 (Chart=8: Empf.+3, Trend+1, RSI+2(50), MACD+1, SMA50+1; Funda=7: Empf.+3, Bew.+2, Risiko+1, GW+1(5%)) | Chart: Kurs 296.20 vs. SMA50 294.34 / SMA200 300.60 → Leichter Aufwärtstrend. RSI 49, MACD Neutral. | Funda: Konservativ, geringes Risiko, wenig Dynamik."
       }
     ],
     "risiko": {
       "hinweise": [
-        "\u26a0\ufe0f Sektor Luft- und Raumfahrttechnik macht 63.0 % des Portfolios aus (Limit 30 %)"
+        "⚠️ Sektor Luft- und Raumfahrttechnik macht 63.5 % des Portfolios aus (Limit 30 %)"
       ],
       "positionen": [
         {
           "wertpapier": "Nvidia",
           "isin": "US67066G1040",
-          "anteil_pct": 18.2
+          "anteil_pct": 18.9
         },
         {
           "wertpapier": "Leonardo",
           "isin": "IT0003856405",
-          "anteil_pct": 17.3
+          "anteil_pct": 17.1
         },
         {
           "wertpapier": "MTU Aero Engines",
@@ -2113,17 +2267,17 @@
         {
           "wertpapier": "Siemens Energy",
           "isin": "DE000ENER6Y0",
-          "anteil_pct": 14.5
+          "anteil_pct": 14.2
         },
         {
           "wertpapier": "Safran",
           "isin": "FR0000073272",
-          "anteil_pct": 14.0
+          "anteil_pct": 13.9
         },
         {
           "wertpapier": "Dassault Aviation",
           "isin": "FR0014004L86",
-          "anteil_pct": 9.0
+          "anteil_pct": 8.9
         },
         {
           "wertpapier": "Lockheed Martin",
@@ -2154,15 +2308,15 @@
       "sektoren": [
         {
           "sektor": "Luft- und Raumfahrttechnik",
-          "anteil_pct": 63.0
+          "anteil_pct": 63.5
         },
         {
           "sektor": "Verteidigung",
-          "anteil_pct": 19.6
+          "anteil_pct": 19.4
         },
         {
           "sektor": "Energie",
-          "anteil_pct": 17.4
+          "anteil_pct": 17.0
         },
         {
           "sektor": "Satellitentechnik",
@@ -2182,17 +2336,385 @@
         "vermoegen": 9769.26
       },
       "aktuell": {
-        "dax": 25118.27,
-        "msci": 125.71,
-        "vermoegen": 9767.6
+        "dax": 25051.2,
+        "msci": 126.13,
+        "vermoegen": 9726.14
       },
       "rendite_pct": {
-        "depot": -0.02,
-        "dax": 0.0,
-        "msci_world": 0.0
+        "depot": -0.44,
+        "dax": -0.27,
+        "msci_world": 0.33
       },
-      "stand": "2026-07-10 09:00"
+      "stand": "2026-07-10 17:35"
     }
+  },
+  "etf_depot": {
+    "startkapital": 5000,
+    "aktueller_barbestand": 30.19,
+    "portfoliowert": 4969.73,
+    "gesamtvermoegen": 4999.92,
+    "positionen": [
+      {
+        "sektor": "Energie",
+        "wertpapier": "iShares MSCI World Energy Sector UCITS ETF",
+        "isin": "IE00BM67HN09",
+        "ticker": "XDWS.DE",
+        "stueck": 5,
+        "kaufkurs": 47.98,
+        "boersenkurs": 47.98,
+        "investiert": 239.9,
+        "boersenwert": 239.9,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Energie",
+        "wertpapier": "iShares Global Clean Energy Transition UCITS ETF",
+        "isin": "IE00B1XNHC34",
+        "ticker": "IQQH.DE",
+        "stueck": 4,
+        "kaufkurs": 9.638,
+        "boersenkurs": 9.638,
+        "investiert": 38.55,
+        "boersenwert": 38.55,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Energie",
+        "wertpapier": "Global X Uranium UCITS ETF",
+        "isin": "IE000NDWFGA5",
+        "ticker": "URNU.DE",
+        "stueck": 4,
+        "kaufkurs": 22.71,
+        "boersenkurs": 22.71,
+        "investiert": 90.84,
+        "boersenwert": 90.84,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Energie",
+        "wertpapier": "Xtrackers MSCI World Materials UCITS ETF",
+        "isin": "IE00BM67HS53",
+        "ticker": "XDWM.DE",
+        "stueck": 4,
+        "kaufkurs": 66.56,
+        "boersenkurs": 66.56,
+        "investiert": 266.24,
+        "boersenwert": 266.24,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Energie",
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "stueck": 3,
+        "kaufkurs": 86.74,
+        "boersenkurs": 86.74,
+        "investiert": 260.22,
+        "boersenwert": 260.22,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Verteidigung",
+        "wertpapier": "WisdomTree Europe Defence UCITS ETF",
+        "isin": "IE0002Y8CX98",
+        "ticker": "WDEF.MI",
+        "stueck": 4,
+        "kaufkurs": 30.235,
+        "boersenkurs": 30.235,
+        "investiert": 120.94,
+        "boersenwert": 120.94,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Verteidigung",
+        "wertpapier": "VanEck Defense UCITS ETF",
+        "isin": "IE000YYE6WK5",
+        "ticker": "DFEN.DE",
+        "stueck": 3,
+        "kaufkurs": 51.13,
+        "boersenkurs": 51.13,
+        "investiert": 153.39,
+        "boersenwert": 153.39,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Verteidigung",
+        "wertpapier": "HANetf Future of Defence UCITS ETF",
+        "isin": "IE000OJ5TQP4",
+        "ticker": "ASWC.DE",
+        "stueck": 5,
+        "kaufkurs": 17.936,
+        "boersenkurs": 17.936,
+        "investiert": 89.68,
+        "boersenwert": 89.68,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Verteidigung",
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "stueck": 2,
+        "kaufkurs": 86.74,
+        "boersenkurs": 86.74,
+        "investiert": 173.48,
+        "boersenwert": 173.48,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Verteidigung",
+        "wertpapier": "iShares Edge MSCI World Quality Factor UCITS ETF",
+        "isin": "IE00BP3QZ601",
+        "ticker": "IS3Q.DE",
+        "stueck": 2,
+        "kaufkurs": 77.25,
+        "boersenkurs": 77.25,
+        "investiert": 154.5,
+        "boersenwert": 154.5,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Luft- und Raumfahrttechnik",
+        "wertpapier": "iShares S&P 500 Industrials Sector UCITS ETF",
+        "isin": "IE00B4LN9N13",
+        "ticker": "2B7C.DE",
+        "stueck": 4,
+        "kaufkurs": 13.482,
+        "boersenkurs": 13.482,
+        "investiert": 53.93,
+        "boersenwert": 53.93,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Luft- und Raumfahrttechnik",
+        "wertpapier": "Xtrackers MSCI World Industrials UCITS ETF",
+        "isin": "IE00BM67HV82",
+        "ticker": "XDWI.DE",
+        "stueck": 2,
+        "kaufkurs": 76.15,
+        "boersenkurs": 76.15,
+        "investiert": 152.3,
+        "boersenwert": 152.3,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Luft- und Raumfahrttechnik",
+        "wertpapier": "VanEck Space Innovators UCITS ETF",
+        "isin": "IE000YU9K6K2",
+        "ticker": "JEDI.DE",
+        "stueck": 2,
+        "kaufkurs": 77.73,
+        "boersenkurs": 77.73,
+        "investiert": 155.46,
+        "boersenwert": 155.46,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Luft- und Raumfahrttechnik",
+        "wertpapier": "iShares Edge MSCI World Quality Factor UCITS ETF",
+        "isin": "IE00BP3QZ601",
+        "ticker": "IS3Q.DE",
+        "stueck": 2,
+        "kaufkurs": 77.25,
+        "boersenkurs": 77.25,
+        "investiert": 154.5,
+        "boersenwert": 154.5,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Luft- und Raumfahrttechnik",
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "stueck": 2,
+        "kaufkurs": 86.74,
+        "boersenkurs": 86.74,
+        "investiert": 173.48,
+        "boersenwert": 173.48,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Satellitentechnik",
+        "wertpapier": "VanEck Space Innovators UCITS ETF",
+        "isin": "IE000YU9K6K2",
+        "ticker": "JEDI.DE",
+        "stueck": 4,
+        "kaufkurs": 77.73,
+        "boersenkurs": 77.73,
+        "investiert": 310.92,
+        "boersenwert": 310.92,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Satellitentechnik",
+        "wertpapier": "L&G Cyber Security UCITS ETF",
+        "isin": "IE00BYPLS672",
+        "ticker": "USPY.DE",
+        "stueck": 5,
+        "kaufkurs": 39.305,
+        "boersenkurs": 39.305,
+        "investiert": 196.53,
+        "boersenwert": 196.53,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Satellitentechnik",
+        "wertpapier": "iShares NASDAQ US Tech UCITS ETF",
+        "isin": "IE00BYVQ9F29",
+        "ticker": "NQSE.DE",
+        "stueck": 5,
+        "kaufkurs": 17.26,
+        "boersenkurs": 17.26,
+        "investiert": 86.3,
+        "boersenwert": 86.3,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Satellitentechnik",
+        "wertpapier": "iShares Automation & Robotics UCITS ETF",
+        "isin": "IE00BYZK4552",
+        "ticker": "2B76.DE",
+        "stueck": 4,
+        "kaufkurs": 18.244,
+        "boersenkurs": 18.244,
+        "investiert": 72.98,
+        "boersenwert": 72.98,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Satellitentechnik",
+        "wertpapier": "iShares Global Infrastructure UCITS ETF",
+        "isin": "IE000CK5G8J7",
+        "ticker": "CBUX.DE",
+        "stueck": 5,
+        "kaufkurs": 6.229,
+        "boersenkurs": 6.229,
+        "investiert": 31.14,
+        "boersenwert": 31.14,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Technologie",
+        "wertpapier": "iShares MSCI World Information Technology UCITS ETF",
+        "isin": "IE00BM67HT60",
+        "ticker": "XDWT.DE",
+        "stueck": 3,
+        "kaufkurs": 123.56,
+        "boersenkurs": 123.56,
+        "investiert": 370.68,
+        "boersenwert": 370.68,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Technologie",
+        "wertpapier": "VanEck Semiconductor UCITS ETF",
+        "isin": "IE00BMC38736",
+        "ticker": "VVSM.DE",
+        "stueck": 2,
+        "kaufkurs": 100.24,
+        "boersenkurs": 100.24,
+        "investiert": 200.48,
+        "boersenwert": 200.48,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Technologie",
+        "wertpapier": "L&G Cyber Security UCITS ETF",
+        "isin": "IE00BYPLS672",
+        "ticker": "USPY.DE",
+        "stueck": 3,
+        "kaufkurs": 39.305,
+        "boersenkurs": 39.305,
+        "investiert": 117.91,
+        "boersenwert": 117.91,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Technologie",
+        "wertpapier": "iShares Automation & Robotics UCITS ETF",
+        "isin": "IE00BYZK4552",
+        "ticker": "2B76.DE",
+        "stueck": 2,
+        "kaufkurs": 18.244,
+        "boersenkurs": 18.244,
+        "investiert": 36.49,
+        "boersenwert": 36.49,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Technologie",
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "stueck": 2,
+        "kaufkurs": 86.74,
+        "boersenkurs": 86.74,
+        "investiert": 173.48,
+        "boersenwert": 173.48,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Versorger",
+        "wertpapier": "iShares STOXX Europe 600 Utilities UCITS ETF (DE)",
+        "isin": "DE000A0H08H3",
+        "ticker": "EXH3.DE",
+        "stueck": 4,
+        "kaufkurs": 66.81,
+        "boersenkurs": 66.81,
+        "investiert": 267.24,
+        "boersenwert": 267.24,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Versorger",
+        "wertpapier": "Xtrackers MSCI World Utilities UCITS ETF",
+        "isin": "IE00BM67HQ30",
+        "ticker": "XDWU.DE",
+        "stueck": 4,
+        "kaufkurs": 42.675,
+        "boersenkurs": 42.675,
+        "investiert": 170.7,
+        "boersenwert": 170.7,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Versorger",
+        "wertpapier": "iShares Global Infrastructure UCITS ETF",
+        "isin": "IE000CK5G8J7",
+        "ticker": "CBUX.DE",
+        "stueck": 10,
+        "kaufkurs": 6.229,
+        "boersenkurs": 6.229,
+        "investiert": 62.29,
+        "boersenwert": 62.29,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Versorger",
+        "wertpapier": "Xtrackers MSCI World Minimum Volatility UCITS ETF",
+        "isin": "IE00BL25JN58",
+        "ticker": "XDEB.DE",
+        "stueck": 4,
+        "kaufkurs": 44.015,
+        "boersenkurs": 44.015,
+        "investiert": 176.06,
+        "boersenwert": 176.06,
+        "gewinn_verlust": 0.0
+      },
+      {
+        "sektor": "Versorger",
+        "wertpapier": "Lyxor/Amundi STOXX Europe 600 Utilities UCITS ETF Acc",
+        "isin": "LU1834988864",
+        "ticker": "LUTI.DE",
+        "stueck": 4,
+        "kaufkurs": 104.8,
+        "boersenkurs": 104.78,
+        "investiert": 419.2,
+        "boersenwert": 419.12,
+        "gewinn_verlust": -0.08
+      }
+    ]
   }
 };
         const sentimentData = {
@@ -2849,6 +3371,53 @@
         }
         depotHtml += `</table>`;
         document.getElementById('depot').innerHTML = depotHtml;
+
+        // ==========================================
+        // ETF-SLEEVE (separates Budget, passiv)
+        // ==========================================
+        (function renderEtfSleeve() {
+            const e = depotData.etf_depot;
+            if (!e) {
+                document.getElementById('etfsleeve').innerHTML = '<p style="color:#6c757d;">Noch kein ETF-Sleeve angelegt.</p>';
+                return;
+            }
+            let html = `<h2>📊 ETF-Sleeve <small style="font-size:0.5em; color:#6c757d;">(separates Budget, passive Diversifikation je Sektor)</small></h2>
+            <div class="stats-grid">
+                <div class="stat-card"><h4>Gesamtvermögen (ETF)</h4><p>${formatEUR(e.gesamtvermoegen)}</p></div>
+                <div class="stat-card"><h4>Barbestand</h4><p>${formatEUR(e.aktueller_barbestand)}</p></div>
+                <div class="stat-card"><h4>ETF-Wert</h4><p>${formatEUR(e.portfoliowert)}</p></div>
+                <div class="stat-card"><h4>Budget (Start)</h4><p>${formatEUR(e.startkapital)}</p></div>
+            </div>
+            <table>
+                <tr>
+                    <th>Sektor</th>
+                    <th>ETF</th>
+                    <th>ISIN</th>
+                    <th>Stück</th>
+                    <th>Kaufkurs</th>
+                    <th>Kurs</th>
+                    <th>Investiert</th>
+                    <th>Wert</th>
+                    <th>Gewinn/Verlust</th>
+                </tr>`;
+            (e.positionen || []).forEach(p => {
+                let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
+                let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
+                html += `<tr>
+                    <td>${p.sektor}</td>
+                    <td><strong>${p.wertpapier}</strong></td>
+                    <td style="color:#666;">${p.isin || ''}</td>
+                    <td>${p.stueck}</td>
+                    <td>${formatEUR(p.kaufkurs)}</td>
+                    <td>${formatEUR(p.boersenkurs)}</td>
+                    <td>${formatEUR(p.investiert)}</td>
+                    <td>${formatEUR(p.boersenwert)}</td>
+                    <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${formatEURSign(p.gewinn_verlust)}</span></td>
+                </tr>`;
+            });
+            html += `</table>`;
+            document.getElementById('etfsleeve').innerHTML = html;
+        })();
 
         // ==========================================
         // KI-SENTIMENT (Stufe 1 + 2)

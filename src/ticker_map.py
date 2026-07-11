@@ -43,6 +43,18 @@ ISIN_TO_EUR_TICKER = {
     'GB0002634946': 'BSP.DE',    # BAE Systems (GB ISIN, XETRA EUR listing)
     'GB00B63H8491': 'RRU.DE',    # Rolls-Royce Holdings (XETRA EUR listing)
     'US72703X1063': '85H1.DE',   # Planet Labs (Frankfurt)
+
+    # ETF-Sleeve (2026-07-11): Yahoo-Suche findet für diese Ireland-domizilierten
+    # UCITS-ETFs keinen passenden EUR-Kandidaten (nur GBP/USD-Primärlistings) -
+    # explizit auf verifizierte Xetra-EUR-Ticker gemappt.
+    'IE00BYZK4552': '2B76.DE',   # iShares Automation & Robotics
+    'IE000NDWFGA5': 'URNU.DE',   # Global X Uranium
+    'IE00BP3QZ601': 'IS3Q.DE',   # iShares Edge MSCI World Quality Factor
+    'IE00BMC38736': 'VVSM.DE',   # VanEck Semiconductor
+    'IE000CK5G8J7': 'CBUX.DE',   # iShares Global Infrastructure
+    'IE00B1XNHC34': 'IQQH.DE',   # iShares Global Clean Energy Transition
+    'IE00BYPLS672': 'USPY.DE',   # L&G Cyber Security
+    'IE000YU9K6K2': 'JEDI.DE',   # VanEck Space Innovators
 }
 
 # USD-Ticker für Namen ohne verlässliches EUR-Listing — werden über den

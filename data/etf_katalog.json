@@ -1,0 +1,197 @@
+{
+  "sektoren": {
+    "Energie": [
+      {
+        "wertpapier": "iShares MSCI World Energy Sector UCITS ETF",
+        "isin": "IE00BM67HN09",
+        "ticker": "XDWS.DE",
+        "aktueller_kurs": 47.98
+      },
+      {
+        "wertpapier": "iShares Global Clean Energy Transition UCITS ETF",
+        "isin": "IE00B1XNHC34",
+        "ticker": "IQQH.DE",
+        "aktueller_kurs": 9.638
+      },
+      {
+        "wertpapier": "Global X Uranium UCITS ETF",
+        "isin": "IE000NDWFGA5",
+        "ticker": "URNU.DE",
+        "aktueller_kurs": 22.71
+      },
+      {
+        "wertpapier": "Xtrackers MSCI World Materials UCITS ETF",
+        "isin": "IE00BM67HS53",
+        "ticker": "XDWM.DE",
+        "aktueller_kurs": 66.56
+      },
+      {
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "aktueller_kurs": 86.74
+      }
+    ],
+    "Verteidigung": [
+      {
+        "wertpapier": "WisdomTree Europe Defence UCITS ETF",
+        "isin": "IE0002Y8CX98",
+        "ticker": "WDEF.MI",
+        "aktueller_kurs": 30.235
+      },
+      {
+        "wertpapier": "VanEck Defense UCITS ETF",
+        "isin": "IE000YYE6WK5",
+        "ticker": "DFEN.DE",
+        "aktueller_kurs": 51.13
+      },
+      {
+        "wertpapier": "HANetf Future of Defence UCITS ETF",
+        "isin": "IE000OJ5TQP4",
+        "ticker": "ASWC.DE",
+        "aktueller_kurs": 17.936
+      },
+      {
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "aktueller_kurs": 86.74
+      },
+      {
+        "wertpapier": "iShares Edge MSCI World Quality Factor UCITS ETF",
+        "isin": "IE00BP3QZ601",
+        "ticker": "IS3Q.DE",
+        "aktueller_kurs": 77.25
+      }
+    ],
+    "Luft- und Raumfahrttechnik": [
+      {
+        "wertpapier": "iShares S&P 500 Industrials Sector UCITS ETF",
+        "isin": "IE00B4LN9N13",
+        "ticker": "2B7C.DE",
+        "aktueller_kurs": 13.482
+      },
+      {
+        "wertpapier": "Xtrackers MSCI World Industrials UCITS ETF",
+        "isin": "IE00BM67HV82",
+        "ticker": "XDWI.DE",
+        "aktueller_kurs": 76.15
+      },
+      {
+        "wertpapier": "VanEck Space Innovators UCITS ETF",
+        "isin": "IE000YU9K6K2",
+        "ticker": "JEDI.DE",
+        "aktueller_kurs": 77.73
+      },
+      {
+        "wertpapier": "iShares Edge MSCI World Quality Factor UCITS ETF",
+        "isin": "IE00BP3QZ601",
+        "ticker": "IS3Q.DE",
+        "aktueller_kurs": 77.25
+      },
+      {
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "aktueller_kurs": 86.74
+      }
+    ],
+    "Satellitentechnik": [
+      {
+        "wertpapier": "VanEck Space Innovators UCITS ETF",
+        "isin": "IE000YU9K6K2",
+        "ticker": "JEDI.DE",
+        "aktueller_kurs": 77.73
+      },
+      {
+        "wertpapier": "L&G Cyber Security UCITS ETF",
+        "isin": "IE00BYPLS672",
+        "ticker": "USPY.DE",
+        "aktueller_kurs": 39.305
+      },
+      {
+        "wertpapier": "iShares NASDAQ US Tech UCITS ETF",
+        "isin": "IE00BYVQ9F29",
+        "ticker": "NQSE.DE",
+        "aktueller_kurs": 17.26
+      },
+      {
+        "wertpapier": "iShares Automation & Robotics UCITS ETF",
+        "isin": "IE00BYZK4552",
+        "ticker": "2B76.DE",
+        "aktueller_kurs": 18.244
+      },
+      {
+        "wertpapier": "iShares Global Infrastructure UCITS ETF",
+        "isin": "IE000CK5G8J7",
+        "ticker": "CBUX.DE",
+        "aktueller_kurs": 6.229
+      }
+    ],
+    "Technologie": [
+      {
+        "wertpapier": "iShares MSCI World Information Technology UCITS ETF",
+        "isin": "IE00BM67HT60",
+        "ticker": "XDWT.DE",
+        "aktueller_kurs": 123.56
+      },
+      {
+        "wertpapier": "VanEck Semiconductor UCITS ETF",
+        "isin": "IE00BMC38736",
+        "ticker": "VVSM.DE",
+        "aktueller_kurs": 100.24
+      },
+      {
+        "wertpapier": "L&G Cyber Security UCITS ETF",
+        "isin": "IE00BYPLS672",
+        "ticker": "USPY.DE",
+        "aktueller_kurs": 39.305
+      },
+      {
+        "wertpapier": "iShares Automation & Robotics UCITS ETF",
+        "isin": "IE00BYZK4552",
+        "ticker": "2B76.DE",
+        "aktueller_kurs": 18.244
+      },
+      {
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "aktueller_kurs": 86.74
+      }
+    ],
+    "Versorger": [
+      {
+        "wertpapier": "iShares STOXX Europe 600 Utilities UCITS ETF (DE)",
+        "isin": "DE000A0H08H3",
+        "ticker": "EXH3.DE",
+        "aktueller_kurs": 66.81
+      },
+      {
+        "wertpapier": "Xtrackers MSCI World Utilities UCITS ETF",
+        "isin": "IE00BM67HQ30",
+        "ticker": "XDWU.DE",
+        "aktueller_kurs": 42.675
+      },
+      {
+        "wertpapier": "iShares Global Infrastructure UCITS ETF",
+        "isin": "IE000CK5G8J7",
+        "ticker": "CBUX.DE",
+        "aktueller_kurs": 6.229
+      },
+      {
+        "wertpapier": "Xtrackers MSCI World Minimum Volatility UCITS ETF",
+        "isin": "IE00BL25JN58",
+        "ticker": "XDEB.DE",
+        "aktueller_kurs": 44.015
+      },
+      {
+        "wertpapier": "Lyxor/Amundi STOXX Europe 600 Utilities UCITS ETF Acc",
+        "isin": "LU1834988864",
+        "ticker": "LUTI.DE",
+        "aktueller_kurs": 104.78
+      }
+    ]
+  },
+  "generiert_am": "2026-07-11"
+}
