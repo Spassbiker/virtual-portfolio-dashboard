@@ -9,3 +9,5 @@ USER.md
 memory/
 skills/
 openclaw-workspace-state.json
+__pycache__/
+*.pyc
