@@ -6885,7 +6885,7 @@
                     <div class="stat-card"><h4>Gesamtvermögen</h4><p>${formatEUR(gesamt)}</p><div class="delta ${gv >= 0 ? 'pos' : 'neg'}">${formatEURSign(gv)} (${gvPct >= 0 ? '+' : ''}${gvPct.toFixed(2)}%)</div></div>
                     <div class="stat-card"><h4>Barbestand</h4><p>${formatEUR(bar)}</p><div class="delta" style="color:var(--text-muted)">${barquote.toFixed(1)}% Barquote</div></div>
                     <div class="stat-card"><h4>Startkapital gesamt</h4><p>${formatEUR(start)}</p></div>
-                    <div class="stat-card"><h4>Rendite Depot</h4><p style="color:${(rendite.depot || 0) >= 0 ? 'var(--good-text)' : 'var(--critical-text)'}">${(rendite.depot || 0) >= 0 ? '+' : ''}${(rendite.depot || 0).toFixed(2)}%</p><div class="delta" style="color:var(--text-muted)">seit ${bench.anker ? bench.anker.datum : '–'}</div></div>
+                    <div class="stat-card"><h4>Rendite Gesamt</h4><p style="color:${gvPct >= 0 ? 'var(--good-text)' : 'var(--critical-text)'}">${gvPct >= 0 ? '+' : ''}${gvPct.toFixed(2)}%</p><div class="delta" style="color:var(--text-muted)">seit Start</div></div>
                 </div>
 
                 <div class="ov-card">
