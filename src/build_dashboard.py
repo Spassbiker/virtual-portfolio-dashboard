@@ -783,6 +783,37 @@ html_template = """<!DOCTYPE html>
             html += `</table>`;
             const etfGen = (etfSentimentData && etfSentimentData.generated_at) ? etfSentimentData.generated_at : null;
             if (etfGen) html += `<p style="color:#6c757d; font-size:0.85em;">KI-Sentiment Stand: ${etfGen} · (A) Themen-ETF, (B) Sektor-ETF · rein informativ, kein Auto-Trading im ETF-Sleeve</p>`;
+
+            const etfTx = (e.transaktionshistorie || []).slice().sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
+            if (etfTx.length > 0) {
+                html += `<h3 style="margin-top:30px;">Transaktionshistorie (ETF-Sleeve)</h3><table>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Typ</th>
+                        <th>Sektor</th>
+                        <th>ETF</th>
+                        <th>Stück</th>
+                        <th>Kurs</th>
+                        <th>Gebühr</th>
+                        <th>Gesamt</th>
+                        <th>Notiz</th>
+                    </tr>`;
+                etfTx.forEach(t => {
+                    let typColor = t.typ === 'Kauf' ? 'color: #155724;' : 'color: #721c24;';
+                    html += `<tr>
+                        <td>${t.datum || ''}</td>
+                        <td style="${typColor} font-weight:bold;">${t.typ || ''}</td>
+                        <td>${t.sektor || ''}</td>
+                        <td><strong>${t.wertpapier}</strong><br><small style="color:#666">${t.isin || ''}</small></td>
+                        <td>${t.stueck}</td>
+                        <td>${formatEUR(t.kurs)}</td>
+                        <td>${formatEUR(t.gebuehr)}</td>
+                        <td>${formatEUR(t.gesamt)}</td>
+                        <td style="font-size:0.9em;">${t.notiz || ''}</td>
+                    </tr>`;
+                });
+                html += `</table>`;
+            }
             document.getElementById('etfsleeve').innerHTML = html;
         })();
 
