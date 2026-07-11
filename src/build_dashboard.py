@@ -36,48 +36,132 @@ html_template = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Portfolio Dashboard</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px; }
-        .container { max-width: 1500px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
-        h2, h3 { color: #34495e; }
+        :root {
+            --surface-page: #f9f9f7;
+            --surface-1: #ffffff;
+            --surface-2: #f8f9fa;
+            --text-primary: #0b0b0b;
+            --text-secondary: #52514e;
+            --text-muted: #898781;
+            --border: rgba(11,11,11,0.10);
+            --grid: #e1e0d9;
+            --baseline: #c3c2b7;
+            --good: #0ca30c;
+            --good-bg: #d4edda;
+            --good-text: #155724;
+            --warning: #fab219;
+            --warning-bg: #fff3cd;
+            --warning-text: #856404;
+            --serious: #ec835a;
+            --critical: #d03b3b;
+            --critical-bg: #f8d7da;
+            --critical-text: #721c24;
+            --info-bg: #d1ecf1;
+            --info-text: #0c5460;
+            --accent: #34495e;
+            --accent-2: #2c3e50;
+            --series-1: #2a78d6;
+            --series-2: #1baf7a;
+            --series-3: #eda100;
+            --series-4: #008300;
+            --series-5: #4a3aa7;
+            --series-6: #e34948;
+            --series-7: #e87ba4;
+            --series-8: #eb6834;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        [data-theme="dark"] {
+            --surface-page: #0d0d0d;
+            --surface-1: #1a1a19;
+            --surface-2: #232322;
+            --text-primary: #ffffff;
+            --text-secondary: #c3c2b7;
+            --text-muted: #898781;
+            --border: rgba(255,255,255,0.12);
+            --grid: #2c2c2a;
+            --baseline: #383835;
+            --good: #0ca30c;
+            --good-bg: rgba(12,163,12,0.18);
+            --good-text: #4fd44f;
+            --warning: #fab219;
+            --warning-bg: rgba(250,178,25,0.18);
+            --warning-text: #fab219;
+            --serious: #ec835a;
+            --critical: #e66767;
+            --critical-bg: rgba(230,103,103,0.18);
+            --critical-text: #f0a0a0;
+            --info-bg: rgba(57,135,229,0.18);
+            --info-text: #7fb4ef;
+            --accent: #2a3a4a;
+            --accent-2: #1c2a38;
+            --series-1: #3987e5;
+            --series-2: #199e70;
+            --series-3: #c98500;
+            --series-4: #4fbf4f;
+            --series-5: #9085e9;
+            --series-6: #e66767;
+            --series-7: #d55181;
+            --series-8: #d95926;
+            --shadow: 0 4px 6px rgba(0,0,0,0.4);
+        }
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--surface-page); color: var(--text-primary); margin: 0; padding: 20px; transition: background-color 0.2s, color 0.2s; }
+        .container { max-width: 1500px; margin: 0 auto; background: var(--surface-1); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); }
+        h1 { color: var(--text-primary); text-align: center; margin-bottom: 8px; }
+        h2, h3 { color: var(--text-primary); }
+        .page-header { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 24px; position: relative; }
+        .theme-toggle { background: var(--surface-2); border: 1px solid var(--border); color: var(--text-primary); border-radius: 20px; padding: 8px 16px; cursor: pointer; font-size: 0.9em; font-weight: 600; position: absolute; right: 0; top: 0; }
+        .theme-toggle:hover { background: var(--grid); }
         table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 0.9em; }
-        th, td { padding: 10px 12px; border-bottom: 1px solid #ddd; text-align: left; }
-        th { background-color: #34495e; color: white; position: sticky; top: 0; }
+        th, td { padding: 10px 12px; border-bottom: 1px solid var(--grid); text-align: left; color: var(--text-primary); }
+        th { background-color: var(--accent); color: white; position: sticky; top: 0; }
         th.sortable { cursor: pointer; user-select: none; }
-        th.sortable:hover { background-color: #2c3e50; }
+        th.sortable:hover { background-color: var(--accent-2); }
         th.sortable .arrow { opacity: 0.4; margin-left: 4px; }
         th.sortable.sorted .arrow { opacity: 1; }
-        tr:hover { background-color: #f9f9f9; }
+        tr:hover { background-color: var(--surface-2); }
         .badge { padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85em; display: inline-block; text-align: center; min-width: 65px; }
-        .buy { background-color: #d4edda; color: #155724; }
-        .hold { background-color: #fff3cd; color: #856404; }
-        .sell { background-color: #f8d7da; color: #721c24; }
-        .risk-low { background-color: #d1ecf1; color: #0c5460; }
-        .risk-mid { background-color: #fff3cd; color: #856404; }
-        .risk-high { background-color: #f8d7da; color: #721c24; }
-        .peer-good { color: #155724; font-weight: bold; }
-        .peer-bad { color: #721c24; font-weight: bold; }
-        .peer-neutral { color: #6c757d; }
-        .tab-buttons { border-bottom: 2px solid #34495e; margin-bottom: 20px; }
-        .tab-button { background-color: #ecf0f1; border: none; padding: 12px 25px; cursor: pointer; font-size: 16px; border-radius: 5px 5px 0 0; margin-right: 5px; font-weight: bold; color: #7f8c8d; transition: all 0.3s; }
-        .tab-button:hover { background-color: #bdc3c7; }
-        .tab-button.active { background-color: #34495e; color: white; }
-        .tab-content { display: none; animation: fadeIn 0.5s; }
-        .tab-content.active { display: block; overflow-x: auto; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
-        .stat-card { background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6; text-align: center; }
-        .stat-card h4 { margin: 0 0 10px 0; color: #6c757d; font-size: 0.9em; text-transform: uppercase; }
-        .stat-card p { margin: 0; font-size: 1.5em; font-weight: bold; color: #2c3e50; }
+        .buy { background-color: var(--good-bg); color: var(--good-text); }
+        .hold { background-color: var(--warning-bg); color: var(--warning-text); }
+        .sell { background-color: var(--critical-bg); color: var(--critical-text); }
+        .risk-low { background-color: var(--info-bg); color: var(--info-text); }
+        .risk-mid { background-color: var(--warning-bg); color: var(--warning-text); }
+        .risk-high { background-color: var(--critical-bg); color: var(--critical-text); }
+        .peer-good { color: var(--good-text); font-weight: bold; }
+        .peer-bad { color: var(--critical-text); font-weight: bold; }
+        .peer-neutral { color: var(--text-muted); }
+
+        /* --- Navigation --- */
+        .top-nav { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 2px solid var(--accent); margin-bottom: 20px; }
+        .tab-button { background-color: var(--surface-2); border: 1px solid var(--border); padding: 12px 22px; cursor: pointer; font-size: 15px; border-radius: 8px 8px 0 0; font-weight: bold; color: var(--text-muted); transition: all 0.2s; }
+        .tab-button:hover { background-color: var(--grid); color: var(--text-primary); }
+        .tab-button.active { background-color: var(--accent); color: white; border-color: var(--accent); }
+        .sub-tab-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .sub-tab-button { background: none; border: 1px solid var(--border); padding: 7px 16px; cursor: pointer; font-size: 0.9em; border-radius: 20px; font-weight: 600; color: var(--text-secondary); transition: all 0.2s; }
+        .sub-tab-button:hover { background-color: var(--surface-2); }
+        .sub-tab-button.active { background-color: var(--series-1); color: white; border-color: var(--series-1); }
+        .section { display: none; animation: fadeIn 0.4s; }
+        .section.active { display: block; }
+        .sub-content { display: none; overflow-x: auto; }
+        .sub-content.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background: var(--surface-2); padding: 20px; border-radius: 10px; border: 1px solid var(--border); text-align: center; }
+        .stat-card h4 { margin: 0 0 10px 0; color: var(--text-muted); font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.03em; }
+        .stat-card p { margin: 0; font-size: 1.5em; font-weight: bold; color: var(--text-primary); }
+        .stat-card .delta { margin-top: 6px; font-size: 0.6em; font-weight: 700; }
+        .stat-card .delta.pos { color: var(--good-text); }
+        .stat-card .delta.neg { color: var(--critical-text); }
+
         /* --- Score & Filter Styling --- */
-        .filter-bar { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 15px 20px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; align-items: end; }
+        .filter-bar { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 15px 20px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; align-items: end; }
         .filter-group { display: flex; flex-direction: column; }
-        .filter-group label { font-size: 0.8em; font-weight: 600; color: #6c757d; text-transform: uppercase; margin-bottom: 4px; }
-        .filter-group select, .filter-group input { padding: 6px 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 0.95em; background: white; }
-        .filter-reset { background: #6c757d; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9em; font-weight: 600; }
-        .filter-reset:hover { background: #495057; }
-        .filter-count { font-size: 0.85em; color: #6c757d; font-style: italic; margin-bottom: 10px; }
+        .filter-group label { font-size: 0.8em; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
+        .filter-group select, .filter-group input { padding: 6px 10px; border: 1px solid var(--border); border-radius: 4px; font-size: 0.95em; background: var(--surface-1); color: var(--text-primary); }
+        .filter-reset { background: var(--text-muted); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9em; font-weight: 600; }
+        .filter-reset:hover { background: var(--text-secondary); }
+        .filter-count { font-size: 0.85em; color: var(--text-muted); font-style: italic; margin-bottom: 10px; }
 
         .score-cell { font-weight: bold; color: white; padding: 6px 10px; border-radius: 4px; text-align: center; min-width: 45px; display: inline-block; }
         .score-a { background: #1e7e34; }  /* >= 80 */
@@ -86,45 +170,83 @@ html_template = """<!DOCTYPE html>
         .score-d { background: #fd7e14; }  /* 35-50 */
         .score-e { background: #dc3545; }  /* < 35 */
 
-        .subscore { font-size: 0.85em; color: #495057; }
-        .subscore-bar { display: inline-block; width: 40px; height: 6px; background: #e9ecef; border-radius: 3px; overflow: hidden; vertical-align: middle; margin-right: 4px; }
+        .subscore { font-size: 0.85em; color: var(--text-secondary); }
+        .subscore-bar { display: inline-block; width: 40px; height: 6px; background: var(--grid); border-radius: 3px; overflow: hidden; vertical-align: middle; margin-right: 4px; }
         .subscore-bar-fill { height: 100%; background: #28a745; }
         .subscore-bar-fill.low { background: #dc3545; }
         .subscore-bar-fill.mid { background: #ffc107; }
 
         .perfect-setup { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 3px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; margin-left: 6px; }
         .in-depot { background: #17a2b8; color: white; padding: 3px 8px; border-radius: 12px; font-size: 0.75em; margin-left: 6px; }
-        .data-warning { background: #f8d7da; color: #721c24; padding: 3px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; margin-left: 6px; cursor: help; border: 1px solid #f5c6cb; }
-        tr.inconsistent-row { background: #fdf5f5; }
-        tr.inconsistent-row:hover { background: #fbecec; }
+        .data-warning { background: var(--critical-bg); color: var(--critical-text); padding: 3px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; margin-left: 6px; cursor: help; border: 1px solid var(--critical); }
+        tr.inconsistent-row { background: var(--critical-bg); }
+        tr.inconsistent-row:hover { filter: brightness(0.97); }
 
-        .weights-info { background: #e7f3ff; border-left: 4px solid #0066cc; padding: 10px 15px; margin-bottom: 20px; border-radius: 4px; font-size: 0.9em; color: #004085; }
-        .weights-info strong { color: #002752; }
+        .weights-info { background: var(--info-bg); border-left: 4px solid var(--series-1); padding: 10px 15px; margin-bottom: 20px; border-radius: 4px; font-size: 0.9em; color: var(--info-text); }
+        .weights-info strong { color: var(--text-primary); }
+
+        /* --- Übersicht --- */
+        .ov-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-bottom: 24px; }
+        .ov-card h3 { margin-top: 0; }
+        .risk-alert { border-left: 4px solid var(--critical); background: var(--critical-bg); color: var(--critical-text); padding: 10px 16px; border-radius: 4px; margin-bottom: 8px; font-size: 0.92em; font-weight: 600; }
+        .risk-alert.ok { border-left-color: var(--good); background: var(--good-bg); color: var(--good-text); }
+        .ov-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; }
+        .ov-movers { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .mover-list { list-style: none; margin: 0; padding: 0; }
+        .mover-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--grid); font-size: 0.92em; }
+        .mover-list li:last-child { border-bottom: none; }
+        .teaser-table { width: 100%; font-size: 0.9em; }
+        .teaser-cta { margin-top: 10px; background: var(--series-1); color: white; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9em; }
+        .teaser-cta:hover { opacity: 0.9; }
+        @media (max-width: 900px) { .ov-grid, .ov-movers { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📈 Virtual Portfolio Dashboard <br><small style="font-size: 0.5em; color: #7f8c8d;">Build: BUILD_DATE_PLACEHOLDER</small></h1>
-
-        <div class="tab-buttons">
-            <button class="tab-button active" onclick="openTab(event, 'ranking')">🎯 Empfehlungen</button>
-            <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
-            <button class="tab-button" onclick="openTab(event, 'etfsleeve')">📊 ETF-Sleeve</button>
-            <button class="tab-button" onclick="openTab(event, 'etfranking')">🌐 ETF-Empfehlungen</button>
-            <button class="tab-button" onclick="openTab(event, 'chart')">Chartanalyse</button>
-            <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
-            <button class="tab-button" onclick="openTab(event, 'sentiment')">🤖 KI-Sentiment</button>
-            <button class="tab-button" onclick="openTab(event, 'transaktionen')">Transaktionshistorie</button>
+        <div class="page-header">
+            <h1 style="margin-bottom:0;">📈 Virtual Portfolio Dashboard <br><small style="font-size: 0.5em; color: var(--text-muted);">Build: BUILD_DATE_PLACEHOLDER</small></h1>
+            <button class="theme-toggle" id="theme-toggle">🌙 Dark Mode</button>
         </div>
 
-        <div id="ranking" class="tab-content active"></div>
-        <div id="depot" class="tab-content"></div>
-        <div id="etfsleeve" class="tab-content"></div>
-        <div id="etfranking" class="tab-content"></div>
-        <div id="chart" class="tab-content"></div>
-        <div id="funda" class="tab-content"></div>
-        <div id="sentiment" class="tab-content"></div>
-        <div id="transaktionen" class="tab-content"></div>
+        <div class="top-nav">
+            <button class="tab-button active" data-section="uebersicht">🏠 Übersicht</button>
+            <button class="tab-button" data-section="portfolio">💼 Portfolio</button>
+            <button class="tab-button" data-section="empfehlungen">🎯 Empfehlungen</button>
+            <button class="tab-button" data-section="analyse">🔬 Analyse</button>
+        </div>
+
+        <div id="uebersicht" class="section active"></div>
+
+        <div id="portfolio" class="section">
+            <div class="sub-tab-buttons">
+                <button class="sub-tab-button active" data-sub="depot">Aktien-Depot</button>
+                <button class="sub-tab-button" data-sub="etfsleeve">📊 ETF-Sleeve</button>
+                <button class="sub-tab-button" data-sub="transaktionen">Transaktionshistorie</button>
+            </div>
+            <div id="depot" class="sub-content active"></div>
+            <div id="etfsleeve" class="sub-content"></div>
+            <div id="transaktionen" class="sub-content"></div>
+        </div>
+
+        <div id="empfehlungen" class="section">
+            <div class="sub-tab-buttons">
+                <button class="sub-tab-button active" data-sub="ranking">🎯 Aktien</button>
+                <button class="sub-tab-button" data-sub="etfranking">🌐 ETF</button>
+            </div>
+            <div id="ranking" class="sub-content active"></div>
+            <div id="etfranking" class="sub-content"></div>
+        </div>
+
+        <div id="analyse" class="section">
+            <div class="sub-tab-buttons">
+                <button class="sub-tab-button active" data-sub="chart">Chartanalyse</button>
+                <button class="sub-tab-button" data-sub="funda">Fundamentalanalyse</button>
+                <button class="sub-tab-button" data-sub="sentiment">🤖 KI-Sentiment</button>
+            </div>
+            <div id="chart" class="sub-content active"></div>
+            <div id="funda" class="sub-content"></div>
+            <div id="sentiment" class="sub-content"></div>
+        </div>
     </div>
 
     <script>
@@ -143,12 +265,12 @@ html_template = """<!DOCTYPE html>
         // Kompaktes Sentiment-Badge (Pfeil + Wert) + optionales Veto, mit Begründung als Tooltip.
         function sentimentBadge(isin) {
             const s = getSentiment(isin);
-            if (!s) return '<span style="color:#adb5bd;">–</span>';
+            if (!s) return '<span style="color:var(--text-muted);">–</span>';
             const val = (typeof s.sentiment_score === 'number') ? s.sentiment_score : 0;
             const tip = (s.begruendung || '').replace(/"/g, '&quot;');
-            let color = '#6c757d', arrow = '→';
-            if (val > 0) { color = '#155724'; arrow = '▲'; }
-            else if (val < 0) { color = '#721c24'; arrow = '▼'; }
+            let color = 'var(--text-muted)', arrow = '→';
+            if (val > 0) { color = 'var(--good-text)'; arrow = '▲'; }
+            else if (val < 0) { color = 'var(--critical-text)'; arrow = '▼'; }
             const sign = val > 0 ? '+' : '';
             let html = `<span title="${tip}" style="font-weight:bold;color:${color};">${arrow} ${sign}${val}</span>`;
             if (s.veto) html += ` <span class="badge sell" title="${tip}" style="min-width:auto;">🚫 Veto</span>`;
@@ -159,14 +281,14 @@ html_template = """<!DOCTYPE html>
         // ist Buy-and-Hold, siehe docs/ETF_SENTIMENT_STAGE.md).
         function etfSentimentBadge(isin) {
             const s = isin ? etfSentimentScores[isin] : null;
-            if (!s) return '<span style="color:#adb5bd;">–</span>';
+            if (!s) return '<span style="color:var(--text-muted);">–</span>';
             const val = (typeof s.sentiment_score === 'number') ? s.sentiment_score : 0;
             const tip = (s.begruendung || '').replace(/"/g, '&quot;');
-            let color = '#6c757d', arrow = '→';
-            if (val > 0) { color = '#155724'; arrow = '▲'; }
-            else if (val < 0) { color = '#721c24'; arrow = '▼'; }
+            let color = 'var(--text-muted)', arrow = '→';
+            if (val > 0) { color = 'var(--good-text)'; arrow = '▲'; }
+            else if (val < 0) { color = 'var(--critical-text)'; arrow = '▼'; }
             const sign = val > 0 ? '+' : '';
-            const typTag = s.typ ? `<span style="color:#adb5bd; font-size:0.8em;"> (${s.typ})</span>` : '';
+            const typTag = s.typ ? `<span style="color:var(--text-muted); font-size:0.8em;"> (${s.typ})</span>` : '';
             return `<span title="${tip}" style="font-weight:bold;color:${color};">${arrow} ${sign}${val}</span>${typTag}`;
         }
 
@@ -176,7 +298,7 @@ html_template = """<!DOCTYPE html>
             if (r.includes("kauf") || r.includes("attraktiv")) return `<span class="badge buy">${rating}</span>`;
             if (r.includes("halt") || r.includes("fair")) return `<span class="badge hold">${rating}</span>`;
             if (r.includes("verkauf") || r.includes("teuer")) return `<span class="badge sell">${rating}</span>`;
-            return `<span class="badge" style="background:#e2e3e5; color:#333;">${rating}</span>`;
+            return `<span class="badge" style="background:var(--grid); color:var(--text-primary);">${rating}</span>`;
         }
 
         function getRiskBadge(risk) {
@@ -671,7 +793,7 @@ html_template = """<!DOCTYPE html>
                 const begruendung = ((r.f && r.f.begruendung) || '') + ((r.c && r.c.begruendung) ? ' · ' + r.c.begruendung : '');
                 const rowCls = warnings.length ? ' class="inconsistent-row"' : '';
                 return `<tr${rowCls}>
-                    <td><strong>${r.wertpapier}</strong>${badges}<br><small style="color:#666">${r.isin}</small></td>
+                    <td><strong>${r.wertpapier}</strong>${badges}<br><small style="color:var(--text-muted)">${r.isin}</small></td>
                     <td>${r.sektor}</td>
                     <td>${scoreCell(r.scores.composite)}</td>
                     <td>${subscoreBar(r.scores.fund)}</td>
@@ -686,7 +808,7 @@ html_template = """<!DOCTYPE html>
                 </tr>`;
             }).join('');
 
-            document.getElementById('ranking-body').innerHTML = body || '<tr><td colspan="12" style="text-align:center; padding:30px; color:#6c757d;">Keine Titel passen zu den aktuellen Filtern.</td></tr>';
+            document.getElementById('ranking-body').innerHTML = body || '<tr><td colspan="12" style="text-align:center; padding:30px; color:var(--text-muted);">Keine Titel passen zu den aktuellen Filtern.</td></tr>';
             document.getElementById('f-count').textContent = `${rows.length} von ${allRows.length} Titeln angezeigt`;
         }
 
@@ -717,11 +839,11 @@ html_template = """<!DOCTYPE html>
             </tr>`;
         if (d.positionen && d.positionen.length > 0) {
             d.positionen.forEach(p => {
-                let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
-                let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
+                let gvColor = p.gewinn_verlust >= 0 ? 'var(--good-text)' : 'var(--critical-text)';
+                let gvBg = p.gewinn_verlust >= 0 ? 'var(--good-bg)' : 'var(--critical-bg)';
                 depotHtml += `<tr>
                     <td><strong>${p.wertpapier}</strong></td>
-                    <td style="color:#666;">${p.isin || ''}</td>
+                    <td style="color:var(--text-muted);">${p.isin || ''}</td>
                     <td>${p.stueck}</td>
                     <td>${formatEUR(p.kaufkurs)}</td>
                     <td>${formatEUR(p.boersenkurs)}</td>
@@ -741,10 +863,10 @@ html_template = """<!DOCTYPE html>
         (function renderEtfSleeve() {
             const e = depotData.etf_depot;
             if (!e) {
-                document.getElementById('etfsleeve').innerHTML = '<p style="color:#6c757d;">Noch kein ETF-Sleeve angelegt.</p>';
+                document.getElementById('etfsleeve').innerHTML = '<p style="color:var(--text-muted);">Noch kein ETF-Sleeve angelegt.</p>';
                 return;
             }
-            let html = `<h2>📊 ETF-Sleeve <small style="font-size:0.5em; color:#6c757d;">(separates Budget, passive Diversifikation je Sektor)</small></h2>
+            let html = `<h2>📊 ETF-Sleeve <small style="font-size:0.5em; color:var(--text-muted);">(separates Budget, passive Diversifikation je Sektor)</small></h2>
             <div class="stats-grid">
                 <div class="stat-card"><h4>Gesamtvermögen (ETF)</h4><p>${formatEUR(e.gesamtvermoegen)}</p></div>
                 <div class="stat-card"><h4>Barbestand</h4><p>${formatEUR(e.aktueller_barbestand)}</p></div>
@@ -765,12 +887,12 @@ html_template = """<!DOCTYPE html>
                     <th>KI-Sentiment</th>
                 </tr>`;
             (e.positionen || []).forEach(p => {
-                let gvColor = p.gewinn_verlust >= 0 ? '#155724' : '#721c24';
-                let gvBg = p.gewinn_verlust >= 0 ? '#d4edda' : '#f8d7da';
+                let gvColor = p.gewinn_verlust >= 0 ? 'var(--good-text)' : 'var(--critical-text)';
+                let gvBg = p.gewinn_verlust >= 0 ? 'var(--good-bg)' : 'var(--critical-bg)';
                 html += `<tr>
                     <td>${p.sektor}</td>
                     <td><strong>${p.wertpapier}</strong></td>
-                    <td style="color:#666;">${p.isin || ''}</td>
+                    <td style="color:var(--text-muted);">${p.isin || ''}</td>
                     <td>${p.stueck}</td>
                     <td>${formatEUR(p.kaufkurs)}</td>
                     <td>${formatEUR(p.boersenkurs)}</td>
@@ -782,7 +904,7 @@ html_template = """<!DOCTYPE html>
             });
             html += `</table>`;
             const etfGen = (etfSentimentData && etfSentimentData.generated_at) ? etfSentimentData.generated_at : null;
-            if (etfGen) html += `<p style="color:#6c757d; font-size:0.85em;">KI-Sentiment Stand: ${etfGen} · (A) Themen-ETF, (B) Sektor-ETF · rein informativ, kein Auto-Trading im ETF-Sleeve</p>`;
+            if (etfGen) html += `<p style="color:var(--text-muted); font-size:0.85em;">KI-Sentiment Stand: ${etfGen} · (A) Themen-ETF, (B) Sektor-ETF · rein informativ, kein Auto-Trading im ETF-Sleeve</p>`;
 
             const etfTx = (e.transaktionshistorie || []).slice().sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
             if (etfTx.length > 0) {
@@ -799,12 +921,12 @@ html_template = """<!DOCTYPE html>
                         <th>Notiz</th>
                     </tr>`;
                 etfTx.forEach(t => {
-                    let typColor = t.typ === 'Kauf' ? 'color: #155724;' : 'color: #721c24;';
+                    let typColor = t.typ === 'Kauf' ? 'color: var(--good-text);' : 'color: var(--critical-text);';
                     html += `<tr>
                         <td>${t.datum || ''}</td>
                         <td style="${typColor} font-weight:bold;">${t.typ || ''}</td>
                         <td>${t.sektor || ''}</td>
-                        <td><strong>${t.wertpapier}</strong><br><small style="color:#666">${t.isin || ''}</small></td>
+                        <td><strong>${t.wertpapier}</strong><br><small style="color:var(--text-muted)">${t.isin || ''}</small></td>
                         <td>${t.stueck}</td>
                         <td>${formatEUR(t.kurs)}</td>
                         <td>${formatEUR(t.gebuehr)}</td>
@@ -827,7 +949,7 @@ html_template = """<!DOCTYPE html>
                 sektoren[sektor].forEach(r => rows.push(Object.assign({ sektor }, r)));
             });
             if (!rows.length) {
-                document.getElementById('etfranking').innerHTML = '<p style="color:#6c757d;">Noch kein ETF-Ranking berechnet (etf_ranking.py).</p>';
+                document.getElementById('etfranking').innerHTML = '<p style="color:var(--text-muted);">Noch kein ETF-Ranking berechnet (etf_ranking.py).</p>';
                 return;
             }
 
@@ -845,7 +967,7 @@ html_template = """<!DOCTYPE html>
                 const bucketOpts = buckets.map(b => `<option value="${b}"${etfUiState.bucket===b?' selected':''}>${b}</option>`).join('');
                 const genAt = etfRankingData.generated_at ? `Stand: ${etfRankingData.generated_at}` : '';
                 const header = `
-                    <h2>🌐 ETF-Empfehlungs-Ranking <small style="font-size:0.5em; color:#6c757d;">${genAt}</small></h2>
+                    <h2>🌐 ETF-Empfehlungs-Ranking <small style="font-size:0.5em; color:var(--text-muted);">${genAt}</small></h2>
                     <div class="weights-info">
                         <strong>Composite-Score</strong> — Gewichtung: Momentum 35 % (Trend/Return/RSI) · Risiko 25 % (Volatilität/Drawdown/Ertrag-Risiko) · Sentiment 20 % · Struktur 20 % (TER/Fondsgröße).
                         <br>
@@ -951,7 +1073,7 @@ html_template = """<!DOCTYPE html>
                         ? `<span class="data-warning" title="${r.warnings.join(' | ').replace(/"/g,'&quot;')}">⚠️</span>`
                         : '';
                     return `<tr>
-                        <td><strong>${r.wertpapier}</strong>${warnBadge}<br><small style="color:#666">${r.isin}</small></td>
+                        <td><strong>${r.wertpapier}</strong>${warnBadge}<br><small style="color:var(--text-muted)">${r.isin}</small></td>
                         <td>${r.sektor}</td>
                         <td>${scoreCell(r.composite)}</td>
                         <td>${subscoreBar(r.momentum.score)}</td>
@@ -960,12 +1082,12 @@ html_template = """<!DOCTYPE html>
                         <td>${subscoreBar(r.struktur.score)}</td>
                         <td>${r.struktur.ter !== null && r.struktur.ter !== undefined ? r.struktur.ter.toFixed(2) + '%' : '-'}</td>
                         <td>${r.struktur.aum_mio_eur !== null && r.struktur.aum_mio_eur !== undefined ? r.struktur.aum_mio_eur.toLocaleString('de-DE') : '-'}</td>
-                        <td style="color:#666;">${r.peer_rank}/${r.peer_total}</td>
+                        <td style="color:var(--text-muted);">${r.peer_rank}/${r.peer_total}</td>
                         <td>${bucketBadge(r.bucket)}</td>
                     </tr>`;
                 }).join('');
 
-                document.getElementById('etf-ranking-body').innerHTML = body || '<tr><td colspan="11" style="text-align:center; padding:30px; color:#6c757d;">Keine ETFs passen zu den aktuellen Filtern.</td></tr>';
+                document.getElementById('etf-ranking-body').innerHTML = body || '<tr><td colspan="11" style="text-align:center; padding:30px; color:var(--text-muted);">Keine ETFs passen zu den aktuellen Filtern.</td></tr>';
                 document.getElementById('ef-count').textContent = `${filtered.length} von ${rows.length} ETFs angezeigt`;
             }
 
@@ -1003,14 +1125,14 @@ html_template = """<!DOCTYPE html>
             const gen = (sentimentData && sentimentData.generated_at) ? sentimentData.generated_at : null;
             const etfGen = (etfSentimentData && etfSentimentData.generated_at) ? etfSentimentData.generated_at : null;
 
-            let html = `<h2>🤖 KI-Sentiment <small style="font-size:0.5em; color:#6c757d;">(News-Stimmung pro Wert, −3 bis +3 · bei Aktien dritter Score-Faktor in der Trade-Entscheidung, bei ETFs rein informativ)</small></h2>`;
+            let html = `<h2>🤖 KI-Sentiment <small style="font-size:0.5em; color:var(--text-muted);">(News-Stimmung pro Wert, −3 bis +3 · bei Aktien dritter Score-Faktor in der Trade-Entscheidung, bei ETFs rein informativ)</small></h2>`;
             if (!isins.length) {
-                html += `<p style="color:#6c757d;">Noch keine KI-Sentiment-Daten vorhanden. Werden beim nächsten Portfoliomanager-Lauf erzeugt (Schritt 5: news_raw.json → sentiment_scores.json).</p>`;
+                html += `<p style="color:var(--text-muted);">Noch keine KI-Sentiment-Daten vorhanden. Werden beim nächsten Portfoliomanager-Lauf erzeugt (Schritt 5: news_raw.json → sentiment_scores.json).</p>`;
                 document.getElementById('sentiment').innerHTML = html;
                 return;
             }
-            if (gen) html += `<p style="color:#6c757d; font-size:0.9em;">Stand Aktien: ${gen}</p>`;
-            if (etfGen) html += `<p style="color:#6c757d; font-size:0.9em;">Stand ETFs: ${etfGen}</p>`;
+            if (gen) html += `<p style="color:var(--text-muted); font-size:0.9em;">Stand Aktien: ${gen}</p>`;
+            if (etfGen) html += `<p style="color:var(--text-muted); font-size:0.9em;">Stand ETFs: ${etfGen}</p>`;
 
             // Sortiert: Veto zuerst, dann nach Score absteigend.
             isins.sort((a, b) => {
@@ -1031,13 +1153,13 @@ html_template = """<!DOCTYPE html>
             isins.forEach(isin => {
                 const s = combined[isin];
                 const isEtf = !!etfSentimentScores[isin];
-                const name = nameByIsin[isin] || '<span style="color:#adb5bd">?</span>';
+                const name = nameByIsin[isin] || '<span style="color:var(--text-muted)">?</span>';
                 const inDepot = depotIsinSet.has(isin)
                     ? '<span class="badge buy" style="min-width:auto;">✓</span>' : '';
                 html += `<tr>
                     <td><strong>${name}</strong></td>
-                    <td style="color:#666;">${isin}</td>
-                    <td style="color:#6c757d;">${isEtf ? 'ETF' : 'Aktie'}</td>
+                    <td style="color:var(--text-muted);">${isin}</td>
+                    <td style="color:var(--text-muted);">${isEtf ? 'ETF' : 'Aktie'}</td>
                     <td>${inDepot}</td>
                     <td>${isEtf ? etfSentimentBadge(isin) : sentimentBadge(isin)}</td>
                     <td style="font-size:0.9em;">${(s.begruendung || '').replace(/</g,'&lt;')}</td>
@@ -1070,7 +1192,7 @@ html_template = """<!DOCTYPE html>
                     </tr>`;
                 werte.forEach(w => {
                     chartHtml += `<tr>
-                        <td><strong>${w.wertpapier}</strong><br><small style="color:#666">${w.isin || ''}</small></td>
+                        <td><strong>${w.wertpapier}</strong><br><small style="color:var(--text-muted)">${w.isin || ''}</small></td>
                         <td>${formatEUR(w.aktueller_kurs)}</td>
                         <td>${w.trend || '-'}</td>
                         <td>${getBadge(w.signal)}</td>
@@ -1091,13 +1213,13 @@ html_template = """<!DOCTYPE html>
         // ==========================================
         // FUNDAMENTALANALYSE (with peer comparison)
         // ==========================================
-        let fundaHtml = `<h2>Fundamentalanalyse <small style="font-size:0.5em; color:#6c757d;">(mit Sektor-Peer-Vergleich: ▲ besser · ▼ schlechter als Median)</small></h2>`;
+        let fundaHtml = `<h2>Fundamentalanalyse <small style="font-size:0.5em; color:var(--text-muted);">(mit Sektor-Peer-Vergleich: ▲ besser · ▼ schlechter als Median)</small></h2>`;
         if (fundaData.sektoren) {
             Object.keys(fundaData.sektoren).forEach(sektor => {
                 const werte = fundaData.sektoren[sektor];
                 const meds = sectorMedians[sektor] || {};
                 fundaHtml += `<h3 style="background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 30px;">${sektor}
-                    <small style="font-size:0.65em; color:#6c757d; font-weight:normal; margin-left:10px;">
+                    <small style="font-size:0.65em; color:var(--text-muted); font-weight:normal; margin-left:10px;">
                         Median → KGV ${meds.kgv !== null ? meds.kgv.toFixed(1) : '–'} · Div ${meds.dividende !== null ? meds.dividende.toFixed(1)+'%' : '–'} · Umsatzw. ${meds.umsatz !== null ? meds.umsatz.toFixed(1)+'%' : '–'}
                     </small></h3>`;
                 fundaHtml += `<table>
@@ -1125,7 +1247,7 @@ html_template = """<!DOCTYPE html>
                     let ekText = w.eigenkapitalquote !== undefined ? w.eigenkapitalquote + '%' : '-';
 
                     fundaHtml += `<tr>
-                        <td><strong>${w.wertpapier}</strong><br><small style="color:#666">${w.isin || ''}</small></td>
+                        <td><strong>${w.wertpapier}</strong><br><small style="color:var(--text-muted)">${w.isin || ''}</small></td>
                         <td>${formatEUR(w.aktueller_kurs)}</td>
                         <td>${getBadge(w.bewertung)}</td>
                         <td>${getRiskBadge(w.risiko)}</td>
@@ -1165,29 +1287,29 @@ html_template = """<!DOCTYPE html>
         if (allTx.length > 0) {
             const transactionsRev = allTx.slice().sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
             transactionsRev.forEach(t => {
-                let typColor = t.typ === 'Kauf' ? 'color: #155724;' : 'color: #721c24;';
+                let typColor = t.typ === 'Kauf' ? 'color: var(--good-text);' : 'color: var(--critical-text);';
 
                 let gv = '-';
                 if (t.gewinn_verlust !== undefined && t.gewinn_verlust !== 0 && t.typ === 'Verkauf') {
-                    let style = t.gewinn_verlust > 0 ? 'color: #155724; background-color: #d4edda; padding: 4px 6px; border-radius: 4px; font-weight:bold;' : 'color: #721c24; background-color: #f8d7da; padding: 4px 6px; border-radius: 4px; font-weight:bold;';
+                    let style = t.gewinn_verlust > 0 ? 'color: var(--good-text); background-color: var(--good-bg); padding: 4px 6px; border-radius: 4px; font-weight:bold;' : 'color: var(--critical-text); background-color: var(--critical-bg); padding: 4px 6px; border-radius: 4px; font-weight:bold;';
                     gv = `<span style="${style}">${formatEURSign(t.gewinn_verlust)}</span>`;
                 }
 
                 let begruendung = t.begruendung || t.notiz || '';
-                let depotBadgeStyle = t.depotLabel === 'ETF' ? 'background-color:#e7f3ff; color:#004085;' : 'background-color:#f0f0f0; color:#333;';
+                let depotBadgeStyle = t.depotLabel === 'ETF' ? 'background-color:var(--info-bg); color:var(--info-text);' : 'background-color:var(--surface-2); color:var(--text-primary);';
 
                 transHtml += `<tr>
                     <td style="white-space: nowrap;">${t.datum}</td>
                     <td><span style="${depotBadgeStyle} padding:3px 8px; border-radius:4px; font-size:0.85em; font-weight:bold;">${t.depotLabel}${t.sektor ? ' · ' + t.sektor : ''}</span></td>
                     <td style="${typColor}"><strong>${t.typ}</strong></td>
-                    <td><strong>${t.wertpapier}</strong><br><small style="color:#666">${t.isin || ''}</small></td>
+                    <td><strong>${t.wertpapier}</strong><br><small style="color:var(--text-muted)">${t.isin || ''}</small></td>
                     <td>${t.stueck}</td>
                     <td>${formatEUR(t.kurs)}</td>
                     <td>${formatEUR(t.gebuehr)}</td>
                     <td>${formatEUR(t.steuern)}</td>
                     <td>${gv}</td>
                     <td><strong>${formatEUR(t.gesamt)}</strong></td>
-                    <td style="font-size: 0.85em; color: #555;">${begruendung}</td>
+                    <td style="font-size: 0.85em; color: var(--text-secondary);">${begruendung}</td>
                 </tr>`;
             });
         }
@@ -1195,20 +1317,193 @@ html_template = """<!DOCTYPE html>
         document.getElementById('transaktionen').innerHTML = transHtml;
 
         // ==========================================
-        // Tab Logic
+        // ÜBERSICHT (Startseite: KPIs, Allokation, Risiko, Performance, Top-Mover/-Empfehlungen)
         // ==========================================
-        function openTab(evt, tabName) {
-            const tabcontent = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            const tablinks = document.getElementsByClassName("tab-button");
-            for (let i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
+        function svgSectorAllocation(sektoren, limitPct) {
+            if (!sektoren || !sektoren.length) return '<p style="color:var(--text-muted)">Keine Sektor-Daten vorhanden.</p>';
+            const w = 640, barH = 26, gap = 12, leftPad = 210, rightPad = 60, topPad = 22;
+            const colors = ['var(--series-1)','var(--series-2)','var(--series-3)','var(--series-4)','var(--series-5)','var(--series-6)','var(--series-7)','var(--series-8)'];
+            const max = Math.max(100, ...sektoren.map(s => s.anteil_pct), limitPct);
+            const chartW = w - leftPad - rightPad;
+            const scaleX = v => (v / max) * chartW;
+            const h = topPad + sektoren.length * (barH + gap) + 10;
+            let bars = '';
+            sektoren.forEach((s, i) => {
+                const y = topPad + i * (barH + gap);
+                const bw = Math.max(2, scaleX(s.anteil_pct));
+                const over = s.anteil_pct > limitPct;
+                bars += `
+                    <text x="${leftPad - 12}" y="${y + barH / 2 + 4}" text-anchor="end" font-size="13" fill="var(--text-secondary)">${s.sektor}</text>
+                    <rect x="${leftPad}" y="${y}" width="${bw}" height="${barH}" rx="4" fill="${colors[i % colors.length]}"></rect>
+                    <text x="${leftPad + bw + 8}" y="${y + barH / 2 + 4}" font-size="13" font-weight="${over ? 'bold' : 'normal'}" fill="${over ? 'var(--critical)' : 'var(--text-primary)'}">${s.anteil_pct.toFixed(1)}%${over ? ' ⚠' : ''}</text>
+                `;
+            });
+            const limitX = leftPad + scaleX(limitPct);
+            const limitLine = `
+                <line x1="${limitX}" y1="${topPad - 14}" x2="${limitX}" y2="${h - 8}" stroke="var(--critical)" stroke-width="2" stroke-dasharray="4 3"></line>
+                <text x="${limitX}" y="12" font-size="11" text-anchor="middle" fill="var(--critical)">Sektor-Limit ${limitPct}%</text>
+            `;
+            return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" role="img" aria-label="Sektor-Allokation">${bars}${limitLine}</svg>`;
         }
+
+        function svgPerformanceCompare(items) {
+            const w = 560, barH = 28, gap = 16, leftPad = 100, rightPad = 70, topPad = 10;
+            const chartW = w - leftPad - rightPad;
+            const cx = leftPad + chartW / 2;
+            const max = Math.max(0.5, ...items.map(it => Math.abs(it.value))) * 1.25;
+            const scale = v => (v / max) * (chartW / 2);
+            const h = topPad + items.length * (barH + gap) + 10;
+            let out = '';
+            items.forEach((it, i) => {
+                const y = topPad + i * (barH + gap);
+                const bw = scale(it.value);
+                const positive = it.value >= 0;
+                const x = positive ? cx : cx + bw;
+                const width = Math.max(Math.abs(bw), 2);
+                const col = positive ? 'var(--good)' : 'var(--critical)';
+                out += `
+                    <text x="${leftPad - 12}" y="${y + barH / 2 + 4}" font-size="13" text-anchor="end" fill="var(--text-secondary)">${it.label}</text>
+                    <rect x="${x}" y="${y}" width="${width}" height="${barH}" rx="4" fill="${col}"></rect>
+                    <text x="${positive ? x + width + 8 : x - 8}" y="${y + barH / 2 + 4}" font-size="13" font-weight="bold" text-anchor="${positive ? 'start' : 'end'}" fill="${col}">${it.value > 0 ? '+' : ''}${it.value.toFixed(2).replace('.', ',')}%</text>
+                `;
+            });
+            out += `<line x1="${cx}" y1="2" x2="${cx}" y2="${h - 6}" stroke="var(--baseline)" stroke-width="2"></line>`;
+            return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" role="img" aria-label="Performance-Vergleich">${out}</svg>`;
+        }
+
+        function renderOverview() {
+            const dep = depotData.depot || {};
+            const etf = depotData.etf_depot || {};
+            const gesamt = (dep.gesamtvermoegen || 0) + (etf.gesamtvermoegen || 0);
+            const start = (dep.startkapital || 0) + (etf.startkapital || 0);
+            const bar = (dep.aktueller_barbestand || 0) + (etf.aktueller_barbestand || 0);
+            const gv = gesamt - start;
+            const gvPct = start > 0 ? (gv / start) * 100 : 0;
+            const barquote = gesamt > 0 ? (bar / gesamt) * 100 : 0;
+
+            const risiko = dep.risiko || {};
+            const limits = risiko.limits || { position_pct: 20, sektor_pct: 30 };
+            const sektoren = (risiko.sektoren || []).slice().sort((a, b) => b.anteil_pct - a.anteil_pct);
+            const hinweise = risiko.hinweise || [];
+
+            const bench = dep.benchmark || {};
+            const rendite = bench.rendite_pct || {};
+
+            const allePositionen = (dep.positionen || []).map(p => Object.assign({ typ: 'Aktie' }, p))
+                .concat((etf.positionen || []).map(p => Object.assign({ typ: 'ETF' }, p)));
+            const gewinner = allePositionen.filter(p => p.gewinn_verlust !== undefined).slice().sort((a, b) => b.gewinn_verlust - a.gewinn_verlust).slice(0, 5);
+            const verlierer = allePositionen.filter(p => p.gewinn_verlust !== undefined).slice().sort((a, b) => a.gewinn_verlust - b.gewinn_verlust).slice(0, 5);
+
+            const topAktien = allRows.slice().filter(r => r.scores.composite !== null).sort((a, b) => (b.scores.composite || 0) - (a.scores.composite || 0)).slice(0, 5);
+            const etfRows = [];
+            Object.keys((etfRankingData && etfRankingData.sektoren) || {}).forEach(sek => {
+                (etfRankingData.sektoren[sek] || []).forEach(r => etfRows.push(Object.assign({ sektor: sek }, r)));
+            });
+            const topEtf = etfRows.slice().sort((a, b) => (b.composite || 0) - (a.composite || 0)).slice(0, 3);
+
+            let html = `
+                <div class="stats-grid">
+                    <div class="stat-card"><h4>Gesamtvermögen</h4><p>${formatEUR(gesamt)}</p><div class="delta ${gv >= 0 ? 'pos' : 'neg'}">${formatEURSign(gv)} (${gvPct >= 0 ? '+' : ''}${gvPct.toFixed(2)}%)</div></div>
+                    <div class="stat-card"><h4>Barbestand</h4><p>${formatEUR(bar)}</p><div class="delta" style="color:var(--text-muted)">${barquote.toFixed(1)}% Barquote</div></div>
+                    <div class="stat-card"><h4>Startkapital gesamt</h4><p>${formatEUR(start)}</p></div>
+                    <div class="stat-card"><h4>Rendite Depot</h4><p style="color:${(rendite.depot || 0) >= 0 ? 'var(--good-text)' : 'var(--critical-text)'}">${(rendite.depot || 0) >= 0 ? '+' : ''}${(rendite.depot || 0).toFixed(2)}%</p><div class="delta" style="color:var(--text-muted)">seit ${bench.anker ? bench.anker.datum : '–'}</div></div>
+                </div>
+
+                <div class="ov-grid">
+                    <div class="ov-card">
+                        <h3>📊 Sektor-Allokation (Aktien-Depot)</h3>
+                        ${svgSectorAllocation(sektoren, limits.sektor_pct)}
+                        ${hinweise.length ? hinweise.map(h => `<div class="risk-alert">${h}</div>`).join('') : `<div class="risk-alert ok">✓ Keine Sektor- oder Positionslimit-Verletzung erkannt (Limits: Position ${limits.position_pct}% · Sektor ${limits.sektor_pct}%).</div>`}
+                    </div>
+                    <div class="ov-card">
+                        <h3>📈 Performance vs. Vergleichsindizes</h3>
+                        ${svgPerformanceCompare([
+                            { label: 'Depot', value: rendite.depot || 0 },
+                            { label: 'DAX', value: rendite.dax || 0 },
+                            { label: 'MSCI World', value: rendite.msci_world || 0 }
+                        ])}
+                        <p style="color:var(--text-muted); font-size:0.82em; margin-bottom:0;">Stand: ${bench.stand || '–'}</p>
+                    </div>
+                </div>
+
+                <div class="ov-card">
+                    <h3>↕️ Top-Mover im Depot</h3>
+                    <div class="ov-movers">
+                        <div>
+                            <strong style="color:var(--good-text);">Gewinner</strong>
+                            <ul class="mover-list">
+                                ${gewinner.map(p => `<li><span>${p.wertpapier} <small style="color:var(--text-muted)">(${p.typ})</small></span><span style="color:var(--good-text); font-weight:bold;">${formatEURSign(p.gewinn_verlust)}</span></li>`).join('') || '<li>Keine Daten</li>'}
+                            </ul>
+                        </div>
+                        <div>
+                            <strong style="color:var(--critical-text);">Verlierer</strong>
+                            <ul class="mover-list">
+                                ${verlierer.map(p => `<li><span>${p.wertpapier} <small style="color:var(--text-muted)">(${p.typ})</small></span><span style="color:var(--critical-text); font-weight:bold;">${formatEURSign(p.gewinn_verlust)}</span></li>`).join('') || '<li>Keine Daten</li>'}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ov-card">
+                    <h3>🎯 Top-Empfehlungen (Composite-Score)</h3>
+                    <table class="teaser-table">
+                        <tr><th>Wertpapier</th><th>Sektor</th><th>Score</th><th>Signal</th></tr>
+                        ${topAktien.map(r => `<tr><td><strong>${r.wertpapier}</strong></td><td>${r.sektor}</td><td>${scoreCell(r.scores.composite)}</td><td>${getBadge((r.c && (r.c.signal || r.c.empfehlung)) || '-')}</td></tr>`).join('')}
+                    </table>
+                    ${topEtf.length ? `<p style="color:var(--text-muted); font-size:0.85em; margin-bottom:4px;">Top-ETFs: ${topEtf.map(r => `${r.wertpapier} (${Math.round(r.composite)})`).join(' · ')}</p>` : ''}
+                    <button class="teaser-cta" id="ov-goto-empfehlungen">Alle Empfehlungen ansehen →</button>
+                </div>
+            `;
+            document.getElementById('uebersicht').innerHTML = html;
+            document.getElementById('ov-goto-empfehlungen').addEventListener('click', () => openSection('empfehlungen'));
+        }
+
+        renderOverview();
+
+        // ==========================================
+        // Navigation: Top-Sections + Sub-Tabs + Dark Mode
+        // ==========================================
+        function openSection(name) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.top-nav .tab-button').forEach(b => b.classList.remove('active'));
+            document.getElementById(name).classList.add('active');
+            document.querySelector(`.top-nav .tab-button[data-section="${name}"]`).classList.add('active');
+        }
+        document.querySelectorAll('.top-nav .tab-button[data-section]').forEach(btn => {
+            btn.addEventListener('click', () => openSection(btn.dataset.section));
+        });
+        document.querySelectorAll('.section').forEach(sec => {
+            sec.querySelectorAll('.sub-tab-button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    sec.querySelectorAll('.sub-content').forEach(c => c.classList.remove('active'));
+                    sec.querySelectorAll('.sub-tab-button').forEach(b => b.classList.remove('active'));
+                    document.getElementById(btn.dataset.sub).classList.add('active');
+                    btn.classList.add('active');
+                });
+            });
+        });
+
+        (function initTheme() {
+            const toggle = document.getElementById('theme-toggle');
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    toggle.textContent = '☀️ Light Mode';
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    toggle.textContent = '🌙 Dark Mode';
+                }
+            }
+            const saved = localStorage.getItem('vpd-theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+            toggle.addEventListener('click', () => {
+                const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                const next = isDark ? 'light' : 'dark';
+                applyTheme(next);
+                localStorage.setItem('vpd-theme', next);
+            });
+        })();
     </script>
 </body>
 </html>"""

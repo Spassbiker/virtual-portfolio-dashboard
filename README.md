@@ -22,7 +22,10 @@ Damit das Dashboard für dich unter einer URL (wie eine echte Webseite) auf GitH
 
 ## 📊 Aufbau der `index.html`
 
-Das Dashboard ist als cleane "Single-Page Application" (SPA) in einer einzigen HTML-Datei geschrieben. Es beinhaltet drei Tabs:
-- **Chartanalyse:** Zeigt die Kauf-/Halten-/Verkauf-Empfehlungen der Charttechnik je Sektor.
-- **Fundamentalanalyse:** Eine detaillierte Übersicht aller wichtigen Kennzahlen und Fundamentaldaten der 50 Wertpapiere.
-- **Depot Status:** Live-Ansicht des Kassenbestands, des Portfoliowerts und der vollzogenen autonomen Transaktionen des Portfoliomanagers.
+Das Dashboard ist als cleane "Single-Page Application" (SPA) in einer einzigen HTML-Datei geschrieben, generiert von `src/build_dashboard.py`. Es ist in vier Bereiche gegliedert:
+- **🏠 Übersicht:** Startseite mit Gesamtvermögen, Sektor-Allokation (inkl. Limit-Warnungen), Performance vs. DAX/MSCI World, Top-Mover und Top-Empfehlungen.
+- **💼 Portfolio:** Aktien-Depot, ETF-Sleeve und Transaktionshistorie (je als Unter-Tab).
+- **🎯 Empfehlungen:** Composite-Score-Ranking für Aktien und ETFs (je als Unter-Tab).
+- **🔬 Analyse:** Chartanalyse, Fundamentalanalyse und KI-Sentiment (je als Unter-Tab).
+
+Enthält einen Dark-Mode-Umschalter (Präferenz wird im Browser gespeichert) sowie Sektor- und Performance-Charts als Inline-SVG.
