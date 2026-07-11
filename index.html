@@ -4486,7 +4486,8 @@
         // KI-SENTIMENT (Stufe 1 + 2)
         // ==========================================
         (function renderSentiment() {
-            // ISIN -> Name aus Chart-/Fundamentaldaten ableiten.
+            // ISIN -> Name aus Chart-/Fundamentaldaten ableiten (deckt Aktien und
+            // die ETF-Sleeve-ETFs ab, da diese ebenfalls in den Sektor-Katalogen stehen).
             const nameByIsin = {};
             [chartData, fundaData].forEach(ds => {
                 if (ds && ds.sektoren) Object.keys(ds.sektoren).forEach(sek => {
@@ -4495,21 +4496,35 @@
                     });
                 });
             });
+            (depotData.etf_depot && depotData.etf_depot.positionen || []).forEach(p => {
+                if (p.isin && !nameByIsin[p.isin]) nameByIsin[p.isin] = p.wertpapier || p.isin;
+            });
             const depotIsinSet = new Set((depotData.depot.positionen || []).map(p => p.isin));
-            const isins = Object.keys(sentimentScores);
-            const gen = (sentimentData && sentimentData.generated_at) ? sentimentData.generated_at : null;
+            (depotData.etf_depot && depotData.etf_depot.positionen || []).forEach(p => {
+                if (p.isin) depotIsinSet.add(p.isin);
+            });
 
-            let html = `<h2>🤖 KI-Sentiment <small style="font-size:0.5em; color:#6c757d;">(News-Stimmung pro Wert, −3 bis +3 · fließt als dritter Score-Faktor in die Trade-Entscheidung)</small></h2>`;
+            // Aktien- und ETF-Sentiment zu einer Liste zusammenführen (gleiche Feldform:
+            // sentiment_score, begruendung; ETFs haben zusätzlich `typ`, Aktien ggf. `veto`).
+            const combined = {};
+            Object.keys(sentimentScores).forEach(isin => { combined[isin] = sentimentScores[isin]; });
+            Object.keys(etfSentimentScores).forEach(isin => { combined[isin] = etfSentimentScores[isin]; });
+            const isins = Object.keys(combined);
+            const gen = (sentimentData && sentimentData.generated_at) ? sentimentData.generated_at : null;
+            const etfGen = (etfSentimentData && etfSentimentData.generated_at) ? etfSentimentData.generated_at : null;
+
+            let html = `<h2>🤖 KI-Sentiment <small style="font-size:0.5em; color:#6c757d;">(News-Stimmung pro Wert, −3 bis +3 · bei Aktien dritter Score-Faktor in der Trade-Entscheidung, bei ETFs rein informativ)</small></h2>`;
             if (!isins.length) {
                 html += `<p style="color:#6c757d;">Noch keine KI-Sentiment-Daten vorhanden. Werden beim nächsten Portfoliomanager-Lauf erzeugt (Schritt 5: news_raw.json → sentiment_scores.json).</p>`;
                 document.getElementById('sentiment').innerHTML = html;
                 return;
             }
-            if (gen) html += `<p style="color:#6c757d; font-size:0.9em;">Stand: ${gen}</p>`;
+            if (gen) html += `<p style="color:#6c757d; font-size:0.9em;">Stand Aktien: ${gen}</p>`;
+            if (etfGen) html += `<p style="color:#6c757d; font-size:0.9em;">Stand ETFs: ${etfGen}</p>`;
 
             // Sortiert: Veto zuerst, dann nach Score absteigend.
             isins.sort((a, b) => {
-                const sa = sentimentScores[a], sb = sentimentScores[b];
+                const sa = combined[a], sb = combined[b];
                 if (!!sb.veto - !!sa.veto) return (!!sb.veto) - (!!sa.veto);
                 return (sb.sentiment_score || 0) - (sa.sentiment_score || 0);
             });
@@ -4518,20 +4533,23 @@
                 <tr>
                     <th>Wertpapier</th>
                     <th>ISIN</th>
+                    <th>Typ</th>
                     <th>Im Depot?</th>
                     <th>Sentiment</th>
                     <th>Begründung</th>
                 </tr>`;
             isins.forEach(isin => {
-                const s = sentimentScores[isin];
+                const s = combined[isin];
+                const isEtf = !!etfSentimentScores[isin];
                 const name = nameByIsin[isin] || '<span style="color:#adb5bd">?</span>';
                 const inDepot = depotIsinSet.has(isin)
                     ? '<span class="badge buy" style="min-width:auto;">✓</span>' : '';
                 html += `<tr>
                     <td><strong>${name}</strong></td>
                     <td style="color:#666;">${isin}</td>
+                    <td style="color:#6c757d;">${isEtf ? 'ETF' : 'Aktie'}</td>
                     <td>${inDepot}</td>
-                    <td>${sentimentBadge(isin)}</td>
+                    <td>${isEtf ? etfSentimentBadge(isin) : sentimentBadge(isin)}</td>
                     <td style="font-size:0.9em;">${(s.begruendung || '').replace(/</g,'&lt;')}</td>
                 </tr>`;
             });
