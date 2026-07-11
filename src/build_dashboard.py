@@ -3,7 +3,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from paths import CHART, FUNDA, DEPOT, SENT, ETF_SENT, INDEX_HTML
+from paths import CHART, FUNDA, DEPOT, SENT, ETF_SENT, ETF_RANKING, INDEX_HTML
 
 
 def _read_text(path):
@@ -22,6 +22,10 @@ sentiment_data = _read_text(SENT) if os.path.exists(SENT) else '{"scores": {}}'
 # ETF-Sentiment (Phase 1+2, optional): analog zum Aktien-Sentiment, fehlt die
 # Datei zeigt das Dashboard einfach keine Sentiment-Spalte im ETF-Sleeve.
 etf_sentiment_data = _read_text(ETF_SENT) if os.path.exists(ETF_SENT) else '{"scores": {}}'
+
+# ETF-Ranking (Composite-Score über den gesamten Katalog, siehe etf_ranking.py):
+# fehlt die Datei (z.B. vor dem ersten Lauf), zeigt der Tab einfach nichts an.
+etf_ranking_data = _read_text(ETF_RANKING) if os.path.exists(ETF_RANKING) else '{"sektoren": {}}'
 
 build_date = datetime.date.today().strftime("%d.%m.%Y")
 
@@ -106,6 +110,7 @@ html_template = """<!DOCTYPE html>
             <button class="tab-button active" onclick="openTab(event, 'ranking')">🎯 Empfehlungen</button>
             <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
             <button class="tab-button" onclick="openTab(event, 'etfsleeve')">📊 ETF-Sleeve</button>
+            <button class="tab-button" onclick="openTab(event, 'etfranking')">🌐 ETF-Empfehlungen</button>
             <button class="tab-button" onclick="openTab(event, 'chart')">Chartanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'sentiment')">🤖 KI-Sentiment</button>
@@ -115,6 +120,7 @@ html_template = """<!DOCTYPE html>
         <div id="ranking" class="tab-content active"></div>
         <div id="depot" class="tab-content"></div>
         <div id="etfsleeve" class="tab-content"></div>
+        <div id="etfranking" class="tab-content"></div>
         <div id="chart" class="tab-content"></div>
         <div id="funda" class="tab-content"></div>
         <div id="sentiment" class="tab-content"></div>
@@ -128,6 +134,7 @@ html_template = """<!DOCTYPE html>
         const sentimentData = SENTIMENT_DATA_PLACEHOLDER;
         const sentimentScores = (sentimentData && sentimentData.scores) ? sentimentData.scores : {};
         const etfSentimentData = ETF_SENTIMENT_DATA_PLACEHOLDER;
+        const etfRankingData = ETF_RANKING_DATA_PLACEHOLDER;
         const etfSentimentScores = (etfSentimentData && etfSentimentData.scores) ? etfSentimentData.scores : {};
 
         function getSentiment(isin) {
@@ -780,6 +787,161 @@ html_template = """<!DOCTYPE html>
         })();
 
         // ==========================================
+        // ETF-EMPFEHLUNGS-RANKING (Composite-Score über den gesamten Katalog)
+        // ==========================================
+        (function renderEtfRanking() {
+            const sektoren = (etfRankingData && etfRankingData.sektoren) || {};
+            const rows = [];
+            Object.keys(sektoren).forEach(sektor => {
+                sektoren[sektor].forEach(r => rows.push(Object.assign({ sektor }, r)));
+            });
+            if (!rows.length) {
+                document.getElementById('etfranking').innerHTML = '<p style="color:#6c757d;">Noch kein ETF-Ranking berechnet (etf_ranking.py).</p>';
+                return;
+            }
+
+            const bucketCls = { CORE: 'buy', SATELLITE: 'hold', BEOBACHTEN: 'hold', MEIDEN: 'sell' };
+            function bucketBadge(b) {
+                return `<span class="badge ${bucketCls[b] || 'hold'}">${b}</span>`;
+            }
+
+            const etfSectors = ['Alle', ...new Set(rows.map(r => r.sektor))];
+            const buckets = ['Alle', 'CORE', 'SATELLITE', 'BEOBACHTEN', 'MEIDEN'];
+            let etfUiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', bucket: 'Alle', minScore: 0 };
+
+            function renderTab() {
+                const sectorOpts = etfSectors.map(s => `<option value="${s}"${etfUiState.sektor===s?' selected':''}>${s}</option>`).join('');
+                const bucketOpts = buckets.map(b => `<option value="${b}"${etfUiState.bucket===b?' selected':''}>${b}</option>`).join('');
+                const genAt = etfRankingData.generated_at ? `Stand: ${etfRankingData.generated_at}` : '';
+                const header = `
+                    <h2>🌐 ETF-Empfehlungs-Ranking <small style="font-size:0.5em; color:#6c757d;">${genAt}</small></h2>
+                    <div class="weights-info">
+                        <strong>Composite-Score</strong> — Gewichtung: Momentum 35 % (Trend/Return/RSI) · Risiko 25 % (Volatilität/Drawdown/Ertrag-Risiko) · Sentiment 20 % · Struktur 20 % (TER/Fondsgröße).
+                        <br>
+                        <strong>Bucket</strong>: CORE ≥75 (basisallokationstauglich) · SATELLITE 60–74 (taktisch beimischen) · BEOBACHTEN 45–59 · MEIDEN &lt;45 oder Fondsgröße &lt;50 Mio. €.
+                        Peer-Rang = Platzierung innerhalb des Themen-Sektors.
+                    </div>
+                    <div class="filter-bar">
+                        <div class="filter-group">
+                            <label>Sektor</label>
+                            <select id="ef-sektor">${sectorOpts}</select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Bucket</label>
+                            <select id="ef-bucket">${bucketOpts}</select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Min. Score: <span id="ef-minScore-val">${etfUiState.minScore}</span></label>
+                            <input type="range" id="ef-minScore" min="0" max="100" step="5" value="${etfUiState.minScore}">
+                        </div>
+                        <div class="filter-group">
+                            <button class="filter-reset" id="ef-reset">Filter zurücksetzen</button>
+                        </div>
+                    </div>
+                    <div class="filter-count" id="ef-count"></div>
+                `;
+
+                const cols = [
+                    { key: 'wertpapier', label: 'ETF', sortable: true },
+                    { key: 'sektor', label: 'Sektor', sortable: true },
+                    { key: 'composite', label: 'Score', sortable: true },
+                    { key: 'momentum', label: 'Momentum', sortable: true },
+                    { key: 'risiko', label: 'Risiko', sortable: true },
+                    { key: 'sentiment', label: 'Sentiment', sortable: true },
+                    { key: 'struktur', label: 'Struktur', sortable: true },
+                    { key: 'ter', label: 'TER', sortable: true },
+                    { key: 'aum', label: 'AUM Mio.€', sortable: true },
+                    { key: 'peer', label: 'Peer-Rang', sortable: false },
+                    { key: 'bucket', label: 'Bucket', sortable: false }
+                ];
+                const thHtml = cols.map(c => {
+                    const active = c.sortable && etfUiState.sort === c.key;
+                    const arrow = active ? (etfUiState.dir === 'asc' ? '▲' : '▼') : '↕';
+                    return c.sortable
+                        ? `<th class="sortable${active?' sorted':''}" data-sort="${c.key}">${c.label}<span class="arrow">${arrow}</span></th>`
+                        : `<th>${c.label}</th>`;
+                }).join('');
+
+                document.getElementById('etfranking').innerHTML = header + `<table id="etf-ranking-table"><thead><tr>${thHtml}</tr></thead><tbody id="etf-ranking-body"></tbody></table>`;
+
+                document.getElementById('ef-sektor').addEventListener('change', e => { etfUiState.sektor = e.target.value; refreshBody(); });
+                document.getElementById('ef-bucket').addEventListener('change', e => { etfUiState.bucket = e.target.value; refreshBody(); });
+                document.getElementById('ef-minScore').addEventListener('input', e => {
+                    etfUiState.minScore = Number(e.target.value);
+                    document.getElementById('ef-minScore-val').textContent = etfUiState.minScore;
+                    refreshBody();
+                });
+                document.getElementById('ef-reset').addEventListener('click', () => {
+                    etfUiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', bucket: 'Alle', minScore: 0 };
+                    renderTab();
+                });
+                document.querySelectorAll('#etf-ranking-table th.sortable').forEach(th => {
+                    th.addEventListener('click', () => {
+                        const k = th.dataset.sort;
+                        if (etfUiState.sort === k) etfUiState.dir = etfUiState.dir === 'asc' ? 'desc' : 'asc';
+                        else { etfUiState.sort = k; etfUiState.dir = (k === 'wertpapier' || k === 'sektor') ? 'asc' : 'desc'; }
+                        renderTab();
+                    });
+                });
+
+                refreshBody();
+            }
+
+            function refreshBody() {
+                let filtered = rows.slice();
+                if (etfUiState.sektor !== 'Alle') filtered = filtered.filter(r => r.sektor === etfUiState.sektor);
+                if (etfUiState.bucket !== 'Alle') filtered = filtered.filter(r => r.bucket === etfUiState.bucket);
+                if (etfUiState.minScore > 0) filtered = filtered.filter(r => (r.composite || 0) >= etfUiState.minScore);
+
+                const getVal = r => {
+                    switch (etfUiState.sort) {
+                        case 'wertpapier': return r.wertpapier || '';
+                        case 'sektor': return r.sektor || '';
+                        case 'composite': return r.composite;
+                        case 'momentum': return r.momentum.score;
+                        case 'risiko': return r.risiko.score;
+                        case 'sentiment': return r.sentiment.score;
+                        case 'struktur': return r.struktur.score;
+                        case 'ter': return r.struktur.ter;
+                        case 'aum': return r.struktur.aum_mio_eur;
+                        default: return 0;
+                    }
+                };
+                filtered.sort((a, b) => {
+                    const av = getVal(a), bv = getVal(b);
+                    if (av === null || av === undefined) return 1;
+                    if (bv === null || bv === undefined) return -1;
+                    if (typeof av === 'string') return etfUiState.dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
+                    return etfUiState.dir === 'asc' ? av - bv : bv - av;
+                });
+
+                const body = filtered.map(r => {
+                    const warnBadge = (r.warnings && r.warnings.length)
+                        ? `<span class="data-warning" title="${r.warnings.join(' | ').replace(/"/g,'&quot;')}">⚠️</span>`
+                        : '';
+                    return `<tr>
+                        <td><strong>${r.wertpapier}</strong>${warnBadge}<br><small style="color:#666">${r.isin}</small></td>
+                        <td>${r.sektor}</td>
+                        <td>${scoreCell(r.composite)}</td>
+                        <td>${subscoreBar(r.momentum.score)}</td>
+                        <td>${subscoreBar(r.risiko.score)}</td>
+                        <td>${subscoreBar(r.sentiment.score)}</td>
+                        <td>${subscoreBar(r.struktur.score)}</td>
+                        <td>${r.struktur.ter !== null && r.struktur.ter !== undefined ? r.struktur.ter.toFixed(2) + '%' : '-'}</td>
+                        <td>${r.struktur.aum_mio_eur !== null && r.struktur.aum_mio_eur !== undefined ? r.struktur.aum_mio_eur.toLocaleString('de-DE') : '-'}</td>
+                        <td style="color:#666;">${r.peer_rank}/${r.peer_total}</td>
+                        <td>${bucketBadge(r.bucket)}</td>
+                    </tr>`;
+                }).join('');
+
+                document.getElementById('etf-ranking-body').innerHTML = body || '<tr><td colspan="11" style="text-align:center; padding:30px; color:#6c757d;">Keine ETFs passen zu den aktuellen Filtern.</td></tr>';
+                document.getElementById('ef-count').textContent = `${filtered.length} von ${rows.length} ETFs angezeigt`;
+            }
+
+            renderTab();
+        })();
+
+        // ==========================================
         // KI-SENTIMENT (Stufe 1 + 2)
         // ==========================================
         (function renderSentiment() {
@@ -1018,6 +1180,7 @@ html_output = html_template.replace("CHART_DATA_PLACEHOLDER", chart_data)
 html_output = html_output.replace("FUNDA_DATA_PLACEHOLDER", funda_data)
 html_output = html_output.replace("DEPOT_DATA_PLACEHOLDER", depot_data)
 html_output = html_output.replace("ETF_SENTIMENT_DATA_PLACEHOLDER", etf_sentiment_data)
+html_output = html_output.replace("ETF_RANKING_DATA_PLACEHOLDER", etf_ranking_data)
 html_output = html_output.replace("SENTIMENT_DATA_PLACEHOLDER", sentiment_data)
 html_output = html_output.replace("BUILD_DATE_PLACEHOLDER", build_date)
 

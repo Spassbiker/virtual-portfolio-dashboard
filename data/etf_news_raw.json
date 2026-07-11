@@ -365,10 +365,10 @@
       "error": null
     },
     "IE00BYVQ9F29": {
-      "name": "iShares NASDAQ US Tech UCITS ETF",
+      "name": "iShares Nasdaq 100 UCITS ETF EUR Hedged Acc",
       "ticker": "NQSE.DE",
       "typ": "A",
-      "thema": "nasdaq",
+      "thema": "nasdaq 100 tech",
       "headlines": [
         {
           "title": "Stock market today: Dow closes above 52,000 for first time, S&P 500 and Nasdaq rally as tech gains",
@@ -524,10 +524,10 @@
       "error": null
     },
     "IE00BM67HN09": {
-      "name": "iShares MSCI World Energy Sector UCITS ETF",
+      "name": "Xtrackers MSCI World Consumer Staples UCITS ETF 1C",
       "ticker": "XDWS.DE",
       "typ": "B",
-      "thema": "energy",
+      "thema": "consumer staples",
       "headlines": [
         {
           "title": "Why Plug Power (PLUG) Stock Is Nosediving",
@@ -866,10 +866,10 @@
       "error": null
     },
     "DE000A0H08H3": {
-      "name": "iShares STOXX Europe 600 Utilities UCITS ETF (DE)",
+      "name": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
       "ticker": "EXH3.DE",
       "typ": "B",
-      "thema": "utilities",
+      "thema": "food & beverage",
       "headlines": [
         {
           "title": "XLU vs. VPU: Which Utilities ETF Best Powers the AI Data-Center Boom?",

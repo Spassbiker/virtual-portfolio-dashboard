@@ -554,7 +554,7 @@
     "positionen": [
       {
         "sektor": "Energie",
-        "wertpapier": "iShares MSCI World Energy Sector UCITS ETF",
+        "wertpapier": "Xtrackers MSCI World Consumer Staples UCITS ETF 1C",
         "isin": "IE00BM67HN09",
         "ticker": "XDWS.DE",
         "stueck": 5,
@@ -758,7 +758,7 @@
       },
       {
         "sektor": "Satellitentechnik",
-        "wertpapier": "iShares NASDAQ US Tech UCITS ETF",
+        "wertpapier": "iShares Nasdaq 100 UCITS ETF EUR Hedged Acc",
         "isin": "IE00BYVQ9F29",
         "ticker": "NQSE.DE",
         "stueck": 5,
@@ -854,7 +854,7 @@
       },
       {
         "sektor": "Versorger",
-        "wertpapier": "iShares STOXX Europe 600 Utilities UCITS ETF (DE)",
+        "wertpapier": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
         "isin": "DE000A0H08H3",
         "ticker": "EXH3.DE",
         "stueck": 4,

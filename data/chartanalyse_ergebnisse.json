@@ -152,7 +152,7 @@
         "legacy_widerstand": 11.64
       },
       {
-        "wertpapier": "iShares MSCI World Energy Sector UCITS ETF",
+        "wertpapier": "Xtrackers MSCI World Consumer Staples UCITS ETF 1C",
         "empfehlung": "Halten",
         "begruendung": "Kurs 47.98 vs. SMA50 47.44 / SMA200 45.92 → Aufwärtstrend. RSI 51, MACD Neutral.",
         "isin": "IE00BM67HN09",
@@ -1074,7 +1074,7 @@
         "legacy_widerstand": 6.26
       },
       {
-        "wertpapier": "iShares NASDAQ US Tech UCITS ETF",
+        "wertpapier": "iShares Nasdaq 100 UCITS ETF EUR Hedged Acc",
         "empfehlung": "Halten",
         "begruendung": "Kurs 17.26 vs. SMA50 17.20 / SMA200 15.40 → Aufwärtstrend. RSI 52, MACD Neutral.",
         "isin": "IE00BYVQ9F29",
@@ -1753,7 +1753,7 @@
         "legacy_widerstand": 6.26
       },
       {
-        "wertpapier": "iShares STOXX Europe 600 Utilities UCITS ETF (DE)",
+        "wertpapier": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
         "empfehlung": "Halten",
         "begruendung": "Kurs 66.81 vs. SMA50 64.40 / SMA200 62.76 → Aufwärtstrend. RSI 56, MACD Neutral.",
         "isin": "DE000A0H08H3",

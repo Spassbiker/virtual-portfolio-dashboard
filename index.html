@@ -79,6 +79,7 @@
             <button class="tab-button active" onclick="openTab(event, 'ranking')">🎯 Empfehlungen</button>
             <button class="tab-button" onclick="openTab(event, 'depot')">Depot Status</button>
             <button class="tab-button" onclick="openTab(event, 'etfsleeve')">📊 ETF-Sleeve</button>
+            <button class="tab-button" onclick="openTab(event, 'etfranking')">🌐 ETF-Empfehlungen</button>
             <button class="tab-button" onclick="openTab(event, 'chart')">Chartanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'funda')">Fundamentalanalyse</button>
             <button class="tab-button" onclick="openTab(event, 'sentiment')">🤖 KI-Sentiment</button>
@@ -88,6 +89,7 @@
         <div id="ranking" class="tab-content active"></div>
         <div id="depot" class="tab-content"></div>
         <div id="etfsleeve" class="tab-content"></div>
+        <div id="etfranking" class="tab-content"></div>
         <div id="chart" class="tab-content"></div>
         <div id="funda" class="tab-content"></div>
         <div id="sentiment" class="tab-content"></div>
@@ -249,7 +251,7 @@
         "legacy_widerstand": 11.64
       },
       {
-        "wertpapier": "iShares MSCI World Energy Sector UCITS ETF",
+        "wertpapier": "Xtrackers MSCI World Consumer Staples UCITS ETF 1C",
         "empfehlung": "Halten",
         "begruendung": "Kurs 47.98 vs. SMA50 47.44 / SMA200 45.92 → Aufwärtstrend. RSI 51, MACD Neutral.",
         "isin": "IE00BM67HN09",
@@ -1171,7 +1173,7 @@
         "legacy_widerstand": 6.26
       },
       {
-        "wertpapier": "iShares NASDAQ US Tech UCITS ETF",
+        "wertpapier": "iShares Nasdaq 100 UCITS ETF EUR Hedged Acc",
         "empfehlung": "Halten",
         "begruendung": "Kurs 17.26 vs. SMA50 17.20 / SMA200 15.40 → Aufwärtstrend. RSI 52, MACD Neutral.",
         "isin": "IE00BYVQ9F29",
@@ -1850,7 +1852,7 @@
         "legacy_widerstand": 6.26
       },
       {
-        "wertpapier": "iShares STOXX Europe 600 Utilities UCITS ETF (DE)",
+        "wertpapier": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
         "empfehlung": "Halten",
         "begruendung": "Kurs 66.81 vs. SMA50 64.40 / SMA200 62.76 → Aufwärtstrend. RSI 56, MACD Neutral.",
         "isin": "DE000A0H08H3",
@@ -3298,7 +3300,7 @@
     "positionen": [
       {
         "sektor": "Energie",
-        "wertpapier": "iShares MSCI World Energy Sector UCITS ETF",
+        "wertpapier": "Xtrackers MSCI World Consumer Staples UCITS ETF 1C",
         "isin": "IE00BM67HN09",
         "ticker": "XDWS.DE",
         "stueck": 5,
@@ -3502,7 +3504,7 @@
       },
       {
         "sektor": "Satellitentechnik",
-        "wertpapier": "iShares NASDAQ US Tech UCITS ETF",
+        "wertpapier": "iShares Nasdaq 100 UCITS ETF EUR Hedged Acc",
         "isin": "IE00BYVQ9F29",
         "ticker": "NQSE.DE",
         "stueck": 5,
@@ -3598,7 +3600,7 @@
       },
       {
         "sektor": "Versorger",
-        "wertpapier": "iShares STOXX Europe 600 Utilities UCITS ETF (DE)",
+        "wertpapier": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
         "isin": "DE000A0H08H3",
         "ticker": "EXH3.DE",
         "stueck": 4,
@@ -3831,6 +3833,1409 @@
   }
 }
 ;
+        const etfRankingData = {
+  "generated_at": "2026-07-11 14:58",
+  "gewichtung": {
+    "momentum": 0.35,
+    "risiko": 0.25,
+    "sentiment": 0.2,
+    "struktur": 0.2
+  },
+  "sektoren": {
+    "Energie": [
+      {
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "aktueller_kurs": 86.74,
+        "composite": 73.5,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 83.1,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 49.4
+          },
+          "return_12m_pct": 33.7,
+          "sma_50": 85.381,
+          "sma_200": 74.392,
+          "rsi_14": 49.47
+        },
+        "risiko": {
+          "score": 63.7,
+          "parts": {
+            "volatilitaet": 28.1,
+            "drawdown": 66.1,
+            "ertrag_risiko": 96.9
+          },
+          "volatilitaet_pct": 28.75,
+          "max_drawdown_pct": -16.95
+        },
+        "sentiment": {
+          "score": 50.0,
+          "raw": null
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 1930
+        },
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "peer_rank": 1,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BM67HN09",
+        "ticker": "XDWS.DE",
+        "aktueller_kurs": 47.98,
+        "composite": 69.0,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 71.8,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 63.9,
+            "rsi": 51.6
+          },
+          "return_12m_pct": 8.4,
+          "sma_50": 47.439,
+          "sma_200": 45.919,
+          "rsi_14": 51.31
+        },
+        "risiko": {
+          "score": 75.5,
+          "parts": {
+            "volatilitaet": 67.9,
+            "drawdown": 82.4,
+            "ertrag_risiko": 76.1
+          },
+          "volatilitaet_pct": 12.83,
+          "max_drawdown_pct": -8.78
+        },
+        "sentiment": {
+          "score": 40,
+          "raw": -1
+        },
+        "struktur": {
+          "score": 85.0,
+          "parts": {
+            "ter": 85.0,
+            "aum": 85.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 793
+        },
+        "wertpapier": "Xtrackers MSCI World Consumer Staples UCITS ETF 1C",
+        "peer_rank": 2,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BM67HS53",
+        "ticker": "XDWM.DE",
+        "aktueller_kurs": 66.56,
+        "composite": 69.0,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 66.7,
+          "parts": {
+            "trend": 65.0,
+            "return_12m": 89.4,
+            "rsi": 45.6
+          },
+          "return_12m_pct": 23.6,
+          "sma_50": 67.874,
+          "sma_200": 63.347,
+          "rsi_14": 46.36
+        },
+        "risiko": {
+          "score": 74.8,
+          "parts": {
+            "volatilitaet": 52.2,
+            "drawdown": 72.7,
+            "ertrag_risiko": 99.5
+          },
+          "volatilitaet_pct": 19.12,
+          "max_drawdown_pct": -13.67
+        },
+        "sentiment": {
+          "score": 50,
+          "raw": 0
+        },
+        "struktur": {
+          "score": 85.0,
+          "parts": {
+            "ter": 85.0,
+            "aum": 85.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 641
+        },
+        "wertpapier": "Xtrackers MSCI World Materials UCITS ETF",
+        "peer_rank": 3,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00B1XNHC34",
+        "ticker": "IQQH.DE",
+        "aktueller_kurs": 9.638,
+        "composite": 62.4,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 67.7,
+          "parts": {
+            "trend": 65.0,
+            "return_12m": 100,
+            "rsi": 38.2
+          },
+          "return_12m_pct": 44.4,
+          "sma_50": 10.533,
+          "sma_200": 9.146,
+          "rsi_14": 40.15
+        },
+        "risiko": {
+          "score": 65.0,
+          "parts": {
+            "volatilitaet": 32.1,
+            "drawdown": 63.1,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 27.17,
+          "max_drawdown_pct": -18.47
+        },
+        "sentiment": {
+          "score": 40,
+          "raw": -1
+        },
+        "struktur": {
+          "score": 72.5,
+          "parts": {
+            "ter": 45.0,
+            "aum": 100.0
+          },
+          "ter": 0.65,
+          "aum_mio_eur": 2989
+        },
+        "wertpapier": "iShares Global Clean Energy Transition UCITS ETF",
+        "peer_rank": 4,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE000NDWFGA5",
+        "ticker": "URNU.DE",
+        "aktueller_kurs": 22.71,
+        "composite": 51.3,
+        "bucket": "BEOBACHTEN",
+        "warnings": [],
+        "momentum": {
+          "score": 44.2,
+          "parts": {
+            "trend": 0.0,
+            "return_12m": 93.4,
+            "rsi": 39.1
+          },
+          "return_12m_pct": 26.1,
+          "sma_50": 25.318,
+          "sma_200": 25.989,
+          "rsi_14": 40.9
+        },
+        "risiko": {
+          "score": 35.5,
+          "parts": {
+            "volatilitaet": 0,
+            "drawdown": 35.5,
+            "ertrag_risiko": 70.9
+          },
+          "volatilitaet_pct": 49.75,
+          "max_drawdown_pct": -32.27
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 65.0,
+          "parts": {
+            "ter": 45.0,
+            "aum": 85.0
+          },
+          "ter": 0.65,
+          "aum_mio_eur": 535
+        },
+        "wertpapier": "Global X Uranium UCITS ETF",
+        "peer_rank": 5,
+        "peer_total": 5
+      }
+    ],
+    "Verteidigung": [
+      {
+        "isin": "IE00BP3QZ601",
+        "ticker": "IS3Q.DE",
+        "aktueller_kurs": 77.25,
+        "composite": 79.7,
+        "bucket": "CORE",
+        "warnings": [],
+        "momentum": {
+          "score": 84.3,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 86.4,
+            "rsi": 66.6
+          },
+          "return_12m_pct": 21.8,
+          "sma_50": 74.711,
+          "sma_200": 70.049,
+          "rsi_14": 63.85
+        },
+        "risiko": {
+          "score": 86.7,
+          "parts": {
+            "volatilitaet": 72.9,
+            "drawdown": 87.3,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 10.85,
+          "max_drawdown_pct": -6.33
+        },
+        "sentiment": {
+          "score": 50.0,
+          "raw": null
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 4943
+        },
+        "wertpapier": "iShares Edge MSCI World Quality Factor UCITS ETF",
+        "peer_rank": 1,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "aktueller_kurs": 86.74,
+        "composite": 73.5,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 83.1,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 49.4
+          },
+          "return_12m_pct": 33.7,
+          "sma_50": 85.381,
+          "sma_200": 74.392,
+          "rsi_14": 49.47
+        },
+        "risiko": {
+          "score": 63.7,
+          "parts": {
+            "volatilitaet": 28.1,
+            "drawdown": 66.1,
+            "ertrag_risiko": 96.9
+          },
+          "volatilitaet_pct": 28.75,
+          "max_drawdown_pct": -16.95
+        },
+        "sentiment": {
+          "score": 50.0,
+          "raw": null
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 1930
+        },
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "peer_rank": 2,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE000OJ5TQP4",
+        "ticker": "ASWC.DE",
+        "aktueller_kurs": 17.936,
+        "composite": 67.4,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 75.4,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 75.8,
+            "rsi": 50.4
+          },
+          "return_12m_pct": 15.5,
+          "sma_50": 17.633,
+          "sma_200": 16.957,
+          "rsi_14": 50.35
+        },
+        "risiko": {
+          "score": 49.9,
+          "parts": {
+            "volatilitaet": 24.5,
+            "drawdown": 54.7,
+            "ertrag_risiko": 70.5
+          },
+          "volatilitaet_pct": 30.22,
+          "max_drawdown_pct": -22.64
+        },
+        "sentiment": {
+          "score": 60,
+          "raw": 1
+        },
+        "struktur": {
+          "score": 82.5,
+          "parts": {
+            "ter": 65.0,
+            "aum": 100.0
+          },
+          "ter": 0.49,
+          "aum_mio_eur": 2777
+        },
+        "wertpapier": "HANetf Future of Defence UCITS ETF",
+        "peer_rank": 3,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE0002Y8CX98",
+        "ticker": "WDEF.MI",
+        "aktueller_kurs": 30.235,
+        "composite": 52.8,
+        "bucket": "BEOBACHTEN",
+        "warnings": [],
+        "momentum": {
+          "score": 31.3,
+          "parts": {
+            "trend": 0.0,
+            "return_12m": 48.0,
+            "rsi": 45.8
+          },
+          "return_12m_pct": -1.2,
+          "sma_50": 30.477,
+          "sma_200": 31.825,
+          "rsi_14": 46.48
+        },
+        "risiko": {
+          "score": 45.4,
+          "parts": {
+            "volatilitaet": 26.8,
+            "drawdown": 60.9,
+            "ertrag_risiko": 48.4
+          },
+          "volatilitaet_pct": 29.26,
+          "max_drawdown_pct": -19.53
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 82.5,
+          "parts": {
+            "ter": 65.0,
+            "aum": 100.0
+          },
+          "ter": 0.4,
+          "aum_mio_eur": 4400
+        },
+        "wertpapier": "WisdomTree Europe Defence UCITS ETF",
+        "peer_rank": 4,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE000YYE6WK5",
+        "ticker": "DFEN.DE",
+        "aktueller_kurs": 51.13,
+        "composite": 52.8,
+        "bucket": "BEOBACHTEN",
+        "warnings": [],
+        "momentum": {
+          "score": 34.1,
+          "parts": {
+            "trend": 0.0,
+            "return_12m": 60.5,
+            "rsi": 41.8
+          },
+          "return_12m_pct": 6.3,
+          "sma_50": 53.166,
+          "sma_200": 55.753,
+          "rsi_14": 43.16
+        },
+        "risiko": {
+          "score": 49.4,
+          "parts": {
+            "volatilitaet": 35.2,
+            "drawdown": 53.2,
+            "ertrag_risiko": 59.7
+          },
+          "volatilitaet_pct": 25.91,
+          "max_drawdown_pct": -23.39
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 72.5,
+          "parts": {
+            "ter": 45.0,
+            "aum": 100.0
+          },
+          "ter": 0.55,
+          "aum_mio_eur": 6345
+        },
+        "wertpapier": "VanEck Defense UCITS ETF",
+        "peer_rank": 5,
+        "peer_total": 5
+      }
+    ],
+    "Luft- und Raumfahrttechnik": [
+      {
+        "isin": "IE00BP3QZ601",
+        "ticker": "IS3Q.DE",
+        "aktueller_kurs": 77.25,
+        "composite": 79.7,
+        "bucket": "CORE",
+        "warnings": [],
+        "momentum": {
+          "score": 84.3,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 86.4,
+            "rsi": 66.6
+          },
+          "return_12m_pct": 21.8,
+          "sma_50": 74.711,
+          "sma_200": 70.049,
+          "rsi_14": 63.85
+        },
+        "risiko": {
+          "score": 86.7,
+          "parts": {
+            "volatilitaet": 72.9,
+            "drawdown": 87.3,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 10.85,
+          "max_drawdown_pct": -6.33
+        },
+        "sentiment": {
+          "score": 50.0,
+          "raw": null
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 4943
+        },
+        "wertpapier": "iShares Edge MSCI World Quality Factor UCITS ETF",
+        "peer_rank": 1,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "aktueller_kurs": 86.74,
+        "composite": 73.5,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 83.1,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 49.4
+          },
+          "return_12m_pct": 33.7,
+          "sma_50": 85.381,
+          "sma_200": 74.392,
+          "rsi_14": 49.47
+        },
+        "risiko": {
+          "score": 63.7,
+          "parts": {
+            "volatilitaet": 28.1,
+            "drawdown": 66.1,
+            "ertrag_risiko": 96.9
+          },
+          "volatilitaet_pct": 28.75,
+          "max_drawdown_pct": -16.95
+        },
+        "sentiment": {
+          "score": 50.0,
+          "raw": null
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 1930
+        },
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "peer_rank": 2,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BM67HV82",
+        "ticker": "XDWI.DE",
+        "aktueller_kurs": 76.15,
+        "composite": 73.3,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 80.0,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 86.7,
+            "rsi": 53.2
+          },
+          "return_12m_pct": 22.0,
+          "sma_50": 74.542,
+          "sma_200": 69.828,
+          "rsi_14": 52.7
+        },
+        "risiko": {
+          "score": 81.1,
+          "parts": {
+            "volatilitaet": 62.0,
+            "drawdown": 81.4,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 15.2,
+          "max_drawdown_pct": -9.28
+        },
+        "sentiment": {
+          "score": 40,
+          "raw": -1
+        },
+        "struktur": {
+          "score": 85.0,
+          "parts": {
+            "ter": 85.0,
+            "aum": 85.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 931
+        },
+        "wertpapier": "Xtrackers MSCI World Industrials UCITS ETF",
+        "peer_rank": 3,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00B4LN9N13",
+        "ticker": "2B7C.DE",
+        "aktueller_kurs": 13.482,
+        "composite": 71.0,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 82.5,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 90.5,
+            "rsi": 57.1
+          },
+          "return_12m_pct": 24.3,
+          "sma_50": 12.952,
+          "sma_200": 12.014,
+          "rsi_14": 55.92
+        },
+        "risiko": {
+          "score": 62.7,
+          "parts": {
+            "volatilitaet": 34.0,
+            "drawdown": 67.2,
+            "ertrag_risiko": 86.8
+          },
+          "volatilitaet_pct": 26.41,
+          "max_drawdown_pct": -16.4
+        },
+        "sentiment": {
+          "score": 40,
+          "raw": -1
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 100.0,
+            "aum": 85.0
+          },
+          "ter": 0.15,
+          "aum_mio_eur": 700
+        },
+        "wertpapier": "iShares S&P 500 Industrials Sector UCITS ETF",
+        "peer_rank": 4,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE000YU9K6K2",
+        "ticker": "JEDI.DE",
+        "aktueller_kurs": 77.73,
+        "composite": 62.4,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 66.6,
+          "parts": {
+            "trend": 65.0,
+            "return_12m": 100,
+            "rsi": 34.9
+          },
+          "return_12m_pct": 84.6,
+          "sma_50": 92.139,
+          "sma_200": 70.958,
+          "rsi_14": 37.4
+        },
+        "risiko": {
+          "score": 42.2,
+          "parts": {
+            "volatilitaet": 0,
+            "drawdown": 26.6,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 47.32,
+          "max_drawdown_pct": -36.71
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 72.5,
+          "parts": {
+            "ter": 45.0,
+            "aum": 100.0
+          },
+          "ter": 0.55,
+          "aum_mio_eur": 1756
+        },
+        "wertpapier": "VanEck Space Innovators UCITS ETF",
+        "peer_rank": 5,
+        "peer_total": 5
+      }
+    ],
+    "Satellitentechnik": [
+      {
+        "isin": "IE00BYVQ9F29",
+        "ticker": "NQSE.DE",
+        "aktueller_kurs": 17.26,
+        "composite": 78.9,
+        "bucket": "CORE",
+        "warnings": [],
+        "momentum": {
+          "score": 82.8,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 96.1,
+            "rsi": 52.3
+          },
+          "return_12m_pct": 27.7,
+          "sma_50": 17.204,
+          "sma_200": 15.405,
+          "rsi_14": 51.91
+        },
+        "risiko": {
+          "score": 77.5,
+          "parts": {
+            "volatilitaet": 56.3,
+            "drawdown": 76.3,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 17.47,
+          "max_drawdown_pct": -11.87
+        },
+        "sentiment": {
+          "score": 60,
+          "raw": 1
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.33,
+          "aum_mio_eur": 1618
+        },
+        "wertpapier": "iShares Nasdaq 100 UCITS ETF EUR Hedged Acc",
+        "peer_rank": 1,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BYPLS672",
+        "ticker": "USPY.DE",
+        "aktueller_kurs": 39.305,
+        "composite": 75.1,
+        "bucket": "CORE",
+        "warnings": [],
+        "momentum": {
+          "score": 88.1,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 64.4
+          },
+          "return_12m_pct": 43.4,
+          "sma_50": 34.907,
+          "sma_200": 28.621,
+          "rsi_14": 62.03
+        },
+        "risiko": {
+          "score": 63.1,
+          "parts": {
+            "volatilitaet": 28.7,
+            "drawdown": 60.7,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 28.53,
+          "max_drawdown_pct": -19.63
+        },
+        "sentiment": {
+          "score": 80,
+          "raw": 3
+        },
+        "struktur": {
+          "score": 62.5,
+          "parts": {
+            "ter": 25.0,
+            "aum": 100.0
+          },
+          "ter": 0.69,
+          "aum_mio_eur": 3191
+        },
+        "wertpapier": "L&G Cyber Security UCITS ETF",
+        "peer_rank": 2,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BYZK4552",
+        "ticker": "2B76.DE",
+        "aktueller_kurs": 18.244,
+        "composite": 71.9,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 83.5,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 50.6
+          },
+          "return_12m_pct": 39.0,
+          "sma_50": 17.899,
+          "sma_200": 15.117,
+          "rsi_14": 50.46
+        },
+        "risiko": {
+          "score": 56.6,
+          "parts": {
+            "volatilitaet": 17.4,
+            "drawdown": 55.2,
+            "ertrag_risiko": 97.2
+          },
+          "volatilitaet_pct": 33.02,
+          "max_drawdown_pct": -22.42
+        },
+        "sentiment": {
+          "score": 60,
+          "raw": 1
+        },
+        "struktur": {
+          "score": 82.5,
+          "parts": {
+            "ter": 65.0,
+            "aum": 100.0
+          },
+          "ter": 0.4,
+          "aum_mio_eur": 4142
+        },
+        "wertpapier": "iShares Automation & Robotics UCITS ETF",
+        "peer_rank": 3,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE000CK5G8J7",
+        "ticker": "CBUX.DE",
+        "aktueller_kurs": 6.229,
+        "composite": 71.4,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 81.0,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 82.7,
+            "rsi": 60.2
+          },
+          "return_12m_pct": 19.6,
+          "sma_50": 6.094,
+          "sma_200": 5.773,
+          "rsi_14": 58.46
+        },
+        "risiko": {
+          "score": 88.2,
+          "parts": {
+            "volatilitaet": 73.1,
+            "drawdown": 91.6,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 10.75,
+          "max_drawdown_pct": -4.22
+        },
+        "sentiment": {
+          "score": 60,
+          "raw": 1
+        },
+        "struktur": {
+          "score": 45.0,
+          "parts": {
+            "ter": 45.0,
+            "aum": 45.0
+          },
+          "ter": 0.65,
+          "aum_mio_eur": 153
+        },
+        "wertpapier": "iShares Global Infrastructure UCITS ETF",
+        "peer_rank": 4,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE000YU9K6K2",
+        "ticker": "JEDI.DE",
+        "aktueller_kurs": 77.73,
+        "composite": 62.4,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 66.6,
+          "parts": {
+            "trend": 65.0,
+            "return_12m": 100,
+            "rsi": 34.9
+          },
+          "return_12m_pct": 84.6,
+          "sma_50": 92.139,
+          "sma_200": 70.958,
+          "rsi_14": 37.4
+        },
+        "risiko": {
+          "score": 42.2,
+          "parts": {
+            "volatilitaet": 0,
+            "drawdown": 26.6,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 47.32,
+          "max_drawdown_pct": -36.71
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 72.5,
+          "parts": {
+            "ter": 45.0,
+            "aum": 100.0
+          },
+          "ter": 0.55,
+          "aum_mio_eur": 1756
+        },
+        "wertpapier": "VanEck Space Innovators UCITS ETF",
+        "peer_rank": 5,
+        "peer_total": 5
+      }
+    ],
+    "Technologie": [
+      {
+        "isin": "IE00BM67HT60",
+        "ticker": "XDWT.DE",
+        "aktueller_kurs": 123.56,
+        "composite": 80.0,
+        "bucket": "CORE",
+        "warnings": [],
+        "momentum": {
+          "score": 85.1,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 55.3
+          },
+          "return_12m_pct": 37.9,
+          "sma_50": 120.886,
+          "sma_200": 104.904,
+          "rsi_14": 54.44
+        },
+        "risiko": {
+          "score": 71.0,
+          "parts": {
+            "volatilitaet": 44.2,
+            "drawdown": 68.8,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 22.31,
+          "max_drawdown_pct": -15.59
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 5412
+        },
+        "wertpapier": "iShares MSCI World Information Technology UCITS ETF",
+        "peer_rank": 1,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BMC38736",
+        "ticker": "VVSM.DE",
+        "aktueller_kurs": 100.24,
+        "composite": 77.0,
+        "bucket": "CORE",
+        "warnings": [],
+        "momentum": {
+          "score": 83.8,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 51.3
+          },
+          "return_12m_pct": 141.4,
+          "sma_50": 95.701,
+          "sma_200": 66.58,
+          "rsi_14": 51.11
+        },
+        "risiko": {
+          "score": 60.7,
+          "parts": {
+            "volatilitaet": 9.1,
+            "drawdown": 72.8,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 36.34,
+          "max_drawdown_pct": -13.58
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.35,
+          "aum_mio_eur": 7710
+        },
+        "wertpapier": "VanEck Semiconductor UCITS ETF",
+        "peer_rank": 2,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BYPLS672",
+        "ticker": "USPY.DE",
+        "aktueller_kurs": 39.305,
+        "composite": 75.1,
+        "bucket": "CORE",
+        "warnings": [],
+        "momentum": {
+          "score": 88.1,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 64.4
+          },
+          "return_12m_pct": 43.4,
+          "sma_50": 34.907,
+          "sma_200": 28.621,
+          "rsi_14": 62.03
+        },
+        "risiko": {
+          "score": 63.1,
+          "parts": {
+            "volatilitaet": 28.7,
+            "drawdown": 60.7,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 28.53,
+          "max_drawdown_pct": -19.63
+        },
+        "sentiment": {
+          "score": 80,
+          "raw": 3
+        },
+        "struktur": {
+          "score": 62.5,
+          "parts": {
+            "ter": 25.0,
+            "aum": 100.0
+          },
+          "ter": 0.69,
+          "aum_mio_eur": 3191
+        },
+        "wertpapier": "L&G Cyber Security UCITS ETF",
+        "peer_rank": 3,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "aktueller_kurs": 86.74,
+        "composite": 73.5,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 83.1,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 49.4
+          },
+          "return_12m_pct": 33.7,
+          "sma_50": 85.381,
+          "sma_200": 74.392,
+          "rsi_14": 49.47
+        },
+        "risiko": {
+          "score": 63.7,
+          "parts": {
+            "volatilitaet": 28.1,
+            "drawdown": 66.1,
+            "ertrag_risiko": 96.9
+          },
+          "volatilitaet_pct": 28.75,
+          "max_drawdown_pct": -16.95
+        },
+        "sentiment": {
+          "score": 50.0,
+          "raw": null
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 1930
+        },
+        "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "peer_rank": 4,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BYZK4552",
+        "ticker": "2B76.DE",
+        "aktueller_kurs": 18.244,
+        "composite": 71.9,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 83.5,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 50.6
+          },
+          "return_12m_pct": 39.0,
+          "sma_50": 17.899,
+          "sma_200": 15.117,
+          "rsi_14": 50.46
+        },
+        "risiko": {
+          "score": 56.6,
+          "parts": {
+            "volatilitaet": 17.4,
+            "drawdown": 55.2,
+            "ertrag_risiko": 97.2
+          },
+          "volatilitaet_pct": 33.02,
+          "max_drawdown_pct": -22.42
+        },
+        "sentiment": {
+          "score": 60,
+          "raw": 1
+        },
+        "struktur": {
+          "score": 82.5,
+          "parts": {
+            "ter": 65.0,
+            "aum": 100.0
+          },
+          "ter": 0.4,
+          "aum_mio_eur": 4142
+        },
+        "wertpapier": "iShares Automation & Robotics UCITS ETF",
+        "peer_rank": 5,
+        "peer_total": 5
+      }
+    ],
+    "Versorger": [
+      {
+        "isin": "IE00BM67HQ30",
+        "ticker": "XDWU.DE",
+        "aktueller_kurs": 42.675,
+        "composite": 79.8,
+        "bucket": "CORE",
+        "warnings": [],
+        "momentum": {
+          "score": 78.9,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 83.0,
+            "rsi": 53.8
+          },
+          "return_12m_pct": 19.8,
+          "sma_50": 41.905,
+          "sma_200": 40.552,
+          "rsi_14": 53.16
+        },
+        "risiko": {
+          "score": 84.7,
+          "parts": {
+            "volatilitaet": 68.8,
+            "drawdown": 85.4,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 12.5,
+          "max_drawdown_pct": -7.3
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 85.0,
+          "parts": {
+            "ter": 85.0,
+            "aum": 85.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 848
+        },
+        "wertpapier": "Xtrackers MSCI World Utilities UCITS ETF",
+        "peer_rank": 1,
+        "peer_total": 5
+      },
+      {
+        "isin": "LU1834988864",
+        "ticker": "UTI.MI",
+        "aktueller_kurs": 104.78,
+        "composite": 79.3,
+        "bucket": "CORE",
+        "warnings": [],
+        "momentum": {
+          "score": 85.0,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 55.0
+          },
+          "return_12m_pct": 30.7,
+          "sma_50": 102.875,
+          "sma_200": 96.135,
+          "rsi_14": 54.18
+        },
+        "risiko": {
+          "score": 82.4,
+          "parts": {
+            "volatilitaet": 61.9,
+            "drawdown": 85.4,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 15.25,
+          "max_drawdown_pct": -7.29
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 75.0,
+          "parts": {
+            "ter": 85.0,
+            "aum": 65.0
+          },
+          "ter": 0.3,
+          "aum_mio_eur": 214
+        },
+        "wertpapier": "Lyxor/Amundi STOXX Europe 600 Utilities UCITS ETF Acc",
+        "peer_rank": 2,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE000CK5G8J7",
+        "ticker": "CBUX.DE",
+        "aktueller_kurs": 6.229,
+        "composite": 71.4,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 81.0,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 82.7,
+            "rsi": 60.2
+          },
+          "return_12m_pct": 19.6,
+          "sma_50": 6.094,
+          "sma_200": 5.773,
+          "rsi_14": 58.46
+        },
+        "risiko": {
+          "score": 88.2,
+          "parts": {
+            "volatilitaet": 73.1,
+            "drawdown": 91.6,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 10.75,
+          "max_drawdown_pct": -4.22
+        },
+        "sentiment": {
+          "score": 60,
+          "raw": 1
+        },
+        "struktur": {
+          "score": 45.0,
+          "parts": {
+            "ter": 45.0,
+            "aum": 45.0
+          },
+          "ter": 0.65,
+          "aum_mio_eur": 153
+        },
+        "wertpapier": "iShares Global Infrastructure UCITS ETF",
+        "peer_rank": 3,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BL25JN58",
+        "ticker": "XDEB.DE",
+        "aktueller_kurs": 44.015,
+        "composite": 69.0,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 74.7,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 59.1,
+            "rsi": 64.9
+          },
+          "return_12m_pct": 5.5,
+          "sma_50": 42.967,
+          "sma_200": 42.505,
+          "rsi_14": 62.45
+        },
+        "risiko": {
+          "score": 57.3,
+          "parts": {
+            "volatilitaet": 43.4,
+            "drawdown": 68.7,
+            "ertrag_risiko": 59.6
+          },
+          "volatilitaet_pct": 22.64,
+          "max_drawdown_pct": -15.63
+        },
+        "sentiment": {
+          "score": 50.0,
+          "raw": null
+        },
+        "struktur": {
+          "score": 92.5,
+          "parts": {
+            "ter": 85.0,
+            "aum": 100.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 1092
+        },
+        "wertpapier": "Xtrackers MSCI World Minimum Volatility UCITS ETF",
+        "peer_rank": 4,
+        "peer_total": 5
+      },
+      {
+        "isin": "DE000A0H08H3",
+        "ticker": "EXH3.DE",
+        "aktueller_kurs": 66.81,
+        "composite": 67.9,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 71.0,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 55.2,
+            "rsi": 57.7
+          },
+          "return_12m_pct": 3.1,
+          "sma_50": 64.404,
+          "sma_200": 62.756,
+          "rsi_14": 56.41
+        },
+        "risiko": {
+          "score": 64.1,
+          "parts": {
+            "volatilitaet": 60.0,
+            "drawdown": 74.5,
+            "ertrag_risiko": 57.8
+          },
+          "volatilitaet_pct": 15.99,
+          "max_drawdown_pct": -12.77
+        },
+        "sentiment": {
+          "score": 70,
+          "raw": 2
+        },
+        "struktur": {
+          "score": 65.0,
+          "parts": {
+            "ter": 65.0,
+            "aum": 65.0
+          },
+          "ter": 0.46,
+          "aum_mio_eur": 318
+        },
+        "wertpapier": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
+        "peer_rank": 5,
+        "peer_total": 5
+      }
+    ]
+  }
+};
         const etfSentimentScores = (etfSentimentData && etfSentimentData.scores) ? etfSentimentData.scores : {};
 
         function getSentiment(isin) {
@@ -4480,6 +5885,161 @@
             const etfGen = (etfSentimentData && etfSentimentData.generated_at) ? etfSentimentData.generated_at : null;
             if (etfGen) html += `<p style="color:#6c757d; font-size:0.85em;">KI-Sentiment Stand: ${etfGen} · (A) Themen-ETF, (B) Sektor-ETF · rein informativ, kein Auto-Trading im ETF-Sleeve</p>`;
             document.getElementById('etfsleeve').innerHTML = html;
+        })();
+
+        // ==========================================
+        // ETF-EMPFEHLUNGS-RANKING (Composite-Score über den gesamten Katalog)
+        // ==========================================
+        (function renderEtfRanking() {
+            const sektoren = (etfRankingData && etfRankingData.sektoren) || {};
+            const rows = [];
+            Object.keys(sektoren).forEach(sektor => {
+                sektoren[sektor].forEach(r => rows.push(Object.assign({ sektor }, r)));
+            });
+            if (!rows.length) {
+                document.getElementById('etfranking').innerHTML = '<p style="color:#6c757d;">Noch kein ETF-Ranking berechnet (etf_ranking.py).</p>';
+                return;
+            }
+
+            const bucketCls = { CORE: 'buy', SATELLITE: 'hold', BEOBACHTEN: 'hold', MEIDEN: 'sell' };
+            function bucketBadge(b) {
+                return `<span class="badge ${bucketCls[b] || 'hold'}">${b}</span>`;
+            }
+
+            const etfSectors = ['Alle', ...new Set(rows.map(r => r.sektor))];
+            const buckets = ['Alle', 'CORE', 'SATELLITE', 'BEOBACHTEN', 'MEIDEN'];
+            let etfUiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', bucket: 'Alle', minScore: 0 };
+
+            function renderTab() {
+                const sectorOpts = etfSectors.map(s => `<option value="${s}"${etfUiState.sektor===s?' selected':''}>${s}</option>`).join('');
+                const bucketOpts = buckets.map(b => `<option value="${b}"${etfUiState.bucket===b?' selected':''}>${b}</option>`).join('');
+                const genAt = etfRankingData.generated_at ? `Stand: ${etfRankingData.generated_at}` : '';
+                const header = `
+                    <h2>🌐 ETF-Empfehlungs-Ranking <small style="font-size:0.5em; color:#6c757d;">${genAt}</small></h2>
+                    <div class="weights-info">
+                        <strong>Composite-Score</strong> — Gewichtung: Momentum 35 % (Trend/Return/RSI) · Risiko 25 % (Volatilität/Drawdown/Ertrag-Risiko) · Sentiment 20 % · Struktur 20 % (TER/Fondsgröße).
+                        <br>
+                        <strong>Bucket</strong>: CORE ≥75 (basisallokationstauglich) · SATELLITE 60–74 (taktisch beimischen) · BEOBACHTEN 45–59 · MEIDEN &lt;45 oder Fondsgröße &lt;50 Mio. €.
+                        Peer-Rang = Platzierung innerhalb des Themen-Sektors.
+                    </div>
+                    <div class="filter-bar">
+                        <div class="filter-group">
+                            <label>Sektor</label>
+                            <select id="ef-sektor">${sectorOpts}</select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Bucket</label>
+                            <select id="ef-bucket">${bucketOpts}</select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Min. Score: <span id="ef-minScore-val">${etfUiState.minScore}</span></label>
+                            <input type="range" id="ef-minScore" min="0" max="100" step="5" value="${etfUiState.minScore}">
+                        </div>
+                        <div class="filter-group">
+                            <button class="filter-reset" id="ef-reset">Filter zurücksetzen</button>
+                        </div>
+                    </div>
+                    <div class="filter-count" id="ef-count"></div>
+                `;
+
+                const cols = [
+                    { key: 'wertpapier', label: 'ETF', sortable: true },
+                    { key: 'sektor', label: 'Sektor', sortable: true },
+                    { key: 'composite', label: 'Score', sortable: true },
+                    { key: 'momentum', label: 'Momentum', sortable: true },
+                    { key: 'risiko', label: 'Risiko', sortable: true },
+                    { key: 'sentiment', label: 'Sentiment', sortable: true },
+                    { key: 'struktur', label: 'Struktur', sortable: true },
+                    { key: 'ter', label: 'TER', sortable: true },
+                    { key: 'aum', label: 'AUM Mio.€', sortable: true },
+                    { key: 'peer', label: 'Peer-Rang', sortable: false },
+                    { key: 'bucket', label: 'Bucket', sortable: false }
+                ];
+                const thHtml = cols.map(c => {
+                    const active = c.sortable && etfUiState.sort === c.key;
+                    const arrow = active ? (etfUiState.dir === 'asc' ? '▲' : '▼') : '↕';
+                    return c.sortable
+                        ? `<th class="sortable${active?' sorted':''}" data-sort="${c.key}">${c.label}<span class="arrow">${arrow}</span></th>`
+                        : `<th>${c.label}</th>`;
+                }).join('');
+
+                document.getElementById('etfranking').innerHTML = header + `<table id="etf-ranking-table"><thead><tr>${thHtml}</tr></thead><tbody id="etf-ranking-body"></tbody></table>`;
+
+                document.getElementById('ef-sektor').addEventListener('change', e => { etfUiState.sektor = e.target.value; refreshBody(); });
+                document.getElementById('ef-bucket').addEventListener('change', e => { etfUiState.bucket = e.target.value; refreshBody(); });
+                document.getElementById('ef-minScore').addEventListener('input', e => {
+                    etfUiState.minScore = Number(e.target.value);
+                    document.getElementById('ef-minScore-val').textContent = etfUiState.minScore;
+                    refreshBody();
+                });
+                document.getElementById('ef-reset').addEventListener('click', () => {
+                    etfUiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', bucket: 'Alle', minScore: 0 };
+                    renderTab();
+                });
+                document.querySelectorAll('#etf-ranking-table th.sortable').forEach(th => {
+                    th.addEventListener('click', () => {
+                        const k = th.dataset.sort;
+                        if (etfUiState.sort === k) etfUiState.dir = etfUiState.dir === 'asc' ? 'desc' : 'asc';
+                        else { etfUiState.sort = k; etfUiState.dir = (k === 'wertpapier' || k === 'sektor') ? 'asc' : 'desc'; }
+                        renderTab();
+                    });
+                });
+
+                refreshBody();
+            }
+
+            function refreshBody() {
+                let filtered = rows.slice();
+                if (etfUiState.sektor !== 'Alle') filtered = filtered.filter(r => r.sektor === etfUiState.sektor);
+                if (etfUiState.bucket !== 'Alle') filtered = filtered.filter(r => r.bucket === etfUiState.bucket);
+                if (etfUiState.minScore > 0) filtered = filtered.filter(r => (r.composite || 0) >= etfUiState.minScore);
+
+                const getVal = r => {
+                    switch (etfUiState.sort) {
+                        case 'wertpapier': return r.wertpapier || '';
+                        case 'sektor': return r.sektor || '';
+                        case 'composite': return r.composite;
+                        case 'momentum': return r.momentum.score;
+                        case 'risiko': return r.risiko.score;
+                        case 'sentiment': return r.sentiment.score;
+                        case 'struktur': return r.struktur.score;
+                        case 'ter': return r.struktur.ter;
+                        case 'aum': return r.struktur.aum_mio_eur;
+                        default: return 0;
+                    }
+                };
+                filtered.sort((a, b) => {
+                    const av = getVal(a), bv = getVal(b);
+                    if (av === null || av === undefined) return 1;
+                    if (bv === null || bv === undefined) return -1;
+                    if (typeof av === 'string') return etfUiState.dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
+                    return etfUiState.dir === 'asc' ? av - bv : bv - av;
+                });
+
+                const body = filtered.map(r => {
+                    const warnBadge = (r.warnings && r.warnings.length)
+                        ? `<span class="data-warning" title="${r.warnings.join(' | ').replace(/"/g,'&quot;')}">⚠️</span>`
+                        : '';
+                    return `<tr>
+                        <td><strong>${r.wertpapier}</strong>${warnBadge}<br><small style="color:#666">${r.isin}</small></td>
+                        <td>${r.sektor}</td>
+                        <td>${scoreCell(r.composite)}</td>
+                        <td>${subscoreBar(r.momentum.score)}</td>
+                        <td>${subscoreBar(r.risiko.score)}</td>
+                        <td>${subscoreBar(r.sentiment.score)}</td>
+                        <td>${subscoreBar(r.struktur.score)}</td>
+                        <td>${r.struktur.ter !== null && r.struktur.ter !== undefined ? r.struktur.ter.toFixed(2) + '%' : '-'}</td>
+                        <td>${r.struktur.aum_mio_eur !== null && r.struktur.aum_mio_eur !== undefined ? r.struktur.aum_mio_eur.toLocaleString('de-DE') : '-'}</td>
+                        <td style="color:#666;">${r.peer_rank}/${r.peer_total}</td>
+                        <td>${bucketBadge(r.bucket)}</td>
+                    </tr>`;
+                }).join('');
+
+                document.getElementById('etf-ranking-body').innerHTML = body || '<tr><td colspan="11" style="text-align:center; padding:30px; color:#6c757d;">Keine ETFs passen zu den aktuellen Filtern.</td></tr>';
+                document.getElementById('ef-count').textContent = `${filtered.length} von ${rows.length} ETFs angezeigt`;
+            }
+
+            renderTab();
         })();
 
         // ==========================================
