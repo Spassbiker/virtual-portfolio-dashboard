@@ -34,6 +34,9 @@ if [ "$traded" = "1" ]; then
   # Regelbasierte Empfehlung (nutzt vorhandenes sentiment_scores.json), dann ausführen.
   python3 src/update_depot.py --recommend >/dev/null 2>&1
   python3 src/update_depot.py              >/dev/null 2>&1
+  # ETF-Sleeve (eigenes 5.000€-Budget, ranking-basiert): gleiche Healthcheck-Gate.
+  python3 src/update_etf_depot.py --recommend >/dev/null 2>&1
+  python3 src/update_etf_depot.py              >/dev/null 2>&1
 fi
 
 python3 src/build_dashboard.py >/dev/null 2>&1
@@ -51,10 +54,12 @@ import json, sys
 sys.path.insert(0, "src")
 import risk_report
 warn, push, today = sys.argv[1], sys.argv[2], sys.argv[3]
-d = json.load(open("data/depot_status.json"))["depot"]
-hist = d.get("transaktionshistorie", [])
-heute = [t for t in hist if t.get("datum") == today]
-if heute:
+data = json.load(open("data/depot_status.json"))
+d = data["depot"]
+e = data.get("etf_depot", {})
+
+def trade_zeilen(hist, today):
+    heute = [t for t in hist if t.get("datum") == today]
     zeilen = []
     for t in heute:
         gv = t.get("gewinn_verlust")
@@ -62,12 +67,26 @@ if heute:
         if t.get("typ") == "Verkauf" and gv is not None:
             gv_s = " (%+.2f€)" % gv
         zeilen.append("%s %sx %s zu %.2f€%s" % (t["typ"], t["stueck"], t["wertpapier"], t["kurs"], gv_s))
-    trades = "Trades: " + " · ".join(zeilen)
+    return zeilen
+
+aktien_zeilen = trade_zeilen(d.get("transaktionshistorie", []), today)
+etf_zeilen = trade_zeilen(e.get("transaktionshistorie", []), today)
+
+if aktien_zeilen or etf_zeilen:
+    bloecke = []
+    if aktien_zeilen:
+        bloecke.append("Aktien: " + " · ".join(aktien_zeilen))
+    if etf_zeilen:
+        bloecke.append("ETF: " + " · ".join(etf_zeilen))
+    trades = " | ".join(bloecke)
 else:
     trades = "Keine Trades (keine Signale/Stop-Loss ausgelöst)"
-print("%s📊 Tages-Lauf 09:00 — %s | Gesamtvermögen %.2f € | Portfoliowert %.2f € | "
-      "Barbestand %.2f € (%s)" % (warn, trades, d["gesamtvermoegen"], d["portfoliowert"],
-                                   d["aktueller_barbestand"], push))
+
+gesamt = d.get("gesamtvermoegen", 0) + e.get("gesamtvermoegen", 0)
+print("%s📊 Tages-Lauf 09:00 — %s | Gesamtvermögen %.2f € (Aktien %.2f € + ETF %.2f €) | "
+      "Barbestand Aktien %.2f € / ETF %.2f € (%s)" % (
+          warn, trades, gesamt, d["gesamtvermoegen"], e.get("gesamtvermoegen", 0),
+          d["aktueller_barbestand"], e.get("aktueller_barbestand", 0), push))
 for line in risk_report.format_lines(d.get("risiko", {}), d.get("benchmark", {})):
     print(line)
 PY

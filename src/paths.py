@@ -33,6 +33,7 @@ ETF_KATALOG: str = os.path.join(DATA_DIR, "etf_katalog.json")
 ETF_NEWS: str = os.path.join(DATA_DIR, "etf_news_raw.json")
 ETF_SENT: str = os.path.join(DATA_DIR, "etf_sentiment_scores.json")
 ETF_RANKING: str = os.path.join(DATA_DIR, "etf_ranking.json")
+ETF_TRADES: str = os.path.join(DATA_DIR, "etf_trade_recommendations.json")
 
 # Backup-Dateien (werden von den Refresh-Skripten geschrieben, hier nur als
 # Konstanten damit man den Namen an einer Stelle ändern kann).

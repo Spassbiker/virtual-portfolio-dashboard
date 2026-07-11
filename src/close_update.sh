@@ -29,10 +29,15 @@ import json, sys
 sys.path.insert(0, "src")
 import risk_report
 warn, push = sys.argv[1], sys.argv[2]
-d = json.load(open("data/depot_status.json"))["depot"]
-print("%s📊 Nachbörsen-Update — Gesamtvermögen %.2f € | Portfoliowert %.2f € | "
-      "Barbestand %.2f € (%s)" % (warn, d["gesamtvermoegen"], d["portfoliowert"],
-                                   d["aktueller_barbestand"], push))
+data = json.load(open("data/depot_status.json"))
+d = data["depot"]
+e = data.get("etf_depot", {})
+gesamt = d.get("gesamtvermoegen", 0) + e.get("gesamtvermoegen", 0)
+print("%s📊 Nachbörsen-Update — Gesamtvermögen %.2f € (Aktien %.2f € + ETF %.2f €) | "
+      "Portfoliowert Aktien %.2f € / ETF %.2f € | Barbestand Aktien %.2f € / ETF %.2f € (%s)" % (
+          warn, gesamt, d["gesamtvermoegen"], e.get("gesamtvermoegen", 0),
+          d["portfoliowert"], e.get("portfoliowert", 0),
+          d["aktueller_barbestand"], e.get("aktueller_barbestand", 0), push))
 for line in risk_report.format_lines(d.get("risiko", {}), d.get("benchmark", {})):
     print(line)
 PY
