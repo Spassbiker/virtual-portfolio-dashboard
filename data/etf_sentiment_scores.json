@@ -1,100 +1,100 @@
 {
-  "generated_at": "2026-07-11 14:27",
+  "generated_at": "2026-07-13 08:53",
   "scores": {
     "IE00B1XNHC34": {
       "typ": "A",
-      "sentiment_score": -1,
-      "begruendung": "Fuel-Cell-Werte (Bloom Energy, FuelCell) unter Druck nach Kapitalerhöhung und Lieferstreit, das dämpft die Clean-Energy-Stimmung leicht."
+      "sentiment_score": -2,
+      "begruendung": "Bloom Energy und FuelCell Energy verlieren nach Aktienplatzierung und Lieferstreit deutlich, kaum positives Gegengewicht."
     },
     "IE000NDWFGA5": {
       "typ": "A",
       "sentiment_score": 2,
-      "begruendung": "Uranium Energy (UEC) legt zu, US-Atombrennstoff-Offensive und ein reiner Uran-Miner-Fonds mit starkem Lauf (+61%) stützen das Thema klar."
+      "begruendung": "Uranium Energy (UEC) profitiert von US-Atombrennstoff-Förderung, mehrere positive Analysten-Updates."
     },
     "IE0002Y8CX98": {
       "typ": "A",
       "sentiment_score": 2,
-      "begruendung": "Kratos und Ondas mit starken Zahlen/Übernahmen, Verteidigungsauftragsbestände laut Berichten robust trotz kurzfristiger Drohnen-Aktienschwäche."
+      "begruendung": "Kratos expandiert Fertigung, Ark Invest kauft zu, starke Auftragsbestände trotz Kursdruck bei Drohnenwerten."
     },
     "IE000YYE6WK5": {
       "typ": "A",
       "sentiment_score": 2,
-      "begruendung": "Kratos und Ondas mit starken Zahlen/Übernahmen, Verteidigungsauftragsbestände laut Berichten robust trotz kurzfristiger Drohnen-Aktienschwäche."
+      "begruendung": "Kratos expandiert Fertigung, Ark Invest kauft zu, starke Auftragsbestände trotz Kursdruck bei Drohnenwerten."
     },
     "IE000OJ5TQP4": {
       "typ": "A",
       "sentiment_score": 1,
-      "begruendung": "Ukrainischer Großangriff rückt Drohnen-Themen-ETFs in den Fokus - erhöhte Aufmerksamkeit, aber nur wenige Schlagzeilen mit fundamentaler Substanz."
+      "begruendung": "Kaum themenbezogene Treffer; nur Ukraine-Großangriff rückt Drohnen-ETFs ins Rampenlicht, Rest ist SpaceX-Rauschen ohne Drohnenbezug."
     },
     "IE000YU9K6K2": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "SpaceX-Aktie erhält Rekord-Kursziele, Käufe von Kongressmitgliedern und optimistische IPO-Einschätzungen stützen das Weltraum-Thema deutlich."
+      "sentiment_score": -2,
+      "begruendung": "SpaceX/Starlink-Hack, Ausverkauf und taumelnder NASA-ETF überwiegen trotz vereinzelter Zukäufe."
     },
     "IE00BYPLS672": {
       "typ": "A",
       "sentiment_score": 3,
-      "begruendung": "Cybersecurity-Ausgaben knacken laut Berichten 300 Mrd. $, CrowdStrike/Palo Alto/Okta rallyen deutlich, Sektor-ETF outperformt den S&P 500 klar."
+      "begruendung": "Cybersecurity-Ausgaben knacken 300 Mrd $, CrowdStrike und Palo Alto rallyen, CIBR schlägt den S&P 500 klar."
     },
     "IE00BYVQ9F29": {
       "typ": "A",
-      "sentiment_score": 1,
-      "begruendung": "Nasdaq erreicht neue Höchststände dank KI-Rally, aber vereinzelte Warnungen vor Blasenbildung dämpfen die Euphorie leicht."
+      "sentiment_score": -1,
+      "begruendung": "Wechselhafte Woche: KI-Jitter und steigende Anleiherenditen belasten den Nasdaq trotz zwischenzeitlicher Rallys."
     },
     "IE00BYZK4552": {
       "typ": "A",
-      "sentiment_score": 1,
-      "begruendung": "Robotik-Thema profitiert von KI-Trend und Reshoring-Boom, gemischte Einzelsignale (Accenture-Schwäche, vorsichtige Checks bei Serve Robotics) bremsen etwas."
+      "sentiment_score": 2,
+      "begruendung": "Healthcare-Automation und Reshoring-Boom treiben die Robotik-Story, BOTZ als 'nächster KI-Akt' gehypt."
     },
     "IE00BMC38736": {
       "typ": "A",
       "sentiment_score": 2,
-      "begruendung": "Chip-Aktien (Nvidia, NXP, Marvell) rallyen trotz geopolitischer Spannungen, mehrere Kurszielanhebungen stützen das Halbleiter-Thema klar."
+      "begruendung": "Chipwerte rallyen trotz Iran-Spannungen, Kurszielanhebung bei NXP und positive Wachstumsstorys überwiegen."
     },
     "IE00BM67HN09": {
       "typ": "B",
       "sentiment_score": -1,
-      "begruendung": "Fuel-Cell- und Energy-Transfer-News überwiegend negativ (Kursrückgänge, schwächere Q2-Prognose), dämpft die Energiesektor-Stimmung."
+      "begruendung": "Fuel-Cell-Werte wie FuelCell, Bloom Energy und Plug Power brechen nach Kapitalmaßnahmen deutlich ein, Dealmeldungen stützen kaum."
     },
     "IE00BM67HS53": {
       "typ": "B",
       "sentiment_score": 0,
-      "begruendung": "Schlagzeilen betreffen überwiegend Chip-/Technologiewerte statt des eigentlichen Materialsektors, kein klares Signal - neutral."
+      "begruendung": "Gemischtes Bild aus Kurszielanhebungen und Indexrauswurf ohne klare Sektorrichtung."
     },
     "IE00B4LN9N13": {
       "typ": "B",
-      "sentiment_score": -1,
-      "begruendung": "Schwacher US-Arbeitsmarktbericht und fallende Ölpreise belasten die Makrostimmung, der Dow verliert seine Gewinnserie - leicht negativ für Industriewerte."
+      "sentiment_score": -2,
+      "begruendung": "Iran-Konflikt und steigende Ölpreise belasten die breite Marktstimmung, mehrfach Warnungen vor Rückschlägen."
     },
     "IE00BM67HV82": {
       "typ": "B",
-      "sentiment_score": -1,
-      "begruendung": "Schwacher US-Arbeitsmarktbericht und fallende Ölpreise belasten die Makrostimmung, der Dow verliert seine Gewinnserie - leicht negativ für Industriewerte."
+      "sentiment_score": -2,
+      "begruendung": "Iran-Konflikt und steigende Ölpreise belasten die breite Marktstimmung, mehrfach Warnungen vor Rückschlägen."
     },
     "IE000CK5G8J7": {
       "typ": "B",
-      "sentiment_score": 1,
-      "begruendung": "Sterling Infrastructure erweitert seine Kreditlinie auf 1,5 Mrd. $ und gewinnt an Momentum, Goldman-Kaufempfehlung für einen Data-Center-Bauer stützt leicht positiv."
+      "sentiment_score": 2,
+      "begruendung": "Sterling Infrastructure erweitert Kreditlinie und gewinnt Aufträge, Data-Center-Ausbau treibt den Sektor."
     },
     "IE00BM67HT60": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "Micron kündigt eine 250-Mrd.-$-Investition in KI-Speicherchips an, Goldman sieht optisches Networking als nächste Billionen-Dollar-Chance - starke positive Dynamik."
+      "sentiment_score": -1,
+      "begruendung": "Iran-Spannungen drücken Speicherchip-Werte und Burry warnt vor dem KI-Entwicklungspfad, starke Backlogs stehen dagegen."
     },
     "DE000A0H08H3": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "KI-Rechenzentren treiben laut mehreren Artikeln einen historischen Strombedarf-Boom, Fusionsgenehmigung (American Water/Essential Utilities) stützt den Sektor klar."
+      "sentiment_score": 3,
+      "begruendung": "Versorger gelten als Profiteur des KI-Rechenzentrums-Strombedarfs und als sicherer Hafen im Iran-Konflikt."
     },
     "IE00BM67HQ30": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "KI-Rechenzentren treiben laut mehreren Artikeln einen historischen Strombedarf-Boom, Fusionsgenehmigung (American Water/Essential Utilities) stützt den Sektor klar."
+      "sentiment_score": 3,
+      "begruendung": "Versorger gelten als Profiteur des KI-Rechenzentrums-Strombedarfs und als sicherer Hafen im Iran-Konflikt."
     },
     "LU1834988864": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "KI-Rechenzentren treiben laut mehreren Artikeln einen historischen Strombedarf-Boom, Fusionsgenehmigung (American Water/Essential Utilities) stützt den Sektor klar."
+      "sentiment_score": 3,
+      "begruendung": "Versorger gelten als Profiteur des KI-Rechenzentrums-Strombedarfs und als sicherer Hafen im Iran-Konflikt."
     }
   }
 }

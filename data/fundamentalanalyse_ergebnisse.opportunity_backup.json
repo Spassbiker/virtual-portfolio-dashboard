@@ -123,21 +123,6 @@
         "empfehlung": "Halten"
       },
       {
-        "wertpapier": "Saab AB",
-        "isin": "SE0021921269",
-        "kgv": 45.5,
-        "dividendenrendite": 0.44,
-        "umsatzwachstum_yoy": 24.15,
-        "gewinnwachstum_yoy": 51.4,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Neutral",
-        "risiko": "Mittel",
-        "empfehlung": "Halten",
-        "begruendung": "Watch-Kandidat aus Opportunity-Scan: Schwedischer Verteidigungs- und Luftfahrtkonzern (Gripen, A26-U-Boote, Trackfire) mit Rekord-Auftragsbestand von rund dem 3,5-Fachen des Jahresumsatzes 2025, getragen von NATO-Aufruestung und wachsenden Exporten; die hohe Bewertung (KGV ~45) preist das Wachstum aber bereits weitgehend ein.",
-        "datum": "2026-07-13",
-        "aktueller_kurs": null
-      },
-      {
         "wertpapier": "Airbus",
         "isin": "NL0000235190",
         "begruendung": "Unterstützungszone bei 180 EUR erfolgreich getestet.",
@@ -337,21 +322,6 @@
         "aktueller_kurs": 7.705
       },
       {
-        "wertpapier": "Firefly Aerospace",
-        "isin": "US31816X1063",
-        "kgv": "n/a",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": null,
-        "gewinnwachstum_yoy": null,
-        "eigenkapitalquote": null,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "empfehlung": "Halten",
-        "begruendung": "Watch-Kandidat aus Opportunity-Scan: US-Raumfahrtunternehmen (Alpha-Traegerrakete, Blue-Ghost-Mondlander) mit NASA- und Verteidigungsauftraegen, profitiert vom aktuellen Space-Sektor-Hype rund um den SpaceX-Boersengang; operativ weiterhin unprofitabel und mit hoher Kursvolatilitaet (52-Wochen-Spanne 16-74 USD).",
-        "datum": "2026-07-13",
-        "aktueller_kurs": null
-      },
-      {
         "wertpapier": "Airbus",
         "isin": "NL0000235190",
         "begruendung": "(siehe Verteidigung, hohe Synergieeffekte).",
@@ -442,21 +412,6 @@
         "datum": "2026-07-08",
         "empfehlung": "Halten",
         "aktueller_kurs": 182.48
-      },
-      {
-        "wertpapier": "IonQ",
-        "isin": "US46222L1089",
-        "kgv": "n/a",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 100.0,
-        "gewinnwachstum_yoy": null,
-        "eigenkapitalquote": null,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "empfehlung": "Halten",
-        "begruendung": "Watch-Kandidat aus Opportunity-Scan: Marktfuehrer im Quantencomputing mit drittem Rekordquartal in Folge (Q1 2026 Umsatz +755% YoY) und auf 260-270 Mio. USD angehobener FY2026-Guidance (>100% Wachstum), gestuetzt durch DARPA- und Missile-Defense-Auftraege; operativ trotz starkem Umsatzwachstum weiterhin defizitaer und hoch bewertet.",
-        "datum": "2026-07-13",
-        "aktueller_kurs": null
       },
       {
         "wertpapier": "ASML",
@@ -566,36 +521,6 @@
     ],
     "Versorger": [
       {
-        "wertpapier": "A2A",
-        "isin": "IT0001233417",
-        "begruendung": "Norditalienischer Multi-Utility-Konzern (Strom, Gas, Wasser, Abfall/Fernwaerme Mailand), diversifiziert und defensiv mit solider Investment-Grade-Bonitaet.",
-        "kgv": 13.5,
-        "dividendenrendite": 5.5,
-        "umsatzwachstum_yoy": 3.0,
-        "gewinnwachstum_yoy": 4.0,
-        "eigenkapitalquote": 32.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-11",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 2.314
-      },
-      {
-        "wertpapier": "Engie",
-        "isin": "FR0010208488",
-        "begruendung": "Franzoesischer Multi-Utility-Konzern (Netze, Erneuerbare, Flexibilitaet); MarketScreener sieht kurzfristig fundamental attraktive Situation trotz hoher Nettoverschuldung.",
-        "kgv": 9.8,
-        "dividendenrendite": 6.02,
-        "umsatzwachstum_yoy": -2.5,
-        "gewinnwachstum_yoy": -6.8,
-        "eigenkapitalquote": 27.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-11",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 26.88
-      },
-      {
         "wertpapier": "Iberdrola",
         "isin": "ES0144580Y14",
         "begruendung": "Groesster europaeischer Utility-Wert (Netze/Erneuerbare); Analysten ueberwiegend Overweight, defensiver Cashflow aus reguliertem Netzgeschaeft, Gewinn +12% YoY.",
@@ -609,51 +534,6 @@
         "datum": "2026-07-11",
         "empfehlung": "Kaufen",
         "aktueller_kurs": 20.9
-      },
-      {
-        "wertpapier": "Naturgy Energy Group",
-        "isin": "ES0116870314",
-        "begruendung": "Spanischer Gas-/Energiekonzern (Vertrieb, LNG, Erneuerbare), sehr hohe Dividendenrendite; Mehrheitseigner-Konsortium (CriteriaCaixa/GIP/CVC) sorgt fuer Stabilitaet.",
-        "kgv": 12.0,
-        "dividendenrendite": 7.5,
-        "umsatzwachstum_yoy": 2.0,
-        "gewinnwachstum_yoy": 3.0,
-        "eigenkapitalquote": 28.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-11",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 28.04
-      },
-      {
-        "wertpapier": "Terna",
-        "isin": "IT0003242622",
-        "begruendung": "Italienischer Stromnetzbetreiber (quasi-Monopol), stabile regulierte Ertraege, TheScreener stuft Risiko seit 2023 als niedrig ein.",
-        "kgv": 16.34,
-        "dividendenrendite": 4.38,
-        "umsatzwachstum_yoy": 3.8,
-        "gewinnwachstum_yoy": 3.8,
-        "eigenkapitalquote": 25.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-11",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 10.245
-      },
-      {
-        "wertpapier": "EVN",
-        "isin": "AT0000741053",
-        "begruendung": "Niederoesterreichischer Regionalversorger (Strom/Gas/Waerme/Wasser/Abfall), diversifiziert und defensiv, aber wenig Wachstumsfantasie.",
-        "kgv": 13.0,
-        "dividendenrendite": 3.09,
-        "umsatzwachstum_yoy": 3.0,
-        "gewinnwachstum_yoy": 4.0,
-        "eigenkapitalquote": 45.0,
-        "bewertung": "Neutral",
-        "risiko": "Niedrig",
-        "datum": "2026-07-11",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 28.75
       },
       {
         "wertpapier": "Enel",
@@ -671,19 +551,34 @@
         "aktueller_kurs": 10.12
       },
       {
-        "wertpapier": "Fortum",
-        "isin": "FI0009007132",
-        "begruendung": "Finnischer Versorger (Wasserkraft/Kernkraft/Wind), solide Eigenkapitalquote knapp 52%, aber Gewinn rueckluefig (-35% YoY) und zuletzt negative Analystenstimmung.",
-        "kgv": 21.32,
-        "dividendenrendite": 4.07,
-        "umsatzwachstum_yoy": -13.9,
-        "gewinnwachstum_yoy": -34.6,
-        "eigenkapitalquote": 51.93,
-        "bewertung": "Neutral",
+        "wertpapier": "Terna",
+        "isin": "IT0003242622",
+        "begruendung": "Italienischer Stromnetzbetreiber (quasi-Monopol), stabile regulierte Ertraege, TheScreener stuft Risiko seit 2023 als niedrig ein.",
+        "kgv": 16.34,
+        "dividendenrendite": 4.38,
+        "umsatzwachstum_yoy": 3.8,
+        "gewinnwachstum_yoy": 3.8,
+        "eigenkapitalquote": 25.0,
+        "bewertung": "Attraktiv",
+        "risiko": "Niedrig",
+        "datum": "2026-07-11",
+        "empfehlung": "Kaufen",
+        "aktueller_kurs": 10.245
+      },
+      {
+        "wertpapier": "Engie",
+        "isin": "FR0010208488",
+        "begruendung": "Franzoesischer Multi-Utility-Konzern (Netze, Erneuerbare, Flexibilitaet); MarketScreener sieht kurzfristig fundamental attraktive Situation trotz hoher Nettoverschuldung.",
+        "kgv": 9.8,
+        "dividendenrendite": 6.02,
+        "umsatzwachstum_yoy": -2.5,
+        "gewinnwachstum_yoy": -6.8,
+        "eigenkapitalquote": 27.0,
+        "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-11",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 19.545
+        "empfehlung": "Kaufen",
+        "aktueller_kurs": 26.88
       },
       {
         "wertpapier": "Redeia Corporacion",
@@ -701,6 +596,21 @@
         "aktueller_kurs": 15.39
       },
       {
+        "wertpapier": "Fortum",
+        "isin": "FI0009007132",
+        "begruendung": "Finnischer Versorger (Wasserkraft/Kernkraft/Wind), solide Eigenkapitalquote knapp 52%, aber Gewinn rueckluefig (-35% YoY) und zuletzt negative Analystenstimmung.",
+        "kgv": 21.32,
+        "dividendenrendite": 4.07,
+        "umsatzwachstum_yoy": -13.9,
+        "gewinnwachstum_yoy": -34.6,
+        "eigenkapitalquote": 51.93,
+        "bewertung": "Neutral",
+        "risiko": "Mittel",
+        "datum": "2026-07-11",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 19.545
+      },
+      {
         "wertpapier": "Verbund",
         "isin": "AT0000746409",
         "begruendung": "Oesterreichs groesster Stromkonzern (90% Wasserkraft), defensiv, aber KGV steigt 2026e da Normalisierung der Strompreise die Gewinne drueckt; Analystenmeinungen zuletzt uneinheitlich.",
@@ -714,6 +624,51 @@
         "datum": "2026-07-11",
         "empfehlung": "Halten",
         "aktueller_kurs": 57.3
+      },
+      {
+        "wertpapier": "EVN",
+        "isin": "AT0000741053",
+        "begruendung": "Niederoesterreichischer Regionalversorger (Strom/Gas/Waerme/Wasser/Abfall), diversifiziert und defensiv, aber wenig Wachstumsfantasie.",
+        "kgv": 13.0,
+        "dividendenrendite": 3.09,
+        "umsatzwachstum_yoy": 3.0,
+        "gewinnwachstum_yoy": 4.0,
+        "eigenkapitalquote": 45.0,
+        "bewertung": "Neutral",
+        "risiko": "Niedrig",
+        "datum": "2026-07-11",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 28.75
+      },
+      {
+        "wertpapier": "A2A",
+        "isin": "IT0001233417",
+        "begruendung": "Norditalienischer Multi-Utility-Konzern (Strom, Gas, Wasser, Abfall/Fernwaerme Mailand), diversifiziert und defensiv mit solider Investment-Grade-Bonitaet.",
+        "kgv": 13.5,
+        "dividendenrendite": 5.5,
+        "umsatzwachstum_yoy": 3.0,
+        "gewinnwachstum_yoy": 4.0,
+        "eigenkapitalquote": 32.0,
+        "bewertung": "Attraktiv",
+        "risiko": "Niedrig",
+        "datum": "2026-07-11",
+        "empfehlung": "Kaufen",
+        "aktueller_kurs": 2.314
+      },
+      {
+        "wertpapier": "Naturgy Energy Group",
+        "isin": "ES0116870314",
+        "begruendung": "Spanischer Gas-/Energiekonzern (Vertrieb, LNG, Erneuerbare), sehr hohe Dividendenrendite; Mehrheitseigner-Konsortium (CriteriaCaixa/GIP/CVC) sorgt fuer Stabilitaet.",
+        "kgv": 12.0,
+        "dividendenrendite": 7.5,
+        "umsatzwachstum_yoy": 2.0,
+        "gewinnwachstum_yoy": 3.0,
+        "eigenkapitalquote": 28.0,
+        "bewertung": "Attraktiv",
+        "risiko": "Mittel",
+        "datum": "2026-07-11",
+        "empfehlung": "Kaufen",
+        "aktueller_kurs": 28.04
       }
     ]
   }

@@ -455,7 +455,7 @@
         {
           "wertpapier": "Leonardo",
           "isin": "IT0003856405",
-          "anteil_pct": 17.1
+          "anteil_pct": 17.2
         },
         {
           "wertpapier": "MTU Aero Engines",
@@ -510,7 +510,7 @@
         },
         {
           "sektor": "Verteidigung",
-          "anteil_pct": 19.4
+          "anteil_pct": 19.5
         },
         {
           "sektor": "Energie",
@@ -534,16 +534,16 @@
         "vermoegen": 9769.26
       },
       "aktuell": {
-        "dax": 25051.2,
-        "msci": 126.13,
-        "vermoegen": 9726.14
+        "dax": 25067.09,
+        "msci": 126.145,
+        "vermoegen": 9748.86
       },
       "rendite_pct": {
-        "depot": -0.44,
-        "dax": -0.27,
-        "msci_world": 0.33
+        "depot": -0.21,
+        "dax": -0.2,
+        "msci_world": 0.35
       },
-      "stand": "2026-07-10 17:35"
+      "stand": "2026-07-13 09:00"
     }
   },
   "etf_depot": {
@@ -562,7 +562,9 @@
         "boersenkurs": 47.98,
         "investiert": 239.9,
         "boersenwert": 239.9,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 69.4,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Energie",
@@ -574,7 +576,9 @@
         "boersenkurs": 9.638,
         "investiert": 38.55,
         "boersenwert": 38.55,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 60.4,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Energie",
@@ -586,7 +590,9 @@
         "boersenkurs": 22.71,
         "investiert": 90.84,
         "boersenwert": 90.84,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 50.1,
+        "bucket": "BEOBACHTEN"
       },
       {
         "sektor": "Energie",
@@ -598,7 +604,9 @@
         "boersenkurs": 66.56,
         "investiert": 266.24,
         "boersenwert": 266.24,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 69.3,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Energie",
@@ -610,7 +618,9 @@
         "boersenkurs": 86.74,
         "investiert": 260.22,
         "boersenwert": 260.22,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 73.5,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Verteidigung",
@@ -622,7 +632,9 @@
         "boersenkurs": 30.235,
         "investiert": 120.94,
         "boersenwert": 120.94,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 52.3,
+        "bucket": "BEOBACHTEN"
       },
       {
         "sektor": "Verteidigung",
@@ -634,7 +646,9 @@
         "boersenkurs": 51.13,
         "investiert": 153.39,
         "boersenwert": 153.39,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 52.3,
+        "bucket": "BEOBACHTEN"
       },
       {
         "sektor": "Verteidigung",
@@ -646,7 +660,9 @@
         "boersenkurs": 17.936,
         "investiert": 89.68,
         "boersenwert": 89.68,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 67.3,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Verteidigung",
@@ -658,7 +674,9 @@
         "boersenkurs": 86.74,
         "investiert": 173.48,
         "boersenwert": 173.48,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 73.5,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Verteidigung",
@@ -670,7 +688,9 @@
         "boersenkurs": 77.25,
         "investiert": 154.5,
         "boersenwert": 154.5,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 79.9,
+        "bucket": "CORE"
       },
       {
         "sektor": "Luft- und Raumfahrttechnik",
@@ -682,7 +702,9 @@
         "boersenkurs": 13.482,
         "investiert": 53.93,
         "boersenwert": 53.93,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 69.2,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Luft- und Raumfahrttechnik",
@@ -694,7 +716,9 @@
         "boersenkurs": 76.15,
         "investiert": 152.3,
         "boersenwert": 152.3,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 71.3,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Luft- und Raumfahrttechnik",
@@ -706,7 +730,9 @@
         "boersenkurs": 77.73,
         "investiert": 155.46,
         "boersenwert": 155.46,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 54.4,
+        "bucket": "BEOBACHTEN"
       },
       {
         "sektor": "Luft- und Raumfahrttechnik",
@@ -718,7 +744,9 @@
         "boersenkurs": 77.25,
         "investiert": 154.5,
         "boersenwert": 154.5,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 79.9,
+        "bucket": "CORE"
       },
       {
         "sektor": "Luft- und Raumfahrttechnik",
@@ -730,7 +758,9 @@
         "boersenkurs": 86.74,
         "investiert": 173.48,
         "boersenwert": 173.48,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 73.5,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Satellitentechnik",
@@ -742,7 +772,9 @@
         "boersenkurs": 77.73,
         "investiert": 310.92,
         "boersenwert": 310.92,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 54.4,
+        "bucket": "BEOBACHTEN"
       },
       {
         "sektor": "Satellitentechnik",
@@ -754,7 +786,9 @@
         "boersenkurs": 39.305,
         "investiert": 196.53,
         "boersenwert": 196.53,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 75.1,
+        "bucket": "CORE"
       },
       {
         "sektor": "Satellitentechnik",
@@ -766,7 +800,9 @@
         "boersenkurs": 17.26,
         "investiert": 86.3,
         "boersenwert": 86.3,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 74.8,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Satellitentechnik",
@@ -778,7 +814,9 @@
         "boersenkurs": 18.244,
         "investiert": 72.98,
         "boersenwert": 72.98,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 74.0,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Satellitentechnik",
@@ -790,7 +828,9 @@
         "boersenkurs": 6.229,
         "investiert": 31.14,
         "boersenwert": 31.14,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 73.3,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Technologie",
@@ -802,7 +842,9 @@
         "boersenkurs": 123.56,
         "investiert": 370.68,
         "boersenwert": 370.68,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 74.0,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Technologie",
@@ -814,7 +856,9 @@
         "boersenkurs": 100.24,
         "investiert": 200.48,
         "boersenwert": 200.48,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 77.0,
+        "bucket": "CORE"
       },
       {
         "sektor": "Technologie",
@@ -826,7 +870,9 @@
         "boersenkurs": 39.305,
         "investiert": 117.91,
         "boersenwert": 117.91,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 75.1,
+        "bucket": "CORE"
       },
       {
         "sektor": "Technologie",
@@ -838,7 +884,9 @@
         "boersenkurs": 18.244,
         "investiert": 36.49,
         "boersenwert": 36.49,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 74.0,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Technologie",
@@ -850,7 +898,9 @@
         "boersenkurs": 86.74,
         "investiert": 173.48,
         "boersenwert": 173.48,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 73.5,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Versorger",
@@ -862,7 +912,9 @@
         "boersenkurs": 66.81,
         "investiert": 267.24,
         "boersenwert": 267.24,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 70.2,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Versorger",
@@ -874,7 +926,9 @@
         "boersenkurs": 42.675,
         "investiert": 170.7,
         "boersenwert": 170.7,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 81.7,
+        "bucket": "CORE"
       },
       {
         "sektor": "Versorger",
@@ -886,7 +940,9 @@
         "boersenkurs": 6.229,
         "investiert": 62.29,
         "boersenwert": 62.29,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 73.3,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Versorger",
@@ -898,7 +954,9 @@
         "boersenkurs": 44.015,
         "investiert": 176.06,
         "boersenwert": 176.06,
-        "gewinn_verlust": 0.0
+        "gewinn_verlust": 0.0,
+        "composite": 69.1,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Versorger",
@@ -910,7 +968,9 @@
         "boersenkurs": 104.78,
         "investiert": 419.2,
         "boersenwert": 419.12,
-        "gewinn_verlust": -0.08
+        "gewinn_verlust": -0.08,
+        "composite": 81.3,
+        "bucket": "CORE"
       }
     ],
     "transaktionshistorie": [

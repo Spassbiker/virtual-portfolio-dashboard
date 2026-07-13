@@ -1,70 +1,95 @@
 {
-  "generated_at": "2026-07-10 09:23",
+  "generated_at": "2026-07-13 08:50",
   "scores": {
+    "DE0005557508": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+    },
+    "DE0005936124": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+    },
+    "DE0007164600": {
+      "sentiment_score": 1,
+      "veto": false,
+      "begruendung": "Analysten sehen SAP trotz KI-Fantasie als unterbewertet, Cloud-Story bleibt intakt."
+    },
+    "DE000A0D6554": {
+      "sentiment_score": 2,
+      "veto": false,
+      "begruendung": "Mehrere neue Großaufträge (u.a. 700 MW, 325 MW) unterstreichen starke Auftragsdynamik."
+    },
     "DE000A0D9PT0": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Mehrere positive Screening-/Dividenden-Artikel deuten auf solides Ertragswachstum hin."
+      "begruendung": "Solide Dividendenzahlung und bestandener Wachstumsscan deuten auf stabile Fundamentaldaten."
     },
     "DE000A0DJ6J9": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
     },
     "DE000ENER6Y0": {
-      "sentiment_score": 1,
+      "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Neuer Servicevertrag im Oman positiv, Bewertung laut Analysten aber schon anspruchsvoll (Eaton-News betrifft anderes Unternehmen, ignoriert)."
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
     },
     "FR0000073272": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
     },
     "FR0000121329": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
     },
     "FR0014004L86": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Nur formale Meldung zu Aktienzahl/Stimmrechten, keine Kursrelevanz."
+      "begruendung": "Nur routinemäßige Meldung zu Aktienanzahl/Stimmrechten ohne Kursrelevanz."
     },
     "GB00B63H8491": {
-      "sentiment_score": 1,
+      "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Kursplus, neue Bombardier-Kooperation und abgeschlossener Verkauf einer Sparte an Fairbanks Morse stützen die Story leicht positiv."
+      "begruendung": "Kurs +5,5% binnen Woche, neue Bombardier-Partnerschaft im Triebwerksmonitoring stärkt Momentum."
     },
     "IT0003856405": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
     },
     "LU0088087324": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Alle Schlagzeilen betreffen 'SES AI Corporation' (Batteriematerialien), nicht den Satellitenbetreiber SES S.A. - daher neutral."
+      "begruendung": "Schlagzeilen betreffen die andere Firma 'SES AI Corporation' (inkl. Sammelklage), nicht die Luxemburger SES S.A., daher neutral gewertet."
+    },
+    "NL0000235190": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Streik in Getafe bremst Auslieferungen, gleichzeitig neue Aufträge (Philippine Airlines, US CBP) gleichen dies aus."
     },
     "NL0010273215": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Outperformance am Markt plus angehobenes Kursziel von Bernstein klar positiv."
-    },
-    "US0970231058": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "737 MAX 7 nähert sich laut Berichten einem wichtigen FAA-Meilenstein nach langen Verzögerungen - positiv."
+      "begruendung": "Rally auf Chip-Nachfrage-Narrativ trotz Bewertungsbedenken deutet auf positives Momentum."
     },
     "US5398301094": {
-      "sentiment_score": 2,
+      "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Neuer $86M-Laserwaffenauftrag sowie $502M-Sensordeal und abgeschlossene $3,5-Mrd-Übernahme stärken das Geschäft deutlich."
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
     },
     "US67066G1040": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden, daher neutral."
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+    },
+    "US72703X1063": {
+      "sentiment_score": 2,
+      "veto": false,
+      "begruendung": "Erfolgreicher Start des Pelican-11-Satelliten stützt KI-gestützte Wachstumsstory bei Erdbeobachtung."
     }
   }
 }

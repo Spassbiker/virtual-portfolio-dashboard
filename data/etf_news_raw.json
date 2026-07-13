@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11 14:26",
+  "generated_at": "2026-07-13 08:53",
   "items": {
     "IE00B1XNHC34": {
       "name": "iShares Global Clean Energy Transition UCITS ETF",
@@ -122,6 +122,12 @@
       "thema": "defense",
       "headlines": [
         {
+          "title": "Kratos Defense & Security Solutions (KTOS) Expands Oklahoma City Manufacturing Facility",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/kratos-defense-security-solutions-ktos-075906365.html"
+        },
+        {
           "title": "Ondas Stock Up 261% in a Year: Should Investors Buy, Hold or Sell?",
           "publisher": "Zacks",
           "published": "2026-07-10",
@@ -162,12 +168,6 @@
           "publisher": "Simply Wall St.",
           "published": "2026-07-07",
           "link": "https://finance.yahoo.com/markets/stocks/articles/kratos-oklahoma-drone-buildout-could-221008350.html"
-        },
-        {
-          "title": "Kratos Defense & Security Solutions (KTOS) Wins New Contract And Expands Production, Is It A Bargain?",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/kratos-defense-security-solutions-ktos-211732636.html"
         }
       ],
       "error": null
@@ -179,6 +179,12 @@
       "thema": "defense",
       "headlines": [
         {
+          "title": "Kratos Defense & Security Solutions (KTOS) Expands Oklahoma City Manufacturing Facility",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/kratos-defense-security-solutions-ktos-075906365.html"
+        },
+        {
           "title": "Ondas Stock Up 261% in a Year: Should Investors Buy, Hold or Sell?",
           "publisher": "Zacks",
           "published": "2026-07-10",
@@ -219,12 +225,6 @@
           "publisher": "Simply Wall St.",
           "published": "2026-07-07",
           "link": "https://finance.yahoo.com/markets/stocks/articles/kratos-oklahoma-drone-buildout-could-221008350.html"
-        },
-        {
-          "title": "Kratos Defense & Security Solutions (KTOS) Wins New Contract And Expands Production, Is It A Bargain?",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/kratos-defense-security-solutions-ktos-211732636.html"
         }
       ],
       "error": null
@@ -236,16 +236,52 @@
       "thema": "drone",
       "headlines": [
         {
+          "title": "SpaceX Set for Rapid Entry into Nasdaq-100: ETFs in Focus",
+          "publisher": "Zacks",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/spacex-set-rapid-entry-nasdaq-140000927.html"
+        },
+        {
+          "title": "Why Investors Might Ignore the SpaceX Selloff: ETFs in Focus",
+          "publisher": "Zacks",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/why-investors-might-ignore-spacex-120000072.html"
+        },
+        {
           "title": "Ukraine Launches Its Largest Ever Attack on Russia: Drone ETFs in Spotlight",
           "publisher": "Zacks",
           "published": "2026-06-23",
           "link": "https://finance.yahoo.com/markets/stocks/articles/ukraine-launches-largest-ever-attack-141500522.html"
         },
         {
-          "title": "Behind the Ticker: DRNZ and REX Shares",
-          "publisher": "etf.com",
-          "published": "2026-05-04",
-          "link": "https://finance.yahoo.com/m/41c851cb-f5c2-3b07-9e00-c805a0b900b5/behind-the-ticker%3A-drnz-and.html"
+          "title": "The Zacks Analyst Blog Highlights SPCX, IWF, QQQ, ORBX, NASA, MARS, JEDI, AIS, UFO, RONB and XOVR",
+          "publisher": "Zacks",
+          "published": "2026-06-16",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-spcx-082900731.html"
+        },
+        {
+          "title": "SpaceX Soars in Historic IPO: Should You Play SPCX ETFs or the Stock?",
+          "publisher": "Zacks",
+          "published": "2026-06-15",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/spacex-soars-historic-ipo-play-120000894.html"
+        },
+        {
+          "title": "The SpaceX IPO Created a Giant Bubble for Space Stocks. SPCX’s Official Trading Debut Proved Much of the Rally Was Simply Hype.",
+          "publisher": "Barchart",
+          "published": "2026-06-12",
+          "link": "https://finance.yahoo.com/m/04d509be-1fdc-3a95-83b9-10586bad60cf/the-spacex-ipo-created-a.html"
+        },
+        {
+          "title": "Anticipated SpaceX IPO ETFs: Massive Hype or Real Opportunity?",
+          "publisher": "Zacks",
+          "published": "2026-06-08",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/anticipated-spacex-ipo-etfs-massive-120700397.html"
+        },
+        {
+          "title": "The Zacks Analyst Blog Highlights ORBX, MARS, JEDI, AIS and UFO",
+          "publisher": "Zacks",
+          "published": "2026-06-05",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-orbx-083900783.html"
         }
       ],
       "error": null
@@ -257,52 +293,52 @@
       "thema": "space",
       "headlines": [
         {
-          "title": "Where Will SpaceX Stock Be in 5 Years?",
-          "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/14406324-f8bc-3084-a5b6-54004151a15b/where-will-spacex-stock-be-in.html"
+          "title": "SpaceX, Starlink X Accounts Hacked to Push SCATMAN Rug Pull",
+          "publisher": "BeInCrypto",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/16bacb81-01a7-359f-a65f-9f7acef014b2/spacex%2C-starlink-x-accounts.html"
         },
         {
-          "title": "Elon Musk Confirms Starlink Can Deliver Reliable 10 Gigabit-a-Second Upload and Download Speeds Anywhere On Earth",
+          "title": "NASA ETF Tumbles Toward Launch Lows Amid SpaceX Selloff — But Tema Quietly Adds Over 5M ASTS, RKLB And LUNR Shares",
+          "publisher": "Stocktwits",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/aa7319ac-c3cb-3c45-8953-95043d41f116/nasa-etf-tumbles-toward.html"
+        },
+        {
+          "title": "Dow Jones Futures Fall, Oil Prices Rise Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
+          "publisher": "Investor's Business Daily",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/082a233e-c56a-3b99-a968-08ce2bfc43f7/dow-jones-futures-fall%2C-oil.html"
+        },
+        {
+          "title": "SK Hynix Shares Shed 10% in Seoul Amid Broad Asian Rout",
+          "publisher": "BeInCrypto",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/208f974e-d33a-34fc-9e70-c944c3886762/sk-hynix-shares-shed-10%25-in.html"
+        },
+        {
+          "title": "This Vanguard ETF Would Have Quadrupled Your Money Over the Last Decade. History Says Now Is a Smart Time to Invest. (It's Likely to Outperform SpaceX, Too.)",
+          "publisher": "Motley Fool",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/0d047058-5b29-333c-b79c-e9b6b5ee4b88/this-vanguard-etf-would-have.html"
+        },
+        {
+          "title": "The Quarter-Trillion-Dollar Onslaught of AI Bonds Is Testing Investors’ Limits",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/1409ae1b-482d-3d57-87b5-6e56d5116997/the-quarter-trillion-dollar.html"
+        },
+        {
+          "title": "Could AI Pay Americans $1 Million Each? New Think Tank Forecast Sparks Jim Chanos' SpaceX Jab: 'Seems Reasonable'",
           "publisher": "Benzinga",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/technology/articles/elon-musk-confirms-starlink-deliver-104616915.html"
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/technology/ai/articles/could-ai-pay-americans-1-223124890.html"
         },
         {
-          "title": "SpaceX IPO Lock-Up Period: A Golden Buying Opportunity or a Liquidity Trap?",
+          "title": "J.P. Morgan Called a Potential Elon Musk SpaceX-Tesla Merger \"Strategically Coherent\"",
           "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/4ccd947c-97d9-3101-8bd5-eeac8ea0a3bc/spacex-ipo-lock-up-period%3A-a.html"
-        },
-        {
-          "title": "Charter (CHTR) Explores SpaceX Mobile Tie Up And Cox Acquisition Talks",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/charter-chtr-explores-spacex-mobile-090954623.html"
-        },
-        {
-          "title": "How SK Hynix just pulled off the second-largest U.S. share sale by quietly powering the AI boom",
-          "publisher": "Fortune",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/technology/ai/articles/sk-hynix-just-pulled-off-090000737.html"
-        },
-        {
-          "title": "2 Key Members of Congress Recently Bought SpaceX Stock. Should You Buy It Too?",
-          "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/33884a15-852a-3455-9156-16ed0c0bd75f/2-key-members-of-congress.html"
-        },
-        {
-          "title": "Why the 2026 IPO boom is about to broaden beyond AI mega-deals",
-          "publisher": "Fortune",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/why-2026-ipo-boom-broaden-080000019.html"
-        },
-        {
-          "title": "SpaceX Stock Just Received Its Highest Price Target Yet. Here's What a $10,000 Investment Would Be Worth if This Insanely Bullish Wall Street Analyst Is Right.",
-          "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/990cb97a-173f-3b14-8326-085a2d9aff19/spacex-stock-just-received.html"
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/a3e533e2-258b-3d4b-8b31-909a73f034a1/j.p.-morgan-called-a.html"
         }
       ],
       "error": null
@@ -368,7 +404,7 @@
       "name": "iShares Nasdaq 100 UCITS ETF EUR Hedged Acc",
       "ticker": "NQSE.DE",
       "typ": "A",
-      "thema": "nasdaq 100 tech",
+      "thema": "nasdaq",
       "headlines": [
         {
           "title": "Stock market today: Dow closes above 52,000 for first time, S&P 500 and Nasdaq rally as tech gains",
@@ -473,6 +509,18 @@
       "thema": "semiconductors",
       "headlines": [
         {
+          "title": "Sivers Board Completes Purchase of Shares as Approved at the June 2026 AGM",
+          "publisher": "PR Newswire",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sivers-board-completes-purchase-shares-052200448.html"
+        },
+        {
+          "title": "5 Analog Chip Stocks Set to Rebound as the Cycle Changes",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/117c666c-5dcd-3e12-8c8b-72c39adba28d/5-analog-chip-stocks-set-to.html"
+        },
+        {
           "title": "Can TXN's Embedded Business Extend Its Double-Digit Growth Run?",
           "publisher": "Zacks",
           "published": "2026-07-10",
@@ -507,18 +555,6 @@
           "publisher": "MT Newswires",
           "published": "2026-07-08",
           "link": "https://finance.yahoo.com/markets/stocks/articles/cantor-fitzgerald-adjusts-price-target-132923246.html"
-        },
-        {
-          "title": "NXP Semiconductors Announces Conference Call to Review Second Quarter 2026 Financial Results",
-          "publisher": "GlobeNewswire",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/nxp-semiconductors-announces-conference-call-120000367.html"
-        },
-        {
-          "title": "Marvell Technology and NXP Semiconductors Shares Are Soaring, What You Need To Know",
-          "publisher": "StockStory",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-nxp-semiconductors-shares-224401386.html"
         }
       ],
       "error": null
@@ -527,8 +563,20 @@
       "name": "Xtrackers MSCI World Consumer Staples UCITS ETF 1C",
       "ticker": "XDWS.DE",
       "typ": "B",
-      "thema": "consumer staples",
+      "thema": "energy",
       "headlines": [
+        {
+          "title": "1 Big Reason to Buy FuelCell Energy Stock While It's Still Under $30",
+          "publisher": "Motley Fool",
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/9ec7c0ce-736b-3f9f-9800-51b95a0fd242/1-big-reason-to-buy-fuelcell.html"
+        },
+        {
+          "title": "A $225 Million Reason to Sell FuelCell Energy Stock Now",
+          "publisher": "Barchart",
+          "published": "2026-07-11",
+          "link": "https://finance.yahoo.com/m/15f35c01-3ef8-3397-97a0-1e78ec9df429/a-%24225-million-reason-to-sell.html"
+        },
         {
           "title": "Why Plug Power (PLUG) Stock Is Nosediving",
           "publisher": "StockStory",
@@ -564,18 +612,6 @@
           "publisher": "MT Newswires",
           "published": "2026-07-09",
           "link": "https://finance.yahoo.com/energy/articles/energy-transfer-likely-post-sequentially-151243213.html"
-        },
-        {
-          "title": "FuelCell Energy Shares Surge After Strategic Collaboration With Siemens (FCEL)",
-          "publisher": "InvestorsHub",
-          "published": "2026-07-09",
-          "link": "https://finance.yahoo.com/m/9cf333f5-14fb-3b74-9622-7cfa56da9903/fuelcell-energy-shares-surge.html"
-        },
-        {
-          "title": "Can Energy Transfer's Fee-Based Business Model Boost Long-Term Growth?",
-          "publisher": "Zacks",
-          "published": "2026-07-09",
-          "link": "https://finance.yahoo.com/energy/articles/energy-transfers-fee-based-business-133100614.html"
         }
       ],
       "error": null
@@ -586,6 +622,18 @@
       "typ": "B",
       "thema": "materials",
       "headlines": [
+        {
+          "title": "Coca-Cola Is Crushing the S&P 500 and Nasdaq-100. But There's an Even Better Reason to Buy the Stock in July.",
+          "publisher": "Motley Fool",
+          "published": "2026-07-11",
+          "link": "https://finance.yahoo.com/m/22cfcc83-4053-3cdb-aa8d-4357f86bb398/coca-cola-is-crushing-the-s%26p.html"
+        },
+        {
+          "title": "Goldman Sachs doubles down on Applied Materials stock target",
+          "publisher": "TheStreet",
+          "published": "2026-07-11",
+          "link": "https://finance.yahoo.com/m/48302fb7-b35e-3684-a4e8-e344f1f12116/goldman-sachs-doubles-down-on.html"
+        },
         {
           "title": "These 5 Chip Stocks Are Riding the AI Fab Spending Wave",
           "publisher": "24/7 Wall St.",
@@ -621,18 +669,6 @@
           "publisher": "Investor's Business Daily",
           "published": "2026-07-10",
           "link": "https://finance.yahoo.com/m/9ffdc4c1-18b5-3179-98fc-44f53eccaff6/stock-market-leadership-comes.html"
-        },
-        {
-          "title": "Here's Why Investors Should Hold Docusign in Their Portfolios Now",
-          "publisher": "Zacks",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/heres-why-investors-hold-docusign-135700686.html"
-        },
-        {
-          "title": "Are Computer and Technology Stocks Lagging  Cognex (CGNX) This Year?",
-          "publisher": "Zacks",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/computer-technology-stocks-lagging-cognex-134004281.html"
         }
       ],
       "error": null
@@ -644,52 +680,52 @@
       "thema": "industrial",
       "headlines": [
         {
-          "title": "The June jobs report laid an egg: The US only added roughly half of what economists had forecast — what it means for you",
-          "publisher": "Moneywise",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/economy/articles/june-jobs-report-laid-egg-101500027.html"
+          "title": "FTSE 100 Live: Global stocks fall as oil prices hit three-week high on Iran fighting",
+          "publisher": "Proactive",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/c114d4a5-93fd-3243-a242-3787fb76f943/ftse-100-live%3A-global-stocks.html"
         },
         {
-          "title": "Oil Prices Are Plunging, but Trumpflation Is Getting Worse -- Here's Why",
+          "title": "Oil prices climb as Strait of Hormuz tensions reignite supply concerns",
+          "publisher": "Euronews",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/f040ae15-70a9-3023-b195-1b40e22c4e0d/oil-prices-climb-as-strait-of.html"
+        },
+        {
+          "title": "Dow Jones Futures Fall, Oil Prices Rise Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
+          "publisher": "Investor's Business Daily",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/082a233e-c56a-3b99-a968-08ce2bfc43f7/dow-jones-futures-fall%2C-oil.html"
+        },
+        {
+          "title": "Nasdaq, S&P 500, Dow Futures Fall After Trump Directs Strikes ‘To Hold Iranian Forces Accountable’: NVDA, SLS, MRK, SKHYV, QS Stocks In Focus",
+          "publisher": "Stocktwits",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/f9ba20ee-52b3-36a2-9599-34cc9564a65e/nasdaq%2C-s%26p-500%2C-dow-futures.html"
+        },
+        {
+          "title": "This 8-Word Statement From Fed Chair Kevin Warsh and the FOMC Is a Potential Game Changer for Wall Street",
           "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/81e3c991-ca94-3140-9d33-77ea1013229b/oil-prices-are-plunging%2C-but.html"
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/5cbbdf11-c058-3bfc-825f-b27e5747f686/this-8-word-statement-from.html"
         },
         {
-          "title": "History Says Doing This 1 Thing Will Score You an Investing Win -- Even After a Market Crash.",
+          "title": "The Stock Market Is on the Verge of Doing Something That's Never Been Observed in 155 Years -- and It Has Worrisome Ramifications for Wall Street",
           "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/b4e25cbc-9185-313e-a3b3-d9246cdd5f9c/history-says-doing-this-1.html"
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/02cd1998-e59f-3532-9257-352b24d0660e/the-stock-market-is-on-the.html"
         },
         {
-          "title": "Dow Jones Futures: Watch Nvidia, Micron, Sandisk, Robinhood As Market Sets Up; Big Earnings Due",
+          "title": "President Donald Trump Just Proclaimed the \"Market's Going to Go Through the Roof\" -- but He May Soon Be Eating Those Words",
+          "publisher": "Motley Fool",
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/c9522612-ba31-3937-b3bf-3e50baf15421/president-donald-trump-just.html"
+        },
+        {
+          "title": "Stock Market Week Ahead: Watching Big Banks, Warsh, TSMC For Signals",
           "publisher": "Investor's Business Daily",
           "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/082a233e-c56a-3b99-a968-08ce2bfc43f7/dow-jones-futures%3A-watch.html"
-        },
-        {
-          "title": "Review & Preview: Why the Dow Snapped Its Streak",
-          "publisher": "Barrons.com",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/m/7c4a3db1-0586-3a74-ab39-27ebfea953fc/review-%26-preview%3A-why-the-dow.html"
-        },
-        {
-          "title": "Wall Street ends higher as investors turn to earnings season",
-          "publisher": "Reuters Videos",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/video/wall-street-ends-higher-investors-224020146.html"
-        },
-        {
-          "title": "Why V.F. (VFC) Outpaced the Stock Market Today",
-          "publisher": "Zacks",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/why-v-f-vfc-outpaced-221505312.html"
-        },
-        {
-          "title": "Astrazeneca (AZN) Stock Dips While Market Gains: Key Facts",
-          "publisher": "Zacks",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/astrazeneca-azn-stock-dips-while-221505061.html"
+          "link": "https://finance.yahoo.com/m/90c15176-85d3-3359-9e43-05ab16c49dbd/stock-market-week-ahead%3A.html"
         }
       ],
       "error": null
@@ -701,52 +737,52 @@
       "thema": "industrial",
       "headlines": [
         {
-          "title": "The June jobs report laid an egg: The US only added roughly half of what economists had forecast — what it means for you",
-          "publisher": "Moneywise",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/economy/articles/june-jobs-report-laid-egg-101500027.html"
+          "title": "FTSE 100 Live: Global stocks fall as oil prices hit three-week high on Iran fighting",
+          "publisher": "Proactive",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/c114d4a5-93fd-3243-a242-3787fb76f943/ftse-100-live%3A-global-stocks.html"
         },
         {
-          "title": "Oil Prices Are Plunging, but Trumpflation Is Getting Worse -- Here's Why",
+          "title": "Oil prices climb as Strait of Hormuz tensions reignite supply concerns",
+          "publisher": "Euronews",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/f040ae15-70a9-3023-b195-1b40e22c4e0d/oil-prices-climb-as-strait-of.html"
+        },
+        {
+          "title": "Dow Jones Futures Fall, Oil Prices Rise Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
+          "publisher": "Investor's Business Daily",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/082a233e-c56a-3b99-a968-08ce2bfc43f7/dow-jones-futures-fall%2C-oil.html"
+        },
+        {
+          "title": "Nasdaq, S&P 500, Dow Futures Fall After Trump Directs Strikes ‘To Hold Iranian Forces Accountable’: NVDA, SLS, MRK, SKHYV, QS Stocks In Focus",
+          "publisher": "Stocktwits",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/f9ba20ee-52b3-36a2-9599-34cc9564a65e/nasdaq%2C-s%26p-500%2C-dow-futures.html"
+        },
+        {
+          "title": "This 8-Word Statement From Fed Chair Kevin Warsh and the FOMC Is a Potential Game Changer for Wall Street",
           "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/81e3c991-ca94-3140-9d33-77ea1013229b/oil-prices-are-plunging%2C-but.html"
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/5cbbdf11-c058-3bfc-825f-b27e5747f686/this-8-word-statement-from.html"
         },
         {
-          "title": "History Says Doing This 1 Thing Will Score You an Investing Win -- Even After a Market Crash.",
+          "title": "The Stock Market Is on the Verge of Doing Something That's Never Been Observed in 155 Years -- and It Has Worrisome Ramifications for Wall Street",
           "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/b4e25cbc-9185-313e-a3b3-d9246cdd5f9c/history-says-doing-this-1.html"
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/02cd1998-e59f-3532-9257-352b24d0660e/the-stock-market-is-on-the.html"
         },
         {
-          "title": "Dow Jones Futures: Watch Nvidia, Micron, Sandisk, Robinhood As Market Sets Up; Big Earnings Due",
+          "title": "President Donald Trump Just Proclaimed the \"Market's Going to Go Through the Roof\" -- but He May Soon Be Eating Those Words",
+          "publisher": "Motley Fool",
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/c9522612-ba31-3937-b3bf-3e50baf15421/president-donald-trump-just.html"
+        },
+        {
+          "title": "Stock Market Week Ahead: Watching Big Banks, Warsh, TSMC For Signals",
           "publisher": "Investor's Business Daily",
           "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/082a233e-c56a-3b99-a968-08ce2bfc43f7/dow-jones-futures%3A-watch.html"
-        },
-        {
-          "title": "Review & Preview: Why the Dow Snapped Its Streak",
-          "publisher": "Barrons.com",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/m/7c4a3db1-0586-3a74-ab39-27ebfea953fc/review-%26-preview%3A-why-the-dow.html"
-        },
-        {
-          "title": "Wall Street ends higher as investors turn to earnings season",
-          "publisher": "Reuters Videos",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/video/wall-street-ends-higher-investors-224020146.html"
-        },
-        {
-          "title": "Why V.F. (VFC) Outpaced the Stock Market Today",
-          "publisher": "Zacks",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/why-v-f-vfc-outpaced-221505312.html"
-        },
-        {
-          "title": "Astrazeneca (AZN) Stock Dips While Market Gains: Key Facts",
-          "publisher": "Zacks",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/astrazeneca-azn-stock-dips-while-221505061.html"
+          "link": "https://finance.yahoo.com/m/90c15176-85d3-3359-9e43-05ab16c49dbd/stock-market-week-ahead%3A.html"
         }
       ],
       "error": null
@@ -815,52 +851,52 @@
       "thema": "technology",
       "headlines": [
         {
-          "title": "'Market is becoming more discerning': Wall Street weighs next catalyst for AI trade",
-          "publisher": "Yahoo Finance",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/markets/article/market-is-becoming-more-discerning-wall-street-weighs-next-catalyst-for-ai-trade-114052280.html"
-        },
-        {
-          "title": "Trump's Financial Disclosure Revealed a $1.67 Million Micron Stock Stake",
-          "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/6303d031-c605-3dcb-8637-524d7f13ab25/trump%27s-financial-disclosure.html"
-        },
-        {
-          "title": "Goldman Sachs Says Optical Networking Is AI’s Next Trillion-Dollar Opportunity. Lumentum May Be the Biggest Winner",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/70be1e27-86bd-3bba-94ec-495ee05f1a44/goldman-sachs-says-optical.html"
-        },
-        {
-          "title": "Micron's Biggest Long-Term Growth Catalyst Has Nothing to Do With AI Data Centers",
-          "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/ed0b0bae-a680-34a5-a026-6fb48c185943/micron%27s-biggest-long-term.html"
-        },
-        {
-          "title": "Micron CEO Sanjay Mehrotra Announces $250 Billion Investment for Expanded Artificial Intelligence (AI) Memory Chip Development",
-          "publisher": "Motley Fool",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/288fa85e-a165-370c-bdfc-ef3b175c8c24/micron-ceo-sanjay-mehrotra.html"
-        },
-        {
-          "title": "SK Hynix ETFs Are Coming. Exactly Who Should Own Them.",
-          "publisher": "Barrons.com",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/78b88975-128d-360f-8101-e1605a77384a/sk-hynix-etfs-are-coming..html"
-        },
-        {
-          "title": "Dow Jones Futures: Watch Nvidia, Micron, Sandisk, Robinhood As Market Sets Up; Big Earnings Due",
+          "title": "Dow Jones Futures Fall, Oil Prices Rise Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
           "publisher": "Investor's Business Daily",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/m/082a233e-c56a-3b99-a968-08ce2bfc43f7/dow-jones-futures%3A-watch.html"
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/082a233e-c56a-3b99-a968-08ce2bfc43f7/dow-jones-futures-fall%2C-oil.html"
         },
         {
-          "title": "Micron–GM U.S. Chip Supply Pact Could Be A Game Changer For General Motors (GM)",
+          "title": "SK Hynix Falls In Seoul After Strong Nasdaq Debut: MU, SNDK, US Memory Stocks Decline Overnight Amid Fresh US-Iran Tensions",
+          "publisher": "Stocktwits",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/35d8d537-d4b9-3053-b1d7-afdc1b9d92fe/sk-hynix-falls-in-seoul-after.html"
+        },
+        {
+          "title": "Why Retail Traders Couldn’t Take Their Eyes Off These Stocks Last Week: AAPL, MU, MSFT, META, BABA",
+          "publisher": "Stocktwits",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/46e62c77-47b2-38d8-9bfd-174e813836d7/why-retail-traders-couldn%E2%80%99t.html"
+        },
+        {
+          "title": "Is a Deal With Ford and a $100 Billion Backlog Enough to Get Micron Stock Back Over $1,200?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/1e4f76bf-c21b-3bb2-ad26-9952c0e604f2/is-a-deal-with-ford-and-a.html"
+        },
+        {
+          "title": "This Vanguard ETF Would Have Quadrupled Your Money Over the Last Decade. History Says Now Is a Smart Time to Invest. (It's Likely to Outperform SpaceX, Too.)",
+          "publisher": "Motley Fool",
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/m/0d047058-5b29-333c-b79c-e9b6b5ee4b88/this-vanguard-etf-would-have.html"
+        },
+        {
+          "title": "How Labor Peace and Chip Supply Moves At Ford Motor (F) Has Changed Its Investment Story",
           "publisher": "Simply Wall St.",
-          "published": "2026-07-11",
-          "link": "https://finance.yahoo.com/technology/articles/micron-gm-u-chip-supply-001656462.html"
+          "published": "2026-07-13",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/labor-peace-chip-supply-moves-001455539.html"
+        },
+        {
+          "title": "Howard Lutnick Tells Samsung and SK Hynix They Have 'No Choice' but to Build US AI Memory Fabs— and Micron's CEO May Not Be Happy",
+          "publisher": "Benzinga",
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/technology/ai/articles/howard-lutnick-tells-samsung-sk-193105309.html"
+        },
+        {
+          "title": "Michael Burry sends strong warning on AI development path",
+          "publisher": "TheStreet",
+          "published": "2026-07-12",
+          "link": "https://finance.yahoo.com/m/f098c6c1-4551-33c1-91aa-185abfabafaa/michael-burry-sends-strong.html"
         }
       ],
       "error": null
@@ -869,8 +905,20 @@
       "name": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
       "ticker": "EXH3.DE",
       "typ": "B",
-      "thema": "food & beverage",
+      "thema": "utilities",
       "headlines": [
+        {
+          "title": "This “Boring” ETF Could Be One of the Biggest Winners from the AI Boom",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-11",
+          "link": "https://finance.yahoo.com/m/d55ff5ca-cc94-3d56-8817-f3dada13a1f5/this-%E2%80%9Cboring%E2%80%9D-etf-could-be.html"
+        },
+        {
+          "title": "AI Stocks Look Expensive. These 3 ETFs Could Help Investors Stay in the Game.",
+          "publisher": "Barchart",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/m/f69ab5c8-02b5-30a6-a1f7-4aabed47fdf6/ai-stocks-look-expensive..html"
+        },
         {
           "title": "XLU vs. VPU: Which Utilities ETF Best Powers the AI Data-Center Boom?",
           "publisher": "24/7 Wall St.",
@@ -884,40 +932,28 @@
           "link": "https://finance.yahoo.com/m/8c356805-b6f0-3d27-a5a7-af7c2d10cc48/3-utility-etfs-to-buy-now-as.html"
         },
         {
-          "title": "Virginia Regulator Approves American Water-Essential Utilities Merger",
-          "publisher": "MT Newswires",
-          "published": "2026-06-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/virginia-regulator-approves-american-water-204203293.html"
+          "title": "Two Sector Income ETFs Outyielding the S&P 500 by More Than 2 Percent Heading Into a Possible Recession",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/e01d2afd-007d-30aa-9d1b-004007244c0e/two-sector-income-etfs.html"
         },
         {
-          "title": "American Water and Essential Utilities Proposed Merger Progresses with Approval from the Virginia State Corporation Commission",
-          "publisher": "PR Newswire",
-          "published": "2026-06-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/american-water-essential-utilities-proposed-201500373.html"
+          "title": "Only One Old-School Haven Stands Firm During Iran War as Gold, Others Lose Luster",
+          "publisher": "Barrons.com",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/59fcc422-2336-310d-abc8-9b101760fae8/only-one-old-school-haven.html"
         },
         {
-          "title": "Rate Hikes & Acquisitions Drive AWK's Growth Despite Regulatory Risks",
+          "title": "Should You Invest in the State Street Utilities Select Sector SPDR ETF (XLU)?",
           "publisher": "Zacks",
-          "published": "2026-06-17",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/rate-hikes-acquisitions-drive-awks-150300219.html"
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/invest-state-street-utilities-select-102002201.html"
         },
         {
-          "title": "Blue Economy Meets AI: 4 Water ETFs in Spotlight This World Oceans Day",
-          "publisher": "Zacks",
-          "published": "2026-06-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/blue-economy-meets-ai-4-154300643.html"
-        },
-        {
-          "title": "Essential Utilities (WTRG) Down 2.5% Since Last Earnings Report: Can It Rebound?",
-          "publisher": "Zacks",
-          "published": "2026-06-05",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/essential-utilities-wtrg-down-2-153029720.html"
-        },
-        {
-          "title": "AWK Concludes the Acquisition of Nexus Utility Assets for $315 Million",
-          "publisher": "Zacks",
-          "published": "2026-06-02",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/awk-concludes-acquisition-nexus-utility-171200388.html"
+          "title": "Forget the Utility Sector Sell-Off: 1 Legally Protected Water Monopoly Is an Absolute Sanctuary for Retirees Seeking Bulletproof Yield",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/m/abd27e32-2a2b-3375-9b52-7ffd3da7c4c3/forget-the-utility-sector.html"
         }
       ],
       "error": null
@@ -929,6 +965,18 @@
       "thema": "utilities",
       "headlines": [
         {
+          "title": "This “Boring” ETF Could Be One of the Biggest Winners from the AI Boom",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-11",
+          "link": "https://finance.yahoo.com/m/d55ff5ca-cc94-3d56-8817-f3dada13a1f5/this-%E2%80%9Cboring%E2%80%9D-etf-could-be.html"
+        },
+        {
+          "title": "AI Stocks Look Expensive. These 3 ETFs Could Help Investors Stay in the Game.",
+          "publisher": "Barchart",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/m/f69ab5c8-02b5-30a6-a1f7-4aabed47fdf6/ai-stocks-look-expensive..html"
+        },
+        {
           "title": "XLU vs. VPU: Which Utilities ETF Best Powers the AI Data-Center Boom?",
           "publisher": "24/7 Wall St.",
           "published": "2026-07-08",
@@ -941,40 +989,28 @@
           "link": "https://finance.yahoo.com/m/8c356805-b6f0-3d27-a5a7-af7c2d10cc48/3-utility-etfs-to-buy-now-as.html"
         },
         {
-          "title": "Virginia Regulator Approves American Water-Essential Utilities Merger",
-          "publisher": "MT Newswires",
-          "published": "2026-06-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/virginia-regulator-approves-american-water-204203293.html"
+          "title": "Two Sector Income ETFs Outyielding the S&P 500 by More Than 2 Percent Heading Into a Possible Recession",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/e01d2afd-007d-30aa-9d1b-004007244c0e/two-sector-income-etfs.html"
         },
         {
-          "title": "American Water and Essential Utilities Proposed Merger Progresses with Approval from the Virginia State Corporation Commission",
-          "publisher": "PR Newswire",
-          "published": "2026-06-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/american-water-essential-utilities-proposed-201500373.html"
+          "title": "Only One Old-School Haven Stands Firm During Iran War as Gold, Others Lose Luster",
+          "publisher": "Barrons.com",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/59fcc422-2336-310d-abc8-9b101760fae8/only-one-old-school-haven.html"
         },
         {
-          "title": "Rate Hikes & Acquisitions Drive AWK's Growth Despite Regulatory Risks",
+          "title": "Should You Invest in the State Street Utilities Select Sector SPDR ETF (XLU)?",
           "publisher": "Zacks",
-          "published": "2026-06-17",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/rate-hikes-acquisitions-drive-awks-150300219.html"
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/invest-state-street-utilities-select-102002201.html"
         },
         {
-          "title": "Blue Economy Meets AI: 4 Water ETFs in Spotlight This World Oceans Day",
-          "publisher": "Zacks",
-          "published": "2026-06-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/blue-economy-meets-ai-4-154300643.html"
-        },
-        {
-          "title": "Essential Utilities (WTRG) Down 2.5% Since Last Earnings Report: Can It Rebound?",
-          "publisher": "Zacks",
-          "published": "2026-06-05",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/essential-utilities-wtrg-down-2-153029720.html"
-        },
-        {
-          "title": "AWK Concludes the Acquisition of Nexus Utility Assets for $315 Million",
-          "publisher": "Zacks",
-          "published": "2026-06-02",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/awk-concludes-acquisition-nexus-utility-171200388.html"
+          "title": "Forget the Utility Sector Sell-Off: 1 Legally Protected Water Monopoly Is an Absolute Sanctuary for Retirees Seeking Bulletproof Yield",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/m/abd27e32-2a2b-3375-9b52-7ffd3da7c4c3/forget-the-utility-sector.html"
         }
       ],
       "error": null
@@ -986,6 +1022,18 @@
       "thema": "utilities",
       "headlines": [
         {
+          "title": "This “Boring” ETF Could Be One of the Biggest Winners from the AI Boom",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-11",
+          "link": "https://finance.yahoo.com/m/d55ff5ca-cc94-3d56-8817-f3dada13a1f5/this-%E2%80%9Cboring%E2%80%9D-etf-could-be.html"
+        },
+        {
+          "title": "AI Stocks Look Expensive. These 3 ETFs Could Help Investors Stay in the Game.",
+          "publisher": "Barchart",
+          "published": "2026-07-09",
+          "link": "https://finance.yahoo.com/m/f69ab5c8-02b5-30a6-a1f7-4aabed47fdf6/ai-stocks-look-expensive..html"
+        },
+        {
           "title": "XLU vs. VPU: Which Utilities ETF Best Powers the AI Data-Center Boom?",
           "publisher": "24/7 Wall St.",
           "published": "2026-07-08",
@@ -998,40 +1046,28 @@
           "link": "https://finance.yahoo.com/m/8c356805-b6f0-3d27-a5a7-af7c2d10cc48/3-utility-etfs-to-buy-now-as.html"
         },
         {
-          "title": "Virginia Regulator Approves American Water-Essential Utilities Merger",
-          "publisher": "MT Newswires",
-          "published": "2026-06-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/virginia-regulator-approves-american-water-204203293.html"
+          "title": "Two Sector Income ETFs Outyielding the S&P 500 by More Than 2 Percent Heading Into a Possible Recession",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/e01d2afd-007d-30aa-9d1b-004007244c0e/two-sector-income-etfs.html"
         },
         {
-          "title": "American Water and Essential Utilities Proposed Merger Progresses with Approval from the Virginia State Corporation Commission",
-          "publisher": "PR Newswire",
-          "published": "2026-06-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/american-water-essential-utilities-proposed-201500373.html"
+          "title": "Only One Old-School Haven Stands Firm During Iran War as Gold, Others Lose Luster",
+          "publisher": "Barrons.com",
+          "published": "2026-07-03",
+          "link": "https://finance.yahoo.com/m/59fcc422-2336-310d-abc8-9b101760fae8/only-one-old-school-haven.html"
         },
         {
-          "title": "Rate Hikes & Acquisitions Drive AWK's Growth Despite Regulatory Risks",
+          "title": "Should You Invest in the State Street Utilities Select Sector SPDR ETF (XLU)?",
           "publisher": "Zacks",
-          "published": "2026-06-17",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/rate-hikes-acquisitions-drive-awks-150300219.html"
+          "published": "2026-07-02",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/invest-state-street-utilities-select-102002201.html"
         },
         {
-          "title": "Blue Economy Meets AI: 4 Water ETFs in Spotlight This World Oceans Day",
-          "publisher": "Zacks",
-          "published": "2026-06-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/blue-economy-meets-ai-4-154300643.html"
-        },
-        {
-          "title": "Essential Utilities (WTRG) Down 2.5% Since Last Earnings Report: Can It Rebound?",
-          "publisher": "Zacks",
-          "published": "2026-06-05",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/essential-utilities-wtrg-down-2-153029720.html"
-        },
-        {
-          "title": "AWK Concludes the Acquisition of Nexus Utility Assets for $315 Million",
-          "publisher": "Zacks",
-          "published": "2026-06-02",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/awk-concludes-acquisition-nexus-utility-171200388.html"
+          "title": "Forget the Utility Sector Sell-Off: 1 Legally Protected Water Monopoly Is an Absolute Sanctuary for Retirees Seeking Bulletproof Yield",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-06-29",
+          "link": "https://finance.yahoo.com/m/abd27e32-2a2b-3375-9b52-7ffd3da7c4c3/forget-the-utility-sector.html"
         }
       ],
       "error": null
