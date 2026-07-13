@@ -14,8 +14,8 @@ fi
 
 python3 src/update_prices.py >/dev/null 2>&1
 python3 src/compute_indicators.py >/dev/null 2>&1
-python3 src/build_dashboard.py >/dev/null 2>&1
 python3 src/risk_report.py >/dev/null 2>&1
+python3 src/build_dashboard.py >/dev/null 2>&1
 
 git add data/*.json index.html
 if git commit -q -m "Update Schlusskurse" 2>/dev/null; then

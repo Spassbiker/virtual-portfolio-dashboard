@@ -39,8 +39,8 @@ if [ "$traded" = "1" ]; then
   python3 src/update_etf_depot.py              >/dev/null 2>&1
 fi
 
-python3 src/build_dashboard.py >/dev/null 2>&1
 python3 src/risk_report.py >/dev/null 2>&1
+python3 src/build_dashboard.py >/dev/null 2>&1
 
 git add data/*.json index.html
 if git commit -q -m "Daily 09:00: Portfolio-Manager (Stop-Loss + regelbasierte Trades)" 2>/dev/null; then

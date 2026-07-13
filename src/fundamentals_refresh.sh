@@ -21,6 +21,8 @@ cp -f "$FUNDA" "$BACKUP"
 
 PROMPT='Aufgabe: Aktualisiere die Fundamentaldaten in /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data/fundamentalanalyse_ergebnisse.json. Vertragsformat und Regeln stehen in /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/docs/FUNDA_STAGE.md - LIES DIESE DATEI ZUERST.
 
+WICHTIG: Dieser Lauf ist ein EINMALIGER CLI-Turn ohne Folge-Turn. Spawne KEINE Subagents (Agent/sessions_spawn) und rufe NIEMALS sessions_yield auf - wenn du yieldest, endet der Prozess sofort und die Datei wird nie geschrieben. Recherchiere jede ISIN direkt und sequenziell selbst mit web_search/WebSearch/WebFetch im selben Turn.
+
 Vorgehen:
 1. Lies das aktuelle JSON. Bestimme die Liste aller ISINs und ihre Sektor-Zuordnung.
 2. Für jede vorhandene ISIN: web_search nach aktuellen Kennzahlen (KGV/Price-to-Earnings, Umsatzwachstum YoY, Gewinnwachstum YoY, Eigenkapitalquote, Dividendenrendite) und aktuellen Nachrichten (Auftragslage, Guidance, Risiken). Yahoo Finance, Boerse Frankfurt, finanzen.net sind gute Quellen.
