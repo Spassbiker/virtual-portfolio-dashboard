@@ -295,9 +295,9 @@ html_template = """<!DOCTYPE html>
         function getBadge(rating) {
             if (!rating) return '';
             const r = rating.toLowerCase();
+            if (r.includes("verkauf") || r.includes("teuer") || r.includes("spekulativ")) return `<span class="badge sell">${rating}</span>`;
             if (r.includes("kauf") || r.includes("attraktiv")) return `<span class="badge buy">${rating}</span>`;
             if (r.includes("halt") || r.includes("fair")) return `<span class="badge hold">${rating}</span>`;
-            if (r.includes("verkauf") || r.includes("teuer")) return `<span class="badge sell">${rating}</span>`;
             return `<span class="badge" style="background:var(--grid); color:var(--text-primary);">${rating}</span>`;
         }
 
