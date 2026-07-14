@@ -67,6 +67,41 @@ def is_watch(item):
     return contains(text, WATCH_MARKER)
 
 
+def is_reference_copy(item):
+    """'(siehe ...)'-Marker zeigt eine bewusste Querverweis-Kopie an (z.B. ein
+    Wertpapier, das zusätzlich in einem zweiten Sektor gelistet wurde). Beim
+    globalen ISIN-Dedup verliert diese Kopie gegen das Original."""
+    return "(siehe" in (item.get("begruendung") or "").lower()
+
+
+def dedup_cross_sector(cleaned_by_sector, priority_fn, depot_isins, dropped):
+    """Entfernt ISIN-Duplikate über ALLE Sektoren hinweg (nicht nur pro Sektor).
+    Gewinner: beste Priorität, dann Original vor Querverweis-Kopie, dann
+    erstes Vorkommen (stabile Sektor-/Listen-Reihenfolge)."""
+    best_by_isin = {}
+    for sec, items in cleaned_by_sector.items():
+        for it in items:
+            isin = it.get("isin")
+            if not isin:
+                continue
+            key = (priority_fn(it, depot_isins), is_reference_copy(it))
+            current = best_by_isin.get(isin)
+            if current is None or key < current[0]:
+                best_by_isin[isin] = (key, id(it))
+
+    result = {}
+    for sec, items in cleaned_by_sector.items():
+        kept = []
+        for it in items:
+            isin = it.get("isin")
+            if isin and best_by_isin[isin][1] != id(it):
+                dropped.append((sec, it.get("wertpapier", "?"), "Duplikat (Cross-Sektor)"))
+                continue
+            kept.append(it)
+        result[sec] = kept
+    return result
+
+
 def chart_priority(item, depot_isins):
     """0 = beste. Depot > Watch > Kaufen > Halten > Verkaufen > sonstige."""
     if item.get("isin") in depot_isins:
@@ -105,6 +140,7 @@ def prune_chart(depot_isins):
     data = load_json(CHART, {})
 
     dropped = []
+    cleaned_by_sector = {}
     for sec, items in list(data.get("sektoren", {}).items()):
         # Rauschen raus (Depot ist immer sicher – kein Rauschen möglich).
         cleaned = []
@@ -114,18 +150,12 @@ def prune_chart(depot_isins):
                 dropped.append((sec, it.get("wertpapier", "?"), noise))
             else:
                 cleaned.append(it)
+        cleaned_by_sector[sec] = cleaned
 
-        # Duplikate pro Sektor entfernen (ISIN als Schlüssel; erste Instanz gewinnt).
-        seen = set()
-        deduped = []
-        for it in cleaned:
-            isin = it.get("isin")
-            if isin and isin in seen:
-                dropped.append((sec, it.get("wertpapier", "?"), "Duplikat"))
-                continue
-            seen.add(isin)
-            deduped.append(it)
+    # Duplikate GLOBAL über alle Sektoren entfernen (ISIN als Schlüssel).
+    cleaned_by_sector = dedup_cross_sector(cleaned_by_sector, chart_priority, depot_isins, dropped)
 
+    for sec, deduped in cleaned_by_sector.items():
         # Sektor-Trim: wenn >TARGET, die schwächsten (nach Priorität) weglassen.
         deduped.sort(key=lambda it: (chart_priority(it, depot_isins), it.get("wertpapier", "")))
         if len(deduped) > TARGET_PER_SECTOR:
@@ -149,6 +179,7 @@ def prune_funda(depot_isins, chart_isins):
     data = load_json(FUNDA, {})
 
     dropped = []
+    cleaned_by_sector = {}
     for sec, items in list(data.get("sektoren", {}).items()):
         cleaned = []
         for it in items:
@@ -164,17 +195,12 @@ def prune_funda(depot_isins, chart_isins):
                 dropped.append((sec, it.get("wertpapier", "?"), "nicht in Chart (nicht handelbar)"))
                 continue
             cleaned.append(it)
+        cleaned_by_sector[sec] = cleaned
 
-        seen = set()
-        deduped = []
-        for it in cleaned:
-            isin = it.get("isin")
-            if isin and isin in seen:
-                dropped.append((sec, it.get("wertpapier", "?"), "Duplikat"))
-                continue
-            seen.add(isin)
-            deduped.append(it)
+    # Duplikate GLOBAL über alle Sektoren entfernen (ISIN als Schlüssel).
+    cleaned_by_sector = dedup_cross_sector(cleaned_by_sector, funda_priority, depot_isins, dropped)
 
+    for sec, deduped in cleaned_by_sector.items():
         deduped.sort(key=lambda it: (funda_priority(it, depot_isins), it.get("wertpapier", "")))
         if len(deduped) > TARGET_PER_SECTOR:
             for it in deduped[TARGET_PER_SECTOR:]:
