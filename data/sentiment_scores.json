@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13 08:50",
+  "generated_at": "2026-07-14 08:50",
   "scores": {
     "DE0005557508": {
       "sentiment_score": 0,
@@ -14,22 +14,27 @@
     "DE0007164600": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Analysten sehen SAP trotz KI-Fantasie als unterbewertet, Cloud-Story bleibt intakt."
+      "begruendung": "Gelockerte ERP-Wartungsregeln und positive Analystenerwähnung, aber keine kursrelevante Meldung."
     },
     "DE000A0D6554": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Mehrere neue Großaufträge (u.a. 700 MW, 325 MW) unterstreichen starke Auftragsdynamik."
+      "begruendung": "Serie neuer Großaufträge (700 MW, 325 MW, 197 MW mehrfach, 112 MW) aus mehreren Märkten."
     },
     "DE000A0D9PT0": {
-      "sentiment_score": 1,
+      "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Solide Dividendenzahlung und bestandener Wachstumsscan deuten auf stabile Fundamentaldaten."
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
     },
     "DE000A0DJ6J9": {
       "sentiment_score": 0,
       "veto": false,
       "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+    },
+    "DE000ENAG999": {
+      "sentiment_score": 2,
+      "veto": false,
+      "begruendung": "Q1-Gewinnanstieg, bestätigter Ausblick und starke industrielle Nachfrage in Deutschland (SAP-Meldung betrifft anderes Unternehmen, ignoriert)."
     },
     "DE000ENER6Y0": {
       "sentiment_score": 0,
@@ -49,12 +54,17 @@
     "FR0014004L86": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Nur routinemäßige Meldung zu Aktienanzahl/Stimmrechten ohne Kursrelevanz."
+      "begruendung": "Nur routinemäßige Meldung zu Aktien-/Stimmrechtsanzahl, keine Kursrelevanz."
+    },
+    "GB0002634946": {
+      "sentiment_score": 2,
+      "veto": false,
+      "begruendung": "Mehrere neue Rüstungsaufträge und Marktausweitung (EPAWSS Südkorea, CV90-Getriebe, gepanzerte Fahrzeuge, Marine-MRO)."
     },
     "GB00B63H8491": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Kurs +5,5% binnen Woche, neue Bombardier-Partnerschaft im Triebwerksmonitoring stärkt Momentum."
+      "begruendung": "Positive Kursentwicklung, neue Bombardier-Partnerschaft und abgeschlossene Übernahme durch Fairbanks Morse Defense."
     },
     "IT0003856405": {
       "sentiment_score": 0,
@@ -64,22 +74,22 @@
     "LU0088087324": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Schlagzeilen betreffen die andere Firma 'SES AI Corporation' (inkl. Sammelklage), nicht die Luxemburger SES S.A., daher neutral gewertet."
+      "begruendung": "Schlagzeilen betreffen SES AI Corporation (anderes Unternehmen, u.a. Sammelklage), nicht die Luxemburger SES S.A., daher neutral."
     },
     "NL0000235190": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Streik in Getafe bremst Auslieferungen, gleichzeitig neue Aufträge (Philippine Airlines, US CBP) gleichen dies aus."
+      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
     },
     "NL0010273215": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Rally auf Chip-Nachfrage-Narrativ trotz Bewertungsbedenken deutet auf positives Momentum."
+      "begruendung": "Positive Erwartungshaltung vor Quartalszahlen am 15.07. und laufendes Aktienrückkaufprogramm, Ergebnisse stehen aber noch aus."
     },
     "US5398301094": {
-      "sentiment_score": 0,
+      "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "100-Mrd.-Dollar-Auftragsbestand und vertiefte NATO-Zusammenarbeit (PAC-3, ATACMS-Venture mit Deutschland) signalisieren starke Nachfrage."
     },
     "US67066G1040": {
       "sentiment_score": 0,
@@ -87,9 +97,9 @@
       "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
     },
     "US72703X1063": {
-      "sentiment_score": 2,
+      "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Erfolgreicher Start des Pelican-11-Satelliten stützt KI-gestützte Wachstumsstory bei Erdbeobachtung."
+      "begruendung": "Buy-Rating von Wedbush und Start der Pelican-11-Satellitenflotte überwiegen den Kursrückgang der letzten Wochen."
     }
   }
 }

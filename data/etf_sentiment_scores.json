@@ -1,100 +1,100 @@
 {
-  "generated_at": "2026-07-13 08:53",
+  "generated_at": "2026-07-14 09:05",
   "scores": {
     "IE00B1XNHC34": {
       "typ": "A",
-      "sentiment_score": -2,
-      "begruendung": "Bloom Energy und FuelCell Energy verlieren nach Aktienplatzierung und Lieferstreit deutlich, kaum positives Gegengewicht."
+      "sentiment_score": -1,
+      "begruendung": "Mehrfache Dip-Diskussion und Kursrückgänge bei Bloom Energy und FuelCell überwiegen leicht gegenüber neutralen Nachrichten."
     },
     "IE000NDWFGA5": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Uranium Energy (UEC) profitiert von US-Atombrennstoff-Förderung, mehrere positive Analysten-Updates."
+      "sentiment_score": 1,
+      "begruendung": "Uranium Energy legt zu und profitiert von US-Nuklearbrennstoff-Förderung, insgesamt leicht positive Analystenstimmung."
     },
     "IE0002Y8CX98": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Kratos expandiert Fertigung, Ark Invest kauft zu, starke Auftragsbestände trotz Kursdruck bei Drohnenwerten."
+      "sentiment_score": 3,
+      "begruendung": "NATO-Zusagen über 50 Mrd. USD, große Auftragsvergaben an Kratos und Ark-Invest-Käufe treiben klar positive Verteidigungsstimmung."
     },
     "IE000YYE6WK5": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Kratos expandiert Fertigung, Ark Invest kauft zu, starke Auftragsbestände trotz Kursdruck bei Drohnenwerten."
+      "sentiment_score": 3,
+      "begruendung": "Gleiche starke Nachrichtenlage wie bei anderen Defense-ETFs: NATO-Milliardenzusagen und Großaufträge sorgen für klaren Rückenwind."
     },
     "IE000OJ5TQP4": {
       "typ": "A",
       "sentiment_score": 1,
-      "begruendung": "Kaum themenbezogene Treffer; nur Ukraine-Großangriff rückt Drohnen-ETFs ins Rampenlicht, Rest ist SpaceX-Rauschen ohne Drohnenbezug."
+      "begruendung": "Kaum thementreue Schlagzeilen (meist SpaceX-IPO statt Drohnen), einzig relevante Meldung zu Drohnen-ETFs nach Ukraine-Angriff ist positiv."
     },
     "IE000YU9K6K2": {
       "typ": "A",
-      "sentiment_score": -2,
-      "begruendung": "SpaceX/Starlink-Hack, Ausverkauf und taumelnder NASA-ETF überwiegen trotz vereinzelter Zukäufe."
+      "sentiment_score": -1,
+      "begruendung": "SpaceX-Aktie fällt trotz Investment-Grade-Rating um 16%, begleitet von Nasdaq-Ausverkauf und Warnungen zu Telekomkonkurrenz."
     },
     "IE00BYPLS672": {
       "typ": "A",
       "sentiment_score": 3,
-      "begruendung": "Cybersecurity-Ausgaben knacken 300 Mrd $, CrowdStrike und Palo Alto rallyen, CIBR schlägt den S&P 500 klar."
+      "begruendung": "CrowdStrike und Palo Alto rallyen, Ausgaben für Cybersicherheit überschreiten 300 Mrd. USD, CIBR schlägt den S&P 500 deutlich."
     },
     "IE00BYVQ9F29": {
       "typ": "A",
       "sentiment_score": -1,
-      "begruendung": "Wechselhafte Woche: KI-Jitter und steigende Anleiherenditen belasten den Nasdaq trotz zwischenzeitlicher Rallys."
+      "begruendung": "Neben Rally-Meldungen dominieren KI-Nervosität, ein Ende der Gewinnserie und Warnungen vor einer Tech-Blase."
     },
     "IE00BYZK4552": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Healthcare-Automation und Reshoring-Boom treiben die Robotik-Story, BOTZ als 'nächster KI-Akt' gehypt."
+      "sentiment_score": 1,
+      "begruendung": "Reshoring-Boom und Gesundheits-Automatisierung stützen die Robotik-Story, trotz einzelner negativer Einzelmeldungen wie Accenture-Rückgang."
     },
     "IE00BMC38736": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Chipwerte rallyen trotz Iran-Spannungen, Kurszielanhebung bei NXP und positive Wachstumsstorys überwiegen."
+      "sentiment_score": 1,
+      "begruendung": "Kursziel-Anhebungen bei NXP und eine Rally trotz Iran-Spannungen überwiegen leicht gegenüber kurzfristigen Kursrückgängen einzelner Titel."
     },
     "IE00BM67HN09": {
       "typ": "B",
-      "sentiment_score": -1,
-      "begruendung": "Fuel-Cell-Werte wie FuelCell, Bloom Energy und Plug Power brechen nach Kapitalmaßnahmen deutlich ein, Dealmeldungen stützen kaum."
+      "sentiment_score": 2,
+      "begruendung": "Energie-Infrastruktur-Titel wie Targa und Energy Transfer zeigen Ausbruchssignale und hohe Investitionen, klar positive Sektorstimmung."
     },
     "IE00BM67HS53": {
       "typ": "B",
       "sentiment_score": 0,
-      "begruendung": "Gemischtes Bild aus Kurszielanhebungen und Indexrauswurf ohne klare Sektorrichtung."
+      "begruendung": "Bullische KI-Materialstory bei Applied Materials steht gegen Kursrückgänge und geopolitisches Risiko durch Trumps Iran-Blockade."
     },
     "IE00B4LN9N13": {
       "typ": "B",
       "sentiment_score": -2,
-      "begruendung": "Iran-Konflikt und steigende Ölpreise belasten die breite Marktstimmung, mehrfach Warnungen vor Rückschlägen."
+      "begruendung": "Breiter Ausverkauf wegen Iran-Kriegsangst mit deutlichen Kursverlusten bei AppLovin, Astera Labs und weiteren Industrietiteln."
     },
     "IE00BM67HV82": {
       "typ": "B",
       "sentiment_score": -2,
-      "begruendung": "Iran-Konflikt und steigende Ölpreise belasten die breite Marktstimmung, mehrfach Warnungen vor Rückschlägen."
+      "begruendung": "Gleiche negative Makrolage wie beim anderen Industrials-ETF: Iran-Kriegsangst löst breiten Ausverkauf an der Wall Street aus."
     },
     "IE000CK5G8J7": {
       "typ": "B",
       "sentiment_score": 2,
-      "begruendung": "Sterling Infrastructure erweitert Kreditlinie und gewinnt Aufträge, Data-Center-Ausbau treibt den Sektor."
+      "begruendung": "Goldman-Kaufempfehlung für Data-Center-Bauer und Auftragsgewinne wie bei Tetra Tech stützen die Infrastruktur-Sektorstimmung deutlich."
     },
     "IE00BM67HT60": {
       "typ": "B",
-      "sentiment_score": -1,
-      "begruendung": "Iran-Spannungen drücken Speicherchip-Werte und Burry warnt vor dem KI-Entwicklungspfad, starke Backlogs stehen dagegen."
+      "sentiment_score": 3,
+      "begruendung": "Breite Rally über zahlreiche Softwaretitel (Elastic, HubSpot, Atlassian u.a.) mit durchgehend positiven Kursbewegungen im Technologiesektor."
     },
     "DE000A0H08H3": {
       "typ": "B",
-      "sentiment_score": 3,
-      "begruendung": "Versorger gelten als Profiteur des KI-Rechenzentrums-Strombedarfs und als sicherer Hafen im Iran-Konflikt."
+      "sentiment_score": 2,
+      "begruendung": "Utilities gelten als sicherer Hafen im Iran-Konflikt und profitieren zusätzlich vom Strombedarf durch den KI-Rechenzentrenboom."
     },
     "IE00BM67HQ30": {
       "typ": "B",
-      "sentiment_score": 3,
-      "begruendung": "Versorger gelten als Profiteur des KI-Rechenzentrums-Strombedarfs und als sicherer Hafen im Iran-Konflikt."
+      "sentiment_score": 2,
+      "begruendung": "Gleiche positive Sektorlage wie bei anderen Utilities-ETFs: Safe-Haven-Nachfrage und KI-getriebener Strombedarf stützen den Sektor."
     },
     "LU1834988864": {
       "typ": "B",
-      "sentiment_score": 3,
-      "begruendung": "Versorger gelten als Profiteur des KI-Rechenzentrums-Strombedarfs und als sicherer Hafen im Iran-Konflikt."
+      "sentiment_score": 2,
+      "begruendung": "Europäische Versorger profitieren ebenfalls von Safe-Haven-Nachfrage und dem KI-Rechenzentren-getriebenen Strombedarf."
     }
   }
 }
