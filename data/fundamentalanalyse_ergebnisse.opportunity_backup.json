@@ -14,7 +14,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 57.35
+        "aktueller_kurs": 65.2
       },
       {
         "wertpapier": "Siemens Energy",
@@ -28,8 +28,23 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-13",
-        "aktueller_kurs": 150.58,
+        "aktueller_kurs": 154.78,
         "empfehlung": "Kaufen"
+      },
+      {
+        "wertpapier": "Centrus Energy",
+        "isin": "US15643U1043",
+        "kgv": 62.17,
+        "dividendenrendite": 0.0,
+        "umsatzwachstum_yoy": 1.52,
+        "gewinnwachstum_yoy": 6.28,
+        "eigenkapitalquote": 31.23,
+        "bewertung": "Spekulativ",
+        "risiko": "Hoch",
+        "empfehlung": "Halten",
+        "begruendung": "Watch-Kandidat aus Opportunity-Scan: US-Anbieter fuer angereichertes Uran (LEU/HALEU) profitiert vom Wiederaufbau der heimischen Urananreicherung und der KI-getriebenen Nachfrage nach Kernenergie; juengster 900-Mio.-USD-DOE-Auftrag plus neue Kaufoption ueber bis zu 170 Mio. USD (Juli 2026) sowie eine Brennstoff-Absichtserklaerung mit Oklo stuetzen die Story, Bewertung mit KGV ueber 60 aber bereits sehr ambitioniert und hoch volatil.",
+        "datum": "2026-07-14",
+        "aktueller_kurs": null
       },
       {
         "wertpapier": "E.ON",
@@ -44,21 +59,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 19.05
-      },
-      {
-        "wertpapier": "Encavis",
-        "isin": "DE0006095003",
-        "begruendung": "KKR-Übernahme-/Delisting-Ankündigung belastet Handelsliquidität; Dividende zuletzt auf 0,04 EUR gekürzt, KGV weiterhin hoch (rund 49 TTM).",
-        "kgv": "45",
-        "dividendenrendite": 0.23,
-        "umsatzwachstum_yoy": 13.6,
-        "gewinnwachstum_yoy": 41.5,
-        "eigenkapitalquote": 40.45,
-        "bewertung": "Unattraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten"
+        "aktueller_kurs": 19.37
       },
       {
         "wertpapier": "Nordex SE",
@@ -73,7 +74,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 40.14
+        "aktueller_kurs": 40.72
       },
       {
         "wertpapier": "RWE",
@@ -88,142 +89,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 56.26
-      },
-      {
-        "wertpapier": "Verbio Vereinigte BioEnergie",
-        "isin": "DE000A0JL9W6",
-        "begruendung": "Deutscher Biodiesel-/Biomethan-Produzent, dessen Ergebnis stark von Rohstoffpreisen und EU-Quotenpolitik abhängt; Wachstumsfantasie durch Biomethan-Ausbau für Schwerlastverkehr.",
-        "kgv": "22",
-        "dividendenrendite": 0.5,
-        "umsatzwachstum_yoy": 8.0,
-        "gewinnwachstum_yoy": 10.0,
-        "eigenkapitalquote": 45.0,
-        "bewertung": "Neutral",
-        "risiko": "Hoch",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 31.28
-      },
-      {
-        "wertpapier": "Nel ASA",
-        "isin": "NO0010081235",
-        "begruendung": "Norwegischer Elektrolyseur-Spezialist für grünen Wasserstoff; Aktie seit Jahresbeginn 2026 rund 72% im Plus auf Comeback-Hoffnung, operativ weiterhin defizitär.",
-        "kgv": "n/a",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": null,
-        "gewinnwachstum_yoy": null,
-        "eigenkapitalquote": null,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": null
-      },
-      {
-        "wertpapier": "Iberdrola",
-        "isin": "ES0144580Y14",
-        "begruendung": "(siehe Versorger); größter europäischer Erneuerbaren-/Netzbetreiber, treibt Energiewende über Offshore-Wind und Netzausbau voran.",
-        "kgv": 19.78,
-        "dividendenrendite": 4.86,
-        "umsatzwachstum_yoy": 1.8,
-        "gewinnwachstum_yoy": 12.0,
-        "eigenkapitalquote": 38.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 21.14
-      },
-      {
-        "wertpapier": "Enel",
-        "isin": "IT0003128367",
-        "begruendung": "(siehe Versorger); größter italienischer Energiekonzern mit starkem Fokus auf Netzausbau und Erneuerbare, aber hoher Ausschüttungsquote.",
-        "kgv": 22.69,
-        "dividendenrendite": 5.52,
-        "umsatzwachstum_yoy": -2.0,
-        "gewinnwachstum_yoy": 5.0,
-        "eigenkapitalquote": 30.0,
-        "bewertung": "Neutral",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 10.184
-      },
-      {
-        "wertpapier": "Neste Oyj",
-        "isin": "FI0009013296",
-        "begruendung": "Finnischer Marktführer für erneuerbaren Diesel/SAF; Umsatz 2025 rückläufig (-7,8%) durch schwache Raffineriemargen, Rückkehr in die Gewinnzone (144 Mio. EUR nach -95 Mio.) stimmt aber vorsichtig optimistisch.",
-        "kgv": "25",
-        "dividendenrendite": 2.5,
-        "umsatzwachstum_yoy": -7.8,
-        "gewinnwachstum_yoy": 251.6,
-        "eigenkapitalquote": 45.0,
-        "bewertung": "Neutral",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 30.7
-      },
-      {
-        "wertpapier": "TotalEnergies",
-        "isin": "FR0000120271",
-        "begruendung": "Französischer Öl- und Gasmajor mit stark wachsendem Erneuerbaren-/Stromgeschäft; moderates Gewinnwachstum (~3,4% p.a.) im Vergleich zu US-Peers, aber attraktive Dividendenrendite und hohe Kapitalrendite (ROE ~13,6%).",
-        "kgv": "10",
-        "dividendenrendite": 5.3,
-        "umsatzwachstum_yoy": 2.0,
-        "gewinnwachstum_yoy": 3.4,
-        "eigenkapitalquote": 45.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 70.34
-      },
-      {
-        "wertpapier": "EDP Renovaveis",
-        "isin": "ES0127797019",
-        "begruendung": "Iberische Erneuerbaren-Tochter von EDP mit globalem Wind-/Solarportfolio; hohe Bewertung (KGV ~61 TTM) spiegelt Wachstumserwartungen, Analysten zuletzt mit Upgrades zum Offshore-Wind-Pipeline-Ausbau.",
-        "kgv": "45",
-        "dividendenrendite": 0.7,
-        "umsatzwachstum_yoy": 20.0,
-        "gewinnwachstum_yoy": 8.0,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Unattraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 13.79
-      },
-      {
-        "wertpapier": "Acciona Energias Renovables",
-        "isin": "ES0105563003",
-        "begruendung": "Spanische Erneuerbaren-Tochter von Acciona (Wind/Solar/Wasserkraft international); moderates KGV (~9,7 2026e) bei solidem Umsatzmultiple, Dividendenrendite rund 2%.",
-        "kgv": "10",
-        "dividendenrendite": 2.05,
-        "umsatzwachstum_yoy": 6.0,
-        "gewinnwachstum_yoy": 8.0,
-        "eigenkapitalquote": 40.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 22.02
-      },
-      {
-        "wertpapier": "Voltalia",
-        "isin": "FR0011995588",
-        "begruendung": "Französischer Erneuerbaren-Independent-Power-Producer (Wind/Solar/Wasserkraft) mit moderatem Umsatzwachstum (+7,5%), aber deutlichem Nettoverlust 2025 (-100 Mio. EUR); zahlt keine Dividende.",
-        "kgv": "n/a",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 7.5,
-        "gewinnwachstum_yoy": -379.7,
-        "eigenkapitalquote": 25.32,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 6.74
+        "aktueller_kurs": 57.32
       }
     ],
     "Verteidigung": [
@@ -239,7 +105,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-13",
-        "aktueller_kurs": 50.85,
+        "aktueller_kurs": 50.87,
         "empfehlung": "Kaufen"
       },
       {
@@ -254,23 +120,38 @@
         "bewertung": "Neutral",
         "risiko": "Mittel",
         "datum": "2026-07-13",
-        "aktueller_kurs": 220.3,
+        "aktueller_kurs": 220.2,
         "empfehlung": "Halten"
       },
       {
-        "wertpapier": "Saab AB",
-        "isin": "SE0021921269",
-        "kgv": "44",
-        "dividendenrendite": 0.44,
-        "umsatzwachstum_yoy": 24.15,
-        "gewinnwachstum_yoy": 51.4,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Neutral",
-        "risiko": "Mittel",
+        "wertpapier": "AeroVironment",
+        "isin": "US0080731088",
+        "kgv": "n/a",
+        "dividendenrendite": 0.0,
+        "umsatzwachstum_yoy": 141.5,
+        "gewinnwachstum_yoy": null,
+        "eigenkapitalquote": null,
+        "bewertung": "Spekulativ",
+        "risiko": "Hoch",
         "empfehlung": "Halten",
-        "begruendung": "Schwedischer Verteidigungs- und Luftfahrtkonzern (Gripen, A26-U-Boote, Trackfire) mit Rekord-Auftragsbestand von rund dem 3,5-Fachen des Jahresumsatzes 2025, getragen von NATO-Aufruestung und wachsenden Exporten; die hohe Bewertung (KGV ~44) preist das Wachstum aber bereits weitgehend ein.",
-        "datum": "2026-07-13",
+        "begruendung": "Watch-Kandidat aus Opportunity-Scan: US-Drohnen-/Autonome-Systeme-Spezialist (Switchblade-Loitering-Munition) mit Rekord-Q4-FY26-Umsatz (mehr als verdoppelt YoY) und deutlich ueber Konsens liegendem Adjusted EPS, getrieben von den Uebernahmen BlueHalo und ESAero sowie einem neuen 500-Mio.-USD-Grossauftrag der US-Armee; GAAP-Ergebnis durch Akquisitionskosten belastet, Aktie zudem hoch volatil (52-Wochen-Spanne rund 136-352 EUR) und mit laufenden Sammelklagen wegen des SCAR-Programms.",
+        "datum": "2026-07-14",
         "aktueller_kurs": null
+      },
+      {
+        "wertpapier": "TKMS (Thyssenkrupp Marine Systems)",
+        "isin": "DE000TKMS001",
+        "kgv": "45",
+        "dividendenrendite": 0.0,
+        "umsatzwachstum_yoy": 9.3,
+        "gewinnwachstum_yoy": 26.6,
+        "eigenkapitalquote": 18.26,
+        "bewertung": "Attraktiv",
+        "risiko": "Hoch",
+        "empfehlung": "Halten",
+        "begruendung": "Watch-Kandidat aus Opportunity-Scan: U-Boot-Spezialist (2025 von Thyssenkrupp abgespalten und boersennotiert) profitiert von NATO-Aufruestung und Marine-Grossauftraegen; Aktie zog nach einem mutmasslichen U-Boot-Deal zum NATO-Gipfel und dem Thales-Exail-Deal deutlich an (Deutsche Bank Buy-Rating 07.07.2026), Bewertung mit KGV 2026e rund 45 bereits sportlich.",
+        "datum": "2026-07-14",
+        "aktueller_kurs": 82.0
       },
       {
         "wertpapier": "Airbus",
@@ -285,7 +166,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 195.06
+        "aktueller_kurs": 195.26
       },
       {
         "wertpapier": "BAE Systems",
@@ -300,7 +181,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 21.72
+        "aktueller_kurs": 21.65
       },
       {
         "wertpapier": "Hensoldt",
@@ -315,7 +196,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 72.74
+        "aktueller_kurs": 73.5
       },
       {
         "wertpapier": "Rheinmetall",
@@ -329,127 +210,22 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-13",
-        "aktueller_kurs": 968.0,
+        "aktueller_kurs": 978.1,
         "empfehlung": "Kaufen"
       },
       {
-        "wertpapier": "RENK Group",
-        "isin": "DE000RENK730",
-        "begruendung": "Getriebespezialist für Kettenfahrzeuge (Leopard, Puma) und Marineantriebe profitiert direkt vom europäischen Aufrüstungszyklus; seit dem Börsengang 2024 hohe Nachfrage nach Rüstungsgütern und deutliche Kapazitätsausweitung.",
-        "kgv": "30",
-        "dividendenrendite": 0.3,
-        "umsatzwachstum_yoy": 25.0,
-        "gewinnwachstum_yoy": 30.0,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 42.61
-      },
-      {
-        "wertpapier": "Kongsberg Gruppen",
-        "isin": "NO0013536151",
-        "begruendung": "Norwegischer Rüstungs- und Technologiekonzern (Naval Strike Missile, Protector-Waffenstationen); norwegischer Staat als stabiler Großaktionär (rund 50%), Auftragsbestand wächst mit NATO-Beschaffung.",
-        "kgv": "28",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 20.0,
-        "gewinnwachstum_yoy": 25.0,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 53.15
-      },
-      {
-        "wertpapier": "Indra Sistemas",
-        "isin": "ES0118594417",
-        "begruendung": "Spanischer Verteidigungs- und IT-Elektronikkonzern mit zentraler Rolle im spanischen NATO-Aufrüstungsprogramm; Analystenkonsens Kaufen mit rund 29% Kurspotenzial laut Marketscreener.",
-        "kgv": "20",
-        "dividendenrendite": 1.5,
-        "umsatzwachstum_yoy": 12.0,
-        "gewinnwachstum_yoy": 15.0,
-        "eigenkapitalquote": 30.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 46.99
-      },
-      {
-        "wertpapier": "Dassault Aviation",
-        "isin": "FR0014004L86",
-        "begruendung": "(siehe Luft-Raumfahrt); Rafale-Kampfjet ist Kernprodukt für Frankreich und Exportkunden, wachsender Rüstungsauftragsbestand stützt die Verteidigungssparte.",
-        "kgv": "23",
-        "dividendenrendite": 1.7,
-        "umsatzwachstum_yoy": 29.71,
-        "gewinnwachstum_yoy": 5.27,
-        "eigenkapitalquote": 54.67,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 283.8
-      },
-      {
-        "wertpapier": "Fincantieri",
-        "isin": "IT0005599938",
-        "begruendung": "Italienischer Werftkonzern mit wachsendem Marine-/U-Boot-Geschäft neben Kreuzfahrtschiffen; Turnaround mit Gewinnsprung (+275%) 2025, aber niedrige Eigenkapitalquote (~9,5%) signalisiert hohe Verschuldung.",
-        "kgv": "21",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 12.19,
-        "gewinnwachstum_yoy": 274.6,
-        "eigenkapitalquote": 9.54,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 11.61
-      },
-      {
-        "wertpapier": "QinetiQ Group",
-        "isin": "GB00B0WNJ892",
-        "begruendung": "Britischer Verteidigungs-Technologie- und Testdienstleister mit Rekord-Auftragseingang (Backlog 4,8 Mrd. GBP, +40%) und starkem EPS-Wachstum (+21%) im GJ2026; Dividende um 24% erhöht.",
-        "kgv": "22",
-        "dividendenrendite": 2.4,
-        "umsatzwachstum_yoy": 9.5,
-        "gewinnwachstum_yoy": 21.0,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": null
-      },
-      {
-        "wertpapier": "Babcock International",
-        "isin": "GB0009697037",
-        "begruendung": "Britischer Marine-/Nuklear-Dienstleister (U-Boot-Wartung, Flugzeugträger) mit starkem GJ2026 (Umsatz +7,2%, operativer Gewinn +19%); Aktie fiel nach Zahlen trotz guter operativer Entwicklung.",
-        "kgv": "19",
-        "dividendenrendite": 0.6,
-        "umsatzwachstum_yoy": 7.2,
-        "gewinnwachstum_yoy": 19.0,
-        "eigenkapitalquote": 30.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": null
-      },
-      {
-        "wertpapier": "Chemring Group",
-        "isin": "GB00B45C9X44",
-        "begruendung": "Britischer Nischenanbieter für Sensorik und Gegenmaßnahmen (Täuschkörper, Munition); Umsatz 2025 leicht rückläufig (-2,5%), aber 91% des GJ2026-Umsatzziels bereits durch Auftragsbuch gedeckt.",
-        "kgv": "27",
-        "dividendenrendite": 1.6,
-        "umsatzwachstum_yoy": -2.5,
-        "gewinnwachstum_yoy": 8.0,
+        "wertpapier": "Saab AB",
+        "isin": "SE0021921269",
+        "kgv": "44",
+        "dividendenrendite": 0.44,
+        "umsatzwachstum_yoy": 24.15,
+        "gewinnwachstum_yoy": 51.4,
         "eigenkapitalquote": 35.0,
         "bewertung": "Neutral",
         "risiko": "Mittel",
-        "datum": "2026-07-13",
         "empfehlung": "Halten",
+        "begruendung": "Schwedischer Verteidigungs- und Luftfahrtkonzern (Gripen, A26-U-Boote, Trackfire) mit Rekord-Auftragsbestand von rund dem 3,5-Fachen des Jahresumsatzes 2025, getragen von NATO-Aufruestung und wachsenden Exporten; die hohe Bewertung (KGV ~44) preist das Wachstum aber bereits weitgehend ein.",
+        "datum": "2026-07-13",
         "aktueller_kurs": null
       }
     ],
@@ -467,22 +243,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 283.8
-      },
-      {
-        "wertpapier": "Leonardo",
-        "isin": "IT0003856405",
-        "begruendung": "(siehe Verteidigung); Luftfahrtelektronik- und Hubschraubersparte trägt zunehmend zum Konzernumsatz bei.",
-        "kgv": "26",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 9.8,
-        "gewinnwachstum_yoy": 8.7,
-        "eigenkapitalquote": 43.07,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "aktueller_kurs": 50.85,
-        "empfehlung": "Kaufen"
+        "aktueller_kurs": 284.2
       },
       {
         "wertpapier": "Lockheed Martin",
@@ -497,7 +258,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 455.7
+        "aktueller_kurs": 455.9
       },
       {
         "wertpapier": "MTU Aero Engines",
@@ -511,7 +272,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-13",
-        "aktueller_kurs": 353.7,
+        "aktueller_kurs": 349.2,
         "empfehlung": "Kaufen"
       },
       {
@@ -527,7 +288,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 182.0
+        "aktueller_kurs": 181.68
       },
       {
         "wertpapier": "Rolls-Royce",
@@ -542,7 +303,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 16.6
+        "aktueller_kurs": 16.47
       },
       {
         "wertpapier": "Safran",
@@ -556,128 +317,8 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-13",
-        "aktueller_kurs": 329.5,
+        "aktueller_kurs": 327.9,
         "empfehlung": "Kaufen"
-      },
-      {
-        "wertpapier": "Airbus SE",
-        "isin": "NL0000235190",
-        "begruendung": "Rekord-Auftragsbestand und verbesserte Marge (Ziel über 10%) stützen die Investmentstory trotz sportlicher Bewertung.",
-        "kgv": "32",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 6.1,
-        "gewinnwachstum_yoy": 23.4,
-        "eigenkapitalquote": 19.4,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 195.06
-      },
-      {
-        "wertpapier": "Kongsberg Gruppen",
-        "isin": "NO0013536151",
-        "begruendung": "(siehe Verteidigung); Kongsberg Aerospace & Defence liefert Aerostrukturen für das F-35-Programm und baut die Rolle in der europäischen Luftfahrtzulieferung aus.",
-        "kgv": "28",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 20.0,
-        "gewinnwachstum_yoy": 25.0,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 53.15
-      },
-      {
-        "wertpapier": "BAE Systems",
-        "isin": "GB0002634946",
-        "begruendung": "(siehe Verteidigung); Eurofighter- und F-35-Strukturbauteile sowie die Kampfjet-Beteiligung stärken die Luftfahrtsparte des Konzerns.",
-        "kgv": "30",
-        "dividendenrendite": 1.6,
-        "umsatzwachstum_yoy": 7.7,
-        "gewinnwachstum_yoy": 5.4,
-        "eigenkapitalquote": 46.55,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 21.72
-      },
-      {
-        "wertpapier": "GE Aerospace",
-        "isin": "US3696043013",
-        "begruendung": "Weltmarktführer bei Trieb­werken (CFM-Joint-Venture mit Safran) mit starkem Auftragswachstum (+87% im Q1 2026) und zweistelligem Umsatz-/Gewinnwachstum; Bewertung mit KGV nahe 46 sportlich.",
-        "kgv": "46",
-        "dividendenrendite": 0.5,
-        "umsatzwachstum_yoy": 21.75,
-        "gewinnwachstum_yoy": 31.0,
-        "eigenkapitalquote": 40.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": null
-      },
-      {
-        "wertpapier": "Honeywell International",
-        "isin": "US4385161066",
-        "begruendung": "Diversifizierter US-Industriekonzern mit bedeutender Aerospace-Sparte (Avionik, Triebwerkskomponenten); Umsatzwachstum beschleunigt sich (+9% Q1 2026), Margendruck durch Kostensteigerungen erkennbar.",
-        "kgv": "21",
-        "dividendenrendite": 2.0,
-        "umsatzwachstum_yoy": 9.0,
-        "gewinnwachstum_yoy": 5.0,
-        "eigenkapitalquote": 30.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": null
-      },
-      {
-        "wertpapier": "RTX Corporation",
-        "isin": "US75513E1010",
-        "begruendung": "US-Luftfahrt-/Rüstungskonzern (Pratt & Whitney, Collins Aerospace, Raytheon) mit solidem Umsatzwachstum (+10,6% Q1 2026) und moderater Verschuldung; Analysten erwarten deutliches EPS-Wachstum über 3 Jahre.",
-        "kgv": "37",
-        "dividendenrendite": 1.4,
-        "umsatzwachstum_yoy": 10.56,
-        "gewinnwachstum_yoy": 11.0,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Neutral",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 172.19
-      },
-      {
-        "wertpapier": "Melrose Industries",
-        "isin": "GB00BLRT3Q11",
-        "begruendung": "Britischer Triebwerks-/Strukturkomponentenzulieferer (GKN Aerospace) mit 70% Umsatzanteil aus langfristigen Sole-Source-Verträgen; Umsatz 2025 +8%, operativer Gewinn +23%, Dividende +20%.",
-        "kgv": "24",
-        "dividendenrendite": 1.5,
-        "umsatzwachstum_yoy": 8.0,
-        "gewinnwachstum_yoy": 23.0,
-        "eigenkapitalquote": 30.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": null
-      },
-      {
-        "wertpapier": "Textron",
-        "isin": "US8832031012",
-        "begruendung": "US-Mischkonzern mit Bell-Hubschraubern und Cessna-/Beechcraft-Geschäftsjets; solides Umsatzwachstum (+9,5%) und zweistelliges EPS-Wachstum bei moderater Bewertung (KGV ~18).",
-        "kgv": "18",
-        "dividendenrendite": 0.1,
-        "umsatzwachstum_yoy": 9.48,
-        "gewinnwachstum_yoy": 18.09,
-        "eigenkapitalquote": 40.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": null
       }
     ],
     "Satellitentechnik": [
@@ -694,7 +335,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 7.645
+        "aktueller_kurs": 7.815
       },
       {
         "wertpapier": "Firefly Aerospace",
@@ -712,21 +353,6 @@
         "aktueller_kurs": null
       },
       {
-        "wertpapier": "Airbus",
-        "isin": "NL0000235190",
-        "begruendung": "(siehe Verteidigung/Luft-Raumfahrt); Airbus Defence and Space zählt zu den größten Satellitenherstellern Europas (OneWeb, Galileo).",
-        "kgv": "32",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 6.1,
-        "gewinnwachstum_yoy": 23.4,
-        "eigenkapitalquote": 19.4,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 195.06
-      },
-      {
         "wertpapier": "OHB",
         "isin": "DE0005936124",
         "begruendung": "Profitiert von öffentlicher Raumfahrt-Nachfrage (ESA-Programme, Bundeswehr-Satellitenprojekte).",
@@ -739,7 +365,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 261.0
+        "aktueller_kurs": 266.0
       },
       {
         "wertpapier": "Planet Labs",
@@ -754,7 +380,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 23.4
+        "aktueller_kurs": 23.0
       },
       {
         "wertpapier": "Eutelsat",
@@ -769,175 +395,10 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 2.274
-      },
-      {
-        "wertpapier": "Thales",
-        "isin": "FR0000121329",
-        "begruendung": "(siehe Verteidigung); Thales Alenia Space zählt zu den weltweit größten Satellitenherstellern (Galileo, Kopernikus, Telekommunikationssatelliten) und wächst mit europäischen Souveränitätsprogrammen.",
-        "kgv": "28",
-        "dividendenrendite": 1.7,
-        "umsatzwachstum_yoy": 7.6,
-        "gewinnwachstum_yoy": 18.0,
-        "eigenkapitalquote": 45.82,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 220.3
-      },
-      {
-        "wertpapier": "Indra Sistemas",
-        "isin": "ES0118594417",
-        "begruendung": "(siehe Verteidigung); wachsendes Engagement in Satelliten- und Erdbeobachtungssystemen für spanische und europäische Behörden.",
-        "kgv": "20",
-        "dividendenrendite": 1.5,
-        "umsatzwachstum_yoy": 12.0,
-        "gewinnwachstum_yoy": 15.0,
-        "eigenkapitalquote": 30.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 46.99
-      },
-      {
-        "wertpapier": "Kongsberg Gruppen",
-        "isin": "NO0013536151",
-        "begruendung": "(siehe Verteidigung/Luft-Raumfahrt); Kongsberg Satellite Services (KSAT) betreibt eines der größten kommerziellen Bodenstationsnetzwerke weltweit.",
-        "kgv": "28",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 20.0,
-        "gewinnwachstum_yoy": 25.0,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 53.15
-      },
-      {
-        "wertpapier": "Safran",
-        "isin": "FR0000073272",
-        "begruendung": "(siehe Luft-Raumfahrt); Safran Data Systems liefert Bodensegmente und Empfangstechnik für Satellitenmissionen.",
-        "kgv": "20",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 12.0,
-        "gewinnwachstum_yoy": 35.38,
-        "eigenkapitalquote": 56.44,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 329.5
-      },
-      {
-        "wertpapier": "Rocket Lab",
-        "isin": "US7731221062",
-        "begruendung": "US-Raumfahrtkonzern (Electron/Neutron-Raketen, Photon-Satellitenplattform) mit angekündigter 8-Mrd.-USD-Übernahme von Iridium Communications; hohe Bewertung trotz weiterhin negativem Ergebnis, starkes Umsatzwachstum (+46% Q1 2026).",
-        "kgv": "n/a",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 38.0,
-        "gewinnwachstum_yoy": null,
-        "eigenkapitalquote": 45.0,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 68.483
-      },
-      {
-        "wertpapier": "Iridium Communications",
-        "isin": "US46269C1027",
-        "begruendung": "Betreiber des größten kommerziellen Satelliten-Kommunikationsnetzwerks (L-Band); Ziel einer angekündigten 8-Mrd.-USD-Übernahme durch Rocket Lab, Umsatzwachstum zuletzt nur noch flach (+2%), hohe Verschuldung.",
-        "kgv": "17",
-        "dividendenrendite": 2.9,
-        "umsatzwachstum_yoy": 2.0,
-        "gewinnwachstum_yoy": -29.0,
-        "eigenkapitalquote": 20.0,
-        "bewertung": "Neutral",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 43.334
-      },
-      {
-        "wertpapier": "AST SpaceMobile",
-        "isin": "US00217D1000",
-        "begruendung": "Baut ein direktes Satelliten-zu-Handy-Breitbandnetz für unmodifizierte Mobiltelefone auf; extremes Umsatzwachstum (+1732% Q1 2026) von niedriger Basis, operativ weiterhin stark defizitär und hoch bewertet.",
-        "kgv": "n/a",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 200.0,
-        "gewinnwachstum_yoy": null,
-        "eigenkapitalquote": 55.0,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": null
-      },
-      {
-        "wertpapier": "GomSpace Group",
-        "isin": "SE0008348304",
-        "begruendung": "Dänisch-schwedischer Nanosatelliten-Hersteller (Aalborg) mit starkem Umsatzwachstum (+43% Q1 2026) und erstmals positivem Quartalsgewinn; kleine Marktkapitalisierung bedeutet weiterhin hohe Volatilität.",
-        "kgv": "n/a",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 43.0,
-        "gewinnwachstum_yoy": null,
-        "eigenkapitalquote": 30.0,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": null
-      },
-      {
-        "wertpapier": "Redwire Corporation",
-        "isin": "US75776W1036",
-        "begruendung": "US-Anbieter für In-Space-Fertigung und Raumfahrtinfrastruktur mit starkem Umsatzwachstum (+58% QoQ), aber weiterhin deutlich defizitär; niedrige Verschuldung (Debt/Equity 0,11) stützt die Bilanz.",
-        "kgv": "n/a",
-        "dividendenrendite": 0.0,
-        "umsatzwachstum_yoy": 58.0,
-        "gewinnwachstum_yoy": null,
-        "eigenkapitalquote": 40.0,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": null
+        "aktueller_kurs": 2.337
       }
     ],
     "Technologie": [
-      {
-        "wertpapier": "Dassault Aviation",
-        "isin": "FR0014004L86",
-        "begruendung": "(siehe Luft-Raumfahrt); primär Rüstungs-/Luftfahrtwert mit begrenztem reinen Technologie-Bezug (Rafale, Falcon-Jets), zur sektoralen Diversifikation ergänzt.",
-        "kgv": "23",
-        "dividendenrendite": 1.7,
-        "umsatzwachstum_yoy": 29.71,
-        "gewinnwachstum_yoy": 5.27,
-        "eigenkapitalquote": 54.67,
-        "bewertung": "Neutral",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 283.8
-      },
-      {
-        "wertpapier": "Nvidia",
-        "isin": "US67066G1040",
-        "begruendung": "Kyber-Rack-Verzögerung bis 2028 leicht negativ; fundamentale KI-Stärke bei Rechenzentrums-Chips bleibt ungebrochen, Bewertung anspruchsvoll.",
-        "kgv": "40",
-        "dividendenrendite": 0.03,
-        "umsatzwachstum_yoy": 55.0,
-        "gewinnwachstum_yoy": 58.0,
-        "eigenkapitalquote": 60.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 182.0
-      },
       {
         "wertpapier": "IonQ",
         "isin": "US46222L1089",
@@ -966,7 +427,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 1541.4
+        "aktueller_kurs": 1554.4
       },
       {
         "wertpapier": "Aixtron SE",
@@ -981,7 +442,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 42.7
+        "aktueller_kurs": 43.95
       },
       {
         "wertpapier": "Delivery Hero",
@@ -996,7 +457,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 37.18
+        "aktueller_kurs": 39.29
       },
       {
         "wertpapier": "Dt. Telekom",
@@ -1011,7 +472,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 26.71
+        "aktueller_kurs": 26.67
       },
       {
         "wertpapier": "Infineon",
@@ -1025,7 +486,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-13",
-        "aktueller_kurs": 70.46,
+        "aktueller_kurs": 71.24,
         "empfehlung": "Halten"
       },
       {
@@ -1041,7 +502,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 140.58
+        "aktueller_kurs": 136.4
       },
       {
         "wertpapier": "TeamViewer",
@@ -1056,82 +517,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 5.73
-      },
-      {
-        "wertpapier": "STMicroelectronics",
-        "isin": "NL0000226223",
-        "begruendung": "Franco-italienisch-niederländischer Halbleiterhersteller; Umsatz zuletzt rückläufig (-11%), Gewinn brach 2025 stark ein (-89%), aber Q3-Umsatz zeigt bereits deutliche Erholung (+23% YoY).",
-        "kgv": "47",
-        "dividendenrendite": 0.7,
-        "umsatzwachstum_yoy": -11.1,
-        "gewinnwachstum_yoy": -89.3,
-        "eigenkapitalquote": 55.0,
-        "bewertung": "Spekulativ",
-        "risiko": "Hoch",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 61.39
-      },
-      {
-        "wertpapier": "Capgemini",
-        "isin": "FR0000125338",
-        "begruendung": "Französischer IT-Dienstleister mit organischem Umsatzwachstum von 5-7% (Cloud/Digitalisierung); solide Eigenkapitalquote über 35% und attraktive Dividendenrendite von rund 3,2%.",
-        "kgv": "12",
-        "dividendenrendite": 3.2,
-        "umsatzwachstum_yoy": 6.0,
-        "gewinnwachstum_yoy": 5.0,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 91.76
-      },
-      {
-        "wertpapier": "Nokia",
-        "isin": "FI0009000681",
-        "begruendung": "Finnischer Telekomausrüster mit moderatem Umsatzwachstum (+3,5%), aber deutlich rückläufigem Gewinn (-49%); Dividende zuletzt um 7,7% erhöht.",
-        "kgv": "40",
-        "dividendenrendite": 1.3,
-        "umsatzwachstum_yoy": 3.5,
-        "gewinnwachstum_yoy": -49.0,
-        "eigenkapitalquote": 45.0,
-        "bewertung": "Neutral",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 10.56
-      },
-      {
-        "wertpapier": "Bechtle AG",
-        "isin": "DE0005158703",
-        "begruendung": "Deutscher IT-Systemhaus- und Reseller-Konzern mit stabiler Dividendenhistorie (25 Jahre ohne Kürzung); moderate Gewinnmarge (~3,6%) typisch für das margenarme Reseller-Geschäft.",
-        "kgv": "16",
-        "dividendenrendite": 2.3,
-        "umsatzwachstum_yoy": 4.0,
-        "gewinnwachstum_yoy": 3.0,
-        "eigenkapitalquote": 40.0,
-        "bewertung": "Neutral",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 31.1
-      },
-      {
-        "wertpapier": "Nemetschek SE",
-        "isin": "DE0006452907",
-        "begruendung": "Deutscher Bau-/Design-Softwarekonzern (Allplan, Vectorworks) mit starkem Umsatz- (+20%) und Gewinnwachstum (+24%); hohe Eigenkapitalrendite von rund 20%.",
-        "kgv": "24",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 19.7,
-        "gewinnwachstum_yoy": 23.8,
-        "eigenkapitalquote": 45.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 55.95
+        "aktueller_kurs": 5.76
       }
     ],
     "Versorger": [
@@ -1148,7 +534,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 2.325
+        "aktueller_kurs": 2.367
       },
       {
         "wertpapier": "Engie",
@@ -1163,7 +549,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 27.01
+        "aktueller_kurs": 27.44
       },
       {
         "wertpapier": "Iberdrola",
@@ -1178,7 +564,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 21.14
+        "aktueller_kurs": 21.21
       },
       {
         "wertpapier": "Naturgy Energy Group",
@@ -1193,7 +579,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 28.46
+        "aktueller_kurs": 28.94
       },
       {
         "wertpapier": "Terna",
@@ -1208,7 +594,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 10.23
+        "aktueller_kurs": 10.305
       },
       {
         "wertpapier": "EVN",
@@ -1223,7 +609,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 29.05
+        "aktueller_kurs": 29.5
       },
       {
         "wertpapier": "Enel",
@@ -1238,7 +624,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 10.184
+        "aktueller_kurs": 10.272
       },
       {
         "wertpapier": "Fortum",
@@ -1253,7 +639,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 19.995
+        "aktueller_kurs": 20.4
       },
       {
         "wertpapier": "Redeia Corporacion",
@@ -1268,7 +654,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 15.39
+        "aktueller_kurs": 15.35
       },
       {
         "wertpapier": "Verbund",
@@ -1283,82 +669,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 58.05
-      },
-      {
-        "wertpapier": "RWE",
-        "isin": "DE0007037129",
-        "begruendung": "(siehe Energie); Kerngeschäft im deutschen Strommarkt (Erzeugung, Netze, Handel) macht RWE auch als klassischen Versorgerwert relevant.",
-        "kgv": "17",
-        "dividendenrendite": 2.7,
-        "umsatzwachstum_yoy": -27.2,
-        "gewinnwachstum_yoy": -39.0,
-        "eigenkapitalquote": 20.97,
-        "bewertung": "Neutral",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 56.26
-      },
-      {
-        "wertpapier": "E.ON",
-        "isin": "DE000ENAG999",
-        "begruendung": "(siehe Energie); größter deutscher Netzbetreiber mit reguliertem, defensivem Cashflow-Profil und stabiler Dividende.",
-        "kgv": "18",
-        "dividendenrendite": 3.08,
-        "umsatzwachstum_yoy": 9.49,
-        "gewinnwachstum_yoy": 63.6,
-        "eigenkapitalquote": 57.55,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 19.05
-      },
-      {
-        "wertpapier": "Endesa",
-        "isin": "ES0130670112",
-        "begruendung": "Spanischer Versorger (Enel-Tochter) mit starker Eigenkapitalrendite (~26%) und attraktiver Dividendenrendite (~4,1%, erwartete Steigerung von 18%).",
-        "kgv": "16",
-        "dividendenrendite": 4.1,
-        "umsatzwachstum_yoy": 3.0,
-        "gewinnwachstum_yoy": 8.0,
-        "eigenkapitalquote": 35.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 39.0
-      },
-      {
-        "wertpapier": "Elia Group",
-        "isin": "BE0003822393",
-        "begruendung": "Belgischer Stromnetzbetreiber (inkl. deutscher 50Hertz-Beteiligung) mit starkem regulatorischem Wachstum (Umsatz 1H2025 +22%, Gewinn +49%); hohe Investitionen in Netzausbau treiben die Bewertung.",
-        "kgv": "21",
-        "dividendenrendite": 1.5,
-        "umsatzwachstum_yoy": 16.0,
-        "gewinnwachstum_yoy": 20.0,
-        "eigenkapitalquote": 26.09,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 138.0
-      },
-      {
-        "wertpapier": "Veolia Environnement",
-        "isin": "FR0000124141",
-        "begruendung": "Französischer Wasser-/Abfall-/Energiedienstleister mit defensivem Geschäftsmodell; solide Dividendenrendite (~4,2%) bei moderatem KGV (~14,5).",
-        "kgv": "14",
-        "dividendenrendite": 4.2,
-        "umsatzwachstum_yoy": 3.0,
-        "gewinnwachstum_yoy": 5.0,
-        "eigenkapitalquote": 25.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Niedrig",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 36.91
+        "aktueller_kurs": 59.25
       }
     ]
   }

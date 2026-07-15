@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14 09:00",
+  "generated_at": "2026-07-15 09:00",
   "items": {
     "DE0005557508": {
       "name": "Dt. Telekom",
@@ -18,16 +18,16 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "Top Research Reports for SAP, UBS & Cadence",
-          "publisher": "Zacks",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-sap-ubs-205700635.html"
+          "title": "Rimini Street to Provide SAP Support Services for VIVERE Group",
+          "publisher": "MT Newswires",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/technology/articles/rimini-street-sap-support-services-133811841.html"
         },
         {
-          "title": "SAP loosens ERP maintenance and support rules",
-          "publisher": "CIO Dive",
-          "published": "2026-07-09",
-          "link": "https://finance.yahoo.com/m/7226751d-a4a7-3020-8f47-3ed043f6f5b8/sap-loosens-erp-maintenance.html"
+          "title": "VIVERE Group Selects Rimini Street to Strengthen SAP Support and Accelerate Business Transformation",
+          "publisher": "Business Wire",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/technology/articles/vivere-group-selects-rimini-street-130000193.html"
         }
       ],
       "error": null
@@ -109,69 +109,7 @@
     "DE000A0DJ6J9": {
       "name": "SMA Solar",
       "ticker": "",
-      "headlines": [
-        {
-          "title": "SMA Solar Technology Q1 Earnings Call Highlights",
-          "publisher": "MarketBeat",
-          "published": "2026-05-18",
-          "link": "https://finance.yahoo.com/m/5aa10baa-5ce9-33a1-9825-ec1bd7891b45/sma-solar-technology-q1.html"
-        },
-        {
-          "title": "SMA Solar Technology AG Just Missed Earnings; Here's What Analysts Are Forecasting Now",
-          "publisher": "Simply Wall St.",
-          "published": "2026-05-16",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/sma-solar-technology-ag-just-070852168.html"
-        },
-        {
-          "title": "SMA Solar Technology AG (SMTGF) Q1 2026 Earnings Call Highlights: Strong Sales Growth Amidst ...",
-          "publisher": "GuruFocus.com",
-          "published": "2026-05-15",
-          "link": "https://finance.yahoo.com/sectors/energy/articles/sma-solar-technology-ag-smtgf-010134256.html"
-        }
-      ],
-      "error": null
-    },
-    "DE000ENAG999": {
-      "name": "E.ON",
-      "ticker": "",
-      "headlines": [
-        {
-          "title": "FPT Achieves SAP® Silver Partner Status in the SAP® PartnerEdge® Program, Expanding SAP Capabilities for European Enterprises",
-          "publisher": "Business Wire",
-          "published": "2026-06-30",
-          "link": "https://finance.yahoo.com/technology/articles/fpt-achieves-sap-silver-partner-060000705.html"
-        },
-        {
-          "title": "Some May Be Optimistic About E.ON's (ETR:EOAN) Earnings",
-          "publisher": "Simply Wall St.",
-          "published": "2026-05-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/may-optimistic-e-ons-etr-060424040.html"
-        },
-        {
-          "title": "E.ON SE (ENAKF) Q1 2026 Earnings Call Highlights: Strong Financial Performance Amid Market ...",
-          "publisher": "GuruFocus.com",
-          "published": "2026-05-14",
-          "link": "https://finance.yahoo.com/sectors/energy/articles/e-se-enakf-q1-2026-010248744.html"
-        },
-        {
-          "title": "E.ON Q1 Profit Rises as German Industrial Demand Strengthens",
-          "publisher": "Oilprice.com",
-          "published": "2026-05-13",
-          "link": "https://finance.yahoo.com/news/e-q1-profit-rises-german-063722891.html"
-        },
-        {
-          "title": "E.ON Confirms Guidance After Strong Start to Year",
-          "publisher": "The Wall Street Journal",
-          "published": "2026-05-13",
-          "link": "https://finance.yahoo.com/m/6352a97c-a9c3-37a6-b5b0-c8ebcf79ac56/e.on-confirms-guidance-after.html"
-        },
-        {
-          "title": "A Look At E.ON (XTRA:EOAN) Valuation After Dividend Approval And Supervisory Board Elections",
-          "publisher": "Simply Wall St.",
-          "published": "2026-05-04",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/look-e-xtra-eoan-valuation-061025775.html"
-        }
-      ],
+      "headlines": [],
       "error": null
     },
     "DE000ENER6Y0": {
@@ -183,7 +121,14 @@
     "FR0000073272": {
       "name": "Safran",
       "ticker": "",
-      "headlines": [],
+      "headlines": [
+        {
+          "title": "Has Safran (SAFRY) Outpaced Other Aerospace Stocks This Year?",
+          "publisher": "Zacks",
+          "published": "2026-06-17",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/safran-safry-outpaced-other-aerospace-134004039.html"
+        }
+      ],
       "error": null
     },
     "FR0000121329": {
@@ -241,6 +186,18 @@
       "ticker": "RRU.DE",
       "headlines": [
         {
+          "title": "Quantinuum Signs Quantum Computing Agreement With Rolls-Royce, Riverlane, University of Edinburgh",
+          "publisher": "MT Newswires",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/technology/ai/articles/quantinuum-signs-quantum-computing-agreement-104419729.html"
+        },
+        {
+          "title": "Quantinuum, Rolls-Royce, Riverlane and University of Edinburgh Sign Agreement to Explore Quantum Computing for Industrial Design and Simulation",
+          "publisher": "PR Newswire",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/technology/ai/articles/quantinuum-rolls-royce-riverlane-university-080000353.html"
+        },
+        {
           "title": "Fairbanks Morse Defense Establishes Official Canadian Headquarters Following Successful Rolls-Royce Acquisition",
           "publisher": "Business Wire",
           "published": "2026-07-07",
@@ -251,18 +208,6 @@
           "publisher": "Zacks",
           "published": "2026-07-06",
           "link": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-holdings-plc-rycey-160003884.html"
-        },
-        {
-          "title": "Rolls-Royce (LSE:RR.) Adds New Directors And Teams Up With Bombardier On Engine Monitoring",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-03",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-lse-rr-adds-171437421.html"
-        },
-        {
-          "title": "Rolls Royce (LSE:RR.) Stock Looks Like A Bargain On Earnings But Fully Priced On Broader Checks",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-03",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-lse-rr-stock-151117449.html"
         }
       ],
       "error": null
@@ -304,45 +249,45 @@
       ],
       "error": null
     },
-    "NL0000235190": {
-      "name": "Airbus",
-      "ticker": "",
-      "headlines": [],
-      "error": null
-    },
     "NL0010273215": {
       "name": "ASML",
       "ticker": "",
       "headlines": [
         {
-          "title": "Chip toolmaker ASML expected to shine light on capacity and China challenges",
+          "title": "AI demand powers forecast hike, profit gains at tech giant ASML",
+          "publisher": "AFP",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/technology/articles/dutch-tech-giant-asml-posts-053403141.html"
+        },
+        {
+          "title": "Chip-Machine Supplier ASML Raises Guidance Again on Unrelenting AI Demand",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/m/f983844c-b6ba-322a-9ed3-8273cf929298/chip-machine-supplier-asml.html"
+        },
+        {
+          "title": "ASML Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/m/4004733a-24c2-3ba9-b5ee-04faa7d75c51/asml-q2-earnings-call.html"
+        },
+        {
+          "title": "Stocks gain on drop in US inflation rate; ASML tops forecasts",
           "publisher": "Reuters",
-          "published": "2026-07-14",
-          "link": "https://finance.yahoo.com/technology/articles/chip-toolmaker-asml-expected-shine-050423589.html"
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/news/asian-stocks-gain-drop-us-015011670.html"
         },
         {
-          "title": "ASML Holding's Next Earnings Report on July 15 Could Send the Stock Soaring. Here's Why.",
-          "publisher": "Motley Fool",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/m/6fb94cb9-d5a7-3558-bdf5-8715922588eb/asml-holding%27s-next-earnings.html"
+          "title": "Intel turns to next-generation ASML tool to help make its laptop chips",
+          "publisher": "Reuters",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/technology/articles/intel-turns-next-generation-asml-051144402.html"
         },
         {
-          "title": "Here’s How Much Traders Expect ASML Stock to Move After Earnings",
-          "publisher": "Investopedia",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/m/0f2d3127-7f68-3270-9e7d-794f49ce9ac7/here%E2%80%99s-how-much-traders.html"
-        },
-        {
-          "title": "ASML reports transactions under its current share buyback program",
-          "publisher": "GlobeNewswire",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/asml-reports-transactions-under-current-120000969.html"
-        },
-        {
-          "title": "This Is Why ASML Is a No-Brainer Buy Before July 15 Earnings",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/m/2a06eb81-d82f-3d42-9785-0296bb91b23f/this-is-why-asml-is-a.html"
+          "title": "ASML raises 2026 forecast, expands capacity on AI chip demand",
+          "publisher": "Reuters",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/technology/ai/articles/asml-tops-q2-estimates-ai-050721602.html"
         }
       ],
       "error": null
@@ -352,22 +297,22 @@
       "ticker": "LOM.DE",
       "headlines": [
         {
-          "title": "Lockheed Martin’s $100 Billion Backlog Signals Long-Term Demand",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/m/50bf25a3-efc6-364d-bda2-a563bfafef16/lockheed-martin%E2%80%99s-%24100.html"
+          "title": "Lockheed Martin (LMT) Stock Sinks As Market Gains: What You Should Know",
+          "publisher": "Zacks",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-stock-sinks-215005386.html"
         },
         {
-          "title": "If You’d Invested $10,000 In Lockheed Martin When The Iran Conflict Started, Here’s How Much You’d Have Now",
+          "title": "Lockheed Martin Vs. General Dynamics: Pick General Dynamics for Naval Dominance Despite Lockheed’s $3.5 Billion Ultra Maritime Acquisition",
           "publisher": "24/7 Wall St.",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/m/2d6851f9-62cb-38b5-88ce-013468ec71b4/if-you%E2%80%99d-invested-%2410%2C000-in.html"
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/m/3ca34f6e-aedb-3582-9d57-72ea02a96227/lockheed-martin-vs.-general.html"
         },
         {
-          "title": "Lockheed Martin (LMT) Deepens NATO Role With Europe PAC 3 And Germany ATACMS Venture",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-deepens-nato-151057246.html"
+          "title": "Lockheed Martin (LMT): Buy, Sell, or Hold Post Q1 Earnings?",
+          "publisher": "StockStory",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-buy-sell-153511126.html"
         }
       ],
       "error": null
@@ -383,28 +328,28 @@
       "ticker": "85H1.DE",
       "headlines": [
         {
-          "title": "Planet Labs (PL) Down 12% Over the Past Month, Wedbush Initiates the Stock With a Buy Rating",
-          "publisher": "Insider Monkey",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pl-down-12-100046275.html"
+          "title": "Planet Labs Co-Founder Sells 89,593 Shares for $2.3 Million -- Should Investors Take Note?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/m/281b9bcc-8723-3a51-9e0c-47571fbf95b2/planet-labs-co-founder-sells.html"
         },
         {
-          "title": "Planet Labs PBC Shareholders Back Directors, KPMG and Pay Plan at Annual Meeting",
-          "publisher": "MarketBeat",
-          "published": "2026-07-12",
-          "link": "https://finance.yahoo.com/m/04cb95f0-9a91-3267-88cc-219dea80e985/planet-labs-pbc-shareholders.html"
+          "title": "Planet Labs CEO Sells Company Shares Worth $5.2 Million. Here's What That Means for Investors.",
+          "publisher": "Motley Fool",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/m/d9766b5d-17ee-329c-a19b-b6313fc087eb/planet-labs-ceo-sells-company.html"
         },
         {
-          "title": "AI-Powered Earth Observation Drives Planet Labs' Growth?",
-          "publisher": "Zacks",
-          "published": "2026-07-10",
-          "link": "https://finance.yahoo.com/technology/ai/articles/ai-powered-earth-observation-drives-173400538.html"
+          "title": "Planet Labs Insider Sold Shares Worth $2,322,224, According to a Recent SEC Filing",
+          "publisher": "MT Newswires",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-insider-sold-shares-080636700.html"
         },
         {
-          "title": "Planet Launches Pelican-11, Paving the Way for Its Next-Generation High-Resolution Satellite Fleet",
-          "publisher": "IPO-Edge.com",
-          "published": "2026-07-09",
-          "link": "https://finance.yahoo.com/technology/articles/planet-launches-pelican-11-paving-162328827.html"
+          "title": "Planet Labs Insider Sold Shares Worth $5,183,940, According to a Recent SEC Filing",
+          "publisher": "MT Newswires",
+          "published": "2026-07-14",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-insider-sold-shares-080415801.html"
         }
       ],
       "error": null

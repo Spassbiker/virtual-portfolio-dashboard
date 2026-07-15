@@ -1,105 +1,95 @@
 {
-  "generated_at": "2026-07-14 08:50",
+  "generated_at": "2026-07-15 08:52",
   "scores": {
     "DE0005557508": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "DE0005936124": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "DE0007164600": {
-      "sentiment_score": 1,
+      "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Gelockerte ERP-Wartungsregeln und positive Analystenerwähnung, aber keine kursrelevante Meldung."
+      "begruendung": "Nur generische PR ueber Rimini-Street-Drittsupport bei einem Kunden, keine wesentliche SAP-Eigennews."
     },
     "DE000A0D6554": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Serie neuer Großaufträge (700 MW, 325 MW, 197 MW mehrfach, 112 MW) aus mehreren Märkten."
+      "begruendung": "Mehrere neue Grossauftraege (700, 325, 212, 197, 112 MW) in kurzer Folge deuten auf starke Auftragsdynamik hin."
     },
     "DE000A0D9PT0": {
-      "sentiment_score": 0,
+      "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Ueberwiegend generische Analystenartikel, aber Dividendenankuendigung und solide Q1-Zahlen leicht positiv."
     },
     "DE000A0DJ6J9": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
-    },
-    "DE000ENAG999": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Q1-Gewinnanstieg, bestätigter Ausblick und starke industrielle Nachfrage in Deutschland (SAP-Meldung betrifft anderes Unternehmen, ignoriert)."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "DE000ENER6Y0": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "FR0000073272": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Nur generischer Vergleichsartikel zur Kursentwicklung, keine kursrelevante Einzelnews."
     },
     "FR0000121329": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "FR0014004L86": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Nur routinemäßige Meldung zu Aktien-/Stimmrechtsanzahl, keine Kursrelevanz."
+      "begruendung": "Nur administrative Meldung zu Aktienanzahl/Stimmrechten, keine kursrelevante Aussage."
     },
     "GB0002634946": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Mehrere neue Rüstungsaufträge und Marktausweitung (EPAWSS Südkorea, CV90-Getriebe, gepanzerte Fahrzeuge, Marine-MRO)."
+      "begruendung": "Mehrere neue Auftraege und Markterweiterungen (EPAWSS Suedkorea, 250-Mio-Dollar-Auftrag, Armored-Vehicle- und Naval-MRO-Expansion) sprechen fuer gute Geschaeftsdynamik."
     },
     "GB00B63H8491": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Positive Kursentwicklung, neue Bombardier-Partnerschaft und abgeschlossene Übernahme durch Fairbanks Morse Defense."
+      "begruendung": "Neue Quantencomputing-Kooperation, positiver Nachlauf der Fairbanks-Morse-Uebernahme und Kursanstieg von 5,5% binnen einer Woche."
     },
     "IT0003856405": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "LU0088087324": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Schlagzeilen betreffen SES AI Corporation (anderes Unternehmen, u.a. Sammelklage), nicht die Luxemburger SES S.A., daher neutral."
-    },
-    "NL0000235190": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Schlagzeilen betreffen erkennbar SES AI Corporation (US-Batteriefirma), nicht den Satellitenbetreiber SES S.A."
     },
     "NL0010273215": {
-      "sentiment_score": 1,
+      "sentiment_score": 3,
       "veto": false,
-      "begruendung": "Positive Erwartungshaltung vor Quartalszahlen am 15.07. und laufendes Aktienrückkaufprogramm, Ergebnisse stehen aber noch aus."
+      "begruendung": "Angehobener Jahresausblick, Gewinnsprung und Uebertreffen der Q2-Schaetzungen dank starker KI-Chipnachfrage."
     },
     "US5398301094": {
-      "sentiment_score": 2,
+      "sentiment_score": -1,
       "veto": false,
-      "begruendung": "100-Mrd.-Dollar-Auftragsbestand und vertiefte NATO-Zusammenarbeit (PAC-3, ATACMS-Venture mit Deutschland) signalisieren starke Nachfrage."
+      "begruendung": "Aktie faellt trotz Marktgewinnen und Analysten bevorzugen im Vergleich General Dynamics."
     },
     "US67066G1040": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "US72703X1063": {
-      "sentiment_score": 1,
+      "sentiment_score": -1,
       "veto": false,
-      "begruendung": "Buy-Rating von Wedbush und Start der Pelican-11-Satellitenflotte überwiegen den Kursrückgang der letzten Wochen."
+      "begruendung": "Gehaeufte Insider-Verkaeufe von CEO und Mitgruender in kurzer Folge (mehrere Mio. Dollar) sind ein leicht negatives Signal."
     }
   }
 }
