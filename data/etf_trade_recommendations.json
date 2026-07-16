@@ -1,9 +1,75 @@
 {
-  "generated_at": "2026-07-16 11:05",
+  "generated_at": "2026-07-16 11:26",
   "hinweis": "Regelbasierter Vorschlag (ETF-Ranking: Momentum/Risiko/Sentiment/Struktur). Der Agent entscheidet autonom und kann abweichen.",
-  "vorgeschlagene_trades": [],
-  "zusammenfassung": [],
-  "resultierender_barbestand": 30.19,
-  "resultierender_portfoliowert": 4873.2,
-  "resultierendes_gesamtvermoegen": 4903.39
+  "vorgeschlagene_trades": [
+    {
+      "datum": "2026-07-16",
+      "typ": "Kauf",
+      "sektor": "Luft- und Raumfahrttechnik",
+      "isin": "IE00BP3QZ601",
+      "wertpapier": "iShares Edge MSCI World Quality Factor UCITS ETF",
+      "stueck": 2,
+      "kurs": 77.39,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 154.78,
+      "notiz": "Neukauf (ETF-Sleeve)",
+      "begruendung": "Composite=80.4 (CORE) | Momentum=86.2 Risiko=86.9 Sentiment=50.0 Struktur=92.5"
+    },
+    {
+      "datum": "2026-07-16",
+      "typ": "Kauf",
+      "sektor": "Technologie",
+      "isin": "IE00BYPLS672",
+      "wertpapier": "L&G Cyber Security UCITS ETF",
+      "stueck": 3,
+      "kurs": 39.725,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 119.18,
+      "notiz": "Neukauf (ETF-Sleeve)",
+      "begruendung": "Composite=75.0 (CORE) | Momentum=87.8 Risiko=63.1 Sentiment=80 Struktur=62.5"
+    },
+    {
+      "datum": "2026-07-16",
+      "typ": "Kauf",
+      "sektor": "Satellitentechnik",
+      "isin": "IE000CK5G8J7",
+      "wertpapier": "iShares Global Infrastructure UCITS ETF",
+      "stueck": 22,
+      "kurs": 6.217,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 136.77,
+      "notiz": "Neukauf (ETF-Sleeve)",
+      "begruendung": "Composite=73.9 (SATELLITE) | Momentum=82.3 Risiko=88.2 Sentiment=70 Struktur=45.0"
+    },
+    {
+      "datum": "2026-07-16",
+      "typ": "Kauf",
+      "sektor": "Technologie",
+      "isin": "IE00BYZK4552",
+      "wertpapier": "iShares Automation & Robotics UCITS ETF",
+      "stueck": 4,
+      "kurs": 17.6,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 70.4,
+      "notiz": "Neukauf (ETF-Sleeve)",
+      "begruendung": "Composite=68.8 (SATELLITE) | Momentum=69.5 Risiko=55.9 Sentiment=70 Struktur=82.5"
+    }
+  ],
+  "zusammenfassung": [
+    "ETF-Kauf: 2x iShares Edge MSCI World Quality Factor UCITS ETF (Luft- und Raumfahrttechnik) zu 77.39 EUR, Composite=80.4, Budget=161€.",
+    "ETF-Kauf: 3x L&G Cyber Security UCITS ETF (Technologie) zu 39.73 EUR, Composite=75.0, Budget=145€.",
+    "ETF-Kauf: 22x iShares Global Infrastructure UCITS ETF (Satellitentechnik) zu 6.22 EUR, Composite=73.9, Budget=142€.",
+    "ETF-Kauf: 4x iShares Automation & Robotics UCITS ETF (Technologie) zu 17.60 EUR, Composite=68.8, Budget=126€."
+  ],
+  "resultierender_barbestand": 21.84,
+  "resultierender_portfoliowert": 4896.13,
+  "resultierendes_gesamtvermoegen": 4917.97
 }

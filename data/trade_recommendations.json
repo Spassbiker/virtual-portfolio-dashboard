@@ -1,12 +1,28 @@
 {
-  "generated_at": "2026-07-16 11:17",
+  "generated_at": "2026-07-16 11:26",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
-  "vorgeschlagene_trades": [],
+  "vorgeschlagene_trades": [
+    {
+      "datum": "2026-07-16",
+      "typ": "Kauf",
+      "isin": "ES0144580Y14",
+      "wertpapier": "Iberdrola",
+      "stueck": 26,
+      "kurs": 20.96,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 549.96,
+      "notiz": "Neukauf (Score=14)",
+      "begruendung": "Score=14 (Chart=6: Trend+2, RSI+1(55), MACD+1, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(12%)) | Chart: Kurs 21.15 vs. SMA50 20.39 / SMA200 19.10 → Aufwärtstrend. RSI 55, MACD Neutral. | Funda: Groesster europaeischer Utility-Wert (Netze/Erneuerbare); Analysten ueberwiegend Overweight, defensiver Cashflow aus reguliertem Netzgeschaeft, Gewinn +12% YoY."
+    }
+  ],
   "zusammenfassung": [
     "Watch-Modus: 10 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: TKMS (Thyssenkrupp Marine Systems)(6), Saab AB(4), CSG N.V. (Czechoslovak Group)(3), Kratos Defense & Security Solutions(2), Centrus Energy(0).",
-    "Adaptive Kaufschwelle: 14 (Floor 6, 80er-Perzentil aus 34 aktiven Kandidaten)."
+    "Adaptive Kaufschwelle: 14 (Floor 6, 80er-Perzentil aus 34 aktiven Kandidaten).",
+    "Kauf: 26x Iberdrola (ES0144580Y14) zu 20.96 EUR, Score=14, Budget=1000€."
   ],
-  "resultierender_barbestand": 37.1,
-  "resultierender_portfoliowert": 9507.02,
-  "resultierendes_gesamtvermoegen": 9544.12
+  "resultierender_barbestand": 28.42,
+  "resultierender_portfoliowert": 9500.96,
+  "resultierendes_gesamtvermoegen": 9529.38
 }
