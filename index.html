@@ -2737,19 +2737,19 @@
         const depotData = {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 37.1,
-    "portfoliowert": 9514.68,
-    "gesamtvermoegen": 9551.77,
+    "aktueller_barbestand": 578.38,
+    "portfoliowert": 8949.77,
+    "gesamtvermoegen": 9528.15,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
-        "stueck": 32,
+        "stueck": 21,
         "kaufkurs": 46.38,
         "boersenkurs": 49.81,
-        "investiert": 1484.16,
-        "boersenwert": 1593.92,
-        "gewinn_verlust": 109.76,
+        "investiert": 973.98,
+        "boersenwert": 1046.01,
+        "gewinn_verlust": 72.03,
         "score": 10,
         "beta": 0.775,
         "dax_ref": 25118.27,
@@ -2828,11 +2828,11 @@
       {
         "isin": "DE000A0DJ6J9",
         "wertpapier": "SMA Solar",
-        "stueck": 5,
+        "stueck": 14,
         "kaufkurs": 55.35,
         "boersenkurs": 60.6,
-        "investiert": 276.75,
-        "boersenwert": 303.0,
+        "investiert": 822.15,
+        "boersenwert": 848.4,
         "gewinn_verlust": 26.25,
         "score": 17,
         "beta": 1.355,
@@ -2842,12 +2842,12 @@
       {
         "isin": "FR0014004L86",
         "wertpapier": "Dassault Aviation",
-        "stueck": 3,
+        "stueck": 1,
         "kaufkurs": 297.2,
         "boersenkurs": 281.2,
-        "investiert": 891.6,
-        "boersenwert": 843.6,
-        "gewinn_verlust": -48.0,
+        "investiert": 297.2,
+        "boersenwert": 281.2,
+        "gewinn_verlust": -16.0,
         "score": 8,
         "beta": 0.573,
         "dax_ref": 24917.08,
@@ -3204,71 +3204,114 @@
         "gesamt": 458.48,
         "notiz": "Neukauf (Score=15)",
         "begruendung": "Score=15 (Chart=10: Empf.+3, Trend+2, RSI+1(62), MACD+2, SMA50+1, SMA200+1; Funda=5: Bew.+2, Risiko+1, GW+2(64%)) | Chart: Kurs 19.34 vs. SMA50 18.33 / SMA200 17.57 → Aufwärtstrend. RSI 62, MACD Positiv. | Funda: Ergebnis erholt sich 2026e deutlich (EPS +64%) nach schwachem Vorjahr; TheScreener stuft die Aktie als leicht unterbewertet mit niedrigem Risiko ein."
+      },
+      {
+        "datum": "2026-07-16",
+        "typ": "Verkauf",
+        "isin": "FR0014004L86",
+        "wertpapier": "Dassault Aviation",
+        "stueck": 2,
+        "kurs": 281.2,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": -37.0,
+        "gesamt": 557.4,
+        "notiz": "Sektor-Cap-Trim (Luft-/Raumfahrttechnik > 60%)",
+        "begruendung": "Sektor-Cap: schwächste Position (Score 8) im übergewichteten Sektor abgebaut"
+      },
+      {
+        "datum": "2026-07-16",
+        "typ": "Verkauf",
+        "isin": "IT0003856405",
+        "wertpapier": "Leonardo",
+        "stueck": 11,
+        "kurs": 49.81,
+        "gebuehr": 5.0,
+        "steuern": 8.63,
+        "gewinn_verlust": 32.73,
+        "gesamt": 534.28,
+        "notiz": "Score-Sizing-Rebalance (Score 10, niedrigste Konviktion)",
+        "begruendung": "Score-Sizing: Kapital von niedrig bewerteter Position zu höher bewerteten umgeschichtet"
+      },
+      {
+        "datum": "2026-07-16",
+        "typ": "Kauf",
+        "isin": "DE000A0DJ6J9",
+        "wertpapier": "SMA Solar",
+        "stueck": 9,
+        "kurs": 60.6,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 550.4,
+        "notiz": "Aufstockung (Score-Sizing-Rebalance 2026-07-16)",
+        "begruendung": "Score-Sizing: Kapital in höchstbewertete, bislang kleinste Position (Score 17) reinvestiert"
       }
     ],
     "risiko": {
       "hinweise": [
-        "⚠️ Sektor Luft- und Raumfahrttechnik macht 61.2 % des Portfolios aus (Limit 30 %)"
+        "⚠️ Nvidia macht 20.5 % des Portfolios aus (Limit 20 %)",
+        "⚠️ Sektor Luft- und Raumfahrttechnik macht 58.8 % des Portfolios aus (Limit 30 %)"
       ],
       "positionen": [
         {
           "wertpapier": "Nvidia",
           "isin": "US67066G1040",
-          "anteil_pct": 19.2
-        },
-        {
-          "wertpapier": "Leonardo",
-          "isin": "IT0003856405",
-          "anteil_pct": 16.8
+          "anteil_pct": 20.5
         },
         {
           "wertpapier": "MTU Aero Engines",
           "isin": "DE000A0D9PT0",
-          "anteil_pct": 14.6
+          "anteil_pct": 15.5
         },
         {
           "wertpapier": "Siemens Energy",
           "isin": "DE000ENER6Y0",
-          "anteil_pct": 14.1
+          "anteil_pct": 15.0
         },
         {
           "wertpapier": "Safran",
           "isin": "FR0000073272",
-          "anteil_pct": 13.8
+          "anteil_pct": 14.7
         },
         {
-          "wertpapier": "Dassault Aviation",
-          "isin": "FR0014004L86",
-          "anteil_pct": 8.9
-        },
-        {
-          "wertpapier": "E.ON",
-          "isin": "DE000ENAG999",
-          "anteil_pct": 4.8
-        },
-        {
-          "wertpapier": "Lockheed Martin",
-          "isin": "US5398301094",
-          "anteil_pct": 4.7
+          "wertpapier": "Leonardo",
+          "isin": "IT0003856405",
+          "anteil_pct": 11.7
         },
         {
           "wertpapier": "SMA Solar",
           "isin": "DE000A0DJ6J9",
-          "anteil_pct": 3.2
+          "anteil_pct": 9.5
+        },
+        {
+          "wertpapier": "E.ON",
+          "isin": "DE000ENAG999",
+          "anteil_pct": 5.1
+        },
+        {
+          "wertpapier": "Lockheed Martin",
+          "isin": "US5398301094",
+          "anteil_pct": 5.0
+        },
+        {
+          "wertpapier": "Dassault Aviation",
+          "isin": "FR0014004L86",
+          "anteil_pct": 3.1
         }
       ],
       "sektoren": [
         {
           "sektor": "Luft- und Raumfahrttechnik",
-          "anteil_pct": 61.2
+          "anteil_pct": 58.8
         },
         {
           "sektor": "Energie",
-          "anteil_pct": 22.0
+          "anteil_pct": 29.5
         },
         {
           "sektor": "Verteidigung",
-          "anteil_pct": 16.8
+          "anteil_pct": 11.7
         }
       ],
       "limits": {
@@ -3284,16 +3327,16 @@
         "vermoegen": 9769.26
       },
       "aktuell": {
-        "dax": 24914.06,
-        "msci": 125.91,
-        "vermoegen": 9551.77
+        "dax": 24924.29,
+        "msci": 126.02,
+        "vermoegen": 9528.15
       },
       "rendite_pct": {
-        "depot": -2.23,
-        "dax": -0.81,
-        "msci_world": 0.16
+        "depot": -2.47,
+        "dax": -0.77,
+        "msci_world": 0.25
       },
-      "stand": "2026-07-16 11:08"
+      "stand": "2026-07-16 11:18"
     }
   },
   "etf_depot": {

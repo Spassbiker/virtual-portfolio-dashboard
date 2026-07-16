@@ -83,6 +83,11 @@ REL_STOP_PCT = -0.12        # beta-bereinigte Underperformance vs. DAX
 # (Gebühren-Drag). Bei 5 € Gebühr wären 100 € Order = 5 % Reibung.
 MIN_CASH_RESERVE = 25.0
 MIN_ORDER_VALUE = 100.0
+# Klumpenrisiko-Hardcap: risk_report.py WARNT schon ab 30% Sektoranteil, aber
+# blockiert nichts. Hier greift die Kaufsperre erst später (60%) und kappt/
+# blockiert NEUE Käufe, die einen Sektor darüber treiben würden — bestehende
+# Positionen werden dadurch nicht verkauft, das ist reines Wachstums-Limit.
+MAX_SEKTOR_PCT_HARD = 0.60
 
 def get_chart_item(isin):
     if not isin: return None
@@ -281,11 +286,38 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ticker_map
 
 isin_to_name = {}
+sector_map = {}  # ISIN -> Sektor (aus Chartanalyse), für den Sektor-Cap.
 for data_set in [chart_data, funda_data]:
     for sector, items in data_set.get("sektoren", {}).items():
         for item in items:
             if item.get("isin") and item.get("isin") not in isin_to_name:
                 isin_to_name[item["isin"]] = item.get("wertpapier", "Unbekannt").replace(" (Teil 2)", "")
+            if item.get("isin"):
+                sector_map.setdefault(item["isin"], sector)
+
+
+def sector_value(positions, sektor):
+    return sum(p.get("boersenwert", 0) or 0 for p in positions
+               if sector_map.get(p.get("isin")) == sektor)
+
+
+def capped_budget(budget, isin, positions):
+    """Kappt das Kaufbudget, falls es einen Sektor über MAX_SEKTOR_PCT_HARD triebe.
+
+    Löst sek_val + x = CAP * (portfolio_value + x) nach x auf. Positionen ohne
+    Sektor-Zuordnung sind vom Cap ausgenommen (kein Risiko, keine Bremse)."""
+    sektor = sector_map.get(isin)
+    if not sektor:
+        return budget
+    portfolio_value = sum(p.get("boersenwert", 0) or 0 for p in positions)
+    sek_val = sector_value(positions, sektor)
+    if portfolio_value + budget <= 0:
+        return budget
+    projected_pct = (sek_val + budget) / (portfolio_value + budget)
+    if projected_pct <= MAX_SEKTOR_PCT_HARD:
+        return budget
+    allowed = (MAX_SEKTOR_PCT_HARD * portfolio_value - sek_val) / (1 - MAX_SEKTOR_PCT_HARD)
+    return max(0.0, min(budget, allowed))
 
 def get_live_price(isin):
     """EUR live price via the shared ticker map, guarded against wrong instruments.
@@ -605,8 +637,12 @@ for isin, ts in unowned_targets:
     budget = budget_for_score(ts, BUY_THRESHOLD)
     # Mindest-Barreserve nie unterschreiten.
     spendable = current_cash - MIN_CASH_RESERVE
-    budget_for_this = min(budget, spendable)
+    budget_before_cap = min(budget, spendable)
+    budget_for_this = capped_budget(budget_before_cap, isin, positions)
     if budget_for_this < MIN_ORDER_VALUE + fee_per_trade:
+        if budget_for_this < budget_before_cap:
+            summary.append(f"Sektor-Cap: Kauf von {stock} ({isin}) gekappt/blockiert "
+                           f"(Sektor {sector_map.get(isin)} nahe/über {MAX_SEKTOR_PCT_HARD*100:.0f}%).")
         continue  # zu wenig freies Kapital für eine sinnvolle Order
     units_to_buy = int((budget_for_this - fee_per_trade) / price)
     order_value = units_to_buy * price
