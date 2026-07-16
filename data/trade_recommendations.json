@@ -1,9 +1,73 @@
 {
-  "generated_at": "2026-07-10 09:00",
+  "generated_at": "2026-07-16 11:06",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
-  "vorgeschlagene_trades": [],
-  "zusammenfassung": [],
-  "resultierender_barbestand": 86.65,
-  "resultierender_portfoliowert": 9680.95,
-  "resultierendes_gesamtvermoegen": 9767.6
+  "vorgeschlagene_trades": [
+    {
+      "datum": "2026-07-16",
+      "typ": "Verkauf",
+      "isin": "LU0088087324",
+      "wertpapier": "SES",
+      "stueck": 1,
+      "kurs": 7.345,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -5.76,
+      "gesamt": 2.34,
+      "notiz": "Rebalancing (Kapitalbeschaffung für Neukäufe)",
+      "begruendung": "Rebalancing | Score=4 (Chart=6: Empf.+3, Trend-1, RSI+2(45), MACD+1, SMA200+1; Funda=-2: Risiko-1, GW-1(-50%)) | Chart: Kurs 7.47 vs. SMA50 7.96 / SMA200 6.63 → Leichter Abwärtstrend. RSI 45, MACD Neutral. | Funda: Integration der Intelsat-Übernahme belastet das Ergebnis, KGV aktuell negativ; hohe Dividendenrendite von rund 6,5% bleibt Attraktivitätsfaktor für Einkommensinvestoren. | KI: Schlagzeilen betreffen die branchenfremde US-Firma 'SES AI Corporation', nicht den Satellitenbetreiber SES S.A."
+    },
+    {
+      "datum": "2026-07-16",
+      "typ": "Verkauf",
+      "isin": "FR0000121329",
+      "wertpapier": "Thales",
+      "stueck": 1,
+      "kurs": 221.1,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -8.7,
+      "gesamt": 216.1,
+      "notiz": "Rebalancing (Kapitalbeschaffung für Neukäufe)",
+      "begruendung": "Rebalancing | Score=4 (Chart=1: Empf.+3, Trend-3, RSI+2(41), MACD-1; Funda=3: Bew.+1, Risiko+1, GW+1(18%)) | Chart: Kurs 220.50 vs. SMA50 228.97 / SMA200 242.97 → Abwärtstrend. RSI 41, MACD Negativ. | Funda: Umsatz +7,6%, Gewinn +18% 2025; geplante Exail-Übernahme stärkt Unterwasser-Kriegsführung, Stornierung des F126-Fregattenprogramms belastet Halbjahresergebnis. | KI: Keine aktuellen Schlagzeilen vorhanden."
+    },
+    {
+      "datum": "2026-07-16",
+      "typ": "Verkauf",
+      "isin": "GB00B63H8491",
+      "wertpapier": "Rolls-Royce",
+      "stueck": 12,
+      "kurs": 16.28,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -8.94,
+      "gesamt": 190.36,
+      "notiz": "Rebalancing (Kapitalbeschaffung für Neukäufe)",
+      "begruendung": "Rebalancing | Score=7 (Chart=7: Empf.+3, Trend+2, RSI+1(53), MACD-1, SMA50+1, SMA200+1; Funda=-1: Bew.+1, Risiko-1, GW-1(-20%); KI-Sentiment=1) | Chart: Kurs 16.43 vs. SMA50 15.37 / SMA200 14.18 → Aufwärtstrend. RSI 53, MACD Negativ. | Funda: Turnaround-Story reift: nach Rekordjahr 2025 erwarten Analysten für 2026 einen Gewinnrückgang je Aktie; Bilanz bleibt trotz Erholung angespannt (historisch negatives Eigenkapital). | KI: Positive Kursdynamik (+5,48% Wochengewinn) und neue Quantencomputing-Kooperation mit Quantinuum."
+    },
+    {
+      "datum": "2026-07-16",
+      "typ": "Kauf",
+      "isin": "DE000ENAG999",
+      "wertpapier": "E.ON",
+      "stueck": 24,
+      "kurs": 18.925,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 459.2,
+      "notiz": "Neukauf (Score=15)",
+      "begruendung": "Score=15 (Chart=10: Empf.+3, Trend+2, RSI+1(62), MACD+2, SMA50+1, SMA200+1; Funda=5: Bew.+2, Risiko+1, GW+2(64%)) | Chart: Kurs 19.34 vs. SMA50 18.33 / SMA200 17.57 → Aufwärtstrend. RSI 62, MACD Positiv. | Funda: Ergebnis erholt sich 2026e deutlich (EPS +64%) nach schwachem Vorjahr; TheScreener stuft die Aktie als leicht unterbewertet mit niedrigem Risiko ein."
+    }
+  ],
+  "zusammenfassung": [
+    "Watch-Modus: 10 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: TKMS (Thyssenkrupp Marine Systems)(6), Saab AB(4), CSG N.V. (Czechoslovak Group)(3), Kratos Defense & Security Solutions(2), Oklo Inc.(0).",
+    "Adaptive Kaufschwelle: 14 (Floor 6, 80er-Perzentil aus 34 aktiven Kandidaten).",
+    "Rebalancing-Verkauf: 1x SES (LU0088087324) zu 7.34 EUR (Score=4).",
+    "Rebalancing-Verkauf: 1x Thales (FR0000121329) zu 221.10 EUR (Score=4).",
+    "Rebalancing-Verkauf: 12x Rolls-Royce (GB00B63H8491) zu 16.28 EUR (Score=7).",
+    "Kauf: 24x E.ON (DE000ENAG999) zu 18.93 EUR, Score=15, Budget=1100€."
+  ],
+  "resultierender_barbestand": 36.25,
+  "resultierender_portfoliowert": 9519.4,
+  "resultierendes_gesamtvermoegen": 9555.65
 }

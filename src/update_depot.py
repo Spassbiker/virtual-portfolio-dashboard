@@ -108,13 +108,13 @@ def compute_chart_score(isin):
     score = 0
     details = []
 
-    emp = item.get("empfehlung", "").lower()
+    emp = (item.get("empfehlung") or "").lower()
     if "kaufen" in emp:
         score += 3; details.append("Empf.+3")
     elif "verkauf" in emp:
         score -= 5; details.append("Empf.-5")
 
-    trend = item.get("trend", "").lower()
+    trend = (item.get("trend") or "").lower()
     if "aufwärts" in trend and "leicht" not in trend:
         score += 2; details.append("Trend+2")
     elif "leicht" in trend and "aufwärts" in trend:
@@ -430,7 +430,7 @@ for isin in all_isins:
     f_item = get_funda_item(isin)
     if not c_item or not f_item:
         continue
-    c_emp = c_item.get("empfehlung", "").lower()
+    c_emp = (c_item.get("empfehlung") or "").lower()
     f_emp = (f_item.get("empfehlung") or "").lower()
     if "verkauf" in c_emp or "verkauf" in f_emp:
         continue
@@ -484,7 +484,7 @@ for p in positions:
 
     c_item = get_chart_item(isin)
     f_item = get_funda_item(isin)
-    c_emp = c_item.get("empfehlung", "").lower() if c_item else ""
+    c_emp = (c_item.get("empfehlung") or "").lower() if c_item else ""
     f_emp = (f_item.get("empfehlung") or "").lower() if f_item else ""
     ts = total_score(isin)[0]
 
