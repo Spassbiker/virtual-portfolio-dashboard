@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15 09:00",
+  "generated_at": "2026-07-16 09:00",
   "items": {
     "DE0005557508": {
       "name": "Dt. Telekom",
@@ -18,16 +18,16 @@
       "ticker": "",
       "headlines": [
         {
+          "title": "What Gives SAP SE (SAP) an Irreplaceable Position in Its Clients’ Tech Ecosystems?",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/gives-sap-se-sap-irreplaceable-131758902.html"
+        },
+        {
           "title": "Rimini Street to Provide SAP Support Services for VIVERE Group",
           "publisher": "MT Newswires",
           "published": "2026-07-14",
           "link": "https://finance.yahoo.com/technology/articles/rimini-street-sap-support-services-133811841.html"
-        },
-        {
-          "title": "VIVERE Group Selects Rimini Street to Strengthen SAP Support and Accelerate Business Transformation",
-          "publisher": "Business Wire",
-          "published": "2026-07-14",
-          "link": "https://finance.yahoo.com/technology/articles/vivere-group-selects-rimini-street-130000193.html"
         }
       ],
       "error": null
@@ -109,13 +109,51 @@
     "DE000A0DJ6J9": {
       "name": "SMA Solar",
       "ticker": "",
-      "headlines": [],
+      "headlines": [
+        {
+          "title": "SMA Solar Technology Q1 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "published": "2026-05-18",
+          "link": "https://finance.yahoo.com/m/5aa10baa-5ce9-33a1-9825-ec1bd7891b45/sma-solar-technology-q1.html"
+        },
+        {
+          "title": "SMA Solar Technology AG Just Missed Earnings; Here's What Analysts Are Forecasting Now",
+          "publisher": "Simply Wall St.",
+          "published": "2026-05-16",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sma-solar-technology-ag-just-070852168.html"
+        },
+        {
+          "title": "SMA Solar Technology AG (SMTGF) Q1 2026 Earnings Call Highlights: Strong Sales Growth Amidst ...",
+          "publisher": "GuruFocus.com",
+          "published": "2026-05-15",
+          "link": "https://finance.yahoo.com/sectors/energy/articles/sma-solar-technology-ag-smtgf-010134256.html"
+        }
+      ],
       "error": null
     },
     "DE000ENER6Y0": {
       "name": "Siemens Energy",
       "ticker": "",
-      "headlines": [],
+      "headlines": [
+        {
+          "title": "Delfin Midstream Partners With EIG’s MidOcean Energy to Advance Second FLNG Vessel; Issues Limited Notice to Proceed to Siemens Energy",
+          "publisher": "GlobeNewswire",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/energy/articles/delfin-midstream-partners-eig-midocean-161000792.html"
+        },
+        {
+          "title": "Siemens Energy begins preparations for independent brand launch",
+          "publisher": "Energy Global",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/m/d23fdd96-df46-391e-87d5-21010b760fc7/siemens-energy-begins.html"
+        },
+        {
+          "title": "Eaton Names Dan T. Simpson President, Global Energy Infrastructure Solutions",
+          "publisher": "Business Wire",
+          "published": "2026-07-08",
+          "link": "https://finance.yahoo.com/energy/articles/eaton-names-dan-t-simpson-104500804.html"
+        }
+      ],
       "error": null
     },
     "FR0000073272": {
@@ -123,10 +161,10 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "Has Safran (SAFRY) Outpaced Other Aerospace Stocks This Year?",
-          "publisher": "Zacks",
-          "published": "2026-06-17",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/safran-safry-outpaced-other-aerospace-134004039.html"
+          "title": "Electra and Safran Reach Development and Production Agreement for TG600 Turbogenerator to Power EL9 Hybrid-Electric Aircraft",
+          "publisher": "PR Newswire",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/technology/articles/electra-safran-reach-development-production-120000730.html"
         }
       ],
       "error": null
@@ -155,6 +193,12 @@
       "ticker": "BSP.DE",
       "headlines": [
         {
+          "title": "Is BAE Systems Expanding Its Presence in the Radar Market?",
+          "publisher": "Zacks",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/bae-systems-expanding-presence-radar-141700663.html"
+        },
+        {
           "title": "BAE Systems' EPAWSS electronic warfare system to protect Republic of Korea F-15K Slam Eagles",
           "publisher": "PR Newswire",
           "published": "2026-07-13",
@@ -171,12 +215,6 @@
           "publisher": "Zacks",
           "published": "2026-07-10",
           "link": "https://finance.yahoo.com/markets/stocks/articles/bae-systems-expanding-presence-armored-132400524.html"
-        },
-        {
-          "title": "Is BAE Systems Expanding Its Presence in the Naval MRO Market?",
-          "publisher": "Zacks",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/bae-systems-expanding-presence-naval-145500272.html"
         }
       ],
       "error": null
@@ -254,40 +292,22 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "AI demand powers forecast hike, profit gains at tech giant ASML",
-          "publisher": "AFP",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/technology/articles/dutch-tech-giant-asml-posts-053403141.html"
+          "title": "ASML Stock Eyes Second Weekly Gains: Retail Bulls Call Chipmaker The 'Ultimate Gatekeeper Of Tech'",
+          "publisher": "Stocktwits",
+          "published": "2026-07-16",
+          "link": "https://finance.yahoo.com/m/df627e10-2700-36d0-b95d-db47da5c6fa6/asml-stock-eyes-second-weekly.html"
         },
         {
-          "title": "Chip-Machine Supplier ASML Raises Guidance Again on Unrelenting AI Demand",
-          "publisher": "The Wall Street Journal",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/m/f983844c-b6ba-322a-9ed3-8273cf929298/chip-machine-supplier-asml.html"
+          "title": "ASML (ASML) Q2 2026 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "published": "2026-07-16",
+          "link": "https://finance.yahoo.com/m/e892e0ef-cf7e-33d2-ae4c-45d63163ebbb/asml-%28asml%29-q2-2026-earnings.html"
         },
         {
-          "title": "ASML Q2 Earnings Call Highlights",
-          "publisher": "MarketBeat",
+          "title": "Analyst Report: ASML Holding N.V.",
+          "publisher": "Morningstar Research",
           "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/m/4004733a-24c2-3ba9-b5ee-04faa7d75c51/asml-q2-earnings-call.html"
-        },
-        {
-          "title": "Stocks gain on drop in US inflation rate; ASML tops forecasts",
-          "publisher": "Reuters",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/news/asian-stocks-gain-drop-us-015011670.html"
-        },
-        {
-          "title": "Intel turns to next-generation ASML tool to help make its laptop chips",
-          "publisher": "Reuters",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/technology/articles/intel-turns-next-generation-asml-051144402.html"
-        },
-        {
-          "title": "ASML raises 2026 forecast, expands capacity on AI chip demand",
-          "publisher": "Reuters",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/technology/ai/articles/asml-tops-q2-estimates-ai-050721602.html"
+          "link": "https://finance.yahoo.com/m/fffebc7d-1fa0-3923-9e5a-94c4eaeea75b/analyst-report%3A-asml-holding.html"
         }
       ],
       "error": null
@@ -297,22 +317,22 @@
       "ticker": "LOM.DE",
       "headlines": [
         {
-          "title": "Lockheed Martin (LMT) Stock Sinks As Market Gains: What You Should Know",
+          "title": "Lockheed Martin Earmarks $100 Million for Venture Capital Investments in U.K., Europe",
+          "publisher": "PR Newswire",
+          "published": "2026-07-16",
+          "link": "https://finance.yahoo.com/technology/articles/lockheed-martin-earmarks-100-million-050000166.html"
+        },
+        {
+          "title": "Is Lockheed Martin Expanding Its Presence in the Submarine Market?",
           "publisher": "Zacks",
-          "published": "2026-07-14",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-stock-sinks-215005386.html"
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-expanding-presence-submarine-142100415.html"
         },
         {
-          "title": "Lockheed Martin Vs. General Dynamics: Pick General Dynamics for Naval Dominance Despite Lockheed’s $3.5 Billion Ultra Maritime Acquisition",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-14",
-          "link": "https://finance.yahoo.com/m/3ca34f6e-aedb-3582-9d57-72ea02a96227/lockheed-martin-vs.-general.html"
-        },
-        {
-          "title": "Lockheed Martin (LMT): Buy, Sell, or Hold Post Q1 Earnings?",
-          "publisher": "StockStory",
-          "published": "2026-07-14",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-buy-sell-153511126.html"
+          "title": "Machina Awarded Qualification Contract from Lockheed Martin in Support of JASSM Program",
+          "publisher": "Business Wire",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/technology/articles/machina-awarded-qualification-contract-lockheed-100000668.html"
         }
       ],
       "error": null

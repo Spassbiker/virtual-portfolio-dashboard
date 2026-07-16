@@ -14,7 +14,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 65.2
+        "aktueller_kurs": 61.95
       },
       {
         "wertpapier": "Siemens Energy",
@@ -28,7 +28,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-13",
-        "aktueller_kurs": 154.78,
+        "aktueller_kurs": 152.74,
         "empfehlung": "Kaufen"
       },
       {
@@ -59,7 +59,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 19.37
+        "aktueller_kurs": 19.38
       },
       {
         "wertpapier": "Nordex SE",
@@ -74,7 +74,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 40.72
+        "aktueller_kurs": 40.1
       },
       {
         "wertpapier": "RWE",
@@ -89,7 +89,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 57.32
+        "aktueller_kurs": 56.72
       }
     ],
     "Verteidigung": [
@@ -105,7 +105,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-13",
-        "aktueller_kurs": 50.87,
+        "aktueller_kurs": 50.44,
         "empfehlung": "Kaufen"
       },
       {
@@ -120,7 +120,7 @@
         "bewertung": "Neutral",
         "risiko": "Mittel",
         "datum": "2026-07-13",
-        "aktueller_kurs": 220.2,
+        "aktueller_kurs": 220.1,
         "empfehlung": "Halten"
       },
       {
@@ -139,6 +139,36 @@
         "aktueller_kurs": null
       },
       {
+        "wertpapier": "CSG N.V. (Czechoslovak Group)",
+        "isin": "NL0015073TS8",
+        "kgv": "n/a",
+        "dividendenrendite": 0.0,
+        "umsatzwachstum_yoy": null,
+        "gewinnwachstum_yoy": null,
+        "eigenkapitalquote": null,
+        "bewertung": "Spekulativ",
+        "risiko": "Hoch",
+        "empfehlung": "Halten",
+        "begruendung": "Watch-Kandidat aus Opportunity-Scan: Mitteleuropaeischer Verteidigungs- und Munitionskonzern (breites NATO-Kaliber-Portfolio, zudem Spezialfahrzeuge, Radar- und Luftverteidigungstechnik) ging im Januar 2026 an die Euronext Amsterdam (Ausgabepreis 25 EUR); Kurs seither um mehr als die Haelfte gefallen, zeigt aber zuletzt mit +9% auf Monatssicht erste Erholungstendenzen und ein Analystenkursziel von 30 EUR deutlich ueber dem aktuellen Niveau; hohe Unsicherheit durch kurze Boersenhistorie und volatile Nachrichtenlage rund um europaeische Ruestungsausgaben.",
+        "datum": "2026-07-15",
+        "aktueller_kurs": 13.6
+      },
+      {
+        "wertpapier": "RENK Group",
+        "isin": "DE000RENK730",
+        "kgv": "41",
+        "dividendenrendite": 1.2,
+        "umsatzwachstum_yoy": 4.0,
+        "gewinnwachstum_yoy": null,
+        "eigenkapitalquote": null,
+        "bewertung": "Spekulativ",
+        "risiko": "Hoch",
+        "empfehlung": "Halten",
+        "begruendung": "Watch-Kandidat aus Opportunity-Scan: Deutscher Getriebe- und Antriebstechnik-Spezialist fuer Militaerfahrzeuge (Panzergetriebe) profitiert von der europaeischen Aufruestung; Rekord-Auftragseingang im Q1 2026 (bislang hoechster der Unternehmensgeschichte) und neuer Fuenfjahres-Rahmenvertrag der US Army ueber die Tochter RENK America (Ende Juni 2026) sorgten zuletzt fuer eine Kurserholung von ueber 10% binnen sieben Handelstagen, nachdem die Aktie zuvor auf Jahrestief gefallen war; Bewertung mit KGV ueber 40 weiterhin ambitioniert, operative Beschleunigung braucht laut Analysten noch Zeit.",
+        "datum": "2026-07-15",
+        "aktueller_kurs": 43.855
+      },
+      {
         "wertpapier": "TKMS (Thyssenkrupp Marine Systems)",
         "isin": "DE000TKMS001",
         "kgv": "45",
@@ -151,22 +181,7 @@
         "empfehlung": "Halten",
         "begruendung": "Watch-Kandidat aus Opportunity-Scan: U-Boot-Spezialist (2025 von Thyssenkrupp abgespalten und boersennotiert) profitiert von NATO-Aufruestung und Marine-Grossauftraegen; Aktie zog nach einem mutmasslichen U-Boot-Deal zum NATO-Gipfel und dem Thales-Exail-Deal deutlich an (Deutsche Bank Buy-Rating 07.07.2026), Bewertung mit KGV 2026e rund 45 bereits sportlich.",
         "datum": "2026-07-14",
-        "aktueller_kurs": 82.0
-      },
-      {
-        "wertpapier": "Airbus",
-        "isin": "NL0000235190",
-        "begruendung": "Rekord-Auftragsbestand von rund 43.000 Flugzeugen sichert langfristige Visibilität; Eigenkapitalquote steigt weiter, defensives Kerngeschäft mit Verteidigungssparte als Wachstumstreiber.",
-        "kgv": "32",
-        "dividendenrendite": 1.0,
-        "umsatzwachstum_yoy": 6.1,
-        "gewinnwachstum_yoy": 23.4,
-        "eigenkapitalquote": 19.4,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Kaufen",
-        "aktueller_kurs": 195.26
+        "aktueller_kurs": 81.5
       },
       {
         "wertpapier": "BAE Systems",
@@ -181,7 +196,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 21.65
+        "aktueller_kurs": 21.5
       },
       {
         "wertpapier": "Hensoldt",
@@ -196,7 +211,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 73.5
+        "aktueller_kurs": 73.78
       },
       {
         "wertpapier": "Rheinmetall",
@@ -210,7 +225,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-13",
-        "aktueller_kurs": 978.1,
+        "aktueller_kurs": 974.6,
         "empfehlung": "Kaufen"
       },
       {
@@ -243,7 +258,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 284.2
+        "aktueller_kurs": 281.0
       },
       {
         "wertpapier": "Lockheed Martin",
@@ -258,7 +273,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 455.9
+        "aktueller_kurs": 452.5
       },
       {
         "wertpapier": "MTU Aero Engines",
@@ -272,7 +287,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-13",
-        "aktueller_kurs": 349.2,
+        "aktueller_kurs": 350.4,
         "empfehlung": "Kaufen"
       },
       {
@@ -288,7 +303,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 181.68
+        "aktueller_kurs": 182.64
       },
       {
         "wertpapier": "Rolls-Royce",
@@ -303,7 +318,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 16.47
+        "aktueller_kurs": 16.432
       },
       {
         "wertpapier": "Safran",
@@ -317,7 +332,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Niedrig",
         "datum": "2026-07-13",
-        "aktueller_kurs": 327.9,
+        "aktueller_kurs": 329.5,
         "empfehlung": "Kaufen"
       }
     ],
@@ -335,7 +350,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 7.815
+        "aktueller_kurs": 7.425
       },
       {
         "wertpapier": "Firefly Aerospace",
@@ -365,7 +380,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 266.0
+        "aktueller_kurs": 256.5
       },
       {
         "wertpapier": "Planet Labs",
@@ -380,7 +395,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 23.0
+        "aktueller_kurs": 22.8
       },
       {
         "wertpapier": "Eutelsat",
@@ -395,7 +410,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 2.337
+        "aktueller_kurs": 2.232
       }
     ],
     "Technologie": [
@@ -427,7 +442,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 1554.4
+        "aktueller_kurs": 1546.6
       },
       {
         "wertpapier": "Aixtron SE",
@@ -442,7 +457,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Verkaufen",
-        "aktueller_kurs": 43.95
+        "aktueller_kurs": 41.86
       },
       {
         "wertpapier": "Delivery Hero",
@@ -457,7 +472,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 39.29
+        "aktueller_kurs": 38.42
       },
       {
         "wertpapier": "Dt. Telekom",
@@ -472,7 +487,7 @@
         "risiko": "Hoch",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 26.67
+        "aktueller_kurs": 26.54
       },
       {
         "wertpapier": "Infineon",
@@ -486,7 +501,7 @@
         "bewertung": "Attraktiv",
         "risiko": "Mittel",
         "datum": "2026-07-13",
-        "aktueller_kurs": 71.24,
+        "aktueller_kurs": 67.83,
         "empfehlung": "Halten"
       },
       {
@@ -502,7 +517,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 136.4
+        "aktueller_kurs": 136.72
       },
       {
         "wertpapier": "TeamViewer",
@@ -517,7 +532,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 5.76
+        "aktueller_kurs": 5.655
       }
     ],
     "Versorger": [
@@ -534,7 +549,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 2.367
+        "aktueller_kurs": 2.347
       },
       {
         "wertpapier": "Engie",
@@ -549,7 +564,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 27.44
+        "aktueller_kurs": 27.1
       },
       {
         "wertpapier": "Iberdrola",
@@ -564,7 +579,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 21.21
+        "aktueller_kurs": 21.11
       },
       {
         "wertpapier": "Naturgy Energy Group",
@@ -579,7 +594,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 28.94
+        "aktueller_kurs": 28.68
       },
       {
         "wertpapier": "Terna",
@@ -594,7 +609,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Kaufen",
-        "aktueller_kurs": 10.305
+        "aktueller_kurs": 10.155
       },
       {
         "wertpapier": "EVN",
@@ -609,7 +624,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 29.5
+        "aktueller_kurs": 29.35
       },
       {
         "wertpapier": "Enel",
@@ -624,7 +639,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 10.272
+        "aktueller_kurs": 10.15
       },
       {
         "wertpapier": "Fortum",
@@ -639,7 +654,7 @@
         "risiko": "Mittel",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 20.4
+        "aktueller_kurs": 19.81
       },
       {
         "wertpapier": "Redeia Corporacion",
@@ -669,7 +684,7 @@
         "risiko": "Niedrig",
         "datum": "2026-07-13",
         "empfehlung": "Halten",
-        "aktueller_kurs": 59.25
+        "aktueller_kurs": 58.0
       }
     ]
   }
