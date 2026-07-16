@@ -22,25 +22,48 @@ if ! python3 src/healthcheck.py >/tmp/pf_health_am.log 2>&1; then
   traded=0
 fi
 
-python3 src/update_prices.py            >/dev/null 2>&1
-python3 src/compute_indicators.py       >/dev/null 2>&1
-python3 src/etf_ranking.py              >/dev/null 2>&1
-python3 src/refresh_chart_narrative.py  >/dev/null 2>&1
-python3 src/sanitize_fundamentals.py    >/dev/null 2>&1
-python3 src/prune_analysis.py           >/dev/null 2>&1
-python3 src/fetch_news.py               >/dev/null 2>&1
+# run_step führt ein Python-Skript aus, protokolliert stderr (statt es nach
+# /dev/null zu verschlucken) und hängt bei Absturz eine laute Warnung an $warn.
+# So bleibt kein stiller Crash mehr unbemerkt (Lehre aus dem 9-Tage-Ausfall:
+# update_depot.py crashte an trend=null und niemand hat es gemerkt).
+run_step() {
+  local script="$1"; shift
+  local log="/tmp/pf_$(basename "$script" .py)_am.log"
+  if ! python3 "$script" "$@" >/dev/null 2>"$log"; then
+    local msg
+    # Letzte Traceback-Zeile (z.B. "ValueError: ...") ist am aussagekräftigsten;
+    # Fallback auf letzte nicht-leere Log-Zeile, sonst Log-Pfad.
+    msg="$(grep -E '^[A-Za-z_.]+(Error|Exception|Warning):' "$log" | tail -1)"
+    [ -z "$msg" ] && msg="$(grep -v '^[[:space:]]*$' "$log" | tail -1)"
+    [ -z "$msg" ] && msg="siehe $log"
+    warn="${warn}🔴 FEHLER in $(basename "$script") $*: $(echo "$msg" | tail -c 200). "
+    return 1
+  fi
+  return 0
+}
+
+run_step src/update_prices.py
+run_step src/compute_indicators.py
+run_step src/etf_ranking.py
+run_step src/refresh_chart_narrative.py
+run_step src/sanitize_fundamentals.py
+run_step src/prune_analysis.py
+run_step src/fetch_news.py
 
 if [ "$traded" = "1" ]; then
   # Regelbasierte Empfehlung (nutzt vorhandenes sentiment_scores.json), dann ausführen.
-  python3 src/update_depot.py --recommend >/dev/null 2>&1
-  python3 src/update_depot.py              >/dev/null 2>&1
+  # Ein Crash schreibt depot_status.json NICHT (save nur am Skriptende), der Stand
+  # bleibt also konsistent; run_step sorgt dafür, dass der Fehler nicht mehr still
+  # bleibt, sondern per $warn oben in die Telegram-Zusammenfassung wandert.
+  run_step src/update_depot.py --recommend
+  run_step src/update_depot.py
   # ETF-Sleeve (eigenes 5.000€-Budget, ranking-basiert): gleiche Healthcheck-Gate.
-  python3 src/update_etf_depot.py --recommend >/dev/null 2>&1
-  python3 src/update_etf_depot.py              >/dev/null 2>&1
+  run_step src/update_etf_depot.py --recommend
+  run_step src/update_etf_depot.py
 fi
 
-python3 src/risk_report.py >/dev/null 2>&1
-python3 src/build_dashboard.py >/dev/null 2>&1
+run_step src/risk_report.py
+run_step src/build_dashboard.py
 
 git add data/*.json index.html
 if git commit -q -m "Daily 09:00: Portfolio-Manager (Stop-Loss + regelbasierte Trades)" 2>/dev/null; then

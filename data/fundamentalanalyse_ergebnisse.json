@@ -336,21 +336,6 @@
         "empfehlung": "Kaufen"
       },
       {
-        "wertpapier": "Nvidia",
-        "isin": "US67066G1040",
-        "begruendung": "Kyber-Rack-Verzögerung bis 2028 leicht negativ; fundamentale KI-Stärke bei Rechenzentrums-Chips bleibt ungebrochen, Bewertung anspruchsvoll.",
-        "kgv": "40",
-        "dividendenrendite": 0.03,
-        "umsatzwachstum_yoy": 55.0,
-        "gewinnwachstum_yoy": 58.0,
-        "eigenkapitalquote": 60.0,
-        "bewertung": "Attraktiv",
-        "risiko": "Mittel",
-        "datum": "2026-07-13",
-        "empfehlung": "Halten",
-        "aktueller_kurs": 182.72
-      },
-      {
         "wertpapier": "Rolls-Royce",
         "isin": "GB00B63H8491",
         "begruendung": "Turnaround-Story reift: nach Rekordjahr 2025 erwarten Analysten für 2026 einen Gewinnrückgang je Aktie; Bilanz bleibt trotz Erholung angespannt (historisch negatives Eigenkapital).",
@@ -578,6 +563,21 @@
         "datum": "2026-07-13",
         "empfehlung": "Halten",
         "aktueller_kurs": 5.78
+      },
+      {
+        "wertpapier": "Nvidia",
+        "isin": "US67066G1040",
+        "begruendung": "Kyber-Rack-Verzögerung bis 2028 leicht negativ; fundamentale KI-Stärke bei Rechenzentrums-Chips bleibt ungebrochen, Bewertung anspruchsvoll.",
+        "kgv": "40",
+        "dividendenrendite": 0.03,
+        "umsatzwachstum_yoy": 55.0,
+        "gewinnwachstum_yoy": 58.0,
+        "eigenkapitalquote": 60.0,
+        "bewertung": "Attraktiv",
+        "risiko": "Mittel",
+        "datum": "2026-07-13",
+        "empfehlung": "Halten",
+        "aktueller_kurs": 182.72
       }
     ],
     "Versorger": [

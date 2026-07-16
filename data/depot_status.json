@@ -515,7 +515,7 @@
     "risiko": {
       "hinweise": [
         "⚠️ Nvidia macht 20.5 % des Portfolios aus (Limit 20 %)",
-        "⚠️ Sektor Luft- und Raumfahrttechnik macht 58.8 % des Portfolios aus (Limit 30 %)"
+        "⚠️ Sektor Luft- und Raumfahrttechnik macht 38.4 % des Portfolios aus (Limit 30 %)"
       ],
       "positionen": [
         {
@@ -567,11 +567,15 @@
       "sektoren": [
         {
           "sektor": "Luft- und Raumfahrttechnik",
-          "anteil_pct": 58.8
+          "anteil_pct": 38.4
         },
         {
           "sektor": "Energie",
           "anteil_pct": 29.5
+        },
+        {
+          "sektor": "Technologie",
+          "anteil_pct": 20.5
         },
         {
           "sektor": "Verteidigung",
@@ -591,16 +595,16 @@
         "vermoegen": 9769.26
       },
       "aktuell": {
-        "dax": 24931.73,
-        "msci": 126.03,
+        "dax": 24943.93,
+        "msci": 126.055,
         "vermoegen": 9528.15
       },
       "rendite_pct": {
         "depot": -2.47,
-        "dax": -0.74,
-        "msci_world": 0.25
+        "dax": -0.69,
+        "msci_world": 0.27
       },
-      "stand": "2026-07-16 11:26"
+      "stand": "2026-07-16 11:31"
     }
   },
   "etf_depot": {
