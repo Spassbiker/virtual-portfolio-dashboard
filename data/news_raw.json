@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16 09:00",
+  "generated_at": "2026-07-17 09:00",
   "items": {
     "DE0005557508": {
       "name": "Dt. Telekom",
@@ -131,29 +131,53 @@
       ],
       "error": null
     },
-    "DE000ENER6Y0": {
-      "name": "Siemens Energy",
+    "DE000ENAG999": {
+      "name": "E.ON",
       "ticker": "",
       "headlines": [
         {
-          "title": "Delfin Midstream Partners With EIG’s MidOcean Energy to Advance Second FLNG Vessel; Issues Limited Notice to Proceed to Siemens Energy",
+          "title": "CareerBoom Launches AI Agent That Finds and Applies to Jobs for You",
           "publisher": "GlobeNewswire",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/energy/articles/delfin-midstream-partners-eig-midocean-161000792.html"
+          "published": "2026-07-17",
+          "link": "https://finance.yahoo.com/technology/ai/articles/careerboom-launches-ai-agent-finds-064700565.html"
         },
         {
-          "title": "Siemens Energy begins preparations for independent brand launch",
-          "publisher": "Energy Global",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/m/d23fdd96-df46-391e-87d5-21010b760fc7/siemens-energy-begins.html"
+          "title": "British military reports an attack on a tanker in the Strait of Hormuz taking the route closest to Oman",
+          "publisher": "Associated Press",
+          "published": "2026-07-17",
+          "link": "https://finance.yahoo.com/m/41bfbe4d-4726-3be1-bf64-bae44d46d2ad/british-military-reports-an.html"
         },
         {
-          "title": "Eaton Names Dan T. Simpson President, Global Energy Infrastructure Solutions",
-          "publisher": "Business Wire",
-          "published": "2026-07-08",
-          "link": "https://finance.yahoo.com/energy/articles/eaton-names-dan-t-simpson-104500804.html"
+          "title": "Getinge Interim Report April-June 2026: Good organic growth, high profitability and strong cash flow",
+          "publisher": "PR Newswire",
+          "published": "2026-07-17",
+          "link": "https://finance.yahoo.com/healthcare/articles/getinge-interim-report-april-june-064500084.html"
+        },
+        {
+          "title": "Skanska builds high-tech fabrication facility in Boise, Idaho, USA, for USD 390M, about SEK 3.6 billion",
+          "publisher": "PR Newswire",
+          "published": "2026-07-17",
+          "link": "https://finance.yahoo.com/real-estate/articles/skanska-builds-high-tech-fabrication-064500559.html"
+        },
+        {
+          "title": "US burrito chain Chipotle opens first restaurant in Mexico",
+          "publisher": "Reuters Videos",
+          "published": "2026-07-17",
+          "link": "https://finance.yahoo.com/video/us-burrito-chain-chipotle-opens-064212737.html"
+        },
+        {
+          "title": "US-Iran strikes: latest developments",
+          "publisher": "AFP",
+          "published": "2026-07-17",
+          "link": "https://finance.yahoo.com/m/8d1f8e02-2cb9-3a71-87ce-06ae31b93fc2/us-iran-strikes%3A-latest.html"
         }
       ],
+      "error": null
+    },
+    "DE000ENER6Y0": {
+      "name": "Siemens Energy",
+      "ticker": "",
+      "headlines": [],
       "error": null
     },
     "FR0000073272": {
@@ -167,12 +191,6 @@
           "link": "https://finance.yahoo.com/technology/articles/electra-safran-reach-development-production-120000730.html"
         }
       ],
-      "error": null
-    },
-    "FR0000121329": {
-      "name": "Thales SA",
-      "ticker": "",
-      "headlines": [],
       "error": null
     },
     "FR0014004L86": {
@@ -192,6 +210,12 @@
       "name": "BAE Systems",
       "ticker": "BSP.DE",
       "headlines": [
+        {
+          "title": "BAE Systems secures 40Mk4 naval gun order from Brazil",
+          "publisher": "PR Newswire",
+          "published": "2026-07-16",
+          "link": "https://finance.yahoo.com/technology/articles/bae-systems-secures-40mk4-naval-130000814.html"
+        },
         {
           "title": "Is BAE Systems Expanding Its Presence in the Radar Market?",
           "publisher": "Zacks",
@@ -219,97 +243,16 @@
       ],
       "error": null
     },
-    "GB00B63H8491": {
-      "name": "Rolls-Royce",
-      "ticker": "RRU.DE",
-      "headlines": [
-        {
-          "title": "Quantinuum Signs Quantum Computing Agreement With Rolls-Royce, Riverlane, University of Edinburgh",
-          "publisher": "MT Newswires",
-          "published": "2026-07-14",
-          "link": "https://finance.yahoo.com/technology/ai/articles/quantinuum-signs-quantum-computing-agreement-104419729.html"
-        },
-        {
-          "title": "Quantinuum, Rolls-Royce, Riverlane and University of Edinburgh Sign Agreement to Explore Quantum Computing for Industrial Design and Simulation",
-          "publisher": "PR Newswire",
-          "published": "2026-07-14",
-          "link": "https://finance.yahoo.com/technology/ai/articles/quantinuum-rolls-royce-riverlane-university-080000353.html"
-        },
-        {
-          "title": "Fairbanks Morse Defense Establishes Official Canadian Headquarters Following Successful Rolls-Royce Acquisition",
-          "publisher": "Business Wire",
-          "published": "2026-07-07",
-          "link": "https://finance.yahoo.com/technology/articles/fairbanks-morse-defense-establishes-official-120100241.html"
-        },
-        {
-          "title": "Rolls-Royce Holdings PLC (RYCEY) Is Up 5.48% in One Week: What You Should Know",
-          "publisher": "Zacks",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-holdings-plc-rycey-160003884.html"
-        }
-      ],
-      "error": null
-    },
     "IT0003856405": {
       "name": "Leonardo SpA",
       "ticker": "",
       "headlines": [],
       "error": null
     },
-    "LU0088087324": {
-      "name": "SES",
-      "ticker": "",
-      "headlines": [
-        {
-          "title": "--SES AI Added to Russell 3000 Index Effective Monday",
-          "publisher": "MT Newswires",
-          "published": "2026-06-29",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/ses-ai-added-russell-3000-191411006.html"
-        },
-        {
-          "title": "SES AI Announces Inclusion in Russell 3000®Index",
-          "publisher": "Business Wire",
-          "published": "2026-06-29",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/ses-ai-announces-inclusion-russell-110000327.html"
-        },
-        {
-          "title": "SueWallSt Reminds SES AI Corporation Investors of the Pending Class Action Lawsuit With a Lead Plaintiff Deadline of June 26, 2026 - SES",
-          "publisher": "PR Newswire",
-          "published": "2026-06-18",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/suewallst-reminds-ses-ai-corporation-140900254.html"
-        },
-        {
-          "title": "Stonegate Initiates Coverage on SES AI Corp. (SES)",
-          "publisher": "TMX Newsfile",
-          "published": "2026-06-02",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/stonegate-initiates-coverage-ses-ai-134600123.html"
-        }
-      ],
-      "error": null
-    },
     "NL0010273215": {
       "name": "ASML",
       "ticker": "",
-      "headlines": [
-        {
-          "title": "ASML Stock Eyes Second Weekly Gains: Retail Bulls Call Chipmaker The 'Ultimate Gatekeeper Of Tech'",
-          "publisher": "Stocktwits",
-          "published": "2026-07-16",
-          "link": "https://finance.yahoo.com/m/df627e10-2700-36d0-b95d-db47da5c6fa6/asml-stock-eyes-second-weekly.html"
-        },
-        {
-          "title": "ASML (ASML) Q2 2026 Earnings Call Transcript",
-          "publisher": "Motley Fool",
-          "published": "2026-07-16",
-          "link": "https://finance.yahoo.com/m/e892e0ef-cf7e-33d2-ae4c-45d63163ebbb/asml-%28asml%29-q2-2026-earnings.html"
-        },
-        {
-          "title": "Analyst Report: ASML Holding N.V.",
-          "publisher": "Morningstar Research",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/m/fffebc7d-1fa0-3923-9e5a-94c4eaeea75b/analyst-report%3A-asml-holding.html"
-        }
-      ],
+      "headlines": [],
       "error": null
     },
     "US5398301094": {
@@ -317,22 +260,28 @@
       "ticker": "LOM.DE",
       "headlines": [
         {
-          "title": "Lockheed Martin Earmarks $100 Million for Venture Capital Investments in U.K., Europe",
+          "title": "Lockheed Martin Awarded $101.8 Million US Air Force Contract",
+          "publisher": "MT Newswires",
+          "published": "2026-07-16",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-awarded-101-8-212901205.html"
+        },
+        {
+          "title": "Lockheed Martin Wins $10.5 Billion US Special Operations Command Logistics Contract",
+          "publisher": "MT Newswires",
+          "published": "2026-07-16",
+          "link": "https://finance.yahoo.com/technology/articles/lockheed-martin-wins-10-5-143536533.html"
+        },
+        {
+          "title": "Lockheed Martin (LMT) Reports Next Week: What to Expect",
+          "publisher": "Zacks",
+          "published": "2026-07-16",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-reports-next-140010172.html"
+        },
+        {
+          "title": "Lockheed Martin to Provide Next-Generation Logistics and Sustainment Support for U.S. Special Operations Command Under New Contract",
           "publisher": "PR Newswire",
           "published": "2026-07-16",
-          "link": "https://finance.yahoo.com/technology/articles/lockheed-martin-earmarks-100-million-050000166.html"
-        },
-        {
-          "title": "Is Lockheed Martin Expanding Its Presence in the Submarine Market?",
-          "publisher": "Zacks",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-expanding-presence-submarine-142100415.html"
-        },
-        {
-          "title": "Machina Awarded Qualification Contract from Lockheed Martin in Support of JASSM Program",
-          "publisher": "Business Wire",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/technology/articles/machina-awarded-qualification-contract-lockheed-100000668.html"
+          "link": "https://finance.yahoo.com/technology/articles/lockheed-martin-next-generation-logistics-134400022.html"
         }
       ],
       "error": null
@@ -348,6 +297,12 @@
       "ticker": "85H1.DE",
       "headlines": [
         {
+          "title": "Planet Labs PBC Insider Sold Shares Worth $929,638, According to a Recent SEC Filing",
+          "publisher": "MT Newswires",
+          "published": "2026-07-16",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pbc-insider-sold-202150044.html"
+        },
+        {
           "title": "Planet Labs Co-Founder Sells 89,593 Shares for $2.3 Million -- Should Investors Take Note?",
           "publisher": "Motley Fool",
           "published": "2026-07-14",
@@ -358,18 +313,6 @@
           "publisher": "Motley Fool",
           "published": "2026-07-14",
           "link": "https://finance.yahoo.com/m/d9766b5d-17ee-329c-a19b-b6313fc087eb/planet-labs-ceo-sells-company.html"
-        },
-        {
-          "title": "Planet Labs Insider Sold Shares Worth $2,322,224, According to a Recent SEC Filing",
-          "publisher": "MT Newswires",
-          "published": "2026-07-14",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-insider-sold-shares-080636700.html"
-        },
-        {
-          "title": "Planet Labs Insider Sold Shares Worth $5,183,940, According to a Recent SEC Filing",
-          "publisher": "MT Newswires",
-          "published": "2026-07-14",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-insider-sold-shares-080415801.html"
         }
       ],
       "error": null

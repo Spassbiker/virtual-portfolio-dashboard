@@ -1,95 +1,85 @@
 {
-  "generated_at": "2026-07-16 08:50",
+  "generated_at": "2026-07-17 08:50",
   "scores": {
     "DE0005557508": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "DE0005936124": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "DE0007164600": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Generisch positive Analystenstimmen zur Marktstellung, keine harten Zahlen."
+      "begruendung": "Nur generische Analysten-Artikel und eine Randnotiz zu einem Drittanbieter-Support-Deal, kein kursrelevantes Ereignis."
     },
     "DE000A0D6554": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Mehrere frische Großaufträge (700 MW, 325 MW, 197 MW, 112 MW) aus Deutschland und international."
+      "begruendung": "Serie mehrerer neuer Großaufträge (700 MW, 325 MW, 2x197 MW, 112 MW) zeigt starke Auftragsdynamik."
     },
     "DE000A0D9PT0": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Nur generische Analysten-/Dividendenartikel, leicht positiv aber kein kursrelevantes Ereignis."
+      "begruendung": "Nur generische Analysten-/Dividendenartikel, leicht positiver Grundton ohne konkrete News."
     },
     "DE000A0DJ6J9": {
       "sentiment_score": -1,
       "veto": false,
-      "begruendung": "Q1-Zahlen knapp verfehlt trotz Umsatzwachstum, Analystenausblick wird angepasst."
+      "begruendung": "Q1-Zahlen laut Berichten verfehlt, Analysten senken Erwartungen."
+    },
+    "DE000ENAG999": {
+      "sentiment_score": 0,
+      "veto": false,
+      "begruendung": "Alle Schlagzeilen betreffen offensichtlich andere Unternehmen (Crypto.com, Skanska, SKF, Sidetrade, Getinge), keine E.ON-spezifische News."
     },
     "DE000ENER6Y0": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Neuer FLNG-Projektauftrag (Notice to Proceed) und Vorbereitung einer eigenständigen Markenpositionierung."
+      "begruendung": "Neuer FLNG-Auftrag (Limited Notice to Proceed von Delfin) positiv, geplante Markenumbenennung zu 'Omterra' ist neutral bis unsicher."
     },
     "FR0000073272": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Neue Entwicklungs-/Fertigungsvereinbarung mit Electra für Hybrid-Elektro-Flugzeugantrieb."
-    },
-    "FR0000121329": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Neue Entwicklungs-/Produktionsvereinbarung mit Electra für Hybrid-Elektro-Triebwerk ist leicht positiv."
     },
     "FR0014004L86": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Nur administrative Meldung zu Aktienanzahl/Stimmrechten, kein Kursimpuls."
+      "begruendung": "Nur administrative Pflichtmitteilung zur Aktienanzahl, keine Stimmungsrelevanz."
     },
     "GB0002634946": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Mehrere neue Verteidigungsaufträge/-programme (EPAWSS Südkorea, CV90-Getriebe, Radar/Fahrzeugmarkt-Expansion)."
-    },
-    "GB00B63H8491": {
-      "sentiment_score": 1,
-      "veto": false,
-      "begruendung": "Positive Kursdynamik (+5,48% Wochengewinn) und neue Quantencomputing-Kooperation mit Quantinuum."
+      "begruendung": "Mehrere neue Aufträge und Marktexpansion (Marinegeschütze Brasilien, Radar, EPAWSS Südkorea, CV90-Getriebe) zeigen starke Nachfrage."
     },
     "IT0003856405": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
-    },
-    "LU0088087324": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Schlagzeilen betreffen die branchenfremde US-Firma 'SES AI Corporation', nicht den Satellitenbetreiber SES S.A."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "NL0010273215": {
-      "sentiment_score": 2,
+      "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Starke Q2-Zahlen, positive Analystenreports und zweite Woche in Folge mit Kursgewinnen."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "US5398301094": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Neue 100-Mio.-USD-VC-Initiative für UK/Europa sowie neue Aufträge im U-Boot- und JASSM-Programm."
+      "begruendung": "Mehrere neue Großaufträge (u.a. 10,5-Mrd.-USD-Logistikvertrag mit SOCOM, 101,8-Mio.-USD-Air-Force-Auftrag) klar positiv."
     },
     "US67066G1040": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine aktuellen Schlagzeilen vorhanden."
+      "begruendung": "Keine Schlagzeilen vorhanden."
     },
     "US72703X1063": {
       "sentiment_score": -1,
       "veto": false,
-      "begruendung": "Mehrere Insider-Verkäufe von CEO und Mitgründer in Millionenhöhe belasten die Stimmung leicht."
+      "begruendung": "Gehäufte Insiderverkäufe von CEO und Mitgründer in Millionenhöhe wirken als Vorsichtssignal."
     }
   }
 }

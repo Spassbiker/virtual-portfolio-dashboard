@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-07-16 11:26",
+  "generated_at": "2026-07-17 09:00",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [
     {
-      "datum": "2026-07-16",
+      "datum": "2026-07-17",
       "typ": "Kauf",
-      "isin": "ES0144580Y14",
-      "wertpapier": "Iberdrola",
-      "stueck": 26,
-      "kurs": 20.96,
+      "isin": "DE000A2E4K43",
+      "wertpapier": "Delivery Hero",
+      "stueck": 14,
+      "kurs": 38.2,
       "gebuehr": 5.0,
       "steuern": 0.0,
       "gewinn_verlust": 0.0,
-      "gesamt": 549.96,
+      "gesamt": 539.8,
       "notiz": "Neukauf (Score=14)",
-      "begruendung": "Score=14 (Chart=6: Trend+2, RSI+1(55), MACD+1, SMA50+1, SMA200+1; Funda=8: Empf.+3, Bew.+2, Risiko+2, GW+1(12%)) | Chart: Kurs 21.15 vs. SMA50 20.39 / SMA200 19.10 → Aufwärtstrend. RSI 55, MACD Neutral. | Funda: Groesster europaeischer Utility-Wert (Netze/Erneuerbare); Analysten ueberwiegend Overweight, defensiver Cashflow aus reguliertem Netzgeschaeft, Gewinn +12% YoY."
+      "begruendung": "Score=14 (Chart=9: Empf.+3, Trend+2, RSI+1(62), MACD+1, SMA50+1, SMA200+1; Funda=5: Bew.+2, Risiko+1, GW+2(24%)) | Chart: Kurs 38.20 vs. SMA50 35.39 / SMA200 24.34 → Aufwärtstrend. RSI 62, MACD Neutral. | Funda: Spekulative Seitwärtsphase, hoher charttechnischer Druck."
     }
   ],
   "zusammenfassung": [
-    "Watch-Modus: 10 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: TKMS (Thyssenkrupp Marine Systems)(6), Saab AB(4), CSG N.V. (Czechoslovak Group)(3), Kratos Defense & Security Solutions(2), Centrus Energy(0).",
-    "Adaptive Kaufschwelle: 14 (Floor 6, 80er-Perzentil aus 34 aktiven Kandidaten).",
-    "Kauf: 26x Iberdrola (ES0144580Y14) zu 20.96 EUR, Score=14, Budget=1000€."
+    "Watch-Modus: 13 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: TKMS (Thyssenkrupp Marine Systems)(7), Saab AB(4), CSG N.V. (Czechoslovak Group)(3), Kratos Defense & Security Solutions(2), Oklo Inc.(0).",
+    "Adaptive Kaufschwelle: 14 (Floor 6, 80er-Perzentil aus 33 aktiven Kandidaten).",
+    "Kauf: 14x Delivery Hero (DE000A2E4K43) zu 38.20 EUR, Score=14, Budget=1000€."
   ],
-  "resultierender_barbestand": 28.42,
-  "resultierender_portfoliowert": 9500.96,
-  "resultierendes_gesamtvermoegen": 9529.38
+  "resultierender_barbestand": 38.58,
+  "resultierender_portfoliowert": 9428.05,
+  "resultierendes_gesamtvermoegen": 9466.63
 }

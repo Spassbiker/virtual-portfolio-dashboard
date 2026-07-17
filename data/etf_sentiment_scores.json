@@ -1,100 +1,100 @@
 {
-  "generated_at": "2026-07-16 08:53",
+  "generated_at": "2026-07-17 09:00",
   "scores": {
     "IE00B1XNHC34": {
       "typ": "A",
       "sentiment_score": -2,
-      "begruendung": "ICLN wird als \"Dip\" gehandelt, mehrere Clean-Energy-Titel (Bloom Energy, FuelCell) fallen deutlich nach Aktienplatzierungen und Lieferstreit."
+      "begruendung": "ICLN wird als \"Dip\" beschrieben und Zulieferer wie Bloom Energy und FuelCell Energy verzeichnen zweistellige Kursverluste."
     },
     "IE000NDWFGA5": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Cameco löst Cigar-Lake-Störung, UEC legt mehrfach zu und US-Nuklearbrennstoff-Push stützt das Uran-Thema klar positiv."
+      "sentiment_score": -1,
+      "begruendung": "Nuklear-/Uranaktien taumeln (Oklo -28% im Monat), nur vereinzelte Lichtblicke wie Camecos gelöste Lieferstörung und ein UEC-Popper stützen den Sektor."
     },
     "IE0002Y8CX98": {
       "typ": "A",
-      "sentiment_score": 3,
-      "begruendung": "Kratos eröffnet neue Fertigung, erhält $400M US-Verteidigungsauftrag und profitiert von der US-Verteidigungsindustrie-Expansion."
+      "sentiment_score": 2,
+      "begruendung": "Kratos eröffnet neue Fertigung, erhält $400M Verteidigungsauftrag und profitiert von der US-Verteidigungsindustrie-Expansion."
     },
     "IE000YYE6WK5": {
       "typ": "A",
-      "sentiment_score": 3,
+      "sentiment_score": 2,
       "begruendung": "Gleiche starke Verteidigungs-News wie beim anderen Defense-ETF: Kratos-Werk, $400M-Auftrag, Branchenexpansion."
     },
     "IE000OJ5TQP4": {
       "typ": "A",
-      "sentiment_score": 1,
-      "begruendung": "Nur ältere, dünne Nachrichtenlage (Ukraine-Drohnenangriff Ende Juni), kein frisches starkes Signal fürs Drohnen-Thema."
+      "sentiment_score": 0,
+      "begruendung": "\"Buy the dip\"-Artikel deutet auf jüngste Schwäche hin, der Rest der Schlagzeilen ist Wochen alt und liefert kein klares aktuelles Signal."
     },
     "IE000YU9K6K2": {
       "typ": "A",
-      "sentiment_score": -2,
-      "begruendung": "SPCX und ASTS rutschen auf Jahrestiefs bzw. in Ausverkauf, zusätzliche Verwässerung durch $1Mrd-Wandelanleihe belastet das Space-Thema."
+      "sentiment_score": -3,
+      "begruendung": "Weltraumaktien (ASTS, RKLB, SPCX) erleiden im Juli über 30% Verlust, ASTS fällt auf Jahrestief und Goldman warnt vor 5-facher Volatilität."
     },
     "IE00BYPLS672": {
       "typ": "A",
       "sentiment_score": 3,
-      "begruendung": "Cybersecurity-ETF auf 52-Wochen-Hoch, CrowdStrike/Palo Alto/Fortinet rallyen kräftig, Sektor-Spending knackt $300 Mrd."
+      "begruendung": "Cybersecurity-Aktien wie CrowdStrike und Palo Alto rallyen auf Analyst-Upgrades und IBM-Kommentare, ETF markiert ein neues 52-Wochen-Hoch."
     },
     "IE00BYVQ9F29": {
       "typ": "A",
       "sentiment_score": 0,
-      "begruendung": "Nasdaq pendelt zwischen Rallye (Iran-Deal-Optimismus) und Rückschlägen (AI-Jitters, Blasen-Warnung) ohne klare Richtung."
+      "begruendung": "Alle Schlagzeilen sind mehrere Wochen alt und zeigen abwechselnd Rally und AI-Jitter-bedingte Rücksetzer ohne klaren aktuellen Trend."
     },
     "IE00BYZK4552": {
       "typ": "A",
       "sentiment_score": 2,
-      "begruendung": "Mehrere positive Robotik-Storys (Reshoring-Boom, Healthcare-Automation, BOTZ-AI-Wette) überwiegen vereinzelte negative Einzelmeldungen."
+      "begruendung": "Positive Nachrichten zu Reshoring-Boom, Gesundheits-Automation und Kraken-Robotics-Übernahme stützen die Robotik-These."
     },
     "IE00BMC38736": {
       "typ": "A",
-      "sentiment_score": -1,
-      "begruendung": "Chip-Sektor im Ausverkauf mit Gewinnmitnahmen und geopolitischen Spannungen, nur vereinzelte Kursziel-Anhebungen (NXP, ON) dagegen."
+      "sentiment_score": -2,
+      "begruendung": "Chip-Sektor-Ausverkauf lässt NXP und Broadcom deutlich fallen, begleitet von geopolitischen Spannungen im Halbleitersektor."
     },
     "IE00BM67HN09": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "FuelCell und Energy-Werte werden mehrfach hochgestuft (UBS-Upgrade, 41% Upside-Aussicht), Energie-Thema klar positiv trotz einer Gewinnwarnung."
+      "sentiment_score": 1,
+      "begruendung": "Milliardeninvestition in Bloom-Energy-Brennstoffzellen für KI-Infrastruktur (IDF/Oaktree) überwiegt vereinzelte negative Kursreaktionen."
     },
     "IE00BM67HS53": {
       "typ": "B",
-      "sentiment_score": 1,
-      "begruendung": "Applied Materials profitiert von KI-Capex-These mit mehreren Kurszielanhebungen, gedämpft durch China-Handelsspannungen und schwächelnde Minenwerte."
+      "sentiment_score": 2,
+      "begruendung": "MP Materials profitiert vom Rare-Earth-Push und ASML/Applied Materials werden durch starke KI-Nachfrage nach oben gesehen."
     },
     "IE00B4LN9N13": {
       "typ": "B",
-      "sentiment_score": -1,
-      "begruendung": "Überwiegend generische Marktnews, dazu mehrere Industrials-Einzeltitel (Dow Inc, AeroVironment) die schwächer als der Markt performen."
+      "sentiment_score": -2,
+      "begruendung": "Breiter Chip-Ausverkauf drückt Dow-Futures und mehrere Einzelwerte fallen stärker als der Gesamtmarkt."
     },
     "IE00BM67HV82": {
       "typ": "B",
-      "sentiment_score": -1,
-      "begruendung": "Gleiche Nachrichtenlage wie beim anderen Industrials-ETF: generische Marktnews plus underperformende Einzelwerte."
+      "sentiment_score": -2,
+      "begruendung": "Gleiche Nachrichtenlage wie beim anderen Industrials-ETF: breiter Chip-Ausverkauf und underperformende Einzelwerte."
     },
     "IE000CK5G8J7": {
       "typ": "B",
       "sentiment_score": 2,
-      "begruendung": "Mehrere Meldungen zu neuen KI-Rechenzentrumsprojekten (Keel/Sherbrooke) und positiver Analysten-Coverage stützen das Infrastruktur-Thema deutlich."
+      "begruendung": "Sterling Infrastructure meldet starke Q1-Zahlen, höhere Prognose und ausgeweitete Kreditlinie im Zuge von KI-Bauprojekten."
     },
     "IE00BM67HT60": {
       "typ": "B",
       "sentiment_score": -1,
-      "begruendung": "Chip-Ausverkauf trifft mehrere Tech-Schwergewichte (Micron, Marvell, SK Hynix), nur Nvidia-Investment und robuste Q2-Erwartungen wirken dagegen."
+      "begruendung": "Chip-Sektor-Ausverkauf belastet den Markt insgesamt, während Nvidia- und Micron-Meldungen einzelne Lichtblicke liefern."
     },
     "DE000A0H08H3": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "Utilities gelten als defensiver Gewinner des KI-Rechenzentrum-Strombedarfs (XLU hält stand), trotz RBC-Rotationsempfehlung Richtung Tech."
+      "sentiment_score": 0,
+      "begruendung": "Utilities zeigen Widerstandsfähigkeit bei Marktrückgängen, aber RBC bevorzugt Tech gegenüber Utilities und dämpft damit den Ausblick."
     },
     "IE00BM67HQ30": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "Gleiche Utilities-Story wie bei den anderen Utility-ETFs: KI-Stromnachfrage und defensive Stärke überwiegen die Rotationswarnung."
+      "sentiment_score": 0,
+      "begruendung": "Gleiche Utilities-Story wie bei den anderen Utility-ETFs: defensive Stärke steht gegen die RBC-Rotationsempfehlung Richtung Tech."
     },
     "LU1834988864": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "Gleiche Utilities-Story wie bei den anderen Utility-ETFs: KI-Stromnachfrage und defensive Stärke überwiegen die Rotationswarnung."
+      "sentiment_score": 0,
+      "begruendung": "Gleiche Utilities-Story wie bei den anderen Utility-ETFs: defensive Stärke steht gegen die RBC-Rotationsempfehlung Richtung Tech."
     }
   }
 }

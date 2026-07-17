@@ -1,21 +1,21 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 578.38,
-    "portfoliowert": 8868.54,
-    "gesamtvermoegen": 9446.92,
+    "aktueller_barbestand": 38.58,
+    "portfoliowert": 9428.05,
+    "gesamtvermoegen": 9466.63,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 21,
         "kaufkurs": 46.38,
-        "boersenkurs": 49.425,
+        "boersenkurs": 49.61,
         "investiert": 973.98,
-        "boersenwert": 1037.92,
-        "gewinn_verlust": 63.94,
+        "boersenwert": 1041.81,
+        "gewinn_verlust": 67.83,
         "score": 10,
-        "beta": 0.775,
+        "beta": 0.3,
         "dax_ref": 25118.27,
         "stop_ref_kurs": 52.19
       },
@@ -24,12 +24,12 @@
         "wertpapier": "MTU Aero Engines",
         "stueck": 4,
         "kaufkurs": 363.3,
-        "boersenkurs": 345.3,
+        "boersenkurs": 346.1,
         "investiert": 1453.2,
-        "boersenwert": 1381.2,
-        "gewinn_verlust": -72.0,
+        "boersenwert": 1384.4,
+        "gewinn_verlust": -68.8,
         "score": 16,
-        "beta": 1.299,
+        "beta": 0.3,
         "dax_ref": 25118.27,
         "stop_ref_kurs": 362.0
       },
@@ -38,12 +38,12 @@
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 327.5,
+        "boersenkurs": 329.1,
         "investiert": 1380.0,
-        "boersenwert": 1310.0,
-        "gewinn_verlust": -70.0,
-        "score": 14,
-        "beta": 1.022,
+        "boersenwert": 1316.4,
+        "gewinn_verlust": -63.6,
+        "score": 15,
+        "beta": 0.3,
         "dax_ref": 25118.27,
         "stop_ref_kurs": 340.0
       },
@@ -52,12 +52,12 @@
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 148.18,
+        "boersenkurs": 148.74,
         "investiert": 1492.2,
-        "boersenwert": 1333.62,
-        "gewinn_verlust": -158.58,
+        "boersenwert": 1338.66,
+        "gewinn_verlust": -153.54,
         "score": 14,
-        "beta": 1.907,
+        "beta": 0.3,
         "dax_ref": 25118.27,
         "stop_ref_kurs": 156.24
       },
@@ -66,12 +66,12 @@
         "wertpapier": "Nvidia",
         "stueck": 10,
         "kaufkurs": 170.9,
-        "boersenkurs": 180.46,
+        "boersenkurs": 181.1,
         "investiert": 1709.0,
-        "boersenwert": 1804.6,
-        "gewinn_verlust": 95.6,
-        "score": 15,
-        "beta": 0.843,
+        "boersenwert": 1811.0,
+        "gewinn_verlust": 102.0,
+        "score": 11,
+        "beta": 0.3,
         "dax_ref": 24914.8,
         "stop_ref_kurs": 183.08
       },
@@ -80,10 +80,10 @@
         "wertpapier": "Lockheed Martin",
         "stueck": 1,
         "kaufkurs": 545.91,
-        "boersenkurs": 452.7,
+        "boersenkurs": 453.9,
         "investiert": 545.91,
-        "boersenwert": 452.7,
-        "gewinn_verlust": -93.21,
+        "boersenwert": 453.9,
+        "gewinn_verlust": -92.01,
         "score": 17,
         "beta": 0.3,
         "dax_ref": 24917.08,
@@ -94,12 +94,12 @@
         "wertpapier": "SMA Solar",
         "stueck": 14,
         "kaufkurs": 58.725,
-        "boersenkurs": 58.25,
+        "boersenkurs": 58.2,
         "investiert": 822.15,
-        "boersenwert": 815.5,
-        "gewinn_verlust": -6.65,
-        "score": 17,
-        "beta": 1.355,
+        "boersenwert": 814.8,
+        "gewinn_verlust": -7.35,
+        "score": 13,
+        "beta": 0.3,
         "dax_ref": 24914.8,
         "stop_ref_kurs": 60.6
       },
@@ -108,12 +108,12 @@
         "wertpapier": "Dassault Aviation",
         "stueck": 1,
         "kaufkurs": 297.2,
-        "boersenkurs": 279.4,
+        "boersenkurs": 278.8,
         "investiert": 297.2,
-        "boersenwert": 279.4,
-        "gewinn_verlust": -17.8,
+        "boersenwert": 278.8,
+        "gewinn_verlust": -18.4,
         "score": 8,
-        "beta": 0.573,
+        "beta": 0.3,
         "dax_ref": 24917.08,
         "stop_ref_kurs": 290.4
       },
@@ -122,14 +122,28 @@
         "wertpapier": "E.ON",
         "stueck": 24,
         "kaufkurs": 18.895,
-        "boersenkurs": 18.9,
+        "boersenkurs": 18.895,
         "investiert": 453.48,
-        "boersenwert": 453.6,
-        "gewinn_verlust": 0.12,
-        "score": 15,
+        "boersenwert": 453.48,
+        "gewinn_verlust": 0.0,
+        "score": 14,
         "dax_ref": 24914.8,
         "stop_ref_kurs": 18.895,
-        "beta": 0.345
+        "beta": 0.3
+      },
+      {
+        "isin": "DE000A2E4K43",
+        "wertpapier": "Delivery Hero",
+        "stueck": 14,
+        "kaufkurs": 38.2,
+        "boersenkurs": 38.2,
+        "investiert": 534.8,
+        "boersenwert": 534.8,
+        "gewinn_verlust": 0.0,
+        "score": 14,
+        "dax_ref": 24915.49,
+        "stop_ref_kurs": 38.2,
+        "beta": 0.3
       }
     ],
     "transaktionshistorie": [
@@ -510,76 +524,94 @@
         "gesamt": 550.4,
         "notiz": "Aufstockung (Score-Sizing-Rebalance 2026-07-16)",
         "begruendung": "Score-Sizing: Kapital in höchstbewertete, bislang kleinste Position (Score 17) reinvestiert"
+      },
+      {
+        "datum": "2026-07-17",
+        "typ": "Kauf",
+        "isin": "DE000A2E4K43",
+        "wertpapier": "Delivery Hero",
+        "stueck": 14,
+        "kurs": 38.2,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 539.8,
+        "notiz": "Neukauf (Score=14)",
+        "begruendung": "Score=14 (Chart=9: Empf.+3, Trend+2, RSI+1(62), MACD+1, SMA50+1, SMA200+1; Funda=5: Bew.+2, Risiko+1, GW+2(24%)) | Chart: Kurs 38.20 vs. SMA50 35.39 / SMA200 24.34 → Aufwärtstrend. RSI 62, MACD Neutral. | Funda: Spekulative Seitwärtsphase, hoher charttechnischer Druck."
       }
     ],
     "risiko": {
       "hinweise": [
-        "⚠️ Nvidia macht 20.3 % des Portfolios aus (Limit 20 %)",
-        "⚠️ Sektor Luft- und Raumfahrttechnik macht 38.6 % des Portfolios aus (Limit 30 %)"
+        "⚠️ Sektor Luft- und Raumfahrttechnik macht 36.4 % des Portfolios aus (Limit 30 %)"
       ],
       "positionen": [
         {
           "wertpapier": "Nvidia",
           "isin": "US67066G1040",
-          "anteil_pct": 20.3
+          "anteil_pct": 19.2
         },
         {
           "wertpapier": "MTU Aero Engines",
           "isin": "DE000A0D9PT0",
-          "anteil_pct": 15.6
+          "anteil_pct": 14.7
         },
         {
           "wertpapier": "Siemens Energy",
           "isin": "DE000ENER6Y0",
-          "anteil_pct": 15.0
+          "anteil_pct": 14.2
         },
         {
           "wertpapier": "Safran",
           "isin": "FR0000073272",
-          "anteil_pct": 14.8
+          "anteil_pct": 14.0
         },
         {
           "wertpapier": "Leonardo",
           "isin": "IT0003856405",
-          "anteil_pct": 11.7
+          "anteil_pct": 11.1
         },
         {
           "wertpapier": "SMA Solar",
           "isin": "DE000A0DJ6J9",
-          "anteil_pct": 9.2
+          "anteil_pct": 8.6
+        },
+        {
+          "wertpapier": "Delivery Hero",
+          "isin": "DE000A2E4K43",
+          "anteil_pct": 5.7
         },
         {
           "wertpapier": "Lockheed Martin",
           "isin": "US5398301094",
-          "anteil_pct": 5.1
+          "anteil_pct": 4.8
         },
         {
           "wertpapier": "E.ON",
           "isin": "DE000ENAG999",
-          "anteil_pct": 5.1
+          "anteil_pct": 4.8
         },
         {
           "wertpapier": "Dassault Aviation",
           "isin": "FR0014004L86",
-          "anteil_pct": 3.2
+          "anteil_pct": 3.0
         }
       ],
       "sektoren": [
         {
           "sektor": "Luft- und Raumfahrttechnik",
-          "anteil_pct": 38.6
+          "anteil_pct": 36.4
         },
         {
           "sektor": "Energie",
-          "anteil_pct": 29.3
+          "anteil_pct": 27.7
         },
         {
           "sektor": "Technologie",
-          "anteil_pct": 20.3
+          "anteil_pct": 24.9
         },
         {
           "sektor": "Verteidigung",
-          "anteil_pct": 11.7
+          "anteil_pct": 11.1
         }
       ],
       "limits": {
@@ -595,23 +627,23 @@
         "vermoegen": 9769.26
       },
       "aktuell": {
-        "dax": 24850.74,
-        "msci": 126.125,
-        "vermoegen": 9446.92
+        "dax": 24915.49,
+        "msci": 126.255,
+        "vermoegen": 9466.63
       },
       "rendite_pct": {
-        "depot": -3.3,
-        "dax": -1.07,
-        "msci_world": 0.33
+        "depot": -3.1,
+        "dax": -0.81,
+        "msci_world": 0.43
       },
-      "stand": "2026-07-16 17:35"
+      "stand": "2026-07-17 09:00"
     }
   },
   "etf_depot": {
     "startkapital": 5000,
-    "aktueller_barbestand": 502.97,
-    "portfoliowert": 4416.62,
-    "gesamtvermoegen": 4919.59,
+    "aktueller_barbestand": 23.77,
+    "portfoliowert": 4903.19,
+    "gesamtvermoegen": 4926.96,
     "positionen": [
       {
         "sektor": "Energie",
@@ -620,25 +652,11 @@
         "ticker": "XDWS.DE",
         "stueck": 10,
         "kaufkurs": 47.98,
-        "boersenkurs": 48.605,
+        "boersenkurs": 48.65,
         "investiert": 479.75,
-        "boersenwert": 486.05,
-        "gewinn_verlust": 6.3,
-        "composite": 75.8,
-        "bucket": "CORE"
-      },
-      {
-        "sektor": "Energie",
-        "wertpapier": "iShares Global Clean Energy Transition UCITS ETF",
-        "isin": "IE00B1XNHC34",
-        "ticker": "IQQH.DE",
-        "stueck": 4,
-        "kaufkurs": 9.638,
-        "boersenkurs": 9.369,
-        "investiert": 38.55,
-        "boersenwert": 37.48,
-        "gewinn_verlust": -1.07,
-        "composite": 60.4,
+        "boersenwert": 486.5,
+        "gewinn_verlust": 6.75,
+        "composite": 74.6,
         "bucket": "SATELLITE"
       },
       {
@@ -648,11 +666,11 @@
         "ticker": "XDWM.DE",
         "stueck": 4,
         "kaufkurs": 66.56,
-        "boersenkurs": 65.9,
+        "boersenkurs": 66.08,
         "investiert": 266.24,
-        "boersenwert": 263.6,
-        "gewinn_verlust": -2.64,
-        "composite": 71.7,
+        "boersenwert": 264.32,
+        "gewinn_verlust": -1.92,
+        "composite": 73.2,
         "bucket": "SATELLITE"
       },
       {
@@ -662,11 +680,11 @@
         "ticker": "XDEM.DE",
         "stueck": 3,
         "kaufkurs": 86.74,
-        "boersenkurs": 83.79,
+        "boersenkurs": 84.05,
         "investiert": 260.22,
-        "boersenwert": 251.37,
-        "gewinn_verlust": -8.85,
-        "composite": 68.5,
+        "boersenwert": 252.15,
+        "gewinn_verlust": -8.07,
+        "composite": 67.4,
         "bucket": "SATELLITE"
       },
       {
@@ -676,11 +694,11 @@
         "ticker": "ASWC.DE",
         "stueck": 5,
         "kaufkurs": 17.936,
-        "boersenkurs": 17.832,
+        "boersenkurs": 17.874,
         "investiert": 89.68,
-        "boersenwert": 89.16,
-        "gewinn_verlust": -0.52,
-        "composite": 68.0,
+        "boersenwert": 89.37,
+        "gewinn_verlust": -0.31,
+        "composite": 64.5,
         "bucket": "SATELLITE"
       },
       {
@@ -690,11 +708,11 @@
         "ticker": "IS3Q.DE",
         "stueck": 5,
         "kaufkurs": 77.418,
-        "boersenkurs": 77.74,
+        "boersenkurs": 77.82,
         "investiert": 387.09,
-        "boersenwert": 388.7,
-        "gewinn_verlust": 1.61,
-        "composite": 80.4,
+        "boersenwert": 389.1,
+        "gewinn_verlust": 2.01,
+        "composite": 80.3,
         "bucket": "CORE"
       },
       {
@@ -704,11 +722,11 @@
         "ticker": "2B7C.DE",
         "stueck": 4,
         "kaufkurs": 13.482,
-        "boersenkurs": 13.338,
+        "boersenkurs": 13.362,
         "investiert": 53.93,
-        "boersenwert": 53.35,
-        "gewinn_verlust": -0.58,
-        "composite": 70.3,
+        "boersenwert": 53.45,
+        "gewinn_verlust": -0.48,
+        "composite": 67.8,
         "bucket": "SATELLITE"
       },
       {
@@ -718,11 +736,11 @@
         "ticker": "XDWI.DE",
         "stueck": 2,
         "kaufkurs": 76.15,
-        "boersenkurs": 75.33,
+        "boersenkurs": 75.41,
         "investiert": 152.3,
-        "boersenwert": 150.66,
-        "gewinn_verlust": -1.64,
-        "composite": 72.7,
+        "boersenwert": 150.82,
+        "gewinn_verlust": -1.48,
+        "composite": 70.3,
         "bucket": "SATELLITE"
       },
       {
@@ -732,12 +750,12 @@
         "ticker": "USPY.DE",
         "stueck": 11,
         "kaufkurs": 39.5482,
-        "boersenkurs": 39.215,
+        "boersenkurs": 39.2,
         "investiert": 435.03,
-        "boersenwert": 431.37,
-        "gewinn_verlust": -3.66,
-        "composite": 75.0,
-        "bucket": "CORE"
+        "boersenwert": 431.2,
+        "gewinn_verlust": -3.83,
+        "composite": 74.6,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Satellitentechnik",
@@ -746,11 +764,11 @@
         "ticker": "NQSE.DE",
         "stueck": 5,
         "kaufkurs": 17.26,
-        "boersenkurs": 16.948,
+        "boersenkurs": 16.966,
         "investiert": 86.3,
-        "boersenwert": 84.74,
-        "gewinn_verlust": -1.56,
-        "composite": 72.1,
+        "boersenwert": 84.83,
+        "gewinn_verlust": -1.47,
+        "composite": 71.2,
         "bucket": "SATELLITE"
       },
       {
@@ -760,11 +778,11 @@
         "ticker": "2B76.DE",
         "stueck": 4,
         "kaufkurs": 18.244,
-        "boersenkurs": 17.482,
+        "boersenkurs": 17.524,
         "investiert": 72.98,
-        "boersenwert": 69.93,
-        "gewinn_verlust": -3.05,
-        "composite": 68.8,
+        "boersenwert": 70.1,
+        "gewinn_verlust": -2.88,
+        "composite": 67.9,
         "bucket": "SATELLITE"
       },
       {
@@ -774,11 +792,11 @@
         "ticker": "XDWT.DE",
         "stueck": 3,
         "kaufkurs": 123.56,
-        "boersenkurs": 120.28,
+        "boersenkurs": 120.82,
         "investiert": 370.68,
-        "boersenwert": 360.84,
-        "gewinn_verlust": -9.84,
-        "composite": 73.5,
+        "boersenwert": 362.46,
+        "gewinn_verlust": -8.22,
+        "composite": 69.1,
         "bucket": "SATELLITE"
       },
       {
@@ -788,11 +806,11 @@
         "ticker": "VVSM.DE",
         "stueck": 2,
         "kaufkurs": 100.24,
-        "boersenkurs": 94.13,
+        "boersenkurs": 94.3,
         "investiert": 200.48,
-        "boersenwert": 188.26,
-        "gewinn_verlust": -12.22,
-        "composite": 66.1,
+        "boersenwert": 188.6,
+        "gewinn_verlust": -11.88,
+        "composite": 63.8,
         "bucket": "SATELLITE"
       },
       {
@@ -802,11 +820,11 @@
         "ticker": "EXH3.DE",
         "stueck": 4,
         "kaufkurs": 66.81,
-        "boersenkurs": 66.48,
+        "boersenkurs": 66.95,
         "investiert": 267.24,
-        "boersenwert": 265.92,
-        "gewinn_verlust": -1.32,
-        "composite": 67.8,
+        "boersenwert": 267.8,
+        "gewinn_verlust": 0.56,
+        "composite": 64.7,
         "bucket": "SATELLITE"
       },
       {
@@ -816,11 +834,11 @@
         "ticker": "XDWU.DE",
         "stueck": 10,
         "kaufkurs": 42.921,
-        "boersenkurs": 42.685,
+        "boersenkurs": 42.795,
         "investiert": 429.21,
-        "boersenwert": 426.85,
-        "gewinn_verlust": -2.36,
-        "composite": 80.7,
+        "boersenwert": 427.95,
+        "gewinn_verlust": -1.26,
+        "composite": 75.7,
         "bucket": "CORE"
       },
       {
@@ -830,11 +848,11 @@
         "ticker": "CBUX.DE",
         "stueck": 10,
         "kaufkurs": 6.229,
-        "boersenkurs": 6.29,
+        "boersenkurs": 6.288,
         "investiert": 62.29,
-        "boersenwert": 62.9,
-        "gewinn_verlust": 0.61,
-        "composite": 73.9,
+        "boersenwert": 62.88,
+        "gewinn_verlust": 0.59,
+        "composite": 74.0,
         "bucket": "SATELLITE"
       },
       {
@@ -844,11 +862,11 @@
         "ticker": "XDEB.DE",
         "stueck": 4,
         "kaufkurs": 44.015,
-        "boersenkurs": 43.89,
+        "boersenkurs": 43.945,
         "investiert": 176.06,
-        "boersenwert": 175.56,
-        "gewinn_verlust": -0.5,
-        "composite": 68.0,
+        "boersenwert": 175.78,
+        "gewinn_verlust": -0.28,
+        "composite": 68.1,
         "bucket": "SATELLITE"
       },
       {
@@ -858,12 +876,68 @@
         "ticker": "LUTI.DE",
         "stueck": 6,
         "kaufkurs": 105.2867,
-        "boersenkurs": 104.98,
+        "boersenkurs": 104.86,
         "investiert": 631.72,
-        "boersenwert": 629.88,
-        "gewinn_verlust": -1.84,
-        "composite": 80.0,
+        "boersenwert": 629.16,
+        "gewinn_verlust": -2.56,
+        "composite": 75.0,
         "bucket": "CORE"
+      },
+      {
+        "sektor": "Luft- und Raumfahrttechnik",
+        "wertpapier": "iShares Edge MSCI World Quality Factor UCITS ETF",
+        "isin": "IE00BP3QZ601",
+        "ticker": "IS3Q.DE",
+        "stueck": 2,
+        "kaufkurs": 77.82,
+        "boersenkurs": 77.82,
+        "investiert": 155.64,
+        "boersenwert": 155.64,
+        "gewinn_verlust": 0.0,
+        "composite": 80.3,
+        "bucket": "CORE"
+      },
+      {
+        "sektor": "Technologie",
+        "wertpapier": "L&G Cyber Security UCITS ETF",
+        "isin": "IE00BYPLS672",
+        "ticker": "USPY.DE",
+        "stueck": 3,
+        "kaufkurs": 39.2,
+        "boersenkurs": 39.2,
+        "investiert": 117.6,
+        "boersenwert": 117.6,
+        "gewinn_verlust": 0.0,
+        "composite": 74.6,
+        "bucket": "SATELLITE"
+      },
+      {
+        "sektor": "Satellitentechnik",
+        "wertpapier": "iShares Global Infrastructure UCITS ETF",
+        "isin": "IE000CK5G8J7",
+        "ticker": "CBUX.DE",
+        "stueck": 22,
+        "kaufkurs": 6.288,
+        "boersenkurs": 6.288,
+        "investiert": 138.34,
+        "boersenwert": 138.34,
+        "gewinn_verlust": 0.0,
+        "composite": 74.0,
+        "bucket": "SATELLITE"
+      },
+      {
+        "sektor": "Technologie",
+        "wertpapier": "iShares Automation & Robotics UCITS ETF",
+        "isin": "IE00BYZK4552",
+        "ticker": "2B76.DE",
+        "stueck": 6,
+        "kaufkurs": 17.524,
+        "boersenkurs": 17.524,
+        "investiert": 105.14,
+        "boersenwert": 105.14,
+        "gewinn_verlust": 0.0,
+        "composite": 67.9,
+        "bucket": "SATELLITE"
       }
     ],
     "transaktionshistorie": [
@@ -1481,6 +1555,81 @@
         "gesamt": 212.52,
         "notiz": "Aufstockung (ETF-Konsolidierung 2026-07-16)",
         "begruendung": "ETF-Konsolidierung: Kapital aus BEOBACHTEN/Duplikat-Abbau reinvestiert (Composite=80.0)"
+      },
+      {
+        "datum": "2026-07-17",
+        "typ": "Verkauf",
+        "sektor": "Energie",
+        "isin": "IE00B1XNHC34",
+        "wertpapier": "iShares Global Clean Energy Transition UCITS ETF",
+        "stueck": 4,
+        "kurs": 9.38,
+        "gebuehr": 0.0,
+        "steuern": 0.0,
+        "gewinn_verlust": -1.03,
+        "gesamt": 37.52,
+        "notiz": "Rebalancing (Kapitalbeschaffung für Neukäufe)",
+        "begruendung": "Rebalancing | Composite=59.9 (BEOBACHTEN) | Momentum=66.5 Risiko=64.4 Sentiment=30 Struktur=72.5"
+      },
+      {
+        "datum": "2026-07-17",
+        "typ": "Kauf",
+        "sektor": "Luft- und Raumfahrttechnik",
+        "isin": "IE00BP3QZ601",
+        "wertpapier": "iShares Edge MSCI World Quality Factor UCITS ETF",
+        "stueck": 2,
+        "kurs": 77.82,
+        "gebuehr": 0.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 155.64,
+        "notiz": "Neukauf (ETF-Sleeve)",
+        "begruendung": "Composite=80.3 (CORE) | Momentum=86.0 Risiko=87.0 Sentiment=50.0 Struktur=92.5"
+      },
+      {
+        "datum": "2026-07-17",
+        "typ": "Kauf",
+        "sektor": "Technologie",
+        "isin": "IE00BYPLS672",
+        "wertpapier": "L&G Cyber Security UCITS ETF",
+        "stueck": 3,
+        "kurs": 39.2,
+        "gebuehr": 0.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 117.6,
+        "notiz": "Neukauf (ETF-Sleeve)",
+        "begruendung": "Composite=74.6 (SATELLITE) | Momentum=86.5 Risiko=63.2 Sentiment=80 Struktur=62.5"
+      },
+      {
+        "datum": "2026-07-17",
+        "typ": "Kauf",
+        "sektor": "Satellitentechnik",
+        "isin": "IE000CK5G8J7",
+        "wertpapier": "iShares Global Infrastructure UCITS ETF",
+        "stueck": 22,
+        "kurs": 6.288,
+        "gebuehr": 0.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 138.34,
+        "notiz": "Neukauf (ETF-Sleeve)",
+        "begruendung": "Composite=74.0 (SATELLITE) | Momentum=82.7 Risiko=88.3 Sentiment=70 Struktur=45.0"
+      },
+      {
+        "datum": "2026-07-17",
+        "typ": "Kauf",
+        "sektor": "Technologie",
+        "isin": "IE00BYZK4552",
+        "wertpapier": "iShares Automation & Robotics UCITS ETF",
+        "stueck": 6,
+        "kurs": 17.524,
+        "gebuehr": 0.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 105.14,
+        "notiz": "Neukauf (ETF-Sleeve)",
+        "begruendung": "Composite=67.9 (SATELLITE) | Momentum=68.6 Risiko=53.7 Sentiment=70 Struktur=82.5"
       }
     ]
   }
