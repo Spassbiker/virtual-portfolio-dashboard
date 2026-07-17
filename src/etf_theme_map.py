@@ -24,8 +24,8 @@ ETF_THEMES = {
     # --- Typ A: Themen-ETFs -------------------------------------------------
     "IE00B1XNHC34": {"typ": "A", "ticker": "IQQH.DE", "thema": "clean energy"},   # iShares Global Clean Energy Transition
     "IE000NDWFGA5": {"typ": "A", "ticker": "URNU.DE", "thema": "uranium"},        # Global X Uranium
-    "IE0002Y8CX98": {"typ": "A", "ticker": "WDEF.MI", "thema": "defense"},        # WisdomTree Europe Defence
-    "IE000YYE6WK5": {"typ": "A", "ticker": "DFEN.DE", "thema": "defense"},        # VanEck Defense
+    "IE0002Y8CX98": {"typ": "A", "ticker": "WDEF.MI", "thema": "Rheinmetall"},   # WisdomTree Europe Defence -> Europa-Proxy: "defense" liefert US-News (Kratos), "Rheinmetall" liefert Europa-/NATO-Defense-News. Multi-Wort ("European defense") scheitert an Yahoos Suche.
+    "IE000YYE6WK5": {"typ": "A", "ticker": "DFEN.DE", "thema": "defense"},        # VanEck Defense (global/US-lastig, "defense" passt hier)
     "IE000OJ5TQP4": {"typ": "A", "ticker": "ASWC.DE", "thema": "drone"},          # HANetf Future of Defence (Next-Gen/Drohnen)
     "IE000YU9K6K2": {"typ": "A", "ticker": "JEDI.DE", "thema": "space"},          # VanEck Space Innovators
     "IE00BYPLS672": {"typ": "A", "ticker": "USPY.DE", "thema": "cybersecurity"},  # L&G Cyber Security

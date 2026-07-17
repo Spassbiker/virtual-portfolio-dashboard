@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17 09:00",
+  "generated_at": "2026-07-17 19:40",
   "scores": {
     "IE00B1XNHC34": {
       "typ": "A",
@@ -13,23 +13,23 @@
     },
     "IE0002Y8CX98": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Kratos eröffnet neue Fertigung, erhält $400M Verteidigungsauftrag und profitiert von der US-Verteidigungsindustrie-Expansion."
+      "sentiment_score": 1,
+      "begruendung": "NATO-Staaten pledgen über $50Mrd und Lockheed/Rheinmetall kooperieren bei ATACMS-Fertigung, gedämpft durch Berliner Protestaktionen und als teuer geltende Rheinmetall-Bewertung."
     },
     "IE000YYE6WK5": {
       "typ": "A",
       "sentiment_score": 2,
-      "begruendung": "Gleiche starke Verteidigungs-News wie beim anderen Defense-ETF: Kratos-Werk, $400M-Auftrag, Branchenexpansion."
+      "begruendung": "Kratos eröffnet neue Fertigung, erhält $400M Verteidigungsauftrag und profitiert von der US-Verteidigungsindustrie-Expansion."
     },
     "IE000OJ5TQP4": {
       "typ": "A",
-      "sentiment_score": 0,
-      "begruendung": "\"Buy the dip\"-Artikel deutet auf jüngste Schwäche hin, der Rest der Schlagzeilen ist Wochen alt und liefert kein klares aktuelles Signal."
+      "sentiment_score": 1,
+      "begruendung": "Neuer Zacks-Artikel rät aktiv zum Einstieg bei Drohnen-ETFs, während ältere \"Buy the Dip\"-Meldung auf zuvor kurzfristige Schwäche hindeutet."
     },
     "IE000YU9K6K2": {
       "typ": "A",
       "sentiment_score": -3,
-      "begruendung": "Weltraumaktien (ASTS, RKLB, SPCX) erleiden im Juli über 30% Verlust, ASTS fällt auf Jahrestief und Goldman warnt vor 5-facher Volatilität."
+      "begruendung": "SpaceX rutscht nach abgebrochenem Starship-Start unter den IPO-Preis auf ein neues Tief, begleitet von einem breiten Nasdaq/AI-Ausverkauf."
     },
     "IE00BYPLS672": {
       "typ": "A",
@@ -54,22 +54,22 @@
     "IE00BM67HN09": {
       "typ": "B",
       "sentiment_score": 1,
-      "begruendung": "Milliardeninvestition in Bloom-Energy-Brennstoffzellen für KI-Infrastruktur (IDF/Oaktree) überwiegt vereinzelte negative Kursreaktionen."
+      "begruendung": "Bloom Energy erhält weiter Zuspruch (IDF/Oaktree-Investition, positive Analystenstimmen) trotz \"brutalem\" Markt-Echo auf den AI-Deal."
     },
     "IE00BM67HS53": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "MP Materials profitiert vom Rare-Earth-Push und ASML/Applied Materials werden durch starke KI-Nachfrage nach oben gesehen."
+      "sentiment_score": -2,
+      "begruendung": "Globaler Chip-Ausverkauf (AMD, Intel, Nvidia fallen) reißt auch Materials-nahe Zulieferer wie Applied Materials und ASML mit nach unten."
     },
     "IE00B4LN9N13": {
       "typ": "B",
       "sentiment_score": -2,
-      "begruendung": "Breiter Chip-Ausverkauf drückt Dow-Futures und mehrere Einzelwerte fallen stärker als der Gesamtmarkt."
+      "begruendung": "US-Indizes fallen im Handelsverlauf deutlich, da Halbleiter-Ausverkauf und Nahost-Eskalation Wachstumssektoren belasten."
     },
     "IE00BM67HV82": {
       "typ": "B",
       "sentiment_score": -2,
-      "begruendung": "Gleiche Nachrichtenlage wie beim anderen Industrials-ETF: breiter Chip-Ausverkauf und underperformende Einzelwerte."
+      "begruendung": "Gleiche Nachrichtenlage wie beim anderen Industrials-ETF: Halbleiter-Ausverkauf und Nahost-Eskalation drücken die Indizes."
     },
     "IE000CK5G8J7": {
       "typ": "B",
@@ -78,8 +78,8 @@
     },
     "IE00BM67HT60": {
       "typ": "B",
-      "sentiment_score": -1,
-      "begruendung": "Chip-Sektor-Ausverkauf belastet den Markt insgesamt, während Nvidia- und Micron-Meldungen einzelne Lichtblicke liefern."
+      "sentiment_score": 0,
+      "begruendung": "Trotz Chip-Sell-Off-Umfeld raten mehrere Artikel zum Einstieg bei Micron und Speicherchip-Werten dank anhaltender KI-Nachfrage, was die negative Marktstimmung ausgleicht."
     },
     "DE000A0H08H3": {
       "typ": "B",

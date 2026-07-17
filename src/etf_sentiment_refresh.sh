@@ -2,9 +2,13 @@
 # KI-ETF-Sentiment-Vorlauf (08:52, Mo-Fr) — läuft als Command-Cron auf dem Gateway-Host.
 #
 # Analog zu sentiment_refresh.sh (Aktien), aber themen-/sektorbasiert für den
-# ETF-Sleeve (siehe docs/ETF_SENTIMENT_STAGE.md). Rein informativ: der
-# ETF-Sleeve ist Buy-and-Hold, kein automatisierter Kauf/Verkauf auf Basis
-# dieses Scores. build_dashboard.py liest die Datei danach nur zur Anzeige.
+# ETF-Sleeve (siehe docs/ETF_SENTIMENT_STAGE.md). Das Ergebnis fliesst mit 20%
+# in den Composite-Score von etf_ranking.py ein (Momentum 35 / Risiko 25 /
+# Sentiment 20 / Struktur 20) und beeinflusst damit ueber den Bucket
+# (CORE/SATELLITE/BEOBACHTEN/MEIDEN) die Kauf-/Verkaufsentscheidungen in
+# update_etf_depot.py. Es ist also KEIN reiner Anzeigewert. Sonderregel:
+# Drawdown < -40% bei negativem Sentiment deckelt den Bucket auf SATELLITE.
+# build_dashboard.py liest die Datei zusaetzlich zur Anzeige.
 set -u
 cd /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard || exit 1
 

@@ -1,9 +1,10 @@
 import datetime
+import json
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from paths import CHART, FUNDA, DEPOT, SENT, ETF_SENT, ETF_RANKING, INDEX_HTML
+from paths import CHART, FUNDA, DEPOT, SENT, ETF_SENT, ETF_RANKING, ETF_KATALOG, INDEX_HTML
 
 
 def _read_text(path):
@@ -12,6 +13,23 @@ def _read_text(path):
 
 
 chart_data = _read_text(CHART)
+
+# ETF-Katalog als ISIN->Name-Map: dient im Dashboard (a) zur sauberen Trennung
+# von Aktien/ETFs in der Chartanalyse und (b) als Namensquelle im KI-Sentiment,
+# damit Katalog-ETFs mit Sentiment-Score, die (noch) nicht im Depot bzw. in der
+# Chart-/Fundamentalliste stehen, nicht als "?" erscheinen. Fehlt der Katalog,
+# greift im JS die namensbasierte Fallback-Erkennung auf "ETF"/"UCITS".
+_etf_catalog = {}
+if os.path.exists(ETF_KATALOG):
+    try:
+        _kat = json.loads(_read_text(ETF_KATALOG))
+        for _werte in (_kat.get("sektoren", {}) or {}).values():
+            for _w in _werte:
+                if _w.get("isin"):
+                    _etf_catalog.setdefault(_w["isin"], _w.get("wertpapier") or _w["isin"])
+    except (ValueError, KeyError, TypeError):
+        _etf_catalog = {}
+etf_catalog_data = json.dumps(_etf_catalog, ensure_ascii=False)
 funda_data = _read_text(FUNDA)
 depot_data = _read_text(DEPOT)
 
@@ -257,6 +275,9 @@ html_template = """<!DOCTYPE html>
         const sentimentScores = (sentimentData && sentimentData.scores) ? sentimentData.scores : {};
         const etfSentimentData = ETF_SENTIMENT_DATA_PLACEHOLDER;
         const etfRankingData = ETF_RANKING_DATA_PLACEHOLDER;
+        const etfCatalog = ETF_CATALOG_PLACEHOLDER;
+        const etfIsinSet = new Set(Object.keys(etfCatalog));
+        const isEtf = (w) => etfIsinSet.has(w.isin) || /\bETFs?\b|UCITS/i.test(w.wertpapier || '');
         const etfSentimentScores = (etfSentimentData && etfSentimentData.scores) ? etfSentimentData.scores : {};
 
         function getSentiment(isin) {
@@ -925,36 +946,8 @@ html_template = """<!DOCTYPE html>
             const etfGen = (etfSentimentData && etfSentimentData.generated_at) ? etfSentimentData.generated_at : null;
             if (etfGen) html += `<p style="color:var(--text-muted); font-size:0.85em;">KI-Sentiment Stand: ${etfGen} · (A) Themen-ETF, (B) Sektor-ETF · rein informativ, kein Auto-Trading im ETF-Sleeve</p>`;
 
-            const etfTx = (e.transaktionshistorie || []).slice().sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
-            if (etfTx.length > 0) {
-                html += `<h3 style="margin-top:30px;">Transaktionshistorie (ETF-Sleeve)</h3><table>
-                    <tr>
-                        <th>Datum</th>
-                        <th>Typ</th>
-                        <th>Sektor</th>
-                        <th>ETF</th>
-                        <th>Stück</th>
-                        <th>Kurs</th>
-                        <th>Gebühr</th>
-                        <th>Gesamt</th>
-                        <th>Notiz</th>
-                    </tr>`;
-                etfTx.forEach(t => {
-                    let typColor = t.typ === 'Kauf' ? 'color: var(--good-text);' : 'color: var(--critical-text);';
-                    html += `<tr>
-                        <td>${t.datum || ''}</td>
-                        <td style="${typColor} font-weight:bold;">${t.typ || ''}</td>
-                        <td>${t.sektor || ''}</td>
-                        <td><strong>${t.wertpapier}</strong><br><small style="color:var(--text-muted)">${t.isin || ''}</small></td>
-                        <td>${t.stueck}</td>
-                        <td>${formatEUR(t.kurs)}</td>
-                        <td>${formatEUR(t.gebuehr)}</td>
-                        <td>${formatEUR(t.gesamt)}</td>
-                        <td style="font-size:0.9em;">${t.notiz || ''}</td>
-                    </tr>`;
-                });
-                html += `</table>`;
-            }
+            // Transaktionshistorie bewusst nicht hier gerendert: ETF-Trades stehen
+            // (mit Depot-Label) im dedizierten Tab "Transaktionshistorie".
             document.getElementById('etfsleeve').innerHTML = html;
         })();
 
@@ -1130,6 +1123,12 @@ html_template = """<!DOCTYPE html>
             (depotData.etf_depot && depotData.etf_depot.positionen || []).forEach(p => {
                 if (p.isin && !nameByIsin[p.isin]) nameByIsin[p.isin] = p.wertpapier || p.isin;
             });
+            // ETF-Katalog als Fallback-Namensquelle: deckt Katalog-ETFs mit
+            // Sentiment-Score ab, die (noch) nicht im Depot bzw. in der Chart-/
+            // Fundamentalliste stehen (sonst "?" in der Sentiment-Tabelle).
+            Object.keys(etfCatalog).forEach(isin => {
+                if (!nameByIsin[isin]) nameByIsin[isin] = etfCatalog[isin];
+            });
             const depotIsinSet = new Set((depotData.depot.positionen || []).map(p => p.isin));
             (depotData.etf_depot && depotData.etf_depot.positionen || []).forEach(p => {
                 if (p.isin) depotIsinSet.add(p.isin);
@@ -1191,11 +1190,8 @@ html_template = """<!DOCTYPE html>
         // ==========================================
         // CHARTANALYSE
         // ==========================================
-        let chartHtml = `<h2>Chartanalyse (Technisch)</h2>`;
-        if (chartData.sektoren) {
-            Object.keys(chartData.sektoren).forEach(sektor => { const werte = chartData.sektoren[sektor];
-                chartHtml += `<h3 style="background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 30px;">${sektor}</h3>`;
-                chartHtml += `<table>
+        const renderChartTable = (werte) => {
+            let t = `<table>
                     <tr>
                         <th>Wertpapier</th>
                         <th>Aktueller Kurs</th>
@@ -1209,8 +1205,8 @@ html_template = """<!DOCTYPE html>
                         <th>Widerstand</th>
                         <th>Begründung</th>
                     </tr>`;
-                werte.forEach(w => {
-                    chartHtml += `<tr>
+            werte.forEach(w => {
+                t += `<tr>
                         <td><strong>${w.wertpapier}</strong><br><small style="color:var(--text-muted)">${w.isin || ''}</small></td>
                         <td>${formatEUR(w.aktueller_kurs)}</td>
                         <td>${w.trend || '-'}</td>
@@ -1223,11 +1219,37 @@ html_template = """<!DOCTYPE html>
                         <td style="color: red;">${formatEUR(w.widerstand)}</td>
                         <td style="font-size:0.9em;">${w.begruendung}</td>
                     </tr>`;
-                });
-                chartHtml += `</table>`;
             });
-        }
+            return t + `</table>`;
+        };
+        const buildChartGroup = (filter) => {
+            let inner = '';
+            Object.keys(chartData.sektoren || {}).forEach(sektor => {
+                const werte = chartData.sektoren[sektor].filter(filter);
+                if (!werte.length) return;
+                inner += `<h3 style="background-color: #ecf0f1; padding: 10px 15px; border-left: 5px solid #34495e; margin-top: 30px;">${sektor}</h3>`;
+                inner += renderChartTable(werte);
+            });
+            return inner;
+        };
+        const aktienInner = buildChartGroup(w => !isEtf(w));
+        const etfInner = buildChartGroup(w => isEtf(w));
+        let chartHtml = `<h2 style="margin-top:0;">Chartanalyse <small style="font-size:0.5em; color:var(--text-muted);">(Technisch)</small></h2>`;
+        chartHtml += `<div class="sub-tab-buttons" style="margin-top:15px;">
+                <button class="sub-tab-button active" data-chartview="aktien">📈 Aktien</button>
+                <button class="sub-tab-button" data-chartview="etf">📊 ETFs</button>
+            </div>`;
+        chartHtml += `<div id="chartview-aktien">${aktienInner || '<p style="color:var(--text-muted);">Keine Aktien-Daten vorhanden.</p>'}</div>`;
+        chartHtml += `<div id="chartview-etf" style="display:none;">${etfInner || '<p style="color:var(--text-muted);">Keine ETF-Daten vorhanden.</p>'}</div>`;
         document.getElementById('chart').innerHTML = chartHtml;
+        document.querySelectorAll('#chart [data-chartview]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const view = btn.getAttribute('data-chartview');
+                document.querySelectorAll('#chart [data-chartview]').forEach(b => b.classList.toggle('active', b === btn));
+                document.getElementById('chartview-aktien').style.display = view === 'aktien' ? '' : 'none';
+                document.getElementById('chartview-etf').style.display = view === 'etf' ? '' : 'none';
+            });
+        });
 
         // ==========================================
         // FUNDAMENTALANALYSE (with peer comparison)
@@ -1563,6 +1585,7 @@ html_output = html_output.replace("FUNDA_DATA_PLACEHOLDER", funda_data)
 html_output = html_output.replace("DEPOT_DATA_PLACEHOLDER", depot_data)
 html_output = html_output.replace("ETF_SENTIMENT_DATA_PLACEHOLDER", etf_sentiment_data)
 html_output = html_output.replace("ETF_RANKING_DATA_PLACEHOLDER", etf_ranking_data)
+html_output = html_output.replace("ETF_CATALOG_PLACEHOLDER", etf_catalog_data)
 html_output = html_output.replace("SENTIMENT_DATA_PLACEHOLDER", sentiment_data)
 html_output = html_output.replace("BUILD_DATE_PLACEHOLDER", build_date)
 
