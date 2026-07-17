@@ -5,6 +5,7 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from paths import DEPOT as depot_path, CHART, FUNDA, SENT as sentiment_path, TRADES as recommend_path, load_json, save_json
+from consistency import data_consistency
 
 # Empfehlungs-Modus: berechnet Score/Sentiment/Veto und die Trades, die das
 # regelbasierte System vorschlagen WÜRDE, schreibt sie nach
@@ -219,6 +220,16 @@ def total_score(isin):
     fs, fd = compute_funda_score(isin)
     ss, _, _ = get_sentiment(isin)
     sd = [f"KI-Sentiment{'+' if ss >= 0 else ''}{ss}"] if ss != 0 else []
+
+    # Sanity-Check gegen halluzinierte/veraltete Indikatoren — dieselbe Logik
+    # wie im Dashboard (dataConsistency()). Bei Inkonsistenz wird der
+    # Chart-Score wie in der Anzeige halbiert, statt die Warnung zu ignorieren.
+    warnings = data_consistency(get_chart_item(isin), get_funda_item(isin))
+    if warnings:
+        cs_adj = cs * 0.5
+        cd = cd + [f"⚠️Inkonsistent→Chart×0.5({cs}→{cs_adj:g})"]
+        cs = cs_adj
+
     return cs + fs + ss, cs, cd, fs, fd, ss, sd
 
 def score_reason(isin):

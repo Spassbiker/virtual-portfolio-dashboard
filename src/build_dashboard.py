@@ -454,6 +454,7 @@ html_template = """<!DOCTYPE html>
             const sma200 = numOrNull(c && c.sma_200);
             const support = numOrNull(c && c.unterstuetzung);
             const resistance = numOrNull(c && c.widerstand);
+            const trend = (c && c.trend || '').toLowerCase();
 
             // 1. SMA sanity: price should be within +/- 30% of SMAs.
             if (price !== null && sma50 !== null && sma50 > 0) {
@@ -461,8 +462,14 @@ html_template = """<!DOCTYPE html>
                 if (dev > 0.30) warnings.push(`SMA50 ${sma50} weit weg von Kurs ${price} (${Math.round(dev*100)}% Abweichung)`);
             }
             if (price !== null && sma200 !== null && sma200 > 0) {
+                // Bei klar durch SMA50 bestätigtem Aufwärtstrend (Kurs > SMA50 > SMA200)
+                // ist eine große SMA200-Abweichung ein echter, starker Trend nach einer
+                // Rally, keine Datenanomalie -> Schwelle lockern.
+                const alignedUptrend = trend.includes('aufw') && sma50 !== null && sma50 > 0
+                    && price > sma50 && sma50 > sma200;
+                const threshold = alignedUptrend ? 0.60 : 0.30;
                 const dev = Math.abs(price - sma200) / sma200;
-                if (dev > 0.30) warnings.push(`SMA200 ${sma200} weit weg von Kurs ${price} (${Math.round(dev*100)}% Abweichung)`);
+                if (dev > threshold) warnings.push(`SMA200 ${sma200} weit weg von Kurs ${price} (${Math.round(dev*100)}% Abweichung)`);
             }
             // 2. Support/Resistance sanity: price should be between (loose bracket allowed).
             if (price !== null && support !== null && support > 0 && price < support * 0.5) {
@@ -472,7 +479,6 @@ html_template = """<!DOCTYPE html>
                 warnings.push(`Kurs ${price} weit über Widerstand ${resistance}`);
             }
             // 3. Trend/Kurs-Konsistenz: Aufwärtstrend behauptet, aber Kurs unter SMA_50.
-            const trend = (c && c.trend || '').toLowerCase();
             if (trend.includes('aufw') && price !== null && sma50 !== null && sma50 > 0 && price < sma50 * 0.85) {
                 warnings.push(`"Aufwärtstrend" behauptet, aber Kurs deutlich unter SMA50`);
             }
@@ -480,12 +486,25 @@ html_template = """<!DOCTYPE html>
                 warnings.push(`"Abwärtstrend" behauptet, aber Kurs deutlich über SMA50`);
             }
             // 4. Text-Sentiment vs. Signal-Konflikt: Begründung negativ, aber Signal Kaufen.
+            // Negative Wörter zählen nur, wenn sie nicht im selben Satz relativiert
+            // werden (z.B. "nach schwachem Vorjahr, jetzt Erholung" ist positiv gemeint).
             const bruendungF = ((f && f.begruendung) || '').toLowerCase();
             const bruendungC = ((c && c.begruendung) || '').toLowerCase();
+            // "kauf" matcht als Teilstring auch "Verkaufen" -> "verkauf" explizit ausschließen.
             const signal = ((c && (c.signal || c.empfehlung)) || (f && f.empfehlung) || '').toLowerCase();
+            const isBuySignal = signal.includes('kauf') && !signal.includes('verkauf');
             const negPatterns = ['abwärts', 'abwaerts', 'sinkflug', 'einbruch', 'keine wende', 'keine bodenbildung', 'verlust', 'abschwung', 'bearish', 'schwach'];
-            const hasNeg = negPatterns.some(p => bruendungF.includes(p) || bruendungC.includes(p));
-            if (hasNeg && signal.includes('kauf')) {
+            const positiveContext = ['erholt', 'erholung', 'verbessert', 'wende', 'aufschwung', 'attraktiv', 'unterbewertet'];
+            const hasRealNeg = [bruendungF, bruendungC].some(text => {
+                if (!text) return false;
+                return text.split(/[.;]/).some(sentence => {
+                    if (!negPatterns.some(p => sentence.includes(p))) return false;
+                    if (sentence.includes('schwach') && sentence.includes('vorjahr')) return false;
+                    if (positiveContext.some(p => sentence.includes(p))) return false;
+                    return true;
+                });
+            });
+            if (hasRealNeg && isBuySignal) {
                 warnings.push(`Begründung klingt negativ, aber Signal "Kaufen"`);
             }
             return warnings;
