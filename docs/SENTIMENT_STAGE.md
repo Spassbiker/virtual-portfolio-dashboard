@@ -36,24 +36,41 @@ Ausführung mit korrekter Gebühren-/Steuerrechnung).
     "<ISIN>": {
       "sentiment_score": 2,        // Ganzzahl -3..+3, wird in update_depot geklemmt
       "veto": false,               // true blockiert NUR Käufe, erzeugt nie welche
+      "confidence": 0.8,           // 0.0-1.0, wie belastbar das Urteil ist (siehe unten)
+      "event_kategorie": "Guidance", // Zahlen | Guidance | M&A | Analyst | Sonstiges | Keine
       "begruendung": "Kurztext, warum (1 Satz, konkret)."
     }
   }
 }
 ```
 
+`confidence` und `event_kategorie` sind **optional mit Default** (0.7 bzw.
+"Sonstiges") — fehlen sie in einer älteren `sentiment_scores.json`, rechnet
+`update_depot.py` unverändert weiter. Kein Bruch bei älteren Dateien.
+
 ### Wirkung im Scoring
-- **Stufe 1:** `sentiment_score` wird als dritter Summand zu `chart + funda`
-  addiert. `total_score = chart_score + funda_score + sentiment_score`.
+- **Stufe 1:** `sentiment_score × confidence` wird als dritter Summand zu
+  `chart + funda` addiert. `total_score = chart_score + funda_score +
+  round(sentiment_score * confidence)`. Ein schwach belegtes Urteil (wenige/
+  alte Schlagzeilen) wirkt damit automatisch schwächer als ein gut belegtes.
 - **Stufe 2:** `veto: true` entfernt die ISIN aus den Kaufkandidaten. Ein Veto
   kann eine Position **nicht** erzwingen und keinen Verkauf auslösen — es bremst
   nur Neukäufe. Bestehende Positionen bleiben unberührt (Verkauf entscheidet
   weiter der harte Score / das Verkaufen-Signal).
+- **Review-Flag:** `sentiment_score <= -2` **auf einer gehaltenen Position**
+  setzt ein `review_flag` im Dashboard (kein Zwangsverkauf, nur Sichtbarkeit —
+  die Verkaufsentscheidung bleibt beim harten Score / Agenten).
+- **Event-Kategorie:** rein informativ, fließt nicht in die Mathematik ein.
+  Macht das Sentiment im Dashboard filterbar/nachvollziehbar (z.B. "warum war
+  das ein -3?" → "Zahlen" statt Rätselraten).
 
 ## Prompt für den Agent-Schritt (Schritt 5)
 
 > Lies `data/news_raw.json`. Für **jede** ISIN darin: bewerte die Schlagzeilen
 > als Nachrichtenstimmung der letzten Tage für genau dieses Unternehmen.
+> Jede Schlagzeile hat ein Feld `quelle` — `adhoc` sind Pflichtmitteilungen
+> (DGAP/EQS, via ISIN-Zuordnung garantiert relevant), `google_news`/`yahoo`
+> sind Presseartikel (Relevanz bereits vorgefiltert, aber nicht garantiert).
 >
 > Vergib einen `sentiment_score` von **−3 bis +3**:
 > - **+3/+2**: klar positive, kursrelevante News (starke Zahlen, Großauftrag,
@@ -66,9 +83,24 @@ Ausführung mit korrekter Gebühren-/Steuerrechnung).
 > jetzt zu vermeiden (z. B. laufende Gewinnwarnung, Übernahme in Schwebe,
 > Bilanzskandal). Im Zweifel `false`.
 >
+> Vergib `confidence` (0.0–1.0): wie belastbar ist dieses Urteil?
+> - **0.9–1.0**: mind. eine Ad-hoc-Meldung (`quelle: adhoc`) oder mehrere
+>   übereinstimmende, frische (≤2 Tage) Presseartikel.
+> - **0.5–0.7**: ein bis zwei plausible, aber nicht ganz frische/eindeutige
+>   Artikel.
+> - **0.2–0.4**: nur vage/generische Erwähnungen, wenig kursrelevanter Gehalt.
+> - **0.0–0.1**: keine verwertbaren Schlagzeilen (dann `sentiment_score: 0`).
+>
+> Setze `event_kategorie` auf genau eine von: `Zahlen` (Quartals-/Jahreszahlen),
+> `Guidance` (Prognoseänderung), `M&A` (Übernahme/Fusion/Verkauf), `Analyst`
+> (Kursziel-/Rating-Änderung), `Sonstiges` (anderes kursrelevantes Ereignis),
+> `Keine` (keine relevanten News). Bei mehreren Themen: die kursrelevanteste
+> Kategorie wählen.
+>
 > Ignoriere Schlagzeilen, die offensichtlich ein anderes Unternehmen betreffen
-> (Yahoo-Suche liefert gelegentlich generische Marktartikel — diese neutral mit
-> 0 bewerten). Erfinde keine Fakten; bewerte nur, was in den Schlagzeilen steht.
+> (die Presse-Suche liefert gelegentlich generische Marktartikel — diese
+> neutral mit 0 bewerten). Erfinde keine Fakten; bewerte nur, was in den
+> Schlagzeilen steht.
 >
 > Schreibe das Ergebnis exakt im Vertragsformat nach
 > `data/sentiment_scores.json`. Jede `begruendung` in einem knappen Satz.

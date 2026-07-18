@@ -283,17 +283,24 @@ html_template = """<!DOCTYPE html>
         function getSentiment(isin) {
             return (isin && sentimentScores[isin]) ? sentimentScores[isin] : null;
         }
-        // Kompaktes Sentiment-Badge (Pfeil + Wert) + optionales Veto, mit Begründung als Tooltip.
+        // Kompaktes Sentiment-Badge (Pfeil + Wert) + optionales Veto, mit Begründung
+        // (inkl. Confidence/Kategorie, falls vorhanden) als Tooltip. Niedrige
+        // Confidence dimmt das Badge, damit schwach belegte Urteile auf einen
+        // Blick weniger Gewicht suggerieren als gut belegte.
         function sentimentBadge(isin) {
             const s = getSentiment(isin);
             if (!s) return '<span style="color:var(--text-muted);">–</span>';
             const val = (typeof s.sentiment_score === 'number') ? s.sentiment_score : 0;
-            const tip = (s.begruendung || '').replace(/"/g, '&quot;');
+            const conf = (typeof s.confidence === 'number') ? s.confidence : 0.7;
+            const kategorie = s.event_kategorie || '';
+            let tip = (s.begruendung || '').replace(/"/g, '&quot;');
+            if (kategorie) tip += ` [${kategorie}, Confidence ${Math.round(conf * 100)}%]`;
             let color = 'var(--text-muted)', arrow = '→';
             if (val > 0) { color = 'var(--good-text)'; arrow = '▲'; }
             else if (val < 0) { color = 'var(--critical-text)'; arrow = '▼'; }
             const sign = val > 0 ? '+' : '';
-            let html = `<span title="${tip}" style="font-weight:bold;color:${color};">${arrow} ${sign}${val}</span>`;
+            const opacity = Math.max(0.45, conf);
+            let html = `<span title="${tip}" style="font-weight:bold;color:${color};opacity:${opacity};">${arrow} ${sign}${val}</span>`;
             if (s.veto) html += ` <span class="badge sell" title="${tip}" style="min-width:auto;">🚫 Veto</span>`;
             return html;
         }
@@ -881,8 +888,13 @@ html_template = """<!DOCTYPE html>
             d.positionen.forEach(p => {
                 let gvColor = p.gewinn_verlust >= 0 ? 'var(--good-text)' : 'var(--critical-text)';
                 let gvBg = p.gewinn_verlust >= 0 ? 'var(--good-bg)' : 'var(--critical-bg)';
+                // Review-Flag: starkes Negativ-Sentiment auf Bestand (kein Zwangsverkauf,
+                // nur Sichtbarkeit — siehe docs/SENTIMENT_STAGE.md).
+                const reviewMark = p.review_flag
+                    ? ` <span title="${(p.review_grund || '').replace(/"/g,'&quot;')}" style="color:var(--critical-text); font-size:0.85em; cursor:help;">⚠️ Review</span>`
+                    : '';
                 depotHtml += `<tr>
-                    <td><strong>${p.wertpapier}</strong></td>
+                    <td><strong>${p.wertpapier}</strong>${reviewMark}</td>
                     <td style="color:var(--text-muted);">${p.isin || ''}</td>
                     <td>${p.stueck}</td>
                     <td>${formatEUR(p.kaufkurs)}</td>
@@ -1166,6 +1178,8 @@ html_template = """<!DOCTYPE html>
                     <th>Typ</th>
                     <th>Im Depot?</th>
                     <th>Sentiment</th>
+                    <th>Kategorie</th>
+                    <th>Confidence</th>
                     <th>Begründung</th>
                 </tr>`;
             isins.forEach(isin => {
@@ -1174,12 +1188,18 @@ html_template = """<!DOCTYPE html>
                 const name = nameByIsin[isin] || '<span style="color:var(--text-muted)">?</span>';
                 const inDepot = depotIsinSet.has(isin)
                     ? '<span class="badge buy" style="min-width:auto;">✓</span>' : '';
+                const kategorie = s.event_kategorie
+                    ? `<span style="color:var(--text-muted); font-size:0.85em;">${s.event_kategorie}</span>` : '';
+                const conf = (typeof s.confidence === 'number')
+                    ? `<span style="color:var(--text-muted); font-size:0.85em;">${Math.round(s.confidence * 100)}%</span>` : '';
                 html += `<tr>
                     <td><strong>${name}</strong></td>
                     <td style="color:var(--text-muted);">${isin}</td>
                     <td style="color:var(--text-muted);">${isEtf ? 'ETF' : 'Aktie'}</td>
                     <td>${inDepot}</td>
                     <td>${isEtf ? etfSentimentBadge(isin) : sentimentBadge(isin)}</td>
+                    <td>${kategorie}</td>
+                    <td>${conf}</td>
                     <td style="font-size:0.9em;">${(s.begruendung || '').replace(/</g,'&lt;')}</td>
                 </tr>`;
             });

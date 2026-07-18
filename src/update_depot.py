@@ -25,25 +25,37 @@ funda_data = load_json(FUNDA, {})
 
 # KI-Sentiment (Stufe 1 + 2), vom Portfoliomanager-Agent erzeugt.
 # Optional: fehlt die Datei, läuft alles rein deterministisch weiter.
-# Vertrag:
+# Vertrag (siehe docs/SENTIMENT_STAGE.md):
 #   { "generated_at": "...",
-#     "scores": { "<ISIN>": {"sentiment_score": int(-3..3),
-#                            "veto": bool, "begruendung": str} } }
+#     "scores": { "<ISIN>": {"sentiment_score": int(-3..3), "veto": bool,
+#                            "confidence": float(0..1), "event_kategorie": str,
+#                            "begruendung": str} } }
+# confidence/event_kategorie sind optional mit Default — ältere Dateien ohne
+# diese Felder rechnen unverändert weiter (Default-Confidence 0.7 = weder
+# gedämpft noch verstärkt, entspricht dem alten Verhalten näherungsweise).
 sentiment_data = load_json(sentiment_path, {"scores": {}})
 
 SENTIMENT_MIN, SENTIMENT_MAX = -3, 3
+DEFAULT_CONFIDENCE = 0.7
+REVIEW_FLAG_THRESHOLD = -2  # rohes Sentiment auf Bestand ab hier -> review_flag
 
 def get_sentiment(isin):
-    """Returns (score, veto, begruendung) — geklemmt und defensiv."""
+    """Returns (score, veto, begruendung, confidence, event_kategorie) — geklemmt und defensiv."""
     entry = sentiment_data.get("scores", {}).get(isin)
     if not entry:
-        return 0, False, ""
+        return 0, False, "", DEFAULT_CONFIDENCE, "Keine"
     try:
         s = int(round(float(entry.get("sentiment_score", 0))))
     except (TypeError, ValueError):
         s = 0
     s = max(SENTIMENT_MIN, min(SENTIMENT_MAX, s))
-    return s, bool(entry.get("veto", False)), entry.get("begruendung", "")
+    try:
+        conf = float(entry.get("confidence", DEFAULT_CONFIDENCE))
+    except (TypeError, ValueError):
+        conf = DEFAULT_CONFIDENCE
+    conf = max(0.0, min(1.0, conf))
+    kategorie = entry.get("event_kategorie") or "Sonstiges"
+    return s, bool(entry.get("veto", False)), entry.get("begruendung", ""), conf, kategorie
 
 # ==========================================
 # SCORING-SYSTEM
@@ -218,8 +230,12 @@ def compute_funda_score(isin):
 def total_score(isin):
     cs, cd = compute_chart_score(isin)
     fs, fd = compute_funda_score(isin)
-    ss, _, _ = get_sentiment(isin)
-    sd = [f"KI-Sentiment{'+' if ss >= 0 else ''}{ss}"] if ss != 0 else []
+    ss, _, _, confidence, _ = get_sentiment(isin)
+    # Confidence dämpft das Gewicht: ein schwach belegtes Urteil (wenige/vage
+    # Schlagzeilen) wirkt schwächer auf den Score als ein gut belegtes.
+    ss_weighted = round(ss * confidence)
+    sd = ([f"KI-Sentiment{'+' if ss >= 0 else ''}{ss}×conf{confidence:.1f}={ss_weighted:+d}"]
+          if ss != 0 else [])
 
     # Sanity-Check gegen halluzinierte/veraltete Indikatoren — dieselbe Logik
     # wie im Dashboard (dataConsistency()). Bei Inkonsistenz wird der
@@ -230,7 +246,7 @@ def total_score(isin):
         cd = cd + [f"⚠️Inkonsistent→Chart×0.5({cs}→{cs_adj:g})"]
         cs = cs_adj
 
-    return cs + fs + ss, cs, cd, fs, fd, ss, sd
+    return cs + fs + ss_weighted, cs, cd, fs, fd, ss, sd
 
 def score_reason(isin):
     ts, cs, cd, fs, fd, ss, sd = total_score(isin)
@@ -238,7 +254,7 @@ def score_reason(isin):
     f_item = get_funda_item(isin)
     c_text = c_item.get("begruendung", "") if c_item else ""
     f_text = f_item.get("begruendung", "") if f_item else ""
-    _, _, s_text = get_sentiment(isin)
+    _, _, s_text, _, _ = get_sentiment(isin)
     reason = (
         f"Score={ts} (Chart={cs}: {', '.join(cd)}; Funda={fs}: {', '.join(fd)}"
     )
@@ -478,7 +494,7 @@ for isin in all_isins:
     if "verkauf" in c_emp or "verkauf" in f_emp:
         continue
     # Stufe 2: KI-Veto blockiert Neukäufe (kann nie welche erzeugen).
-    _, veto, veto_reason = get_sentiment(isin)
+    _, veto, veto_reason, _, _ = get_sentiment(isin)
     if veto:
         summary.append(f"KI-Veto: Kauf von {c_item.get('wertpapier', isin)} ({isin}) blockiert. {veto_reason}")
         continue
@@ -587,6 +603,16 @@ for p in positions:
         p["gewinn_verlust"] = round(p["boersenwert"] - p["investiert"], 2)
         p["score"] = ts
         p["beta"] = beta
+        # Review-Flag: starkes Negativ-Sentiment auf BESTEHENDER Position ist
+        # kein Verkaufsgrund (das entscheidet weiter der harte Score / Stop),
+        # aber sichtbar machen statt stillschweigend zu ignorieren.
+        sent_score, _, sent_reason, _, sent_kategorie = get_sentiment(isin)
+        if sent_score <= REVIEW_FLAG_THRESHOLD:
+            p["review_flag"] = True
+            p["review_grund"] = f"KI-Sentiment {sent_score} ({sent_kategorie}): {sent_reason}"
+        else:
+            p.pop("review_flag", None)
+            p.pop("review_grund", None)
         # Anker-Paar (Kurs + DAX) gemeinsam auf heute setzen, falls (noch) nicht
         # vorhanden — Altpositionen ohne Kaufdatum: relative Uhr startet bei 0.
         if dax_now and current_price and (not p.get("dax_ref") or not p.get("stop_ref_kurs")):

@@ -50,6 +50,11 @@ run_step src/sanitize_fundamentals.py
 run_step src/prune_analysis.py
 run_step src/fetch_news.py
 
+# Sentiment-Kalibrierung: Score+Kurs von heute loggen, alte Einträge mit
+# Forward-Return nachtragen. Reine Beobachtung, beeinflusst keine Trades.
+run_step src/sentiment_calibration.py log
+run_step src/sentiment_calibration.py backfill
+
 if [ "$traded" = "1" ]; then
   # Regelbasierte Empfehlung (nutzt vorhandenes sentiment_scores.json), dann ausführen.
   # Ein Crash schreibt depot_status.json NICHT (save nur am Skriptende), der Stand

@@ -18,11 +18,11 @@ cd /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard || exit 1
 # Frische Schlagzeilen holen (idempotent; der 09:00-Lauf holt sie ohnehin nochmal).
 python3 src/fetch_news.py >/tmp/pf_sentiment_news.log 2>&1
 
-PROMPT='Lies /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data/news_raw.json. Bewerte fuer JEDE darin enthaltene ISIN die Schlagzeilen der letzten Tage als Nachrichtenstimmung fuer genau dieses Unternehmen. Format-Referenz: /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/docs/SENTIMENT_STAGE.md. Vergib sentiment_score als Ganzzahl -3..+3, veto true nur bei akutem Kaufvermeidungsgrund, sonst false, plus eine knappe begruendung (1 Satz). Ignoriere Schlagzeilen die offensichtlich eine andere Firma betreffen (score 0). Schreibe das Ergebnis EXAKT im Vertragsformat nach /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data/sentiment_scores.json - ueberschreibe die Datei komplett, generated_at im Format YYYY-MM-DD HH:MM. Antworte am Ende nur mit: FERTIG N ISINs.'
+PROMPT='Lies /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data/news_raw.json. Bewerte fuer JEDE darin enthaltene ISIN die Schlagzeilen der letzten Tage als Nachrichtenstimmung fuer genau dieses Unternehmen. Format-Referenz und vollstaendiger Prompt: /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/docs/SENTIMENT_STAGE.md. Vergib sentiment_score als Ganzzahl -3..+3, veto true nur bei akutem Kaufvermeidungsgrund sonst false, confidence 0.0-1.0 (wie belastbar das Urteil ist - adhoc-Quelle oder mehrere frische Presseartikel = hoch, vage/generisch = niedrig, keine News = 0.0), event_kategorie (Zahlen|Guidance|M&A|Analyst|Sonstiges|Keine), plus eine knappe begruendung (1 Satz). Ignoriere Schlagzeilen die offensichtlich eine andere Firma betreffen (score 0). Schreibe das Ergebnis EXAKT im Vertragsformat nach /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard/data/sentiment_scores.json - ueberschreibe die Datei komplett, generated_at im Format YYYY-MM-DD HH:MM. Antworte am Ende nur mit: FERTIG N ISINs.'
 
 timeout 300 openclaw agent \
   --session-key "portfolio-sentiment" \
-  --thinking off \
+  --thinking low \
   -m "$PROMPT" \
   >/tmp/pf_sentiment_agent.log 2>&1
 
