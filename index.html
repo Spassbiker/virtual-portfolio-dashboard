@@ -7265,10 +7265,10 @@
             btn.addEventListener('click', () => openSection(btn.dataset.section));
         });
         document.querySelectorAll('.section').forEach(sec => {
-            sec.querySelectorAll('.sub-tab-button').forEach(btn => {
+            sec.querySelectorAll('.sub-tab-button[data-sub]').forEach(btn => {
                 btn.addEventListener('click', () => {
                     sec.querySelectorAll('.sub-content').forEach(c => c.classList.remove('active'));
-                    sec.querySelectorAll('.sub-tab-button').forEach(b => b.classList.remove('active'));
+                    sec.querySelectorAll('.sub-tab-button[data-sub]').forEach(b => b.classList.remove('active'));
                     document.getElementById(btn.dataset.sub).classList.add('active');
                     btn.classList.add('active');
                 });
