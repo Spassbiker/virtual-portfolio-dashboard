@@ -137,6 +137,19 @@ def support_resistance(values, window=60):
     return round(min(tail), 2), round(max(tail), 2)
 
 
+def momentum_12_1(values):
+    """Academic 12-1 momentum: return from t-252 to t-21 (skips the most
+    recent month to avoid short-term reversal effects). None if history is
+    too short (~1y needed)."""
+    if len(values) < 252:
+        return None
+    p_start = values[-252]
+    p_recent = values[-21]
+    if not p_start:
+        return None
+    return round((p_recent / p_start - 1) * 100, 2)
+
+
 def compute_all(closes, latest_price):
     """closes must be at least ~35 long for full output; missing indicators -> None."""
     values = closes + ([latest_price] if latest_price and (not closes or closes[-1] != latest_price) else [])
@@ -148,6 +161,7 @@ def compute_all(closes, latest_price):
         'macd': macd_label(values),
         'unterstuetzung': support_resistance(values)[0],
         'widerstand': support_resistance(values)[1],
+        'momentum_12_1': momentum_12_1(values),
     }
 
 

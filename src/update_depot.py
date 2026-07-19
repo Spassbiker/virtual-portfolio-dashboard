@@ -119,7 +119,7 @@ def get_funda_item(isin):
     return None
 
 def compute_chart_score(isin):
-    """Chart-Score aus technischen Indikatoren (max ~12, min ~-11)."""
+    """Chart-Score aus technischen Indikatoren (max ~15, min ~-13)."""
     item = get_chart_item(isin)
     if not item:
         return 0, []
@@ -168,6 +168,21 @@ def compute_chart_score(isin):
         score += 1; details.append("SMA50+1")
     if kurs > 0 and sma200 > 0 and kurs > sma200:
         score += 1; details.append("SMA200+1")
+
+    # 12-1-Monats-Momentum (Return t-252 bis t-21, letzter Monat ausgeklammert
+    # gegen Kurzfrist-Reversal). None = zu kurze Historie, wird neutral gewertet.
+    mom = item.get("momentum_12_1")
+    if mom is not None:
+        if mom > 20:
+            score += 3; details.append(f"Mom+3({mom:.0f}%)")
+        elif mom > 5:
+            score += 2; details.append(f"Mom+2({mom:.0f}%)")
+        elif mom > 0:
+            score += 1; details.append(f"Mom+1({mom:.0f}%)")
+        elif mom > -10:
+            score -= 1; details.append(f"Mom-1({mom:.0f}%)")
+        else:
+            score -= 2; details.append(f"Mom-2({mom:.0f}%)")
 
     return score, details
 
