@@ -627,16 +627,35 @@
         "vermoegen": 9769.26
       },
       "aktuell": {
-        "dax": 24790.11,
-        "msci": 124.735,
+        "dax": 24830.98,
+        "msci": 124.88,
         "vermoegen": 9511.89
       },
       "rendite_pct": {
         "depot": -2.63,
-        "dax": -1.31,
-        "msci_world": -0.78
+        "dax": -1.14,
+        "msci_world": -0.66
       },
-      "stand": "2026-07-17 17:35"
+      "stand": "2026-07-19 22:28"
+    },
+    "korrelation": {
+      "hinweise": [],
+      "cluster": [
+        {
+          "mitglieder": [
+            "MTU Aero Engines",
+            "Safran"
+          ],
+          "anteil_pct": 28.3
+        },
+        {
+          "mitglieder": [
+            "Leonardo",
+            "Dassault Aviation"
+          ],
+          "anteil_pct": 14.2
+        }
+      ]
     }
   },
   "etf_depot": {
