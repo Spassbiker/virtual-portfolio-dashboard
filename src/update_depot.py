@@ -319,6 +319,24 @@ def budget_for_score(ts, buy_threshold):
     return min(2500.0, base + bonus)
 
 
+# Phase 3: Volatilitäts-Sizing (Risk-Parity statt Euro-Parity je Trade).
+# Referenz-Tagesvolatilität ~2 %; ruhigere Titel bekommen mehr, wildere weniger
+# Budget. Multiplikator in [0.6, 1.4] gekappt, damit das Score-Ranking führend
+# bleibt und keine Extremwerte die Positionsgröße dominieren.
+REF_VOL_PCT = 2.0
+VOL_MULT_MIN, VOL_MULT_MAX = 0.6, 1.4
+
+
+def vol_size_multiplier(isin):
+    """Inverser Volatilitäts-Faktor auf Basis der 20-Tage-Vola (compute_indicators).
+    Fehlt die Vola, bleibt es bei 1.0 (kein Effekt)."""
+    item = get_chart_item(isin)
+    vol = item.get("volatility_20d") if item else None
+    if not vol or vol <= 0:
+        return 1.0
+    return round(max(VOL_MULT_MIN, min(VOL_MULT_MAX, REF_VOL_PCT / vol)), 3)
+
+
 def is_watch_candidate(isin, chart_item, funda_item):
     """Kandidat noch nicht kaufbar (nicht genug Historie / Marker-Text).
 
@@ -684,7 +702,8 @@ positions = positions_to_keep
 unowned_targets = [(isin, ts) for isin, ts in target_isins_scored
                    if not any(p.get("isin") == isin for p in positions)
                    and isin not in sold_isins]
-total_needed_cash = sum(budget_for_score(ts, BUY_THRESHOLD) for _, ts in unowned_targets)
+total_needed_cash = sum(budget_for_score(ts, BUY_THRESHOLD) * vol_size_multiplier(isin)
+                        for isin, ts in unowned_targets)
 
 # ==========================================
 # 3. REBALANCING (Schwache Halten-Positionen verkaufen)
@@ -718,7 +737,8 @@ for isin, ts in unowned_targets:
         continue
     price = live_prices[isin]
     stock = isin_to_name.get(isin, isin)
-    budget = budget_for_score(ts, BUY_THRESHOLD)
+    vol_mult = vol_size_multiplier(isin)
+    budget = budget_for_score(ts, BUY_THRESHOLD) * vol_mult
     # Mindest-Barreserve nie unterschreiten.
     spendable = current_cash - MIN_CASH_RESERVE
     budget_before_cap = min(budget, spendable)
@@ -749,7 +769,7 @@ for isin, ts in unowned_targets:
             "beta": get_beta(isin)
         })
         transactions.append(tx)
-        summary.append(f"Kauf: {units_to_buy}x {stock} ({isin}) zu {price:.2f} EUR, Score={ts}, Budget={budget:.0f}€.")
+        summary.append(f"Kauf: {units_to_buy}x {stock} ({isin}) zu {price:.2f} EUR, Score={ts}, Budget={budget:.0f}€ (Vola×{vol_mult}).")
 
 portfolio_value = sum(p.get("boersenwert", 0) for p in positions)
 

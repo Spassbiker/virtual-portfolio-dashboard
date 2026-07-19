@@ -150,6 +150,24 @@ def momentum_12_1(values):
     return round((p_recent / p_start - 1) * 100, 2)
 
 
+def realized_vol(values, window=20):
+    """20-Tage realisierte Volatilität (Stdev der Tagesrenditen) in % pro Tag.
+
+    Ersatz für ATR fürs Positions-Sizing: skaleninvariant (Renditen einer
+    FX-skalierten Reihe sind identisch), daher ohne EUR/USD-Umrechnung korrekt
+    und ohne zweiten Netz-Call aus den ohnehin geladenen Closes berechenbar.
+    """
+    if len(values) < window + 1:
+        return None
+    rets = [values[i] / values[i - 1] - 1
+            for i in range(len(values) - window, len(values)) if values[i - 1]]
+    if len(rets) < 2:
+        return None
+    mean = sum(rets) / len(rets)
+    var = sum((r - mean) ** 2 for r in rets) / (len(rets) - 1)
+    return round(var ** 0.5 * 100, 2)
+
+
 def compute_all(closes, latest_price):
     """closes must be at least ~35 long for full output; missing indicators -> None."""
     values = closes + ([latest_price] if latest_price and (not closes or closes[-1] != latest_price) else [])
@@ -162,6 +180,7 @@ def compute_all(closes, latest_price):
         'unterstuetzung': support_resistance(values)[0],
         'widerstand': support_resistance(values)[1],
         'momentum_12_1': momentum_12_1(values),
+        'volatility_20d': realized_vol(values),
     }
 
 

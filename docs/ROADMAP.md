@@ -27,12 +27,17 @@ Reihenfolge nach Aufwand/Nutzen: 1 → 2 → 5 (billig, hoher Hebel), danach 3, 
 - Grund für Priorität vor Sharpe/VaR: verbessert echte Entscheidungen
   (Kaufen/Sizing/Warnen), nicht nur Reporting.
 
-## Phase 3 — ATR-basiertes Position-Sizing ⏳
-- High/Low in `fetch_history` mitladen, ATR(14) berechnen.
-- `budget_for_score`/`_make_buy_record`: Positionsgröße invers zur
-  ATR-Volatilität skalieren (Risk-Parity statt Euro-Parity je Trade).
-- Bonus: dynamische Stop-Distanz (2×ATR) zusätzlich zum bestehenden
-  −20%/−12%-Stop.
+## Phase 3 — Volatilitäts-basiertes Position-Sizing ✅
+- Statt echtem ATR: 20-Tage realisierte Volatilität (`volatility_20d`) aus den
+  ohnehin geladenen Closes in `compute_indicators.py` — skaleninvariant, kein
+  zweiter Netz-Call, keine OHLC/USD-Umrechnung auf dem 09:00-Pfad.
+- `vol_size_multiplier()` in `update_depot.py`: inverser Faktor in [0.6, 1.4]
+  um Referenz-Vola 2 %/Tag; wirkt auf `budget_for_score` bei Kapitalbedarf und
+  Kauf (Risk-Parity statt Euro-Parity je Trade).
+- Getestet: Min-Vol-ETF/Infrastruktur ×1.4, Rheinmetall/SMA Solar/Planet Labs
+  ×0.6; Median-Vola 1.89 % ~ Referenz.
+- Offen (Bonus, nicht umgesetzt): dynamische Stop-Distanz (2×Vola) zusätzlich
+  zum bestehenden −20%/−12%-Stop.
 
 ## Phase 4 — Piotroski F-Score ⏳
 - `fetch_piotroski.py`: Bilanz/GuV/Cashflow via `quoteSummary`
