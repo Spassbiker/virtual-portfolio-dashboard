@@ -197,7 +197,7 @@ def is_funda_placeholder(item):
 
 
 def compute_funda_score(isin):
-    """Fundamental-Score (max ~9, min ~-7)."""
+    """Fundamental-Score (max ~15, min ~-12)."""
     item = get_funda_item(isin)
     if not item:
         return 0, []
@@ -239,6 +239,38 @@ def compute_funda_score(isin):
             score += 1; details.append(f"GW+1({gw:.0f}%)")
         elif gw < 0:
             score -= 1; details.append(f"GW-1({gw:.0f}%)")
+
+    # Deterministische Yahoo-Kennzahlen (Phase 2) — ergänzen die LLM-Bewertung
+    # um kapitalstruktur-/wachstumsneutrale Signale. None = nicht verfügbar,
+    # wird neutral gewertet statt erfunden.
+    peg = item.get("peg_ratio")
+    if peg is not None:
+        if 0 < peg < 1:
+            score += 2; details.append(f"PEG+2({peg:.2f})")
+        elif peg < 1.5:
+            score += 1; details.append(f"PEG+1({peg:.2f})")
+        elif peg > 3:
+            score -= 1; details.append(f"PEG-1({peg:.2f})")
+
+    roe = item.get("roe")
+    if roe is not None:
+        if roe > 20:
+            score += 2; details.append(f"ROE+2({roe:.0f}%)")
+        elif roe > 10:
+            score += 1; details.append(f"ROE+1({roe:.0f}%)")
+        elif roe < 0:
+            score -= 2; details.append(f"ROE-2({roe:.0f}%)")
+
+    ev_ebitda = item.get("ev_ebitda")
+    if ev_ebitda is not None:
+        if ev_ebitda < 0:
+            score -= 2; details.append(f"EV/EBITDA-2(neg.)")
+        elif ev_ebitda < 8:
+            score += 2; details.append(f"EV/EBITDA+2({ev_ebitda:.1f})")
+        elif ev_ebitda < 12:
+            score += 1; details.append(f"EV/EBITDA+1({ev_ebitda:.1f})")
+        elif ev_ebitda > 20:
+            score -= 1; details.append(f"EV/EBITDA-1({ev_ebitda:.1f})")
 
     return score, details
 
