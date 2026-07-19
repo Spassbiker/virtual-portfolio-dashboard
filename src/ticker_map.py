@@ -234,7 +234,7 @@ def eur_price(isin):
     return None, None
 
 
-def eur_history(isin):
+def eur_history(isin, rng="1y"):
     """EUR daily closes + latest for an ISIN. Returns (closes, latest, source).
 
     USD listings are converted with the current USD->EUR rate. A constant FX
@@ -242,12 +242,12 @@ def eur_history(isin):
     levels for display and valuation.
     """
     for cand in candidates(isin):
-        closes, cur, meta = fetch_history(cand)
+        closes, cur, meta = fetch_history(cand, rng=rng)
         if cur == 'EUR' and closes and meta and meta.get('regularMarketPrice'):
             return closes, meta['regularMarketPrice'], cand
     usd_t = USD_TICKER.get(isin)
     if usd_t:
-        closes, cur, meta = fetch_history(usd_t)
+        closes, cur, meta = fetch_history(usd_t, rng=rng)
         rate = usd_to_eur_rate()
         if cur == 'USD' and closes and meta and meta.get('regularMarketPrice') and rate:
             closes_eur = [round(c * rate, 4) for c in closes]

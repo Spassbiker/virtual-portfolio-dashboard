@@ -115,6 +115,6 @@ print("%s📊 Tages-Lauf 09:00 — %s | Gesamtvermögen %.2f € (Aktien %.2f �
       "Barbestand Aktien %.2f € / ETF %.2f € (%s)" % (
           warn, trades, gesamt, d["gesamtvermoegen"], e.get("gesamtvermoegen", 0),
           d["aktueller_barbestand"], e.get("aktueller_barbestand", 0), push))
-for line in risk_report.format_lines(d.get("risiko", {}), d.get("benchmark", {})):
+for line in risk_report.format_lines(d.get("risiko", {}), d.get("benchmark", {}), d.get("korrelation", {})):
     print(line)
 PY

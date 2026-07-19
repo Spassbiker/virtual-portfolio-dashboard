@@ -59,6 +59,6 @@ print("%s📊 Nachbörsen-Update — Gesamtvermögen %.2f € (Aktien %.2f € +
           warn, gesamt, d["gesamtvermoegen"], e.get("gesamtvermoegen", 0),
           d["portfoliowert"], e.get("portfoliowert", 0),
           d["aktueller_barbestand"], e.get("aktueller_barbestand", 0), push))
-for line in risk_report.format_lines(d.get("risiko", {}), d.get("benchmark", {})):
+for line in risk_report.format_lines(d.get("risiko", {}), d.get("benchmark", {}), d.get("korrelation", {})):
     print(line)
 PY

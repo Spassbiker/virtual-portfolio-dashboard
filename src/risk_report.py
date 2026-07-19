@@ -1,20 +1,25 @@
 """Risiko- und Benchmark-Report für das virtuelle Depot.
 
 Läuft als reines Shell-/Python-Modul (kein LLM-Turn), damit close_update.sh und
-morning_run.sh es deterministisch mitlaufen lassen können. Zwei Aufgaben:
+morning_run.sh es deterministisch mitlaufen lassen können. Drei Aufgaben:
 
   1) KONZENTRATIONS-CHECK: flaggt Klumpenrisiken, wenn eine Einzelposition mehr
      als MAX_POSITION_PCT oder ein Sektor mehr als MAX_SEKTOR_PCT des
      Portfoliowerts ausmacht. So fällt "6 Titel, aber faktisch eine Wette" sofort
      auf, statt sich still aufzubauen.
 
-  2) BENCHMARK-VERGLEICH: misst die Depot-Gesamtrendite gegen DAX und MSCI World
+  2) KORRELATIONS-CHECK (Phase 5): misst 90-Tage-Kursverlauf-Korrelation
+     zwischen allen Depot-Positionen. Ergänzt den Sektor-Check um die Fälle,
+     die er blind für ist — zwei formal verschiedene Sektoren (z.B.
+     Verteidigung + Luft-/Raumfahrt), die real im Gleichschritt laufen.
+
+  3) BENCHMARK-VERGLEICH: misst die Depot-Gesamtrendite gegen DAX und MSCI World
      ab einem gemeinsamen Anker (beim ersten Lauf auf heute gesetzt). Läuft das
      Depot dauerhaft schlechter als der Index, ist das schwarz auf weiß sichtbar.
 
-Ergebnisse werden nach depot_status.json unter depot["risiko"] und
-depot["benchmark"] geschrieben (für Dashboard + Telegram-Zusammenfassung) und
-als kompakter Textblock ausgegeben (für Logs).
+Ergebnisse werden nach depot_status.json unter depot["risiko"],
+depot["korrelation"] und depot["benchmark"] geschrieben (für Dashboard +
+Telegram-Zusammenfassung) und als kompakter Textblock ausgegeben (für Logs).
 """
 
 import json
@@ -29,6 +34,11 @@ from paths import DEPOT as DEPOT_PATH, CHART as CHART_PATH, load_json, save_json
 # Schwellen für die Klumpenrisiko-Warnung (Anteil am Portfoliowert).
 MAX_POSITION_PCT = 0.20   # keine Einzelposition über 20 %
 MAX_SEKTOR_PCT = 0.30     # kein Sektor über 30 %
+
+# Korrelations-Cluster (Phase 5): Paare über diesem Schwellwert gelten als
+# "laufen im Gleichschritt"; Cluster über MAX_SEKTOR_PCT Portfolioanteil warnen.
+CORR_THRESHOLD = 0.7
+CORR_MIN_OBS = 15  # zu wenig gemeinsame Handelstage -> Korrelation verwerfen
 
 # Benchmarks: DAX (Kursindex, EUR) und MSCI World über den EUR-ETF EUNL.DE
 # (iShares Core MSCI World UCITS, Xetra) — passend zum EUR-denominierten Depot.
@@ -98,6 +108,97 @@ def concentration_report(positions, portfolio_value, sector_map):
     }
 
 
+def _pearson(a, b):
+    n = len(a)
+    if n < 2:
+        return None
+    mean_a = sum(a) / n
+    mean_b = sum(b) / n
+    cov = sum((a[i] - mean_a) * (b[i] - mean_b) for i in range(n))
+    var_a = sum((x - mean_a) ** 2 for x in a)
+    var_b = sum((x - mean_b) ** 2 for x in b)
+    if var_a <= 0 or var_b <= 0:
+        return None
+    return cov / (var_a * var_b) ** 0.5
+
+
+def _daily_returns(isin):
+    closes, _latest, _src = ticker_map.eur_history(isin, rng="3mo")
+    if not closes or len(closes) < CORR_MIN_OBS + 1:
+        return None
+    return [closes[i] / closes[i - 1] - 1 for i in range(1, len(closes)) if closes[i - 1]]
+
+
+def correlation_report(positions):
+    """90-Tage-Korrelationscluster der Depot-Positionen (siehe Moduldoc Punkt 2).
+
+    Liefert {"hinweise": [...], "cluster": [...]} — leer, wenn zu wenig
+    Positionen/Historie für eine belastbare Aussage vorliegen.
+    """
+    if len(positions) < 2:
+        return {"hinweise": [], "cluster": []}
+
+    names = {}
+    pos_value = {}
+    returns = {}
+    for p in positions:
+        isin = p.get("isin")
+        if not isin:
+            continue
+        names[isin] = p.get("wertpapier", isin)
+        pos_value[isin] = p.get("boersenwert", 0) or 0
+        rets = _daily_returns(isin)
+        if rets:
+            returns[isin] = rets
+
+    isins = list(returns.keys())
+    parent = {isin: isin for isin in isins}
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def union(a, b):
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+
+    for i in range(len(isins)):
+        for j in range(i + 1, len(isins)):
+            a, b = isins[i], isins[j]
+            ra, rb = returns[a], returns[b]
+            n = min(len(ra), len(rb))
+            if n < CORR_MIN_OBS:
+                continue
+            c = _pearson(ra[-n:], rb[-n:])
+            if c is not None and c > CORR_THRESHOLD:
+                union(a, b)
+
+    clusters = {}
+    for isin in isins:
+        clusters.setdefault(find(isin), []).append(isin)
+
+    portfolio_value = sum(pos_value.values())
+    hinweise = []
+    cluster_reports = []
+    for members in clusters.values():
+        if len(members) < 2:
+            continue
+        wert = sum(pos_value.get(m, 0) for m in members)
+        anteil = wert / portfolio_value if portfolio_value else 0
+        mitglieder = [names[m] for m in members]
+        cluster_reports.append({"mitglieder": mitglieder, "anteil_pct": round(anteil * 100, 1)})
+        if anteil > MAX_SEKTOR_PCT:
+            hinweise.append(
+                "⚠️ Korrelations-Cluster (%s) macht %.1f %% des Portfolios aus (>%.1f korreliert, Limit %.0f %%)"
+                % (", ".join(mitglieder), anteil * 100, CORR_THRESHOLD, MAX_SEKTOR_PCT * 100))
+
+    cluster_reports.sort(key=lambda c: -c["anteil_pct"])
+    return {"hinweise": hinweise, "cluster": cluster_reports}
+
+
 def _index_level(symbol):
     price, _closes = ticker_map.fetch_index(symbol)
     return price
@@ -156,7 +257,7 @@ def benchmark_report(depot, gesamtvermoegen):
     }
 
 
-def format_lines(risiko, benchmark):
+def format_lines(risiko, benchmark, korrelation=None):
     """Kompakte Textzeilen für Telegram/Log. Leere Liste = alles im Rahmen."""
     lines = []
     r = benchmark.get("rendite_pct", {})
@@ -170,6 +271,8 @@ def format_lines(risiko, benchmark):
     hinweise = risiko.get("hinweise", [])
     if hinweise:
         lines.append("🚨 Klumpenrisiko: " + " · ".join(hinweise))
+    if korrelation and korrelation.get("hinweise"):
+        lines.append("🔗 " + " · ".join(korrelation["hinweise"]))
     return lines
 
 
@@ -183,14 +286,16 @@ def main():
 
     sector_map = load_sector_map()
     risiko = concentration_report(positions, portfolio_value, sector_map)
+    korrelation = correlation_report(positions)
     benchmark = benchmark_report(depot, gesamtvermoegen)
 
     depot["risiko"] = risiko
+    depot["korrelation"] = korrelation
     depot["benchmark"] = benchmark
     data["depot"] = depot
     save_json(DEPOT_PATH, data)
 
-    lines = format_lines(risiko, benchmark)
+    lines = format_lines(risiko, benchmark, korrelation)
     if lines:
         print("\n".join(lines))
     else:
