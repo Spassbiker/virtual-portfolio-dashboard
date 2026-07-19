@@ -86,3 +86,6 @@ PY
 # Backup-Restore auf dem jeweils aktuellen Funda-Stand.
 python3 src/fetch_valuation.py >/tmp/pf_valuation.log 2>&1
 
+# Phase 4: Piotroski F-Score (Bilanzqualität) aus Yahoo timeseries nachziehen.
+python3 src/fetch_piotroski.py >/tmp/pf_piotroski.log 2>&1
+

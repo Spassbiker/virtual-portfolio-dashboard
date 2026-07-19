@@ -197,7 +197,7 @@ def is_funda_placeholder(item):
 
 
 def compute_funda_score(isin):
-    """Fundamental-Score (max ~15, min ~-12)."""
+    """Fundamental-Score (max ~17, min ~-14)."""
     item = get_funda_item(isin)
     if not item:
         return 0, []
@@ -271,6 +271,17 @@ def compute_funda_score(isin):
             score += 1; details.append(f"EV/EBITDA+1({ev_ebitda:.1f})")
         elif ev_ebitda > 20:
             score -= 1; details.append(f"EV/EBITDA-1({ev_ebitda:.1f})")
+
+    # Piotroski F-Score (Phase 4): Bilanzqualität, 0-9. Hoch = solide/
+    # sich verbessernd, niedrig = Warnsignal/Value-Falle. None = neutral.
+    piotroski = item.get("piotroski")
+    if piotroski is not None:
+        if piotroski >= 7:
+            score += 2; details.append(f"Piotroski+2(F{piotroski})")
+        elif piotroski >= 5:
+            score += 1; details.append(f"Piotroski+1(F{piotroski})")
+        elif piotroski <= 2:
+            score -= 2; details.append(f"Piotroski-2(F{piotroski})")
 
     return score, details
 

@@ -39,12 +39,17 @@ Reihenfolge nach Aufwand/Nutzen: 1 → 2 → 5 (billig, hoher Hebel), danach 3, 
 - Offen (Bonus, nicht umgesetzt): dynamische Stop-Distanz (2×Vola) zusätzlich
   zum bestehenden −20%/−12%-Stop.
 
-## Phase 4 — Piotroski F-Score ⏳
-- `fetch_piotroski.py`: Bilanz/GuV/Cashflow via `quoteSummary`
-  (`incomeStatementHistory,balanceSheetHistory,cashflowStatementHistory`),
-  9 Kriterien → Score 0-9 ins Funda-JSON.
-- `compute_funda_score`: F≥7 Bonus, F≤2 Malus/Warnflag.
-- Zuletzt, weil Datenparsing am fragilsten ist.
+## Phase 4 — Piotroski F-Score ✅
+- `fetch_piotroski.py`: 9 Kriterien (Rentabilität/Verschuldung/Effizienz,
+  Jahr t vs t-1) → Score 0-9 ins Funda-JSON.
+- WICHTIG: Datenquelle ist der `fundamentals-timeseries`-Endpoint, NICHT das
+  alte `quoteSummary`-Bilanzmodul — Yahoo hat dort balanceSheet/cashflow-
+  Details entfernt (nur noch endDate). timeseries liefert die 9 annual-Felder.
+- `compute_funda_score`: F≥7 → +2, F5-6 → +1, F≤2 → −2.
+- In fundamentals_refresh.sh nach fetch_valuation eingehängt.
+- Getestet: MTU F8/Airbus F8/SAP F8/Leonardo F9 oben, Nvidia/Infineon/
+  Delivery Hero F4 unten. 45/63 abgedeckt, Rest neutral (einige Listings ohne
+  timeseries-Bilanzdaten).
 
 ## Nicht umgesetzt (bewusst zurückgestellt)
 DCF, Dividend-Discount, Graham-Number, Altman Z-Score, Bollinger/ADX/Stochastik,
