@@ -80,3 +80,9 @@ if frisch < gesamt * 0.5:
 else:
     print("NO_REPLY")  # Erfolg still, kein Chat-Spam am Sonntagabend
 PY
+
+# Phase 2: deterministische Valuation-Kennzahlen (EV/EBITDA, PEG, ROE) per
+# Yahoo nachziehen — unabhängig vom LLM-Ergebnis oben, läuft auch nach einem
+# Backup-Restore auf dem jeweils aktuellen Funda-Stand.
+python3 src/fetch_valuation.py >/tmp/pf_valuation.log 2>&1
+
