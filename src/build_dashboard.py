@@ -1221,11 +1221,19 @@ html_template = """<!DOCTYPE html>
                         <th>MACD</th>
                         <th>SMA 50</th>
                         <th>SMA 200</th>
+                        <th title="12-1-Monats-Momentum (Return t-252 bis t-21)">Momentum</th>
+                        <th title="20-Tage realisierte Volatilität (%/Tag) – Basis fürs Position-Sizing">Vola</th>
                         <th>Unterstützung</th>
                         <th>Widerstand</th>
                         <th>Begründung</th>
                     </tr>`;
             werte.forEach(w => {
+                const mom = numOrNull(w.momentum_12_1);
+                const momText = mom !== null
+                    ? `<span style="color:${mom >= 0 ? 'var(--good-text)' : 'var(--critical-text)'};">${mom > 0 ? '+' : ''}${mom}%</span>`
+                    : '-';
+                const vola = numOrNull(w.volatility_20d);
+                const volaText = vola !== null ? vola + '%' : '-';
                 t += `<tr>
                         <td><strong>${w.wertpapier}</strong><br><small style="color:var(--text-muted)">${w.isin || ''}</small></td>
                         <td>${formatEUR(w.aktueller_kurs)}</td>
@@ -1235,6 +1243,8 @@ html_template = """<!DOCTYPE html>
                         <td>${w.macd || '-'}</td>
                         <td>${formatEUR(w.sma_50)}</td>
                         <td>${formatEUR(w.sma_200)}</td>
+                        <td>${momText}</td>
+                        <td>${volaText}</td>
                         <td style="color: green;">${formatEUR(w.unterstuetzung)}</td>
                         <td style="color: red;">${formatEUR(w.widerstand)}</td>
                         <td style="font-size:0.9em;">${w.begruendung}</td>
@@ -1294,6 +1304,10 @@ html_template = """<!DOCTYPE html>
                         <th>Umsatzwachstum (yoy)</th>
                         <th>Gewinnwachstum (yoy)</th>
                         <th>EK-Quote</th>
+                        <th title="Enterprise Value / EBITDA – kapitalstruktur-neutrale Bewertung">EV/EBITDA</th>
+                        <th title="KGV ÷ Gewinnwachstum – <1 = wachstumsbereinigt günstig">PEG</th>
+                        <th title="Return on Equity – Eigenkapitalrendite">ROE</th>
+                        <th title="Piotroski F-Score 0–9 – Bilanzqualität (≥7 stark, ≤2 schwach)">Piotroski</th>
                         <th>Begründung</th>
                     </tr>`;
                 werte.forEach(w => {
@@ -1307,6 +1321,21 @@ html_template = """<!DOCTYPE html>
                     let gwText = w.gewinnwachstum_yoy !== undefined ? w.gewinnwachstum_yoy + '%' : '-';
                     let ekText = w.eigenkapitalquote !== undefined ? w.eigenkapitalquote + '%' : '-';
 
+                    const evV = numOrNull(w.ev_ebitda);
+                    const evText = evV !== null ? evV.toFixed(1) : '-';
+                    const pegV = numOrNull(w.peg_ratio);
+                    const pegText = pegV !== null
+                        ? `<span style="color:${pegV > 0 && pegV < 1 ? 'var(--good-text)' : (pegV > 3 ? 'var(--critical-text)' : 'inherit')};">${pegV.toFixed(2)}</span>`
+                        : '-';
+                    const roeV = numOrNull(w.roe);
+                    const roeText = roeV !== null
+                        ? `<span style="color:${roeV >= 15 ? 'var(--good-text)' : (roeV < 0 ? 'var(--critical-text)' : 'inherit')};">${roeV.toFixed(0)}%</span>`
+                        : '-';
+                    const fV = numOrNull(w.piotroski);
+                    const fText = fV !== null
+                        ? `<span style="font-weight:bold; color:${fV >= 7 ? 'var(--good-text)' : (fV <= 2 ? 'var(--critical-text)' : 'inherit')};">${fV}/9</span>`
+                        : '-';
+
                     fundaHtml += `<tr>
                         <td><strong>${w.wertpapier}</strong><br><small style="color:var(--text-muted)">${w.isin || ''}</small></td>
                         <td>${formatEUR(w.aktueller_kurs)}</td>
@@ -1317,6 +1346,10 @@ html_template = """<!DOCTYPE html>
                         <td>${uwText} <span style="margin-left:6px">${peerLabel(uwV, meds.umsatz, false)}</span></td>
                         <td>${gwText} <span style="margin-left:6px">${peerLabel(gwV, meds.gewinn, false)}</span></td>
                         <td>${ekText}</td>
+                        <td>${evText}</td>
+                        <td>${pegText}</td>
+                        <td>${roeText}</td>
+                        <td>${fText}</td>
                         <td style="font-size:0.9em;">${w.begruendung}</td>
                     </tr>`;
                 });
@@ -1462,6 +1495,10 @@ html_template = """<!DOCTYPE html>
             const sektoren = (risiko.sektoren || []).slice().sort((a, b) => b.anteil_pct - a.anteil_pct);
             const hinweise = risiko.hinweise || [];
 
+            const korrelation = dep.korrelation || {};
+            const korrCluster = (korrelation.cluster || []).slice().sort((a, b) => b.anteil_pct - a.anteil_pct);
+            const korrHinweise = korrelation.hinweise || [];
+
             const bench = dep.benchmark || {};
             const rendite = bench.rendite_pct || {};
 
@@ -1506,6 +1543,11 @@ html_template = """<!DOCTYPE html>
                         <h3>📊 Sektor-Allokation (Aktien-Depot)</h3>
                         ${svgSectorAllocation(sektoren, limits.sektor_pct)}
                         ${hinweise.length ? hinweise.map(h => `<div class="risk-alert">${h}</div>`).join('') : `<div class="risk-alert ok">✓ Keine Sektor- oder Positionslimit-Verletzung erkannt (Limits: Position ${limits.position_pct}% · Sektor ${limits.sektor_pct}%).</div>`}
+                        <h3 style="margin-top:20px;">🔗 Korrelations-Cluster <small style="font-size:0.6em; color:var(--text-muted); font-weight:normal;">(90-Tage, Titel mit &gt;0.7 Gleichlauf — echte Diversifikation jenseits der Sektor-Labels)</small></h3>
+                        ${korrHinweise.length ? korrHinweise.map(h => `<div class="risk-alert">${h}</div>`).join('') : ''}
+                        ${korrCluster.length
+                            ? korrCluster.map(c => `<div class="risk-alert${c.anteil_pct > limits.sektor_pct ? '' : ' ok'}">${c.anteil_pct > limits.sektor_pct ? '⚠️' : '•'} ${c.mitglieder.join(' + ')} — ${c.anteil_pct}% des Depots</div>`).join('')
+                            : `<div class="risk-alert ok">✓ Keine stark korrelierten Cluster erkannt (Positionen laufen hinreichend unabhängig).</div>`}
                     </div>
                     <div class="ov-card">
                         <h3>📈 Performance vs. Vergleichsindizes</h3>
