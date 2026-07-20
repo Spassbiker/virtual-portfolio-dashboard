@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard-Parameter einfach erklärt</title>
+<style>
+  :root{
+    --bg:#0f1420; --card:#1a2130; --card2:#212a3d; --line:#2c3750;
+    --text:#e8edf6; --muted:#9aa7bd; --accent:#4da3ff; --good:#3ecf8e;
+    --warn:#ffb547; --bad:#ff6b6b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:920px;margin:0 auto;padding:32px 20px 80px;}
+  h1{font-size:28px;margin:0 0 6px;}
+  .sub{color:var(--muted);margin:0 0 28px;}
+  h2{font-size:21px;margin:38px 0 6px;padding-top:14px;border-top:1px solid var(--line);}
+  h2 .em{margin-right:8px;}
+  .lead{color:var(--muted);margin:0 0 16px;font-size:15px;}
+  .p{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;margin:10px 0;}
+  .p .name{font-weight:600;color:var(--accent);}
+  .p .tech{color:var(--muted);font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace;}
+  .p .desc{margin:6px 0 0;}
+  .p .ex{margin:8px 0 0;font-size:14px;color:var(--muted);
+    background:var(--card2);border-radius:8px;padding:8px 10px;}
+  .p .ex b{color:var(--text);}
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 0 10px;}
+  .toc a{color:var(--accent);text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+  .toc li{margin:3px 0;}
+  .tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:20px;margin-left:6px;vertical-align:middle;}
+  .tag.g{background:rgba(62,207,142,.15);color:var(--good);}
+  .tag.w{background:rgba(255,181,71,.15);color:var(--warn);}
+  .tag.b{background:rgba(255,107,107,.15);color:var(--bad);}
+  code{background:var(--card2);padding:1px 6px;border-radius:5px;font-size:14px;}
+  .foot{margin-top:40px;color:var(--muted);font-size:13px;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>📊 Dashboard-Parameter – einfach erklärt</h1>
+<p class="sub">Nachschlagewerk zu allen Kennzahlen, die in der Analyse angezeigt werden. Ohne Fachchinesisch.</p>
+
+<div class="toc">
+  <b>Inhalt</b>
+  <ul>
+    <li><a href="#chart">1. Chartanalyse (technisch)</a></li>
+    <li><a href="#funda">2. Fundamentalanalyse (Unternehmenszahlen)</a></li>
+    <li><a href="#senti">3. KI-Sentiment (Nachrichtenlage)</a></li>
+    <li><a href="#score">4. Score &amp; Handelslogik (wie entschieden wird)</a></li>
+    <li><a href="#depot">5. Depot &amp; Positionen</a></li>
+    <li><a href="#risk">6. Risiko: Klumpen, Korrelation, Stop-Loss</a></li>
+    <li><a href="#bench">7. Benchmark (Vergleich mit dem Markt)</a></li>
+  </ul>
+</div>
+
+<!-- ================= CHART ================= -->
+<h2 id="chart"><span class="em">📈</span>1. Chartanalyse (technisch)</h2>
+<p class="lead">Diese Werte kommen aus dem Kursverlauf – sie sagen etwas über den <b>Trend und das Timing</b> aus, nicht über die Qualität des Unternehmens.</p>
+
+<div class="p"><span class="name">Aktueller Kurs</span> <span class="tech">aktueller_kurs</span>
+<p class="desc">Der letzte gehandelte Börsenpreis der Aktie.</p></div>
+
+<div class="p"><span class="name">Trend</span> <span class="tech">trend</span>
+<p class="desc">Grobe Richtung des Kurses: <b>Aufwärtstrend</b>, <b>Seitwärts</b> oder <b>Abwärtstrend</b>. Ergibt sich aus dem Verhältnis von Kurs zu den gleitenden Durchschnitten (SMA).</p></div>
+
+<div class="p"><span class="name">Signal / Empfehlung</span> <span class="tech">signal, empfehlung</span>
+<p class="desc">Die technische Kurzampel: <span class="tag g">Kaufen</span> <span class="tag w">Halten</span> <span class="tag b">Verkaufen</span>. Fasst RSI, MACD und Trend zu einem Vorschlag zusammen.</p></div>
+
+<div class="p"><span class="name">RSI (14)</span> <span class="tech">rsi_14</span>
+<p class="desc">„Relative-Stärke-Index" – misst auf einer Skala von 0–100, ob eine Aktie kurzfristig <b>überkauft</b> (zu heiß gelaufen) oder <b>überverkauft</b> (zu stark abgestraft) ist.</p>
+<p class="ex">Faustregel: <b>&gt; 70</b> = überkauft (Vorsicht) · <b>30–70</b> = neutral · <b>&lt; 30</b> = überverkauft (evtl. Chance).</p></div>
+
+<div class="p"><span class="name">MACD</span> <span class="tech">macd</span>
+<p class="desc">Momentum-Indikator, der zwei Durchschnitte vergleicht. Zeigt, ob die Aufwärts- oder Abwärtsbewegung gerade an Schwung <b>gewinnt oder verliert</b>. Angezeigt als <b>Positiv</b>, <b>Neutral</b> oder <b>Negativ</b>.</p></div>
+
+<div class="p"><span class="name">SMA 50 / SMA 200</span> <span class="tech">sma_50, sma_200</span>
+<p class="desc">Gleitende Durchschnittskurse der letzten 50 bzw. 200 Handelstage. Sie glätten das Auf und Ab.</p>
+<p class="ex">Kurs <b>über</b> beiden Linien → Aufwärtstrend. Kreuzt SMA50 über SMA200 („Golden Cross") gilt das als bullisches Signal, umgekehrt („Death Cross") als bärisch.</p></div>
+
+<div class="p"><span class="name">Unterstützung / Widerstand</span> <span class="tech">unterstuetzung, widerstand</span>
+<p class="desc"><b>Unterstützung</b> = Kursbereich, an dem die Aktie in der Vergangenheit oft nach unten abgeprallt ist (Boden). <b>Widerstand</b> = Bereich, an dem sie oft nach oben abgeprallt ist (Decke).</p></div>
+
+<div class="p"><span class="name">Momentum (12–1)</span> <span class="tech">momentum_12_1</span>
+<p class="desc">Kursentwicklung der letzten 12 Monate, wobei der jüngste Monat ausgeklammert wird (in %). Klassisches Trendstärke-Maß: was zuletzt lief, läuft oft weiter.</p>
+<p class="ex"><b>+184 %</b> heißt: die Aktie hat sich in dem Zeitraum stark aufgeladen. Hoher Wert = starkes Momentum.</p></div>
+
+<div class="p"><span class="name">Volatilität (20 Tage)</span> <span class="tech">volatility_20d</span>
+<p class="desc">Wie stark der Kurs zuletzt täglich schwankt (in %). Hoch = nervöser/riskanter, niedrig = ruhiger.</p></div>
+
+<div class="p"><span class="name">Legacy-Werte</span> <span class="tech">legacy_rsi_14, legacy_sma_50 …</span>
+<p class="desc">Die <b>vorherigen</b> Werte vom letzten Lauf. Dienen nur dem Vergleich „wie war es gestern" und dem Konsistenz-Check – keine eigene Bewertung.</p></div>
+
+<!-- ================= FUNDA ================= -->
+<h2 id="funda"><span class="em">🏦</span>2. Fundamentalanalyse (Unternehmenszahlen)</h2>
+<p class="lead">Diese Werte beschreiben die <b>Qualität und Bewertung des Unternehmens</b> selbst – unabhängig vom kurzfristigen Chart.</p>
+
+<div class="p"><span class="name">KGV</span> <span class="tech">kgv</span>
+<p class="desc">Kurs-Gewinn-Verhältnis: Wie viele Jahresgewinne man beim Kauf bezahlt. Grob: <b>niedrig = günstig</b>, hoch = teuer (bzw. hohe Wachstumserwartung).</p>
+<p class="ex">KGV <b>18</b> = man zahlt das 18-fache des Jahresgewinns.</p></div>
+
+<div class="p"><span class="name">Dividendenrendite</span> <span class="tech">dividendenrendite</span>
+<p class="desc">Jährliche Dividende im Verhältnis zum Kurs (in %). Also die „Verzinsung" durch Ausschüttungen.</p></div>
+
+<div class="p"><span class="name">Umsatzwachstum (YoY)</span> <span class="tech">umsatzwachstum_yoy</span>
+<p class="desc">Wie stark der Umsatz gegenüber dem Vorjahr gewachsen ist (YoY = year over year, in %).</p></div>
+
+<div class="p"><span class="name">Gewinnwachstum (YoY)</span> <span class="tech">gewinnwachstum_yoy</span>
+<p class="desc">Wachstum des Gewinns gegenüber dem Vorjahr (in %). Wichtiger Treiber im Scoring: <b>&gt; 20 %</b> gibt Pluspunkte, Rückgang Minuspunkte.</p></div>
+
+<div class="p"><span class="name">Eigenkapitalquote</span> <span class="tech">eigenkapitalquote</span>
+<p class="desc">Anteil des Eigenkapitals an der Bilanz (in %). Hoch = solide finanziert / wenig Schulden, niedrig = mehr Fremdkapital-Risiko.</p></div>
+
+<div class="p"><span class="name">Bewertung</span> <span class="tech">bewertung</span>
+<p class="desc">Gesamturteil zur Attraktivität des Preises: <b>Attraktiv</b>, <b>Neutral</b>, <b>Unattraktiv</b> oder <b>Spekulativ</b>.</p></div>
+
+<div class="p"><span class="name">Risiko</span> <span class="tech">risiko</span>
+<p class="desc">Einschätzung des Unternehmensrisikos: <b>Niedrig</b>, <b>Mittel</b> oder <b>Hoch</b>. Niedriges Risiko gibt Pluspunkte im Score.</p></div>
+
+<div class="p"><span class="name">EV/EBITDA</span> <span class="tech">ev_ebitda</span>
+<p class="desc">Unternehmenswert im Verhältnis zum operativen Gewinn (vor Zinsen, Steuern, Abschreibungen). Alternative zum KGV, schwerer manipulierbar. <b>Niedrig = günstig</b>; ein <b>negativer</b> Wert ist ein Warnsignal (kein operativer Gewinn).</p></div>
+
+<div class="p"><span class="name">PEG-Ratio</span> <span class="tech">peg_ratio</span>
+<p class="desc">KGV geteilt durch das Gewinnwachstum. Setzt den Preis ins Verhältnis zum Wachstum. Faustregel: <b>&lt; 1 = günstig fürs Wachstum</b>, &gt; 3 = teuer.</p></div>
+
+<div class="p"><span class="name">ROE</span> <span class="tech">roe</span>
+<p class="desc">Eigenkapitalrendite (in %) – wie profitabel das Unternehmen mit dem Kapital der Eigentümer wirtschaftet. <b>&gt; 20 % = sehr gut</b>, negativ = Verlust.</p></div>
+
+<div class="p"><span class="name">Piotroski F-Score</span> <span class="tech">piotroski</span>
+<p class="desc">Bilanz-Qualitäts-Score von <b>0 bis 9</b>. Prüft 9 Kriterien (Profitabilität, Verschuldung, Effizienz). <b>7–9 = solide/verbessert</b>, ≤ 2 = Warnsignal / mögliche Value-Falle.</p></div>
+
+<!-- ================= SENTIMENT ================= -->
+<h2 id="senti"><span class="em">📰</span>3. KI-Sentiment (Nachrichtenlage)</h2>
+<p class="lead">Eine KI liest aktuelle Schlagzeilen zu jedem Wert und bewertet die <b>Stimmung</b> – als Ergänzung zu Chart und Zahlen.</p>
+
+<div class="p"><span class="name">Sentiment-Score</span> <span class="tech">sentiment_score</span>
+<p class="desc">Stimmungsnote von <b>−3 (sehr negativ)</b> bis <b>+3 (sehr positiv)</b>, 0 = neutral. Basiert auf der Nachrichtenlage.</p></div>
+
+<div class="p"><span class="name">Confidence</span> <span class="tech">confidence</span>
+<p class="desc">Wie gut die Bewertung belegt ist (0–1). Wenige/vage Meldungen → niedrige Confidence. <b>Sie dämpft den Score:</b> ein schwach belegtes Urteil zählt weniger.</p>
+<p class="ex">Score +2 × Confidence 0,5 = wirksame <b>+1</b> im Gesamt-Score.</p></div>
+
+<div class="p"><span class="name">Veto</span> <span class="tech">veto</span>
+<p class="desc">Not-Bremse: Bei einem gravierenden negativen Ereignis (z. B. Bilanzskandal) kann die KI ein <b>Veto</b> setzen und einen Kauf blockieren – egal wie gut die anderen Zahlen sind.</p></div>
+
+<div class="p"><span class="name">Event-Kategorie</span> <span class="tech">event_kategorie</span>
+<p class="desc">Art des auslösenden Ereignisses (z. B. Quartalszahlen, Übernahme, Sonstiges). Nur zur Einordnung.</p></div>
+
+<div class="p"><span class="name">Begründung</span> <span class="tech">begruendung</span>
+<p class="desc">Ein bis zwei Sätze der KI, warum diese Stimmungsnote vergeben wurde.</p></div>
+
+<!-- ================= SCORE ================= -->
+<h2 id="score"><span class="em">🎯</span>4. Score &amp; Handelslogik</h2>
+<p class="lead">Der <b>Score</b> ist die zentrale Zahl. Er fasst alle drei Analysen zu einem Wert zusammen, der entscheidet, ob gekauft, gehalten oder verkauft wird.</p>
+
+<div class="p"><span class="name">Gesamt-Score</span> <span class="tech">score</span>
+<p class="desc">Summe aus drei Bausteinen:</p>
+<p class="ex">
+<b>Chart-Score</b> (Trend, RSI, MACD, SMA, Momentum) ≈ −13 … +15<br>
+<b>+ Funda-Score</b> (Empfehlung, Bewertung, Risiko, Wachstum, PEG, ROE, EV/EBITDA, Piotroski) ≈ −14 … +17<br>
+<b>+ KI-Sentiment × Confidence</b><br>
+= <b>Gesamt-Score</b>. Je höher, desto attraktiver der Kauf.
+</p></div>
+
+<div class="p"><span class="name">Kauf-Schwelle (adaptiv)</span> <span class="tech">BUY_FLOOR = 6, Top-20 %</span>
+<p class="desc">Gekauft wird nur, wer über der Schwelle liegt. Diese ist <b>dynamisch</b>: mindestens Score 6, in starken Märkten aber automatisch höher (nur die besten ~20 % der Kandidaten). So wird die Latte hoch gehalten, wenn viel Gutes zur Auswahl steht.</p></div>
+
+<div class="p"><span class="name">Verkaufs- &amp; Rebalancing-Schwelle</span> <span class="tech">SELL = 4, REBALANCE = 8</span>
+<p class="desc">Fällt eine bestehende Position unter Score <b>4</b>, wird verkauft. Für die Kapitalbeschaffung (um Besseres zu kaufen) können schwache „Halten"-Positionen unter Score <b>8</b> abgebaut werden.</p></div>
+
+<div class="p"><span class="name">Watch-Kandidat</span> <span class="tech">watch-kandidat</span>
+<p class="desc">Neu entdeckte Werte (aus dem Opportunity-Scan) ohne ausreichende Kurshistorie. Sie bleiben im Beobachtungs-Universum, werden aber erst <b>gekauft, wenn genug Daten</b> (u. a. 200 Tage für SMA200) vorliegen.</p></div>
+
+<!-- ================= DEPOT ================= -->
+<h2 id="depot"><span class="em">💼</span>5. Depot &amp; Positionen</h2>
+<p class="lead">Kennzahlen zu den tatsächlich gehaltenen Werten im Depot.</p>
+
+<div class="p"><span class="name">Stück</span> <span class="tech">stueck</span>
+<p class="desc">Anzahl der gehaltenen Aktien dieser Position.</p></div>
+
+<div class="p"><span class="name">Kaufkurs / Börsenkurs</span> <span class="tech">kaufkurs, boersenkurs</span>
+<p class="desc"><b>Kaufkurs</b> = Preis, zu dem gekauft wurde. <b>Börsenkurs</b> = aktueller Preis. Die Differenz ist der Gewinn/Verlust pro Aktie.</p></div>
+
+<div class="p"><span class="name">Investiert / Börsenwert</span> <span class="tech">investiert, boersenwert</span>
+<p class="desc"><b>Investiert</b> = eingesetztes Kapital (Stück × Kaufkurs). <b>Börsenwert</b> = aktueller Wert (Stück × Börsenkurs).</p></div>
+
+<div class="p"><span class="name">Gewinn/Verlust</span> <span class="tech">gewinn_verlust</span>
+<p class="desc">Börsenwert minus investiertes Kapital – der aktuelle Buchgewinn oder -verlust dieser Position in €.</p></div>
+
+<div class="p"><span class="name">Portfoliowert / Barbestand / Gesamtvermögen</span> <span class="tech">portfoliowert, aktueller_barbestand, gesamtvermoegen</span>
+<p class="desc"><b>Portfoliowert</b> = Wert aller Aktien. <b>Barbestand</b> = freies Cash. <b>Gesamtvermögen</b> = beides zusammen. Es gibt zwei getrennte Töpfe: das <b>10.000 €-Aktien-Depot</b> und das <b>5.000 €-ETF-Depot</b>.</p></div>
+
+<!-- ================= RISK ================= -->
+<h2 id="risk"><span class="em">🚨</span>6. Risiko: Klumpen, Korrelation, Stop-Loss</h2>
+<p class="lead">Diese Kennzahlen überwachen, dass das Depot nicht zu einseitig oder zu verlustanfällig wird.</p>
+
+<div class="p"><span class="name">Klumpenrisiko (Positions- &amp; Sektor-Anteil)</span> <span class="tech">anteil_pct, limits</span>
+<p class="desc">Wie viel Prozent des Depots auf eine einzelne Aktie oder einen Sektor entfallen. Warnung, wenn eine <b>Position &gt; 20 %</b> oder ein <b>Sektor &gt; 30 %</b> ausmacht – dann liegen zu viele Eier in einem Korb.</p>
+<p class="ex">„Sektor Luft- und Raumfahrt macht 36,2 % aus (Limit 30 %)" = Übergewicht, Warnhinweis. Ab <b>60 %</b> werden neue Käufe in dem Sektor ganz blockiert.</p></div>
+
+<div class="p"><span class="name">Korrelation / Cluster</span> <span class="tech">korrelation, cluster</span>
+<p class="desc">Gruppen von Aktien, die sich <b>ähnlich bewegen</b> (z. B. zwei Rüstungswerte). Auch wenn es verschiedene Firmen sind, wirken sie im Crash wie eine – das Cluster zeigt dieses versteckte Konzentrationsrisiko.</p></div>
+
+<div class="p"><span class="name">Beta</span> <span class="tech">beta</span>
+<p class="desc">Wie stark eine Aktie im Vergleich zum Gesamtmarkt (DAX) schwankt. <b>Beta 1,0</b> = bewegt sich wie der Markt, <b>&gt; 1</b> = stärker, <b>&lt; 1</b> = ruhiger. Wird automatisch aus ~1 Jahr Kursdaten berechnet.</p></div>
+
+<div class="p"><span class="name">Stop-Loss (zweistufig, marktbereinigt)</span> <span class="tech">stop_ref_kurs, dax_ref</span>
+<p class="desc">Automatischer Verkaufsschutz gegen Verluste, in zwei Stufen:</p>
+<p class="ex">
+<b>1) Absoluter Hard-Stop −20 %:</b> Fällt eine Position mehr als 20 % unter Kaufkurs, wird <b>immer</b> verkauft (Katastrophenschutz).<br>
+<b>2) Relativer Stop −12 %:</b> Greift, wenn eine Position im Minus ist <b>und</b> ihren erwarteten Kursverlauf (beta-bereinigt gegenüber dem DAX) um mehr als 12 % unterbietet. So fliegt man bei einem allgemeinen Marktdip <b>nicht</b> raus, aber echte Firmen-Schwäche wird früh erkannt.
+</p></div>
+
+<!-- ================= BENCH ================= -->
+<h2 id="bench"><span class="em">📐</span>7. Benchmark (Vergleich mit dem Markt)</h2>
+<p class="lead">Zeigt, ob das Depot besser oder schlechter läuft als der breite Markt – reine Performance ohne Vergleich sagt wenig aus.</p>
+
+<div class="p"><span class="name">Rendite Depot vs. DAX vs. MSCI World</span> <span class="tech">rendite_pct</span>
+<p class="desc">Prozentuale Entwicklung seit dem <b>Anker-Datum</b> (Startpunkt des Vergleichs) – für das eigene Depot, den deutschen Leitindex <b>DAX</b> und den weltweiten <b>MSCI World</b>.</p>
+<p class="ex">„Depot −2,63 % | DAX −1,14 % | MSCI −0,66 %" = das Depot lief in diesem Zeitraum etwas schlechter als der Markt (leichte Underperformance).</p></div>
+
+<div class="p"><span class="name">Anker</span> <span class="tech">anker</span>
+<p class="desc">Der fixe Startpunkt (Datum + Indexstände + Vermögen), auf den sich alle Vergleichsrenditen beziehen. So bleibt der Vergleich fair und stabil.</p></div>
+
+<p class="foot">Erstellt aus dem tatsächlichen Analyse-Code des Dashboards. Die Schwellen (Kauf 6, Verkauf 4, Stop −20 %/−12 % usw.) entsprechen der aktuellen Konfiguration und können sich ändern.</p>
+
+</div>
+</body>
+</html>
