@@ -1,85 +1,117 @@
 {
-  "generated_at": "2026-07-17 08:50",
+  "generated_at": "2026-07-20 08:55",
   "scores": {
     "DE0005557508": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden."
-    },
-    "DE0005936124": {
-      "sentiment_score": 0,
-      "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden."
-    },
-    "DE0007164600": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Nur generische Analysten-Artikel und eine Randnotiz zu einem Drittanbieter-Support-Deal, kein kursrelevantes Ereignis."
+      "confidence": 0.5,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "Zahlreiche Presseartikel loben WM-2030-Medienrechte und defensive Positionierung, aber kein kursrelevantes Zahlenereignis."
+    },
+    "DE0005936124": {
+      "sentiment_score": -2,
+      "veto": true,
+      "confidence": 0.8,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "Kapitalerhöhung über 484 Mio. Euro unter Bezugspreis begleitet von fast 39% Kursabsturz in 30 Tagen belastet akut."
+    },
+    "DE0007164600": {
+      "sentiment_score": 0,
+      "veto": false,
+      "confidence": 0.4,
+      "event_kategorie": "Analyst",
+      "begruendung": "JPMorgan stuft auf Neutral herab, während Quartalszahlen erst am 23. Juli anstehen - gemischt und noch offen."
     },
     "DE000A0D6554": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Serie mehrerer neuer Großaufträge (700 MW, 325 MW, 2x197 MW, 112 MW) zeigt starke Auftragsdynamik."
+      "confidence": 0.9,
+      "event_kategorie": "Guidance",
+      "begruendung": "Ad-hoc-Meldung bestätigt angehobene Prognose bei zweistelligem Wachstum im Turbinengeschäft."
     },
     "DE000A0D9PT0": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Nur generische Analysten-/Dividendenartikel, leicht positiver Grundton ohne konkrete News."
+      "confidence": 0.6,
+      "event_kategorie": "Guidance",
+      "begruendung": "Ad-hoc-News zu robustem Wachstum und höherer Prognose stehen kurzfristigen Kursverlusten wegen Cashflow-Sorgen des CFO gegenüber."
     },
     "DE000A0DJ6J9": {
-      "sentiment_score": -1,
+      "sentiment_score": 3,
       "veto": false,
-      "begruendung": "Q1-Zahlen laut Berichten verfehlt, Analysten senken Erwartungen."
+      "confidence": 1.0,
+      "event_kategorie": "Zahlen",
+      "begruendung": "EQS-Ad-hoc: starke vorläufige Q2-Zahlen mit deutlich angehobener Jahresprognose, zusätzlich Analysten-Upgrade auf 'Buy'."
+    },
+    "DE000A2E4K43": {
+      "sentiment_score": 3,
+      "veto": false,
+      "confidence": 0.9,
+      "event_kategorie": "M&A",
+      "begruendung": "Uber bietet 41,50 Euro je Aktie (127% Prämie) für Übernahme, breit durch mehrere Presseartikel bestätigt."
     },
     "DE000ENAG999": {
-      "sentiment_score": 0,
+      "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Alle Schlagzeilen betreffen offensichtlich andere Unternehmen (Crypto.com, Skanska, SKF, Sidetrade, Getinge), keine E.ON-spezifische News."
+      "confidence": 0.5,
+      "event_kategorie": "Zahlen",
+      "begruendung": "Ad-hoc-News zu steigenden Ergebnissen und stabilem Heimatmarkt, Aktie markiert 4-Wochen-Hoch."
     },
     "DE000ENER6Y0": {
       "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Neuer FLNG-Auftrag (Limited Notice to Proceed von Delfin) positiv, geplante Markenumbenennung zu 'Omterra' ist neutral bis unsicher."
+      "confidence": 0.5,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "Rekord-Auftragseingang von 17,7 Mrd. Euro und S&P-Rating-Anhebung auf BBB+ stehen schwacher Kursentwicklung gegenüber."
     },
     "FR0000073272": {
-      "sentiment_score": 1,
+      "sentiment_score": 3,
       "veto": false,
-      "begruendung": "Neue Entwicklungs-/Produktionsvereinbarung mit Electra für Hybrid-Elektro-Triebwerk ist leicht positiv."
+      "confidence": 0.9,
+      "event_kategorie": "Zahlen",
+      "begruendung": "Mehrere übereinstimmende Ad-hoc-Meldungen zu zweistelligem Umsatzwachstum und starkem Auftragseingang im Zivil- und Luftfahrtgeschäft."
     },
     "FR0014004L86": {
-      "sentiment_score": 0,
+      "sentiment_score": 1,
       "veto": false,
-      "begruendung": "Nur administrative Pflichtmitteilung zur Aktienanzahl, keine Stimmungsrelevanz."
-    },
-    "GB0002634946": {
-      "sentiment_score": 2,
-      "veto": false,
-      "begruendung": "Mehrere neue Aufträge und Marktexpansion (Marinegeschütze Brasilien, Radar, EPAWSS Südkorea, CV90-Getriebe) zeigen starke Nachfrage."
+      "confidence": 0.7,
+      "event_kategorie": "Zahlen",
+      "begruendung": "Mehrere Ad-hoc-Meldungen bestätigen stabile Entwicklung nach soliden Jahreszahlen, gestützt von Flugzeugnachfrage."
     },
     "IT0003856405": {
-      "sentiment_score": 0,
+      "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden."
+      "confidence": 0.8,
+      "event_kategorie": "Zahlen",
+      "begruendung": "Ad-hoc-Meldungen zu solidem Auftragsbestand (56,8 Mrd. Euro), Rüstungsboom und neuer Baykar-Kooperation."
     },
     "NL0010273215": {
       "sentiment_score": 0,
       "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden."
+      "confidence": 0.5,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "Kimi-K3-bedingter Ausverkauf trifft auf starke EUV-Auslieferungen, TSMC-Capex-Pläne und höhere Zwischendividende - gemischt."
     },
     "US5398301094": {
       "sentiment_score": 2,
       "veto": false,
-      "begruendung": "Mehrere neue Großaufträge (u.a. 10,5-Mrd.-USD-Logistikvertrag mit SOCOM, 101,8-Mio.-USD-Air-Force-Auftrag) klar positiv."
+      "confidence": 0.7,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "Mehrere neue Großaufträge (SOCOM 10,5 Mrd. USD, ATACMS-Produktion, PAC-3-Interceptor) stützen die Aktie deutlich."
     },
     "US67066G1040": {
-      "sentiment_score": 0,
+      "sentiment_score": -2,
       "veto": false,
-      "begruendung": "Keine Schlagzeilen vorhanden."
+      "confidence": 0.6,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "Kimi-K3-Ausverkauf und Verlust der Spitzenposition als wertvollstes Unternehmen an Apple belasten die Aktie."
     },
     "US72703X1063": {
       "sentiment_score": -1,
       "veto": false,
-      "begruendung": "Gehäufte Insiderverkäufe von CEO und Mitgründer in Millionenhöhe wirken als Vorsichtssignal."
+      "confidence": 0.5,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "Solide Quartalszahlen stehen umfangreichen Insider-Verkäufen (CEO, Mitgründer) über mehrere Millionen USD gegenüber."
     }
   }
 }

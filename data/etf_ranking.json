@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17 09:00",
+  "generated_at": "2026-07-20 09:00",
   "gewichtung": {
     "momentum": 0.35,
     "risiko": 0.25,
@@ -11,30 +11,30 @@
       {
         "isin": "IE00BM67HN09",
         "ticker": "XDWS.DE",
-        "aktueller_kurs": 48.65,
-        "composite": 74.6,
-        "bucket": "SATELLITE",
+        "aktueller_kurs": 49.175,
+        "composite": 75.8,
+        "bucket": "CORE",
         "warnings": [],
         "momentum": {
-          "score": 75.0,
+          "score": 77.5,
           "parts": {
             "trend": 100.0,
-            "return_12m": 66.9,
-            "rsi": 58.3
+            "return_12m": 69.4,
+            "rsi": 63.0
           },
-          "return_12m_pct": 10.1,
-          "sma_50": 47.57,
-          "sma_200": 46.026,
-          "rsi_14": 56.89
+          "return_12m_pct": 11.6,
+          "sma_50": 47.642,
+          "sma_200": 46.06,
+          "rsi_14": 60.83
         },
         "risiko": {
-          "score": 77.3,
+          "score": 78.8,
           "parts": {
-            "volatilitaet": 67.9,
+            "volatilitaet": 67.8,
             "drawdown": 82.4,
-            "ertrag_risiko": 81.5
+            "ertrag_risiko": 86.1
           },
-          "volatilitaet_pct": 12.83,
+          "volatilitaet_pct": 12.89,
           "max_drawdown_pct": -8.78
         },
         "sentiment": {
@@ -55,78 +55,32 @@
         "peer_total": 5
       },
       {
-        "isin": "IE00BM67HS53",
-        "ticker": "XDWM.DE",
-        "aktueller_kurs": 66.08,
-        "composite": 73.2,
-        "bucket": "SATELLITE",
-        "warnings": [],
-        "momentum": {
-          "score": 66.9,
-          "parts": {
-            "trend": 65.0,
-            "return_12m": 92.2,
-            "rsi": 43.4
-          },
-          "return_12m_pct": 25.3,
-          "sma_50": 67.758,
-          "sma_200": 63.563,
-          "rsi_14": 44.53
-        },
-        "risiko": {
-          "score": 75.0,
-          "parts": {
-            "volatilitaet": 52.4,
-            "drawdown": 72.7,
-            "ertrag_risiko": 100
-          },
-          "volatilitaet_pct": 19.06,
-          "max_drawdown_pct": -13.67
-        },
-        "sentiment": {
-          "score": 70,
-          "raw": 2
-        },
-        "struktur": {
-          "score": 85.0,
-          "parts": {
-            "ter": 85.0,
-            "aum": 85.0
-          },
-          "ter": 0.25,
-          "aum_mio_eur": 641
-        },
-        "wertpapier": "Xtrackers MSCI World Materials UCITS ETF",
-        "peer_rank": 2,
-        "peer_total": 5
-      },
-      {
         "isin": "IE00BL25JP72",
         "ticker": "XDEM.DE",
-        "aktueller_kurs": 84.05,
-        "composite": 67.4,
+        "aktueller_kurs": 82.63,
+        "composite": 66.4,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 67.6,
+          "score": 65.3,
           "parts": {
             "trend": 65.0,
-            "return_12m": 97.0,
-            "rsi": 40.7
+            "return_12m": 94.2,
+            "rsi": 36.6
           },
-          "return_12m_pct": 28.2,
-          "sma_50": 85.757,
-          "sma_200": 74.719,
-          "rsi_14": 42.29
+          "return_12m_pct": 26.5,
+          "sma_50": 85.737,
+          "sma_200": 74.781,
+          "rsi_14": 38.85
         },
         "risiko": {
-          "score": 61.0,
+          "score": 60.1,
           "parts": {
-            "volatilitaet": 27.8,
+            "volatilitaet": 27.5,
             "drawdown": 66.1,
-            "ertrag_risiko": 89.1
+            "ertrag_risiko": 86.6
           },
-          "volatilitaet_pct": 28.87,
+          "volatilitaet_pct": 28.98,
           "max_drawdown_pct": -16.95
         },
         "sentiment": {
@@ -143,37 +97,83 @@
           "aum_mio_eur": 1930
         },
         "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "peer_rank": 2,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BM67HS53",
+        "ticker": "XDWM.DE",
+        "aktueller_kurs": 65.62,
+        "composite": 64.2,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 64.7,
+          "parts": {
+            "trend": 65.0,
+            "return_12m": 88.1,
+            "rsi": 41.0
+          },
+          "return_12m_pct": 22.9,
+          "sma_50": 67.676,
+          "sma_200": 63.608,
+          "rsi_14": 42.54
+        },
+        "risiko": {
+          "score": 74.3,
+          "parts": {
+            "volatilitaet": 52.3,
+            "drawdown": 72.7,
+            "ertrag_risiko": 98.0
+          },
+          "volatilitaet_pct": 19.08,
+          "max_drawdown_pct": -13.67
+        },
+        "sentiment": {
+          "score": 30,
+          "raw": -2
+        },
+        "struktur": {
+          "score": 85.0,
+          "parts": {
+            "ter": 85.0,
+            "aum": 85.0
+          },
+          "ter": 0.25,
+          "aum_mio_eur": 641
+        },
+        "wertpapier": "Xtrackers MSCI World Materials UCITS ETF",
         "peer_rank": 3,
         "peer_total": 5
       },
       {
         "isin": "IE00B1XNHC34",
         "ticker": "IQQH.DE",
-        "aktueller_kurs": 9.38,
-        "composite": 59.9,
+        "aktueller_kurs": 9.198,
+        "composite": 59.2,
         "bucket": "BEOBACHTEN",
         "warnings": [],
         "momentum": {
-          "score": 66.5,
+          "score": 65.5,
           "parts": {
             "trend": 65.0,
             "return_12m": 100,
-            "rsi": 34.6
+            "rsi": 31.6
           },
-          "return_12m_pct": 39.9,
-          "sma_50": 10.462,
-          "sma_200": 9.186,
-          "rsi_14": 37.16
+          "return_12m_pct": 35.2,
+          "sma_50": 10.428,
+          "sma_200": 9.193,
+          "rsi_14": 34.67
         },
         "risiko": {
-          "score": 64.4,
+          "score": 63.2,
           "parts": {
-            "volatilitaet": 32.0,
-            "drawdown": 61.1,
+            "volatilitaet": 31.7,
+            "drawdown": 58.0,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 27.21,
-          "max_drawdown_pct": -19.43
+          "volatilitaet_pct": 27.34,
+          "max_drawdown_pct": -20.99
         },
         "sentiment": {
           "score": 30,
@@ -195,31 +195,31 @@
       {
         "isin": "IE000NDWFGA5",
         "ticker": "URNU.DE",
-        "aktueller_kurs": 20.84,
-        "composite": 37.8,
+        "aktueller_kurs": 20.235,
+        "composite": 37.7,
         "bucket": "MEIDEN",
         "warnings": [],
         "momentum": {
-          "score": 27.3,
+          "score": 28.6,
           "parts": {
             "trend": 0.0,
-            "return_12m": 55.0,
-            "rsi": 27.0
+            "return_12m": 48.0,
+            "rsi": 37.6
           },
-          "return_12m_pct": 3.0,
-          "sma_50": 24.644,
-          "sma_200": 25.906,
-          "rsi_14": 30.87
+          "return_12m_pct": -1.2,
+          "sma_50": 24.436,
+          "sma_200": 25.879,
+          "rsi_14": 28.21
         },
         "risiko": {
-          "score": 29.1,
+          "score": 26.7,
           "parts": {
             "volatilitaet": 0,
-            "drawdown": 35.0,
-            "ertrag_risiko": 52.4
+            "drawdown": 31.1,
+            "ertrag_risiko": 49.1
           },
-          "volatilitaet_pct": 49.66,
-          "max_drawdown_pct": -32.5
+          "volatilitaet_pct": 49.8,
+          "max_drawdown_pct": -34.46
         },
         "sentiment": {
           "score": 40,
@@ -243,30 +243,30 @@
       {
         "isin": "IE00BP3QZ601",
         "ticker": "IS3Q.DE",
-        "aktueller_kurs": 77.82,
-        "composite": 80.3,
+        "aktueller_kurs": 76.95,
+        "composite": 78.7,
         "bucket": "CORE",
         "warnings": [],
         "momentum": {
-          "score": 86.0,
+          "score": 81.3,
           "parts": {
             "trend": 100.0,
-            "return_12m": 87.9,
-            "rsi": 70.0
+            "return_12m": 86.7,
+            "rsi": 57.1
           },
-          "return_12m_pct": 22.8,
-          "sma_50": 75.256,
-          "sma_200": 70.357,
-          "rsi_14": 66.64
+          "return_12m_pct": 22.0,
+          "sma_50": 75.329,
+          "sma_200": 70.41,
+          "rsi_14": 55.95
         },
         "risiko": {
-          "score": 87.0,
+          "score": 86.9,
           "parts": {
-            "volatilitaet": 73.7,
+            "volatilitaet": 73.5,
             "drawdown": 87.3,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 10.54,
+          "volatilitaet_pct": 10.61,
           "max_drawdown_pct": -6.33
         },
         "sentiment": {
@@ -287,32 +287,78 @@
         "peer_total": 5
       },
       {
-        "isin": "IE00BL25JP72",
-        "ticker": "XDEM.DE",
-        "aktueller_kurs": 84.05,
-        "composite": 67.4,
+        "isin": "IE000OJ5TQP4",
+        "ticker": "ASWC.DE",
+        "aktueller_kurs": 17.946,
+        "composite": 66.9,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 67.6,
+          "score": 74.5,
           "parts": {
-            "trend": 65.0,
-            "return_12m": 97.0,
-            "rsi": 40.7
+            "trend": 100.0,
+            "return_12m": 73.2,
+            "rsi": 50.3
           },
-          "return_12m_pct": 28.2,
-          "sma_50": 85.757,
-          "sma_200": 74.719,
-          "rsi_14": 42.29
+          "return_12m_pct": 13.9,
+          "sma_50": 17.777,
+          "sma_200": 16.993,
+          "rsi_14": 50.24
         },
         "risiko": {
-          "score": 61.0,
+          "score": 49.2,
           "parts": {
-            "volatilitaet": 27.8,
-            "drawdown": 66.1,
-            "ertrag_risiko": 89.1
+            "volatilitaet": 24.5,
+            "drawdown": 54.7,
+            "ertrag_risiko": 68.4
           },
-          "volatilitaet_pct": 28.87,
+          "volatilitaet_pct": 30.21,
+          "max_drawdown_pct": -22.64
+        },
+        "sentiment": {
+          "score": 60,
+          "raw": 1
+        },
+        "struktur": {
+          "score": 82.5,
+          "parts": {
+            "ter": 65.0,
+            "aum": 100.0
+          },
+          "ter": 0.49,
+          "aum_mio_eur": 2777
+        },
+        "wertpapier": "HANetf Future of Defence UCITS ETF",
+        "peer_rank": 2,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BL25JP72",
+        "ticker": "XDEM.DE",
+        "aktueller_kurs": 82.63,
+        "composite": 66.4,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 65.3,
+          "parts": {
+            "trend": 65.0,
+            "return_12m": 94.2,
+            "rsi": 36.6
+          },
+          "return_12m_pct": 26.5,
+          "sma_50": 85.737,
+          "sma_200": 74.781,
+          "rsi_14": 38.85
+        },
+        "risiko": {
+          "score": 60.1,
+          "parts": {
+            "volatilitaet": 27.5,
+            "drawdown": 66.1,
+            "ertrag_risiko": 86.6
+          },
+          "volatilitaet_pct": 28.98,
           "max_drawdown_pct": -16.95
         },
         "sentiment": {
@@ -329,105 +375,13 @@
           "aum_mio_eur": 1930
         },
         "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
-        "peer_rank": 2,
-        "peer_total": 5
-      },
-      {
-        "isin": "IE000OJ5TQP4",
-        "ticker": "ASWC.DE",
-        "aktueller_kurs": 17.874,
-        "composite": 64.5,
-        "bucket": "SATELLITE",
-        "warnings": [],
-        "momentum": {
-          "score": 73.6,
-          "parts": {
-            "trend": 100.0,
-            "return_12m": 72.1,
-            "rsi": 48.7
-          },
-          "return_12m_pct": 13.3,
-          "sma_50": 17.749,
-          "sma_200": 16.986,
-          "rsi_14": 48.94
-        },
-        "risiko": {
-          "score": 49.0,
-          "parts": {
-            "volatilitaet": 24.6,
-            "drawdown": 54.7,
-            "ertrag_risiko": 67.6
-          },
-          "volatilitaet_pct": 30.15,
-          "max_drawdown_pct": -22.64
-        },
-        "sentiment": {
-          "score": 50,
-          "raw": 0
-        },
-        "struktur": {
-          "score": 82.5,
-          "parts": {
-            "ter": 65.0,
-            "aum": 100.0
-          },
-          "ter": 0.49,
-          "aum_mio_eur": 2777
-        },
-        "wertpapier": "HANetf Future of Defence UCITS ETF",
         "peer_rank": 3,
-        "peer_total": 5
-      },
-      {
-        "isin": "IE0002Y8CX98",
-        "ticker": "WDEF.MI",
-        "aktueller_kurs": 29.535,
-        "composite": 51.3,
-        "bucket": "BEOBACHTEN",
-        "warnings": [],
-        "momentum": {
-          "score": 27.9,
-          "parts": {
-            "trend": 0.0,
-            "return_12m": 43.6,
-            "rsi": 40.0
-          },
-          "return_12m_pct": -3.8,
-          "sma_50": 30.327,
-          "sma_200": 31.761,
-          "rsi_14": 41.63
-        },
-        "risiko": {
-          "score": 44.2,
-          "parts": {
-            "volatilitaet": 27.0,
-            "drawdown": 60.9,
-            "ertrag_risiko": 44.7
-          },
-          "volatilitaet_pct": 29.21,
-          "max_drawdown_pct": -19.53
-        },
-        "sentiment": {
-          "score": 70,
-          "raw": 2
-        },
-        "struktur": {
-          "score": 82.5,
-          "parts": {
-            "ter": 65.0,
-            "aum": 100.0
-          },
-          "ter": 0.4,
-          "aum_mio_eur": 4400
-        },
-        "wertpapier": "WisdomTree Europe Defence UCITS ETF",
-        "peer_rank": 4,
         "peer_total": 5
       },
       {
         "isin": "IE000YYE6WK5",
         "ticker": "DFEN.DE",
-        "aktueller_kurs": 50.09,
+        "aktueller_kurs": 50.19,
         "composite": 50.5,
         "bucket": "BEOBACHTEN",
         "warnings": [],
@@ -435,22 +389,22 @@
           "score": 29.5,
           "parts": {
             "trend": 0.0,
-            "return_12m": 52.0,
-            "rsi": 36.6
+            "return_12m": 51.1,
+            "rsi": 37.4
           },
-          "return_12m_pct": 1.2,
-          "sma_50": 52.777,
-          "sma_200": 55.684,
-          "rsi_14": 38.82
+          "return_12m_pct": 0.7,
+          "sma_50": 52.715,
+          "sma_200": 55.661,
+          "rsi_14": 39.52
         },
         "risiko": {
-          "score": 46.9,
+          "score": 46.6,
           "parts": {
-            "volatilitaet": 35.7,
+            "volatilitaet": 35.6,
             "drawdown": 53.2,
-            "ertrag_risiko": 51.9
+            "ertrag_risiko": 51.0
           },
-          "volatilitaet_pct": 25.71,
+          "volatilitaet_pct": 25.75,
           "max_drawdown_pct": -23.39
         },
         "sentiment": {
@@ -467,6 +421,52 @@
           "aum_mio_eur": 6345
         },
         "wertpapier": "VanEck Defense UCITS ETF",
+        "peer_rank": 4,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE0002Y8CX98",
+        "ticker": "WDEF.MI",
+        "aktueller_kurs": 30.07,
+        "composite": 50.4,
+        "bucket": "BEOBACHTEN",
+        "warnings": [],
+        "momentum": {
+          "score": 30.7,
+          "parts": {
+            "trend": 0.0,
+            "return_12m": 45.8,
+            "rsi": 46.3
+          },
+          "return_12m_pct": -2.5,
+          "sma_50": 30.345,
+          "sma_200": 31.746,
+          "rsi_14": 46.9
+        },
+        "risiko": {
+          "score": 44.8,
+          "parts": {
+            "volatilitaet": 27.0,
+            "drawdown": 60.9,
+            "ertrag_risiko": 46.5
+          },
+          "volatilitaet_pct": 29.22,
+          "max_drawdown_pct": -19.53
+        },
+        "sentiment": {
+          "score": 60,
+          "raw": 1
+        },
+        "struktur": {
+          "score": 82.5,
+          "parts": {
+            "ter": 65.0,
+            "aum": 100.0
+          },
+          "ter": 0.4,
+          "aum_mio_eur": 4400
+        },
+        "wertpapier": "WisdomTree Europe Defence UCITS ETF",
         "peer_rank": 5,
         "peer_total": 5
       }
@@ -475,30 +475,30 @@
       {
         "isin": "IE00BP3QZ601",
         "ticker": "IS3Q.DE",
-        "aktueller_kurs": 77.82,
-        "composite": 80.3,
+        "aktueller_kurs": 76.95,
+        "composite": 78.7,
         "bucket": "CORE",
         "warnings": [],
         "momentum": {
-          "score": 86.0,
+          "score": 81.3,
           "parts": {
             "trend": 100.0,
-            "return_12m": 87.9,
-            "rsi": 70.0
+            "return_12m": 86.7,
+            "rsi": 57.1
           },
-          "return_12m_pct": 22.8,
-          "sma_50": 75.256,
-          "sma_200": 70.357,
-          "rsi_14": 66.64
+          "return_12m_pct": 22.0,
+          "sma_50": 75.329,
+          "sma_200": 70.41,
+          "rsi_14": 55.95
         },
         "risiko": {
-          "score": 87.0,
+          "score": 86.9,
           "parts": {
-            "volatilitaet": 73.7,
+            "volatilitaet": 73.5,
             "drawdown": 87.3,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 10.54,
+          "volatilitaet_pct": 10.61,
           "max_drawdown_pct": -6.33
         },
         "sentiment": {
@@ -521,35 +521,35 @@
       {
         "isin": "IE00BM67HV82",
         "ticker": "XDWI.DE",
-        "aktueller_kurs": 75.41,
-        "composite": 70.3,
+        "aktueller_kurs": 75.15,
+        "composite": 74.1,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 76.9,
+          "score": 76.4,
           "parts": {
             "trend": 100.0,
-            "return_12m": 82.7,
-            "rsi": 48.0
+            "return_12m": 83.1,
+            "rsi": 46.0
           },
-          "return_12m_pct": 19.6,
-          "sma_50": 74.682,
-          "sma_200": 70.063,
-          "rsi_14": 48.31
+          "return_12m_pct": 19.9,
+          "sma_50": 74.708,
+          "sma_200": 70.118,
+          "rsi_14": 46.66
         },
         "risiko": {
           "score": 81.4,
           "parts": {
-            "volatilitaet": 62.7,
+            "volatilitaet": 62.6,
             "drawdown": 81.4,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 14.93,
+          "volatilitaet_pct": 14.95,
           "max_drawdown_pct": -9.28
         },
         "sentiment": {
-          "score": 30,
-          "raw": -2
+          "score": 50,
+          "raw": 0
         },
         "struktur": {
           "score": 85.0,
@@ -567,35 +567,35 @@
       {
         "isin": "IE00B4LN9N13",
         "ticker": "2B7C.DE",
-        "aktueller_kurs": 13.362,
-        "composite": 67.8,
+        "aktueller_kurs": 13.34,
+        "composite": 71.9,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
           "score": 79.6,
           "parts": {
             "trend": 100.0,
-            "return_12m": 86.6,
-            "rsi": 52.1
+            "return_12m": 87.8,
+            "rsi": 51.1
           },
-          "return_12m_pct": 22.0,
-          "sma_50": 13.015,
-          "sma_200": 12.062,
-          "rsi_14": 51.73
+          "return_12m_pct": 22.7,
+          "sma_50": 13.03,
+          "sma_200": 12.074,
+          "rsi_14": 50.93
         },
         "risiko": {
-          "score": 61.7,
+          "score": 62.0,
           "parts": {
-            "volatilitaet": 34.4,
+            "volatilitaet": 34.3,
             "drawdown": 67.2,
-            "ertrag_risiko": 83.5
+            "ertrag_risiko": 84.5
           },
-          "volatilitaet_pct": 26.23,
+          "volatilitaet_pct": 26.27,
           "max_drawdown_pct": -16.4
         },
         "sentiment": {
-          "score": 30,
-          "raw": -2
+          "score": 50,
+          "raw": 0
         },
         "struktur": {
           "score": 92.5,
@@ -613,30 +613,30 @@
       {
         "isin": "IE00BL25JP72",
         "ticker": "XDEM.DE",
-        "aktueller_kurs": 84.05,
-        "composite": 67.4,
+        "aktueller_kurs": 82.63,
+        "composite": 66.4,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 67.6,
+          "score": 65.3,
           "parts": {
             "trend": 65.0,
-            "return_12m": 97.0,
-            "rsi": 40.7
+            "return_12m": 94.2,
+            "rsi": 36.6
           },
-          "return_12m_pct": 28.2,
-          "sma_50": 85.757,
-          "sma_200": 74.719,
-          "rsi_14": 42.29
+          "return_12m_pct": 26.5,
+          "sma_50": 85.737,
+          "sma_200": 74.781,
+          "rsi_14": 38.85
         },
         "risiko": {
-          "score": 61.0,
+          "score": 60.1,
           "parts": {
-            "volatilitaet": 27.8,
+            "volatilitaet": 27.5,
             "drawdown": 66.1,
-            "ertrag_risiko": 89.1
+            "ertrag_risiko": 86.6
           },
-          "volatilitaet_pct": 28.87,
+          "volatilitaet_pct": 28.98,
           "max_drawdown_pct": -16.95
         },
         "sentiment": {
@@ -659,37 +659,37 @@
       {
         "isin": "IE000YU9K6K2",
         "ticker": "JEDI.DE",
-        "aktueller_kurs": 70.77,
-        "composite": 47.2,
+        "aktueller_kurs": 69.77,
+        "composite": 50.3,
         "bucket": "BEOBACHTEN",
         "warnings": [
           "Drawdown > 40% bei negativem Sentiment"
         ],
         "momentum": {
-          "score": 53.8,
+          "score": 58.0,
           "parts": {
             "trend": 35.0,
             "return_12m": 100,
-            "rsi": 26.3
+            "rsi": 39.0
           },
-          "return_12m_pct": 56.7,
-          "sma_50": 91.121,
-          "sma_200": 71.437,
-          "rsi_14": 30.23
+          "return_12m_pct": 55.1,
+          "sma_50": 90.607,
+          "sma_200": 71.536,
+          "rsi_14": 29.28
         },
         "risiko": {
-          "score": 39.3,
+          "score": 38.2,
           "parts": {
             "volatilitaet": 0,
-            "drawdown": 19.8,
-            "ertrag_risiko": 98.0
+            "drawdown": 18.1,
+            "ertrag_risiko": 96.6
           },
-          "volatilitaet_pct": 47.19,
-          "max_drawdown_pct": -40.11
+          "volatilitaet_pct": 47.3,
+          "max_drawdown_pct": -40.95
         },
         "sentiment": {
-          "score": 20,
-          "raw": -3
+          "score": 30,
+          "raw": -2
         },
         "struktur": {
           "score": 72.5,
@@ -707,78 +707,32 @@
     ],
     "Satellitentechnik": [
       {
-        "isin": "IE00BYPLS672",
-        "ticker": "USPY.DE",
-        "aktueller_kurs": 39.2,
+        "isin": "IE000CK5G8J7",
+        "ticker": "CBUX.DE",
+        "aktueller_kurs": 6.333,
         "composite": 74.6,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 86.5,
+          "score": 84.4,
           "parts": {
             "trend": 100.0,
-            "return_12m": 100,
-            "rsi": 59.5
+            "return_12m": 83.8,
+            "rsi": 69.4
           },
-          "return_12m_pct": 43.5,
-          "sma_50": 35.751,
-          "sma_200": 28.863,
-          "rsi_14": 57.88
+          "return_12m_pct": 20.3,
+          "sma_50": 6.124,
+          "sma_200": 5.797,
+          "rsi_14": 66.16
         },
         "risiko": {
-          "score": 63.2,
+          "score": 88.2,
           "parts": {
-            "volatilitaet": 28.8,
-            "drawdown": 60.7,
-            "ertrag_risiko": 100
-          },
-          "volatilitaet_pct": 28.49,
-          "max_drawdown_pct": -19.63
-        },
-        "sentiment": {
-          "score": 80,
-          "raw": 3
-        },
-        "struktur": {
-          "score": 62.5,
-          "parts": {
-            "ter": 25.0,
-            "aum": 100.0
-          },
-          "ter": 0.69,
-          "aum_mio_eur": 3191
-        },
-        "wertpapier": "L&G Cyber Security UCITS ETF",
-        "peer_rank": 1,
-        "peer_total": 5
-      },
-      {
-        "isin": "IE000CK5G8J7",
-        "ticker": "CBUX.DE",
-        "aktueller_kurs": 6.288,
-        "composite": 74.0,
-        "bucket": "SATELLITE",
-        "warnings": [],
-        "momentum": {
-          "score": 82.7,
-          "parts": {
-            "trend": 100.0,
-            "return_12m": 83.1,
-            "rsi": 64.9
-          },
-          "return_12m_pct": 19.8,
-          "sma_50": 6.116,
-          "sma_200": 5.792,
-          "rsi_14": 62.41
-        },
-        "risiko": {
-          "score": 88.3,
-          "parts": {
-            "volatilitaet": 73.3,
+            "volatilitaet": 73.2,
             "drawdown": 91.6,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 10.69,
+          "volatilitaet_pct": 10.73,
           "max_drawdown_pct": -4.22
         },
         "sentiment": {
@@ -795,36 +749,82 @@
           "aum_mio_eur": 153
         },
         "wertpapier": "iShares Global Infrastructure UCITS ETF",
+        "peer_rank": 1,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BYPLS672",
+        "ticker": "USPY.DE",
+        "aktueller_kurs": 38.84,
+        "composite": 74.3,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 85.7,
+          "parts": {
+            "trend": 100.0,
+            "return_12m": 100,
+            "rsi": 57.0
+          },
+          "return_12m_pct": 41.9,
+          "sma_50": 35.921,
+          "sma_200": 28.917,
+          "rsi_14": 55.83
+        },
+        "risiko": {
+          "score": 63.1,
+          "parts": {
+            "volatilitaet": 28.6,
+            "drawdown": 60.7,
+            "ertrag_risiko": 100
+          },
+          "volatilitaet_pct": 28.56,
+          "max_drawdown_pct": -19.63
+        },
+        "sentiment": {
+          "score": 80,
+          "raw": 3
+        },
+        "struktur": {
+          "score": 62.5,
+          "parts": {
+            "ter": 25.0,
+            "aum": 100.0
+          },
+          "ter": 0.69,
+          "aum_mio_eur": 3191
+        },
+        "wertpapier": "L&G Cyber Security UCITS ETF",
         "peer_rank": 2,
         "peer_total": 5
       },
       {
         "isin": "IE00BYVQ9F29",
         "ticker": "NQSE.DE",
-        "aktueller_kurs": 16.966,
-        "composite": 71.2,
+        "aktueller_kurs": 16.59,
+        "composite": 69.2,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 66.7,
+          "score": 61.9,
           "parts": {
             "trend": 65.0,
-            "return_12m": 90.0,
-            "rsi": 45.0
+            "return_12m": 83.9,
+            "rsi": 36.9
           },
-          "return_12m_pct": 24.0,
-          "sma_50": 17.233,
-          "sma_200": 15.456,
-          "rsi_14": 45.83
+          "return_12m_pct": 20.3,
+          "sma_50": 17.216,
+          "sma_200": 15.464,
+          "rsi_14": 39.06
         },
         "risiko": {
-          "score": 77.5,
+          "score": 76.1,
           "parts": {
-            "volatilitaet": 56.4,
+            "volatilitaet": 55.9,
             "drawdown": 76.3,
-            "ertrag_risiko": 100
+            "ertrag_risiko": 96.1
           },
-          "volatilitaet_pct": 17.45,
+          "volatilitaet_pct": 17.63,
           "max_drawdown_pct": -11.87
         },
         "sentiment": {
@@ -847,35 +847,35 @@
       {
         "isin": "IE00BYZK4552",
         "ticker": "2B76.DE",
-        "aktueller_kurs": 17.524,
-        "composite": 67.9,
+        "aktueller_kurs": 17.006,
+        "composite": 64.6,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 68.6,
+          "score": 65.9,
           "parts": {
             "trend": 65.0,
-            "return_12m": 100,
-            "rsi": 40.9
+            "return_12m": 97.7,
+            "rsi": 34.8
           },
-          "return_12m_pct": 31.6,
-          "sma_50": 17.949,
-          "sma_200": 15.202,
-          "rsi_14": 42.4
+          "return_12m_pct": 28.6,
+          "sma_50": 17.928,
+          "sma_200": 15.217,
+          "rsi_14": 37.35
         },
         "risiko": {
-          "score": 53.7,
+          "score": 52.3,
           "parts": {
-            "volatilitaet": 17.7,
+            "volatilitaet": 17.2,
             "drawdown": 55.2,
-            "ertrag_risiko": 88.4
+            "ertrag_risiko": 84.6
           },
-          "volatilitaet_pct": 32.94,
+          "volatilitaet_pct": 33.14,
           "max_drawdown_pct": -22.42
         },
         "sentiment": {
-          "score": 70,
-          "raw": 2
+          "score": 60,
+          "raw": 1
         },
         "struktur": {
           "score": 82.5,
@@ -893,37 +893,37 @@
       {
         "isin": "IE000YU9K6K2",
         "ticker": "JEDI.DE",
-        "aktueller_kurs": 70.77,
-        "composite": 47.2,
+        "aktueller_kurs": 69.77,
+        "composite": 50.3,
         "bucket": "BEOBACHTEN",
         "warnings": [
           "Drawdown > 40% bei negativem Sentiment"
         ],
         "momentum": {
-          "score": 53.8,
+          "score": 58.0,
           "parts": {
             "trend": 35.0,
             "return_12m": 100,
-            "rsi": 26.3
+            "rsi": 39.0
           },
-          "return_12m_pct": 56.7,
-          "sma_50": 91.121,
-          "sma_200": 71.437,
-          "rsi_14": 30.23
+          "return_12m_pct": 55.1,
+          "sma_50": 90.607,
+          "sma_200": 71.536,
+          "rsi_14": 29.28
         },
         "risiko": {
-          "score": 39.3,
+          "score": 38.2,
           "parts": {
             "volatilitaet": 0,
-            "drawdown": 19.8,
-            "ertrag_risiko": 98.0
+            "drawdown": 18.1,
+            "ertrag_risiko": 96.6
           },
-          "volatilitaet_pct": 47.19,
-          "max_drawdown_pct": -40.11
+          "volatilitaet_pct": 47.3,
+          "max_drawdown_pct": -40.95
         },
         "sentiment": {
-          "score": 20,
-          "raw": -3
+          "score": 30,
+          "raw": -2
         },
         "struktur": {
           "score": 72.5,
@@ -943,30 +943,30 @@
       {
         "isin": "IE00BYPLS672",
         "ticker": "USPY.DE",
-        "aktueller_kurs": 39.2,
-        "composite": 74.6,
+        "aktueller_kurs": 38.84,
+        "composite": 74.3,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 86.5,
+          "score": 85.7,
           "parts": {
             "trend": 100.0,
             "return_12m": 100,
-            "rsi": 59.5
+            "rsi": 57.0
           },
-          "return_12m_pct": 43.5,
-          "sma_50": 35.751,
-          "sma_200": 28.863,
-          "rsi_14": 57.88
+          "return_12m_pct": 41.9,
+          "sma_50": 35.921,
+          "sma_200": 28.917,
+          "rsi_14": 55.83
         },
         "risiko": {
-          "score": 63.2,
+          "score": 63.1,
           "parts": {
-            "volatilitaet": 28.8,
+            "volatilitaet": 28.6,
             "drawdown": 60.7,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 28.49,
+          "volatilitaet_pct": 28.56,
           "max_drawdown_pct": -19.63
         },
         "sentiment": {
@@ -989,30 +989,30 @@
       {
         "isin": "IE00BM67HT60",
         "ticker": "XDWT.DE",
-        "aktueller_kurs": 120.82,
-        "composite": 69.1,
+        "aktueller_kurs": 118.78,
+        "composite": 68.4,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 70.7,
+          "score": 68.8,
           "parts": {
             "trend": 65.0,
             "return_12m": 100,
-            "rsi": 47.0
+            "rsi": 41.4
           },
-          "return_12m_pct": 31.5,
-          "sma_50": 121.604,
-          "sma_200": 105.383,
-          "rsi_14": 47.5
+          "return_12m_pct": 30.1,
+          "sma_50": 121.616,
+          "sma_200": 105.477,
+          "rsi_14": 42.81
         },
         "risiko": {
-          "score": 71.3,
+          "score": 71.2,
           "parts": {
-            "volatilitaet": 45.1,
+            "volatilitaet": 44.8,
             "drawdown": 68.8,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 21.97,
+          "volatilitaet_pct": 22.08,
           "max_drawdown_pct": -15.59
         },
         "sentiment": {
@@ -1033,78 +1033,32 @@
         "peer_total": 5
       },
       {
-        "isin": "IE00BYZK4552",
-        "ticker": "2B76.DE",
-        "aktueller_kurs": 17.524,
-        "composite": 67.9,
-        "bucket": "SATELLITE",
-        "warnings": [],
-        "momentum": {
-          "score": 68.6,
-          "parts": {
-            "trend": 65.0,
-            "return_12m": 100,
-            "rsi": 40.9
-          },
-          "return_12m_pct": 31.6,
-          "sma_50": 17.949,
-          "sma_200": 15.202,
-          "rsi_14": 42.4
-        },
-        "risiko": {
-          "score": 53.7,
-          "parts": {
-            "volatilitaet": 17.7,
-            "drawdown": 55.2,
-            "ertrag_risiko": 88.4
-          },
-          "volatilitaet_pct": 32.94,
-          "max_drawdown_pct": -22.42
-        },
-        "sentiment": {
-          "score": 70,
-          "raw": 2
-        },
-        "struktur": {
-          "score": 82.5,
-          "parts": {
-            "ter": 65.0,
-            "aum": 100.0
-          },
-          "ter": 0.4,
-          "aum_mio_eur": 4142
-        },
-        "wertpapier": "iShares Automation & Robotics UCITS ETF",
-        "peer_rank": 3,
-        "peer_total": 5
-      },
-      {
         "isin": "IE00BL25JP72",
         "ticker": "XDEM.DE",
-        "aktueller_kurs": 84.05,
-        "composite": 67.4,
+        "aktueller_kurs": 82.63,
+        "composite": 66.4,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 67.6,
+          "score": 65.3,
           "parts": {
             "trend": 65.0,
-            "return_12m": 97.0,
-            "rsi": 40.7
+            "return_12m": 94.2,
+            "rsi": 36.6
           },
-          "return_12m_pct": 28.2,
-          "sma_50": 85.757,
-          "sma_200": 74.719,
-          "rsi_14": 42.29
+          "return_12m_pct": 26.5,
+          "sma_50": 85.737,
+          "sma_200": 74.781,
+          "rsi_14": 38.85
         },
         "risiko": {
-          "score": 61.0,
+          "score": 60.1,
           "parts": {
-            "volatilitaet": 27.8,
+            "volatilitaet": 27.5,
             "drawdown": 66.1,
-            "ertrag_risiko": 89.1
+            "ertrag_risiko": 86.6
           },
-          "volatilitaet_pct": 28.87,
+          "volatilitaet_pct": 28.98,
           "max_drawdown_pct": -16.95
         },
         "sentiment": {
@@ -1121,41 +1075,87 @@
           "aum_mio_eur": 1930
         },
         "wertpapier": "Xtrackers MSCI World Momentum UCITS ETF",
+        "peer_rank": 3,
+        "peer_total": 5
+      },
+      {
+        "isin": "IE00BYZK4552",
+        "ticker": "2B76.DE",
+        "aktueller_kurs": 17.006,
+        "composite": 64.6,
+        "bucket": "SATELLITE",
+        "warnings": [],
+        "momentum": {
+          "score": 65.9,
+          "parts": {
+            "trend": 65.0,
+            "return_12m": 97.7,
+            "rsi": 34.8
+          },
+          "return_12m_pct": 28.6,
+          "sma_50": 17.928,
+          "sma_200": 15.217,
+          "rsi_14": 37.35
+        },
+        "risiko": {
+          "score": 52.3,
+          "parts": {
+            "volatilitaet": 17.2,
+            "drawdown": 55.2,
+            "ertrag_risiko": 84.6
+          },
+          "volatilitaet_pct": 33.14,
+          "max_drawdown_pct": -22.42
+        },
+        "sentiment": {
+          "score": 60,
+          "raw": 1
+        },
+        "struktur": {
+          "score": 82.5,
+          "parts": {
+            "ter": 65.0,
+            "aum": 100.0
+          },
+          "ter": 0.4,
+          "aum_mio_eur": 4142
+        },
+        "wertpapier": "iShares Automation & Robotics UCITS ETF",
         "peer_rank": 4,
         "peer_total": 5
       },
       {
         "isin": "IE00BMC38736",
         "ticker": "VVSM.DE",
-        "aktueller_kurs": 94.3,
-        "composite": 63.8,
+        "aktueller_kurs": 91.0,
+        "composite": 60.8,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 69.1,
+          "score": 67.6,
           "parts": {
             "trend": 65.0,
             "return_12m": 100,
-            "rsi": 42.2
+            "rsi": 37.7
           },
-          "return_12m_pct": 124.2,
-          "sma_50": 97.129,
-          "sma_200": 67.847,
-          "rsi_14": 43.49
+          "return_12m_pct": 117.7,
+          "sma_50": 97.063,
+          "sma_200": 67.831,
+          "rsi_14": 39.74
         },
         "risiko": {
-          "score": 60.6,
+          "score": 58.4,
           "parts": {
-            "volatilitaet": 9.0,
-            "drawdown": 72.8,
+            "volatilitaet": 8.4,
+            "drawdown": 66.7,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 36.41,
-          "max_drawdown_pct": -13.61
+          "volatilitaet_pct": 36.66,
+          "max_drawdown_pct": -16.64
         },
         "sentiment": {
-          "score": 30,
-          "raw": -2
+          "score": 20,
+          "raw": -3
         },
         "struktur": {
           "score": 92.5,
@@ -1175,21 +1175,21 @@
       {
         "isin": "IE00BM67HQ30",
         "ticker": "XDWU.DE",
-        "aktueller_kurs": 42.795,
-        "composite": 75.7,
+        "aktueller_kurs": 43.2,
+        "composite": 80.2,
         "bucket": "CORE",
         "warnings": [],
         "momentum": {
-          "score": 78.7,
+          "score": 80.1,
           "parts": {
             "trend": 100.0,
-            "return_12m": 82.8,
-            "rsi": 53.4
+            "return_12m": 81.4,
+            "rsi": 58.9
           },
-          "return_12m_pct": 19.7,
-          "sma_50": 41.992,
-          "sma_200": 40.677,
-          "rsi_14": 52.81
+          "return_12m_pct": 18.8,
+          "sma_50": 42.032,
+          "sma_200": 40.709,
+          "rsi_14": 57.44
         },
         "risiko": {
           "score": 84.7,
@@ -1202,8 +1202,8 @@
           "max_drawdown_pct": -7.3
         },
         "sentiment": {
-          "score": 50,
-          "raw": 0
+          "score": 70,
+          "raw": 2
         },
         "struktur": {
           "score": 85.0,
@@ -1221,35 +1221,35 @@
       {
         "isin": "LU1834988864",
         "ticker": "UTI.MI",
-        "aktueller_kurs": 104.86,
-        "composite": 75.0,
+        "aktueller_kurs": 106.5,
+        "composite": 79.9,
         "bucket": "CORE",
         "warnings": [],
         "momentum": {
-          "score": 84.1,
+          "score": 86.7,
           "parts": {
             "trend": 100.0,
             "return_12m": 100,
-            "rsi": 52.3
+            "rsi": 60.0
           },
-          "return_12m_pct": 30.6,
-          "sma_50": 103.089,
-          "sma_200": 96.659,
-          "rsi_14": 51.9
+          "return_12m_pct": 30.7,
+          "sma_50": 103.182,
+          "sma_200": 96.798,
+          "rsi_14": 58.31
         },
         "risiko": {
           "score": 82.3,
           "parts": {
-            "volatilitaet": 61.5,
+            "volatilitaet": 61.4,
             "drawdown": 85.4,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 15.38,
+          "volatilitaet_pct": 15.45,
           "max_drawdown_pct": -7.29
         },
         "sentiment": {
-          "score": 50,
-          "raw": 0
+          "score": 70,
+          "raw": 2
         },
         "struktur": {
           "score": 75.0,
@@ -1267,30 +1267,30 @@
       {
         "isin": "IE000CK5G8J7",
         "ticker": "CBUX.DE",
-        "aktueller_kurs": 6.288,
-        "composite": 74.0,
+        "aktueller_kurs": 6.333,
+        "composite": 74.6,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 82.7,
+          "score": 84.4,
           "parts": {
             "trend": 100.0,
-            "return_12m": 83.1,
-            "rsi": 64.9
+            "return_12m": 83.8,
+            "rsi": 69.4
           },
-          "return_12m_pct": 19.8,
-          "sma_50": 6.116,
-          "sma_200": 5.792,
-          "rsi_14": 62.41
+          "return_12m_pct": 20.3,
+          "sma_50": 6.124,
+          "sma_200": 5.797,
+          "rsi_14": 66.16
         },
         "risiko": {
-          "score": 88.3,
+          "score": 88.2,
           "parts": {
-            "volatilitaet": 73.3,
+            "volatilitaet": 73.2,
             "drawdown": 91.6,
             "ertrag_risiko": 100
           },
-          "volatilitaet_pct": 10.69,
+          "volatilitaet_pct": 10.73,
           "max_drawdown_pct": -4.22
         },
         "sentiment": {
@@ -1313,30 +1313,30 @@
       {
         "isin": "IE00BL25JN58",
         "ticker": "XDEB.DE",
-        "aktueller_kurs": 43.945,
-        "composite": 68.1,
+        "aktueller_kurs": 44.215,
+        "composite": 69.2,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 72.4,
+          "score": 74.8,
           "parts": {
             "trend": 100.0,
-            "return_12m": 58.9,
-            "rsi": 58.3
+            "return_12m": 61.1,
+            "rsi": 63.2
           },
-          "return_12m_pct": 5.3,
-          "sma_50": 43.135,
-          "sma_200": 42.551,
-          "rsi_14": 56.91
+          "return_12m_pct": 6.7,
+          "sma_50": 43.194,
+          "sma_200": 42.564,
+          "rsi_14": 61.01
         },
         "risiko": {
-          "score": 57.2,
+          "score": 57.9,
           "parts": {
-            "volatilitaet": 43.4,
+            "volatilitaet": 43.3,
             "drawdown": 68.7,
-            "ertrag_risiko": 59.4
+            "ertrag_risiko": 61.8
           },
-          "volatilitaet_pct": 22.64,
+          "volatilitaet_pct": 22.68,
           "max_drawdown_pct": -15.63
         },
         "sentiment": {
@@ -1359,35 +1359,35 @@
       {
         "isin": "DE000A0H08H3",
         "ticker": "EXH3.DE",
-        "aktueller_kurs": 66.95,
-        "composite": 64.7,
+        "aktueller_kurs": 67.16,
+        "composite": 69.0,
         "bucket": "SATELLITE",
         "warnings": [],
         "momentum": {
-          "score": 72.1,
+          "score": 72.6,
           "parts": {
             "trend": 100.0,
-            "return_12m": 59.0,
-            "rsi": 57.2
+            "return_12m": 59.3,
+            "rsi": 58.5
           },
-          "return_12m_pct": 5.4,
-          "sma_50": 64.726,
-          "sma_200": 62.909,
-          "rsi_14": 55.97
+          "return_12m_pct": 5.6,
+          "sma_50": 64.844,
+          "sma_200": 62.947,
+          "rsi_14": 57.09
         },
         "risiko": {
-          "score": 66.0,
+          "score": 66.2,
           "parts": {
             "volatilitaet": 60.0,
             "drawdown": 74.5,
-            "ertrag_risiko": 63.5
+            "ertrag_risiko": 64.0
           },
           "volatilitaet_pct": 16.0,
           "max_drawdown_pct": -12.77
         },
         "sentiment": {
-          "score": 50,
-          "raw": 0
+          "score": 70,
+          "raw": 2
         },
         "struktur": {
           "score": 65.0,

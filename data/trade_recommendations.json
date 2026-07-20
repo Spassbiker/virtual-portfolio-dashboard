@@ -1,28 +1,13 @@
 {
-  "generated_at": "2026-07-17 09:00",
+  "generated_at": "2026-07-20 09:01",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
-  "vorgeschlagene_trades": [
-    {
-      "datum": "2026-07-17",
-      "typ": "Kauf",
-      "isin": "DE000A2E4K43",
-      "wertpapier": "Delivery Hero",
-      "stueck": 14,
-      "kurs": 38.2,
-      "gebuehr": 5.0,
-      "steuern": 0.0,
-      "gewinn_verlust": 0.0,
-      "gesamt": 539.8,
-      "notiz": "Neukauf (Score=14)",
-      "begruendung": "Score=14 (Chart=9: Empf.+3, Trend+2, RSI+1(62), MACD+1, SMA50+1, SMA200+1; Funda=5: Bew.+2, Risiko+1, GW+2(24%)) | Chart: Kurs 38.20 vs. SMA50 35.39 / SMA200 24.34 → Aufwärtstrend. RSI 62, MACD Neutral. | Funda: Spekulative Seitwärtsphase, hoher charttechnischer Druck."
-    }
-  ],
+  "vorgeschlagene_trades": [],
   "zusammenfassung": [
-    "Watch-Modus: 13 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: TKMS (Thyssenkrupp Marine Systems)(7), Saab AB(4), CSG N.V. (Czechoslovak Group)(3), Kratos Defense & Security Solutions(2), Oklo Inc.(0).",
-    "Adaptive Kaufschwelle: 14 (Floor 6, 80er-Perzentil aus 33 aktiven Kandidaten).",
-    "Kauf: 14x Delivery Hero (DE000A2E4K43) zu 38.20 EUR, Score=14, Budget=1000€."
+    "KI-Veto: Kauf von OHB (DE0005936124) blockiert. Kapitalerhöhung über 484 Mio. Euro unter Bezugspreis begleitet von fast 39% Kursabsturz in 30 Tagen belastet akut.",
+    "Watch-Modus: 15 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: CSG N.V. (Czechoslovak Group)(7), Saab AB(6), ASM International N.V.(5), Kongsberg Gruppen ASA(5), TKMS (Thyssenkrupp Marine Systems)(4).",
+    "Adaptive Kaufschwelle: 19 (Floor 6, 80er-Perzentil aus 32 aktiven Kandidaten)."
   ],
   "resultierender_barbestand": 38.58,
-  "resultierender_portfoliowert": 9428.05,
-  "resultierendes_gesamtvermoegen": 9466.63
+  "resultierender_portfoliowert": 9474.07,
+  "resultierendes_gesamtvermoegen": 9512.65
 }
