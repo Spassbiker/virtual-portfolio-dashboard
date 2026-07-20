@@ -95,7 +95,9 @@ def data_consistency(chart_item: dict | None, funda_item: dict | None) -> list[s
     # 5. Text-Sentiment vs. Signal-Konflikt.
     # Achtung: "kauf" in signal matcht auch "Verkaufen" als Teilstring — daher
     # "verkauf" explizit ausschließen, sonst feuert das bei jedem Verkaufssignal.
-    signal = (c.get("signal") or c.get("empfehlung") or f.get("empfehlung") or "").lower()
+    # Engine (update_depot.py) entscheidet nach `empfehlung` -> hier ebenso,
+    # damit die Warnprüfung dasselbe Feld wie die Kauf-Engine bewertet.
+    signal = (c.get("empfehlung") or c.get("signal") or f.get("empfehlung") or "").lower()
     is_buy_signal = "kauf" in signal and "verkauf" not in signal
     if _has_real_negative_signal(f.get("begruendung"), c.get("begruendung")) and is_buy_signal:
         warnings.append('Begründung klingt negativ, aber Signal "Kaufen"')

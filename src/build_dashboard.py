@@ -439,7 +439,7 @@ html_template = """<!DOCTYPE html>
             if (!c) return { score: null, parts: {} };
             const parts = {};
 
-            const sig = (c.signal || c.empfehlung || '').toLowerCase();
+            const sig = (c.empfehlung || c.signal || '').toLowerCase();
             if (sig.includes('kauf')) parts.signal = 100;
             else if (sig.includes('halt')) parts.signal = 50;
             else if (sig.includes('verkauf')) parts.signal = 10;
@@ -523,7 +523,7 @@ html_template = """<!DOCTYPE html>
             const bruendungF = ((f && f.begruendung) || '').toLowerCase();
             const bruendungC = ((c && c.begruendung) || '').toLowerCase();
             // "kauf" matcht als Teilstring auch "Verkaufen" -> "verkauf" explizit ausschließen.
-            const signal = ((c && (c.signal || c.empfehlung)) || (f && f.empfehlung) || '').toLowerCase();
+            const signal = ((c && (c.empfehlung || c.signal)) || (f && f.empfehlung) || '').toLowerCase();
             const isBuySignal = signal.includes('kauf') && !signal.includes('verkauf');
             const negPatterns = ['abwärts', 'abwaerts', 'sinkflug', 'einbruch', 'keine wende', 'keine bodenbildung', 'verlust', 'abschwung', 'bearish', 'schwach'];
             const positiveContext = ['erholt', 'erholung', 'verbessert', 'wende', 'aufschwung', 'attraktiv', 'unterbewertet'];
@@ -546,7 +546,7 @@ html_template = """<!DOCTYPE html>
             // Perfect if: Bewertung=Attraktiv AND Signal=Kaufen AND RSI in [30, 55] AND Trend Aufwärts
             let s = 0, n = 0;
             const bewert = (f && f.bewertung || '').toLowerCase();
-            const signal = (c && (c.signal || c.empfehlung) || '').toLowerCase();
+            const signal = (c && (c.empfehlung || c.signal) || '').toLowerCase();
             const rsi = numOrNull(c && c.rsi_14);
             const trend = (c && c.trend || '').toLowerCase();
 
@@ -560,7 +560,7 @@ html_template = """<!DOCTYPE html>
         function isPerfectSetup(f, c) {
             if (dataConsistency(f, c).length > 0) return false;
             const bewert = (f && f.bewertung || '').toLowerCase();
-            const signal = (c && (c.signal || c.empfehlung) || '').toLowerCase();
+            const signal = (c && (c.empfehlung || c.signal) || '').toLowerCase();
             const rsi = numOrNull(c && c.rsi_14);
             const trend = (c && c.trend || '').toLowerCase();
             return bewert.includes('attraktiv') && signal.includes('kauf')
@@ -801,7 +801,7 @@ html_template = """<!DOCTYPE html>
             if (uiState.onlyPerfect) rows = rows.filter(r => r.perfect);
             if (uiState.excludeDepot) rows = rows.filter(r => !r.inDepot);
             if (uiState.onlyKaufen) rows = rows.filter(r => {
-                const sig = ((r.c && (r.c.signal || r.c.empfehlung)) || '').toLowerCase();
+                const sig = ((r.c && (r.c.empfehlung || r.c.signal)) || '').toLowerCase();
                 return sig.includes('kauf');
             });
             if (uiState.hideInconsistent) rows = rows.filter(r => !(r.scores.warnings && r.scores.warnings.length));
@@ -840,7 +840,7 @@ html_template = """<!DOCTYPE html>
                 const badges = warnBadge
                              + (r.perfect ? '<span class="perfect-setup" title="Fundamental Attraktiv + Signal Kaufen + RSI 30–55 + Aufwärtstrend">⭐ Perfect</span>' : '')
                              + (r.inDepot ? '<span class="in-depot" title="bereits im Depot">Im Depot</span>' : '');
-                const signal = (r.c && (r.c.signal || r.c.empfehlung)) || '-';
+                const signal = (r.c && (r.c.empfehlung || r.c.signal)) || '-';
                 const begruendung = ((r.f && r.f.begruendung) || '') + ((r.c && r.c.begruendung) ? ' · ' + r.c.begruendung : '');
                 const rowCls = warnings.length ? ' class="inconsistent-row"' : '';
                 return `<tr${rowCls}>
@@ -1586,7 +1586,7 @@ html_template = """<!DOCTYPE html>
                     <h3>🎯 Top-Empfehlungen (Composite-Score)</h3>
                     <table class="teaser-table">
                         <tr><th>Wertpapier</th><th>Sektor</th><th>Score</th><th>Signal</th></tr>
-                        ${topAktien.map(r => `<tr><td><strong>${r.wertpapier}</strong></td><td>${r.sektor}</td><td>${scoreCell(r.scores.composite)}</td><td>${getBadge((r.c && (r.c.signal || r.c.empfehlung)) || '-')}</td></tr>`).join('')}
+                        ${topAktien.map(r => `<tr><td><strong>${r.wertpapier}</strong></td><td>${r.sektor}</td><td>${scoreCell(r.scores.composite)}</td><td>${getBadge((r.c && (r.c.empfehlung || r.c.signal)) || '-')}</td></tr>`).join('')}
                     </table>
                     ${topEtf.length ? `<p style="color:var(--text-muted); font-size:0.85em; margin-bottom:4px;">Top-ETFs: ${topEtf.map(r => `${r.wertpapier} (${Math.round(r.composite)})`).join(' · ')}</p>` : ''}
                     <button class="teaser-cta" id="ov-goto-empfehlungen">Alle Empfehlungen ansehen →</button>
