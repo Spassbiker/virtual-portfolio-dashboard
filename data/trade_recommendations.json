@@ -1,13 +1,61 @@
 {
-  "generated_at": "2026-07-20 09:01",
+  "generated_at": "2026-07-20 18:18",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
-  "vorgeschlagene_trades": [],
+  "vorgeschlagene_trades": [
+    {
+      "datum": "2026-07-20",
+      "typ": "Verkauf",
+      "isin": "FR0014004L86",
+      "wertpapier": "Dassault Aviation",
+      "stueck": 1,
+      "kurs": 282.0,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -20.2,
+      "gesamt": 277.0,
+      "notiz": "Sektor-Abbau (Luft- und Raumfahrttechnik über 30%-Cap)",
+      "begruendung": "Sektor-Abbau: Luft- und Raumfahrttechnik bei 35.7% (> 30%-Cap) | Score=13.5 (Chart=2.5: Empf.+3, Trend-3, RSI+2(42), MACD+1, Mom+2(12%), ⚠️Inkonsistent→Chart×0.5(5→2.5); Funda=10: Empf.+3, Bew.+2, Risiko+1, GW+1(5%), PEG+1(1.29), ROE+1(15%), Piotroski+1(F6); KI-Sentiment=1) | Chart: Kurs 285.40 vs. SMA50 292.28 / SMA200 300.48 → Abwärtstrend. RSI 44, MACD Neutral. | Funda: Rafale-Exportaufträge und Falcon-Geschäftsjetnachfrage stützen das Wachstum; KGV moderat bei rund 23 (Forward rund 17,5). | KI: Mehrere Ad-hoc-Meldungen bestätigen stabile Entwicklung nach soliden Jahreszahlen, gestützt von Flugzeugnachfrage."
+    },
+    {
+      "datum": "2026-07-20",
+      "typ": "Verkauf",
+      "isin": "DE000A0D9PT0",
+      "wertpapier": "MTU Aero Engines",
+      "stueck": 4,
+      "kurs": 334.1,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -121.8,
+      "gesamt": 1331.4,
+      "notiz": "Sektor-Abbau (Luft- und Raumfahrttechnik über 30%-Cap)",
+      "begruendung": "Sektor-Abbau: Luft- und Raumfahrttechnik bei 33.7% (> 30%-Cap) | Score=18 (Chart=4: Empf.+3, Trend+1, RSI+2(43), MACD-1, SMA50+1, Mom-2(-11%); Funda=13: Empf.+3, Bew.+2, Risiko+2, GW+2(60%), ROE+2(24%), Piotroski+2(F8); KI-Sentiment=1) | Chart: Kurs 341.70 vs. SMA50 325.95 / SMA200 348.22 → Leichter Aufwärtstrend. RSI 46, MACD Negativ. | Funda: MRO-Boom und Rekordauftragsbestand treiben Umsatz (+18%) und Gewinn (+60%) im Geschäftsjahr 2025; hohe Bewertung bereits eingepreist. | KI: Ad-hoc-News zu robustem Wachstum und höherer Prognose stehen kurzfristigen Kursverlusten wegen Cashflow-Sorgen des CFO gegenüber."
+    },
+    {
+      "datum": "2026-07-20",
+      "typ": "Kauf",
+      "isin": "IT0003242622",
+      "wertpapier": "Terna",
+      "stueck": 143,
+      "kurs": 10.225,
+      "gebuehr": 5.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 1467.17,
+      "notiz": "Neukauf (Score=19)",
+      "begruendung": "Score=19 (Chart=8: Trend+2, RSI+1(53), MACD+1, SMA50+1, SMA200+1, Mom+2(17%); Funda=11: Empf.+3, Bew.+2, Risiko+2, ROE+1(13%), EV/EBITDA+1(11.9), Piotroski+2(F7)) | Chart: Kurs 10.35 vs. SMA50 10.10 / SMA200 9.58 → Aufwärtstrend. RSI 56, MACD Neutral. | Funda: Italienischer Stromnetzbetreiber (quasi-Monopol), stabile regulierte Ertraege, TheScreener stuft Risiko seit 2023 als niedrig ein."
+    }
+  ],
   "zusammenfassung": [
     "KI-Veto: Kauf von OHB (DE0005936124) blockiert. Kapitalerhöhung über 484 Mio. Euro unter Bezugspreis begleitet von fast 39% Kursabsturz in 30 Tagen belastet akut.",
-    "Watch-Modus: 15 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: CSG N.V. (Czechoslovak Group)(7), Saab AB(6), ASM International N.V.(5), Kongsberg Gruppen ASA(5), TKMS (Thyssenkrupp Marine Systems)(4).",
-    "Adaptive Kaufschwelle: 19 (Floor 6, 80er-Perzentil aus 32 aktiven Kandidaten)."
+    "Watch-Modus: 15 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: CSG N.V. (Czechoslovak Group)(7), Saab AB(6), Kongsberg Gruppen ASA(5), ASM International N.V.(5), TKMS (Thyssenkrupp Marine Systems)(4).",
+    "Adaptive Kaufschwelle: 18.5 (Floor 6, 80er-Perzentil aus 32 aktiven Kandidaten).",
+    "Sektor-Abbau: 1x Dassault Aviation (FR0014004L86) zu 282.00 EUR verkauft — Luft- und Raumfahrttechnik war 35.7% (Cap 30%, Score=13.5).",
+    "Sektor-Abbau: 4x MTU Aero Engines (DE000A0D9PT0) zu 334.10 EUR verkauft — Luft- und Raumfahrttechnik war 33.7% (Cap 30%, Score=18).",
+    "Sektor-Cap: Kauf von ASML (NL0010273215) gekappt/blockiert (Sektor Technologie nahe/über 30%).",
+    "Sektor-Cap: Kauf von Nordex SE (DE000A0D6554) gekappt/blockiert (Sektor Energie nahe/über 30%).",
+    "Kauf: 143x Terna (IT0003242622) zu 10.22 EUR, Score=19, Budget=1470€ (Vola×1.4)."
   ],
-  "resultierender_barbestand": 38.58,
-  "resultierender_portfoliowert": 9474.07,
-  "resultierendes_gesamtvermoegen": 9512.65
+  "resultierender_barbestand": 179.81,
+  "resultierender_portfoliowert": 9264.48,
+  "resultierendes_gesamtvermoegen": 9444.28
 }
