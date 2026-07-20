@@ -101,6 +101,15 @@ MIN_ORDER_VALUE = 100.0
 # blockiert NEUE Käufe, die einen Sektor darüber treiben würden — bestehende
 # Positionen werden dadurch nicht verkauft, das ist reines Wachstums-Limit.
 MAX_SEKTOR_PCT_HARD = 0.60
+# SOFT-CAP mit Zähnen: risk_report.py warnt ab 30%, tat aber nie etwas. Diese
+# Schwelle führt ein BESTEHENDES Sektor-Übergewicht aktiv zurück (Phase 1b),
+# indem die schwächsten Positionen des Sektors verkauft werden, bis er wieder
+# <= Cap liegt. Bewusster Risiko-Override der Kaufen/Halten-Signale.
+SEKTOR_SOFT_CAP = 0.30
+# Hysterese: Abbau (Ganzverkäufe sind grob) startet ERST bei spürbarer
+# Überschreitung, sonst würde ein Sektor bei 30.1% eine ganze Gewinnerposition
+# kosten. Ausgelöst wird ab Cap+Toleranz, reduziert wird dann bis auf den Cap.
+SEKTOR_CAP_TOLERANCE = 0.03
 
 def get_chart_item(isin):
     if not isin: return None
@@ -405,10 +414,13 @@ def sector_value(positions, sektor):
 
 
 def capped_budget(budget, isin, positions):
-    """Kappt das Kaufbudget, falls es einen Sektor über MAX_SEKTOR_PCT_HARD triebe.
+    """Kappt das Kaufbudget, falls es einen Sektor über SEKTOR_SOFT_CAP triebe.
 
-    Löst sek_val + x = CAP * (portfolio_value + x) nach x auf. Positionen ohne
-    Sektor-Zuordnung sind vom Cap ausgenommen (kein Risiko, keine Bremse)."""
+    Muss zum Sektor-Abbau (Phase 1b) passen: würde die Kaufphase noch bis zum
+    alten 60%-Hardcap zukaufen, würde sie das gerade zurückgeführte Übergewicht
+    sofort wieder aufbauen (Rotation statt Entzerrung). Daher dieselbe 30%-Grenze
+    wie der Abbau. Löst sek_val + x = CAP * (portfolio_value + x) nach x auf.
+    Positionen ohne Sektor-Zuordnung sind vom Cap ausgenommen."""
     sektor = sector_map.get(isin)
     if not sektor:
         return budget
@@ -417,9 +429,9 @@ def capped_budget(budget, isin, positions):
     if portfolio_value + budget <= 0:
         return budget
     projected_pct = (sek_val + budget) / (portfolio_value + budget)
-    if projected_pct <= MAX_SEKTOR_PCT_HARD:
+    if projected_pct <= SEKTOR_SOFT_CAP:
         return budget
-    allowed = (MAX_SEKTOR_PCT_HARD * portfolio_value - sek_val) / (1 - MAX_SEKTOR_PCT_HARD)
+    allowed = (SEKTOR_SOFT_CAP * portfolio_value - sek_val) / (1 - SEKTOR_SOFT_CAP)
     return max(0.0, min(budget, allowed))
 
 def get_live_price(isin):
@@ -707,6 +719,53 @@ for p in positions:
 positions = positions_to_keep
 
 # ==========================================
+# 1b. SEKTOR-ABBAU (Klumpenrisiko aktiv zurückführen)
+# capped_budget() bremst nur NEUE Käufe (Wachstums-Limit). Diese Phase reduziert
+# ein bereits bestehendes Übergewicht: überschreitet ein Sektor SEKTOR_SOFT_CAP,
+# werden die schwächsten Positionen (niedrigster Score zuerst) dieses Sektors
+# ganz verkauft, bis der Sektor wieder <= Cap liegt. Freigesetzter Cash bleibt
+# als Puffer oder finanziert Nicht-Sektor-Käufe in der Kaufphase.
+# ==========================================
+def _sector_pct(pos, sektor):
+    tot = sum(p.get("boersenwert", 0) or 0 for p in pos)
+    return (sector_value(pos, sektor) / tot) if tot > 0 else 0.0
+
+sektoren_im_depot = sorted({sector_map.get(p.get("isin")) for p in positions
+                            if sector_map.get(p.get("isin"))})
+for sektor in sektoren_im_depot:
+    # Hysterese: nur eingreifen, wenn der Sektor spürbar (Cap+Toleranz) über dem
+    # Limit liegt. Danach bis auf den reinen Cap zurückführen.
+    if _sector_pct(positions, sektor) <= SEKTOR_SOFT_CAP + SEKTOR_CAP_TOLERANCE:
+        continue
+    kandidaten = sorted(
+        [p for p in positions if sector_map.get(p.get("isin")) == sektor],
+        key=lambda p: (p.get("score", 0),
+                       p["gewinn_verlust"] / p["investiert"] if p.get("investiert") else 0),
+    )
+    for p in kandidaten:
+        pct_before = _sector_pct(positions, sektor)
+        if pct_before <= SEKTOR_SOFT_CAP:
+            break
+        isin = p.get("isin")
+        price = p.get("boersenkurs") or get_live_price(isin) or 0
+        if not price:
+            continue
+        begruendung = (f"Sektor-Abbau: {sektor} bei {pct_before*100:.1f}% "
+                       f"(> {SEKTOR_SOFT_CAP*100:.0f}%-Cap) | " + score_reason(isin))
+        tx, net_cash = _make_sell_record(
+            p, price,
+            notiz=f"Sektor-Abbau ({sektor} über {SEKTOR_SOFT_CAP*100:.0f}%-Cap)",
+            begruendung=begruendung)
+        current_cash += net_cash
+        sold_isins.add(isin)
+        summary.append(f"Sektor-Abbau: {p['stueck']}x {p.get('wertpapier', isin)} "
+                       f"({isin}) zu {price:.2f} EUR verkauft — {sektor} war "
+                       f"{pct_before*100:.1f}% (Cap {SEKTOR_SOFT_CAP*100:.0f}%, "
+                       f"Score={p.get('score', 0)}).")
+        transactions.append(tx)
+        positions.remove(p)
+
+# ==========================================
 # 2. ERMITTELN DES KAPITALBEDARFS
 # Positionsgröße ist score-abhängig
 # ==========================================
@@ -757,7 +816,7 @@ for isin, ts in unowned_targets:
     if budget_for_this < MIN_ORDER_VALUE + fee_per_trade:
         if budget_for_this < budget_before_cap:
             summary.append(f"Sektor-Cap: Kauf von {stock} ({isin}) gekappt/blockiert "
-                           f"(Sektor {sector_map.get(isin)} nahe/über {MAX_SEKTOR_PCT_HARD*100:.0f}%).")
+                           f"(Sektor {sector_map.get(isin)} nahe/über {SEKTOR_SOFT_CAP*100:.0f}%).")
         continue  # zu wenig freies Kapital für eine sinnvolle Order
     units_to_buy = int((budget_for_this - fee_per_trade) / price)
     order_value = units_to_buy * price
