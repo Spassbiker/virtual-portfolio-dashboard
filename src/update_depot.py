@@ -1,66 +1,48 @@
+"""Regelbasierte Depot-Engine (Aktien-Sleeve, 10.000€-Budget).
+
+Berechnet aus Chart-, Fundamental- und KI-Sentiment-Daten ein Zielportfolio und
+führt die Handelsphasen aus (Verkauf → Sektor-Abbau → Rebalancing → Neukäufe).
+
+Zwei Betriebsmodi:
+  * --recommend / --dry-run : berechnet Score/Sentiment/Veto und die Trades, die
+    das System vorschlagen WÜRDE, schreibt sie nach data/trade_recommendations.json
+    und lässt depot_status.json unangetastet. Die finale Kauf-/Verkaufsentscheidung
+    bleibt beim autonomen Agenten.
+  * (ohne Argument)          : schreibt das Ergebnis live nach depot_status.json.
+
+Struktur: reine Scoring-/Helfer-Funktionen oben, dann die Handelsphasen als
+eigene Funktionen, orchestriert von main(). Eingabedaten (Chart/Funda/Sentiment/
+DAX) werden in load_inputs() geladen — Netzwerk- und Datei-Zugriffe passieren
+NICHT mehr beim Import, sondern erst beim Aufruf von main().
+"""
+
 import os
 import sys
-import urllib.request
+from dataclasses import dataclass, field
 from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from paths import DEPOT as depot_path, CHART, FUNDA, SENT as sentiment_path, TRADES as recommend_path, load_json, save_json
+from paths import (
+    DEPOT as depot_path,
+    CHART,
+    FUNDA,
+    SENT as sentiment_path,
+    TRADES as recommend_path,
+    load_json,
+    save_json,
+)
 from consistency import data_consistency
+import ticker_map
 
-# Empfehlungs-Modus: berechnet Score/Sentiment/Veto und die Trades, die das
-# regelbasierte System vorschlagen WÜRDE, schreibt sie nach
-# data/trade_recommendations.json und lässt depot_status.json unangetastet.
-# So bleibt die finale Kauf-/Verkaufsentscheidung beim autonomen Agenten.
-RECOMMEND = any(a in ("--recommend", "--dry-run") for a in sys.argv[1:])
-
-data = load_json(depot_path, {})
-depot = data.get("depot", {})
-current_cash = depot.get("aktueller_barbestand", 10000.0)
-positions = depot.get("positionen", [])
-transactions = depot.get("transaktionshistorie", [])
-initial_tx_count = len(transactions)  # neue Trades dieses Laufs = ab hier
-
-chart_data = load_json(CHART, {})
-funda_data = load_json(FUNDA, {})
-
-# KI-Sentiment (Stufe 1 + 2), vom Portfoliomanager-Agent erzeugt.
-# Optional: fehlt die Datei, läuft alles rein deterministisch weiter.
-# Vertrag (siehe docs/SENTIMENT_STAGE.md):
-#   { "generated_at": "...",
-#     "scores": { "<ISIN>": {"sentiment_score": int(-3..3), "veto": bool,
-#                            "confidence": float(0..1), "event_kategorie": str,
-#                            "begruendung": str} } }
-# confidence/event_kategorie sind optional mit Default — ältere Dateien ohne
-# diese Felder rechnen unverändert weiter (Default-Confidence 0.7 = weder
-# gedämpft noch verstärkt, entspricht dem alten Verhalten näherungsweise).
-sentiment_data = load_json(sentiment_path, {"scores": {}})
+# ==========================================
+# KONSTANTEN
+# ==========================================
 
 SENTIMENT_MIN, SENTIMENT_MAX = -3, 3
 DEFAULT_CONFIDENCE = 0.7
 REVIEW_FLAG_THRESHOLD = -2  # rohes Sentiment auf Bestand ab hier -> review_flag
 
-def get_sentiment(isin):
-    """Returns (score, veto, begruendung, confidence, event_kategorie) — geklemmt und defensiv."""
-    entry = sentiment_data.get("scores", {}).get(isin)
-    if not entry:
-        return 0, False, "", DEFAULT_CONFIDENCE, "Keine"
-    try:
-        s = int(round(float(entry.get("sentiment_score", 0))))
-    except (TypeError, ValueError):
-        s = 0
-    s = max(SENTIMENT_MIN, min(SENTIMENT_MAX, s))
-    try:
-        conf = float(entry.get("confidence", DEFAULT_CONFIDENCE))
-    except (TypeError, ValueError):
-        conf = DEFAULT_CONFIDENCE
-    conf = max(0.0, min(1.0, conf))
-    kategorie = entry.get("event_kategorie") or "Sonstiges"
-    return s, bool(entry.get("veto", False)), entry.get("begruendung", ""), conf, kategorie
-
-# ==========================================
-# SCORING-SYSTEM
-# ==========================================
-
+# --- SCORING-SYSTEM ---
 # Kauf-Schwelle: ADAPTIV. Fixer Floor = BUY_FLOOR, effektive Schwelle ist
 # max(BUY_FLOOR, 80er-Perzentil aller aktiven Kandidatenscores). Das hebt
 # die Latte in starken Märkten automatisch (mehr Auswahl → wähle die besten),
@@ -111,21 +93,123 @@ SEKTOR_SOFT_CAP = 0.30
 # kosten. Ausgelöst wird ab Cap+Toleranz, reduziert wird dann bis auf den Cap.
 SEKTOR_CAP_TOLERANCE = 0.03
 
+# Positionsgröße: 1000€ Basis + 100€ je Punkt über Schwellwert, max 2500€.
+BUDGET_BASE = 1000.0
+BUDGET_PER_POINT = 100.0
+BUDGET_MAX = 2500.0
+
+# Phase 3: Volatilitäts-Sizing (Risk-Parity statt Euro-Parity je Trade).
+# Referenz-Tagesvolatilität ~2 %; ruhigere Titel bekommen mehr, wildere weniger
+# Budget. Multiplikator in [0.6, 1.4] gekappt, damit das Score-Ranking führend
+# bleibt und keine Extremwerte die Positionsgröße dominieren.
+REF_VOL_PCT = 2.0
+VOL_MULT_MIN, VOL_MULT_MAX = 0.6, 1.4
+
+# MARKT-REFERENZ (DAX) + AUTO-BETA für den relativen Stop-Loss.
+# DAX als Benchmark. Beta wird pro Position automatisch aus ~1 Jahr
+# Tagesrenditen geschätzt (Regression Aktie vs. DAX). Ohne verlässliche Daten
+# fällt Beta auf 1.0 zurück ("im ersten Schritt 1:1, aber automatisch anpassend").
+DAX_SYMBOL = "^GDAXI"
+BETA_MIN, BETA_MAX, BETA_DEFAULT = 0.3, 2.5, 1.0
+
+fee_per_trade = 5.00
+CAP_GAINS_TAX = 0.26375   # Kapitalertragsteuer + Soli, nur auf Gewinne
+
+# Marker-Texte, die eine Fundamental-Analyse als Platzhalter (keine echten
+# Kennzahlen) ausweisen — solche Einträge dürfen den Score nicht aufblähen.
+_FUNDA_PLACEHOLDER_MARKERS = ("vervollständigung", "ergänzt zur", "platzhalter")
+
+# ==========================================
+# EINGABEDATEN (in load_inputs() befüllt — beim Import None/leer)
+# ==========================================
+chart_data: dict = {}
+funda_data: dict = {}
+# KI-Sentiment (Stufe 1 + 2), vom Portfoliomanager-Agent erzeugt.
+# Optional: fehlt die Datei, läuft alles rein deterministisch weiter.
+# Vertrag (siehe docs/SENTIMENT_STAGE.md):
+#   { "generated_at": "...",
+#     "scores": { "<ISIN>": {"sentiment_score": int(-3..3), "veto": bool,
+#                            "confidence": float(0..1), "event_kategorie": str,
+#                            "begruendung": str} } }
+# confidence/event_kategorie sind optional mit Default — ältere Dateien ohne
+# diese Felder rechnen unverändert weiter (Default-Confidence 0.7 = weder
+# gedämpft noch verstärkt, entspricht dem alten Verhalten näherungsweise).
+sentiment_data: dict = {"scores": {}}
+isin_to_name: dict = {}
+sector_map: dict = {}   # ISIN -> Sektor (aus Chartanalyse), für den Sektor-Cap.
+dax_now = None
+dax_closes: list = []
+_beta_cache: dict = {}
+
+
+def load_inputs():
+    """Lädt Chart-/Funda-/Sentiment-Daten und die DAX-Referenz in die
+    Modul-Globals. Kapselt alle Netzwerk-/Datei-Lesezugriffe der Engine."""
+    global chart_data, funda_data, sentiment_data
+    global isin_to_name, sector_map, dax_now, dax_closes
+    chart_data = load_json(CHART, {})
+    funda_data = load_json(FUNDA, {})
+    sentiment_data = load_json(sentiment_path, {"scores": {}})
+
+    isin_to_name = {}
+    sector_map = {}
+    for data_set in [chart_data, funda_data]:
+        for sector, items in data_set.get("sektoren", {}).items():
+            for item in items:
+                if item.get("isin") and item.get("isin") not in isin_to_name:
+                    isin_to_name[item["isin"]] = item.get("wertpapier", "Unbekannt").replace(" (Teil 2)", "")
+                if item.get("isin"):
+                    sector_map.setdefault(item["isin"], sector)
+
+    dax_now, dax_closes = ticker_map.fetch_index(DAX_SYMBOL)
+
+
+# ==========================================
+# SENTIMENT
+# ==========================================
+
+def get_sentiment(isin):
+    """Returns (score, veto, begruendung, confidence, event_kategorie) — geklemmt und defensiv."""
+    entry = sentiment_data.get("scores", {}).get(isin)
+    if not entry:
+        return 0, False, "", DEFAULT_CONFIDENCE, "Keine"
+    try:
+        s = int(round(float(entry.get("sentiment_score", 0))))
+    except (TypeError, ValueError):
+        s = 0
+    s = max(SENTIMENT_MIN, min(SENTIMENT_MAX, s))
+    try:
+        conf = float(entry.get("confidence", DEFAULT_CONFIDENCE))
+    except (TypeError, ValueError):
+        conf = DEFAULT_CONFIDENCE
+    conf = max(0.0, min(1.0, conf))
+    kategorie = entry.get("event_kategorie") or "Sonstiges"
+    return s, bool(entry.get("veto", False)), entry.get("begruendung", ""), conf, kategorie
+
+
+# ==========================================
+# SCORING
+# ==========================================
+
 def get_chart_item(isin):
-    if not isin: return None
+    if not isin:
+        return None
     for sector, items in chart_data.get("sektoren", {}).items():
         for item in items:
             if item.get("isin") == isin:
                 return item
     return None
 
+
 def get_funda_item(isin):
-    if not isin: return None
+    if not isin:
+        return None
     for sector, items in funda_data.get("sektoren", {}).items():
         for item in items:
             if item.get("isin") == isin:
                 return item
     return None
+
 
 def compute_chart_score(isin):
     """Chart-Score aus technischen Indikatoren (max ~15, min ~-13)."""
@@ -194,10 +278,6 @@ def compute_chart_score(isin):
             score -= 2; details.append(f"Mom-2({mom:.0f}%)")
 
     return score, details
-
-# Marker-Texte, die eine Fundamental-Analyse als Platzhalter (keine echten
-# Kennzahlen) ausweisen — solche Einträge dürfen den Score nicht aufblähen.
-_FUNDA_PLACEHOLDER_MARKERS = ("vervollständigung", "ergänzt zur", "platzhalter")
 
 
 def is_funda_placeholder(item):
@@ -294,6 +374,7 @@ def compute_funda_score(isin):
 
     return score, details
 
+
 def total_score(isin):
     cs, cd = compute_chart_score(isin)
     fs, fd = compute_funda_score(isin)
@@ -315,6 +396,7 @@ def total_score(isin):
 
     return cs + fs + ss_weighted, cs, cd, fs, fd, ss, sd
 
+
 def score_reason(isin):
     ts, cs, cd, fs, fd, ss, sd = total_score(isin)
     c_item = get_chart_item(isin)
@@ -332,19 +414,15 @@ def score_reason(isin):
         reason += f" | KI: {s_text}"
     return reason
 
+
+# ==========================================
+# POSITIONSGRÖSSE
+# ==========================================
+
 def budget_for_score(ts, buy_threshold):
     """Positionsgröße proportional zum Score: 1000€ Basis + 100€ je Punkt über Schwellwert, max 2500€."""
-    base = 1000.0
-    bonus = max(0, ts - buy_threshold) * 100.0
-    return min(2500.0, base + bonus)
-
-
-# Phase 3: Volatilitäts-Sizing (Risk-Parity statt Euro-Parity je Trade).
-# Referenz-Tagesvolatilität ~2 %; ruhigere Titel bekommen mehr, wildere weniger
-# Budget. Multiplikator in [0.6, 1.4] gekappt, damit das Score-Ranking führend
-# bleibt und keine Extremwerte die Positionsgröße dominieren.
-REF_VOL_PCT = 2.0
-VOL_MULT_MIN, VOL_MULT_MAX = 0.6, 1.4
+    bonus = max(0, ts - buy_threshold) * BUDGET_PER_POINT
+    return min(BUDGET_MAX, BUDGET_BASE + bonus)
 
 
 def vol_size_multiplier(isin):
@@ -394,19 +472,10 @@ def compute_adaptive_buy_threshold(scores):
     idx = min(idx, len(ordered) - 1)
     return max(BUY_FLOOR, ordered[idx])
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import ticker_map
 
-isin_to_name = {}
-sector_map = {}  # ISIN -> Sektor (aus Chartanalyse), für den Sektor-Cap.
-for data_set in [chart_data, funda_data]:
-    for sector, items in data_set.get("sektoren", {}).items():
-        for item in items:
-            if item.get("isin") and item.get("isin") not in isin_to_name:
-                isin_to_name[item["isin"]] = item.get("wertpapier", "Unbekannt").replace(" (Teil 2)", "")
-            if item.get("isin"):
-                sector_map.setdefault(item["isin"], sector)
-
+# ==========================================
+# SEKTOR-/CASH-LIMITS
+# ==========================================
 
 def sector_value(positions, sektor):
     return sum(p.get("boersenwert", 0) or 0 for p in positions
@@ -434,6 +503,7 @@ def capped_budget(budget, isin, positions):
     allowed = (SEKTOR_SOFT_CAP * portfolio_value - sek_val) / (1 - SEKTOR_SOFT_CAP)
     return max(0.0, min(budget, allowed))
 
+
 def get_live_price(isin):
     """EUR live price via the shared ticker map, guarded against wrong instruments.
 
@@ -448,17 +518,10 @@ def get_live_price(isin):
         return None
     return price
 
-# ==========================================
-# MARKT-REFERENZ (DAX) + AUTO-BETA für den relativen Stop-Loss
-# ==========================================
-# DAX als Benchmark. Beta wird pro Position automatisch aus ~1 Jahr
-# Tagesrenditen geschätzt (Regression Aktie vs. DAX). Ohne verlässliche Daten
-# fällt Beta auf 1.0 zurück ("im ersten Schritt 1:1, aber automatisch anpassend").
-DAX_SYMBOL = "^GDAXI"
-BETA_MIN, BETA_MAX, BETA_DEFAULT = 0.3, 2.5, 1.0
-dax_now, dax_closes = ticker_map.fetch_index(DAX_SYMBOL)
-_beta_cache = {}
 
+# ==========================================
+# AUTO-BETA (relativer Stop-Loss vs. DAX)
+# ==========================================
 
 def _daily_returns(closes):
     out = []
@@ -498,10 +561,9 @@ def get_beta(isin):
     return _beta_cache[isin]
 
 
-fee_per_trade = 5.00
-CAP_GAINS_TAX = 0.26375   # Kapitalertragsteuer + Soli, nur auf Gewinne
-summary = []
-
+# ==========================================
+# TRANSAKTIONS-DATENSÄTZE
+# ==========================================
 
 def _today_iso():
     return datetime.now().strftime("%Y-%m-%d")
@@ -555,168 +617,196 @@ def _make_buy_record(isin, stock, units, price, ts, begruendung):
     }
     return tx, total_cost
 
+
+# ==========================================
+# LAUF-ZUSTAND
+# ==========================================
+
+@dataclass
+class RunState:
+    """Veränderlicher Zustand eines Engine-Laufs, den die Phasen fortschreiben."""
+    current_cash: float
+    positions: list
+    transactions: list
+    initial_tx_count: int
+    summary: list = field(default_factory=list)
+    live_prices: dict = field(default_factory=dict)
+    sold_isins: set = field(default_factory=set)  # in diesem Lauf verkauft -> kein Rückkauf
+    buy_threshold: int = 0
+    target_isins_scored: list = field(default_factory=list)
+    target_isins: list = field(default_factory=list)
+
+
 # ==========================================
 # PLANUNGSPHASE: ZIELPORTFOLIO MIT SCORING
 # Kauf-Kandidaten: Score >= adaptivem BUY_THRESHOLD,
 # kein explizites "Verkaufen" in chart UND funda, nicht Watch.
 # ==========================================
-all_isins = set()
-for data_set in [chart_data, funda_data]:
-    for sector, items in data_set.get("sektoren", {}).items():
-        for item in items:
-            if item.get("isin"):
-                all_isins.add(item["isin"])
 
-# Schritt 1: alle aktiven Scores sammeln (Watch/Verkauf/Veto aussortieren).
-# Watch-Kandidaten wandern in eine Merkliste — sie werden nicht gekauft,
-# bleiben aber sichtbar für Reporting/Dashboard.
-active_scores = []
-watch_list = []
-for isin in all_isins:
-    c_item = get_chart_item(isin)
-    f_item = get_funda_item(isin)
-    if not c_item or not f_item:
-        continue
-    c_emp = (c_item.get("empfehlung") or "").lower()
-    f_emp = (f_item.get("empfehlung") or "").lower()
-    if "verkauf" in c_emp or "verkauf" in f_emp:
-        continue
-    # Stufe 2: KI-Veto blockiert Neukäufe (kann nie welche erzeugen).
-    _, veto, veto_reason, _, _ = get_sentiment(isin)
-    if veto:
-        summary.append(f"KI-Veto: Kauf von {c_item.get('wertpapier', isin)} ({isin}) blockiert. {veto_reason}")
-        continue
-    if is_watch_candidate(isin, c_item, f_item):
-        ts_watch = total_score(isin)[0]
-        watch_list.append((isin, ts_watch))
-        continue
-    ts = total_score(isin)[0]
-    active_scores.append((isin, ts))
+def phase_plan(state):
+    """Sammelt aktive Scores, bestimmt die adaptive Kaufschwelle und die
+    (live-bepreisten) Kauf-Kandidaten. Schreibt Ziel-Listen in `state`."""
+    all_isins = set()
+    for data_set in [chart_data, funda_data]:
+        for sector, items in data_set.get("sektoren", {}).items():
+            for item in items:
+                if item.get("isin"):
+                    all_isins.add(item["isin"])
 
-# Schritt 2: adaptive Schwelle aus den aktiven Scores bestimmen.
-BUY_THRESHOLD = compute_adaptive_buy_threshold([ts for _, ts in active_scores])
+    # Schritt 1: alle aktiven Scores sammeln (Watch/Verkauf/Veto aussortieren).
+    # Watch-Kandidaten wandern in eine Merkliste — sie werden nicht gekauft,
+    # bleiben aber sichtbar für Reporting/Dashboard.
+    active_scores = []
+    watch_list = []
+    for isin in all_isins:
+        c_item = get_chart_item(isin)
+        f_item = get_funda_item(isin)
+        if not c_item or not f_item:
+            continue
+        c_emp = (c_item.get("empfehlung") or "").lower()
+        f_emp = (f_item.get("empfehlung") or "").lower()
+        if "verkauf" in c_emp or "verkauf" in f_emp:
+            continue
+        # Stufe 2: KI-Veto blockiert Neukäufe (kann nie welche erzeugen).
+        _, veto, veto_reason, _, _ = get_sentiment(isin)
+        if veto:
+            state.summary.append(f"KI-Veto: Kauf von {c_item.get('wertpapier', isin)} ({isin}) blockiert. {veto_reason}")
+            continue
+        if is_watch_candidate(isin, c_item, f_item):
+            ts_watch = total_score(isin)[0]
+            watch_list.append((isin, ts_watch))
+            continue
+        ts = total_score(isin)[0]
+        active_scores.append((isin, ts))
 
-# Schritt 3: Kandidaten oberhalb der adaptiven Schwelle selektieren.
-scored_candidates = [(isin, ts) for isin, ts in active_scores if ts >= BUY_THRESHOLD]
-scored_candidates.sort(key=lambda x: -x[1])
+    # Schritt 2: adaptive Schwelle aus den aktiven Scores bestimmen.
+    buy_threshold = compute_adaptive_buy_threshold([ts for _, ts in active_scores])
+    state.buy_threshold = buy_threshold
 
-if watch_list:
-    watch_list.sort(key=lambda x: -x[1])
-    watch_names = [f"{isin_to_name.get(i, i)}({t})" for i, t in watch_list[:5]]
-    summary.append(f"Watch-Modus: {len(watch_list)} Kandidat(en) noch nicht kaufbar "
-                   f"(fehlende Historie). Top: {', '.join(watch_names)}.")
-summary.append(f"Adaptive Kaufschwelle: {BUY_THRESHOLD} "
-               f"(Floor {BUY_FLOOR}, {int(BUY_PERCENTILE*100)}er-Perzentil "
-               f"aus {len(active_scores)} aktiven Kandidaten).")
+    # Schritt 3: Kandidaten oberhalb der adaptiven Schwelle selektieren.
+    scored_candidates = [(isin, ts) for isin, ts in active_scores if ts >= buy_threshold]
+    scored_candidates.sort(key=lambda x: -x[1])
 
-live_prices = {}
-target_isins_scored = []
-for isin, ts in scored_candidates:
-    price = get_live_price(isin)
-    if price:
-        live_prices[isin] = price
-        target_isins_scored.append((isin, ts))
+    if watch_list:
+        watch_list.sort(key=lambda x: -x[1])
+        watch_names = [f"{isin_to_name.get(i, i)}({t})" for i, t in watch_list[:5]]
+        state.summary.append(f"Watch-Modus: {len(watch_list)} Kandidat(en) noch nicht kaufbar "
+                             f"(fehlende Historie). Top: {', '.join(watch_names)}.")
+    state.summary.append(f"Adaptive Kaufschwelle: {buy_threshold} "
+                         f"(Floor {BUY_FLOOR}, {int(BUY_PERCENTILE*100)}er-Perzentil "
+                         f"aus {len(active_scores)} aktiven Kandidaten).")
 
-target_isins = [isin for isin, _ in target_isins_scored]
+    target_isins_scored = []
+    for isin, ts in scored_candidates:
+        price = get_live_price(isin)
+        if price:
+            state.live_prices[isin] = price
+            target_isins_scored.append((isin, ts))
+
+    state.target_isins_scored = target_isins_scored
+    state.target_isins = [isin for isin, _ in target_isins_scored]
+
 
 # ==========================================
 # 1. STRATEGISCHER VERKAUF
 # Auslöser: empfehlung=Verkaufen ODER Score < SELL_THRESHOLD
 # ==========================================
-positions_to_keep = []
-sold_isins = set()  # in diesem Lauf verkauft -> kein Rückkauf im selben Lauf
-for p in positions:
-    isin = p.get("isin")
-    stock = p.get("wertpapier", isin)
 
-    c_item = get_chart_item(isin)
-    f_item = get_funda_item(isin)
-    c_emp = (c_item.get("empfehlung") or "").lower() if c_item else ""
-    f_emp = (f_item.get("empfehlung") or "").lower() if f_item else ""
-    ts = total_score(isin)[0]
+def phase_strategic_sell(state):
+    positions_to_keep = []
+    for p in state.positions:
+        isin = p.get("isin")
+        stock = p.get("wertpapier", isin)
 
-    current_price = live_prices.get(isin) or get_live_price(isin) or p.get("boersenkurs", 0)
-    if current_price:
-        live_prices[isin] = current_price
+        c_item = get_chart_item(isin)
+        f_item = get_funda_item(isin)
+        c_emp = (c_item.get("empfehlung") or "").lower() if c_item else ""
+        f_emp = (f_item.get("empfehlung") or "").lower() if f_item else ""
+        ts = total_score(isin)[0]
 
-    kaufkurs = p.get("kaufkurs", 0) or 0
-    drawdown = ((current_price - kaufkurs) / kaufkurs) if (kaufkurs and current_price) else 0.0
+        current_price = state.live_prices.get(isin) or get_live_price(isin) or p.get("boersenkurs", 0)
+        if current_price:
+            state.live_prices[isin] = current_price
 
-    # Marktbereinigung: Alpha = relativer Drawdown SEIT DEM ANKER minus die
-    # beta-erwartete DAX-Bewegung seit demselben Anker. Kurs- und DAX-Anker
-    # (stop_ref_kurs, dax_ref) werden IMMER gemeinsam gesetzt, damit beide
-    # denselben Zeithorizont haben (sonst würde ein Alt-Verlust fälschlich als
-    # Alpha gewertet). Neukäufe verankern beim Kauf, Altpositionen beim ersten
-    # Lauf auf heute (relative Uhr startet dann bei 0).
-    beta = get_beta(isin)
-    dax_ref = p.get("dax_ref")
-    ref_kurs = p.get("stop_ref_kurs")
-    rel_dd = None
-    r_dax = None
-    alpha = None
-    if dax_ref and ref_kurs and dax_now and current_price:
-        rel_dd = (current_price - ref_kurs) / ref_kurs
-        r_dax = (dax_now - dax_ref) / dax_ref
-        alpha = rel_dd - beta * r_dax
+        kaufkurs = p.get("kaufkurs", 0) or 0
+        drawdown = ((current_price - kaufkurs) / kaufkurs) if (kaufkurs and current_price) else 0.0
 
-    sell = False
-    sell_reason = ""
-    if "verkauf" in c_emp or "verkauf" in f_emp:
-        sell = True
-        sell_reason = f"Explizites Verkaufen-Signal (Score={ts})"
-    elif drawdown <= ABS_HARD_STOP_PCT:
-        sell = True
-        sell_reason = f"Absoluter Hard-Stop ({drawdown*100:.1f}% ≤ {ABS_HARD_STOP_PCT*100:.0f}%)"
-    elif alpha is not None and rel_dd < 0 and alpha <= REL_STOP_PCT:
-        sell = True
-        sell_reason = (f"Relativer Stop: {alpha*100:.1f}% Underperformance vs. DAX "
-                       f"(β={beta:.2f}, seit Anker: Kurs {rel_dd*100:+.1f}% / "
-                       f"DAX {r_dax*100:+.1f}%) ≤ {REL_STOP_PCT*100:.0f}%")
-    elif ts < SELL_THRESHOLD:
-        sell = True
-        sell_reason = f"Score unter Schwellwert ({ts} < {SELL_THRESHOLD})"
+        # Marktbereinigung: Alpha = relativer Drawdown SEIT DEM ANKER minus die
+        # beta-erwartete DAX-Bewegung seit demselben Anker. Kurs- und DAX-Anker
+        # (stop_ref_kurs, dax_ref) werden IMMER gemeinsam gesetzt, damit beide
+        # denselben Zeithorizont haben (sonst würde ein Alt-Verlust fälschlich als
+        # Alpha gewertet). Neukäufe verankern beim Kauf, Altpositionen beim ersten
+        # Lauf auf heute (relative Uhr startet dann bei 0).
+        beta = get_beta(isin)
+        dax_ref = p.get("dax_ref")
+        ref_kurs = p.get("stop_ref_kurs")
+        rel_dd = None
+        r_dax = None
+        alpha = None
+        if dax_ref and ref_kurs and dax_now and current_price:
+            rel_dd = (current_price - ref_kurs) / ref_kurs
+            r_dax = (dax_now - dax_ref) / dax_ref
+            alpha = rel_dd - beta * r_dax
 
-    if sell:
-        begruendung = sell_reason + " | " + score_reason(isin)
-        tx, net_cash = _make_sell_record(p, current_price,
-                                         notiz=f"Strategischer Verkauf ({sell_reason})",
-                                         begruendung=begruendung)
-        current_cash += net_cash
-        sold_isins.add(isin)
-        summary.append(f"Strategischer Verkauf: {p['stueck']}x {stock} ({isin}) zu {current_price:.2f} EUR. {sell_reason}.")
-        transactions.append(tx)
-    else:
-        p["boersenkurs"] = current_price
-        p["boersenwert"] = round(p["stueck"] * p["boersenkurs"], 2)
-        p["gewinn_verlust"] = round(p["boersenwert"] - p["investiert"], 2)
-        p["score"] = ts
-        p["beta"] = beta
-        # Review-Flag: starkes Negativ-Sentiment auf BESTEHENDER Position ist
-        # kein Verkaufsgrund (das entscheidet weiter der harte Score / Stop),
-        # aber sichtbar machen statt stillschweigend zu ignorieren.
-        sent_score, _, sent_reason, _, sent_kategorie = get_sentiment(isin)
-        if sent_score <= REVIEW_FLAG_THRESHOLD:
-            p["review_flag"] = True
-            p["review_grund"] = f"KI-Sentiment {sent_score} ({sent_kategorie}): {sent_reason}"
+        sell = False
+        sell_reason = ""
+        if "verkauf" in c_emp or "verkauf" in f_emp:
+            sell = True
+            sell_reason = f"Explizites Verkaufen-Signal (Score={ts})"
+        elif drawdown <= ABS_HARD_STOP_PCT:
+            sell = True
+            sell_reason = f"Absoluter Hard-Stop ({drawdown*100:.1f}% ≤ {ABS_HARD_STOP_PCT*100:.0f}%)"
+        elif alpha is not None and rel_dd < 0 and alpha <= REL_STOP_PCT:
+            sell = True
+            sell_reason = (f"Relativer Stop: {alpha*100:.1f}% Underperformance vs. DAX "
+                           f"(β={beta:.2f}, seit Anker: Kurs {rel_dd*100:+.1f}% / "
+                           f"DAX {r_dax*100:+.1f}%) ≤ {REL_STOP_PCT*100:.0f}%")
+        elif ts < SELL_THRESHOLD:
+            sell = True
+            sell_reason = f"Score unter Schwellwert ({ts} < {SELL_THRESHOLD})"
+
+        if sell:
+            begruendung = sell_reason + " | " + score_reason(isin)
+            tx, net_cash = _make_sell_record(p, current_price,
+                                             notiz=f"Strategischer Verkauf ({sell_reason})",
+                                             begruendung=begruendung)
+            state.current_cash += net_cash
+            state.sold_isins.add(isin)
+            state.summary.append(f"Strategischer Verkauf: {p['stueck']}x {stock} ({isin}) zu {current_price:.2f} EUR. {sell_reason}.")
+            state.transactions.append(tx)
         else:
-            p.pop("review_flag", None)
-            p.pop("review_grund", None)
-        # Anker-Paar (Kurs + DAX) gemeinsam auf heute setzen, falls (noch) nicht
-        # vorhanden — Altpositionen ohne Kaufdatum: relative Uhr startet bei 0.
-        if dax_now and current_price and (not p.get("dax_ref") or not p.get("stop_ref_kurs")):
-            p["dax_ref"] = round(dax_now, 2)
-            p["stop_ref_kurs"] = round(current_price, 4)
-        # TRAILING-STOP: macht die Position ein neues Hoch, wandert das Anker-Paar
-        # (Höchststand-Referenz) mit nach oben. Der relative Stop misst den
-        # beta-bereinigten Rückgang dann vom PEAK statt vom Einstieg — aufgelaufene
-        # Gewinne werden so mitgesichert. Anker nur nach oben (Ratchet), nie zurück,
-        # daher werden Gewinne nie wieder komplett hergegeben, bevor der Stop greift.
-        elif dax_now and current_price and current_price > (p.get("stop_ref_kurs") or 0):
-            p["stop_ref_kurs"] = round(current_price, 4)
-            p["dax_ref"] = round(dax_now, 2)
-        positions_to_keep.append(p)
+            p["boersenkurs"] = current_price
+            p["boersenwert"] = round(p["stueck"] * p["boersenkurs"], 2)
+            p["gewinn_verlust"] = round(p["boersenwert"] - p["investiert"], 2)
+            p["score"] = ts
+            p["beta"] = beta
+            # Review-Flag: starkes Negativ-Sentiment auf BESTEHENDER Position ist
+            # kein Verkaufsgrund (das entscheidet weiter der harte Score / Stop),
+            # aber sichtbar machen statt stillschweigend zu ignorieren.
+            sent_score, _, sent_reason, _, sent_kategorie = get_sentiment(isin)
+            if sent_score <= REVIEW_FLAG_THRESHOLD:
+                p["review_flag"] = True
+                p["review_grund"] = f"KI-Sentiment {sent_score} ({sent_kategorie}): {sent_reason}"
+            else:
+                p.pop("review_flag", None)
+                p.pop("review_grund", None)
+            # Anker-Paar (Kurs + DAX) gemeinsam auf heute setzen, falls (noch) nicht
+            # vorhanden — Altpositionen ohne Kaufdatum: relative Uhr startet bei 0.
+            if dax_now and current_price and (not p.get("dax_ref") or not p.get("stop_ref_kurs")):
+                p["dax_ref"] = round(dax_now, 2)
+                p["stop_ref_kurs"] = round(current_price, 4)
+            # TRAILING-STOP: macht die Position ein neues Hoch, wandert das Anker-Paar
+            # (Höchststand-Referenz) mit nach oben. Der relative Stop misst den
+            # beta-bereinigten Rückgang dann vom PEAK statt vom Einstieg — aufgelaufene
+            # Gewinne werden so mitgesichert. Anker nur nach oben (Ratchet), nie zurück,
+            # daher werden Gewinne nie wieder komplett hergegeben, bevor der Stop greift.
+            elif dax_now and current_price and current_price > (p.get("stop_ref_kurs") or 0):
+                p["stop_ref_kurs"] = round(current_price, 4)
+                p["dax_ref"] = round(dax_now, 2)
+            positions_to_keep.append(p)
 
-positions = positions_to_keep
+    state.positions = positions_to_keep
+
 
 # ==========================================
 # 1b. SEKTOR-ABBAU (Klumpenrisiko aktiv zurückführen)
@@ -726,153 +816,214 @@ positions = positions_to_keep
 # ganz verkauft, bis der Sektor wieder <= Cap liegt. Freigesetzter Cash bleibt
 # als Puffer oder finanziert Nicht-Sektor-Käufe in der Kaufphase.
 # ==========================================
+
 def _sector_pct(pos, sektor):
     tot = sum(p.get("boersenwert", 0) or 0 for p in pos)
     return (sector_value(pos, sektor) / tot) if tot > 0 else 0.0
 
-sektoren_im_depot = sorted({sector_map.get(p.get("isin")) for p in positions
-                            if sector_map.get(p.get("isin"))})
-for sektor in sektoren_im_depot:
-    # Hysterese: nur eingreifen, wenn der Sektor spürbar (Cap+Toleranz) über dem
-    # Limit liegt. Danach bis auf den reinen Cap zurückführen.
-    if _sector_pct(positions, sektor) <= SEKTOR_SOFT_CAP + SEKTOR_CAP_TOLERANCE:
-        continue
-    kandidaten = sorted(
-        [p for p in positions if sector_map.get(p.get("isin")) == sektor],
-        key=lambda p: (p.get("score", 0),
-                       p["gewinn_verlust"] / p["investiert"] if p.get("investiert") else 0),
-    )
-    for p in kandidaten:
-        pct_before = _sector_pct(positions, sektor)
-        if pct_before <= SEKTOR_SOFT_CAP:
-            break
-        isin = p.get("isin")
-        price = p.get("boersenkurs") or get_live_price(isin) or 0
-        if not price:
+
+def phase_sector_reduction(state):
+    sektoren_im_depot = sorted({sector_map.get(p.get("isin")) for p in state.positions
+                                if sector_map.get(p.get("isin"))})
+    for sektor in sektoren_im_depot:
+        # Hysterese: nur eingreifen, wenn der Sektor spürbar (Cap+Toleranz) über dem
+        # Limit liegt. Danach bis auf den reinen Cap zurückführen.
+        if _sector_pct(state.positions, sektor) <= SEKTOR_SOFT_CAP + SEKTOR_CAP_TOLERANCE:
             continue
-        begruendung = (f"Sektor-Abbau: {sektor} bei {pct_before*100:.1f}% "
-                       f"(> {SEKTOR_SOFT_CAP*100:.0f}%-Cap) | " + score_reason(isin))
-        tx, net_cash = _make_sell_record(
-            p, price,
-            notiz=f"Sektor-Abbau ({sektor} über {SEKTOR_SOFT_CAP*100:.0f}%-Cap)",
-            begruendung=begruendung)
-        current_cash += net_cash
-        sold_isins.add(isin)
-        summary.append(f"Sektor-Abbau: {p['stueck']}x {p.get('wertpapier', isin)} "
-                       f"({isin}) zu {price:.2f} EUR verkauft — {sektor} war "
-                       f"{pct_before*100:.1f}% (Cap {SEKTOR_SOFT_CAP*100:.0f}%, "
-                       f"Score={p.get('score', 0)}).")
-        transactions.append(tx)
-        positions.remove(p)
+        kandidaten = sorted(
+            [p for p in state.positions if sector_map.get(p.get("isin")) == sektor],
+            key=lambda p: (p.get("score", 0),
+                           p["gewinn_verlust"] / p["investiert"] if p.get("investiert") else 0),
+        )
+        for p in kandidaten:
+            pct_before = _sector_pct(state.positions, sektor)
+            if pct_before <= SEKTOR_SOFT_CAP:
+                break
+            isin = p.get("isin")
+            price = p.get("boersenkurs") or get_live_price(isin) or 0
+            if not price:
+                continue
+            begruendung = (f"Sektor-Abbau: {sektor} bei {pct_before*100:.1f}% "
+                           f"(> {SEKTOR_SOFT_CAP*100:.0f}%-Cap) | " + score_reason(isin))
+            tx, net_cash = _make_sell_record(
+                p, price,
+                notiz=f"Sektor-Abbau ({sektor} über {SEKTOR_SOFT_CAP*100:.0f}%-Cap)",
+                begruendung=begruendung)
+            state.current_cash += net_cash
+            state.sold_isins.add(isin)
+            state.summary.append(f"Sektor-Abbau: {p['stueck']}x {p.get('wertpapier', isin)} "
+                                 f"({isin}) zu {price:.2f} EUR verkauft — {sektor} war "
+                                 f"{pct_before*100:.1f}% (Cap {SEKTOR_SOFT_CAP*100:.0f}%, "
+                                 f"Score={p.get('score', 0)}).")
+            state.transactions.append(tx)
+            state.positions.remove(p)
+
 
 # ==========================================
 # 2. ERMITTELN DES KAPITALBEDARFS
 # Positionsgröße ist score-abhängig
 # ==========================================
-unowned_targets = [(isin, ts) for isin, ts in target_isins_scored
-                   if not any(p.get("isin") == isin for p in positions)
-                   and isin not in sold_isins]
-total_needed_cash = sum(budget_for_score(ts, BUY_THRESHOLD) * vol_size_multiplier(isin)
-                        for isin, ts in unowned_targets)
+
+def compute_capital_need(state):
+    """(unowned_targets, total_needed_cash) für die Rebalancing-/Kaufphase."""
+    unowned_targets = [(isin, ts) for isin, ts in state.target_isins_scored
+                       if not any(p.get("isin") == isin for p in state.positions)
+                       and isin not in state.sold_isins]
+    total_needed_cash = sum(budget_for_score(ts, state.buy_threshold) * vol_size_multiplier(isin)
+                            for isin, ts in unowned_targets)
+    return unowned_targets, total_needed_cash
+
 
 # ==========================================
 # 3. REBALANCING (Schwache Halten-Positionen verkaufen)
 # Sortiert nach schlechtestem Score (schwächste zuerst)
 # ==========================================
-halten_positions = [p for p in positions
-                    if p.get("isin") not in target_isins
-                    and p.get("score", 0) < REBALANCE_THRESHOLD]
-halten_positions.sort(key=lambda p: (p.get("score", 0), p["gewinn_verlust"] / p["investiert"] if p["investiert"] > 0 else 0))
 
-for p in halten_positions:
-    if current_cash >= total_needed_cash:
-        break
-    isin = p.get("isin")
-    stock = p.get("wertpapier", isin)
-    price = p["boersenkurs"]
-    begruendung = "Rebalancing | " + score_reason(isin)
-    tx, net_cash = _make_sell_record(p, price,
-                                     notiz="Rebalancing (Kapitalbeschaffung für Neukäufe)",
-                                     begruendung=begruendung)
-    current_cash += net_cash
-    summary.append(f"Rebalancing-Verkauf: {p['stueck']}x {stock} ({isin}) zu {price:.2f} EUR (Score={p.get('score',0)}).")
-    transactions.append(tx)
-    positions.remove(p)
+def phase_rebalance(state, total_needed_cash):
+    halten_positions = [p for p in state.positions
+                        if p.get("isin") not in state.target_isins
+                        and p.get("score", 0) < REBALANCE_THRESHOLD]
+    halten_positions.sort(key=lambda p: (p.get("score", 0), p["gewinn_verlust"] / p["investiert"] if p["investiert"] > 0 else 0))
+
+    for p in halten_positions:
+        if state.current_cash >= total_needed_cash:
+            break
+        isin = p.get("isin")
+        stock = p.get("wertpapier", isin)
+        price = p["boersenkurs"]
+        begruendung = "Rebalancing | " + score_reason(isin)
+        tx, net_cash = _make_sell_record(p, price,
+                                         notiz="Rebalancing (Kapitalbeschaffung für Neukäufe)",
+                                         begruendung=begruendung)
+        state.current_cash += net_cash
+        state.summary.append(f"Rebalancing-Verkauf: {p['stueck']}x {stock} ({isin}) zu {price:.2f} EUR (Score={p.get('score',0)}).")
+        state.transactions.append(tx)
+        state.positions.remove(p)
+
 
 # ==========================================
 # 4. NEUKÄUFE — höchster Score zuerst, Größe score-abhängig
 # ==========================================
-for isin, ts in unowned_targets:
-    if isin not in live_prices:
-        continue
-    price = live_prices[isin]
-    stock = isin_to_name.get(isin, isin)
-    vol_mult = vol_size_multiplier(isin)
-    budget = budget_for_score(ts, BUY_THRESHOLD) * vol_mult
-    # Mindest-Barreserve nie unterschreiten.
-    spendable = current_cash - MIN_CASH_RESERVE
-    budget_before_cap = min(budget, spendable)
-    budget_for_this = capped_budget(budget_before_cap, isin, positions)
-    if budget_for_this < MIN_ORDER_VALUE + fee_per_trade:
-        if budget_for_this < budget_before_cap:
-            summary.append(f"Sektor-Cap: Kauf von {stock} ({isin}) gekappt/blockiert "
-                           f"(Sektor {sector_map.get(isin)} nahe/über {SEKTOR_SOFT_CAP*100:.0f}%).")
-        continue  # zu wenig freies Kapital für eine sinnvolle Order
-    units_to_buy = int((budget_for_this - fee_per_trade) / price)
-    order_value = units_to_buy * price
-    if units_to_buy > 0 and order_value >= MIN_ORDER_VALUE:
-        begruendung = score_reason(isin)
-        tx, total_cost = _make_buy_record(isin, stock, units_to_buy, price, ts, begruendung)
-        current_cash -= total_cost
-        positions.append({
-            "isin": isin,
-            "wertpapier": stock,
-            "stueck": units_to_buy,
-            "kaufkurs": price,
-            "boersenkurs": price,
-            "investiert": round(units_to_buy * price, 2),
-            "boersenwert": round(units_to_buy * price, 2),
-            "gewinn_verlust": 0.0,
-            "score": ts,
-            "dax_ref": round(dax_now, 2) if dax_now else None,
-            "stop_ref_kurs": price,
-            "beta": get_beta(isin)
-        })
-        transactions.append(tx)
-        summary.append(f"Kauf: {units_to_buy}x {stock} ({isin}) zu {price:.2f} EUR, Score={ts}, Budget={budget:.0f}€ (Vola×{vol_mult}).")
 
-portfolio_value = sum(p.get("boersenwert", 0) for p in positions)
+def phase_buy(state, unowned_targets):
+    for isin, ts in unowned_targets:
+        if isin not in state.live_prices:
+            continue
+        price = state.live_prices[isin]
+        stock = isin_to_name.get(isin, isin)
+        vol_mult = vol_size_multiplier(isin)
+        budget = budget_for_score(ts, state.buy_threshold) * vol_mult
+        # Mindest-Barreserve nie unterschreiten.
+        spendable = state.current_cash - MIN_CASH_RESERVE
+        budget_before_cap = min(budget, spendable)
+        budget_for_this = capped_budget(budget_before_cap, isin, state.positions)
+        if budget_for_this < MIN_ORDER_VALUE + fee_per_trade:
+            if budget_for_this < budget_before_cap:
+                state.summary.append(f"Sektor-Cap: Kauf von {stock} ({isin}) gekappt/blockiert "
+                                     f"(Sektor {sector_map.get(isin)} nahe/über {SEKTOR_SOFT_CAP*100:.0f}%).")
+            continue  # zu wenig freies Kapital für eine sinnvolle Order
+        units_to_buy = int((budget_for_this - fee_per_trade) / price)
+        order_value = units_to_buy * price
+        if units_to_buy > 0 and order_value >= MIN_ORDER_VALUE:
+            begruendung = score_reason(isin)
+            tx, total_cost = _make_buy_record(isin, stock, units_to_buy, price, ts, begruendung)
+            state.current_cash -= total_cost
+            state.positions.append({
+                "isin": isin,
+                "wertpapier": stock,
+                "stueck": units_to_buy,
+                "kaufkurs": price,
+                "boersenkurs": price,
+                "investiert": round(units_to_buy * price, 2),
+                "boersenwert": round(units_to_buy * price, 2),
+                "gewinn_verlust": 0.0,
+                "score": ts,
+                "dax_ref": round(dax_now, 2) if dax_now else None,
+                "stop_ref_kurs": price,
+                "beta": get_beta(isin)
+            })
+            state.transactions.append(tx)
+            state.summary.append(f"Kauf: {units_to_buy}x {stock} ({isin}) zu {price:.2f} EUR, Score={ts}, Budget={budget:.0f}€ (Vola×{vol_mult}).")
 
-if RECOMMEND:
-    # Nichts am Depot ändern — nur Vorschläge als Entscheidungsgrundlage schreiben.
-    new_trades = transactions[initial_tx_count:]
+
+# ==========================================
+# AUSGABE
+# ==========================================
+
+def write_recommendation(state, portfolio_value):
+    """Empfehlungs-Modus: nichts am Depot ändern, nur Vorschläge schreiben."""
+    new_trades = state.transactions[state.initial_tx_count:]
     recommendation = {
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "hinweis": ("Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). "
                     "Der Agent entscheidet autonom und kann abweichen."),
         "vorgeschlagene_trades": new_trades,
-        "zusammenfassung": summary,
-        "resultierender_barbestand": round(current_cash, 2),
+        "zusammenfassung": state.summary,
+        "resultierender_barbestand": round(state.current_cash, 2),
         "resultierender_portfoliowert": round(portfolio_value, 2),
-        "resultierendes_gesamtvermoegen": round(current_cash + portfolio_value, 2),
+        "resultierendes_gesamtvermoegen": round(state.current_cash + portfolio_value, 2),
     }
     save_json(recommend_path, recommendation)
     print(f"[EMPFEHLUNGS-MODUS] {len(new_trades)} Trade-Vorschläge -> {recommend_path}")
-    if summary:
-        print("\n".join(summary))
+    if state.summary:
+        print("\n".join(state.summary))
     else:
         print("Vorschlag: keine Trades nötig, Zielportfolio erreicht.")
-else:
-    depot["aktueller_barbestand"] = round(current_cash, 2)
+
+
+def write_depot(data, depot, state, portfolio_value):
+    """Live-Modus: Ergebnis nach depot_status.json schreiben."""
+    depot["aktueller_barbestand"] = round(state.current_cash, 2)
     depot["portfoliowert"] = round(portfolio_value, 2)
-    depot["gesamtvermoegen"] = round(current_cash + portfolio_value, 2)
-    depot["positionen"] = positions
-    depot["transaktionshistorie"] = transactions
+    depot["gesamtvermoegen"] = round(state.current_cash + portfolio_value, 2)
+    depot["positionen"] = state.positions
+    depot["transaktionshistorie"] = state.transactions
     data["depot"] = depot
 
     save_json(depot_path, data)
 
-    if summary:
-        print("\n".join(summary))
+    if state.summary:
+        print("\n".join(state.summary))
     else:
         print("Keine Transaktionen notwendig. Zielportfolio ist erreicht.")
+
+
+# ==========================================
+# ORCHESTRIERUNG
+# ==========================================
+
+def main(recommend=False):
+    load_inputs()
+
+    data = load_json(depot_path, {})
+    depot = data.get("depot", {})
+    positions = depot.get("positionen", [])
+    transactions = depot.get("transaktionshistorie", [])
+    state = RunState(
+        current_cash=depot.get("aktueller_barbestand", 10000.0),
+        positions=positions,
+        transactions=transactions,
+        initial_tx_count=len(transactions),  # neue Trades dieses Laufs = ab hier
+    )
+
+    phase_plan(state)
+    phase_strategic_sell(state)
+    phase_sector_reduction(state)
+    unowned_targets, total_needed_cash = compute_capital_need(state)
+    phase_rebalance(state, total_needed_cash)
+    phase_buy(state, unowned_targets)
+
+    portfolio_value = sum(p.get("boersenwert", 0) for p in state.positions)
+
+    if recommend:
+        write_recommendation(state, portfolio_value)
+    else:
+        write_depot(data, depot, state, portfolio_value)
+
+
+if __name__ == "__main__":
+    # Empfehlungs-Modus: berechnet Score/Sentiment/Veto und die Trades, die das
+    # regelbasierte System vorschlagen WÜRDE, schreibt sie nach
+    # data/trade_recommendations.json und lässt depot_status.json unangetastet.
+    recommend = any(a in ("--recommend", "--dry-run") for a in sys.argv[1:])
+    main(recommend=recommend)
