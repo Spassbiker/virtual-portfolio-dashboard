@@ -1,100 +1,100 @@
 {
-  "generated_at": "2026-07-20 08:58",
+  "generated_at": "2026-07-21 08:53",
   "scores": {
     "IE00B1XNHC34": {
       "typ": "A",
       "sentiment_score": -2,
-      "begruendung": "ICLN steckt in der Dip-Diskussion, Bloom Energy fällt nach Scandium-Streit und FuelCell sackt zweistellig ab."
+      "begruendung": "UBS stuft Clean Energy Fuels auf Neutral herab und Bloom Energy fällt, während ICLN weiter als Dip diskutiert wird."
     },
     "IE000NDWFGA5": {
       "typ": "A",
       "sentiment_score": -1,
-      "begruendung": "Jüngste Schlagzeilen dominiert von Kursstürzen bei Nuklearwerten (Oklo -28%), ältere News zu Cameco/UEC eher positiv."
+      "begruendung": "NLR schlägt laut Bericht die Uranminen-Werte, zudem wirken die Kursstürze bei Oklo & Co. aus der Vorwoche noch nach, dem steht ein frischer AI-Nachfrage-Impuls für Nuklear-ETFs gegenüber."
     },
     "IE0002Y8CX98": {
       "typ": "A",
-      "sentiment_score": 1,
-      "begruendung": "Kaum thementreffende Schlagzeilen, einzig der Elbit-Systems-Verteidigungsauftrag über 370 Mio. USD ist relevant und positiv."
+      "sentiment_score": 0,
+      "begruendung": "Keine Schlagzeile mit erkennbarem Bezug zu Rheinmetall oder europäischer Verteidigung."
     },
     "IE000YYE6WK5": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Kratos expandiert seine Fertigung, Axon und KTOS profitieren vom Ausbau der US-Verteidigungsindustrie."
+      "sentiment_score": 3,
+      "begruendung": "Kratos erhält neuen Elroy-Air-Fertigungsauftrag, Cathie Wood kauft Verteidigungswerte zu und steigende Nahost-Konfliktrisiken stützen die Nachfrage-Story."
     },
     "IE000OJ5TQP4": {
       "typ": "A",
-      "sentiment_score": 1,
-      "begruendung": "Ukraine-Großangriff rückt Drohnen-ETFs in den Fokus, gleichzeitig Diskussion über Dip-Kauf nach Kursrückgang."
+      "sentiment_score": 0,
+      "begruendung": "Keine Schlagzeilen für dieses Thema verfügbar."
     },
     "IE000YU9K6K2": {
       "typ": "A",
-      "sentiment_score": -2,
-      "begruendung": "SpaceX/SPCX fällt auf ein 52-Wochen-Tief und unter den IPO-Preis, trotz optimistischem Kursziel von Morgan Stanley."
+      "sentiment_score": -3,
+      "begruendung": "SpaceX schließt die siebte Sitzung in Folge tiefer, rutscht unter den IPO-Preis und der Starship-Testflug verschiebt sich wegen Triebwerksproblemen."
     },
     "IE00BYPLS672": {
       "typ": "A",
       "sentiment_score": 3,
-      "begruendung": "Cybersecurity-Aktien und -ETFs rallyen auf Analysten-Upgrades und 52-Wochen-Hoch, wachsende AI-Bedrohungslage wirkt als Rückenwind."
+      "begruendung": "CrowdStrike und Palo Alto rallyen deutlich, Wall Street hebt Kursziele für Okta und Fortinet an, Cybersecurity-Ausgaben knacken 300 Mrd. USD."
     },
     "IE00BYVQ9F29": {
       "typ": "A",
       "sentiment_score": 0,
-      "begruendung": "Nasdaq pendelt zwischen Rekordrally und AI-Jitter-bedingten Rücksetzern, insgesamt ausgeglichen."
+      "begruendung": "Nur mehrere Wochen alte Schlagzeilen mit wechselndem Bild aus Rally und AI-Jitter-Rücksetzern, kein klarer aktueller Trend."
     },
     "IE00BYZK4552": {
       "typ": "A",
       "sentiment_score": 1,
-      "begruendung": "Positive Reshoring- und Healthcare-Automation-Story überwiegt trotz Kursverlusten einzelner Robotik-Titel."
+      "begruendung": "Positive Reshoring- und Healthcare-Automation-Story überwiegt trotz Kursverlusten einzelner Robotik-Titel auf 52-Wochen-Tiefs."
     },
     "IE00BMC38736": {
       "typ": "A",
-      "sentiment_score": -3,
-      "begruendung": "Breiter Chip-Ausverkauf mit fallenden Kursen bei NXP, Broadcom und Power Integrations wegen sektorweiter Gewinnmitnahmen und geopolitischer Spannungen."
+      "sentiment_score": -2,
+      "begruendung": "Wells Fargo senkt das NXP-Kursziel und der Chip-Ausverkauf drückt NXP/Broadcom, nur vereinzelte Lichtblicke wie ON Semiconductor stützen dagegen."
     },
     "IE00BM67HN09": {
       "typ": "B",
-      "sentiment_score": 1,
-      "begruendung": "Überwiegend Kaufempfehlungen für Bloom Energy und Energy Transfer, leicht gedämpft durch Berichte über eine brüchige AI-Data-Center-Wachstumsstory."
+      "sentiment_score": 0,
+      "begruendung": "AI-Pipeline-Infrastruktur nahe Kaufsignalen und Kaufempfehlungen für Bloom Energy stehen einem heutigen Kursrückgang bei Bloom/ORCL gegenüber."
     },
     "IE00BM67HS53": {
       "typ": "B",
-      "sentiment_score": -2,
-      "begruendung": "Chipwerte rutschen in den Bärenmarkt, AMD/Intel/Nvidia fallen deutlich, was die materialsnahen Zulieferer-Story belastet."
+      "sentiment_score": -1,
+      "begruendung": "Trumps Anordnung zu Aluminium- und Mineralien-Lieferketten stützt zwar die Branche, doch Seltene-Erden-Aktien fallen wegen Überangebotssorgen und Applied Materials zeigt einen stärkeren Dip als der Markt."
     },
     "IE00B4LN9N13": {
       "typ": "B",
-      "sentiment_score": 0,
-      "begruendung": "Schlagzeilen sind generische Makro-/Geopolitik-News ohne konkreten Industrials-Bezug."
+      "sentiment_score": -1,
+      "begruendung": "Überwiegend generische Makro-/Geopolitik-News, einzig der stärkere Rückgang bei Garmin liefert einen schwachen industrienahen Bezug."
     },
     "IE00BM67HV82": {
       "typ": "B",
-      "sentiment_score": 0,
-      "begruendung": "Schlagzeilen sind generische Makro-/Geopolitik-News ohne konkreten Industrials-Bezug."
+      "sentiment_score": -1,
+      "begruendung": "Überwiegend generische Makro-/Geopolitik-News, einzig der stärkere Rückgang bei Garmin liefert einen schwachen industrienahen Bezug."
     },
     "IE000CK5G8J7": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "Sterling Infrastructure liefert ein starkes Q1, eine höhere Prognose und eine erweiterte Kreditlinie für AI-getriebenes Wachstum."
+      "sentiment_score": 3,
+      "begruendung": "Sterling Infrastructure legt trotz fallendem Gesamtmarkt zu und eine Digital-Infrastruktur-Rally bei CIFR/CLSK/MARA nach Hut 8/IREN-Impulsen stützt das Thema zusätzlich."
     },
     "IE00BM67HT60": {
       "typ": "B",
-      "sentiment_score": -1,
-      "begruendung": "Speicherchip-Bärenmarkt und Micron-Einbruch von 30% überwiegen trotz Kurserholung einzelner Titel und der Trillion-Dollar-Marke."
+      "sentiment_score": 0,
+      "begruendung": "MU/SNDK schütteln die Memory-Schwäche ab und Demand-Narrativ hält, gleichzeitig warnt Michael Burry vor Micron und Marvell steckt 39% unter seinem Hoch."
     },
     "DE000A0H08H3": {
       "typ": "B",
       "sentiment_score": 2,
-      "begruendung": "Utility-ETFs legen laut Schlagzeilen 8% YTD zu, getrieben von AI-Strombedarf, und gelten als Gewinner der Rotation aus Tech."
+      "begruendung": "Utility-ETFs legen laut Schlagzeilen 8% YTD zu und gelten dank AI-Strombedarf als Gewinner des Data-Center-Booms, trotz RBC-Rotationsempfehlung Richtung Tech."
     },
     "IE00BM67HQ30": {
       "typ": "B",
       "sentiment_score": 2,
-      "begruendung": "Utility-ETFs legen laut Schlagzeilen 8% YTD zu, getrieben von AI-Strombedarf, und gelten als Gewinner der Rotation aus Tech."
+      "begruendung": "Utility-ETFs legen laut Schlagzeilen 8% YTD zu und gelten dank AI-Strombedarf als Gewinner des Data-Center-Booms, trotz RBC-Rotationsempfehlung Richtung Tech."
     },
     "LU1834988864": {
       "typ": "B",
       "sentiment_score": 2,
-      "begruendung": "Utility-ETFs legen laut Schlagzeilen 8% YTD zu, getrieben von AI-Strombedarf, und gelten als Gewinner der Rotation aus Tech."
+      "begruendung": "Utility-ETFs legen laut Schlagzeilen 8% YTD zu und gelten dank AI-Strombedarf als Gewinner des Data-Center-Booms, trotz RBC-Rotationsempfehlung Richtung Tech."
     }
   }
 }

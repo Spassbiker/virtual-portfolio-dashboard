@@ -1,117 +1,124 @@
 {
-  "generated_at": "2026-07-20 08:55",
+  "generated_at": "2026-07-21 08:55",
   "scores": {
     "DE0005557508": {
       "sentiment_score": 1,
       "veto": false,
-      "confidence": 0.5,
-      "event_kategorie": "Sonstiges",
-      "begruendung": "Zahlreiche Presseartikel loben WM-2030-Medienrechte und defensive Positionierung, aber kein kursrelevantes Zahlenereignis."
+      "confidence": 0.4,
+      "event_kategorie": "Analyst",
+      "begruendung": "Berichte über 40% Kurslücke zum Analystenziel und laufende Aktienrückkäufe stützen leicht positiv."
     },
     "DE0005936124": {
-      "sentiment_score": -2,
-      "veto": true,
-      "confidence": 0.8,
+      "sentiment_score": 0,
+      "veto": false,
+      "confidence": 0.5,
       "event_kategorie": "Sonstiges",
-      "begruendung": "Kapitalerhöhung über 484 Mio. Euro unter Bezugspreis begleitet von fast 39% Kursabsturz in 30 Tagen belastet akut."
+      "begruendung": "Starker Auftragsbestand von 3,35 Mrd. Euro und neue 482-Mio.-Investition gleichen anhaltende Kapitalerhöhungs-Belastung unter Bezugspreis aus."
     },
     "DE0007164600": {
       "sentiment_score": 0,
       "veto": false,
       "confidence": 0.4,
       "event_kategorie": "Analyst",
-      "begruendung": "JPMorgan stuft auf Neutral herab, während Quartalszahlen erst am 23. Juli anstehen - gemischt und noch offen."
+      "begruendung": "JPMorgan bestätigt Neutral vor den am Donnerstag anstehenden Quartalszahlen - abwartende Marktstimmung."
     },
     "DE000A0D6554": {
-      "sentiment_score": 2,
-      "veto": false,
-      "confidence": 0.9,
-      "event_kategorie": "Guidance",
-      "begruendung": "Ad-hoc-Meldung bestätigt angehobene Prognose bei zweistelligem Wachstum im Turbinengeschäft."
-    },
-    "DE000A0D9PT0": {
       "sentiment_score": 1,
       "veto": false,
       "confidence": 0.6,
-      "event_kategorie": "Guidance",
-      "begruendung": "Ad-hoc-News zu robustem Wachstum und höherer Prognose stehen kurzfristigen Kursverlusten wegen Cashflow-Sorgen des CFO gegenüber."
+      "event_kategorie": "Zahlen",
+      "begruendung": "Ad-hoc-Fokus auf Marge nach operativen Zahlen und Presse-Kaufempfehlung stützen moderat positiv."
+    },
+    "DE000A0D9PT0": {
+      "sentiment_score": -1,
+      "veto": false,
+      "confidence": 0.5,
+      "event_kategorie": "Zahlen",
+      "begruendung": "Kurs geht laut WELT 'wieder stark bergab', trotz ad-hoc-Aufmerksamkeit für die Zahlen bleibt der Trend negativ."
     },
     "DE000A0DJ6J9": {
-      "sentiment_score": 3,
+      "sentiment_score": 0,
       "veto": false,
-      "confidence": 1.0,
-      "event_kategorie": "Zahlen",
-      "begruendung": "EQS-Ad-hoc: starke vorläufige Q2-Zahlen mit deutlich angehobener Jahresprognose, zusätzlich Analysten-Upgrade auf 'Buy'."
+      "confidence": 0.3,
+      "event_kategorie": "Keine",
+      "begruendung": "Nur uneinheitliche Tagesbewegungen ohne neue kursrelevante Nachricht, positiver Guidance-Effekt der Vorwoche verblasst."
     },
     "DE000A2E4K43": {
       "sentiment_score": 3,
       "veto": false,
       "confidence": 0.9,
       "event_kategorie": "M&A",
-      "begruendung": "Uber bietet 41,50 Euro je Aktie (127% Prämie) für Übernahme, breit durch mehrere Presseartikel bestätigt."
+      "begruendung": "Uber-Übernahme für 14,8 Mrd. USD wird von UBS und RBC als wachstums- und gewinnsteigernd bewertet."
     },
     "DE000ENAG999": {
-      "sentiment_score": 1,
+      "sentiment_score": 0,
       "veto": false,
-      "confidence": 0.5,
-      "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-News zu steigenden Ergebnissen und stabilem Heimatmarkt, Aktie markiert 4-Wochen-Hoch."
+      "confidence": 0.4,
+      "event_kategorie": "Analyst",
+      "begruendung": "Jefferies bestätigt Hold mit Kursziel 17,40 Euro, Chart zeigt bearishes Shooting-Star-Signal trotz stabiler Kennzahlen."
     },
     "DE000ENER6Y0": {
-      "sentiment_score": 1,
+      "sentiment_score": 2,
       "veto": false,
-      "confidence": 0.5,
+      "confidence": 0.6,
       "event_kategorie": "Sonstiges",
-      "begruendung": "Rekord-Auftragseingang von 17,7 Mrd. Euro und S&P-Rating-Anhebung auf BBB+ stehen schwacher Kursentwicklung gegenüber."
+      "begruendung": "Bestätigte Umbenennung zu Omterra, neues 300-Mio.-Werk in Mississippi und stabile Aufträge treiben die Erholung."
     },
     "FR0000073272": {
       "sentiment_score": 3,
       "veto": false,
       "confidence": 0.9,
       "event_kategorie": "Zahlen",
-      "begruendung": "Mehrere übereinstimmende Ad-hoc-Meldungen zu zweistelligem Umsatzwachstum und starkem Auftragseingang im Zivil- und Luftfahrtgeschäft."
+      "begruendung": "Serie übereinstimmender Ad-hoc-Meldungen bestätigt zweistelliges Umsatzwachstum und starke Nachfrage im Triebwerksgeschäft."
     },
     "FR0014004L86": {
-      "sentiment_score": 1,
+      "sentiment_score": 2,
       "veto": false,
-      "confidence": 0.7,
+      "confidence": 0.8,
       "event_kategorie": "Zahlen",
-      "begruendung": "Mehrere Ad-hoc-Meldungen bestätigen stabile Entwicklung nach soliden Jahreszahlen, gestützt von Flugzeugnachfrage."
+      "begruendung": "Ad-hoc-Meldung bestätigt starken Auftragsbestand und zweistelliges Umsatzplus nach soliden Jahreszahlen."
+    },
+    "IT0003242622": {
+      "sentiment_score": 2,
+      "veto": false,
+      "confidence": 0.8,
+      "event_kategorie": "Zahlen",
+      "begruendung": "Mehrere Ad-hoc-Meldungen zu stabilem Netzgeschäft und soliden Zahlen, zusätzlich BOTSI-Advisor-Ranking-Hochstufung."
     },
     "IT0003856405": {
       "sentiment_score": 2,
       "veto": false,
       "confidence": 0.8,
       "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-Meldungen zu solidem Auftragsbestand (56,8 Mrd. Euro), Rüstungsboom und neuer Baykar-Kooperation."
+      "begruendung": "Ad-hoc-Meldungen bestätigen robusten Rüstungsnachfrage-Trend und anhaltende Nachfrage nach den jüngsten Zahlen."
     },
     "NL0010273215": {
-      "sentiment_score": 0,
+      "sentiment_score": 3,
       "veto": false,
-      "confidence": 0.5,
-      "event_kategorie": "Sonstiges",
-      "begruendung": "Kimi-K3-bedingter Ausverkauf trifft auf starke EUV-Auslieferungen, TSMC-Capex-Pläne und höhere Zwischendividende - gemischt."
+      "confidence": 0.8,
+      "event_kategorie": "Zahlen",
+      "begruendung": "Starke Q2-Zahlen, 188-Mio.-Rückkaufprogramm und Analysten-Diskussion über Billionen-Dollar-Bewertung überwiegen deutlich."
     },
     "US5398301094": {
       "sentiment_score": 2,
       "veto": false,
       "confidence": 0.7,
-      "event_kategorie": "Sonstiges",
-      "begruendung": "Mehrere neue Großaufträge (SOCOM 10,5 Mrd. USD, ATACMS-Produktion, PAC-3-Interceptor) stützen die Aktie deutlich."
+      "event_kategorie": "Zahlen",
+      "begruendung": "Ad-hoc-Meldung zu robustem Rüstungsbudget und soliden Quartalszahlen sowie neuen Raketensystemen überwiegen trotz Verzögerungen beim Hyperschallprogramm."
     },
     "US67066G1040": {
-      "sentiment_score": -2,
+      "sentiment_score": 2,
       "veto": false,
       "confidence": 0.6,
       "event_kategorie": "Sonstiges",
-      "begruendung": "Kimi-K3-Ausverkauf und Verlust der Spitzenposition als wertvollstes Unternehmen an Apple belasten die Aktie."
+      "begruendung": "Offengelegte Nebius-Beteiligung und Rückeroberung der Spitzenposition als wertvollstes Unternehmen vor Apple wirken positiv."
     },
     "US72703X1063": {
       "sentiment_score": -1,
       "veto": false,
       "confidence": 0.5,
       "event_kategorie": "Sonstiges",
-      "begruendung": "Solide Quartalszahlen stehen umfangreichen Insider-Verkäufen (CEO, Mitgründer) über mehrere Millionen USD gegenüber."
+      "begruendung": "Neue Londoner Niederlassung als Wachstumssignal steht einer Fair-Value-Analyse mit prognostiziertem 48%-Kursverlust gegenüber."
     }
   }
 }

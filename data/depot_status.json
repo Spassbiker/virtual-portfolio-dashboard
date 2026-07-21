@@ -1,9 +1,9 @@
 {
   "depot": {
     "startkapital": 10000,
-    "aktueller_barbestand": 179.81,
-    "portfoliowert": 9264.48,
-    "gesamtvermoegen": 9444.28,
+    "aktueller_barbestand": 25.88,
+    "portfoliowert": 9413.41,
+    "gesamtvermoegen": 9439.29,
     "positionen": [
       {
         "isin": "IT0003856405",
@@ -15,7 +15,7 @@
         "boersenwert": 1048.01,
         "gewinn_verlust": 74.03,
         "score": 15.0,
-        "beta": 0.774,
+        "beta": 0.3,
         "dax_ref": 25118.27,
         "stop_ref_kurs": 52.19
       },
@@ -29,7 +29,7 @@
         "boersenwert": 1298.8,
         "gewinn_verlust": -81.2,
         "score": 22,
-        "beta": 1.031,
+        "beta": 0.3,
         "dax_ref": 25118.27,
         "stop_ref_kurs": 340.0
       },
@@ -43,7 +43,7 @@
         "boersenwert": 1373.76,
         "gewinn_verlust": -118.44,
         "score": 18.5,
-        "beta": 1.898,
+        "beta": 0.3,
         "dax_ref": 25118.27,
         "stop_ref_kurs": 156.24
       },
@@ -56,12 +56,10 @@
         "investiert": 1709.0,
         "boersenwert": 1807.2,
         "gewinn_verlust": 98.2,
-        "score": 11.0,
-        "beta": 0.836,
+        "score": 13.5,
+        "beta": 0.3,
         "dax_ref": 24914.8,
-        "stop_ref_kurs": 183.08,
-        "review_flag": true,
-        "review_grund": "KI-Sentiment -2 (Sonstiges): Kimi-K3-Ausverkauf und Verlust der Spitzenposition als wertvollstes Unternehmen an Apple belasten die Aktie."
+        "stop_ref_kurs": 183.08
       },
       {
         "isin": "US5398301094",
@@ -72,7 +70,7 @@
         "investiert": 545.91,
         "boersenwert": 448.5,
         "gewinn_verlust": -97.41,
-        "score": 22,
+        "score": 15.0,
         "beta": 0.3,
         "dax_ref": 24917.08,
         "stop_ref_kurs": 462.3
@@ -86,8 +84,8 @@
         "investiert": 822.15,
         "boersenwert": 826.0,
         "gewinn_verlust": 3.85,
-        "score": 15.0,
-        "beta": 1.344,
+        "score": 19,
+        "beta": 0.3,
         "dax_ref": 24830.98,
         "stop_ref_kurs": 61.55
       },
@@ -103,7 +101,7 @@
         "score": 19,
         "dax_ref": 24846.69,
         "stop_ref_kurs": 19.245,
-        "beta": 0.353
+        "beta": 0.3
       },
       {
         "isin": "DE000A2E4K43",
@@ -117,7 +115,7 @@
         "score": 17,
         "dax_ref": 24830.98,
         "stop_ref_kurs": 38.96,
-        "beta": 1.345
+        "beta": 0.3
       },
       {
         "isin": "IT0003242622",
@@ -128,9 +126,23 @@
         "investiert": 1462.17,
         "boersenwert": 1462.17,
         "gewinn_verlust": 0.0,
-        "score": 19,
+        "score": 21,
         "dax_ref": 24846.69,
         "stop_ref_kurs": 10.225,
+        "beta": 0.3
+      },
+      {
+        "isin": "IT0001233417",
+        "wertpapier": "A2A",
+        "stueck": 64,
+        "kaufkurs": 2.327,
+        "boersenkurs": 2.327,
+        "investiert": 148.93,
+        "boersenwert": 148.93,
+        "gewinn_verlust": 0.0,
+        "score": 18,
+        "dax_ref": 24846.69,
+        "stop_ref_kurs": 2.327,
         "beta": 0.3
       }
     ],
@@ -568,6 +580,20 @@
         "gesamt": 1467.17,
         "notiz": "Neukauf (Score=19)",
         "begruendung": "Score=19 (Chart=8: Trend+2, RSI+1(53), MACD+1, SMA50+1, SMA200+1, Mom+2(17%); Funda=11: Empf.+3, Bew.+2, Risiko+2, ROE+1(13%), EV/EBITDA+1(11.9), Piotroski+2(F7)) | Chart: Kurs 10.35 vs. SMA50 10.10 / SMA200 9.58 → Aufwärtstrend. RSI 56, MACD Neutral. | Funda: Italienischer Stromnetzbetreiber (quasi-Monopol), stabile regulierte Ertraege, TheScreener stuft Risiko seit 2023 als niedrig ein."
+      },
+      {
+        "datum": "2026-07-21",
+        "typ": "Kauf",
+        "isin": "IT0001233417",
+        "wertpapier": "A2A",
+        "stueck": 64,
+        "kurs": 2.327,
+        "gebuehr": 5.0,
+        "steuern": 0.0,
+        "gewinn_verlust": 0.0,
+        "gesamt": 153.93,
+        "notiz": "Neukauf (Score=18)",
+        "begruendung": "Score=18 (Chart=5: Trend+1, RSI+1(53), MACD+1, SMA50+1, Mom+1(4%); Funda=13: Empf.+3, Bew.+2, Risiko+2, PEG+2(0.84), ROE+1(11%), EV/EBITDA+2(6.3), Piotroski+1(F6)) | Chart: Kurs 2.33 vs. SMA50 2.28 / SMA200 2.38 → Leichter Aufwärtstrend. RSI 53, MACD Neutral. | Funda: Norditalienischer Multi-Utility-Konzern (Strom, Gas, Wasser, Abfall/Fernwaerme Mailand), diversifiziert und defensiv mit solider Investment-Grade-Bonitaet."
       }
     ],
     "risiko": {
@@ -576,69 +602,74 @@
         {
           "wertpapier": "Nvidia",
           "isin": "US67066G1040",
-          "anteil_pct": 19.5
+          "anteil_pct": 19.2
         },
         {
           "wertpapier": "Terna",
           "isin": "IT0003242622",
-          "anteil_pct": 15.8
+          "anteil_pct": 15.5
         },
         {
           "wertpapier": "Siemens Energy",
           "isin": "DE000ENER6Y0",
-          "anteil_pct": 14.8
+          "anteil_pct": 14.6
         },
         {
           "wertpapier": "Safran",
           "isin": "FR0000073272",
-          "anteil_pct": 14.0
+          "anteil_pct": 13.8
         },
         {
           "wertpapier": "Leonardo",
           "isin": "IT0003856405",
-          "anteil_pct": 11.3
+          "anteil_pct": 11.1
         },
         {
           "wertpapier": "SMA Solar",
           "isin": "DE000A0DJ6J9",
-          "anteil_pct": 8.9
+          "anteil_pct": 8.8
         },
         {
           "wertpapier": "Delivery Hero",
           "isin": "DE000A2E4K43",
-          "anteil_pct": 5.8
+          "anteil_pct": 5.7
         },
         {
           "wertpapier": "E.ON",
           "isin": "DE000ENAG999",
-          "anteil_pct": 5.0
+          "anteil_pct": 4.9
         },
         {
           "wertpapier": "Lockheed Martin",
           "isin": "US5398301094",
           "anteil_pct": 4.8
+        },
+        {
+          "wertpapier": "A2A",
+          "isin": "IT0001233417",
+          "anteil_pct": 1.6
         }
       ],
       "sektoren": [
         {
           "sektor": "Energie",
-          "anteil_pct": 28.7
+          "anteil_pct": 28.3
         },
         {
           "sektor": "Technologie",
-          "anteil_pct": 25.3
+          "anteil_pct": 24.9
         },
         {
           "sektor": "Luft- und Raumfahrttechnik",
-          "anteil_pct": 18.9
+          "anteil_pct": 18.6
         },
         {
           "sektor": "Versorger",
-          "anteil_pct": 15.8
+          "anteil_pct": 17.1
         },
         {
           "sektor": "Verteidigung",
-          "anteil_pct": 11.3
+          "anteil_pct": 11.1
         }
       ],
       "limits": {
@@ -656,14 +687,14 @@
       "aktuell": {
         "dax": 24846.69,
         "msci": 125.24,
-        "vermoegen": 9444.28
+        "vermoegen": 9439.29
       },
       "rendite_pct": {
-        "depot": -3.33,
+        "depot": -3.38,
         "dax": -1.08,
         "msci_world": -0.37
       },
-      "stand": "2026-07-20 18:29"
+      "stand": "2026-07-21 09:00"
     },
     "korrelation": {
       "hinweise": [],
@@ -673,8 +704,8 @@
   "etf_depot": {
     "startkapital": 5000,
     "aktueller_barbestand": 23.77,
-    "portfoliowert": 4896.67,
-    "gesamtvermoegen": 4920.44,
+    "portfoliowert": 4893.68,
+    "gesamtvermoegen": 4917.45,
     "positionen": [
       {
         "sektor": "Energie",
@@ -683,12 +714,12 @@
         "ticker": "XDWS.DE",
         "stueck": 10,
         "kaufkurs": 47.98,
-        "boersenkurs": 48.885,
+        "boersenkurs": 48.665,
         "investiert": 479.75,
-        "boersenwert": 488.85,
-        "gewinn_verlust": 9.1,
-        "composite": 75.8,
-        "bucket": "CORE"
+        "boersenwert": 486.65,
+        "gewinn_verlust": 6.9,
+        "composite": 72.5,
+        "bucket": "SATELLITE"
       },
       {
         "sektor": "Energie",
@@ -697,11 +728,11 @@
         "ticker": "XDWM.DE",
         "stueck": 4,
         "kaufkurs": 66.56,
-        "boersenkurs": 65.18,
+        "boersenkurs": 65.15,
         "investiert": 266.24,
-        "boersenwert": 260.72,
-        "gewinn_verlust": -5.52,
-        "composite": 64.2,
+        "boersenwert": 260.6,
+        "gewinn_verlust": -5.64,
+        "composite": 65.6,
         "bucket": "SATELLITE"
       },
       {
@@ -711,11 +742,11 @@
         "ticker": "XDEM.DE",
         "stueck": 3,
         "kaufkurs": 86.74,
-        "boersenkurs": 83.35,
+        "boersenkurs": 83.69,
         "investiert": 260.22,
-        "boersenwert": 250.05,
-        "gewinn_verlust": -10.17,
-        "composite": 66.4,
+        "boersenwert": 251.07,
+        "gewinn_verlust": -9.15,
+        "composite": 67.4,
         "bucket": "SATELLITE"
       },
       {
@@ -725,11 +756,11 @@
         "ticker": "ASWC.DE",
         "stueck": 5,
         "kaufkurs": 17.936,
-        "boersenkurs": 17.942,
+        "boersenkurs": 17.976,
         "investiert": 89.68,
-        "boersenwert": 89.71,
-        "gewinn_verlust": 0.03,
-        "composite": 66.9,
+        "boersenwert": 89.88,
+        "gewinn_verlust": 0.2,
+        "composite": 65.0,
         "bucket": "SATELLITE"
       },
       {
@@ -739,10 +770,10 @@
         "ticker": "IS3Q.DE",
         "stueck": 5,
         "kaufkurs": 77.418,
-        "boersenkurs": 76.97,
+        "boersenkurs": 76.98,
         "investiert": 387.09,
-        "boersenwert": 384.85,
-        "gewinn_verlust": -2.24,
+        "boersenwert": 384.9,
+        "gewinn_verlust": -2.19,
         "composite": 78.7,
         "bucket": "CORE"
       },
@@ -753,11 +784,11 @@
         "ticker": "2B7C.DE",
         "stueck": 4,
         "kaufkurs": 13.482,
-        "boersenkurs": 13.282,
+        "boersenkurs": 13.256,
         "investiert": 53.93,
-        "boersenwert": 53.13,
-        "gewinn_verlust": -0.8,
-        "composite": 71.9,
+        "boersenwert": 53.02,
+        "gewinn_verlust": -0.91,
+        "composite": 69.2,
         "bucket": "SATELLITE"
       },
       {
@@ -767,11 +798,11 @@
         "ticker": "XDWI.DE",
         "stueck": 2,
         "kaufkurs": 76.15,
-        "boersenkurs": 74.96,
+        "boersenkurs": 74.79,
         "investiert": 152.3,
-        "boersenwert": 149.92,
-        "gewinn_verlust": -2.38,
-        "composite": 74.1,
+        "boersenwert": 149.58,
+        "gewinn_verlust": -2.72,
+        "composite": 71.6,
         "bucket": "SATELLITE"
       },
       {
@@ -781,11 +812,11 @@
         "ticker": "USPY.DE",
         "stueck": 11,
         "kaufkurs": 39.5482,
-        "boersenkurs": 39.095,
+        "boersenkurs": 39.155,
         "investiert": 435.03,
-        "boersenwert": 430.04,
-        "gewinn_verlust": -4.99,
-        "composite": 74.3,
+        "boersenwert": 430.71,
+        "gewinn_verlust": -4.32,
+        "composite": 74.5,
         "bucket": "SATELLITE"
       },
       {
@@ -795,11 +826,11 @@
         "ticker": "NQSE.DE",
         "stueck": 5,
         "kaufkurs": 17.26,
-        "boersenkurs": 16.702,
+        "boersenkurs": 16.73,
         "investiert": 86.3,
-        "boersenwert": 83.51,
-        "gewinn_verlust": -2.79,
-        "composite": 69.2,
+        "boersenwert": 83.65,
+        "gewinn_verlust": -2.65,
+        "composite": 70.1,
         "bucket": "SATELLITE"
       },
       {
@@ -809,11 +840,11 @@
         "ticker": "2B76.DE",
         "stueck": 4,
         "kaufkurs": 18.244,
-        "boersenkurs": 17.24,
+        "boersenkurs": 17.304,
         "investiert": 72.98,
-        "boersenwert": 68.96,
-        "gewinn_verlust": -4.02,
-        "composite": 64.6,
+        "boersenwert": 69.22,
+        "gewinn_verlust": -3.76,
+        "composite": 65.7,
         "bucket": "SATELLITE"
       },
       {
@@ -823,11 +854,11 @@
         "ticker": "XDWT.DE",
         "stueck": 3,
         "kaufkurs": 123.56,
-        "boersenkurs": 119.84,
+        "boersenkurs": 120.18,
         "investiert": 370.68,
-        "boersenwert": 359.52,
-        "gewinn_verlust": -11.16,
-        "composite": 68.4,
+        "boersenwert": 360.54,
+        "gewinn_verlust": -10.14,
+        "composite": 70.9,
         "bucket": "SATELLITE"
       },
       {
@@ -837,11 +868,11 @@
         "ticker": "VVSM.DE",
         "stueck": 2,
         "kaufkurs": 100.24,
-        "boersenkurs": 93.05,
+        "boersenkurs": 93.32,
         "investiert": 200.48,
-        "boersenwert": 186.1,
-        "gewinn_verlust": -14.38,
-        "composite": 60.8,
+        "boersenwert": 186.64,
+        "gewinn_verlust": -13.84,
+        "composite": 63.2,
         "bucket": "SATELLITE"
       },
       {
@@ -851,11 +882,11 @@
         "ticker": "EXH3.DE",
         "stueck": 4,
         "kaufkurs": 66.81,
-        "boersenkurs": 66.99,
+        "boersenkurs": 67.09,
         "investiert": 267.24,
-        "boersenwert": 267.96,
-        "gewinn_verlust": 0.72,
-        "composite": 69.0,
+        "boersenwert": 268.36,
+        "gewinn_verlust": 1.12,
+        "composite": 68.8,
         "bucket": "SATELLITE"
       },
       {
@@ -865,11 +896,11 @@
         "ticker": "XDWU.DE",
         "stueck": 10,
         "kaufkurs": 42.921,
-        "boersenkurs": 43.03,
+        "boersenkurs": 42.815,
         "investiert": 429.21,
-        "boersenwert": 430.3,
-        "gewinn_verlust": 1.09,
-        "composite": 80.2,
+        "boersenwert": 428.15,
+        "gewinn_verlust": -1.06,
+        "composite": 79.3,
         "bucket": "CORE"
       },
       {
@@ -879,12 +910,12 @@
         "ticker": "CBUX.DE",
         "stueck": 10,
         "kaufkurs": 6.229,
-        "boersenkurs": 6.299,
+        "boersenkurs": 6.288,
         "investiert": 62.29,
-        "boersenwert": 62.99,
-        "gewinn_verlust": 0.7,
-        "composite": 74.6,
-        "bucket": "SATELLITE"
+        "boersenwert": 62.88,
+        "gewinn_verlust": 0.59,
+        "composite": 75.5,
+        "bucket": "CORE"
       },
       {
         "sektor": "Versorger",
@@ -893,11 +924,11 @@
         "ticker": "XDEB.DE",
         "stueck": 4,
         "kaufkurs": 44.015,
-        "boersenkurs": 44.095,
+        "boersenkurs": 44.08,
         "investiert": 176.06,
-        "boersenwert": 176.38,
-        "gewinn_verlust": 0.32,
-        "composite": 69.2,
+        "boersenwert": 176.32,
+        "gewinn_verlust": 0.26,
+        "composite": 68.6,
         "bucket": "SATELLITE"
       },
       {
@@ -907,11 +938,11 @@
         "ticker": "LUTI.DE",
         "stueck": 6,
         "kaufkurs": 105.2867,
-        "boersenkurs": 106.74,
+        "boersenkurs": 106.32,
         "investiert": 631.72,
-        "boersenwert": 640.44,
-        "gewinn_verlust": 8.72,
-        "composite": 79.9,
+        "boersenwert": 637.92,
+        "gewinn_verlust": 6.2,
+        "composite": 79.8,
         "bucket": "CORE"
       },
       {
@@ -921,10 +952,10 @@
         "ticker": "IS3Q.DE",
         "stueck": 2,
         "kaufkurs": 77.82,
-        "boersenkurs": 76.97,
+        "boersenkurs": 76.98,
         "investiert": 155.64,
-        "boersenwert": 153.94,
-        "gewinn_verlust": -1.7,
+        "boersenwert": 153.96,
+        "gewinn_verlust": -1.68,
         "composite": 78.7,
         "bucket": "CORE"
       },
@@ -935,11 +966,11 @@
         "ticker": "USPY.DE",
         "stueck": 3,
         "kaufkurs": 39.2,
-        "boersenkurs": 39.095,
+        "boersenkurs": 39.155,
         "investiert": 117.6,
-        "boersenwert": 117.28,
-        "gewinn_verlust": -0.32,
-        "composite": 74.3,
+        "boersenwert": 117.47,
+        "gewinn_verlust": -0.13,
+        "composite": 74.5,
         "bucket": "SATELLITE"
       },
       {
@@ -949,12 +980,12 @@
         "ticker": "CBUX.DE",
         "stueck": 22,
         "kaufkurs": 6.288,
-        "boersenkurs": 6.299,
+        "boersenkurs": 6.288,
         "investiert": 138.34,
-        "boersenwert": 138.58,
-        "gewinn_verlust": 0.24,
-        "composite": 74.6,
-        "bucket": "SATELLITE"
+        "boersenwert": 138.34,
+        "gewinn_verlust": 0.0,
+        "composite": 75.5,
+        "bucket": "CORE"
       },
       {
         "sektor": "Technologie",
@@ -963,11 +994,11 @@
         "ticker": "2B76.DE",
         "stueck": 6,
         "kaufkurs": 17.524,
-        "boersenkurs": 17.24,
+        "boersenkurs": 17.304,
         "investiert": 105.14,
-        "boersenwert": 103.44,
-        "gewinn_verlust": -1.7,
-        "composite": 64.6,
+        "boersenwert": 103.82,
+        "gewinn_verlust": -1.32,
+        "composite": 65.7,
         "bucket": "SATELLITE"
       }
     ],

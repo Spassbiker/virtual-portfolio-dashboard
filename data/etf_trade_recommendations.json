@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-20 09:01",
+  "generated_at": "2026-07-21 09:00",
   "hinweis": "Regelbasierter Vorschlag (ETF-Ranking: Momentum/Risiko/Sentiment/Struktur). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [],
   "zusammenfassung": [],
   "resultierender_barbestand": 23.77,
-  "resultierender_portfoliowert": 4888.43,
-  "resultierendes_gesamtvermoegen": 4912.2
+  "resultierender_portfoliowert": 4893.68,
+  "resultierendes_gesamtvermoegen": 4917.45
 }
