@@ -972,6 +972,7 @@ html_template = """<!DOCTYPE html>
         // ==========================================
         (function renderEtfRanking() {
             const sektoren = (etfRankingData && etfRankingData.sektoren) || {};
+            const etfDepotIsins = new Set((depotData.etf_depot && depotData.etf_depot.positionen || []).map(p => p.isin));
             const rows = [];
             Object.keys(sektoren).forEach(sektor => {
                 sektoren[sektor].forEach(r => rows.push(Object.assign({ sektor }, r)));
@@ -988,7 +989,7 @@ html_template = """<!DOCTYPE html>
 
             const etfSectors = ['Alle', ...new Set(rows.map(r => r.sektor))];
             const buckets = ['Alle', 'CORE', 'SATELLITE', 'BEOBACHTEN', 'MEIDEN'];
-            let etfUiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', bucket: 'Alle', minScore: 0 };
+            let etfUiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', bucket: 'Alle', minScore: 0, excludeDepot: false };
 
             function renderTab() {
                 const sectorOpts = etfSectors.map(s => `<option value="${s}"${etfUiState.sektor===s?' selected':''}>${s}</option>`).join('');
@@ -1016,6 +1017,7 @@ html_template = """<!DOCTYPE html>
                             <input type="range" id="ef-minScore" min="0" max="100" step="5" value="${etfUiState.minScore}">
                         </div>
                         <div class="filter-group">
+                            <label><input type="checkbox" id="ef-nodepot"${etfUiState.excludeDepot?' checked':''}> nicht im Depot</label>
                             <button class="filter-reset" id="ef-reset">Filter zurücksetzen</button>
                         </div>
                     </div>
@@ -1052,8 +1054,9 @@ html_template = """<!DOCTYPE html>
                     document.getElementById('ef-minScore-val').textContent = etfUiState.minScore;
                     refreshBody();
                 });
+                document.getElementById('ef-nodepot').addEventListener('change', e => { etfUiState.excludeDepot = e.target.checked; refreshBody(); });
                 document.getElementById('ef-reset').addEventListener('click', () => {
-                    etfUiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', bucket: 'Alle', minScore: 0 };
+                    etfUiState = { sort: 'composite', dir: 'desc', sektor: 'Alle', bucket: 'Alle', minScore: 0, excludeDepot: false };
                     renderTab();
                 });
                 document.querySelectorAll('#etf-ranking-table th.sortable').forEach(th => {
@@ -1073,6 +1076,7 @@ html_template = """<!DOCTYPE html>
                 if (etfUiState.sektor !== 'Alle') filtered = filtered.filter(r => r.sektor === etfUiState.sektor);
                 if (etfUiState.bucket !== 'Alle') filtered = filtered.filter(r => r.bucket === etfUiState.bucket);
                 if (etfUiState.minScore > 0) filtered = filtered.filter(r => (r.composite || 0) >= etfUiState.minScore);
+                if (etfUiState.excludeDepot) filtered = filtered.filter(r => !etfDepotIsins.has(r.isin));
 
                 const getVal = r => {
                     switch (etfUiState.sort) {
@@ -1100,8 +1104,11 @@ html_template = """<!DOCTYPE html>
                     const warnBadge = (r.warnings && r.warnings.length)
                         ? `<span class="data-warning" title="${r.warnings.join(' | ').replace(/"/g,'&quot;')}">⚠️</span>`
                         : '';
+                    const depotBadge = etfDepotIsins.has(r.isin)
+                        ? '<span class="in-depot" title="bereits im ETF-Sleeve">Im Depot</span>'
+                        : '';
                     return `<tr>
-                        <td><strong>${r.wertpapier}</strong>${warnBadge}<br><small style="color:var(--text-muted)">${r.isin}</small></td>
+                        <td><strong>${r.wertpapier}</strong>${warnBadge}${depotBadge}<br><small style="color:var(--text-muted)">${r.isin}</small></td>
                         <td>${r.sektor}</td>
                         <td>${scoreCell(r.composite)}</td>
                         <td>${subscoreBar(r.momentum.score)}</td>
