@@ -1,3 +1,4 @@
+import math
 import os
 import sys
 from collections import defaultdict
@@ -135,10 +136,12 @@ def budget_for(composite):
     return min(MAX_BUDGET, BASE_BUDGET + bonus)
 
 
-def _make_sell_record(p, price, notiz, begruendung):
-    units = p["stueck"]
+def _make_sell_record(p, price, notiz, begruendung, units=None):
+    stueck = p["stueck"]
+    units = stueck if units is None else min(units, stueck)
+    invest_share = (p["investiert"] * units / stueck) if stueck else p["investiert"]
     revenue = (units * price) - FEE
-    gv_brutto = revenue - p["investiert"]
+    gv_brutto = revenue - invest_share
     steuern = round(gv_brutto * CAP_GAINS_TAX, 2) if gv_brutto > 0 else 0.0
     net_cash = revenue - steuern
     tx = {
@@ -261,7 +264,7 @@ def _sector_over_cap(positions):
     return (sektor if weight / total > SECTOR_CAP else None), weight / total, total
 
 while True:
-    over_sektor, quote, _tot = _sector_over_cap(positions)
+    over_sektor, quote, tot = _sector_over_cap(positions)
     if not over_sektor:
         break
     in_sektor = [p for p in positions if p.get("sektor") == over_sektor]
@@ -269,18 +272,39 @@ while True:
         break  # Einzelposition laesst sich nicht durch Teilverkauf reduzieren
     weakest = min(in_sektor, key=lambda p: (p.get("composite") if p.get("composite") is not None else 0))
     price = weakest.get("boersenkurs", 0)
+    # Nur so viele Stücke verkaufen, wie nötig, um den Sektor knapp unter den
+    # Cap zu bringen — kein Komplettverkauf mit anschließendem Rückkauf.
+    sektor_value = sum(p.get("boersenwert", 0) for p in in_sektor)
+    if price > 0 and (1 - SECTOR_CAP) > 0:
+        need = (sektor_value - SECTOR_CAP * tot) / (price * (1 - SECTOR_CAP))
+        units_to_sell = max(1, math.ceil(need))
+    else:
+        units_to_sell = weakest["stueck"]
+    units_to_sell = min(units_to_sell, weakest["stueck"])
     tx, net_cash = _make_sell_record(
         weakest, price,
         notiz=f"Sektor-Abbau ({over_sektor} {quote*100:.0f}% > {SECTOR_CAP*100:.0f}%)",
         begruendung=f"Sektor-Cap: {over_sektor} bei {quote*100:.1f}% | " + reason_for(ranking_lookup.get((over_sektor, weakest.get('isin')))),
+        units=units_to_sell,
     )
     current_cash += net_cash
-    summary.append(f"ETF-Sektor-Abbau: {weakest['stueck']}x {weakest.get('wertpapier')} ({over_sektor}) zu {price:.2f} EUR — Sektor {quote*100:.0f}% > {SECTOR_CAP*100:.0f}%.")
+    summary.append(f"ETF-Sektor-Abbau: {units_to_sell}x {weakest.get('wertpapier')} ({over_sektor}) zu {price:.2f} EUR — Sektor {quote*100:.0f}% > {SECTOR_CAP*100:.0f}%.")
     transactions.append(tx)
-    positions.remove(weakest)
+    # Gleiche ISIN im selben Lauf nicht wieder kaufen (verhindert Verkauf+Rückkauf).
+    sold_slots.add((weakest.get("sektor"), weakest.get("isin")))
+    if units_to_sell >= weakest["stueck"]:
+        positions.remove(weakest)
+    else:
+        remaining = weakest["stueck"] - units_to_sell
+        weakest["investiert"] = round(weakest["investiert"] * remaining / weakest["stueck"], 2)
+        weakest["stueck"] = remaining
+        weakest["boersenwert"] = round(remaining * price, 2)
+        weakest["gewinn_verlust"] = round(weakest["boersenwert"] - weakest["investiert"], 2)
+        break  # nach Teilverkauf ist der Sektor unter dem Cap
 
 held_slots = {(p.get("sektor"), p.get("isin")) for p in positions}
 held_isins = {p.get("isin") for p in positions}
+sold_isins = {isin for (_s, isin) in sold_slots}
 
 # ==========================================
 # 2. KAUF-KANDIDATEN: Bucket CORE/SATELLITE, noch nicht in diesem Slot gehalten
