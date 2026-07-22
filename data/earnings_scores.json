@@ -1,0 +1,445 @@
+{
+  "generated_at": "2026-07-23 00:45",
+  "scores": {
+    "DE000ENAG999": {
+      "earnings_score": 1,
+      "confidence": 0.7,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-21",
+      "begruendung": "E.ON bestaetigt volle Jahresprognose (bereinigtes EBITDA 9,4-9,6 Mrd EUR, Konzerngewinn 2,7-2,9 Mrd EUR) und Ausblick bis 2030, keine Ueberraschung."
+    },
+    "NL0000334118": {
+      "earnings_score": 3,
+      "confidence": 0.8,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-22",
+      "begruendung": "ASM International hebt die FY25-Ergebnisse bereits im Maerz nach oben an und gibt im Q1-Call staerkere Q2-Umsatzguidance (980 Mio EUR +/-5%) als erwartet, mit erwarteter China-Erholung dank KI-Nachfrage."
+    },
+    "US46222L1089": {
+      "earnings_score": 3,
+      "confidence": 0.75,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-12",
+      "begruendung": "IonQ hebt die FY26-Umsatzguidance auf 260-270 Mio USD an (vorher 225-245 Mio) nach Rekordquartal (+755% YoY) und stark wachsendem Auftragsbestand (RPO +554%), bleibt aber tief defizitaer."
+    },
+    "US76655K1034": {
+      "earnings_score": 1,
+      "confidence": 0.5,
+      "guidance_richtung": "keine",
+      "horizon": "Geschaeftsjahr 2026 (keine offizielle Unternehmensguidance)",
+      "report_datum": "2026-05-11",
+      "begruendung": "Rigetti Computing meldet starkes Umsatzwachstum (+193% YoY) ueber Erwartungen, gibt aber keine formale Jahresguidance; Analysten erwarten ~220% Wachstum, Aktie fiel dennoch nach den Zahlen."
+    },
+    "DE000A0DJ6J9": {
+      "earnings_score": 3,
+      "confidence": 0.85,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-16",
+      "begruendung": "SMA Solar hat die FY26-Prognose im Juli zum zweiten Mal deutlich angehoben (Umsatz 1,625-1,725 Mrd EUR, EBITDA 180-230 Mio EUR) dank Zollrueckerstattung und robuster Nachfrage bei Grossspeichern."
+    },
+    "DE000ENER6Y0": {
+      "earnings_score": 2,
+      "confidence": 0.65,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-06-29",
+      "begruendung": "Pre-Close-Call bestaetigt volle FY26-Prognose, Grid-Technologies-Teilprognose angehoben (Umsatzwachstum 25-27%, Marge 18-20%) bei Rekordauftragsbestand von 120 Mrd EUR; Q3-Zahlen erst am 5.8.2026."
+    },
+    "US15643U1043": {
+      "earnings_score": 2,
+      "confidence": 0.7,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-05",
+      "begruendung": "Centrus Energy hat die Umsatzprognose 2026 auf 450-500 Mio USD angehoben (vorher 425-475 Mio) nach deutlichem Q1-Gewinnbeat dank HALEU-Nachfrage."
+    },
+    "NO0010096985": {
+      "earnings_score": 2,
+      "confidence": 0.8,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-22",
+      "begruendung": "Q2-Ergebnis mehr als verdoppelter Adjusted EPS, Rueckzahlungsquote und Aktienrueckkauf 2026 erhoeht, Produktionswachstumsziel 3% und Free-Cashflow-Ausblick bis 2030 bestaetigt."
+    },
+    "DE000A42D2N5": {
+      "earnings_score": 0,
+      "confidence": 0.15,
+      "guidance_richtung": "keine",
+      "horizon": "-",
+      "report_datum": null,
+      "begruendung": "Kein aktueller Bericht gefunden - Helios Solar AG befindet sich gerade erst im Boersengang (Erstnotiz Ende Juli 2026), es liegen noch keine operativen Zahlen oder Prognosen vor."
+    },
+    "US02156V1098": {
+      "earnings_score": 1,
+      "confidence": 0.55,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-12",
+      "begruendung": "Oklo bestaetigt Cashflow-Guidance 2026 (Op-Cash -80 bis -100 Mio USD, Capex 350-450 Mio USD), Q1-Verlust enger als erwartet, aber Unternehmen bleibt vorrevenue mit Ausfuehrungsrisiko."
+    },
+    "ES0144580Y14": {
+      "earnings_score": 2,
+      "confidence": 0.85,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-22",
+      "begruendung": "Nach bereits im April erfolgter Anhebung der Gewinnwachstumsprognose auf >8% bestaetigt der starke H1-Bericht (Nettogewinn +21,7% auf 4,34 Mrd EUR) die verbesserte Flugbahn."
+    },
+    "DE000A0D6554": {
+      "earnings_score": 2,
+      "confidence": 0.65,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-27",
+      "begruendung": "Nordex meldet starkes Q1 mit EBITDA-Marge ueber 8% und Rekordauftragsbestand (17,0 Mrd EUR), CEO sieht Unternehmen auf gutem Weg zur Jahresprognose."
+    },
+    "IT0003856405": {
+      "earnings_score": 2,
+      "confidence": 0.75,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-06",
+      "begruendung": "Leonardo bestaetigt FY26-Ziele (Auftraege ~25 Mrd, Umsatz ~21 Mrd, EBITA ~2,03 Mrd EUR) nach starkem Q1 mit Auftragseingang +31% und Umsatz +7%."
+    },
+    "US0080731088": {
+      "earnings_score": 2,
+      "confidence": 0.75,
+      "guidance_richtung": "angehoben",
+      "horizon": "Fiskaljahr 2027 (endet April 2027)",
+      "report_datum": "2026-06-29",
+      "begruendung": "AeroVironment gibt starke FY27-Guidance (Umsatz 2,125-2,225 Mrd USD, +10% im Mittel) bei Rekordauftragseingang von 2,7 Mrd USD und deutlich gewachsenem Funded Backlog."
+    },
+    "NL0015073TS8": {
+      "earnings_score": 2,
+      "confidence": 0.7,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-20",
+      "begruendung": "CSG bestaetigt FY26-Guidance (Umsatz 7,4-7,6 Mrd EUR, EBIT-Marge 24-25%) nach starkem Q1 mit Umsatz +13,8% und Auftragsbestand +15,1% auf 17 Mrd EUR."
+    },
+    "GB00B45C9X44": {
+      "earnings_score": 1,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026 (endet Oktober 2026)",
+      "report_datum": "2026-06-01",
+      "begruendung": "Chemring bestaetigt unveraenderten Jahresausblick trotz H1-Gewinnrueckgang (-8%) und schwaecherem Cash Conversion, gestuetzt auf 91% Auftragsdeckung und starke H2-Gewichtung."
+    },
+    "AU000000DRO2": {
+      "earnings_score": 2,
+      "confidence": 0.6,
+      "guidance_richtung": "keine",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-23",
+      "begruendung": "DroneShield meldet zweitstaerkstes Quartal der Firmengeschichte mit 155 Mio AUD bereits gesichertem 2026er-Umsatz (dreifach ggue. Vorjahr), aber keine formale quantifizierte Jahresprognose."
+    },
+    "FR001400Q9V2": {
+      "earnings_score": 1,
+      "confidence": 0.65,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-27",
+      "begruendung": "Exosens bestaetigt FY26-Guidance (Umsatz 520-540 Mio EUR, EBITDA 168-178 Mio EUR) als voll auf Kurs nach solidem Jahresstart, Emberion-Uebernahme abgeschlossen."
+    },
+    "ES0118594417": {
+      "earnings_score": 2,
+      "confidence": 0.75,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-30",
+      "begruendung": "Indra bekraeftigt die bereits im Mai auf >7 Mrd EUR Umsatz und >700 Mio EUR EBIT angehobene Guidance nach sehr starkem Q1 (Umsatz +14,6%, Auftragsbestand +154% auf 20,3 Mrd EUR)."
+    },
+    "NO0013536151": {
+      "earnings_score": 2,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-13",
+      "begruendung": "Kongsberg erzielt Rekordumsatz (+31%) und Rekordauftragsbestand (158 Mrd NOK) im Q2, erwartet Umsatzwachstum ueber 2025-Niveau; Schlagzeile zu sinkendem Nettoergebnis vermutlich demerger-bedingt."
+    },
+    "US50077B2079": {
+      "earnings_score": 2,
+      "confidence": 0.65,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-06",
+      "begruendung": "Kratos hebt FY26-Umsatzprognose auf 1,70-1,76 Mrd USD an (organisches Wachstum 15-19%) trotz leicht unter Konsens liegender Q2-Guidance, getrieben von Hypersonics- und Weltraumgeschaeft."
+    },
+    "DE000TKMS001": {
+      "earnings_score": 2,
+      "confidence": 0.5,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-15",
+      "begruendung": "TKMS hat die Jahresprognose wegen Rekordauftragsbestand bei U-Boot-Auftraegen (Klasse 212/214) angehoben; genaues Berichtsdatum unklar, daher niedrigere Konfidenz."
+    },
+    "DE000HAG0005": {
+      "earnings_score": 1,
+      "confidence": 0.55,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-06",
+      "begruendung": "Hensoldt bestaetigt Prognose in allen Kennzahlen nach starkem Q1 (Auftragseingang mehr als verdoppelt), doch die ueberraschende Stornierung des Fregattenprogramms F126 im Juni belastet die Stimmung vor den H1-Zahlen am 31.7.2026."
+    },
+    "DE000RENK730": {
+      "earnings_score": 0,
+      "confidence": 0.55,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-17",
+      "begruendung": "RENK bestaetigt im Q2-Pre-Close die Jahresprognose bei Rekordauftragseingang, doch ein geleaktes deutsches Beschaffungsbudget 2027 mit Kuerzungen bei gepanzerten Fahrzeugen daempft die Stimmung (Analysten-Rating HALTEN)."
+    },
+    "DE0007030009": {
+      "earnings_score": 0,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-07",
+      "begruendung": "Rheinmetall bestaetigt die im Maerz veroeffentlichte, vom Markt als unter den Erwartungen liegend empfundene FY26-Prognose (Marge ~19%, FCF-Konversion >40%); nach dem NATO-Gipfel wurde die Aktie von mwb research herabgestuft."
+    },
+    "SE0021921269": {
+      "earnings_score": 2,
+      "confidence": 0.8,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026 / mittelfristig 2023-2027",
+      "report_datum": "2026-07-17",
+      "begruendung": "Saab liefert starkes Q2 mit EBIT deutlich ueber Konsens (2,79 Mrd SEK) und Rekordauftragsbestand (317,7 Mrd SEK, 5. Quartal in Folge steigend), mittelfristige Ziele (organisches Wachstum ~22% p.a.) bekraeftigt."
+    },
+    "FR0000121329": {
+      "earnings_score": 1,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-21",
+      "begruendung": "Thales meldet starkes Auftragswachstum (+23%, Verteidigung +75%) im Q1, doch die vom Markt als vorsichtig eingestufte FY26-Guidance (organisches Wachstum 6-7%) bleibt unveraendert; H1-Zahlen erst am 23.7.2026."
+    },
+    "US5398301094": {
+      "earnings_score": 1,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-21",
+      "begruendung": "Lockheed Martin bestaetigt FY26-Gewinnprognose (8,4-8,7 Mrd USD, Umsatzwachstum im mittleren einstelligen Bereich) trotz EPS-Rueckgang durch Mark-to-Market-Effekte; S&P hat den Ausblick wegen starker F-35/PAC-3-Nachfrage auf positiv angehoben."
+    },
+    "FR0000073272": {
+      "earnings_score": 2,
+      "confidence": 0.7,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-23",
+      "begruendung": "Safran bestaetigt FY26-Prognose (Umsatzwachstum 12-15%, operatives Ergebnis 6,1-6,2 Mrd EUR) und aeussert nach starkem Q1 (+18,8% Umsatz, LEAP-Lieferungen +63%) explizit Zuversicht, das obere Ende zu erreichen."
+    },
+    "FR0014004L86": {
+      "earnings_score": 1,
+      "confidence": 0.7,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-22",
+      "begruendung": "Dassault Aviation bestaetigt unveraenderte FY26-Guidance (Umsatz ~8,5 Mrd EUR, 40 Falcon/28 Rafale) trotz starkem H1-Wachstum; die Inbetriebnahme der Falcon 10X wurde jedoch auf 2029 verschoben."
+    },
+    "DE000A0D9PT0": {
+      "earnings_score": 2,
+      "confidence": 0.7,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-30",
+      "begruendung": "MTU bestaetigt FY26-Prognose (Umsatz 9,2-9,7 Mrd EUR, EBIT 1,35-1,45 Mrd EUR) nach Q1-Betriebsergebnis ueber Erwartungen und wachsendem Auftragsbestand (+7% auf 31,6 Mrd EUR), Militaergeschaeft besonders stark."
+    },
+    "GB00B63H8491": {
+      "earnings_score": 3,
+      "confidence": 0.75,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026 sowie mittelfristig bis 2028",
+      "report_datum": "2026-02-26",
+      "begruendung": "Rolls-Royce hat bei den FY25-Zahlen die FY26-Guidance (operativer Gewinn 4,0-4,2 Mrd GBP) sowie die mittelfristigen 2028-Ziele deutlich angehoben und ein Rueckkaufprogramm von 7-9 Mrd GBP angekuendigt; im April 2026 vollstaendig bestaetigt."
+    },
+    "US31816X1063": {
+      "earnings_score": 2,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-04",
+      "begruendung": "Firefly Aerospace bestaetigt FY26-Umsatzguidance von 420-450 Mio USD nach Rekordquartal (+45% YoY, +40% QoQ) und wachsendem Backlog (1,29 Mrd USD), bleibt aber tief verlustreich."
+    },
+    "DE0005936124": {
+      "earnings_score": 1,
+      "confidence": 0.4,
+      "guidance_richtung": "keine",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": null,
+      "begruendung": "OHB meldet starkes Umsatzwachstum im Q1 mit Kurssprung, gibt aber keine spezifische quantifizierte Umsatzprognose fuer 2026 ab, Management zeigt sich lediglich zuversichtlich fuer die Wachstumsfortsetzung."
+    },
+    "US72703X1063": {
+      "earnings_score": 3,
+      "confidence": 0.8,
+      "guidance_richtung": "angehoben",
+      "horizon": "Fiskaljahr 2027 (endet Januar 2027)",
+      "report_datum": "2026-06-04",
+      "begruendung": "Planet Labs hebt FY27-Umsatzguidance auf 425-441 Mio USD an nach Rekordquartal (+42% YoY, Backlog +72% auf 906 Mio USD) und Verteidigungs-/Nachrichtendienst-Umsatz +65%."
+    },
+    "FR0010221234": {
+      "earnings_score": 0,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2025/26 (endet Juni 2026)",
+      "report_datum": "2026-05-19",
+      "begruendung": "Eutelsat bestaetigt die FY-Guidance (Umsatz auf Vorjahresniveau, LEO-Wachstum 50%), doch die strukturell schrumpfende Video-Sparte (-13,3%) daempft das starke LEO-Connectivity-Wachstum, EBITDA-Marge leicht unter Vorjahr erwartet."
+    },
+    "LU0088087324": {
+      "earnings_score": 0,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-12",
+      "begruendung": "SES bestaetigt den FY26-Ausblick auf Basis stabiler (nicht wachsender) Umsatz- und EBITDA-Entwicklung like-for-like nach Intelsat-Integration; Verschuldung deutlich erhoeht (4,1x von 1,2x)."
+    },
+    "DE000A2E4K43": {
+      "earnings_score": 2,
+      "confidence": 0.55,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-30",
+      "begruendung": "Delivery Hero zeigt sich zuversichtlich, das adjustierte EBITDA in der oberen Haelfte der Guidance-Spanne zu erreichen; zusaetzliche strategische Investition von Uber im Mai unterstreicht positive Dynamik."
+    },
+    "US67066G1040": {
+      "earnings_score": 3,
+      "confidence": 0.75,
+      "guidance_richtung": "angehoben",
+      "horizon": "Q2 Fiskaljahr 2027",
+      "report_datum": "2026-05-20",
+      "begruendung": "Nvidia gibt Umsatzguidance von 91 Mrd USD fuer Q2 FY27 (deutlich ueber vorherigem Quartalsguide von 78 Mrd USD), Analystenschaetzungen fuer FY27 wurden massiv nach oben revidiert, Rubin-Chips laufen bereits an."
+    },
+    "NL0010273215": {
+      "earnings_score": 3,
+      "confidence": 0.85,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-15",
+      "begruendung": "ASML hebt die FY26-Umsatzprognose zum zweiten Mal in diesem Jahr auf 43-45 Mrd EUR an nach starkem Q2-Beat, mit fast voll gebuchtem Orderbuch fuer 2027 und geplanten Kapazitaetsausweitungen."
+    },
+    "DE000A0WMPJ6": {
+      "earnings_score": 2,
+      "confidence": 0.65,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-14",
+      "begruendung": "Aixtron hat die FY26-Umsatzprognose auf ca. 560 Mio EUR angehoben wegen staerker als erwarteter Nachfrage nach Optoelektronik-Anlagen, Q1-Umsatz/Marge lagen aber vorlaeufig unter Vorjahresniveau."
+    },
+    "DE0005557508": {
+      "earnings_score": 2,
+      "confidence": 0.6,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-13",
+      "begruendung": "Deutsche Telekom hat die Prognose nach Q1-Zahlen leicht angehoben (EBITDA-Ziel ~47,5 Mrd EUR), doch die ab August wirksamen T-Mobile-US-Preiserhoehungen fuer ueber 8 Mio Kunden sind ein zu beobachtendes Risiko."
+    },
+    "DE0006231004": {
+      "earnings_score": 3,
+      "confidence": 0.8,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2025/26",
+      "report_datum": "2026-05-06",
+      "begruendung": "Infineon hebt die FY26-Prognose umfassend an (Umsatzwachstum jetzt deutlich statt moderat, Segmentmarge auf ca. 20% statt hoher Zehnerbereich, FCF auf 1,25 Mrd EUR), getrieben von Power & Sensor Systems und Automotive-Marktanteilsgewinnen."
+    },
+    "DE0007164600": {
+      "earnings_score": 0,
+      "confidence": 0.3,
+      "guidance_richtung": "keine",
+      "horizon": "-",
+      "report_datum": null,
+      "begruendung": "Kein aktueller quantifizierter Bericht verfuegbar - SAP veroeffentlicht die Q2/H1-2026-Zahlen erst am 23.7.2026; die Aktie notiert nahe Jahrestief, Markt ist unsicher ob die Cloud-Prognose gehalten wird."
+    },
+    "DE000A2YN900": {
+      "earnings_score": 0,
+      "confidence": 0.55,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-06",
+      "begruendung": "TeamViewer bestaetigt die im Oktober 2025 bereits gesenkte FY26-Guidance (Umsatzwachstum nur 2-6%) nach einem im Rahmen der Erwartungen liegenden Q1, Enterprise-ARR waechst mit +8% staerker als der Konzern."
+    },
+    "IT0001233417": {
+      "earnings_score": 1,
+      "confidence": 0.65,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-14",
+      "begruendung": "A2A bestaetigt die Jahresguidance nach Q1-Ergebnissen leicht ueber Erwartungen (adj. EBITDA 647 Mio EUR vs. 642 Mio erwartet), keine Ueberraschung."
+    },
+    "IT0003242622": {
+      "earnings_score": 1,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-07",
+      "begruendung": "Terna bestaetigt die FY26-Guidance (Umsatz 4,41 Mrd, EBITDA 2,93 Mrd, Nettogewinn 1,12 Mrd EUR) nach solidem Q1-Wachstum, jedoch mit CEO-Wechsel und nur moderatem Gewinnzuwachs (+0,4%)."
+    },
+    "BE0003822393": {
+      "earnings_score": 1,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-20",
+      "begruendung": "Elia Group bestaetigt die FY26-Gewinnguidance (690-740 Mio EUR) und untermauert die Finanzierung mit einer 900-Mio-EUR-Hybridanleihe, Netzprojekte in Belgien und Deutschland im Plan."
+    },
+    "FR0010208488": {
+      "earnings_score": 0,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-07",
+      "begruendung": "Engie bestaetigt die FY26-Guidance trotz organisch ruecklaeufigem Q1 (Umsatz -9,5%, EBIT ex-Nuklear -7%) von hoher Vorjahresbasis, gestuetzt durch Kapitalerhoehung und UK-Power-Networks-Integration."
+    },
+    "ES0116870314": {
+      "earnings_score": 3,
+      "confidence": 0.85,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-07-22",
+      "begruendung": "Naturgy hebt nach starkem H1 (Nettogewinn +6%) die FY26-Ziele deutlich an: EBITDA jetzt >5,5 Mrd EUR (+4%) und Nettogewinn >2,1 Mrd EUR (+10%, neuer Rekordwert)."
+    },
+    "AT0000741053": {
+      "earnings_score": 0,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2025/26",
+      "report_datum": "2026-05-28",
+      "begruendung": "EVN bestaetigt den Jahresausblick nach H1-Ergebnis ueber Vorjahresniveau, bleibt laut Analystenkommentar angesichts schwacher Stromerzeugung (-6,7%) aber vorsichtig."
+    },
+    "IT0003128367": {
+      "earnings_score": 1,
+      "confidence": 0.65,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-07",
+      "begruendung": "Enel bestaetigt die im Februar-CMD festgelegte FY26-Guidance (EBITDA 23,1-23,6 Mrd, Nettogewinn 7,1-7,3 Mrd EUR) nach solidem Q1 mit Gewinnwachstum trotz ruecklaeufigem Umsatz in Italien, kompensiert durch Spanien/Lateinamerika."
+    },
+    "FI0009007132": {
+      "earnings_score": 1,
+      "confidence": 0.65,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-29",
+      "begruendung": "Fortum verzeichnet starkes operatives Q1-Ergebniswachstum und haelt die Optimierungspraemien-Guidance, senkt aber die Nuklearvolumen-Prognose 2026 wegen Ausfaellen (23,5-24 statt 24-24,5 TWh)."
+    },
+    "ES0173093024": {
+      "earnings_score": 1,
+      "confidence": 0.6,
+      "guidance_richtung": "bestaetigt",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-04-29",
+      "begruendung": "Redeia liegt mit Q1-Ergebnissen im Rahmen der Jahresguidance, Umsatz uebertrifft Erwartungen (+5,9%), Investitionsprogramm laeuft planmaessig mit einem angekuendigten 6,5-Mrd-EUR-Ausbauplan."
+    },
+    "AT0000746409": {
+      "earnings_score": 1,
+      "confidence": 0.5,
+      "guidance_richtung": "angehoben",
+      "horizon": "Geschaeftsjahr 2026",
+      "report_datum": "2026-05-01",
+      "begruendung": "Verbund hat trotz schwacher Wasserfuehrung im Q1 das untere Ende der EBITDA-Prognosespanne auf 2,1-2,5 Mrd EUR angehoben (vorher 2,0-2,5 Mrd EUR)."
+    }
+  }
+}
