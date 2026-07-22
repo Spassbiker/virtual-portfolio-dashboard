@@ -1,9 +1,44 @@
 {
-  "generated_at": "2026-07-21 09:00",
+  "generated_at": "2026-07-22 09:00",
   "hinweis": "Regelbasierter Vorschlag (ETF-Ranking: Momentum/Risiko/Sentiment/Struktur). Der Agent entscheidet autonom und kann abweichen.",
-  "vorgeschlagene_trades": [],
-  "zusammenfassung": [],
-  "resultierender_barbestand": 23.77,
-  "resultierender_portfoliowert": 4893.68,
-  "resultierendes_gesamtvermoegen": 4917.45
+  "vorgeschlagene_trades": [
+    {
+      "datum": "2026-07-22",
+      "typ": "Verkauf",
+      "sektor": "Versorger",
+      "isin": "DE000A0H08H3",
+      "wertpapier": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
+      "stueck": 4,
+      "kurs": 66.32,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -1.96,
+      "gesamt": 265.28,
+      "notiz": "Sektor-Abbau (Versorger 31% > 30%)",
+      "begruendung": "Sektor-Cap: Versorger bei 30.7% | Composite=67.5 (SATELLITE) | Momentum=69.3 Risiko=64.8 Sentiment=70 Struktur=65.0"
+    },
+    {
+      "datum": "2026-07-22",
+      "typ": "Kauf",
+      "sektor": "Versorger",
+      "isin": "DE000A0H08H3",
+      "wertpapier": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
+      "stueck": 2,
+      "kurs": 66.32,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 132.64,
+      "notiz": "Neukauf (ETF-Sleeve)",
+      "begruendung": "Composite=67.5 (SATELLITE) | Momentum=69.3 Risiko=64.8 Sentiment=70 Struktur=65.0"
+    }
+  ],
+  "zusammenfassung": [
+    "De-Fragmentierung: 4 Duplikat-Slot(s) zu ISIN-Positionen zusammengefuehrt.",
+    "ETF-Sektor-Abbau: 4x iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE) (Versorger) zu 66.32 EUR — Sektor 31% > 30%.",
+    "ETF-Kauf: 2x iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE) (Versorger) zu 66.32 EUR, Composite=67.5, Budget=152€."
+  ],
+  "resultierender_barbestand": 156.41,
+  "resultierender_portfoliowert": 4759.13,
+  "resultierendes_gesamtvermoegen": 4915.54
 }

@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-21 10:44",
+  "generated_at": "2026-07-22 09:00",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [],
   "zusammenfassung": [
-    "Watch-Modus: 16 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: CSG N.V. (Czechoslovak Group)(7), Saab AB(6), ASM International N.V.(5), Kongsberg Gruppen ASA(5), TKMS (Thyssenkrupp Marine Systems)(4).",
-    "Adaptive Kaufschwelle: 18 (Floor 6, 80er-Perzentil aus 33 aktiven Kandidaten)."
+    "Watch-Modus: 17 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: Elia Group(11), CSG N.V. (Czechoslovak Group)(6), Saab AB(6), Kongsberg Gruppen ASA(5), ASM International N.V.(5).",
+    "Adaptive Kaufschwelle: 19 (Floor 6, 80er-Perzentil aus 33 aktiven Kandidaten)."
   ],
   "resultierender_barbestand": 25.88,
-  "resultierender_portfoliowert": 9439.4,
-  "resultierendes_gesamtvermoegen": 9465.28
+  "resultierender_portfoliowert": 9484.44,
+  "resultierendes_gesamtvermoegen": 9510.32
 }
