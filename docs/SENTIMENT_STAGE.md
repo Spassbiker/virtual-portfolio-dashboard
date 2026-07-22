@@ -49,10 +49,19 @@ Ausführung mit korrekter Gebühren-/Steuerrechnung).
 `update_depot.py` unverändert weiter. Kein Bruch bei älteren Dateien.
 
 ### Wirkung im Scoring
-- **Stufe 1:** `sentiment_score × confidence` wird als dritter Summand zu
-  `chart + funda` addiert. `total_score = chart_score + funda_score +
-  round(sentiment_score * confidence)`. Ein schwach belegtes Urteil (wenige/
-  alte Schlagzeilen) wirkt damit automatisch schwächer als ein gut belegtes.
+- **Stufe 1:** Das Sentiment wird über **drei Achsen** gewichtet und als
+  dritter Summand zu `chart + funda` addiert:
+  `round(sentiment_score × confidence × materiality × recency)`.
+  - `confidence` (0–1): wie belastbar das LLM-Urteil ist (subjektiv, s. o.).
+  - `materiality` (Event-Materialität, #2): harte Katalysatoren wiegen voll,
+    weiche Signale gedämpft — `Zahlen`/`Guidance`/`M&A` = 1.0, `Analyst` = 0.8,
+    `Sonstiges` = 0.7, `Keine` = 0.0. Unbekannte Kategorie → 1.0 (kein Effekt).
+  - `recency` (Zeit-Decay, #2): objektiver Verfall aus dem Datum der frischesten
+    Schlagzeile in `news_raw.json` — `0.5^(Alter_in_Tagen / 5)`, geklemmt auf
+    `[0.5, 1.0]`. Kein datiertes Signal → 1.0. Ergänzt die (subjektive)
+    Confidence um einen harten Zeitmaßstab: eine Woche alte News wirkt noch halb.
+  So wirkt ein schwach belegtes, weiches oder altes Urteil automatisch schwächer
+  als ein gut belegter, harter, frischer Katalysator.
 - **Stufe 2:** `veto: true` entfernt die ISIN aus den Kaufkandidaten. Ein Veto
   kann eine Position **nicht** erzwingen und keinen Verkauf auslösen — es bremst
   nur Neukäufe. Bestehende Positionen bleiben unberührt (Verkauf entscheidet
@@ -60,9 +69,10 @@ Ausführung mit korrekter Gebühren-/Steuerrechnung).
 - **Review-Flag:** `sentiment_score <= -2` **auf einer gehaltenen Position**
   setzt ein `review_flag` im Dashboard (kein Zwangsverkauf, nur Sichtbarkeit —
   die Verkaufsentscheidung bleibt beim harten Score / Agenten).
-- **Event-Kategorie:** rein informativ, fließt nicht in die Mathematik ein.
-  Macht das Sentiment im Dashboard filterbar/nachvollziehbar (z.B. "warum war
-  das ein -3?" → "Zahlen" statt Rätselraten).
+- **Event-Kategorie:** seit #2 **materialitäts-wirksam** — sie steuert den
+  `materiality`-Faktor oben (harte vs. weiche Ereignisse) und bleibt zusätzlich
+  im Dashboard filterbar/nachvollziehbar (z.B. "warum war das ein -3?" →
+  "Zahlen" statt Rätselraten). Deshalb die Kategorie sorgfältig wählen.
 
 ## Prompt für den Agent-Schritt (Schritt 5)
 

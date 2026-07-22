@@ -4,7 +4,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from paths import CHART, FUNDA, DEPOT, SENT, ETF_SENT, ETF_RANKING, ETF_KATALOG, INDEX_HTML
+from paths import CHART, FUNDA, DEPOT, SENT, EARNINGS, ETF_SENT, ETF_RANKING, ETF_KATALOG, INDEX_HTML
 
 
 def _read_text(path):
@@ -36,6 +36,10 @@ depot_data = _read_text(DEPOT)
 # KI-Sentiment (optional): fehlt die Datei, wird ein leeres Objekt injiziert,
 # damit das Dashboard ohne Sentiment-Stufe trotzdem funktioniert.
 sentiment_data = _read_text(SENT) if os.path.exists(SENT) else '{"scores": {}}'
+
+# KI-Earnings/Guidance (#1, optional): forward-looking Signal-Layer. Fehlt die
+# Datei, zeigt das Dashboard in der Earnings-Spalte einfach "–".
+earnings_data = _read_text(EARNINGS) if os.path.exists(EARNINGS) else '{"scores": {}}'
 
 # ETF-Sentiment (Phase 1+2, optional): analog zum Aktien-Sentiment, fehlt die
 # Datei zeigt das Dashboard einfach keine Sentiment-Spalte im ETF-Sleeve.
@@ -277,6 +281,8 @@ html_template = """<!DOCTYPE html>
         const depotData = DEPOT_DATA_PLACEHOLDER;
         const sentimentData = SENTIMENT_DATA_PLACEHOLDER;
         const sentimentScores = (sentimentData && sentimentData.scores) ? sentimentData.scores : {};
+        const earningsData = EARNINGS_DATA_PLACEHOLDER;
+        const earningsScores = (earningsData && earningsData.scores) ? earningsData.scores : {};
         const etfSentimentData = ETF_SENTIMENT_DATA_PLACEHOLDER;
         const etfRankingData = ETF_RANKING_DATA_PLACEHOLDER;
         const etfCatalog = ETF_CATALOG_PLACEHOLDER;
@@ -307,6 +313,31 @@ html_template = """<!DOCTYPE html>
             let html = `<span title="${tip}" style="font-weight:bold;color:${color};opacity:${opacity};">${arrow} ${sign}${val}</span>`;
             if (s.veto) html += ` <span class="badge sell" title="${tip}" style="min-width:auto;">🚫 Veto</span>`;
             return html;
+        }
+
+        // Earnings-/Guidance-Badge (#1): forward-looking Score aus dem letzten
+        // Quartals-/Jahresbericht. Pfeil-Richtung zeigt die Guidance an, Tooltip
+        // trägt Richtung/Horizont/Report-Datum/Begründung. Niedrige Confidence
+        // dimmt das Badge (wie beim Sentiment). Siehe docs/EARNINGS_STAGE.md.
+        function earningsBadge(isin) {
+            const e = (isin && earningsScores[isin]) ? earningsScores[isin] : null;
+            if (!e) return '<span style="color:var(--text-muted);">–</span>';
+            const val = (typeof e.earnings_score === 'number') ? e.earnings_score : 0;
+            const conf = (typeof e.confidence === 'number') ? e.confidence : 0.7;
+            const richtung = e.guidance_richtung || 'keine';
+            let tip = (e.begruendung || '').replace(/"/g, '&quot;');
+            const meta = [];
+            if (richtung && richtung !== 'keine') meta.push(`Guidance ${richtung}`);
+            if (e.horizon) meta.push(e.horizon);
+            if (e.report_datum) meta.push(`Bericht ${e.report_datum}`);
+            meta.push(`Confidence ${Math.round(conf * 100)}%`);
+            tip += ` [${meta.join(', ')}]`;
+            let color = 'var(--text-muted)', arrow = '→';
+            if (val > 0) { color = 'var(--good-text)'; arrow = '▲'; }
+            else if (val < 0) { color = 'var(--critical-text)'; arrow = '▼'; }
+            const sign = val > 0 ? '+' : '';
+            const opacity = Math.max(0.45, conf);
+            return `<span title="${tip}" style="font-weight:bold;color:${color};opacity:${opacity};">${arrow} ${sign}${val}</span>`;
         }
 
         // ETF-Sentiment-Badge (Themen-/Sektor-Score, kein Veto - der ETF-Sleeve
@@ -887,6 +918,7 @@ html_template = """<!DOCTYPE html>
                 <th>Börsenwert</th>
                 <th>Gewinn/Verlust</th>
                 <th>🤖 KI-Sentiment</th>
+                <th>📊 Earnings</th>
             </tr>`;
         if (d.positionen && d.positionen.length > 0) {
             d.positionen.forEach(p => {
@@ -907,6 +939,7 @@ html_template = """<!DOCTYPE html>
                     <td>${formatEUR(p.boersenwert)}</td>
                     <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${formatEURSign(p.gewinn_verlust)}</span></td>
                     <td>${sentimentBadge(p.isin)}</td>
+                    <td>${earningsBadge(p.isin)}</td>
                 </tr>`;
             });
         }
@@ -1166,7 +1199,7 @@ html_template = """<!DOCTYPE html>
             const gen = (sentimentData && sentimentData.generated_at) ? sentimentData.generated_at : null;
             const etfGen = (etfSentimentData && etfSentimentData.generated_at) ? etfSentimentData.generated_at : null;
 
-            let html = `<h2>🤖 KI-Sentiment <small style="font-size:0.5em; color:var(--text-muted);">(News-Stimmung pro Wert, −3 bis +3 · bei Aktien dritter Score-Faktor in der Trade-Entscheidung, bei ETFs rein informativ)</small></h2>`;
+            let html = `<h2>🤖 KI-Sentiment <small style="font-size:0.5em; color:var(--text-muted);">(News-Stimmung pro Wert, −3 bis +3 · bei Aktien Score-Faktor in der Trade-Entscheidung, gewichtet mit Confidence × Event-Materialität × Recency-Decay · Earnings-Spalte = separater forward-looking Guidance-Score · bei ETFs rein informativ)</small></h2>`;
             if (!isins.length) {
                 html += `<p style="color:var(--text-muted);">Noch keine KI-Sentiment-Daten vorhanden. Werden beim nächsten Portfoliomanager-Lauf erzeugt (Schritt 5: news_raw.json → sentiment_scores.json).</p>`;
                 document.getElementById('sentiment').innerHTML = html;
@@ -1189,6 +1222,7 @@ html_template = """<!DOCTYPE html>
                     <th>Typ</th>
                     <th>Im Depot?</th>
                     <th>Sentiment</th>
+                    <th>📊 Earnings</th>
                     <th>Kategorie</th>
                     <th>Confidence</th>
                     <th>Begründung</th>
@@ -1209,6 +1243,7 @@ html_template = """<!DOCTYPE html>
                     <td style="color:var(--text-muted);">${isEtf ? 'ETF' : 'Aktie'}</td>
                     <td>${inDepot}</td>
                     <td>${isEtf ? etfSentimentBadge(isin) : sentimentBadge(isin)}</td>
+                    <td>${isEtf ? '<span style="color:var(--text-muted);">–</span>' : earningsBadge(isin)}</td>
                     <td>${kategorie}</td>
                     <td>${conf}</td>
                     <td style="font-size:0.9em;">${(s.begruendung || '').replace(/</g,'&lt;')}</td>
@@ -1660,6 +1695,7 @@ html_output = html_output.replace("ETF_SENTIMENT_DATA_PLACEHOLDER", etf_sentimen
 html_output = html_output.replace("ETF_RANKING_DATA_PLACEHOLDER", etf_ranking_data)
 html_output = html_output.replace("ETF_CATALOG_PLACEHOLDER", etf_catalog_data)
 html_output = html_output.replace("SENTIMENT_DATA_PLACEHOLDER", sentiment_data)
+html_output = html_output.replace("EARNINGS_DATA_PLACEHOLDER", earnings_data)
 html_output = html_output.replace("BUILD_DATE_PLACEHOLDER", build_date)
 
 with open(INDEX_HTML, 'w', encoding='utf-8') as f:

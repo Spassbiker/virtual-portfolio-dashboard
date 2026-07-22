@@ -27,6 +27,10 @@ FUNDA: str = os.path.join(DATA_DIR, "fundamentalanalyse_ergebnisse.json")
 DEPOT: str = os.path.join(DATA_DIR, "depot_status.json")
 SENT: str = os.path.join(DATA_DIR, "sentiment_scores.json")
 NEWS: str = os.path.join(DATA_DIR, "news_raw.json")
+# Earnings-/Guidance-Signal (#1): forward-looking LLM-Bewertung der letzten
+# Quartals-/Jahreszahlen + Ausblick. Optional — fehlt die Datei, rechnet die
+# Engine ohne diesen Summanden weiter (analog sentiment_scores.json).
+EARNINGS: str = os.path.join(DATA_DIR, "earnings_scores.json")
 TRADES: str = os.path.join(DATA_DIR, "trade_recommendations.json")
 TRANS_HIST: str = os.path.join(DATA_DIR, "transaktionshistorie.json")
 ETF_KATALOG: str = os.path.join(DATA_DIR, "etf_katalog.json")

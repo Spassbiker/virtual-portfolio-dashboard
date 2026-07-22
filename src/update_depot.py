@@ -27,6 +27,8 @@ from paths import (
     CHART,
     FUNDA,
     SENT as sentiment_path,
+    NEWS as news_path,
+    EARNINGS as earnings_path,
     TRADES as recommend_path,
     load_json,
     save_json,
@@ -41,6 +43,37 @@ import ticker_map
 SENTIMENT_MIN, SENTIMENT_MAX = -3, 3
 DEFAULT_CONFIDENCE = 0.7
 REVIEW_FLAG_THRESHOLD = -2  # rohes Sentiment auf Bestand ab hier -> review_flag
+
+# --- EVENT-MATERIALITÄT (#2) ---
+# Nicht jede News wiegt gleich schwer. Ein Zahlen-/Guidance-/M&A-Ereignis ist
+# ein harter, kursrelevanter Katalysator; ein Analysten-Kommentar oder
+# "Sonstiges" ist weicher und öfter schon eingepreist. Der Faktor multipliziert
+# das (bereits confidence-gewichtete) Sentiment, dämpft also weiche Signale,
+# ohne harte zu übertreiben. "Keine" → 0, weil dann ohnehin kein Ereignis da ist.
+# Fehlt/unbekannt die Kategorie, greift Default 1.0 (kein Effekt = altes Verhalten).
+MATERIALITY_WEIGHTS = {
+    "Zahlen": 1.0,
+    "Guidance": 1.0,
+    "M&A": 1.0,
+    "Analyst": 0.8,
+    "Sonstiges": 0.7,
+    "Keine": 0.0,
+}
+DEFAULT_MATERIALITY = 1.0
+# --- RECENCY-DECAY (#2) ---
+# News altert. Der objektive Zeit-Decay ergänzt die (subjektive) LLM-Confidence:
+# Faktor = 0.5 ** (Alter_der_frischesten_Schlagzeile_in_Tagen / HALF_LIFE), auf
+# [FLOOR, 1.0] geklemmt. Halbwertszeit 5 Tage, Boden 0.5 — eine Woche alte News
+# wirkt noch halb, nagelt das Signal aber nicht auf 0 (die Engine läuft täglich,
+# frische News sollen dominieren, ältere ausklingen). Fehlt ein Datum, kein Effekt.
+RECENCY_HALF_LIFE_DAYS = 5.0
+RECENCY_FLOOR = 0.5
+# --- EARNINGS/GUIDANCE (#1) ---
+# Forward-looking Signal aus den letzten Quartals-/Jahreszahlen + Ausblick,
+# vom LLM als earnings_score (-3..+3 × confidence) geliefert. Eigener Summand
+# im total_score, aber mit EARNINGS_WEIGHT gedämpft: Es soll ergänzen, nicht das
+# (news-basierte) Sentiment und den Chart überstimmen. Fehlt die Datei → 0.
+EARNINGS_WEIGHT = 0.8
 
 # --- SCORING-SYSTEM ---
 # Kauf-Schwelle: ADAPTIV. Fixer Floor = BUY_FLOOR, effektive Schwelle ist
@@ -135,6 +168,11 @@ funda_data: dict = {}
 # diese Felder rechnen unverändert weiter (Default-Confidence 0.7 = weder
 # gedämpft noch verstärkt, entspricht dem alten Verhalten näherungsweise).
 sentiment_data: dict = {"scores": {}}
+# Rohe Schlagzeilen (für den objektiven Recency-Decay, #2). Optional.
+news_data: dict = {"items": {}}
+# Earnings-/Guidance-Signal (#1). Optional — fehlt die Datei, bleibt der
+# Earnings-Summand 0 und die Engine rechnet wie bisher.
+earnings_data: dict = {"scores": {}}
 isin_to_name: dict = {}
 sector_map: dict = {}   # ISIN -> Sektor (aus Chartanalyse), für den Sektor-Cap.
 dax_now = None
@@ -145,11 +183,13 @@ _beta_cache: dict = {}
 def load_inputs():
     """Lädt Chart-/Funda-/Sentiment-Daten und die DAX-Referenz in die
     Modul-Globals. Kapselt alle Netzwerk-/Datei-Lesezugriffe der Engine."""
-    global chart_data, funda_data, sentiment_data
+    global chart_data, funda_data, sentiment_data, news_data, earnings_data
     global isin_to_name, sector_map, dax_now, dax_closes
     chart_data = load_json(CHART, {})
     funda_data = load_json(FUNDA, {})
     sentiment_data = load_json(sentiment_path, {"scores": {}})
+    news_data = load_json(news_path, {"items": {}})
+    earnings_data = load_json(earnings_path, {"scores": {}})
 
     isin_to_name = {}
     sector_map = {}
@@ -185,6 +225,80 @@ def get_sentiment(isin):
     conf = max(0.0, min(1.0, conf))
     kategorie = entry.get("event_kategorie") or "Sonstiges"
     return s, bool(entry.get("veto", False)), entry.get("begruendung", ""), conf, kategorie
+
+
+def materiality_factor(kategorie):
+    """Gewicht der Event-Kategorie (#2). Harte Katalysatoren (Zahlen/Guidance/
+    M&A) voll, weiche (Analyst/Sonstiges) gedämpft. Unbekannt → 1.0."""
+    return MATERIALITY_WEIGHTS.get(kategorie, DEFAULT_MATERIALITY)
+
+
+def _newest_headline_age_days(isin):
+    """Alter (in Tagen) der frischesten Schlagzeile zu dieser ISIN aus
+    news_raw.json. None, wenn keine datierte Schlagzeile vorliegt."""
+    entry = (news_data.get("items") or {}).get(isin)
+    if not entry:
+        return None
+    heute = datetime.now().date()
+    juengstes = None
+    for h in entry.get("headlines", []):
+        raw = (h.get("published") or "").strip()
+        if not raw:
+            continue
+        d = None
+        for fmt in ("%Y-%m-%d", "%Y-%m-%d %H:%M", "%Y-%m-%dT%H:%M:%S"):
+            try:
+                d = datetime.strptime(raw[:len(fmt) + 2], fmt).date()
+                break
+            except ValueError:
+                continue
+        if d is None:
+            try:
+                d = datetime.strptime(raw[:10], "%Y-%m-%d").date()
+            except ValueError:
+                continue
+        if d > heute:            # fehlerhaft in der Zukunft → ignorieren
+            continue
+        if juengstes is None or d > juengstes:
+            juengstes = d
+    if juengstes is None:
+        return None
+    return max(0, (heute - juengstes).days)
+
+
+def recency_factor(isin):
+    """Objektiver Zeit-Decay (#2): 0.5**(Alter/HALF_LIFE), geklemmt auf
+    [FLOOR, 1.0]. Kein datiertes Signal → 1.0 (kein Effekt)."""
+    age = _newest_headline_age_days(isin)
+    if age is None:
+        return 1.0
+    factor = 0.5 ** (age / RECENCY_HALF_LIFE_DAYS)
+    return round(max(RECENCY_FLOOR, min(1.0, factor)), 3)
+
+
+# ==========================================
+# EARNINGS / GUIDANCE (#1)
+# ==========================================
+
+def get_earnings(isin):
+    """Returns (score, confidence, guidance_richtung, horizon, begruendung) —
+    geklemmt und defensiv. Fehlt die Datei/ISIN, neutral (0)."""
+    entry = earnings_data.get("scores", {}).get(isin)
+    if not entry:
+        return 0, DEFAULT_CONFIDENCE, "keine", "", ""
+    try:
+        s = int(round(float(entry.get("earnings_score", 0))))
+    except (TypeError, ValueError):
+        s = 0
+    s = max(SENTIMENT_MIN, min(SENTIMENT_MAX, s))
+    try:
+        conf = float(entry.get("confidence", DEFAULT_CONFIDENCE))
+    except (TypeError, ValueError):
+        conf = DEFAULT_CONFIDENCE
+    conf = max(0.0, min(1.0, conf))
+    richtung = entry.get("guidance_richtung") or "keine"
+    horizon = entry.get("horizon") or ""
+    return s, conf, richtung, horizon, entry.get("begruendung", "")
 
 
 # ==========================================
@@ -378,12 +492,24 @@ def compute_funda_score(isin):
 def total_score(isin):
     cs, cd = compute_chart_score(isin)
     fs, fd = compute_funda_score(isin)
-    ss, _, _, confidence, _ = get_sentiment(isin)
-    # Confidence dämpft das Gewicht: ein schwach belegtes Urteil (wenige/vage
-    # Schlagzeilen) wirkt schwächer auf den Score als ein gut belegtes.
-    ss_weighted = round(ss * confidence)
-    sd = ([f"KI-Sentiment{'+' if ss >= 0 else ''}{ss}×conf{confidence:.1f}={ss_weighted:+d}"]
+    ss, _, _, confidence, kategorie = get_sentiment(isin)
+    # Sentiment-Gewichtung, drei Achsen (#2):
+    #  - confidence: wie belastbar ist das Urteil (LLM, subjektiv)
+    #  - materiality: wie hart ist die Event-Kategorie (Zahlen/Guidance/M&A > Analyst/Sonstiges)
+    #  - recency: objektiver Zeit-Decay aus dem Datum der frischesten Schlagzeile
+    mat = materiality_factor(kategorie)
+    rec = recency_factor(isin)
+    ss_weighted = round(ss * confidence * mat * rec)
+    sd = ([f"KI-Sentiment{'+' if ss >= 0 else ''}{ss}×conf{confidence:.1f}"
+           f"×mat{mat:.2f}({kategorie})×rec{rec:.2f}={ss_weighted:+d}"]
           if ss != 0 else [])
+
+    # Earnings/Guidance-Signal (#1): eigener, forward-looking Summand, gedämpft.
+    es, es_conf, es_richtung, _, _ = get_earnings(isin)
+    es_weighted = round(es * es_conf * EARNINGS_WEIGHT)
+    ed = ([f"Earnings{'+' if es >= 0 else ''}{es}×conf{es_conf:.1f}"
+           f"×{EARNINGS_WEIGHT:g}({es_richtung})={es_weighted:+d}"]
+          if es != 0 else [])
 
     # Sanity-Check gegen halluzinierte/veraltete Indikatoren — dieselbe Logik
     # wie im Dashboard (dataConsistency()). Bei Inkonsistenz wird der
@@ -394,7 +520,7 @@ def total_score(isin):
         cd = cd + [f"⚠️Inkonsistent→Chart×0.5({cs}→{cs_adj:g})"]
         cs = cs_adj
 
-    return cs + fs + ss_weighted, cs, cd, fs, fd, ss, sd
+    return cs + fs + ss_weighted + es_weighted, cs, cd, fs, fd, ss, sd + ed
 
 
 def score_reason(isin):
@@ -404,14 +530,19 @@ def score_reason(isin):
     c_text = c_item.get("begruendung", "") if c_item else ""
     f_text = f_item.get("begruendung", "") if f_item else ""
     _, _, s_text, _, _ = get_sentiment(isin)
+    es, _, _, _, e_text = get_earnings(isin)
     reason = (
         f"Score={ts} (Chart={cs}: {', '.join(cd)}; Funda={fs}: {', '.join(fd)}"
     )
     if ss != 0:
         reason += f"; KI-Sentiment={ss}"
+    if es != 0:
+        reason += f"; Earnings={es}"
     reason += f") | Chart: {c_text} | Funda: {f_text}"
     if s_text:
         reason += f" | KI: {s_text}"
+    if es != 0 and e_text:
+        reason += f" | Earnings: {e_text}"
     return reason
 
 
