@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-07-23 09:00",
+  "generated_at": "2026-07-23 09:30",
   "hinweis": "Regelbasierter Vorschlag (ETF-Ranking: Momentum/Risiko/Sentiment/Struktur). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [
     {
       "datum": "2026-07-23",
       "typ": "Kauf",
-      "sektor": "Energie",
-      "isin": "IE00B1XNHC34",
-      "wertpapier": "iShares Global Clean Energy Transition UCITS ETF",
-      "stueck": 13,
-      "kurs": 9.436,
+      "sektor": "Technologie",
+      "isin": "IE00BM67HT60",
+      "wertpapier": "iShares MSCI World Information Technology UCITS ETF",
+      "stueck": 1,
+      "kurs": 121.86,
       "gebuehr": 0.0,
       "steuern": 0.0,
       "gewinn_verlust": 0.0,
-      "gesamt": 122.67,
-      "notiz": "Neukauf (ETF-Sleeve)",
-      "begruendung": "Composite=60.1 (SATELLITE) | Momentum=68.0 Risiko=63.2 Sentiment=30 Struktur=72.5"
+      "gesamt": 121.86,
+      "notiz": "Top-up (ETF-Sleeve)",
+      "begruendung": "Top-up starker CORE-Bestand | Composite=81.8 (CORE) | Momentum=84.3 Risiko=71.2 Sentiment=80 Struktur=92.5"
     }
   ],
   "zusammenfassung": [
-    "ETF-Kauf: 13x iShares Global Clean Energy Transition UCITS ETF (Energie) zu 9.44 EUR, Composite=60.1, Budget=130€."
+    "ETF-Top-up: 1x iShares MSCI World Information Technology UCITS ETF (Technologie) zu 121.86 EUR, Composite=81.8 (CORE-Aufstockung)."
   ],
-  "resultierender_barbestand": 33.74,
-  "resultierender_portfoliowert": 4905.96,
-  "resultierendes_gesamtvermoegen": 4939.7
+  "resultierender_barbestand": 34.55,
+  "resultierender_portfoliowert": 4883.04,
+  "resultierendes_gesamtvermoegen": 4917.59
 }

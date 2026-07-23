@@ -30,6 +30,13 @@ SELL_BUCKET = "MEIDEN"                  # composite < 45 (oder AUM-Veto)
 ABS_HARD_STOP_PCT = -0.20               # Katastrophenschutz, wie im Aktien-Depot
 REBALANCE_MAX_COMPOSITE = 60.0          # nur BEOBACHTEN/MEIDEN dienen als Kapitalquelle
 
+# --- Konviktions-Schwellen fuer Kapitaleinsatz ----------------------------
+# Neuzugaenge nur mit echter Konviktion, nicht bloss "weil noch nicht gehalten".
+# Verhindert, dass Idle-Cash in schwache 60er-SATELLITEs fliesst, obwohl die
+# starken ETFs bereits gehalten werden (siehe Clean-Energy-Fehlkauf 2026-07-23).
+NEW_BUY_MIN_COMPOSITE = 70.0            # Neukauf eines NEUEN ISIN erst ab Composite >= 70
+TOPUP_MIN_COMPOSITE = 75.0             # Idle-Cash stockt nur starke CORE-Bestaende auf, sonst Cash halten
+
 # --- Sanfter Exit (zusaetzlich zum -20% Hard-Stop) -------------------------
 # Schneidet schwache/abrutschende Positionen frueher, statt sie bis MEIDEN
 # oder -20% laufen zu lassen (grosse Totzone im alten Modell).
@@ -317,6 +324,9 @@ for (sektor, isin), row in ranking_lookup.items():
         continue
     if isin in held_isins or isin in sold_isins:
         continue
+    # Konviktions-Floor: einen NEUEN ETF nur bei echter Staerke aufnehmen.
+    if (row.get("composite") or 0) < NEW_BUY_MIN_COMPOSITE:
+        continue
     cur = best_by_isin.get(isin)
     if cur is None or row.get("composite", 0) > cur[2].get("composite", 0):
         best_by_isin[isin] = (sektor, isin, row)
@@ -404,6 +414,55 @@ for sektor, isin, row in target:
         })
         transactions.append(tx)
         summary.append(f"ETF-Kauf: {units_to_buy}x {name} ({sektor}) zu {price:.2f} EUR, Composite={row.get('composite')}, Budget={budget:.0f}€.")
+
+# ==========================================
+# 5. TOP-UP: verbleibendes Idle-Cash in die staerksten CORE-Bestaende
+#    (Composite >= TOPUP_MIN_COMPOSITE) aufstocken, statt in schwache
+#    Neuzugaenge. Kein Kandidat / Cash zu klein -> Cash bleibt liegen.
+# ==========================================
+topup_candidates = [
+    p for p in positions
+    if (p.get("composite") is not None and p.get("composite") >= TOPUP_MIN_COMPOSITE)
+    and (p.get("sektor"), p.get("isin")) not in sold_slots
+]
+topup_candidates.sort(key=lambda p: -(p.get("composite") or 0))
+
+for p in topup_candidates:
+    spendable = current_cash - MIN_CASH_RESERVE
+    if spendable < MIN_ORDER_VALUE + FEE:
+        break
+    sektor = p.get("sektor")
+    isin = p.get("isin")
+    price = get_live_price(isin, p.get("boersenkurs"))
+    if not price:
+        continue
+    budget_for_this = min(budget_for(p.get("composite", 0)), spendable)
+    units_to_buy = int((budget_for_this - FEE) / price)
+    order_value = units_to_buy * price
+    if units_to_buy <= 0 or order_value < MIN_ORDER_VALUE:
+        continue
+    # Sektor-Cap auch beim Aufstocken einhalten.
+    held_value = sum(q.get("boersenwert", 0) for q in positions)
+    sektor_value = sum(q.get("boersenwert", 0) for q in positions if q.get("sektor") == sektor)
+    proj_total = held_value + order_value
+    if proj_total > 0 and (sektor_value + order_value) / proj_total > SECTOR_CAP:
+        summary.append(f"ETF-Top-up uebersprungen: {p.get('wertpapier')} ({sektor}) — Sektor-Cap {SECTOR_CAP*100:.0f}% erreicht.")
+        continue
+    begruendung = "Top-up starker CORE-Bestand | " + reason_for(ranking_lookup.get((sektor, isin)))
+    tx, total_cost = _make_buy_record(sektor, isin, p.get("wertpapier", isin), units_to_buy, price, begruendung)
+    tx["notiz"] = "Top-up (ETF-Sleeve)"
+    current_cash -= total_cost
+    # Bestehende Position aufstocken (gewichteter Einstand).
+    new_units = round(p["stueck"] + units_to_buy, 6)
+    p["investiert"] = round(p.get("investiert", 0) + order_value, 2)
+    p["stueck"] = new_units
+    p["kaufkurs"] = round(p["investiert"] / new_units, 4) if new_units else price
+    p["boersenkurs"] = price
+    p["boersenwert"] = round(new_units * price, 2)
+    p["gewinn_verlust"] = round(p["boersenwert"] - p["investiert"], 2)
+    p["peak_kurs"] = max(p.get("peak_kurs", 0) or 0, price)
+    transactions.append(tx)
+    summary.append(f"ETF-Top-up: {units_to_buy}x {p.get('wertpapier')} ({sektor}) zu {price:.2f} EUR, Composite={p.get('composite')} (CORE-Aufstockung).")
 
 portfolio_value = sum(p.get("boersenwert", 0) for p in positions)
 
