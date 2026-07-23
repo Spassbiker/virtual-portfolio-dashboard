@@ -1,131 +1,131 @@
 {
-  "generated_at": "2026-07-22 08:55",
+  "generated_at": "2026-07-23 08:55",
   "scores": {
     "DE0005557508": {
-      "sentiment_score": -1,
-      "veto": false,
-      "confidence": 0.4,
-      "event_kategorie": "Analyst",
-      "begruendung": "Mehrere Artikel warnen vor erneutem Kursrückgang trotz Deutsche-Bank-Buy-Rating und bullischem Chartsignal."
-    },
-    "DE0005936124": {
-      "sentiment_score": 1,
+      "sentiment_score": 2,
       "veto": false,
       "confidence": 0.5,
       "event_kategorie": "Sonstiges",
-      "begruendung": "Kapitalerhöhung mit 1,7 Mio. neuen Aktien zu 300 Euro abgeschlossen, zusätzlich positive operative News (LEIA-Freigabe, 482-Mio.-Investition)."
+      "begruendung": "WELT berichtet 'es geht wieder stark bergauf', Aktie startet klar im Plus nach den Verlusttagen."
+    },
+    "DE0005936124": {
+      "sentiment_score": -2,
+      "veto": true,
+      "confidence": 0.6,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "Aktie liegt 63,88% unter dem Mai-Hoch und 35,56% im Minus über 30 Tage; Aktienrückkauf kann den anhaltenden Absturz nicht ausgleichen."
     },
     "DE0007164600": {
-      "sentiment_score": -2,
+      "sentiment_score": -1,
       "veto": false,
-      "confidence": 0.7,
+      "confidence": 0.4,
       "event_kategorie": "Zahlen",
-      "begruendung": "Aktie fällt laut WiWo auf 52-Wochen-Tief trotz starkem Cloud-Wachstum, Cloud-Backlog unter 25% belastet zusätzlich."
+      "begruendung": "Aktie steht laut Börse Express 'am Tiefpunkt' vor den Zahlen, Dax insgesamt unter Druck vor der EZB-Entscheidung."
     },
     "DE000A0D6554": {
-      "sentiment_score": 0,
+      "sentiment_score": 1,
       "veto": false,
-      "confidence": 0.3,
+      "confidence": 0.6,
       "event_kategorie": "Zahlen",
-      "begruendung": "Nur abwartende Berichterstattung vor den anstehenden Halbjahreszahlen ohne neue kursrelevante Fakten."
+      "begruendung": "Ad-hoc-Meldung bestätigt Widerstandskraft nach starken Zahlen und Auftragszuwachs, Presse empfiehlt die Korrektur als Kaufchance."
     },
     "DE000A0D9PT0": {
       "sentiment_score": 1,
       "veto": false,
-      "confidence": 0.5,
+      "confidence": 0.6,
       "event_kategorie": "Zahlen",
-      "begruendung": "WELT berichtet 'Unternehmen erholt sich', erste Anzeichen einer Trendwende nach den Verlusttagen."
+      "begruendung": "Ad-hoc-Meldung bestätigt Stabilität nach soliden Jahreszahlen, Kurs erholt sich weiter und gewinnt an Boden."
     },
     "DE000A0DJ6J9": {
-      "sentiment_score": 0,
+      "sentiment_score": -1,
       "veto": false,
-      "confidence": 0.3,
+      "confidence": 0.4,
       "event_kategorie": "Keine",
-      "begruendung": "Uneinheitliche Tagesbewegungen, teils Gewinnmitnahmen ('Investoren trennen sich'), ohne klaren neuen Auslöser."
+      "begruendung": "Durchgehend negative Tagesbewegungen ohne erkennbaren neuen Auslöser."
     },
     "DE000A2E4K43": {
       "sentiment_score": 1,
       "veto": false,
       "confidence": 0.6,
       "event_kategorie": "M&A",
-      "begruendung": "Barclays stuft die Aktie im Zuge der Übernahme nur auf 'Hold'/Equal Weight ein, dämpft die Uber-Deal-Euphorie etwas."
+      "begruendung": "SSW Partners übernimmt 14 Märkte für 1,4 Mrd. Euro im Zuge des Uber-Deals, zusätzlich Ad-hoc-Fokus auf Wachstum und Profitabilität."
     },
     "DE000ENAG999": {
       "sentiment_score": 2,
       "veto": false,
-      "confidence": 0.7,
+      "confidence": 0.6,
       "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-Meldungen bestätigen solide Ergebnisentwicklung, stabile Dividendenpolitik und eine geplante 12-GW-Windausschreibung."
+      "begruendung": "WELT berichtet 'Unternehmen erholt sich', 20,44-Euro-Hoch in Reichweite, Dividenden- und Netzinvestitionsstory bestätigt."
     },
     "DE000ENER6Y0": {
-      "sentiment_score": 3,
+      "sentiment_score": -1,
       "veto": false,
-      "confidence": 0.8,
-      "event_kategorie": "Analyst",
-      "begruendung": "Kursrallye von bis zu 11%, UBS hebt Kursziel auf 210 Euro an, zusätzlich bestätigte 300-Mio.-Einsparung durch Omterra-Umbenennung."
+      "confidence": 0.5,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "Enttäuschender GE-Vernova-Ausblick belastet die Aktie, auch wenn Presse den befürchteten Abverkauf später als 'Fehlalarm' einstuft."
     },
     "FR0000073272": {
       "sentiment_score": 3,
       "veto": false,
       "confidence": 0.9,
       "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-Meldung bestätigt Kursanstieg nach soliden Halbjahreszahlen mit zweistelligem Umsatzwachstum im Luftfahrtsektor."
+      "begruendung": "Mehrere Ad-hoc-Meldungen bestätigen zweistelliges Umsatzwachstum und starken Auftragseingang im Triebwerksgeschäft nach den Halbjahreszahlen."
     },
     "FR0014004L86": {
-      "sentiment_score": 2,
+      "sentiment_score": 0,
       "veto": false,
-      "confidence": 0.8,
+      "confidence": 0.6,
       "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-Meldungen bestätigen weiterhin starken Auftragsbestand und zweistelliges Umsatzplus."
+      "begruendung": "H1-Zahlen zeigen steigenden Gewinn, aber laut WSJ einen Rückgang bei den Auftragseingängen - gemischtes Bild."
     },
     "IT0001233417": {
       "sentiment_score": 1,
       "veto": false,
       "confidence": 0.6,
       "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-Meldungen zu stabilen Ergebnissen, Dividendenausschüttung und Fokus auf Netz- und Energiemargen."
+      "begruendung": "Ad-hoc-Meldungen bestätigen stabile Ergebnisse und Investitionen in erneuerbare Energien mit Fokus auf Netz und Margen."
     },
     "IT0003242622": {
-      "sentiment_score": 2,
+      "sentiment_score": 1,
       "veto": false,
-      "confidence": 0.7,
+      "confidence": 0.6,
       "event_kategorie": "Sonstiges",
-      "begruendung": "Ad-hoc-Meldung reagiert auf ein Milliardenangebot sowie stabile Wachstumszahlen und solides Netzgeschäft."
+      "begruendung": "Ad-hoc-Meldungen bestätigen stabiles Netzgeschäft und Margen, Terna-Energy reagiert weiter auf das Milliardenangebot."
     },
     "IT0003856405": {
       "sentiment_score": 2,
       "veto": false,
       "confidence": 0.7,
       "event_kategorie": "Zahlen",
-      "begruendung": "Aktie legt laut Ad-hoc-Meldung bereits vor den Halbjahreszahlen zu, gestützt vom robusten Rüstungsnachfrage-Trend."
+      "begruendung": "Ad-hoc-Meldungen bestätigen Kursgewinne durch Auftragslage und Prognose kurz vor den Halbjahreszahlen."
     },
     "NL0010273215": {
       "sentiment_score": 3,
       "veto": false,
       "confidence": 0.9,
       "event_kategorie": "Zahlen",
-      "begruendung": "Angehobene Jahresprognose, 30% Kapazitätsoffensive ab 2027 und Blowout-Quartalsmarge treiben mehrere Analysten zu Kaufempfehlungen."
+      "begruendung": "Jahresprognose auf 43-45 Mrd. Euro angehoben, Aktie legt binnen 12 Monaten um 159% zu."
     },
     "US5398301094": {
       "sentiment_score": 0,
       "veto": false,
       "confidence": 0.4,
-      "event_kategorie": "Zahlen",
-      "begruendung": "Aktie fällt trotz neuem günstigeren Patriot-Raketensystem und $10,5-Mrd.-Auftrag vor den morgigen Q2-Zahlen."
+      "event_kategorie": "Analyst",
+      "begruendung": "Analysten senken laut Simply Wall St. die Kursziele leicht, während ein neuer britischer Raketenabwehr-Auftrag und die Dividende gegensteuern."
     },
     "US67066G1040": {
-      "sentiment_score": 0,
+      "sentiment_score": 1,
       "veto": false,
       "confidence": 0.4,
       "event_kategorie": "Sonstiges",
-      "begruendung": "Microsoft-AMD-Allianz mit Mistral AI als Kampfansage wird von positiver Nebius-Beteiligung teilweise ausgeglichen."
+      "begruendung": "DZ Bank bestätigt Kaufen-Rating und Dark-Fiber-Akquisition ist strategisch positiv, trotz Sorgen um chinesische KI-Konkurrenz."
     },
     "US72703X1063": {
       "sentiment_score": 0,
       "veto": false,
-      "confidence": 0.4,
-      "event_kategorie": "Sonstiges",
-      "begruendung": "Erfolgreicher Pelican-11-Satellitenstart und neuer Londoner KI-Datenhub stehen weiterhin bestehenden Fair-Value-Bedenken gegenüber."
+      "confidence": 0.3,
+      "event_kategorie": "Keine",
+      "begruendung": "Keine neuen kursrelevanten Nachrichten, nur wiederholte ältere Meldungen zu Satellitenstart und London-Büro."
     }
   }
 }

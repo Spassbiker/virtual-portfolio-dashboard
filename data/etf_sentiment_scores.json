@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-22 08:53",
+  "generated_at": "2026-07-23 08:53",
   "scores": {
     "IE00B1XNHC34": {
       "typ": "A",
       "sentiment_score": -2,
-      "begruendung": "UBS stuft Clean Energy Fuels auf Neutral herab und Bloom Energy leidet weiter unter dem Scandium-Lieferstreit, ICLN gilt weiter als Dip."
+      "begruendung": "UBS stuft Clean Energy Fuels weiter auf Neutral herab und ICLN gilt unverändert als Dip, ohne neue positive Impulse."
     },
     "IE000NDWFGA5": {
       "typ": "A",
-      "sentiment_score": 0,
-      "begruendung": "Keine Schlagzeilen für dieses Thema verfügbar."
+      "sentiment_score": 1,
+      "begruendung": "Uranpreis hält sich bei $85 im Zuge der AI-Data-Center-Nachfrage nach Nuklearenergie, die Kurseinbrüche der Vorwoche wirken aber noch nach."
     },
     "IE0002Y8CX98": {
       "typ": "A",
@@ -18,18 +18,18 @@
     },
     "IE000YYE6WK5": {
       "typ": "A",
-      "sentiment_score": 3,
-      "begruendung": "Kratos sichert sich einen $156-Mio.-Auftrag für ein Counter-Drohnen-System des US-Energieministeriums und mehrere weitere positive Verteidigungsmeldungen stützen den Sektor."
+      "sentiment_score": 2,
+      "begruendung": "Kratos profitiert weiter vom $156-Mio.-Nuklearsicherheitsauftrag und positiver Drohnen-Nachfrage, gedämpft durch eine Kurszielsenkung auf $46."
     },
     "IE000OJ5TQP4": {
       "typ": "A",
-      "sentiment_score": 1,
-      "begruendung": "Zacks rät aktiv zum Einstieg bei Drohnen-ETFs, während ältere Meldungen zu vorheriger kurzfristiger Schwäche und dem Ukraine-Angriff das Thema in den Fokus rücken."
+      "sentiment_score": 0,
+      "begruendung": "Keine Schlagzeilen für dieses Thema verfügbar."
     },
     "IE000YU9K6K2": {
       "typ": "A",
-      "sentiment_score": -1,
-      "begruendung": "ASTS meldet mit voll ausgerollten BlueBird-Satelliten einen Lichtblick, während SpaceX 20% im Minus steht und ASTS/RKLB/SPCX 2026 insgesamt eingebrochen sind."
+      "sentiment_score": -3,
+      "begruendung": "SpaceX hat laut Bericht $1 Billion an Wert vernichtet und Analysten warnen, das Schlimmste könne noch bevorstehen, nur ASTS liefert mit AT&T-Partnerschaft einen Lichtblick."
     },
     "IE00BYPLS672": {
       "typ": "A",
@@ -44,7 +44,7 @@
     "IE00BYZK4552": {
       "typ": "A",
       "sentiment_score": 2,
-      "begruendung": "Kraken Robotics meldet gleich mehrfach neue Aufträge über $35 Mio., zusammen mit der positiven Reshoring- und Healthcare-Automation-Story für den Sektor."
+      "begruendung": "Kraken Robotics meldet mehrfach neue Aufträge über $35 Mio., zusammen mit der positiven Reshoring- und Healthcare-Automation-Story für den Sektor."
     },
     "IE00BMC38736": {
       "typ": "A",
@@ -53,48 +53,48 @@
     },
     "IE00BM67HN09": {
       "typ": "B",
-      "sentiment_score": 3,
-      "begruendung": "Bloom Energy springt zweistellig nach einem $1,7-Mrd.-AI-Data-Center-Deal und einer deutlichen Kurszielanhebung, zusätzlich übertrifft Halliburton die Q2-Erwartungen."
+      "sentiment_score": 2,
+      "begruendung": "JPMorgan stützt Bloom Energys Brookfield-AI-Power-Deal und die AI-Stromnachfrage-Story bleibt intakt, auch wenn die Aktie nach der Rally kurzzeitig stärker als der Markt fällt."
     },
     "IE00BM67HS53": {
       "typ": "B",
       "sentiment_score": 0,
-      "begruendung": "Keine Schlagzeilen für dieses Thema verfügbar."
+      "begruendung": "AI-getriebene Chip-Ausrüstungsnachfrage (Ichor) steht einer Kurszielsenkung bei MP Materials und einem enttäuschenden Rare-Earth-Boom gegenüber."
     },
     "IE00B4LN9N13": {
       "typ": "B",
-      "sentiment_score": 0,
-      "begruendung": "Keine Schlagzeilen für dieses Thema verfügbar."
+      "sentiment_score": 1,
+      "begruendung": "General Dynamics legt trotz fallendem Gesamtmarkt zu, während der Rest der Schlagzeilen generische Makro-News ohne klaren Industrials-Bezug sind."
     },
     "IE00BM67HV82": {
       "typ": "B",
-      "sentiment_score": 0,
-      "begruendung": "Keine Schlagzeilen für dieses Thema verfügbar."
+      "sentiment_score": 1,
+      "begruendung": "General Dynamics legt trotz fallendem Gesamtmarkt zu, während der Rest der Schlagzeilen generische Makro-News ohne klaren Industrials-Bezug sind."
     },
     "IE000CK5G8J7": {
       "typ": "B",
       "sentiment_score": 3,
-      "begruendung": "Keel Infrastructure gewinnt Genehmigung für den Umbau von Bitcoin-Mining- in AI-Rechenkapazität, Sterling legt trotz fallendem Markt zu und eine Digital-Infrastruktur-Rally stützt das Thema breit."
+      "begruendung": "BTIG startet Keel Infrastructure mit Kaufempfehlung und $8-Kursziel, ein Analyst sieht über 70% Kurspotenzial und Sterlings Margenstory bleibt intakt."
     },
     "IE00BM67HT60": {
       "typ": "B",
-      "sentiment_score": 2,
-      "begruendung": "Micron, Western Digital und SanDisk springen zweistellig, der Memory-Pullback gilt als beendet, gedämpft nur durch die Meldung eines konkurrierenden AI-Modells aus Peking."
+      "sentiment_score": 3,
+      "begruendung": "Memory-Werte wie Micron, SanDisk und SK Hynix springen auf Googles AI-Nachfrage und Musks Micron-Lob, Analysten sehen den ultimativen Bullenlauf näher rücken."
     },
     "DE000A0H08H3": {
       "typ": "B",
       "sentiment_score": 2,
-      "begruendung": "Die Fusion von American Water und Essential Utilities erhält weitere Regulierungsfreigaben und Essential Utilities sichert sich neue Fördermittel für Infrastrukturprojekte."
+      "begruendung": "Utility-ETFs legen laut Schlagzeilen 8% YTD zu und gelten dank AI-Strombedarf als Gewinner des Data-Center-Booms, trotz RBC-Rotationsempfehlung Richtung Tech."
     },
     "IE00BM67HQ30": {
       "typ": "B",
       "sentiment_score": 2,
-      "begruendung": "Die Fusion von American Water und Essential Utilities erhält weitere Regulierungsfreigaben und Essential Utilities sichert sich neue Fördermittel für Infrastrukturprojekte."
+      "begruendung": "Utility-ETFs legen laut Schlagzeilen 8% YTD zu und gelten dank AI-Strombedarf als Gewinner des Data-Center-Booms, trotz RBC-Rotationsempfehlung Richtung Tech."
     },
     "LU1834988864": {
       "typ": "B",
       "sentiment_score": 2,
-      "begruendung": "Die Fusion von American Water und Essential Utilities erhält weitere Regulierungsfreigaben und Essential Utilities sichert sich neue Fördermittel für Infrastrukturprojekte."
+      "begruendung": "Utility-ETFs legen laut Schlagzeilen 8% YTD zu und gelten dank AI-Strombedarf als Gewinner des Data-Center-Booms, trotz RBC-Rotationsempfehlung Richtung Tech."
     }
   }
 }
