@@ -6,11 +6,12 @@ Datenquelle/Zusatzkosten, jede Phase einzeln testbar und rollback-fähig.
 
 Reihenfolge nach Aufwand/Nutzen: 1 → 2 → 5 (billig, hoher Hebel), danach 3, dann 4.
 
-## Phase 1 — Momentum-Faktor ⏳
+## Phase 1 — Momentum-Faktor ✅
 - `compute_indicators.py`: 12-1-Monats-Return aus der 1y-Historie (Kurs vor 21
   Handelstagen ÷ Kurs vor 252 Handelstagen − 1) → Feld `momentum_12_1`.
-- `compute_chart_score`: gestaffelte Punkte, analog RSI-Logik.
-- Test: Ranking-Diff vor/nach, Plausibilitätscheck starke Läufer.
+- `compute_chart_score`: gestaffelte Punkte (+3/+2/+1/−1/−2), analog RSI-Logik.
+- Stand 2026-07-23: 59/76 Titel mit Momentum-Wert (Rest: Historie < 252 Tage,
+  neutral gewertet). Abgesichert durch tests/test_update_depot.py.
 
 ## Phase 2 — EV/EBITDA + PEG + ROE ✅
 - `fetch_valuation.py`: ein `quoteSummary`-Call je ISIN
