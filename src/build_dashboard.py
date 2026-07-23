@@ -186,6 +186,18 @@ html_template = """<!DOCTYPE html>
         .teaser-cta { margin-top: 10px; background: var(--series-1); color: white; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9em; }
         .teaser-cta:hover { opacity: 0.9; }
         @media (max-width: 900px) { .ov-grid, .ov-movers { grid-template-columns: 1fr; } }
+
+        /* --- Equity-Kurve (V1) --- */
+        .eq-wrap { position: relative; }
+        .eq-tooltip { position: absolute; pointer-events: none; background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; font-size: 0.85em; box-shadow: var(--shadow); display: none; z-index: 5; min-width: 160px; }
+        .eq-tooltip .tt-date { color: var(--text-muted); margin-bottom: 4px; }
+        .eq-tooltip .tt-row { display: flex; align-items: center; gap: 6px; padding: 1px 0; white-space: nowrap; }
+        .eq-tooltip .tt-key, .eq-legend .tt-key { display: inline-block; width: 14px; height: 0; border-top: 3px solid; border-radius: 2px; flex: none; }
+        .eq-tooltip .tt-val { font-weight: 700; color: var(--text-primary); }
+        .eq-tooltip .tt-label { color: var(--text-secondary); }
+        .eq-tooltip .tt-abs { color: var(--text-muted); }
+        .eq-legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 6px; font-size: 0.85em; color: var(--text-secondary); align-items: center; }
+        .eq-legend .tt-key { margin-right: 6px; vertical-align: middle; }
     </style>
 </head>
 <body>
@@ -252,7 +264,7 @@ html_template = """<!DOCTYPE html>
             } catch (e) { return fallback; }
         };
         const [chartData, fundaData, depotData, sentimentData, earningsData,
-               etfSentimentData, etfRankingData, _etfKatalogRaw] = await Promise.all([
+               etfSentimentData, etfRankingData, _etfKatalogRaw, vermoegenHistData] = await Promise.all([
             _load('data/chartanalyse_ergebnisse.json', {"sektoren": {}}),
             _load('data/fundamentalanalyse_ergebnisse.json', {"sektoren": {}}),
             _load('data/depot_status.json', {"depot": {}, "etf_depot": {}}),
@@ -261,6 +273,7 @@ html_template = """<!DOCTYPE html>
             _load('data/etf_sentiment_scores.json', {"scores": {}}),
             _load('data/etf_ranking.json', {"sektoren": {}}),
             _load('data/etf_katalog.json', {"sektoren": {}}),
+            _load('data/vermoegen_history.json', {"history": []}),
         ]);
         const sentimentScores = (sentimentData && sentimentData.scores) ? sentimentData.scores : {};
         const earningsScores = (earningsData && earningsData.scores) ? earningsData.scores : {};
@@ -1497,6 +1510,165 @@ html_template = """<!DOCTYPE html>
             return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" role="img" aria-label="Performance-Vergleich">${out}</svg>`;
         }
 
+        // ==========================================
+        // EQUITY-KURVE (V1): Vermögensverlauf, jede Serie indexiert auf 100 am
+        // jeweils ersten Datenpunkt (Depot/DAX/MSCI = Benchmark-Anker 09.07.,
+        // die ETF-Linie beginnt mit ihrem ersten geloggten Tag). Eine Achse
+        // (Indexpunkte) statt Dual-Axis, damit €-Depot und Indexstände direkt
+        // vergleichbar sind. Hover: Crosshair + ein Tooltip mit allen Serien.
+        // ==========================================
+        const EQ_SERIES_DEFS = [
+            { key: 'depot_gesamt', label: 'Aktien-Depot', color: 'var(--series-1)', fmt: 'eur' },
+            { key: 'etf_gesamt',   label: 'ETF-Sleeve',   color: 'var(--series-2)', fmt: 'eur' },
+            { key: 'dax',          label: 'DAX',          color: 'var(--series-3)', fmt: 'num' },
+            { key: 'msci',         label: 'MSCI World',   color: 'var(--series-4)', fmt: 'num' },
+        ];
+        const fmtIdx = v => v.toFixed(1).replace('.', ',');
+        const fmtDatum = d => (d && d.length >= 10) ? `${d.slice(8, 10)}.${d.slice(5, 7)}.` : d;
+
+        function buildEquityModel(historyRows) {
+            const rows = (historyRows || []).filter(r => r && r.datum)
+                .slice().sort((a, b) => (a.datum < b.datum ? -1 : 1));
+            const series = [];
+            EQ_SERIES_DEFS.forEach(def => {
+                let base = null;
+                const pts = [];
+                rows.forEach(r => {
+                    const v = numOrNull(r[def.key]);
+                    if (v === null || v <= 0) return;
+                    if (base === null) base = v;
+                    pts.push({ datum: r.datum, t: Date.parse(r.datum), abs: v, idx: (v / base) * 100 });
+                });
+                if (pts.length) series.push({ def, pts, byT: new Map(pts.map(p => [p.t, p])) });
+            });
+            if (!series.length) return null;
+
+            const W = 860, H = 280, padL = 46, padR = 125, padT = 14, padB = 26;
+            const allPts = series.flatMap(s => s.pts);
+            const ts = [...new Set(allPts.map(p => p.t))].sort((a, b) => a - b);
+            const tMin = ts[0], tMax = ts[ts.length - 1];
+            let yMin = Math.min(...allPts.map(p => p.idx), 100);
+            let yMax = Math.max(...allPts.map(p => p.idx), 100);
+            const pad = Math.max(0.4, (yMax - yMin) * 0.12);
+            yMin -= pad; yMax += pad;
+            const plotW = W - padL - padR, plotH = H - padT - padB;
+            const xPx = t => tMax === tMin ? padL + plotW / 2 : padL + ((t - tMin) / (tMax - tMin)) * plotW;
+            const yPx = v => padT + (1 - (v - yMin) / (yMax - yMin)) * plotH;
+            return { series, ts, W, H, padL, padR, padT, padB, plotW, plotH, yMin, yMax, xPx, yPx };
+        }
+
+        function eqNiceTicks(min, max) {
+            const span = max - min;
+            const step = [0.25, 0.5, 1, 2, 2.5, 5, 10, 20, 50].find(s => span / s <= 5.5) || 100;
+            const out = [];
+            for (let v = Math.ceil(min / step) * step; v <= max + 1e-9; v += step) out.push(Math.round(v * 100) / 100);
+            return out;
+        }
+
+        function renderEquityCurve(model) {
+            if (!model) return '<p style="color:var(--text-muted)">Noch keine Verlaufsdaten — die Kurve füllt sich ab jetzt mit jedem Tageslauf.</p>';
+            const { series, ts, W, H, padL, padT, plotW, plotH, yMin, yMax, xPx, yPx } = model;
+            let out = '';
+            // Recessive Gitter: nur horizontale Hairlines an sauberen Ticks,
+            // die 100er-Linie (= Startniveau) minimal betont.
+            eqNiceTicks(yMin, yMax).forEach(v => {
+                const y = yPx(v);
+                const isBase = Math.abs(v - 100) < 1e-9;
+                out += `<line x1="${padL}" y1="${y}" x2="${padL + plotW}" y2="${y}" stroke="${isBase ? 'var(--baseline)' : 'var(--grid)'}" stroke-width="1"></line>
+                        <text x="${padL - 8}" y="${y + 4}" text-anchor="end" font-size="11" fill="var(--text-muted)">${fmtIdx(v)}</text>`;
+            });
+            // X-Achse: max. ~6 Datums-Ticks über die vorhandenen Handelstage.
+            const stride = Math.max(1, Math.ceil(ts.length / 6));
+            ts.filter((_, i) => i % stride === 0 || i === ts.length - 1).forEach(t => {
+                const p = series[0].pts.find(q => q.t === t) || series.flatMap(s => s.pts).find(q => q.t === t);
+                out += `<text x="${xPx(t)}" y="${padT + plotH + 18}" text-anchor="middle" font-size="11" fill="var(--text-muted)">${fmtDatum(p ? p.datum : '')}</text>`;
+            });
+            // Linien (2px, runde Joins) + Endpunkt (r=4, 2px Surface-Ring).
+            series.forEach(s => {
+                const d = s.pts.map((p, i) => `${i ? 'L' : 'M'}${xPx(p.t).toFixed(1)},${yPx(p.idx).toFixed(1)}`).join(' ');
+                out += `<path d="${d}" fill="none" stroke="${s.def.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>`;
+                const last = s.pts[s.pts.length - 1];
+                out += `<circle cx="${xPx(last.t)}" cy="${yPx(last.idx)}" r="4" fill="${s.def.color}" stroke="var(--surface-2)" stroke-width="2"></circle>`;
+            });
+            // Direkte End-Labels nur, wo sie nicht kollidieren (sonst tragen
+            // Legende + Tooltip die Identität — kein Stapeln/Verschieben).
+            const placed = [];
+            series.map(s => ({ s, last: s.pts[s.pts.length - 1] }))
+                .sort((a, b) => yPx(a.last.idx) - yPx(b.last.idx))
+                .forEach(({ s, last }) => {
+                    const y = yPx(last.idx);
+                    if (placed.some(py => Math.abs(py - y) < 14)) return;
+                    placed.push(y);
+                    out += `<text x="${xPx(last.t) + 10}" y="${y + 4}" font-size="12" fill="var(--text-secondary)">${s.def.label} ${fmtIdx(last.idx)}</text>`;
+                });
+            out += `<line id="eq-crosshair" x1="0" y1="${padT}" x2="0" y2="${padT + plotH}" stroke="var(--baseline)" stroke-width="1" style="display:none"></line>`;
+            const legend = EQ_SERIES_DEFS
+                .filter(def => series.some(s => s.def === def))
+                .map(def => `<span><span class="tt-key" style="border-top-color:${def.color}"></span>${def.label}</span>`).join('');
+            return `<div class="eq-wrap" id="eq-wrap">
+                <svg id="eq-svg" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Vermögensverlauf indexiert (erster Datenpunkt = 100)">${out}</svg>
+                <div class="eq-tooltip" id="eq-tooltip"></div>
+                <div class="eq-legend">${legend}</div>
+            </div>`;
+        }
+
+        function attachEquityHover(model) {
+            const svg = document.getElementById('eq-svg');
+            const tip = document.getElementById('eq-tooltip');
+            const wrap = document.getElementById('eq-wrap');
+            if (!svg || !tip || !model) return;
+            const cross = document.getElementById('eq-crosshair');
+            const show = (clientX, clientY) => {
+                const rect = svg.getBoundingClientRect();
+                const sx = (clientX - rect.left) * (model.W / rect.width);
+                // Crosshair schnappt auf den nächsten Handelstag — gezielt wird
+                // auf ein Datum, nie auf die 2px-Linie selbst.
+                let t = model.ts[0];
+                model.ts.forEach(cand => { if (Math.abs(model.xPx(cand) - sx) < Math.abs(model.xPx(t) - sx)) t = cand; });
+                const x = model.xPx(t);
+                cross.setAttribute('x1', x); cross.setAttribute('x2', x);
+                cross.style.display = '';
+                // Tooltip-DOM ohne innerHTML (Labels via textContent).
+                tip.textContent = '';
+                const dateEl = document.createElement('div');
+                dateEl.className = 'tt-date';
+                let datum = '';
+                model.series.forEach(s => { const p = s.byT.get(t); if (p) datum = p.datum; });
+                dateEl.textContent = fmtDatum(datum);
+                tip.appendChild(dateEl);
+                model.series.forEach(s => {
+                    const p = s.byT.get(t);
+                    if (!p) return;
+                    const row = document.createElement('div');
+                    row.className = 'tt-row';
+                    const keyEl = document.createElement('span');
+                    keyEl.className = 'tt-key';
+                    keyEl.style.borderTopColor = s.def.color;
+                    const valEl = document.createElement('span');
+                    valEl.className = 'tt-val';
+                    valEl.textContent = fmtIdx(p.idx);
+                    const labEl = document.createElement('span');
+                    labEl.className = 'tt-label';
+                    labEl.textContent = s.def.label;
+                    const absEl = document.createElement('span');
+                    absEl.className = 'tt-abs';
+                    absEl.textContent = s.def.fmt === 'eur' ? formatEUR(p.abs) : p.abs.toLocaleString('de-DE');
+                    row.append(keyEl, valEl, labEl, absEl);
+                    tip.appendChild(row);
+                });
+                const wrapRect = wrap.getBoundingClientRect();
+                const px = x * (rect.width / model.W);
+                tip.style.display = 'block';
+                const tipW = tip.offsetWidth;
+                const left = px + 14 + tipW > wrapRect.width ? px - tipW - 14 : px + 14;
+                tip.style.left = `${Math.max(0, left)}px`;
+                tip.style.top = `${Math.max(0, clientY - wrapRect.top - 20)}px`;
+            };
+            const hide = () => { tip.style.display = 'none'; cross.style.display = 'none'; };
+            svg.addEventListener('pointermove', e => show(e.clientX, e.clientY));
+            svg.addEventListener('pointerleave', hide);
+        }
+
         function renderOverview() {
             const dep = depotData.depot || {};
             const etf = depotData.etf_depot || {};
@@ -1533,6 +1705,7 @@ html_template = """<!DOCTYPE html>
 
             const bench = dep.benchmark || {};
             const rendite = bench.rendite_pct || {};
+            const eqModel = buildEquityModel((vermoegenHistData || {}).history);
 
             const allePositionen = (dep.positionen || []).map(p => Object.assign({ typ: 'Aktie' }, p))
                 .concat((etf.positionen || []).map(p => Object.assign({ typ: 'ETF' }, p)));
@@ -1568,6 +1741,11 @@ html_template = """<!DOCTYPE html>
                         <tr><td>Startkapital</td><td style="text-align:right;">${formatEUR(depStart)}</td><td style="text-align:right;">${formatEUR(etfStart)}</td><td style="text-align:right; font-weight:bold;">${formatEUR(start)}</td></tr>
                         <tr><td>Rendite (seit Start)</td><td style="text-align:right; color:${pctCol(depRend)}; font-weight:bold;">${pctTxt(depRend)}</td><td style="text-align:right; color:${pctCol(etfRend)}; font-weight:bold;">${pctTxt(etfRend)}</td><td style="text-align:right; color:${pctCol(gesamtRend)}; font-weight:bold;">${pctTxt(gesamtRend)}</td></tr>
                     </table>
+                </div>
+
+                <div class="ov-card">
+                    <h3>📉 Vermögensverlauf <small style="font-size:0.6em; color:var(--text-muted); font-weight:normal;">(indexiert: erster Datenpunkt = 100 · Depot/DAX/MSCI ab Benchmark-Anker 09.07.)</small></h3>
+                    ${renderEquityCurve(eqModel)}
                 </div>
 
                 <div class="ov-grid">
@@ -1622,6 +1800,7 @@ html_template = """<!DOCTYPE html>
             `;
             document.getElementById('uebersicht').innerHTML = html;
             document.getElementById('ov-goto-empfehlungen').addEventListener('click', () => openSection('empfehlungen'));
+            attachEquityHover(eqModel);
         }
 
         renderOverview();

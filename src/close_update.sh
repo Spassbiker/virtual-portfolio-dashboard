@@ -41,6 +41,8 @@ run_step() {
 run_step src/update_prices.py
 run_step src/compute_indicators.py
 run_step src/risk_report.py
+# Equity-Kurve (V1): überschreibt die Tageszeile mit dem Schlussstand.
+run_step src/log_vermoegen.py
 run_step src/build_dashboard.py
 
 git add data/*.json index.html

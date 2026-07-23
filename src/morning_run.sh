@@ -86,6 +86,8 @@ if [ "$traded" = "1" ]; then
 fi
 
 run_step src/risk_report.py
+# Equity-Kurve (V1): Tageszeile Gesamtvermögen + Benchmarks für das Dashboard.
+run_step src/log_vermoegen.py
 run_step src/build_dashboard.py
 
 git add data/*.json index.html

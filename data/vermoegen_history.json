@@ -1,0 +1,22 @@
+{
+  "history": [
+    {
+      "datum": "2026-07-09",
+      "depot_gesamt": 9769.26,
+      "etf_gesamt": null,
+      "cash_depot": null,
+      "cash_etf": null,
+      "dax": 25118.27,
+      "msci": 125.71
+    },
+    {
+      "datum": "2026-07-23",
+      "depot_gesamt": 9571.85,
+      "etf_gesamt": 4915.27,
+      "cash_depot": 25.88,
+      "cash_etf": 147.47,
+      "dax": 24906.18,
+      "msci": 124.99
+    }
+  ]
+}

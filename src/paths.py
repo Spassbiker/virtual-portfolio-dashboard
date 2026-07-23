@@ -38,6 +38,9 @@ ETF_NEWS: str = os.path.join(DATA_DIR, "etf_news_raw.json")
 ETF_SENT: str = os.path.join(DATA_DIR, "etf_sentiment_scores.json")
 ETF_RANKING: str = os.path.join(DATA_DIR, "etf_ranking.json")
 ETF_TRADES: str = os.path.join(DATA_DIR, "etf_trade_recommendations.json")
+# Tages-History des Gesamtvermögens (Equity-Kurve im Dashboard, V1):
+# eine Zeile pro Handelstag, geschrieben von log_vermoegen.py.
+VERMOEGEN_HISTORY: str = os.path.join(DATA_DIR, "vermoegen_history.json")
 
 # Backup-Dateien (werden von den Refresh-Skripten geschrieben, hier nur als
 # Konstanten damit man den Namen an einer Stelle ändern kann).
