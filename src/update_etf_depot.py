@@ -54,10 +54,16 @@ TRAIL_EXEMPT_COMPOSITE = 75.0           # CORE (>=75) bleibt vom Trailing-Stop v
 # --- Sektor-Cap (Parität zum Aktien-Motor, Phase Sektor-Abbau) -------------
 SECTOR_CAP = 0.30                       # kein Themen-Sektor > 30% des ETF-Sleeves
 
-BASE_BUDGET = 130.0                     # >= MIN_ORDER, damit Neukaeufe die Fragmentierungs-Schwelle raeumen
+BASE_BUDGET = 210.0                     # >= MIN_ORDER, damit Neukaeufe die Fragmentierungs-Schwelle raeumen
 BONUS_PER_POINT = 3.0                   # je Punkt Composite über der Kaufschwelle
 MAX_BUDGET = 350.0
-MIN_ORDER_VALUE = 120.0                 # war 40: verhindert Mini-Positionen (De-Fragmentierung)
+MIN_ORDER_VALUE = 200.0                 # war 120/40: verhindert Mini-Positionen (De-Fragmentierung)
+# Mindest-Positionsgroesse im Bestand: Positionen unter dieser Schwelle sind
+# Rauschen ohne Renditebeitrag (2026-07-23: 17 Positionen, 8 davon < 200€,
+# kleinste 53€ — trotz frueherer De-Frag-Fixes). Schwache Minis (< TOPUP_MIN_
+# COMPOSITE) werden verkauft und das Kapital fliesst ueber Top-up in starke
+# CORE-Bestaende; starke Minis bleiben und werden vom Top-up aufgestockt.
+MIN_POSITION_VALUE = 150.0
 MIN_CASH_RESERVE = 20.0
 FEE = 0.0                                # ETF-Sparplan-Modell: gebuehrenfrei
 CAP_GAINS_TAX = 0.26375
@@ -319,6 +325,42 @@ def phase_sector_reduction(state):
 
 
 # ==========================================
+# 1c. MINI-KONSOLIDIERUNG: Positionen unter MIN_POSITION_VALUE ohne
+#     Top-up-Perspektive (Composite < TOPUP_MIN_COMPOSITE) verkaufen.
+#     Das Kapital wandert ueber die Top-up-Phase in starke CORE-Bestaende
+#     statt als Streubesitz liegen zu bleiben.
+# ==========================================
+
+def phase_mini_consolidation(state):
+    for p in list(state.positions):
+        wert = p.get("boersenwert", 0) or 0
+        composite = p.get("composite")
+        if wert <= 0 or wert >= MIN_POSITION_VALUE:
+            continue
+        if composite is not None and composite >= TOPUP_MIN_COMPOSITE:
+            continue  # starker Mini: bleibt und wird vom Top-up aufgestockt
+        sektor = p.get("sektor")
+        isin = p.get("isin")
+        price = p.get("boersenkurs", 0)
+        if not price:
+            continue
+        grund = (f"Mini-Konsolidierung: {wert:.2f}€ < {MIN_POSITION_VALUE:.0f}€ "
+                 f"Mindestgroesse (Composite={composite})")
+        tx, net_cash = _make_sell_record(
+            p, price,
+            notiz="Mini-Konsolidierung (Position unter Mindestgroesse)",
+            begruendung=grund + " | " + reason_for(state.ranking_lookup.get((sektor, isin))),
+        )
+        state.current_cash += net_cash
+        state.sold_slots.add((sektor, isin))
+        state.summary.append(f"ETF-Mini-Konsolidierung: {p['stueck']}x {p.get('wertpapier')} "
+                             f"({sektor}) zu {price:.2f} EUR verkauft — {wert:.2f}€ unter "
+                             f"Mindestgroesse {MIN_POSITION_VALUE:.0f}€.")
+        state.transactions.append(tx)
+        state.positions.remove(p)
+
+
+# ==========================================
 # 2. KAUF-KANDIDATEN: Bucket CORE/SATELLITE, noch nicht in diesem Slot gehalten
 # ==========================================
 
@@ -539,6 +581,7 @@ def main(recommend=False):
 
     phase_strategic_sell(state)
     phase_sector_reduction(state)
+    phase_mini_consolidation(state)
     total_needed_cash = phase_plan(state)
     phase_rebalance(state, total_needed_cash)
     phase_buy(state)

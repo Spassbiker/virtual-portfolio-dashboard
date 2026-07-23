@@ -190,6 +190,40 @@ class TestTopUp(EtfTestCase):
         self.assertEqual(state.transactions, [])
 
 
+class TestMiniKonsolidierung(EtfTestCase):
+    def test_schwacher_mini_wird_verkauft(self):
+        mini = make_position("IE00TEST0060", stueck=4, kaufkurs=20.0, kurs=20.0,
+                             composite=68.0)          # 80€ < 150€, Composite < 75
+        gross = make_position("IE00TEST0061", stueck=20, kurs=20.0, composite=68.0)
+        state = self.make_state([mini, gross])
+        etf.phase_mini_consolidation(state)
+        isins = [p["isin"] for p in state.positions]
+        self.assertNotIn("IE00TEST0060", isins)
+        self.assertIn("IE00TEST0061", isins)
+        self.assertIn(("Tech", "IE00TEST0060"), state.sold_slots)  # kein Rückkauf im Lauf
+        self.assertIn("Mini-Konsolidierung", state.transactions[0]["notiz"])
+
+    def test_starker_mini_bleibt_fuer_topup(self):
+        mini = make_position("IE00TEST0062", stueck=4, kaufkurs=20.0, kurs=20.0,
+                             composite=80.0, bucket="CORE")   # 80€, aber Composite >= 75
+        state = self.make_state([mini])
+        etf.phase_mini_consolidation(state)
+        self.assertEqual(len(state.positions), 1)
+
+    def test_position_ueber_schwelle_bleibt(self):
+        p = make_position("IE00TEST0063", stueck=10, kurs=20.0, composite=60.0)  # 200€
+        state = self.make_state([p])
+        etf.phase_mini_consolidation(state)
+        self.assertEqual(len(state.positions), 1)
+
+    def test_neukauf_erfuellt_mindestgroesse(self):
+        # Jeder Neukauf muss MIN_ORDER_VALUE >= MIN_POSITION_VALUE räumen —
+        # sonst würde die Kaufphase sofort neue Minis erzeugen.
+        self.assertGreaterEqual(etf.MIN_ORDER_VALUE, etf.MIN_POSITION_VALUE)
+        self.assertGreaterEqual(etf.budget_for(etf.NEW_BUY_MIN_COMPOSITE),
+                                etf.MIN_ORDER_VALUE)
+
+
 class TestSektorAbbau(EtfTestCase):
     def test_teilverkauf_bis_cap(self):
         positions = [

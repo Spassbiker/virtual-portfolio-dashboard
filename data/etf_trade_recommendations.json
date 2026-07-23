@@ -1,9 +1,91 @@
 {
-  "generated_at": "2026-07-23 14:46",
+  "generated_at": "2026-07-23 14:52",
   "hinweis": "Regelbasierter Vorschlag (ETF-Ranking: Momentum/Risiko/Sentiment/Struktur). Der Agent entscheidet autonom und kann abweichen.",
-  "vorgeschlagene_trades": [],
-  "zusammenfassung": [],
-  "resultierender_barbestand": 34.67,
-  "resultierender_portfoliowert": 4882.08,
-  "resultierendes_gesamtvermoegen": 4916.75
+  "vorgeschlagene_trades": [
+    {
+      "datum": "2026-07-23",
+      "typ": "Verkauf",
+      "sektor": "Verteidigung",
+      "isin": "IE000OJ5TQP4",
+      "wertpapier": "HANetf Future of Defence UCITS ETF",
+      "stueck": 5,
+      "kurs": 18.084,
+      "gebuehr": 0.0,
+      "steuern": 0.2,
+      "gewinn_verlust": 0.74,
+      "gesamt": 90.22,
+      "notiz": "Mini-Konsolidierung (Position unter Mindestgroesse)",
+      "begruendung": "Mini-Konsolidierung: 90.42€ < 150€ Mindestgroesse (Composite=64.7) | Composite=64.7 (SATELLITE) | Momentum=73.9 Risiko=49.3 Sentiment=50 Struktur=82.5"
+    },
+    {
+      "datum": "2026-07-23",
+      "typ": "Verkauf",
+      "sektor": "Luft- und Raumfahrttechnik",
+      "isin": "IE00B4LN9N13",
+      "wertpapier": "iShares S&P 500 Industrials Sector UCITS ETF",
+      "stueck": 4,
+      "kurs": 13.358,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -0.5,
+      "gesamt": 53.43,
+      "notiz": "Mini-Konsolidierung (Position unter Mindestgroesse)",
+      "begruendung": "Mini-Konsolidierung: 53.43€ < 150€ Mindestgroesse (Composite=73.5) | Composite=73.5 (SATELLITE) | Momentum=78.8 Risiko=61.7 Sentiment=60 Struktur=92.5"
+    },
+    {
+      "datum": "2026-07-23",
+      "typ": "Verkauf",
+      "sektor": "Satellitentechnik",
+      "isin": "IE00BYVQ9F29",
+      "wertpapier": "iShares Nasdaq 100 UCITS ETF EUR Hedged Acc",
+      "stueck": 5,
+      "kurs": 16.614,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -3.23,
+      "gesamt": 83.07,
+      "notiz": "Mini-Konsolidierung (Position unter Mindestgroesse)",
+      "begruendung": "Mini-Konsolidierung: 83.07€ < 150€ Mindestgroesse (Composite=71.2) | Composite=71.2 (SATELLITE) | Momentum=66.7 Risiko=77.4 Sentiment=50 Struktur=92.5"
+    },
+    {
+      "datum": "2026-07-23",
+      "typ": "Verkauf",
+      "sektor": "Versorger",
+      "isin": "DE000A0H08H3",
+      "wertpapier": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE)",
+      "stueck": 2,
+      "kurs": 64.64,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": -3.36,
+      "gesamt": 129.28,
+      "notiz": "Mini-Konsolidierung (Position unter Mindestgroesse)",
+      "begruendung": "Mini-Konsolidierung: 129.28€ < 150€ Mindestgroesse (Composite=68.2) | Composite=68.2 (SATELLITE) | Momentum=71.1 Risiko=65.1 Sentiment=70 Struktur=65.0"
+    },
+    {
+      "datum": "2026-07-23",
+      "typ": "Kauf",
+      "sektor": "Technologie",
+      "isin": "IE00BM67HT60",
+      "wertpapier": "iShares MSCI World Information Technology UCITS ETF",
+      "stueck": 2,
+      "kurs": 121.6,
+      "gebuehr": 0.0,
+      "steuern": 0.0,
+      "gewinn_verlust": 0.0,
+      "gesamt": 243.2,
+      "notiz": "Top-up (ETF-Sleeve)",
+      "begruendung": "Top-up starker CORE-Bestand | Composite=81.8 (CORE) | Momentum=84.3 Risiko=71.2 Sentiment=80 Struktur=92.5"
+    }
+  ],
+  "zusammenfassung": [
+    "ETF-Mini-Konsolidierung: 5x HANetf Future of Defence UCITS ETF (Verteidigung) zu 18.08 EUR verkauft — 90.42€ unter Mindestgroesse 150€.",
+    "ETF-Mini-Konsolidierung: 4x iShares S&P 500 Industrials Sector UCITS ETF (Luft- und Raumfahrttechnik) zu 13.36 EUR verkauft — 53.43€ unter Mindestgroesse 150€.",
+    "ETF-Mini-Konsolidierung: 5x iShares Nasdaq 100 UCITS ETF EUR Hedged Acc (Satellitentechnik) zu 16.61 EUR verkauft — 83.07€ unter Mindestgroesse 150€.",
+    "ETF-Mini-Konsolidierung: 2x iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE) (Versorger) zu 64.64 EUR verkauft — 129.28€ unter Mindestgroesse 150€.",
+    "ETF-Top-up: 2x iShares MSCI World Information Technology UCITS ETF (Technologie) zu 121.60 EUR, Composite=81.8 (CORE-Aufstockung)."
+  ],
+  "resultierender_barbestand": 147.47,
+  "resultierender_portfoliowert": 4767.8,
+  "resultierendes_gesamtvermoegen": 4915.27
 }
