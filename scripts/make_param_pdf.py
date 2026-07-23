@@ -194,8 +194,10 @@ param("Klumpenrisiko","anteil_pct, limits","Wie viel Prozent des Depots auf eine
       "'Sektor Luft- und Raumfahrt macht 36,2 % aus (Limit 30 %)' = Uebergewicht. Ab 60 % werden neue Kaeufe im Sektor ganz blockiert.")
 param("Korrelation / Cluster","korrelation, cluster","Gruppen von Aktien, die sich aehnlich bewegen (z. B. zwei Ruestungswerte). Auch verschiedene Firmen wirken im Crash wie eine - das Cluster zeigt dieses versteckte Konzentrationsrisiko.")
 param("Beta","beta","Wie stark eine Aktie im Vergleich zum Gesamtmarkt (DAX) schwankt. Beta 1,0 = wie der Markt, > 1 = staerker, < 1 = ruhiger. Wird automatisch aus ~1 Jahr Kursdaten berechnet.")
-param("Stop-Loss (zweistufig, marktbereinigt)","stop_ref_kurs, dax_ref","Automatischer Verkaufsschutz gegen Verluste, in zwei Stufen:",
-      "1) Absoluter Hard-Stop -20 %: faellt eine Position mehr als 20 % unter Kaufkurs, wird immer verkauft (Katastrophenschutz).  2) Relativer Stop -12 %: greift, wenn die Position im Minus ist UND ihren erwarteten (beta-bereinigten) Kursverlauf ggue. dem DAX um mehr als 12 % unterbietet. So fliegt man bei einem allgemeinen Marktdip nicht raus, echte Firmen-Schwaeche wird aber frueh erkannt.")
+param("Stop-Loss (dreistufig, marktbereinigt)","stop_ref_kurs, dax_ref","Automatischer Verkaufsschutz gegen Verluste, in drei Stufen - es greift immer die zuerst ausgeloeste:",
+      "1) Absoluter Hard-Stop -20 %: faellt eine Position mehr als 20 % unter Kaufkurs, wird immer verkauft (Katastrophenschutz).  2) Relativer Stop -12 %: greift, wenn die Position im Minus ist UND ihren erwarteten (beta-bereinigten) Kursverlauf ggue. dem DAX um mehr als 12 % unterbietet. So fliegt man bei einem allgemeinen Marktdip nicht raus, echte Firmen-Schwaeche wird aber frueh erkannt.  3) Dynamischer Vola-Stop: Trailing-Stop in Hoehe von 2x der Tagesschwankung (auf ~1 Monat hochgerechnet, gedeckelt 6-18 %), gemessen vom bisherigen Hoechststand. Ruhige Titel werden enger gesichert als -20 %, Gewinne mitgenommen.")
+param("Stop-Abstand (Ampel)","stop_info","Zeigt je Position, wie weit der Kurs noch vom engsten der drei Stops entfernt ist - Fruehwarnung vor dem automatischen Verkauf. Gruen > 8 % Luft, Gelb 3-8 % beobachten, Rot < 3 % kritisch. Von der Handels-Engine berechnet, damit Anzeige und echte Verkaufsregel nie auseinanderlaufen.",
+      "'Lockheed Martin: Kurs nur 3,6 % ueber dem Hard-Stop (436,73 EUR)' = kurz vor dem Verkauf.")
 
 # 7 Benchmark
 h2(7,"Benchmark (Vergleich mit dem Markt)")
@@ -204,8 +206,17 @@ param("Rendite Depot vs. DAX vs. MSCI World","rendite_pct","Prozentuale Entwickl
       "'Depot -2,63 % | DAX -1,14 % | MSCI -0,66 %' = das Depot lief etwas schlechter als der Markt (leichte Underperformance).")
 param("Anker","anker","Der fixe Startpunkt (Datum + Indexstaende + Vermoegen), auf den sich alle Vergleichsrenditen beziehen. Haelt den Vergleich fair und stabil.")
 
+# 8 Dashboard-Widgets
+h2(8,"Dashboard-Widgets (Uebersicht & Analyse)")
+lead("Anzeige-Elemente, die aus den obigen Kennzahlen zusammengesetzt sind - was auf Startseite und Analyse-Tab zu sehen ist.")
+param("Vermoegensverlauf (Equity-Kurve)","vermoegen_history","Liniendiagramm: Aktien-Depot, ETF-Sleeve, DAX und MSCI World, alle indexiert auf 100 am Anker-Datum. Zeigt, ob der Abstand zum Markt waechst oder schrumpft - jeder Tageslauf traegt einen Punkt nach.")
+param("Datenfrische-Badges","meta.json","Marken oben am Dashboard mit dem Alter jeder Datenquelle (Kurse, Chart, Funda, Sentiment, Earnings, ETF-Ranking). Wird eine Quelle zu alt (Cron-Ausfall), faerbt sich das Badge gelb/rot - ein stiller Ausfall bleibt so nicht unbemerkt.")
+param("Handelsaktivitaet & Kosten","transaktionshistorie","Monatstabelle ueber beide Depots: Anzahl Trades, gezahlte Gebuehren und Steuern, realisierte Gewinne/Verluste. Macht sichtbar, wie stark haeufiges Umschichten die Rendite belastet.")
+param("Attribution-Report","attribution_latest","Monatliche Auswertung im Analyse-Tab: welche Titel und Regeln die Ueber-/Unterperformance ggue. dem DAX verursacht haben, inkl. Whipsaw-Check (zu frueh verkaufte Positionen).")
+param("Signal-Monitor","signal_monitor","Fuellstand der Wirksamkeitsmessung: wie viele Signal-Datenpunkte schon einen 5-Tage-Folgeertrag haben. Ab genug Daten (~Mitte August) auswertbar, ob Sentiment/Earnings/Composite Mehrwert liefern.")
+
 need(20); y[0]-=4; hline(y[0]); y[0]-=14
-para("Erstellt aus dem tatsaechlichen Analyse-Code des Dashboards. Schwellen (Kauf 6, Verkauf 4, Stop -20 %/-12 % usw.) entsprechen der aktuellen Konfiguration und koennen sich aendern.",8.5,'F1',color=MUT)
+para("Erstellt aus dem tatsaechlichen Analyse-Code des Dashboards. Schwellen (Kauf 6, Verkauf 4, Stop -20 %/-12 %, Vola-Stop 6-18 % usw.) entsprechen der aktuellen Konfiguration und koennen sich aendern.",8.5,'F1',color=MUT)
 
 newpage()
 

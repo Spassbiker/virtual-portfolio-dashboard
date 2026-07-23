@@ -55,6 +55,7 @@
     <li><a href="#depot">5. Depot &amp; Positionen</a></li>
     <li><a href="#risk">6. Risiko: Klumpen, Korrelation, Stop-Loss</a></li>
     <li><a href="#bench">7. Benchmark (Vergleich mit dem Markt)</a></li>
+    <li><a href="#dash">8. Dashboard-Widgets (Übersicht &amp; Analyse)</a></li>
   </ul>
 </div>
 
@@ -224,12 +225,17 @@
 <div class="p"><span class="name">Beta</span> <span class="tech">beta</span>
 <p class="desc">Wie stark eine Aktie im Vergleich zum Gesamtmarkt (DAX) schwankt. <b>Beta 1,0</b> = bewegt sich wie der Markt, <b>&gt; 1</b> = stärker, <b>&lt; 1</b> = ruhiger. Wird automatisch aus ~1 Jahr Kursdaten berechnet.</p></div>
 
-<div class="p"><span class="name">Stop-Loss (zweistufig, marktbereinigt)</span> <span class="tech">stop_ref_kurs, dax_ref</span>
-<p class="desc">Automatischer Verkaufsschutz gegen Verluste, in zwei Stufen:</p>
+<div class="p"><span class="name">Stop-Loss (dreistufig, marktbereinigt)</span> <span class="tech">stop_ref_kurs, dax_ref</span>
+<p class="desc">Automatischer Verkaufsschutz gegen Verluste, in drei Stufen – es greift immer die <b>zuerst</b> ausgelöste:</p>
 <p class="ex">
 <b>1) Absoluter Hard-Stop −20 %:</b> Fällt eine Position mehr als 20 % unter Kaufkurs, wird <b>immer</b> verkauft (Katastrophenschutz).<br>
-<b>2) Relativer Stop −12 %:</b> Greift, wenn eine Position im Minus ist <b>und</b> ihren erwarteten Kursverlauf (beta-bereinigt gegenüber dem DAX) um mehr als 12 % unterbietet. So fliegt man bei einem allgemeinen Marktdip <b>nicht</b> raus, aber echte Firmen-Schwäche wird früh erkannt.
+<b>2) Relativer Stop −12 %:</b> Greift, wenn eine Position im Minus ist <b>und</b> ihren erwarteten Kursverlauf (beta-bereinigt gegenüber dem DAX) um mehr als 12 % unterbietet. So fliegt man bei einem allgemeinen Marktdip <b>nicht</b> raus, aber echte Firmen-Schwäche wird früh erkannt.<br>
+<b>3) Dynamischer Vola-Stop:</b> Trailing-Stop in Höhe von 2× der Tagesschwankung (auf ~1 Monat hochgerechnet, gedeckelt auf 6–18 %), gemessen vom bisherigen <b>Höchststand</b>. Ruhige Titel werden dadurch enger gesichert als −20 %, aufgelaufene Gewinne mitgenommen.
 </p></div>
+
+<div class="p"><span class="name">Stop-Abstand (Ampel)</span> <span class="tech">stop_info</span>
+<p class="desc">Zeigt je Position, wie weit der aktuelle Kurs noch vom <b>engsten</b> der drei Stops entfernt ist – als Frühwarnung, bevor der Morgenlauf verkauft. <span style="color:#0ca30c">🟢 &gt; 8 %</span> Luft, <span style="color:#b8860b">🟡 3–8 %</span> beobachten, <span style="color:#d03b3b">🔴 &lt; 3 %</span> kritisch. Der Wert wird von der Handels-Engine berechnet (nicht im Dashboard nachgerechnet), damit Anzeige und tatsächliche Verkaufsregel nie auseinanderlaufen.</p>
+<p class="ex">„🟡 Lockheed Martin: Kurs nur 3,6 % über dem Hard-Stop (436,73 €)" = die Position steht kurz vor dem automatischen Verkauf.</p></div>
 
 <!-- ================= BENCH ================= -->
 <h2 id="bench"><span class="em">📐</span>7. Benchmark (Vergleich mit dem Markt)</h2>
@@ -242,7 +248,26 @@
 <div class="p"><span class="name">Anker</span> <span class="tech">anker</span>
 <p class="desc">Der fixe Startpunkt (Datum + Indexstände + Vermögen), auf den sich alle Vergleichsrenditen beziehen. So bleibt der Vergleich fair und stabil.</p></div>
 
-<p class="foot">Erstellt aus dem tatsächlichen Analyse-Code des Dashboards. Die Schwellen (Kauf 6, Verkauf 4, Stop −20 %/−12 % usw.) entsprechen der aktuellen Konfiguration und können sich ändern.</p>
+<!-- ================= DASHBOARD-WIDGETS ================= -->
+<h2 id="dash"><span class="em">🖥️</span>8. Dashboard-Widgets (Übersicht &amp; Analyse)</h2>
+<p class="lead">Anzeige-Elemente, die aus den obigen Kennzahlen zusammengesetzt sind – sie erklären, was auf der Startseite und im Analyse-Tab zu sehen ist.</p>
+
+<div class="p"><span class="name">Vermögensverlauf (Equity-Kurve)</span> <span class="tech">vermoegen_history</span>
+<p class="desc">Liniendiagramm auf der Startseite: Aktien-Depot, ETF-Sleeve, DAX und MSCI World, alle <b>indexiert auf 100</b> am Anker-Datum (09.07.). So sieht man auf einen Blick, ob der Abstand zum Markt wächst oder schrumpft – jeder Tageslauf trägt einen Punkt nach.</p></div>
+
+<div class="p"><span class="name">Datenfrische-Badges</span> <span class="tech">meta.json</span>
+<p class="desc">Kleine Marken oben am Dashboard mit dem <b>Alter</b> jeder Datenquelle (Kurse, Chart, Funda, Sentiment, Earnings, ETF-Ranking). Wird eine Quelle zu alt (z. B. weil der Cron ausfällt), färbt sich das Badge <span style="color:#b8860b">gelb</span>/<span style="color:#d03b3b">rot</span> – so bleibt ein stiller Ausfall nicht unbemerkt.</p></div>
+
+<div class="p"><span class="name">Handelsaktivität &amp; Kosten</span> <span class="tech">transaktionshistorie</span>
+<p class="desc">Monatstabelle über beide Depots: Anzahl Trades, gezahlte <b>Gebühren</b> und Steuern sowie realisierte Gewinne/Verluste. Macht sichtbar, wie stark häufiges Umschichten die Rendite über Gebühren belastet.</p></div>
+
+<div class="p"><span class="name">Attribution-Report</span> <span class="tech">attribution_latest</span>
+<p class="desc">Im Analyse-Tab: die monatliche Auswertung, <b>welche Titel und Regeln</b> die Über-/Unterperformance gegenüber dem DAX verursacht haben – inklusive Whipsaw-Check (Verkäufe, die im Nachhinein zu früh kamen).</p></div>
+
+<div class="p"><span class="name">Signal-Monitor</span> <span class="tech">signal_monitor</span>
+<p class="desc">Füllstand der Wirksamkeitsmessung: wie viele Signal-Datenpunkte schon einen <b>5-Tage-Folgeertrag</b> haben. Sobald genug Daten da sind (~Mitte August), lässt sich auswerten, ob Sentiment/Earnings/Composite tatsächlich Mehrwert liefern.</p></div>
+
+<p class="foot">Erstellt aus dem tatsächlichen Analyse-Code des Dashboards. Die Schwellen (Kauf 6, Verkauf 4, Stop −20 %/−12 %, Vola-Stop 6–18 % usw.) entsprechen der aktuellen Konfiguration und können sich ändern.</p>
 
 </div>
 </body>
