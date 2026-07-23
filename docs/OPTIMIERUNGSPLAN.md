@@ -85,3 +85,39 @@ A1–A3 zuerst (Robustheit vor neuen Features), dann B4–B7 einzeln mit
 Ranking-/Verhaltens-Diff vor Scharfschaltung (Workflow wie in ROADMAP.md),
 C8 parallel als Einmal-Analyse, C9 ab ~Mitte August (Datenlage), D zuletzt.
 Jeder Punkt einzeln committet und rollback-fähig.
+
+---
+
+## Umsetzungsstand 2026-07-23 (alle Punkte)
+
+- **A1 ✅** unittest-Suite (63 Tests, tests/) + Test-Gate im 09:00-Lauf
+  (rote Tests ⇒ keine Trades). ETF-Engine dafür in Phasen-Funktionen
+  refactort (verhaltensidentisch, per --recommend-Diff verifiziert).
+- **A2 ✅** Logs nach logs/YYYY-MM-DD/ (30-Tage-Rotation) statt /tmp.
+- **A3 ✅** MIN_POSITION_VALUE 150€ + Mini-Konsolidierung (Phase 1c),
+  Neukäufe min. 200€. Ausgeführt: 4 Minis verkauft, Top-up in Info-Tech-CORE;
+  13 statt 17 Positionen.
+- **B4 ✅** Einzelpositions-Cap 20% (Trim-Teilverkauf ab 22%, Hysterese),
+  Kaufbudget-Kappung. Dabei gefundener Bug gefixt: Sektor-/Positions-Cap
+  blockierten jeden Kauf in ein leeres Depot (Bootstrap-Deadlock) + Guard
+  gegen Trim-Verkaufsspirale bei < 5 Positionen.
+- **B5 ✅** Momentum 12-1 war bereits vollständig implementiert (Engine +
+  Indikatoren, 59/76 Titel) — Roadmap korrigiert.
+- **B6 ✅** Dynamischer Vola-Stop: 2×Tagesvola×√20 vom Trailing-Anker,
+  geklemmt [6%, 18%]. Terna stoppt z.B. bei −10.2% vom Hoch statt −20%.
+- **B7 ✅** Dynamischer Cash-Puffer max(Boden, 2% Gesamtvermögen) in beiden
+  Engines; baut sich über Verkäufe organisch auf.
+- **C8 ✅** src/attribution_report.py + erster Report
+  (docs/attribution/2026-07-23.md). Befund: Underperformance kam v.a. aus den
+  Defense-Verkäufen des Sektor-Abbaus 16./20.07. in die laufende Rally
+  (Dassault +10.6%, Thales +7.2% seit Verkauf) plus 60€ Gebühren-Churn.
+  Monats-Cron: Portfolio_Attribution_Monatlich_CMD (1. des Monats, 18:00).
+- **C9 ✅ (Logging)** src/etf_composite_log.py, täglich im 09:00-Lauf,
+  heute geseedet (22 ISINs). Auswertung (report-Kommando) ab ~Mitte August,
+  wenn Forward-Returns gefüllt sind. Aktien-Pendant lief bereits.
+- **D10 ✅ (Engines)** Beide Engines sind in Phasen-Funktionen + main()
+  strukturiert und getestet. build_dashboard.py bleibt bewusst ein
+  Template-Generator: nach D11 ist er im Kern statisches HTML/JS + 2
+  Platzhalter-Replaces — ein Zerlegen ohne UI-Tests wäre Risiko ohne Nutzen.
+- **D11 ✅** Dashboard lädt data/*.json per fetch() (GitHub Pages),
+  index.html 337KB → 102KB und weitgehend stabil in Git.

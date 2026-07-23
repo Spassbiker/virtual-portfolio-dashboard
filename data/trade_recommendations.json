@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-23 14:58",
+  "generated_at": "2026-07-23 15:05",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [],
   "zusammenfassung": [
     "KI-Veto: Kauf von OHB (DE0005936124) blockiert. Aktie liegt 63,88% unter dem Mai-Hoch und 35,56% im Minus über 30 Tage; Aktienrückkauf kann den anhaltenden Absturz nicht ausgleichen.",
-    "Watch-Modus: 17 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: Elia Group(11), CSG N.V. (Czechoslovak Group)(8), ASM International N.V.(7), Saab AB(7), Kongsberg Gruppen ASA(6).",
+    "Watch-Modus: 17 Kandidat(en) noch nicht kaufbar (fehlende Historie). Top: Elia Group(11), CSG N.V. (Czechoslovak Group)(8), Saab AB(7), ASM International N.V.(7), Kongsberg Gruppen ASA(6).",
     "Adaptive Kaufschwelle: 20 (Floor 6, 80er-Perzentil aus 32 aktiven Kandidaten)."
   ],
   "resultierender_barbestand": 25.88,
-  "resultierender_portfoliowert": 9482.95,
-  "resultierendes_gesamtvermoegen": 9508.83
+  "resultierender_portfoliowert": 9478.74,
+  "resultierendes_gesamtvermoegen": 9504.62
 }
