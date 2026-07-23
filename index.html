@@ -180,6 +180,12 @@
         .eq-tooltip .tt-abs { color: var(--text-muted); }
         .eq-legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 6px; font-size: 0.85em; color: var(--text-secondary); align-items: center; }
         .eq-legend .tt-key { margin-right: 6px; vertical-align: middle; }
+
+        /* --- Datenfrische-Badges (V3) --- */
+        .fresh-row { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: -12px 0 18px 0; }
+        .fresh-badge { font-size: 0.74em; padding: 3px 10px; border-radius: 12px; background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border); cursor: help; }
+        .fresh-badge.warn { background: var(--warning-bg); color: var(--warning-text); border-color: var(--warning); font-weight: 700; }
+        .fresh-badge.crit { background: var(--critical-bg); color: var(--critical-text); border-color: var(--critical); font-weight: 700; }
     </style>
 </head>
 <body>
@@ -192,6 +198,8 @@
                 <button class="theme-toggle" id="theme-toggle">🌙 Dark Mode</button>
             </div>
         </div>
+
+        <div class="fresh-row" id="fresh-row"></div>
 
         <div class="top-nav">
             <button class="tab-button active" data-section="uebersicht">🏠 Übersicht</button>
@@ -241,7 +249,7 @@
         // Fehlende optionale Dateien fallen auf leere Strukturen zurück.
         const _load = async (url, fallback) => {
             try {
-                const r = await fetch(url + '?v=202607231519');
+                const r = await fetch(url + '?v=202607231522');
                 return r.ok ? await r.json() : fallback;
             } catch (e) { return fallback; }
         };
@@ -257,6 +265,32 @@
             _load('data/etf_katalog.json', {"sektoren": {}}),
             _load('data/vermoegen_history.json', {"history": []}),
         ]);
+        const metaData = await _load('data/meta.json', null);
+
+        // Datenfrische (V3): Alter jeder Quelle ZUR ANSICHTSZEIT berechnen —
+        // die Badges warnen damit auch dann, wenn der Cron steht und gar
+        // nichts mehr neu gebaut wird (Lehre aus dem stillen 9-Tage-Ausfall).
+        (function renderFreshness() {
+            const row = document.getElementById('fresh-row');
+            if (!row || !metaData || !Array.isArray(metaData.quellen)) return;
+            const now = Date.now();
+            metaData.quellen.forEach(q => {
+                const el = document.createElement('span');
+                el.className = 'fresh-badge';
+                if (!q.stand) {
+                    el.classList.add('crit');
+                    el.textContent = `${q.label}: fehlt`;
+                } else {
+                    const tage = (now - Date.parse(q.stand)) / 86400000;
+                    const alter = tage < 1 ? 'heute' : `vor ${Math.floor(tage)} T`;
+                    if (tage > q.warn_tage * 2) el.classList.add('crit');
+                    else if (tage > q.warn_tage) el.classList.add('warn');
+                    el.textContent = `${q.label}: ${alter}`;
+                    el.title = `Stand ${q.stand.replace('T', ' ')} — Warnschwelle ${q.warn_tage} Tage`;
+                }
+                row.appendChild(el);
+            });
+        })();
         const sentimentScores = (sentimentData && sentimentData.scores) ? sentimentData.scores : {};
         const earningsScores = (earningsData && earningsData.scores) ? earningsData.scores : {};
         // ETF-Katalog als ISIN->Name-Map (war vorher in Python vorverdichtet):

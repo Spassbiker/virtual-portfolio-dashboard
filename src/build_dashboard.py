@@ -3,7 +3,45 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from paths import INDEX_HTML
+from paths import (
+    CHART,
+    DATA_DIR,
+    DEPOT,
+    EARNINGS,
+    FUNDA,
+    ETF_RANKING,
+    INDEX_HTML,
+    SENT,
+    save_json,
+)
+
+# V3: Datenfrische — der Build schreibt die mtime jeder Datenquelle nach
+# data/meta.json; das Dashboard berechnet das Alter ZUR ANSICHTSZEIT und
+# warnt bei Überschreitung. Damit fällt ein stiller Cron-Ausfall (Lehre aus
+# dem 9-Tage-Crash) auch dem Betrachter auf — die Badges altern weiter,
+# selbst wenn nichts mehr neu gebaut wird. warn_tage enthält Wochenend-
+# Puffer (Kurse laufen nur an Handelstagen).
+FRESHNESS_SOURCES = [
+    ("kurse", "Kurse", DEPOT, 2),
+    ("chart", "Chartanalyse", CHART, 3),
+    ("funda", "Fundamentalanalyse", FUNDA, 10),
+    ("sentiment", "KI-Sentiment", SENT, 8),
+    ("earnings", "Earnings", EARNINGS, 10),
+    ("etf_ranking", "ETF-Ranking", ETF_RANKING, 3),
+]
+
+
+def write_meta():
+    quellen = []
+    for key, label, path, warn_tage in FRESHNESS_SOURCES:
+        stand = None
+        if os.path.exists(path):
+            stand = datetime.datetime.fromtimestamp(os.path.getmtime(path)).strftime("%Y-%m-%dT%H:%M:%S")
+        quellen.append({"key": key, "label": label, "stand": stand, "warn_tage": warn_tage})
+    save_json(os.path.join(DATA_DIR, "meta.json"), {
+        "generated_at": datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+        "quellen": quellen,
+    })
 
 # D11 (2026-07-23): Die Daten werden NICHT mehr in index.html eingebettet,
 # sondern zur Laufzeit per fetch() aus data/*.json geladen (GitHub Pages und
@@ -198,6 +236,12 @@ html_template = """<!DOCTYPE html>
         .eq-tooltip .tt-abs { color: var(--text-muted); }
         .eq-legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 6px; font-size: 0.85em; color: var(--text-secondary); align-items: center; }
         .eq-legend .tt-key { margin-right: 6px; vertical-align: middle; }
+
+        /* --- Datenfrische-Badges (V3) --- */
+        .fresh-row { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: -12px 0 18px 0; }
+        .fresh-badge { font-size: 0.74em; padding: 3px 10px; border-radius: 12px; background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border); cursor: help; }
+        .fresh-badge.warn { background: var(--warning-bg); color: var(--warning-text); border-color: var(--warning); font-weight: 700; }
+        .fresh-badge.crit { background: var(--critical-bg); color: var(--critical-text); border-color: var(--critical); font-weight: 700; }
     </style>
 </head>
 <body>
@@ -210,6 +254,8 @@ html_template = """<!DOCTYPE html>
                 <button class="theme-toggle" id="theme-toggle">🌙 Dark Mode</button>
             </div>
         </div>
+
+        <div class="fresh-row" id="fresh-row"></div>
 
         <div class="top-nav">
             <button class="tab-button active" data-section="uebersicht">🏠 Übersicht</button>
@@ -275,6 +321,32 @@ html_template = """<!DOCTYPE html>
             _load('data/etf_katalog.json', {"sektoren": {}}),
             _load('data/vermoegen_history.json', {"history": []}),
         ]);
+        const metaData = await _load('data/meta.json', null);
+
+        // Datenfrische (V3): Alter jeder Quelle ZUR ANSICHTSZEIT berechnen —
+        // die Badges warnen damit auch dann, wenn der Cron steht und gar
+        // nichts mehr neu gebaut wird (Lehre aus dem stillen 9-Tage-Ausfall).
+        (function renderFreshness() {
+            const row = document.getElementById('fresh-row');
+            if (!row || !metaData || !Array.isArray(metaData.quellen)) return;
+            const now = Date.now();
+            metaData.quellen.forEach(q => {
+                const el = document.createElement('span');
+                el.className = 'fresh-badge';
+                if (!q.stand) {
+                    el.classList.add('crit');
+                    el.textContent = `${q.label}: fehlt`;
+                } else {
+                    const tage = (now - Date.parse(q.stand)) / 86400000;
+                    const alter = tage < 1 ? 'heute' : `vor ${Math.floor(tage)} T`;
+                    if (tage > q.warn_tage * 2) el.classList.add('crit');
+                    else if (tage > q.warn_tage) el.classList.add('warn');
+                    el.textContent = `${q.label}: ${alter}`;
+                    el.title = `Stand ${q.stand.replace('T', ' ')} — Warnschwelle ${q.warn_tage} Tage`;
+                }
+                row.appendChild(el);
+            });
+        })();
         const sentimentScores = (sentimentData && sentimentData.scores) ? sentimentData.scores : {};
         const earningsScores = (earningsData && earningsData.scores) ? earningsData.scores : {};
         // ETF-Katalog als ISIN->Name-Map (war vorher in Python vorverdichtet):
@@ -1853,6 +1925,8 @@ html_template = """<!DOCTYPE html>
     </script>
 </body>
 </html>"""
+
+write_meta()
 
 html_output = html_template.replace("BUILD_DATE_PLACEHOLDER", build_date)
 html_output = html_output.replace("BUILD_STAMP_PLACEHOLDER", build_stamp)
