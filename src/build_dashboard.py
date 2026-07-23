@@ -1,55 +1,20 @@
 import datetime
-import json
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from paths import CHART, FUNDA, DEPOT, SENT, EARNINGS, ETF_SENT, ETF_RANKING, ETF_KATALOG, INDEX_HTML
+from paths import INDEX_HTML
 
-
-def _read_text(path):
-    with open(path, "r", encoding="utf-8") as f:
-        return f.read()
-
-
-chart_data = _read_text(CHART)
-
-# ETF-Katalog als ISIN->Name-Map: dient im Dashboard (a) zur sauberen Trennung
-# von Aktien/ETFs in der Chartanalyse und (b) als Namensquelle im KI-Sentiment,
-# damit Katalog-ETFs mit Sentiment-Score, die (noch) nicht im Depot bzw. in der
-# Chart-/Fundamentalliste stehen, nicht als "?" erscheinen. Fehlt der Katalog,
-# greift im JS die namensbasierte Fallback-Erkennung auf "ETF"/"UCITS".
-_etf_catalog = {}
-if os.path.exists(ETF_KATALOG):
-    try:
-        _kat = json.loads(_read_text(ETF_KATALOG))
-        for _werte in (_kat.get("sektoren", {}) or {}).values():
-            for _w in _werte:
-                if _w.get("isin"):
-                    _etf_catalog.setdefault(_w["isin"], _w.get("wertpapier") or _w["isin"])
-    except (ValueError, KeyError, TypeError):
-        _etf_catalog = {}
-etf_catalog_data = json.dumps(_etf_catalog, ensure_ascii=False)
-funda_data = _read_text(FUNDA)
-depot_data = _read_text(DEPOT)
-
-# KI-Sentiment (optional): fehlt die Datei, wird ein leeres Objekt injiziert,
-# damit das Dashboard ohne Sentiment-Stufe trotzdem funktioniert.
-sentiment_data = _read_text(SENT) if os.path.exists(SENT) else '{"scores": {}}'
-
-# KI-Earnings/Guidance (#1, optional): forward-looking Signal-Layer. Fehlt die
-# Datei, zeigt das Dashboard in der Earnings-Spalte einfach "–".
-earnings_data = _read_text(EARNINGS) if os.path.exists(EARNINGS) else '{"scores": {}}'
-
-# ETF-Sentiment (Phase 1+2, optional): analog zum Aktien-Sentiment, fehlt die
-# Datei zeigt das Dashboard einfach keine Sentiment-Spalte im ETF-Sleeve.
-etf_sentiment_data = _read_text(ETF_SENT) if os.path.exists(ETF_SENT) else '{"scores": {}}'
-
-# ETF-Ranking (Composite-Score über den gesamten Katalog, siehe etf_ranking.py):
-# fehlt die Datei (z.B. vor dem ersten Lauf), zeigt der Tab einfach nichts an.
-etf_ranking_data = _read_text(ETF_RANKING) if os.path.exists(ETF_RANKING) else '{"sektoren": {}}'
-
+# D11 (2026-07-23): Die Daten werden NICHT mehr in index.html eingebettet,
+# sondern zur Laufzeit per fetch() aus data/*.json geladen (GitHub Pages und
+# lokaler HTTP-Server liefern beide das Repo-Root aus). index.html ist dadurch
+# stabil (~40KB statt 337KB pro Commit), die Git-History bleibt schlank.
+# Konsequenz: Aufruf per file:// funktioniert nicht mehr — die Seite braucht
+# HTTP(S) (Pages-URL oder python3 -m http.server).
 build_date = datetime.date.today().strftime("%d.%m.%Y")
+# Cache-Buster für die JSON-Fetches: Pages/Browser cachen sonst die Morgen-
+# Daten bis zum nächsten Tag. Minutengenau, weil zweimal täglich gebaut wird.
+build_stamp = datetime.datetime.now().strftime("%Y%m%d%H%M")
 
 html_template = """<!DOCTYPE html>
 <html lang="de">
@@ -276,16 +241,37 @@ html_template = """<!DOCTYPE html>
     </div>
 
     <script>
-        const chartData = CHART_DATA_PLACEHOLDER;
-        const fundaData = FUNDA_DATA_PLACEHOLDER;
-        const depotData = DEPOT_DATA_PLACEHOLDER;
-        const sentimentData = SENTIMENT_DATA_PLACEHOLDER;
+    (async () => {
+        // Daten zur Laufzeit laden (D11): data/*.json liegen im selben Repo
+        // und werden von GitHub Pages / jedem HTTP-Server mit ausgeliefert.
+        // Fehlende optionale Dateien fallen auf leere Strukturen zurück.
+        const _load = async (url, fallback) => {
+            try {
+                const r = await fetch(url + '?v=BUILD_STAMP_PLACEHOLDER');
+                return r.ok ? await r.json() : fallback;
+            } catch (e) { return fallback; }
+        };
+        const [chartData, fundaData, depotData, sentimentData, earningsData,
+               etfSentimentData, etfRankingData, _etfKatalogRaw] = await Promise.all([
+            _load('data/chartanalyse_ergebnisse.json', {"sektoren": {}}),
+            _load('data/fundamentalanalyse_ergebnisse.json', {"sektoren": {}}),
+            _load('data/depot_status.json', {"depot": {}, "etf_depot": {}}),
+            _load('data/sentiment_scores.json', {"scores": {}}),
+            _load('data/earnings_scores.json', {"scores": {}}),
+            _load('data/etf_sentiment_scores.json', {"scores": {}}),
+            _load('data/etf_ranking.json', {"sektoren": {}}),
+            _load('data/etf_katalog.json', {"sektoren": {}}),
+        ]);
         const sentimentScores = (sentimentData && sentimentData.scores) ? sentimentData.scores : {};
-        const earningsData = EARNINGS_DATA_PLACEHOLDER;
         const earningsScores = (earningsData && earningsData.scores) ? earningsData.scores : {};
-        const etfSentimentData = ETF_SENTIMENT_DATA_PLACEHOLDER;
-        const etfRankingData = ETF_RANKING_DATA_PLACEHOLDER;
-        const etfCatalog = ETF_CATALOG_PLACEHOLDER;
+        // ETF-Katalog als ISIN->Name-Map (war vorher in Python vorverdichtet):
+        // (a) saubere Trennung Aktien/ETFs, (b) Namensquelle im KI-Sentiment.
+        const etfCatalog = {};
+        for (const rows of Object.values((_etfKatalogRaw && _etfKatalogRaw.sektoren) || {})) {
+            for (const w of rows) {
+                if (w.isin && !(w.isin in etfCatalog)) etfCatalog[w.isin] = w.wertpapier || w.isin;
+            }
+        }
         const etfIsinSet = new Set(Object.keys(etfCatalog));
         const isEtf = (w) => etfIsinSet.has(w.isin) || /\bETFs?\b|UCITS/i.test(w.wertpapier || '');
         const etfSentimentScores = (etfSentimentData && etfSentimentData.scores) ? etfSentimentData.scores : {};
@@ -1684,19 +1670,13 @@ html_template = """<!DOCTYPE html>
                 localStorage.setItem('vpd-theme', next);
             });
         })();
+    })();
     </script>
 </body>
 </html>"""
 
-html_output = html_template.replace("CHART_DATA_PLACEHOLDER", chart_data)
-html_output = html_output.replace("FUNDA_DATA_PLACEHOLDER", funda_data)
-html_output = html_output.replace("DEPOT_DATA_PLACEHOLDER", depot_data)
-html_output = html_output.replace("ETF_SENTIMENT_DATA_PLACEHOLDER", etf_sentiment_data)
-html_output = html_output.replace("ETF_RANKING_DATA_PLACEHOLDER", etf_ranking_data)
-html_output = html_output.replace("ETF_CATALOG_PLACEHOLDER", etf_catalog_data)
-html_output = html_output.replace("SENTIMENT_DATA_PLACEHOLDER", sentiment_data)
-html_output = html_output.replace("EARNINGS_DATA_PLACEHOLDER", earnings_data)
-html_output = html_output.replace("BUILD_DATE_PLACEHOLDER", build_date)
+html_output = html_template.replace("BUILD_DATE_PLACEHOLDER", build_date)
+html_output = html_output.replace("BUILD_STAMP_PLACEHOLDER", build_stamp)
 
 with open(INDEX_HTML, 'w', encoding='utf-8') as f:
     f.write(html_output)
