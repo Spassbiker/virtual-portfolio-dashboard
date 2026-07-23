@@ -255,7 +255,7 @@
         // Fehlende optionale Dateien fallen auf leere Strukturen zurück.
         const _load = async (url, fallback) => {
             try {
-                const r = await fetch(url + '?v=202607231527');
+                const r = await fetch(url + '?v=202607231528');
                 return r.ok ? await r.json() : fallback;
             } catch (e) { return fallback; }
         };
@@ -273,6 +273,7 @@
         ]);
         const metaData = await _load('data/meta.json', null);
         const attData = await _load('data/attribution_latest.json', null);
+        const signalMonData = await _load('data/signal_monitor.json', null);
 
         // Datenfrische (V3): Alter jeder Quelle ZUR ANSICHTSZEIT berechnen —
         // die Badges warnen damit auch dann, wenn der Cron steht und gar
@@ -410,6 +411,9 @@
                 return num > 0 ? '+' + formatted : formatted;
             }
         }
+
+        const fmtIdx = v => v.toFixed(1).replace('.', ',');
+        const fmtDatum = d => (d && d.length >= 10) ? `${d.slice(8, 10)}.${d.slice(5, 7)}.` : d;
 
         // ==========================================
         // COMPOSITE SCORING SYSTEM
@@ -1511,6 +1515,23 @@
                 else pre.push(line);
             });
             flush();
+
+            // Signal-Monitor (V6): Füllstand der Forward-Return-Logs — hier
+            // wird ab ~Mitte August über Faktor-Gewichte entschieden (C9).
+            if (signalMonData && Array.isArray(signalMonData.logs) && signalMonData.logs.length) {
+                html += `<h3>🧪 Signal-Monitor <small style="font-size:0.65em; color:var(--text-muted); font-weight:normal;">(Forward-Return-Logging für die Faktor-Auswertung: liefern Sentiment/Earnings/Composite messbar Alpha?)</small></h3>
+                    <table class="teaser-table">
+                    <tr><th>Log</th><th style="text-align:right;">Zeilen</th><th style="text-align:right;">mit 5T-Forward-Return</th><th>Zeitraum</th><th>Auswertung</th></tr>`;
+                signalMonData.logs.forEach(l => {
+                    const quote = l.zeilen ? Math.round((l.mit_forward / l.zeilen) * 100) : 0;
+                    const reif = l.auswertbar_ab && Date.now() >= Date.parse(l.auswertbar_ab) && l.mit_forward > 0;
+                    const status = reif
+                        ? `<span class="badge buy">bereit — ${l.report_cmd}</span>`
+                        : `<span class="badge hold" title="${l.report_cmd}">ab ~${l.auswertbar_ab ? fmtDatum(l.auswertbar_ab) : '–'}</span>`;
+                    html += `<tr><td><strong>${l.label}</strong></td><td style="text-align:right;">${l.zeilen}</td><td style="text-align:right;">${l.mit_forward} (${quote}%)</td><td>${l.von ? fmtDatum(l.von) : '–'} – ${l.bis ? fmtDatum(l.bis) : '–'}</td><td>${status}</td></tr>`;
+                });
+                html += `</table>`;
+            }
             el.innerHTML = html;
         })();
 
@@ -1582,8 +1603,6 @@
             { key: 'dax',          label: 'DAX',          color: 'var(--series-3)', fmt: 'num' },
             { key: 'msci',         label: 'MSCI World',   color: 'var(--series-4)', fmt: 'num' },
         ];
-        const fmtIdx = v => v.toFixed(1).replace('.', ',');
-        const fmtDatum = d => (d && d.length >= 10) ? `${d.slice(8, 10)}.${d.slice(5, 7)}.` : d;
 
         function buildEquityModel(historyRows) {
             const rows = (historyRows || []).filter(r => r && r.datum)

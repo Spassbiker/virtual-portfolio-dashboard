@@ -32,6 +32,39 @@ def write_attribution_latest():
             out = {"datei": latest, "markdown": f.read()}
     save_json(os.path.join(DATA_DIR, "attribution_latest.json"), out)
 
+
+def write_signal_monitor():
+    """V6: Füllstand der Forward-Return-Logs (Signal-Kalibrierung) nach data/.
+
+    Die .jsonl-Logs sind für das Dashboard unhandlich (kein JSON-Parse per
+    fetch) — der Build verdichtet sie zu Kennzahlen: Zeilen, davon mit
+    gefülltem forward_return_5d, Zeitraum, und ab wann die Auswertung
+    (report-Kommando) sinnvoll ist (~4 Wochen nach Logging-Start).
+    """
+    import json as _json
+    logs = []
+    for key, label, fname, report_cmd in [
+        ("sentiment", "Aktien-Signale (Sentiment/Score)", "sentiment_history.jsonl",
+         "python3 src/sentiment_calibration.py report"),
+        ("etf", "ETF-Composite", "etf_composite_history.jsonl",
+         "python3 src/etf_composite_log.py report"),
+    ]:
+        path = os.path.join(DATA_DIR, fname)
+        rows = []
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as f:
+                rows = [_json.loads(line) for line in f if line.strip()]
+        dates = sorted(r.get("date") for r in rows if r.get("date"))
+        fwd = sum(1 for r in rows if r.get("forward_return_5d") is not None)
+        auswertbar_ab = None
+        if dates:
+            start = datetime.date.fromisoformat(dates[0])
+            auswertbar_ab = (start + datetime.timedelta(days=28)).isoformat()
+        logs.append({"key": key, "label": label, "zeilen": len(rows), "mit_forward": fwd,
+                     "von": dates[0] if dates else None, "bis": dates[-1] if dates else None,
+                     "auswertbar_ab": auswertbar_ab, "report_cmd": report_cmd})
+    save_json(os.path.join(DATA_DIR, "signal_monitor.json"), {"logs": logs})
+
 # V3: Datenfrische — der Build schreibt die mtime jeder Datenquelle nach
 # data/meta.json; das Dashboard berechnet das Alter ZUR ANSICHTSZEIT und
 # warnt bei Überschreitung. Damit fällt ein stiller Cron-Ausfall (Lehre aus
@@ -346,6 +379,7 @@ html_template = """<!DOCTYPE html>
         ]);
         const metaData = await _load('data/meta.json', null);
         const attData = await _load('data/attribution_latest.json', null);
+        const signalMonData = await _load('data/signal_monitor.json', null);
 
         // Datenfrische (V3): Alter jeder Quelle ZUR ANSICHTSZEIT berechnen —
         // die Badges warnen damit auch dann, wenn der Cron steht und gar
@@ -483,6 +517,9 @@ html_template = """<!DOCTYPE html>
                 return num > 0 ? '+' + formatted : formatted;
             }
         }
+
+        const fmtIdx = v => v.toFixed(1).replace('.', ',');
+        const fmtDatum = d => (d && d.length >= 10) ? `${d.slice(8, 10)}.${d.slice(5, 7)}.` : d;
 
         // ==========================================
         // COMPOSITE SCORING SYSTEM
@@ -1584,6 +1621,23 @@ html_template = """<!DOCTYPE html>
                 else pre.push(line);
             });
             flush();
+
+            // Signal-Monitor (V6): Füllstand der Forward-Return-Logs — hier
+            // wird ab ~Mitte August über Faktor-Gewichte entschieden (C9).
+            if (signalMonData && Array.isArray(signalMonData.logs) && signalMonData.logs.length) {
+                html += `<h3>🧪 Signal-Monitor <small style="font-size:0.65em; color:var(--text-muted); font-weight:normal;">(Forward-Return-Logging für die Faktor-Auswertung: liefern Sentiment/Earnings/Composite messbar Alpha?)</small></h3>
+                    <table class="teaser-table">
+                    <tr><th>Log</th><th style="text-align:right;">Zeilen</th><th style="text-align:right;">mit 5T-Forward-Return</th><th>Zeitraum</th><th>Auswertung</th></tr>`;
+                signalMonData.logs.forEach(l => {
+                    const quote = l.zeilen ? Math.round((l.mit_forward / l.zeilen) * 100) : 0;
+                    const reif = l.auswertbar_ab && Date.now() >= Date.parse(l.auswertbar_ab) && l.mit_forward > 0;
+                    const status = reif
+                        ? `<span class="badge buy">bereit — ${l.report_cmd}</span>`
+                        : `<span class="badge hold" title="${l.report_cmd}">ab ~${l.auswertbar_ab ? fmtDatum(l.auswertbar_ab) : '–'}</span>`;
+                    html += `<tr><td><strong>${l.label}</strong></td><td style="text-align:right;">${l.zeilen}</td><td style="text-align:right;">${l.mit_forward} (${quote}%)</td><td>${l.von ? fmtDatum(l.von) : '–'} – ${l.bis ? fmtDatum(l.bis) : '–'}</td><td>${status}</td></tr>`;
+                });
+                html += `</table>`;
+            }
             el.innerHTML = html;
         })();
 
@@ -1655,8 +1709,6 @@ html_template = """<!DOCTYPE html>
             { key: 'dax',          label: 'DAX',          color: 'var(--series-3)', fmt: 'num' },
             { key: 'msci',         label: 'MSCI World',   color: 'var(--series-4)', fmt: 'num' },
         ];
-        const fmtIdx = v => v.toFixed(1).replace('.', ',');
-        const fmtDatum = d => (d && d.length >= 10) ? `${d.slice(8, 10)}.${d.slice(5, 7)}.` : d;
 
         function buildEquityModel(historyRows) {
             const rows = (historyRows || []).filter(r => r && r.datum)
@@ -2029,6 +2081,7 @@ html_template = """<!DOCTYPE html>
 
 write_meta()
 write_attribution_latest()
+write_signal_monitor()
 
 html_output = html_template.replace("BUILD_DATE_PLACEHOLDER", build_date)
 html_output = html_output.replace("BUILD_STAMP_PLACEHOLDER", build_stamp)
