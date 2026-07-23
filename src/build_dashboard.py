@@ -1802,6 +1802,28 @@ html_template = """<!DOCTYPE html>
                 return `<div class="risk-alert${si.abstand_pct < 3 ? '' : ' warn'}">${si.abstand_pct < 3 ? '🔴' : '🟡'} ${p.wertpapier}: Kurs nur ${pct}% über dem ${si.typ} (${formatEUR(si.stop_kurs)})</div>`;
             }).join('');
 
+            // Handelsaktivität & Kosten (V4): Trades/Gebühren/Steuern/realisierte
+            // G/V je Monat aus beiden Transaktionshistorien — macht den
+            // Gebühren-Churn sichtbar, den die Attribution als Renditefresser fand.
+            const monate = {};
+            (dep.transaktionshistorie || []).concat(etf.transaktionshistorie || []).forEach(t => {
+                const m = (t.datum || '').slice(0, 7);
+                if (!m) return;
+                const row = monate[m] || (monate[m] = { trades: 0, gebuehr: 0, steuern: 0, realisiert: 0 });
+                row.trades++;
+                row.gebuehr += t.gebuehr || 0;
+                row.steuern += t.steuern || 0;
+                if (t.typ === 'Verkauf') row.realisiert += t.gewinn_verlust || 0;
+            });
+            const aktMonate = Object.keys(monate).sort().reverse();
+            const aktSumme = { trades: 0, gebuehr: 0, steuern: 0, realisiert: 0 };
+            aktMonate.forEach(m => { const r = monate[m]; aktSumme.trades += r.trades; aktSumme.gebuehr += r.gebuehr; aktSumme.steuern += r.steuern; aktSumme.realisiert += r.realisiert; });
+            const aktZelle = v => `<td style="text-align:right; color:${v >= 0 ? 'var(--good-text)' : 'var(--critical-text)'}; font-weight:bold;">${formatEURSign(v)}</td>`;
+            const aktRows = aktMonate.map(m => {
+                const r = monate[m];
+                return `<tr><td>${m.slice(5, 7)}/${m.slice(0, 4)}</td><td style="text-align:right;">${r.trades}</td><td style="text-align:right;">${formatEUR(r.gebuehr)}</td><td style="text-align:right;">${formatEUR(r.steuern)}</td>${aktZelle(r.realisiert)}</tr>`;
+            }).join('') + `<tr style="font-weight:bold; border-top:2px solid var(--accent);"><td>Gesamt</td><td style="text-align:right;">${aktSumme.trades}</td><td style="text-align:right;">${formatEUR(aktSumme.gebuehr)}</td><td style="text-align:right;">${formatEUR(aktSumme.steuern)}</td>${aktZelle(aktSumme.realisiert)}</tr>`;
+
             const allePositionen = (dep.positionen || []).map(p => Object.assign({ typ: 'Aktie' }, p))
                 .concat((etf.positionen || []).map(p => Object.assign({ typ: 'ETF' }, p)));
             const gewinner = allePositionen.filter(p => p.gewinn_verlust !== undefined).slice().sort((a, b) => b.gewinn_verlust - a.gewinn_verlust).slice(0, 5);
@@ -1882,6 +1904,14 @@ html_template = """<!DOCTYPE html>
                             </ul>
                         </div>
                     </div>
+                </div>
+
+                <div class="ov-card">
+                    <h3>🧾 Handelsaktivität &amp; Kosten <small style="font-size:0.6em; color:var(--text-muted); font-weight:normal;">(beide Depots · Gebühren mindern die Rendite direkt, siehe Attribution)</small></h3>
+                    <table class="teaser-table">
+                        <tr><th>Monat</th><th style="text-align:right;">Trades</th><th style="text-align:right;">Gebühren</th><th style="text-align:right;">Steuern</th><th style="text-align:right;">Realisierte G/V</th></tr>
+                        ${aktRows}
+                    </table>
                 </div>
 
                 <div class="ov-card">
