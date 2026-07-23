@@ -119,7 +119,11 @@ DYN_STOP_HORIZON_DAYS = 20
 DYN_STOP_MIN, DYN_STOP_MAX = 0.06, 0.18
 # Cash-Management: Mindest-Barreserve nie unterschreiten, und keine Mini-Käufe
 # (Gebühren-Drag). Bei 5 € Gebühr wären 100 € Order = 5 % Reibung.
+# Der Puffer ist DYNAMISCH: max(25€ Boden, 2% des Gesamtvermögens). Vorher war
+# das Depot mit 25€ Rest-Cash faktisch vollinvestiert — jedes Kaufsignal
+# erzwang einen Verkauf (Zwangs-Churn mit Gebühren/Steuern).
 MIN_CASH_RESERVE = 25.0
+CASH_RESERVE_PCT = 0.02
 MIN_ORDER_VALUE = 100.0
 # Klumpenrisiko-Hardcap: risk_report.py WARNT schon ab 30% Sektoranteil, aber
 # blockiert nichts. Hier greift die Kaufsperre erst später (60%) und kappt/
@@ -670,6 +674,12 @@ def capped_budget(budget, isin, positions):
     return max(0.0, min(budget, allowed))
 
 
+def cash_reserve(state):
+    """Dynamische Mindest-Barreserve: 2% des Gesamtvermögens, mind. 25€."""
+    total = state.current_cash + sum(p.get("boersenwert", 0) or 0 for p in state.positions)
+    return max(MIN_CASH_RESERVE, CASH_RESERVE_PCT * total)
+
+
 def position_capped_budget(budget, positions):
     """Kappt ein Kaufbudget auf den Einzelpositions-Cap: die NEUE Position darf
     nach dem Kauf höchstens MAX_POS_PCT des Portfolios ausmachen.
@@ -1155,8 +1165,8 @@ def phase_buy(state, unowned_targets):
         stock = isin_to_name.get(isin, isin)
         vol_mult = vol_size_multiplier(isin)
         budget = budget_for_score(ts, state.buy_threshold) * vol_mult
-        # Mindest-Barreserve nie unterschreiten.
-        spendable = state.current_cash - MIN_CASH_RESERVE
+        # Dynamische Mindest-Barreserve (2% Gesamtvermögen) nie unterschreiten.
+        spendable = state.current_cash - cash_reserve(state)
         budget_before_cap = min(budget, spendable)
         # Erst Sektor-Cap, dann Einzelpositions-Cap — beide sind Wachstums-Limits.
         budget_for_this = capped_budget(budget_before_cap, isin, state.positions)

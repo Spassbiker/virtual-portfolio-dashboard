@@ -65,6 +65,7 @@ MIN_ORDER_VALUE = 200.0                 # war 120/40: verhindert Mini-Positionen
 # CORE-Bestaende; starke Minis bleiben und werden vom Top-up aufgestockt.
 MIN_POSITION_VALUE = 150.0
 MIN_CASH_RESERVE = 20.0
+CASH_RESERVE_PCT = 0.02                  # dynamisch: max(20€, 2% des Sleeves) — Parität zum Aktien-Motor
 FEE = 0.0                                # ETF-Sparplan-Modell: gebuehrenfrei
 CAP_GAINS_TAX = 0.26375
 
@@ -154,6 +155,12 @@ def get_live_price(isin, fallback=None):
 def budget_for(composite):
     bonus = max(0.0, composite - 60.0) * BONUS_PER_POINT
     return min(MAX_BUDGET, BASE_BUDGET + bonus)
+
+
+def cash_reserve(state):
+    """Dynamische Mindest-Barreserve: 2% des Sleeve-Gesamtwerts, mind. 20€."""
+    total = state.current_cash + sum(p.get("boersenwert", 0) or 0 for p in state.positions)
+    return max(MIN_CASH_RESERVE, CASH_RESERVE_PCT * total)
 
 
 def _make_sell_record(p, price, notiz, begruendung, units=None):
@@ -438,7 +445,7 @@ def phase_buy(state):
             continue
         name = row.get("wertpapier", isin)
         budget = budget_for(row.get("composite", 0))
-        spendable = state.current_cash - MIN_CASH_RESERVE
+        spendable = state.current_cash - cash_reserve(state)
         budget_for_this = min(budget, spendable)
         if budget_for_this < MIN_ORDER_VALUE + FEE:
             continue
@@ -489,7 +496,7 @@ def phase_topup(state):
     topup_candidates.sort(key=lambda p: -(p.get("composite") or 0))
 
     for p in topup_candidates:
-        spendable = state.current_cash - MIN_CASH_RESERVE
+        spendable = state.current_cash - cash_reserve(state)
         if spendable < MIN_ORDER_VALUE + FEE:
             break
         sektor = p.get("sektor")

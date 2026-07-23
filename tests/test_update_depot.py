@@ -376,6 +376,19 @@ class TestKaufphase(EngineTestCase):
         self.assertEqual(len(state.positions), 1)
         self.assertGreaterEqual(state.current_cash, eng.MIN_CASH_RESERVE)
 
+    def test_dynamische_cash_reserve_skaliert_mit_depot(self):
+        isin = "DE0000000034"
+        self.add_paper(isin)
+        eng.sector_map.pop(isin)
+        # Portfolio 10.000€, Cash 220€ -> Reserve = 2% von 10.220 = 204.40€
+        # -> spendable ~15€ < Mindestorder -> KEIN Kauf (Puffer bleibt stehen).
+        bestand = make_position("DE_BESTAND", stueck=100)
+        state = self.make_state([bestand], cash=220.0, live_prices={isin: 10.0})
+        state.buy_threshold = 8
+        eng.phase_buy(state, [(isin, 10)])
+        self.assertEqual(len(state.positions), 1)
+        self.assertEqual(state.current_cash, 220.0)
+
     def test_veto_blockiert_neukauf(self):
         isin = "DE0000000032"
         self.add_paper(isin, chart=make_chart_item(isin, empfehlung="Kaufen",
