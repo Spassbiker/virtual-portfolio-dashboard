@@ -153,20 +153,27 @@ param("ROE","roe","Eigenkapitalrendite (in %) - wie profitabel das Unternehmen m
 param("Piotroski F-Score","piotroski","Bilanz-Qualitaets-Score 0-9 (9 Kriterien: Profitabilitaet, Verschuldung, Effizienz). 7-9 = solide/verbessert, <= 2 = Warnsignal / moegliche Value-Falle.")
 
 # 3 Sentiment
-h2(3,"KI-Sentiment (Nachrichtenlage)")
-lead("Eine KI liest aktuelle Schlagzeilen und bewertet die Stimmung - als Ergaenzung zu Chart und Zahlen.")
-param("Sentiment-Score","sentiment_score","Stimmungsnote von -3 (sehr negativ) bis +3 (sehr positiv), 0 = neutral. Basiert auf der Nachrichtenlage.")
+h2(3,"KI-Sentiment & Earnings (Nachrichten + Ausblick)")
+lead("Eine KI liest aktuelle Schlagzeilen und bewertet die Stimmung - als Ergaenzung zu Chart und Zahlen. Dazu ein getrennter, vorausschauender Blick auf den letzten Geschaeftsbericht (Earnings/Guidance).")
+param("Sentiment-Score","sentiment_score","Stimmungsnote von -3 (sehr negativ) bis +3 (sehr positiv), 0 = neutral. Basiert auf der Nachrichtenlage. Bevor der Score in den Gesamt-Score einfliesst, wird er ueber vier Achsen gewichtet: Sentiment x Confidence x Materialitaet x Aktualitaet.")
 param("Confidence","confidence","Wie gut die Bewertung belegt ist (0-1). Wenige/vage Meldungen = niedrige Confidence. Sie daempft den Score: ein schwach belegtes Urteil zaehlt weniger.",
       "Score +2 x Confidence 0,5 = wirksame +1 im Gesamt-Score.")
+param("Materialitaet","Event-Gewicht - neu","Nicht jede Nachricht wiegt gleich schwer. Ein harter Katalysator (Quartalszahlen, Guidance, Uebernahme) zaehlt voll, ein weiches Signal (Analysten-Kommentar, Sonstiges) wird gedaempft. Leitet sich aus der Event-Kategorie ab.",
+      "Zahlen / Guidance / M&A = 1,0 - Analyst = 0,8 - Sonstiges = 0,7 - Keine = 0. Unbekannt = 1,0 (kein Effekt).")
+param("Aktualitaet (Recency-Decay)","0,5^(Alter/5 Tage) - neu","News altert. Je aelter die frischeste Schlagzeile, desto schwaecher zaehlt das Sentiment - objektiver Zeit-Abschlag zusaetzlich zur (subjektiven) Confidence. Halbwertszeit 5 Tage, Untergrenze 0,5 (ganz auf 0 wird nie geklemmt).",
+      "Frische News (heute) ~ Faktor 1,0 - 5 Tage alt ~ 0,5 - fehlt das Datum = kein Abschlag.")
 param("Veto","veto","Not-Bremse: bei einem gravierenden negativen Ereignis (z. B. Bilanzskandal) kann die KI ein Veto setzen und einen Kauf blockieren - egal wie gut die anderen Zahlen sind.")
-param("Event-Kategorie","event_kategorie","Art des ausloesenden Ereignisses (z. B. Quartalszahlen, Uebernahme, Sonstiges). Nur zur Einordnung.")
+param("Event-Kategorie","event_kategorie","Art des ausloesenden Ereignisses (Quartalszahlen, Guidance, Uebernahme, Analyst, Sonstiges ...). Dient nicht nur der Einordnung, sondern steuert die Materialitaet (siehe oben).")
 param("Begruendung","begruendung","Ein bis zwei Saetze der KI, warum diese Stimmungsnote vergeben wurde.")
+param("Earnings-Score (Ausblick)","earnings_score - neu","Vorausschauendes Signal aus dem juengsten Quartals-/Jahresbericht + Guidance - getrennt vom (rueckblickenden) News-Sentiment, weil ein Ausblick langsamer zerfaellt (gilt ~ein Quartal, Sentiment nur Tage). Skala wie Sentiment: -3..+3, mal Confidence, mal Gewicht 0,8. Fliesst als eigener vierter Baustein in den Gesamt-Score. Kein Veto, kein Zwangsverkauf - bewegt nur den Score.",
+      "Woechentlich per KI-Recherche aktualisiert. Fehlt der Wert, rechnet die Engine unveraendert ohne diesen Baustein weiter.")
+param("Guidance-Richtung","guidance_richtung - neu","Wohin das Management den Ausblick zuletzt bewegt hat: angehoben / bestaetigt / gesenkt / keine. Im Dashboard mit Horizont (worauf sich die Guidance bezieht) und Berichtsdatum als Tooltip.")
 
 # 4 Score
 h2(4,"Score & Handelslogik")
-lead("Der Score ist die zentrale Zahl. Er fasst alle drei Analysen zusammen und entscheidet ueber Kauf/Halten/Verkauf.")
-param("Gesamt-Score","score","Summe aus drei Bausteinen (je hoeher, desto attraktiver der Kauf):",
-      "Chart-Score (Trend, RSI, MACD, SMA, Momentum) ~ -13..+15  +  Funda-Score (Empfehlung, Bewertung, Risiko, Wachstum, PEG, ROE, EV/EBITDA, Piotroski) ~ -14..+17  +  KI-Sentiment x Confidence  =  Gesamt-Score.")
+lead("Der Score ist die zentrale Zahl. Er fasst alle vier Analysen zusammen und entscheidet ueber Kauf/Halten/Verkauf.")
+param("Gesamt-Score","score","Summe aus vier Bausteinen (je hoeher, desto attraktiver der Kauf):",
+      "Chart-Score (Trend, RSI, MACD, SMA, Momentum) ~ -13..+15  +  Funda-Score (Empfehlung, Bewertung, Risiko, Wachstum, PEG, ROE, EV/EBITDA, Piotroski) ~ -14..+17  +  KI-Sentiment x Confidence x Materialitaet x Aktualitaet  +  Earnings/Guidance x Confidence x 0,8  =  Gesamt-Score.")
 param("Kauf-Schwelle (adaptiv)","BUY_FLOOR = 6, Top-20 %","Gekauft wird nur, wer ueber der Schwelle liegt. Diese ist dynamisch: mindestens Score 6, in starken Maerkten automatisch hoeher (nur die besten ~20 % der Kandidaten). So bleibt die Latte hoch, wenn viel Gutes zur Auswahl steht.")
 param("Verkaufs- & Rebalancing-Schwelle","SELL = 4, REBALANCE = 8","Faellt eine Position unter Score 4, wird verkauft. Fuer Kapitalbeschaffung koennen schwache 'Halten'-Positionen unter Score 8 abgebaut werden.")
 param("Watch-Kandidat","watch-kandidat","Neu entdeckte Werte (Opportunity-Scan) ohne ausreichende Kurshistorie. Bleiben im Beobachtungs-Universum, werden aber erst gekauft, wenn genug Daten (u. a. 200 Tage fuer SMA200) vorliegen.")

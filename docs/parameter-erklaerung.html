@@ -50,7 +50,7 @@
   <ul>
     <li><a href="#chart">1. Chartanalyse (technisch)</a></li>
     <li><a href="#funda">2. Fundamentalanalyse (Unternehmenszahlen)</a></li>
-    <li><a href="#senti">3. KI-Sentiment (Nachrichtenlage)</a></li>
+    <li><a href="#senti">3. KI-Sentiment &amp; Earnings (Nachrichten + Ausblick)</a></li>
     <li><a href="#score">4. Score &amp; Handelslogik (wie entschieden wird)</a></li>
     <li><a href="#depot">5. Depot &amp; Positionen</a></li>
     <li><a href="#risk">6. Risiko: Klumpen, Korrelation, Stop-Loss</a></li>
@@ -134,35 +134,51 @@
 <p class="desc">Bilanz-Qualitäts-Score von <b>0 bis 9</b>. Prüft 9 Kriterien (Profitabilität, Verschuldung, Effizienz). <b>7–9 = solide/verbessert</b>, ≤ 2 = Warnsignal / mögliche Value-Falle.</p></div>
 
 <!-- ================= SENTIMENT ================= -->
-<h2 id="senti"><span class="em">📰</span>3. KI-Sentiment (Nachrichtenlage)</h2>
-<p class="lead">Eine KI liest aktuelle Schlagzeilen zu jedem Wert und bewertet die <b>Stimmung</b> – als Ergänzung zu Chart und Zahlen.</p>
+<h2 id="senti"><span class="em">📰</span>3. KI-Sentiment &amp; Earnings (Nachrichten + Ausblick)</h2>
+<p class="lead">Eine KI liest aktuelle Schlagzeilen zu jedem Wert und bewertet die <b>Stimmung</b> – als Ergänzung zu Chart und Zahlen. Dazu kommt ein getrennter, <b>vorausschauender</b> Blick auf den letzten Geschäftsbericht (Earnings/Guidance).</p>
 
 <div class="p"><span class="name">Sentiment-Score</span> <span class="tech">sentiment_score</span>
-<p class="desc">Stimmungsnote von <b>−3 (sehr negativ)</b> bis <b>+3 (sehr positiv)</b>, 0 = neutral. Basiert auf der Nachrichtenlage.</p></div>
+<p class="desc">Stimmungsnote von <b>−3 (sehr negativ)</b> bis <b>+3 (sehr positiv)</b>, 0 = neutral. Basiert auf der Nachrichtenlage. Bevor der Score in den Gesamt-Score einfließt, wird er über <b>vier</b> Achsen gewichtet: <code>Sentiment × Confidence × Materialität × Aktualität</code>.</p></div>
 
 <div class="p"><span class="name">Confidence</span> <span class="tech">confidence</span>
 <p class="desc">Wie gut die Bewertung belegt ist (0–1). Wenige/vage Meldungen → niedrige Confidence. <b>Sie dämpft den Score:</b> ein schwach belegtes Urteil zählt weniger.</p>
 <p class="ex">Score +2 × Confidence 0,5 = wirksame <b>+1</b> im Gesamt-Score.</p></div>
 
+<div class="p"><span class="name">Materialität</span> <span class="tech">Event-Gewicht · neu</span>
+<p class="desc">Nicht jede Nachricht wiegt gleich schwer. Ein harter Katalysator (Quartalszahlen, Guidance, Übernahme) zählt <b>voll</b>, ein weiches Signal (Analysten-Kommentar, Sonstiges) wird gedämpft. Leitet sich aus der Event-Kategorie ab.</p>
+<p class="ex">Zahlen / Guidance / M&amp;A = <b>1,0</b> · Analyst = <b>0,8</b> · Sonstiges = <b>0,7</b> · Keine = <b>0</b>. Unbekannt → 1,0 (kein Effekt).</p></div>
+
+<div class="p"><span class="name">Aktualität (Recency-Decay)</span> <span class="tech">0,5^(Alter/5 Tage) · neu</span>
+<p class="desc">News altert. Je älter die frischeste Schlagzeile, desto schwächer zählt das Sentiment – objektiver Zeit-Abschlag zusätzlich zur (subjektiven) Confidence. Halbwertszeit <b>5 Tage</b>, Untergrenze <b>0,5</b> (ganz auf 0 wird nie geklemmt).</p>
+<p class="ex">Frische News (heute) ≈ Faktor <b>1,0</b> · 5 Tage alt ≈ <b>0,5</b> · fehlt das Datum → kein Abschlag.</p></div>
+
 <div class="p"><span class="name">Veto</span> <span class="tech">veto</span>
 <p class="desc">Not-Bremse: Bei einem gravierenden negativen Ereignis (z. B. Bilanzskandal) kann die KI ein <b>Veto</b> setzen und einen Kauf blockieren – egal wie gut die anderen Zahlen sind.</p></div>
 
 <div class="p"><span class="name">Event-Kategorie</span> <span class="tech">event_kategorie</span>
-<p class="desc">Art des auslösenden Ereignisses (z. B. Quartalszahlen, Übernahme, Sonstiges). Nur zur Einordnung.</p></div>
+<p class="desc">Art des auslösenden Ereignisses (Quartalszahlen, Guidance, Übernahme, Analyst, Sonstiges …). Dient nicht nur der Einordnung, sondern <b>steuert die Materialität</b> (siehe oben).</p></div>
 
 <div class="p"><span class="name">Begründung</span> <span class="tech">begruendung</span>
 <p class="desc">Ein bis zwei Sätze der KI, warum diese Stimmungsnote vergeben wurde.</p></div>
 
+<div class="p"><span class="name">Earnings-Score (Ausblick)</span> <span class="tech">earnings_score · neu</span>
+<p class="desc"><b>Vorausschauendes</b> Signal aus dem jüngsten Quartals-/Jahresbericht + Guidance – getrennt vom (rückblickenden) News-Sentiment, weil ein Ausblick langsamer zerfällt (gilt ~ein Quartal, Sentiment nur Tage). Skala wie Sentiment: <b>−3 … +3</b>, mal Confidence, mal Gewicht <b>0,8</b>. Fließt als <b>eigener vierter Baustein</b> in den Gesamt-Score. Kein Veto, kein Zwangsverkauf – bewegt nur den Score.</p>
+<p class="ex">Wöchentlich per KI-Recherche aktualisiert. Fehlt der Wert, rechnet die Engine unverändert ohne diesen Baustein weiter.</p></div>
+
+<div class="p"><span class="name">Guidance-Richtung</span> <span class="tech">guidance_richtung · neu</span>
+<p class="desc">Wohin das Management den Ausblick zuletzt bewegt hat: <span class="tag g">angehoben 📈</span> <span class="tag w">bestätigt</span> <span class="tag b">gesenkt</span> oder <b>keine</b>. Im Dashboard mit Horizont (worauf sich die Guidance bezieht) und Berichts­datum als Tooltip.</p></div>
+
 <!-- ================= SCORE ================= -->
 <h2 id="score"><span class="em">🎯</span>4. Score &amp; Handelslogik</h2>
-<p class="lead">Der <b>Score</b> ist die zentrale Zahl. Er fasst alle drei Analysen zu einem Wert zusammen, der entscheidet, ob gekauft, gehalten oder verkauft wird.</p>
+<p class="lead">Der <b>Score</b> ist die zentrale Zahl. Er fasst alle vier Analysen zu einem Wert zusammen, der entscheidet, ob gekauft, gehalten oder verkauft wird.</p>
 
 <div class="p"><span class="name">Gesamt-Score</span> <span class="tech">score</span>
-<p class="desc">Summe aus drei Bausteinen:</p>
+<p class="desc">Summe aus vier Bausteinen:</p>
 <p class="ex">
 <b>Chart-Score</b> (Trend, RSI, MACD, SMA, Momentum) ≈ −13 … +15<br>
 <b>+ Funda-Score</b> (Empfehlung, Bewertung, Risiko, Wachstum, PEG, ROE, EV/EBITDA, Piotroski) ≈ −14 … +17<br>
-<b>+ KI-Sentiment × Confidence</b><br>
+<b>+ KI-Sentiment</b> × Confidence × Materialität × Aktualität<br>
+<b>+ Earnings/Guidance</b> × Confidence × 0,8<br>
 = <b>Gesamt-Score</b>. Je höher, desto attraktiver der Kauf.
 </p></div>
 
