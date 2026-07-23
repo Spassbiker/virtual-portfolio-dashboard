@@ -69,6 +69,9 @@ run_step src/fetch_news.py
 # Forward-Return nachtragen. Reine Beobachtung, beeinflusst keine Trades.
 run_step src/sentiment_calibration.py log
 run_step src/sentiment_calibration.py backfill
+# Dito für den ETF-Composite (misst, ob Ranking/70er-Schwelle Alpha liefern).
+run_step src/etf_composite_log.py log
+run_step src/etf_composite_log.py backfill
 
 if [ "$traded" = "1" ]; then
   # Regelbasierte Empfehlung (nutzt vorhandenes sentiment_scores.json), dann ausführen.
