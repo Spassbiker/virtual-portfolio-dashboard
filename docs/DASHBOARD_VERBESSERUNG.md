@@ -116,3 +116,29 @@ saubere Herausziehen der Stop-Logik (Tests grün halten). Jeder Punkt einzeln
 committet, Workflow wie gehabt: implementieren → Diff/Screenshot zeigen →
 scharf schalten. Kein neuer Netz-Call, keine neue Datenquelle nötig —
 alles speist sich aus vorhandenen Läufen.
+
+---
+
+## Umsetzungsstand 2026-07-23 (alle Punkte, je eigener Commit)
+
+- **V1 ✅** `src/log_vermoegen.py` (idempotente Tageszeile, Anker-Seeding) in
+  beide Cron-Skripte eingehängt; SVG-Linienchart mit Crosshair-Tooltip,
+  Legende und kollisionsgeprüften End-Labels in der Übersicht. 4 Tests.
+- **V3 ✅** Build schreibt `data/meta.json` (mtime je Quelle + Warnschwelle);
+  Badges berechnen das Alter ZUR ANSICHTSZEIT — warnt auch bei totem Cron.
+- **V2 ✅** `compute_stop_info()` in update_depot.py (nach Kurs aufgelöste
+  Verkaufsbedingungen, engster Stop gewinnt) schreibt `stop_info` je Position;
+  Dashboard zeigt Ampel-Spalte (🟢>8 / 🟡3–8 / 🔴<3 %) + Übersicht-Warnung.
+  6 Tests. Anzeige-Backfill für heute ausgeführt (Lockheed 🟡 3,6 % vor
+  Hard-Stop, Terna Vola-Stop 10,2 %).
+- **V4 ✅** Monats-Tabelle Trades/Gebühren/Steuern/realisierte G/V aus beiden
+  Transaktionshistorien (rein client-seitig, Daten waren schon geladen).
+- **V5 ✅** Build kopiert neuesten `docs/attribution/*.md` nach
+  `data/attribution_latest.json`; Analyse-Tab „📉 Attribution" rendert ihn
+  ausrichtungserhaltend (Überschriften → HTML, Rest `<pre>`).
+- **V6 ✅** Build verdichtet die Forward-Return-Logs (.jsonl) nach
+  `data/signal_monitor.json`; Anzeige mit Füllstand und „auswertbar ab"
+  (Aktien ~15.08., ETF ~20.08.) im Attribution-Tab.
+- **Bonus:** `scripts/dom_smoke_test.js` — jsdom-Runtime-Test des kompletten
+  Dashboards (fetch-Shim auf data/), 10 Checks; fängt JS-Laufzeitfehler, die
+  `node --check` nicht sieht. jsdom liegt unter `~/.dashtest/node_modules`.
