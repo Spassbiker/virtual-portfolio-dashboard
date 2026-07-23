@@ -17,16 +17,22 @@ TODAY="$(date +%Y-%m-%d)"
 warn=""
 traded=1
 
-if ! python3 src/healthcheck.py >/tmp/pf_health_am.log 2>&1; then
-  warn="⚠️ Healthcheck FEHLGESCHLAGEN — KEINE Trades ausgeführt: $(grep -m1 '✗' /tmp/pf_health_am.log || echo 'siehe Log'). "
+# Persistente Logs: /tmp überlebt keinen Reboot — Ausfälle waren dann nicht mehr
+# nachvollziehbar. Ein Tagesordner pro Lauf, Rotation nach 30 Tagen.
+LOGDIR="logs/$TODAY"
+mkdir -p "$LOGDIR"
+find logs -mindepth 1 -maxdepth 1 -type d -mtime +30 -exec rm -rf {} + 2>/dev/null
+
+if ! python3 src/healthcheck.py >"$LOGDIR/health_am.log" 2>&1; then
+  warn="⚠️ Healthcheck FEHLGESCHLAGEN — KEINE Trades ausgeführt: $(grep -m1 '✗' "$LOGDIR/health_am.log" || echo 'siehe Log'). "
   traded=0
 fi
 
 # Regressionstest-Gate: sind die Engine-Tests rot, ist die Handelslogik nicht
 # vertrauenswürdig — Kurse/Dashboard laufen weiter, aber es werden KEINE Trades
 # ausgeführt (gleiche Sicherung wie beim Healthcheck).
-if ! python3 -m unittest discover -s tests -q >/tmp/pf_tests_am.log 2>&1; then
-  fail_line="$(grep -m1 -E '^(FAIL|ERROR):' /tmp/pf_tests_am.log || echo 'siehe /tmp/pf_tests_am.log')"
+if ! python3 -m unittest discover -s tests -q >"$LOGDIR/tests_am.log" 2>&1; then
+  fail_line="$(grep -m1 -E '^(FAIL|ERROR):' "$LOGDIR/tests_am.log" || echo "siehe $LOGDIR/tests_am.log")"
   warn="${warn}🔴 REGRESSIONSTESTS ROT — KEINE Trades ausgeführt: ${fail_line}. "
   traded=0
 fi
@@ -37,7 +43,7 @@ fi
 # update_depot.py crashte an trend=null und niemand hat es gemerkt).
 run_step() {
   local script="$1"; shift
-  local log="/tmp/pf_$(basename "$script" .py)_am.log"
+  local log="$LOGDIR/$(basename "$script" .py)_am.log"
   if ! python3 "$script" "$@" >/dev/null 2>"$log"; then
     local msg
     # Letzte Traceback-Zeile (z.B. "ValueError: ...") ist am aussagekräftigsten;

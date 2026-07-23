@@ -8,8 +8,13 @@ set -u
 cd /home/ubuntu/.openclaw/workspace/virtual-portfolio-dashboard || exit 1
 
 warn=""
-if ! python3 src/healthcheck.py >/tmp/pf_health.log 2>&1; then
-  warn="⚠️ Healthcheck-Warnung: $(grep -m1 '✗' /tmp/pf_health.log || echo 'siehe Log'). "
+# Persistente Logs analog morning_run.sh: Tagesordner, Rotation nach 30 Tagen.
+LOGDIR="logs/$(date +%Y-%m-%d)"
+mkdir -p "$LOGDIR"
+find logs -mindepth 1 -maxdepth 1 -type d -mtime +30 -exec rm -rf {} + 2>/dev/null
+
+if ! python3 src/healthcheck.py >"$LOGDIR/health_pm.log" 2>&1; then
+  warn="⚠️ Healthcheck-Warnung: $(grep -m1 '✗' "$LOGDIR/health_pm.log" || echo 'siehe Log'). "
 fi
 
 # run_step führt ein Python-Skript aus, protokolliert stderr (statt es nach
@@ -19,7 +24,7 @@ fi
 # den Wrapper aus morning_run.sh.
 run_step() {
   local script="$1"; shift
-  local log="/tmp/pf_$(basename "$script" .py)_pm.log"
+  local log="$LOGDIR/$(basename "$script" .py)_pm.log"
   if ! python3 "$script" "$@" >/dev/null 2>"$log"; then
     local msg
     # Letzte Traceback-Zeile (z.B. "ValueError: ...") ist am aussagekräftigsten;
