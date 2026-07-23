@@ -22,6 +22,15 @@ if ! python3 src/healthcheck.py >/tmp/pf_health_am.log 2>&1; then
   traded=0
 fi
 
+# Regressionstest-Gate: sind die Engine-Tests rot, ist die Handelslogik nicht
+# vertrauenswürdig — Kurse/Dashboard laufen weiter, aber es werden KEINE Trades
+# ausgeführt (gleiche Sicherung wie beim Healthcheck).
+if ! python3 -m unittest discover -s tests -q >/tmp/pf_tests_am.log 2>&1; then
+  fail_line="$(grep -m1 -E '^(FAIL|ERROR):' /tmp/pf_tests_am.log || echo 'siehe /tmp/pf_tests_am.log')"
+  warn="${warn}🔴 REGRESSIONSTESTS ROT — KEINE Trades ausgeführt: ${fail_line}. "
+  traded=0
+fi
+
 # run_step führt ein Python-Skript aus, protokolliert stderr (statt es nach
 # /dev/null zu verschlucken) und hängt bei Absturz eine laute Warnung an $warn.
 # So bleibt kein stiller Crash mehr unbemerkt (Lehre aus dem 9-Tage-Ausfall:

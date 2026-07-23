@@ -1,27 +1,9 @@
 {
-  "generated_at": "2026-07-23 09:30",
+  "generated_at": "2026-07-23 14:46",
   "hinweis": "Regelbasierter Vorschlag (ETF-Ranking: Momentum/Risiko/Sentiment/Struktur). Der Agent entscheidet autonom und kann abweichen.",
-  "vorgeschlagene_trades": [
-    {
-      "datum": "2026-07-23",
-      "typ": "Kauf",
-      "sektor": "Technologie",
-      "isin": "IE00BM67HT60",
-      "wertpapier": "iShares MSCI World Information Technology UCITS ETF",
-      "stueck": 1,
-      "kurs": 121.86,
-      "gebuehr": 0.0,
-      "steuern": 0.0,
-      "gewinn_verlust": 0.0,
-      "gesamt": 121.86,
-      "notiz": "Top-up (ETF-Sleeve)",
-      "begruendung": "Top-up starker CORE-Bestand | Composite=81.8 (CORE) | Momentum=84.3 Risiko=71.2 Sentiment=80 Struktur=92.5"
-    }
-  ],
-  "zusammenfassung": [
-    "ETF-Top-up: 1x iShares MSCI World Information Technology UCITS ETF (Technologie) zu 121.86 EUR, Composite=81.8 (CORE-Aufstockung)."
-  ],
-  "resultierender_barbestand": 34.55,
-  "resultierender_portfoliowert": 4883.04,
-  "resultierendes_gesamtvermoegen": 4917.59
+  "vorgeschlagene_trades": [],
+  "zusammenfassung": [],
+  "resultierender_barbestand": 34.67,
+  "resultierender_portfoliowert": 4882.08,
+  "resultierendes_gesamtvermoegen": 4916.75
 }
