@@ -90,7 +90,7 @@ Jeder Punkt einzeln committet und rollback-fähig.
 
 ## Umsetzungsstand 2026-07-23 (alle Punkte)
 
-- **A1 ✅** unittest-Suite (63 Tests, tests/) + Test-Gate im 09:00-Lauf
+- **A1 ✅** unittest-Suite (59 Tests, tests/) + Test-Gate im 09:00-Lauf
   (rote Tests ⇒ keine Trades). ETF-Engine dafür in Phasen-Funktionen
   refactort (verhaltensidentisch, per --recommend-Diff verifiziert).
 - **A2 ✅** Logs nach logs/YYYY-MM-DD/ (30-Tage-Rotation) statt /tmp.
