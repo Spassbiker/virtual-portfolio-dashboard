@@ -204,6 +204,49 @@ class TestStopLoss(EngineTestCase):
         self.assertEqual(state.positions[0]["dax_ref"], 120.0)
 
 
+class TestDynamischerVolaStop(EngineTestCase):
+    def test_distanz_skaliert_mit_vola_und_klemmt(self):
+        isin = "DE0000000015"
+        for vol, expected in [(1.0, round(2 * 0.01 * (20 ** 0.5), 4)),   # ~8.9%
+                              (0.5, eng.DYN_STOP_MIN),                    # klemmt unten
+                              (5.0, eng.DYN_STOP_MAX)]:                   # klemmt oben
+            eng.chart_data = {"sektoren": {"T": [make_chart_item(isin, volatility_20d=vol)]}}
+            self.assertEqual(eng.dyn_stop_distance(isin), expected, f"vol {vol}")
+        eng.chart_data = {"sektoren": {"T": [make_chart_item(isin, volatility_20d=None)]}}
+        self.assertIsNone(eng.dyn_stop_distance(isin))
+
+    def test_ruhiger_titel_stoppt_frueher_als_hard_stop(self):
+        isin = "DE0000000016"
+        self.add_paper(isin, chart=make_chart_item(isin, volatility_20d=1.0))
+        eng.dax_now = 100.0    # DAX unverändert -> relativer Stop greift nicht
+        p = make_position(isin, kaufkurs=100.0, dax_ref=100.0, stop_ref_kurs=100.0)
+        state = self.make_state([p], live_prices={isin: 90.0})   # -10% < -8.9%
+        eng.phase_strategic_sell(state)
+        self.assertEqual(state.positions, [])
+        self.assertIn("Dynamischer Vola-Stop", state.transactions[0]["notiz"])
+
+    def test_wilder_titel_uebersteht_gleichen_drawdown(self):
+        isin = "DE0000000017"
+        self.add_paper(isin, chart=make_chart_item(isin, volatility_20d=2.5))  # Distanz -18% (Max)
+        eng.dax_now = 100.0
+        p = make_position(isin, kaufkurs=100.0, dax_ref=100.0, stop_ref_kurs=100.0)
+        state = self.make_state([p], live_prices={isin: 90.0})   # -10% > -18%
+        eng.phase_strategic_sell(state)
+        self.assertEqual(len(state.positions), 1)
+
+    def test_misst_vom_trailing_anker_nicht_vom_kaufkurs(self):
+        # Position im PLUS (Kauf 50, Kurs 90), aber -10% unter dem Hoch 100:
+        # der Vola-Stop sichert aufgelaufene Gewinne.
+        isin = "DE0000000018"
+        self.add_paper(isin, chart=make_chart_item(isin, volatility_20d=1.0))
+        eng.dax_now = 100.0
+        p = make_position(isin, kaufkurs=50.0, dax_ref=100.0, stop_ref_kurs=100.0)
+        state = self.make_state([p], live_prices={isin: 90.0})
+        eng.phase_strategic_sell(state)
+        self.assertEqual(state.positions, [])
+        self.assertIn("Dynamischer Vola-Stop", state.transactions[0]["notiz"])
+
+
 class TestVerkaufsRecord(EngineTestCase):
     def test_steuer_nur_auf_gewinn(self):
         p = make_position("DE1", stueck=10, kaufkurs=100.0)

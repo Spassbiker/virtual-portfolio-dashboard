@@ -108,6 +108,15 @@ WATCH_MARKERS = ("watch-kandidat", "opportunity-scan")
 #     unternehmensspezifische Schwäche früher erkannt.
 ABS_HARD_STOP_PCT = -0.20   # absoluter Notausgang (Katastrophenschutz)
 REL_STOP_PCT = -0.12        # beta-bereinigte Underperformance vs. DAX
+#  3) DYNAMISCHER VOLA-STOP (Phase-3-Bonus, nachgeholt 2026-07-23): fixe -20%
+#     sind für ruhige Titel viel zu weit — Lockheed lief -17% ohne dass ein
+#     Stop griff. Distanz = DYN_STOP_VOL_MULT × Tagesvola × sqrt(Horizont),
+#     gemessen als Rückgang vom Trailing-Anker (stop_ref_kurs = Positionshoch),
+#     geklemmt auf [DYN_STOP_MIN, DYN_STOP_MAX]. Ein 1%-Vola-Titel stoppt so
+#     schon bei ~-9% vom Hoch, ein 2%-Titel bei ~-18%; ohne Vola-Daten inaktiv.
+DYN_STOP_VOL_MULT = 2.0
+DYN_STOP_HORIZON_DAYS = 20
+DYN_STOP_MIN, DYN_STOP_MAX = 0.06, 0.18
 # Cash-Management: Mindest-Barreserve nie unterschreiten, und keine Mini-Käufe
 # (Gebühren-Drag). Bei 5 € Gebühr wären 100 € Order = 5 % Reibung.
 MIN_CASH_RESERVE = 25.0
@@ -575,6 +584,17 @@ def vol_size_multiplier(isin):
     return round(max(VOL_MULT_MIN, min(VOL_MULT_MAX, REF_VOL_PCT / vol)), 3)
 
 
+def dyn_stop_distance(isin):
+    """Volatilitätsskalierte Trailing-Stop-Distanz (positiv, z.B. 0.12 = -12%).
+    None, wenn keine 20-Tage-Vola vorliegt (Stop dann inaktiv)."""
+    item = get_chart_item(isin)
+    vol = item.get("volatility_20d") if item else None
+    if not vol or vol <= 0:
+        return None
+    dist = DYN_STOP_VOL_MULT * (vol / 100.0) * math.sqrt(DYN_STOP_HORIZON_DAYS)
+    return round(max(DYN_STOP_MIN, min(DYN_STOP_MAX, dist)), 4)
+
+
 def is_watch_candidate(isin, chart_item, funda_item):
     """Kandidat noch nicht kaufbar (nicht genug Historie / Marker-Text).
 
@@ -923,6 +943,12 @@ def phase_strategic_sell(state):
             sell_reason = (f"Relativer Stop: {alpha*100:.1f}% Underperformance vs. DAX "
                            f"(β={beta:.2f}, seit Anker: Kurs {rel_dd*100:+.1f}% / "
                            f"DAX {r_dax*100:+.1f}%) ≤ {REL_STOP_PCT*100:.0f}%")
+        elif (rel_dd is not None and (dyn_dist := dyn_stop_distance(isin)) is not None
+              and rel_dd <= -dyn_dist):
+            sell = True
+            sell_reason = (f"Dynamischer Vola-Stop: {rel_dd*100:.1f}% vom Anker "
+                           f"{ref_kurs:.2f} ≤ -{dyn_dist*100:.1f}% "
+                           f"(2×Vola-Distanz, Vola {get_chart_item(isin).get('volatility_20d')}%/Tag)")
         elif ts < SELL_THRESHOLD:
             sell = True
             sell_reason = f"Score unter Schwellwert ({ts} < {SELL_THRESHOLD})"
