@@ -11,12 +11,12 @@
     },
     {
       "datum": "2026-07-23",
-      "depot_gesamt": 9571.85,
-      "etf_gesamt": 4915.27,
+      "depot_gesamt": 9532.18,
+      "etf_gesamt": 4898.49,
       "cash_depot": 25.88,
       "cash_etf": 147.47,
-      "dax": 24906.18,
-      "msci": 124.99
+      "dax": 24753.69,
+      "msci": 124.48
     }
   ]
 }

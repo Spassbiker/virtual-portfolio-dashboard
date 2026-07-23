@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-07-23T15:28:29",
+  "generated_at": "2026-07-23T17:35:32",
   "quellen": [
     {
       "key": "kurse",
       "label": "Kurse",
-      "stand": "2026-07-23T15:25:19",
+      "stand": "2026-07-23T17:35:32",
       "warn_tage": 2
     },
     {
       "key": "chart",
       "label": "Chartanalyse",
-      "stand": "2026-07-23T09:00:33",
+      "stand": "2026-07-23T17:35:29",
       "warn_tage": 3
     },
     {
       "key": "funda",
       "label": "Fundamentalanalyse",
-      "stand": "2026-07-23T09:00:33",
+      "stand": "2026-07-23T17:35:16",
       "warn_tage": 10
     },
     {
