@@ -187,6 +187,9 @@
         .fresh-badge { font-size: 0.74em; padding: 3px 10px; border-radius: 12px; background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border); cursor: help; }
         .fresh-badge.warn { background: var(--warning-bg); color: var(--warning-text); border-color: var(--warning); font-weight: 700; }
         .fresh-badge.crit { background: var(--critical-bg); color: var(--critical-text); border-color: var(--critical); font-weight: 700; }
+
+        /* --- Attribution-Report (V5) --- */
+        .att-pre { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; overflow-x: auto; font-size: 0.82em; line-height: 1.55; color: var(--text-primary); }
     </style>
 </head>
 <body>
@@ -236,10 +239,12 @@
                 <button class="sub-tab-button active" data-sub="chart">Chartanalyse</button>
                 <button class="sub-tab-button" data-sub="funda">Fundamentalanalyse</button>
                 <button class="sub-tab-button" data-sub="sentiment">🤖 KI-Sentiment</button>
+                <button class="sub-tab-button" data-sub="attribution">📉 Attribution</button>
             </div>
             <div id="chart" class="sub-content active"></div>
             <div id="funda" class="sub-content"></div>
             <div id="sentiment" class="sub-content"></div>
+            <div id="attribution" class="sub-content"></div>
         </div>
     </div>
 
@@ -250,7 +255,7 @@
         // Fehlende optionale Dateien fallen auf leere Strukturen zurück.
         const _load = async (url, fallback) => {
             try {
-                const r = await fetch(url + '?v=202607231526');
+                const r = await fetch(url + '?v=202607231527');
                 return r.ok ? await r.json() : fallback;
             } catch (e) { return fallback; }
         };
@@ -267,6 +272,7 @@
             _load('data/vermoegen_history.json', {"history": []}),
         ]);
         const metaData = await _load('data/meta.json', null);
+        const attData = await _load('data/attribution_latest.json', null);
 
         // Datenfrische (V3): Alter jeder Quelle ZUR ANSICHTSZEIT berechnen —
         // die Badges warnen damit auch dann, wenn der Cron steht und gar
@@ -1483,6 +1489,30 @@
         }
         transHtml += `</table>`;
         document.getElementById('transaktionen').innerHTML = transHtml;
+
+        // ==========================================
+        // ATTRIBUTION (V5): neuester Monats-Report (attribution_report.py) im
+        // Analyse-Tab. Format ist spaltenformatierter Text mit #-Überschriften:
+        // Überschriften werden HTML, Rest bleibt ausrichtungserhaltend in <pre>.
+        // ==========================================
+        (function renderAttribution() {
+            const el = document.getElementById('attribution');
+            const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            if (!attData || !attData.markdown) {
+                el.innerHTML = '<p style="color:var(--text-muted)">Noch kein Attribution-Report vorhanden — läuft monatlich am 1. um 18:00.</p>';
+                return;
+            }
+            let html = '';
+            let pre = [];
+            const flush = () => { if (pre.join('').trim()) html += `<pre class="att-pre">${esc(pre.join('\n'))}</pre>`; pre = []; };
+            attData.markdown.split('\n').forEach(line => {
+                if (line.startsWith('## ')) { flush(); html += `<h3>${esc(line.slice(3))}</h3>`; }
+                else if (line.startsWith('# ')) { flush(); html += `<h2>${esc(line.slice(2))} <small style="font-size:0.55em; color:var(--text-muted);">(${esc(attData.datei || '')})</small></h2>`; }
+                else pre.push(line);
+            });
+            flush();
+            el.innerHTML = html;
+        })();
 
         // ==========================================
         // ÜBERSICHT (Startseite: KPIs, Allokation, Risiko, Performance, Top-Mover/-Empfehlungen)

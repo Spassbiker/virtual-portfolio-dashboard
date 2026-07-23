@@ -7,6 +7,7 @@ from paths import (
     CHART,
     DATA_DIR,
     DEPOT,
+    DOCS_DIR,
     EARNINGS,
     FUNDA,
     ETF_RANKING,
@@ -14,6 +15,22 @@ from paths import (
     SENT,
     save_json,
 )
+
+
+def write_attribution_latest():
+    """V5: neuesten Attribution-Report (docs/attribution/JJJJ-MM-TT.md, monatlich
+    per Cron) nach data/ kopieren, damit das Dashboard ihn per fetch() rendern
+    kann — GitHub Pages liefert docs/ zwar aus, aber data/ ist die eine
+    Fetch-Quelle des Dashboards und wird von den Crons committet."""
+    att_dir = os.path.join(DOCS_DIR, "attribution")
+    reports = sorted(f for f in (os.listdir(att_dir) if os.path.isdir(att_dir) else [])
+                     if f.endswith(".md"))
+    out = {"datei": None, "markdown": None}
+    if reports:
+        latest = reports[-1]
+        with open(os.path.join(att_dir, latest), "r", encoding="utf-8") as f:
+            out = {"datei": latest, "markdown": f.read()}
+    save_json(os.path.join(DATA_DIR, "attribution_latest.json"), out)
 
 # V3: Datenfrische — der Build schreibt die mtime jeder Datenquelle nach
 # data/meta.json; das Dashboard berechnet das Alter ZUR ANSICHTSZEIT und
@@ -243,6 +260,9 @@ html_template = """<!DOCTYPE html>
         .fresh-badge { font-size: 0.74em; padding: 3px 10px; border-radius: 12px; background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border); cursor: help; }
         .fresh-badge.warn { background: var(--warning-bg); color: var(--warning-text); border-color: var(--warning); font-weight: 700; }
         .fresh-badge.crit { background: var(--critical-bg); color: var(--critical-text); border-color: var(--critical); font-weight: 700; }
+
+        /* --- Attribution-Report (V5) --- */
+        .att-pre { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; overflow-x: auto; font-size: 0.82em; line-height: 1.55; color: var(--text-primary); }
     </style>
 </head>
 <body>
@@ -292,10 +312,12 @@ html_template = """<!DOCTYPE html>
                 <button class="sub-tab-button active" data-sub="chart">Chartanalyse</button>
                 <button class="sub-tab-button" data-sub="funda">Fundamentalanalyse</button>
                 <button class="sub-tab-button" data-sub="sentiment">🤖 KI-Sentiment</button>
+                <button class="sub-tab-button" data-sub="attribution">📉 Attribution</button>
             </div>
             <div id="chart" class="sub-content active"></div>
             <div id="funda" class="sub-content"></div>
             <div id="sentiment" class="sub-content"></div>
+            <div id="attribution" class="sub-content"></div>
         </div>
     </div>
 
@@ -323,6 +345,7 @@ html_template = """<!DOCTYPE html>
             _load('data/vermoegen_history.json', {"history": []}),
         ]);
         const metaData = await _load('data/meta.json', null);
+        const attData = await _load('data/attribution_latest.json', null);
 
         // Datenfrische (V3): Alter jeder Quelle ZUR ANSICHTSZEIT berechnen —
         // die Badges warnen damit auch dann, wenn der Cron steht und gar
@@ -1541,6 +1564,30 @@ html_template = """<!DOCTYPE html>
         document.getElementById('transaktionen').innerHTML = transHtml;
 
         // ==========================================
+        // ATTRIBUTION (V5): neuester Monats-Report (attribution_report.py) im
+        // Analyse-Tab. Format ist spaltenformatierter Text mit #-Überschriften:
+        // Überschriften werden HTML, Rest bleibt ausrichtungserhaltend in <pre>.
+        // ==========================================
+        (function renderAttribution() {
+            const el = document.getElementById('attribution');
+            const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            if (!attData || !attData.markdown) {
+                el.innerHTML = '<p style="color:var(--text-muted)">Noch kein Attribution-Report vorhanden — läuft monatlich am 1. um 18:00.</p>';
+                return;
+            }
+            let html = '';
+            let pre = [];
+            const flush = () => { if (pre.join('').trim()) html += `<pre class="att-pre">${esc(pre.join('\\n'))}</pre>`; pre = []; };
+            attData.markdown.split('\\n').forEach(line => {
+                if (line.startsWith('## ')) { flush(); html += `<h3>${esc(line.slice(3))}</h3>`; }
+                else if (line.startsWith('# ')) { flush(); html += `<h2>${esc(line.slice(2))} <small style="font-size:0.55em; color:var(--text-muted);">(${esc(attData.datei || '')})</small></h2>`; }
+                else pre.push(line);
+            });
+            flush();
+            el.innerHTML = html;
+        })();
+
+        // ==========================================
         // ÜBERSICHT (Startseite: KPIs, Allokation, Risiko, Performance, Top-Mover/-Empfehlungen)
         // ==========================================
         function svgSectorAllocation(sektoren, limitPct) {
@@ -1981,6 +2028,7 @@ html_template = """<!DOCTYPE html>
 </html>"""
 
 write_meta()
+write_attribution_latest()
 
 html_output = html_template.replace("BUILD_DATE_PLACEHOLDER", build_date)
 html_output = html_output.replace("BUILD_STAMP_PLACEHOLDER", build_stamp)
