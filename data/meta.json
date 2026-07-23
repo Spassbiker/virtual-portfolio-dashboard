@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-23T15:22:10",
+  "generated_at": "2026-07-23T15:25:32",
   "quellen": [
     {
       "key": "kurse",
       "label": "Kurse",
-      "stand": "2026-07-23T14:53:13",
+      "stand": "2026-07-23T15:25:19",
       "warn_tage": 2
     },
     {

@@ -159,6 +159,7 @@
         .ov-card h3 { margin-top: 0; }
         .risk-alert { border-left: 4px solid var(--critical); background: var(--critical-bg); color: var(--critical-text); padding: 10px 16px; border-radius: 4px; margin-bottom: 8px; font-size: 0.92em; font-weight: 600; }
         .risk-alert.ok { border-left-color: var(--good); background: var(--good-bg); color: var(--good-text); }
+        .risk-alert.warn { border-left-color: var(--warning); background: var(--warning-bg); color: var(--warning-text); }
         .ov-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; }
         .ov-movers { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .mover-list { list-style: none; margin: 0; padding: 0; }
@@ -249,7 +250,7 @@
         // Fehlende optionale Dateien fallen auf leere Strukturen zurück.
         const _load = async (url, fallback) => {
             try {
-                const r = await fetch(url + '?v=202607231522');
+                const r = await fetch(url + '?v=202607231525');
                 return r.ok ? await r.json() : fallback;
             } catch (e) { return fallback; }
         };
@@ -932,9 +933,20 @@
                 <th>Investiert</th>
                 <th>Börsenwert</th>
                 <th>Gewinn/Verlust</th>
+                <th title="Abstand zum engsten der drei Stops (Hard -20% / Relativ vs. DAX / Vola-Stop) — von der Engine berechnet">🛑 Stop-Abstand</th>
                 <th>🤖 KI-Sentiment</th>
                 <th>📊 Earnings</th>
             </tr>`;
+        // Stop-Ampel (V2): Engine-berechneter Abstand zum engsten Stop.
+        // 🔴 < 3pp, 🟡 3-8pp, 🟢 > 8pp. Kein Nachrechnen im Dashboard.
+        function stopBadge(p) {
+            const si = p.stop_info;
+            if (!si || typeof si.abstand_pct !== 'number') return '<span style="color:var(--text-muted);">–</span>';
+            const cls = si.abstand_pct < 3 ? 'sell' : (si.abstand_pct < 8 ? 'hold' : 'buy');
+            const icon = si.abstand_pct < 3 ? '🔴' : (si.abstand_pct < 8 ? '🟡' : '🟢');
+            const tip = `${si.typ} bei ${formatEUR(si.stop_kurs)} — Kurs müsste ${si.abstand_pct.toFixed(1).replace('.', ',')}% fallen`;
+            return `<span class="badge ${cls}" title="${tip}" style="cursor:help;">${icon} ${si.abstand_pct.toFixed(1).replace('.', ',')}%</span>`;
+        }
         if (d.positionen && d.positionen.length > 0) {
             d.positionen.forEach(p => {
                 let gvColor = p.gewinn_verlust >= 0 ? 'var(--good-text)' : 'var(--critical-text)';
@@ -953,6 +965,7 @@
                     <td>${formatEUR(p.investiert)}</td>
                     <td>${formatEUR(p.boersenwert)}</td>
                     <td><span style="background-color: ${gvBg}; color: ${gvColor}; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${formatEURSign(p.gewinn_verlust)}</span></td>
+                    <td>${stopBadge(p)}</td>
                     <td>${sentimentBadge(p.isin)}</td>
                     <td>${earningsBadge(p.isin)}</td>
                 </tr>`;
@@ -1723,6 +1736,16 @@
             const rendite = bench.rendite_pct || {};
             const eqModel = buildEquityModel((vermoegenHistData || {}).history);
 
+            // Stop-Ampel (V2): Positionen nahe am engsten Stop prominent warnen.
+            const stopNah = (dep.positionen || [])
+                .filter(p => p.stop_info && typeof p.stop_info.abstand_pct === 'number' && p.stop_info.abstand_pct < 8)
+                .sort((a, b) => a.stop_info.abstand_pct - b.stop_info.abstand_pct);
+            const stopAlerts = stopNah.map(p => {
+                const si = p.stop_info;
+                const pct = si.abstand_pct.toFixed(1).replace('.', ',');
+                return `<div class="risk-alert${si.abstand_pct < 3 ? '' : ' warn'}">${si.abstand_pct < 3 ? '🔴' : '🟡'} ${p.wertpapier}: Kurs nur ${pct}% über dem ${si.typ} (${formatEUR(si.stop_kurs)})</div>`;
+            }).join('');
+
             const allePositionen = (dep.positionen || []).map(p => Object.assign({ typ: 'Aktie' }, p))
                 .concat((etf.positionen || []).map(p => Object.assign({ typ: 'ETF' }, p)));
             const gewinner = allePositionen.filter(p => p.gewinn_verlust !== undefined).slice().sort((a, b) => b.gewinn_verlust - a.gewinn_verlust).slice(0, 5);
@@ -1758,6 +1781,7 @@
                         <tr><td>Rendite (seit Start)</td><td style="text-align:right; color:${pctCol(depRend)}; font-weight:bold;">${pctTxt(depRend)}</td><td style="text-align:right; color:${pctCol(etfRend)}; font-weight:bold;">${pctTxt(etfRend)}</td><td style="text-align:right; color:${pctCol(gesamtRend)}; font-weight:bold;">${pctTxt(gesamtRend)}</td></tr>
                     </table>
                 </div>
+                ${stopAlerts}
 
                 <div class="ov-card">
                     <h3>📉 Vermögensverlauf <small style="font-size:0.6em; color:var(--text-muted); font-weight:normal;">(indexiert: erster Datenpunkt = 100 · Depot/DAX/MSCI ab Benchmark-Anker 09.07.)</small></h3>

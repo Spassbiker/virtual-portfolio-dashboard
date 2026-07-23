@@ -409,5 +409,50 @@ class TestKaufphase(EngineTestCase):
         self.assertNotIn(isin, state.target_isins)
 
 
+class TestComputeStopInfo(unittest.TestCase):
+    """Stop-Ampel (V2): Auslösekurse müssen die nach Kurs aufgelösten
+    Verkaufsbedingungen aus phase_strategic_sell spiegeln — der ENGSTE
+    (höchste) Stop gewinnt."""
+
+    def test_relativer_stop_ist_engster_bei_hoher_vola(self):
+        # r_dax=0: Hard 80 < Vola 82 (18%) < Relativ 88 (-12% vom Anker).
+        info = eng.compute_stop_info(100, 100, 100, 100, 100, 1.0, 0.18)
+        self.assertEqual(info["typ"], "Relativ-DAX")
+        self.assertAlmostEqual(info["stop_kurs"], 88.0)
+        self.assertAlmostEqual(info["abstand_pct"], 12.0)
+
+    def test_vola_stop_ist_engster_bei_niedriger_vola(self):
+        # Low-Vol-Titel: 6%-Distanz stoppt VOR dem -12%-Relativ-Stop.
+        info = eng.compute_stop_info(100, 100, 100, 100, 100, 1.0, 0.06)
+        self.assertEqual(info["typ"], "Vola-Stop")
+        self.assertAlmostEqual(info["stop_kurs"], 94.0)
+        self.assertAlmostEqual(info["abstand_pct"], 6.0)
+
+    def test_dax_rally_zieht_relativen_stop_bis_an_den_anker(self):
+        # DAX +20%, beta 1: rechnerischer Auslösekurs läge ÜBER dem Anker,
+        # der relative Stop greift aber erst unter dem Anker -> min(ref, ...).
+        info = eng.compute_stop_info(100, 100, 100, 100, 120, 1.0, 0.18)
+        self.assertEqual(info["typ"], "Relativ-DAX")
+        self.assertAlmostEqual(info["stop_kurs"], 100.0)
+        self.assertAlmostEqual(info["abstand_pct"], 0.0)
+
+    def test_trailing_anker_hebt_stops_mit(self):
+        # Anker 130 (Peak) statt Kaufkurs 100: Vola-Stop 10% vom Peak = 117.
+        info = eng.compute_stop_info(100, 120, 130, 100, 100, 1.0, 0.10)
+        self.assertEqual(info["typ"], "Vola-Stop")
+        self.assertAlmostEqual(info["stop_kurs"], 117.0)
+        self.assertAlmostEqual(info["abstand_pct"], 2.5)
+
+    def test_ohne_kurs_oder_ohne_stops_none(self):
+        self.assertIsNone(eng.compute_stop_info(100, 0, 100, 100, 100, 1.0, 0.1))
+        self.assertIsNone(eng.compute_stop_info(0, 100, None, None, None, 1.0, None))
+
+    def test_ohne_vola_und_anker_bleibt_hard_stop(self):
+        info = eng.compute_stop_info(100, 90, None, None, None, 1.0, None)
+        self.assertEqual(info["typ"], "Hard-Stop")
+        self.assertAlmostEqual(info["stop_kurs"], 80.0)
+        self.assertAlmostEqual(info["abstand_pct"], 11.1)
+
+
 if __name__ == "__main__":
     unittest.main()

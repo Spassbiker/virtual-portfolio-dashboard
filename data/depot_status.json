@@ -17,7 +17,12 @@
         "score": 13.5,
         "beta": 0.3,
         "dax_ref": 25118.27,
-        "stop_ref_kurs": 52.19
+        "stop_ref_kurs": 52.19,
+        "stop_info": {
+          "stop_kurs": 45.795,
+          "typ": "Relativ-DAX",
+          "abstand_pct": 10.5
+        }
       },
       {
         "isin": "FR0000073272",
@@ -31,7 +36,12 @@
         "score": 23,
         "beta": 0.3,
         "dax_ref": 25118.27,
-        "stop_ref_kurs": 340.0
+        "stop_ref_kurs": 340.0,
+        "stop_info": {
+          "stop_kurs": 298.3387,
+          "typ": "Relativ-DAX",
+          "abstand_pct": 8.8
+        }
       },
       {
         "isin": "DE000ENER6Y0",
@@ -45,7 +55,12 @@
         "score": 19.5,
         "beta": 0.3,
         "dax_ref": 25011.35,
-        "stop_ref_kurs": 158.14
+        "stop_ref_kurs": 158.14,
+        "stop_info": {
+          "stop_kurs": 138.9637,
+          "typ": "Relativ-DAX",
+          "abstand_pct": 8.8
+        }
       },
       {
         "isin": "US67066G1040",
@@ -59,7 +74,12 @@
         "score": 23,
         "beta": 0.3,
         "dax_ref": 25155.41,
-        "stop_ref_kurs": 186.26
+        "stop_ref_kurs": 186.26,
+        "stop_info": {
+          "stop_kurs": 163.3552,
+          "typ": "Relativ-DAX",
+          "abstand_pct": 12.3
+        }
       },
       {
         "isin": "US5398301094",
@@ -73,7 +93,12 @@
         "score": 14.0,
         "beta": 0.3,
         "dax_ref": 24917.08,
-        "stop_ref_kurs": 462.3
+        "stop_ref_kurs": 462.3,
+        "stop_info": {
+          "stop_kurs": 436.728,
+          "typ": "Hard-Stop",
+          "abstand_pct": 3.6
+        }
       },
       {
         "isin": "DE000A0DJ6J9",
@@ -87,7 +112,12 @@
         "score": 21,
         "beta": 0.3,
         "dax_ref": 24830.98,
-        "stop_ref_kurs": 61.55
+        "stop_ref_kurs": 61.55,
+        "stop_info": {
+          "stop_kurs": 54.2199,
+          "typ": "Relativ-DAX",
+          "abstand_pct": 9.9
+        }
       },
       {
         "isin": "DE000ENAG999",
@@ -101,7 +131,12 @@
         "score": 21,
         "dax_ref": 25155.41,
         "stop_ref_kurs": 19.6,
-        "beta": 0.3
+        "beta": 0.3,
+        "stop_info": {
+          "stop_kurs": 17.1897,
+          "typ": "Relativ-DAX",
+          "abstand_pct": 12.3
+        }
       },
       {
         "isin": "DE000A2E4K43",
@@ -115,7 +150,12 @@
         "score": 16,
         "dax_ref": 24830.98,
         "stop_ref_kurs": 38.96,
-        "beta": 0.3
+        "beta": 0.3,
+        "stop_info": {
+          "stop_kurs": 34.3202,
+          "typ": "Relativ-DAX",
+          "abstand_pct": 10.4
+        }
       },
       {
         "isin": "IT0003242622",
@@ -129,7 +169,12 @@
         "score": 20,
         "dax_ref": 25155.41,
         "stop_ref_kurs": 10.325,
-        "beta": 0.3
+        "beta": 0.3,
+        "stop_info": {
+          "stop_kurs": 9.2718,
+          "typ": "Vola-Stop",
+          "abstand_pct": 10.2
+        }
       },
       {
         "isin": "IT0001233417",
@@ -143,7 +188,12 @@
         "score": 20,
         "dax_ref": 25155.41,
         "stop_ref_kurs": 2.354,
-        "beta": 0.3
+        "beta": 0.3,
+        "stop_info": {
+          "stop_kurs": 2.0645,
+          "typ": "Relativ-DAX",
+          "abstand_pct": 12.3
+        }
       }
     ],
     "transaktionshistorie": [

@@ -599,6 +599,38 @@ def dyn_stop_distance(isin):
     return round(max(DYN_STOP_MIN, min(DYN_STOP_MAX, dist)), 4)
 
 
+def compute_stop_info(kaufkurs, kurs, ref_kurs, dax_ref, dax_now, beta, dyn_dist):
+    """Abstand zum ENGSTEN der drei Stops (V2, Stop-Ampel im Dashboard).
+
+    Rechnet für jede Stop-Stufe den Auslösekurs aus und meldet den höchsten
+    (= zuerst greifenden) samt Abstand in Prozent vom aktuellen Kurs. Die
+    Formeln sind die nach Kurs aufgelösten Verkaufsbedingungen aus
+    phase_strategic_sell — geändert wird dort, angezeigt wird hier: das
+    Dashboard liest nur dieses Feld und rechnet selbst nichts nach
+    (Engine/Anzeige-Konsistenz wie bei empfehlung/consistency.py).
+
+    Relativer Stop: alpha = (kurs-ref)/ref - beta*r_dax <= REL_STOP_PCT löst
+    nur bei kurs < ref aus, daher min(ref, ...) als effektiver Auslösekurs.
+    """
+    cands = []
+    if kaufkurs:
+        cands.append((kaufkurs * (1 + ABS_HARD_STOP_PCT), "Hard-Stop"))
+    if ref_kurs and dax_ref and dax_now:
+        r_dax = (dax_now - dax_ref) / dax_ref
+        rel_kurs = ref_kurs * min(1.0, 1 + beta * r_dax + REL_STOP_PCT)
+        cands.append((rel_kurs, "Relativ-DAX"))
+    if ref_kurs and dyn_dist:
+        cands.append((ref_kurs * (1 - dyn_dist), "Vola-Stop"))
+    if not cands or not kurs:
+        return None
+    stop_kurs, typ = max(cands, key=lambda c: c[0])
+    return {
+        "stop_kurs": round(stop_kurs, 4),
+        "typ": typ,
+        "abstand_pct": round((kurs - stop_kurs) / kurs * 100, 1),
+    }
+
+
 def is_watch_candidate(isin, chart_item, funda_item):
     """Kandidat noch nicht kaufbar (nicht genug Historie / Marker-Text).
 
@@ -1001,6 +1033,15 @@ def phase_strategic_sell(state):
             elif dax_now and current_price and current_price > (p.get("stop_ref_kurs") or 0):
                 p["stop_ref_kurs"] = round(current_price, 4)
                 p["dax_ref"] = round(dax_now, 2)
+            # Stop-Ampel (V2): Abstand zum engsten Stop NACH dem Anker-Update
+            # berechnen, damit die Anzeige den Stand des nächsten Laufs zeigt.
+            stop_info = compute_stop_info(kaufkurs, current_price,
+                                          p.get("stop_ref_kurs"), p.get("dax_ref"),
+                                          dax_now, beta, dyn_stop_distance(isin))
+            if stop_info:
+                p["stop_info"] = stop_info
+            else:
+                p.pop("stop_info", None)
             positions_to_keep.append(p)
 
     state.positions = positions_to_keep
