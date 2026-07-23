@@ -16,6 +16,7 @@ DAX) werden in load_inputs() geladen — Netzwerk- und Datei-Zugriffe passieren
 NICHT mehr beim Import, sondern erst beim Aufruf von main().
 """
 
+import math
 import os
 import sys
 from dataclasses import dataclass, field
@@ -125,6 +126,14 @@ SEKTOR_SOFT_CAP = 0.30
 # Überschreitung, sonst würde ein Sektor bei 30.1% eine ganze Gewinnerposition
 # kosten. Ausgelöst wird ab Cap+Toleranz, reduziert wird dann bis auf den Cap.
 SEKTOR_CAP_TOLERANCE = 0.03
+# EINZELPOSITIONS-CAP: keine einzelne Aktie über 20% des Portfoliowerts
+# (2026-07-23: Nvidia 19.5%, Top-5 = 74% — Konzentrationsrisiko hatte bis dahin
+# nur ein Sektor-, aber kein Positions-Limit). Rückführung per TEILverkauf
+# (nicht Ganzverkauf — die Position ist per Definition ein Gewinner) mit
+# Hysterese analog Sektor-Abbau: Eingriff ab Cap+Toleranz, Ziel = Cap.
+# Die Kaufphase kappt Budgets ebenfalls auf den Cap (Wachstums-Limit).
+MAX_POS_PCT = 0.20
+POS_CAP_TOLERANCE = 0.02
 
 # Positionsgröße: 1000€ Basis + 100€ je Punkt über Schwellwert, max 2500€.
 BUDGET_BASE = 1000.0
@@ -625,6 +634,12 @@ def capped_budget(budget, isin, positions):
     if not sektor:
         return budget
     portfolio_value = sum(p.get("boersenwert", 0) or 0 for p in positions)
+    # Bootstrap-Guard: bei (fast) leerem Portfolio wäre JEDER Erstkauf >30%
+    # "Sektoranteil" — die Formel liefe auf allowed=0 und die Engine könnte ein
+    # leergelaufenes Depot nie wieder aufbauen. Cap greift erst, wenn schon
+    # nennenswert investiert ist.
+    if portfolio_value < BUDGET_BASE:
+        return budget
     sek_val = sector_value(positions, sektor)
     if portfolio_value + budget <= 0:
         return budget
@@ -632,6 +647,18 @@ def capped_budget(budget, isin, positions):
     if projected_pct <= SEKTOR_SOFT_CAP:
         return budget
     allowed = (SEKTOR_SOFT_CAP * portfolio_value - sek_val) / (1 - SEKTOR_SOFT_CAP)
+    return max(0.0, min(budget, allowed))
+
+
+def position_capped_budget(budget, positions):
+    """Kappt ein Kaufbudget auf den Einzelpositions-Cap: die NEUE Position darf
+    nach dem Kauf höchstens MAX_POS_PCT des Portfolios ausmachen.
+    Löst x / (P + x) = CAP nach x auf. Gleicher Bootstrap-Guard wie beim
+    Sektor-Cap (leeres Depot muss wieder kaufen können)."""
+    portfolio_value = sum(p.get("boersenwert", 0) or 0 for p in positions)
+    if portfolio_value < BUDGET_BASE:
+        return budget
+    allowed = MAX_POS_PCT * portfolio_value / (1 - MAX_POS_PCT)
     return max(0.0, min(budget, allowed))
 
 
@@ -700,16 +727,20 @@ def _today_iso():
     return datetime.now().strftime("%Y-%m-%d")
 
 
-def _make_sell_record(p, price, notiz, begruendung):
+def _make_sell_record(p, price, notiz, begruendung, units=None):
     """Berechne Netto-Erlös (nach Gebühr & Steuer) und baue Verkaufs-Transaktion.
 
     Steuer greift nur bei tatsächlichem Gewinn (Brutto-Verlust ist steuerfrei).
     Der zurückgegebene `net_cash` gehört auf `current_cash` addiert, `tx`
-    kommt in die Transaktionshistorie.
+    kommt in die Transaktionshistorie. `units` erlaubt TEILverkauf (z.B.
+    Positions-Cap-Trim); der Einstand wird dann anteilig gerechnet — die
+    Position selbst muss der Aufrufer anpassen.
     """
-    units = p["stueck"]
+    stueck = p["stueck"]
+    units = stueck if units is None else min(units, stueck)
+    invest_share = (p["investiert"] * units / stueck) if stueck else p["investiert"]
     revenue = (units * price) - fee_per_trade
-    gv_brutto = revenue - p["investiert"]
+    gv_brutto = revenue - invest_share
     steuern = round(gv_brutto * CAP_GAINS_TAX, 2) if gv_brutto > 0 else 0.0
     net_cash = revenue - steuern
     tx = {
@@ -991,6 +1022,60 @@ def phase_sector_reduction(state):
 
 
 # ==========================================
+# 1c. EINZELPOSITIONS-TRIM (Konzentrationsrisiko auf Positionsebene)
+# Überschreitet eine Position MAX_POS_PCT + Toleranz, wird sie per TEILverkauf
+# auf den Cap zurückgestutzt. Kein Ganzverkauf: die Position ist typischerweise
+# ein Gewinner — nur das Übergewicht wird abgeschöpft (Rebalancing-Gewinnmitnahme).
+# ==========================================
+
+def phase_position_trim(state):
+    # Erreichbarkeits-Guard: mit n Positionen ist die kleinste erreichbare
+    # Maximal-Quote 1/n. Bei n < 5 wäre der 20%-Cap unerreichbar und die
+    # Schleife würde das Depot in eine Verkaufsspirale trimmen (jeder Verkauf
+    # senkt den Nenner und hebt die Quote der übrigen). Dann kein Eingriff —
+    # ein ausgedünntes Depot (z.B. nach Massen-Stop-out) wird erst wieder
+    # aufgebaut, bevor Konzentrations-Feintuning sinnvoll ist.
+    if len(state.positions) < math.ceil(1 / MAX_POS_PCT):
+        return
+    # Jede Position wird pro Lauf höchstens EINMAL getrimmt (größte zuerst).
+    # Kein while-Loop: Trims verkleinern den Depotwert und hebeln die Quoten
+    # der übrigen Positionen — Rest-Überschreitungen innerhalb der Toleranz
+    # fängt der nächste Tageslauf, statt hier zu spiralen.
+    for p in sorted(state.positions, key=lambda q: -(q.get("boersenwert", 0) or 0)):
+        tot = sum(q.get("boersenwert", 0) or 0 for q in state.positions)
+        if tot <= 0:
+            return
+        pct_before = (p.get("boersenwert", 0) or 0) / tot
+        if pct_before <= MAX_POS_PCT + POS_CAP_TOLERANCE:
+            continue
+        isin = p.get("isin")
+        price = p.get("boersenkurs") or state.live_prices.get(isin) or 0
+        if not price or p.get("stueck", 0) <= 1:
+            continue
+        # Stückzahl, damit die Position nach Verkauf genau auf dem Cap landet:
+        # (wert - u*price) / (tot - u*price) = CAP  ->  u = (wert - CAP*tot) / (price*(1-CAP))
+        need = (p["boersenwert"] - MAX_POS_PCT * tot) / (price * (1 - MAX_POS_PCT))
+        units = min(max(1, math.ceil(need)), p["stueck"] - 1)
+        grund = (f"Positions-Cap: {p.get('wertpapier', isin)} bei {pct_before*100:.1f}% "
+                 f"(> {MAX_POS_PCT*100:.0f}%-Cap) — Teilverkauf {units} Stück")
+        tx, net_cash = _make_sell_record(
+            p, price,
+            notiz=f"Positions-Trim ({pct_before*100:.1f}% > {MAX_POS_PCT*100:.0f}%-Cap)",
+            begruendung=grund + " | " + score_reason(isin),
+            units=units)
+        state.current_cash += net_cash
+        state.transactions.append(tx)
+        remaining = p["stueck"] - units
+        p["investiert"] = round(p["investiert"] * remaining / p["stueck"], 2)
+        p["stueck"] = remaining
+        p["boersenwert"] = round(remaining * price, 2)
+        p["gewinn_verlust"] = round(p["boersenwert"] - p["investiert"], 2)
+        state.summary.append(f"Positions-Trim: {units}x {p.get('wertpapier', isin)} ({isin}) "
+                             f"zu {price:.2f} EUR verkauft — Position war {pct_before*100:.1f}% "
+                             f"(Cap {MAX_POS_PCT*100:.0f}%).")
+
+
+# ==========================================
 # 2. ERMITTELN DES KAPITALBEDARFS
 # Positionsgröße ist score-abhängig
 # ==========================================
@@ -1047,7 +1132,9 @@ def phase_buy(state, unowned_targets):
         # Mindest-Barreserve nie unterschreiten.
         spendable = state.current_cash - MIN_CASH_RESERVE
         budget_before_cap = min(budget, spendable)
+        # Erst Sektor-Cap, dann Einzelpositions-Cap — beide sind Wachstums-Limits.
         budget_for_this = capped_budget(budget_before_cap, isin, state.positions)
+        budget_for_this = position_capped_budget(budget_for_this, state.positions)
         if budget_for_this < MIN_ORDER_VALUE + fee_per_trade:
             if budget_for_this < budget_before_cap:
                 state.summary.append(f"Sektor-Cap: Kauf von {stock} ({isin}) gekappt/blockiert "
@@ -1140,6 +1227,7 @@ def main(recommend=False):
     phase_plan(state)
     phase_strategic_sell(state)
     phase_sector_reduction(state)
+    phase_position_trim(state)
     unowned_targets, total_needed_cash = compute_capital_need(state)
     phase_rebalance(state, total_needed_cash)
     phase_buy(state, unowned_targets)

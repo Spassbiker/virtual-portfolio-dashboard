@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23 09:00",
+  "generated_at": "2026-07-23 14:55",
   "hinweis": "Regelbasierter Vorschlag (Chart+Funda+KI-Sentiment, inkl. Veto). Der Agent entscheidet autonom und kann abweichen.",
   "vorgeschlagene_trades": [],
   "zusammenfassung": [
@@ -8,6 +8,6 @@
     "Adaptive Kaufschwelle: 20 (Floor 6, 80er-Perzentil aus 32 aktiven Kandidaten)."
   ],
   "resultierender_barbestand": 25.88,
-  "resultierender_portfoliowert": 9545.97,
-  "resultierendes_gesamtvermoegen": 9571.85
+  "resultierender_portfoliowert": 9495.85,
+  "resultierendes_gesamtvermoegen": 9521.73
 }

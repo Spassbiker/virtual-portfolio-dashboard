@@ -257,6 +257,52 @@ class TestSektorAbbau(EngineTestCase):
         self.assertAlmostEqual(budget, (0.30 * 10000 - 2900) / 0.70, places=2)
 
 
+class TestPositionsCap(EngineTestCase):
+    def test_position_ueber_cap_wird_getrimmt(self):
+        positions = [make_position("DE0000000040", stueck=30)]   # 3000€ = 30%
+        for i, stueck in enumerate([18, 18, 17, 17]):
+            positions.append(make_position(f"DE000000004{i+1}", stueck=stueck))
+        state = self.make_state(positions)
+        eng.phase_position_trim(state)
+        tot = sum(p["boersenwert"] for p in state.positions)
+        top = max(p["boersenwert"] for p in state.positions)
+        self.assertLessEqual(top / tot, eng.MAX_POS_PCT + eng.POS_CAP_TOLERANCE + 0.01)
+        # Teilverkauf, kein Ganzverkauf:
+        self.assertEqual(len(state.positions), 5)
+        self.assertEqual(state.transactions[0]["typ"], "Verkauf")
+        self.assertLess(state.transactions[0]["stueck"], 30)
+
+    def test_hysterese_bei_21_prozent(self):
+        positions = [make_position("DE0000000042", stueck=21)]   # 21% < 22% Trigger
+        for i, stueck in enumerate([20, 20, 20, 19]):
+            positions.append(make_position(f"DE000000004{i+3}", stueck=stueck))
+        state = self.make_state(positions)
+        eng.phase_position_trim(state)
+        self.assertEqual(state.transactions, [])
+
+    def test_kein_trim_bei_ausgeduenntem_depot(self):
+        # Regression Verkaufsspirale: mit < 5 Positionen ist der 20%-Cap
+        # rechnerisch unerreichbar -> Phase greift gar nicht ein.
+        positions = [make_position("DE0000000048", stueck=70),
+                     make_position("DE0000000049", stueck=30)]
+        state = self.make_state(positions)
+        eng.phase_position_trim(state)
+        self.assertEqual(state.transactions, [])
+        self.assertEqual(len(state.positions), 2)
+
+    def test_kaufbudget_wird_auf_cap_gekappt(self):
+        positions = [make_position("DE0000000044", stueck=80)]   # 8000€ Portfolio
+        capped = eng.position_capped_budget(2500.0, positions)
+        self.assertAlmostEqual(capped, eng.MAX_POS_PCT * 8000 / (1 - eng.MAX_POS_PCT), places=2)
+
+    def test_bootstrap_leeres_depot_darf_kaufen(self):
+        # Regression: Sektor-/Positions-Cap dürfen ein leeres Depot nicht
+        # dauerhaft blockieren (allowed=0-Deadlock).
+        eng.sector_map["DE0000000045"] = "Tech"
+        self.assertEqual(eng.capped_budget(1000.0, "DE0000000045", []), 1000.0)
+        self.assertEqual(eng.position_capped_budget(1000.0, []), 1000.0)
+
+
 class TestKaufphase(EngineTestCase):
     def test_adaptive_schwelle_fallback_und_perzentil(self):
         self.assertEqual(eng.compute_adaptive_buy_threshold([5, 6]), eng.BUY_FALLBACK_THRESHOLD)
