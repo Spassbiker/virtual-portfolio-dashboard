@@ -255,7 +255,7 @@
         // Fehlende optionale Dateien fallen auf leere Strukturen zurück.
         const _load = async (url, fallback) => {
             try {
-                const r = await fetch(url + '?v=202607240900');
+                const r = await fetch(url + '?v=202607241735');
                 return r.ok ? await r.json() : fallback;
             } catch (e) { return fallback; }
         };

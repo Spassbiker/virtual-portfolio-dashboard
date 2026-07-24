@@ -2,18 +2,18 @@
   "depot": {
     "startkapital": 10000,
     "aktueller_barbestand": 25.88,
-    "portfoliowert": 9499.45,
-    "gesamtvermoegen": 9525.33,
+    "portfoliowert": 9549.43,
+    "gesamtvermoegen": 9575.31,
     "positionen": [
       {
         "isin": "IT0003856405",
         "wertpapier": "Leonardo",
         "stueck": 21,
         "kaufkurs": 46.38,
-        "boersenkurs": 51.88,
+        "boersenkurs": 52.05,
         "investiert": 973.98,
-        "boersenwert": 1089.48,
-        "gewinn_verlust": 115.5,
+        "boersenwert": 1093.05,
+        "gewinn_verlust": 119.07,
         "score": 19,
         "beta": 0.3,
         "dax_ref": 25118.27,
@@ -29,10 +29,10 @@
         "wertpapier": "Safran",
         "stueck": 4,
         "kaufkurs": 345.0,
-        "boersenkurs": 321.4,
+        "boersenkurs": 330.0,
         "investiert": 1380.0,
-        "boersenwert": 1285.6,
-        "gewinn_verlust": -94.4,
+        "boersenwert": 1320.0,
+        "gewinn_verlust": -60.0,
         "score": 24,
         "beta": 0.3,
         "dax_ref": 25118.27,
@@ -48,10 +48,10 @@
         "wertpapier": "Siemens Energy",
         "stueck": 9,
         "kaufkurs": 165.8,
-        "boersenkurs": 150.46,
+        "boersenkurs": 150.78,
         "investiert": 1492.2,
-        "boersenwert": 1354.14,
-        "gewinn_verlust": -138.06,
+        "boersenwert": 1357.02,
+        "gewinn_verlust": -135.18,
         "score": 19.5,
         "beta": 0.3,
         "dax_ref": 25011.35,
@@ -67,10 +67,10 @@
         "wertpapier": "Nvidia",
         "stueck": 10,
         "kaufkurs": 170.9,
-        "boersenkurs": 182.02,
+        "boersenkurs": 183.94,
         "investiert": 1709.0,
-        "boersenwert": 1820.2,
-        "gewinn_verlust": 111.2,
+        "boersenwert": 1839.4,
+        "gewinn_verlust": 130.4,
         "score": 22,
         "beta": 0.3,
         "dax_ref": 25155.41,
@@ -86,10 +86,10 @@
         "wertpapier": "Lockheed Martin",
         "stueck": 1,
         "kaufkurs": 545.91,
-        "boersenkurs": 498.8,
+        "boersenkurs": 512.4,
         "investiert": 545.91,
-        "boersenwert": 498.8,
-        "gewinn_verlust": -47.11,
+        "boersenwert": 512.4,
+        "gewinn_verlust": -33.51,
         "score": 24,
         "beta": 0.3,
         "dax_ref": 24763.12,
@@ -105,10 +105,10 @@
         "wertpapier": "SMA Solar",
         "stueck": 14,
         "kaufkurs": 58.725,
-        "boersenkurs": 58.15,
+        "boersenkurs": 56.55,
         "investiert": 822.15,
-        "boersenwert": 814.1,
-        "gewinn_verlust": -8.05,
+        "boersenwert": 791.7,
+        "gewinn_verlust": -30.45,
         "score": 12.0,
         "beta": 0.3,
         "dax_ref": 24830.98,
@@ -124,10 +124,10 @@
         "wertpapier": "E.ON",
         "stueck": 24,
         "kaufkurs": 18.895,
-        "boersenkurs": 19.59,
+        "boersenkurs": 19.57,
         "investiert": 453.48,
-        "boersenwert": 470.16,
-        "gewinn_verlust": 16.68,
+        "boersenwert": 469.68,
+        "gewinn_verlust": 16.2,
         "score": 21,
         "dax_ref": 25155.41,
         "stop_ref_kurs": 19.6,
@@ -143,10 +143,10 @@
         "wertpapier": "Delivery Hero",
         "stueck": 14,
         "kaufkurs": 38.2,
-        "boersenkurs": 38.26,
+        "boersenkurs": 38.15,
         "investiert": 534.8,
-        "boersenwert": 535.64,
-        "gewinn_verlust": 0.84,
+        "boersenwert": 534.1,
+        "gewinn_verlust": -0.7,
         "score": 16,
         "dax_ref": 24830.98,
         "stop_ref_kurs": 38.96,
@@ -162,10 +162,10 @@
         "wertpapier": "Terna",
         "stueck": 143,
         "kaufkurs": 10.225,
-        "boersenkurs": 10.37,
+        "boersenkurs": 10.365,
         "investiert": 1462.17,
-        "boersenwert": 1482.91,
-        "gewinn_verlust": 20.74,
+        "boersenwert": 1482.19,
+        "gewinn_verlust": 20.02,
         "score": 21,
         "dax_ref": 24763.12,
         "stop_ref_kurs": 10.37,
@@ -181,10 +181,10 @@
         "wertpapier": "A2A",
         "stueck": 64,
         "kaufkurs": 2.327,
-        "boersenkurs": 2.319,
+        "boersenkurs": 2.342,
         "investiert": 148.93,
-        "boersenwert": 148.42,
-        "gewinn_verlust": -0.51,
+        "boersenwert": 149.89,
+        "gewinn_verlust": 0.96,
         "score": 20,
         "dax_ref": 25155.41,
         "stop_ref_kurs": 2.354,
@@ -652,32 +652,32 @@
         {
           "wertpapier": "Nvidia",
           "isin": "US67066G1040",
-          "anteil_pct": 19.2
+          "anteil_pct": 19.3
         },
         {
           "wertpapier": "Terna",
           "isin": "IT0003242622",
-          "anteil_pct": 15.6
+          "anteil_pct": 15.5
         },
         {
           "wertpapier": "Siemens Energy",
           "isin": "DE000ENER6Y0",
-          "anteil_pct": 14.3
+          "anteil_pct": 14.2
         },
         {
           "wertpapier": "Safran",
           "isin": "FR0000073272",
-          "anteil_pct": 13.5
+          "anteil_pct": 13.8
         },
         {
           "wertpapier": "Leonardo",
           "isin": "IT0003856405",
-          "anteil_pct": 11.5
+          "anteil_pct": 11.4
         },
         {
           "wertpapier": "SMA Solar",
           "isin": "DE000A0DJ6J9",
-          "anteil_pct": 8.6
+          "anteil_pct": 8.3
         },
         {
           "wertpapier": "Delivery Hero",
@@ -687,7 +687,7 @@
         {
           "wertpapier": "Lockheed Martin",
           "isin": "US5398301094",
-          "anteil_pct": 5.3
+          "anteil_pct": 5.4
         },
         {
           "wertpapier": "E.ON",
@@ -703,23 +703,23 @@
       "sektoren": [
         {
           "sektor": "Energie",
-          "anteil_pct": 27.8
+          "anteil_pct": 27.4
         },
         {
           "sektor": "Technologie",
-          "anteil_pct": 24.8
+          "anteil_pct": 24.9
         },
         {
           "sektor": "Luft- und Raumfahrttechnik",
-          "anteil_pct": 18.8
+          "anteil_pct": 19.2
         },
         {
           "sektor": "Versorger",
-          "anteil_pct": 17.2
+          "anteil_pct": 17.1
         },
         {
           "sektor": "Verteidigung",
-          "anteil_pct": 11.5
+          "anteil_pct": 11.4
         }
       ],
       "limits": {
@@ -735,16 +735,16 @@
         "vermoegen": 9769.26
       },
       "aktuell": {
-        "dax": 24763.12,
-        "msci": 124.45,
-        "vermoegen": 9525.33
+        "dax": 25064.94,
+        "msci": 125.235,
+        "vermoegen": 9575.31
       },
       "rendite_pct": {
-        "depot": -2.5,
-        "dax": -1.41,
-        "msci_world": -1.0
+        "depot": -1.99,
+        "dax": -0.21,
+        "msci_world": -0.38
       },
-      "stand": "2026-07-24 09:00"
+      "stand": "2026-07-24 17:35"
     },
     "korrelation": {
       "hinweise": [],
@@ -754,8 +754,8 @@
   "etf_depot": {
     "startkapital": 5000,
     "aktueller_barbestand": 147.47,
-    "portfoliowert": 4748.22,
-    "gesamtvermoegen": 4895.69,
+    "portfoliowert": 4767.99,
+    "gesamtvermoegen": 4915.46,
     "positionen": [
       {
         "sektor": "Energie",
@@ -764,10 +764,10 @@
         "ticker": "XDWS.DE",
         "stueck": 10,
         "kaufkurs": 47.98,
-        "boersenkurs": 47.64,
+        "boersenkurs": 48.175,
         "investiert": 479.75,
-        "boersenwert": 476.4,
-        "gewinn_verlust": -3.35,
+        "boersenwert": 481.75,
+        "gewinn_verlust": 2.0,
         "composite": 70.1,
         "bucket": "SATELLITE",
         "peak_kurs": 48.365
@@ -779,10 +779,10 @@
         "ticker": "XDWM.DE",
         "stueck": 4,
         "kaufkurs": 66.56,
-        "boersenkurs": 66.13,
+        "boersenkurs": 66.6,
         "investiert": 266.24,
-        "boersenwert": 264.52,
-        "gewinn_verlust": -1.72,
+        "boersenwert": 266.4,
+        "gewinn_verlust": 0.16,
         "composite": 73.0,
         "bucket": "SATELLITE",
         "peak_kurs": 66.93
@@ -794,10 +794,10 @@
         "ticker": "XDEM.DE",
         "stueck": 3,
         "kaufkurs": 86.74,
-        "boersenkurs": 86.06,
+        "boersenkurs": 85.18,
         "investiert": 260.22,
-        "boersenwert": 258.18,
-        "gewinn_verlust": -2.04,
+        "boersenwert": 255.54,
+        "gewinn_verlust": -4.68,
         "composite": 69.2,
         "bucket": "SATELLITE",
         "peak_kurs": 86.74
@@ -809,10 +809,10 @@
         "ticker": "IS3Q.DE",
         "stueck": 7,
         "kaufkurs": 77.5329,
-        "boersenkurs": 76.54,
+        "boersenkurs": 76.99,
         "investiert": 542.73,
-        "boersenwert": 535.78,
-        "gewinn_verlust": -6.95,
+        "boersenwert": 538.93,
+        "gewinn_verlust": -3.8,
         "composite": 77.7,
         "bucket": "CORE",
         "peak_kurs": 77.5329
@@ -824,10 +824,10 @@
         "ticker": "XDWI.DE",
         "stueck": 2,
         "kaufkurs": 76.15,
-        "boersenkurs": 76.07,
+        "boersenkurs": 76.41,
         "investiert": 152.3,
-        "boersenwert": 152.14,
-        "gewinn_verlust": -0.16,
+        "boersenwert": 152.82,
+        "gewinn_verlust": 0.52,
         "composite": 73.1,
         "bucket": "SATELLITE",
         "peak_kurs": 76.15
@@ -839,10 +839,10 @@
         "ticker": "USPY.DE",
         "stueck": 14,
         "kaufkurs": 39.4736,
-        "boersenkurs": 36.805,
+        "boersenkurs": 37.36,
         "investiert": 552.63,
-        "boersenwert": 515.27,
-        "gewinn_verlust": -37.36,
+        "boersenwert": 523.04,
+        "gewinn_verlust": -29.59,
         "composite": 72.6,
         "bucket": "SATELLITE",
         "peak_kurs": 39.4736
@@ -854,10 +854,10 @@
         "ticker": "2B76.DE",
         "stueck": 10,
         "kaufkurs": 17.812,
-        "boersenkurs": 17.33,
+        "boersenkurs": 17.334,
         "investiert": 178.12,
-        "boersenwert": 173.3,
-        "gewinn_verlust": -4.82,
+        "boersenwert": 173.34,
+        "gewinn_verlust": -4.78,
         "composite": 65.9,
         "bucket": "SATELLITE",
         "peak_kurs": 17.812
@@ -869,10 +869,10 @@
         "ticker": "XDWT.DE",
         "stueck": 6,
         "kaufkurs": 122.6033,
-        "boersenkurs": 120.66,
+        "boersenkurs": 121.02,
         "investiert": 735.62,
-        "boersenwert": 723.96,
-        "gewinn_verlust": -11.66,
+        "boersenwert": 726.12,
+        "gewinn_verlust": -9.5,
         "composite": 71.1,
         "bucket": "SATELLITE",
         "peak_kurs": 123.56
@@ -884,10 +884,10 @@
         "ticker": "VVSM.DE",
         "stueck": 2,
         "kaufkurs": 100.24,
-        "boersenkurs": 96.67,
+        "boersenkurs": 94.55,
         "investiert": 200.48,
-        "boersenwert": 193.34,
-        "gewinn_verlust": -7.14,
+        "boersenwert": 189.1,
+        "gewinn_verlust": -11.38,
         "composite": 65.9,
         "bucket": "SATELLITE",
         "peak_kurs": 100.24
@@ -899,10 +899,10 @@
         "ticker": "XDWU.DE",
         "stueck": 10,
         "kaufkurs": 42.921,
-        "boersenkurs": 43.65,
+        "boersenkurs": 43.81,
         "investiert": 429.21,
-        "boersenwert": 436.5,
-        "gewinn_verlust": 7.29,
+        "boersenwert": 438.1,
+        "gewinn_verlust": 8.89,
         "composite": 81.0,
         "bucket": "CORE",
         "peak_kurs": 43.65
@@ -914,10 +914,10 @@
         "ticker": "CBUX.DE",
         "stueck": 32,
         "kaufkurs": 6.2697,
-        "boersenkurs": 6.386,
+        "boersenkurs": 6.394,
         "investiert": 200.63,
-        "boersenwert": 204.35,
-        "gewinn_verlust": 3.72,
+        "boersenwert": 204.61,
+        "gewinn_verlust": 3.98,
         "composite": 70.7,
         "bucket": "SATELLITE",
         "peak_kurs": 6.386
@@ -929,10 +929,10 @@
         "ticker": "XDEB.DE",
         "stueck": 4,
         "kaufkurs": 44.015,
-        "boersenkurs": 43.96,
+        "boersenkurs": 44.36,
         "investiert": 176.06,
-        "boersenwert": 175.84,
-        "gewinn_verlust": -0.22,
+        "boersenwert": 177.44,
+        "gewinn_verlust": 1.38,
         "composite": 67.9,
         "bucket": "SATELLITE",
         "peak_kurs": 44.015
@@ -944,10 +944,10 @@
         "ticker": "LUTI.DE",
         "stueck": 6,
         "kaufkurs": 105.2867,
-        "boersenkurs": 106.44,
+        "boersenkurs": 106.8,
         "investiert": 631.72,
-        "boersenwert": 638.64,
-        "gewinn_verlust": 6.92,
+        "boersenwert": 640.8,
+        "gewinn_verlust": 9.08,
         "composite": 79.6,
         "bucket": "CORE",
         "peak_kurs": 107.4
