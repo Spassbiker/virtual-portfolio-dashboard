@@ -1,131 +1,131 @@
 {
-  "generated_at": "2026-07-23 08:55",
+  "generated_at": "2026-07-24 08:55",
   "scores": {
     "DE0005557508": {
-      "sentiment_score": 2,
+      "sentiment_score": -2,
+      "veto": false,
+      "confidence": 0.7,
+      "event_kategorie": "Zahlen",
+      "begruendung": "US-Tochter T-Mobile enttäuscht mit verlangsamtem Neukundenzuwachs, Aktie verliert zweiten Tag in Folge deutlich."
+    },
+    "DE0005936124": {
+      "sentiment_score": -1,
       "veto": false,
       "confidence": 0.5,
       "event_kategorie": "Sonstiges",
-      "begruendung": "WELT berichtet 'es geht wieder stark bergauf', Aktie startet klar im Plus nach den Verlusttagen."
-    },
-    "DE0005936124": {
-      "sentiment_score": -2,
-      "veto": true,
-      "confidence": 0.6,
-      "event_kategorie": "Sonstiges",
-      "begruendung": "Aktie liegt 63,88% unter dem Mai-Hoch und 35,56% im Minus über 30 Tage; Aktienrückkauf kann den anhaltenden Absturz nicht ausgleichen."
+      "begruendung": "Starker Auftragsbestand von 3,4 Mrd. Euro steht der Sorge gegenüber, dass die Kurs-Stützung am 24. Juli endet."
     },
     "DE0007164600": {
-      "sentiment_score": -1,
+      "sentiment_score": 1,
       "veto": false,
-      "confidence": 0.4,
+      "confidence": 0.7,
       "event_kategorie": "Zahlen",
-      "begruendung": "Aktie steht laut Börse Express 'am Tiefpunkt' vor den Zahlen, Dax insgesamt unter Druck vor der EZB-Entscheidung."
+      "begruendung": "Cloud-Umsatz übertrifft Erwartungen und Gewinn zieht an, Aktie springt nachbörslich an, trotz Zweifeln wegen einer Prognosesenkung."
     },
     "DE000A0D6554": {
-      "sentiment_score": 1,
+      "sentiment_score": 2,
       "veto": false,
-      "confidence": 0.6,
+      "confidence": 0.7,
       "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-Meldung bestätigt Widerstandskraft nach starken Zahlen und Auftragszuwachs, Presse empfiehlt die Korrektur als Kaufchance."
+      "begruendung": "Ad-hoc-Meldung bestätigt Stärke nach Zahlen und Auftragseingang mit zweistelligen Umsatzsprüngen."
     },
     "DE000A0D9PT0": {
+      "sentiment_score": -1,
+      "veto": false,
+      "confidence": 0.5,
+      "event_kategorie": "Sonstiges",
+      "begruendung": "WELT berichtet 'Unternehmen schwächelt' und Kursrückgang, trotz neuer 500-Mio.-USD-Aufträge von der Farnborough-Messe."
+    },
+    "DE000A0DJ6J9": {
       "sentiment_score": 1,
+      "veto": false,
+      "confidence": 0.4,
+      "event_kategorie": "Analyst",
+      "begruendung": "Presse hebt steigende Kursziele für Energie-Aktien im KI-Boom hervor, Kurs zeigt sich überwiegend fester."
+    },
+    "DE000A2E4K43": {
+      "sentiment_score": 2,
       "veto": false,
       "confidence": 0.6,
       "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-Meldung bestätigt Stabilität nach soliden Jahreszahlen, Kurs erholt sich weiter und gewinnt an Boden."
-    },
-    "DE000A0DJ6J9": {
-      "sentiment_score": -1,
-      "veto": false,
-      "confidence": 0.4,
-      "event_kategorie": "Keine",
-      "begruendung": "Durchgehend negative Tagesbewegungen ohne erkennbaren neuen Auslöser."
-    },
-    "DE000A2E4K43": {
-      "sentiment_score": 1,
-      "veto": false,
-      "confidence": 0.6,
-      "event_kategorie": "M&A",
-      "begruendung": "SSW Partners übernimmt 14 Märkte für 1,4 Mrd. Euro im Zuge des Uber-Deals, zusätzlich Ad-hoc-Fokus auf Wachstum und Profitabilität."
+      "begruendung": "Ad-hoc-Meldung reagiert auf starke Wachstumszahlen und positiven MDAX-Ausblick vor den heutigen Zahlen."
     },
     "DE000ENAG999": {
       "sentiment_score": 2,
       "veto": false,
       "confidence": 0.6,
       "event_kategorie": "Zahlen",
-      "begruendung": "WELT berichtet 'Unternehmen erholt sich', 20,44-Euro-Hoch in Reichweite, Dividenden- und Netzinvestitionsstory bestätigt."
+      "begruendung": "Ad-hoc-Meldungen bestätigen stabile Ergebnisse, steigende Ergebnisse und stabile Nachfrage im Investitionsprogramm."
     },
     "DE000ENER6Y0": {
-      "sentiment_score": -1,
+      "sentiment_score": 0,
       "veto": false,
       "confidence": 0.5,
-      "event_kategorie": "Sonstiges",
-      "begruendung": "Enttäuschender GE-Vernova-Ausblick belastet die Aktie, auch wenn Presse den befürchteten Abverkauf später als 'Fehlalarm' einstuft."
+      "event_kategorie": "Zahlen",
+      "begruendung": "Rekord-Auftragsbestand von 154 Mrd. Euro und Omterra-Kostenersparnis stehen anhaltendem Kursrückgang gegenüber."
     },
     "FR0000073272": {
       "sentiment_score": 3,
       "veto": false,
       "confidence": 0.9,
       "event_kategorie": "Zahlen",
-      "begruendung": "Mehrere Ad-hoc-Meldungen bestätigen zweistelliges Umsatzwachstum und starken Auftragseingang im Triebwerksgeschäft nach den Halbjahreszahlen."
+      "begruendung": "Serie von Ad-hoc-Meldungen bestätigt weiterhin zweistelliges Wachstum, Rekordauftrag und steigende Margen."
     },
     "FR0014004L86": {
-      "sentiment_score": 0,
+      "sentiment_score": 2,
       "veto": false,
-      "confidence": 0.6,
+      "confidence": 0.7,
       "event_kategorie": "Zahlen",
-      "begruendung": "H1-Zahlen zeigen steigenden Gewinn, aber laut WSJ einen Rückgang bei den Auftragseingängen - gemischtes Bild."
+      "begruendung": "WSJ berichtet 'Shares Jump on Strong Sales, Profit Boost', Rüstungsaktien insgesamt gefragt."
     },
     "IT0001233417": {
       "sentiment_score": 1,
       "veto": false,
-      "confidence": 0.6,
+      "confidence": 0.5,
       "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-Meldungen bestätigen stabile Ergebnisse und Investitionen in erneuerbare Energien mit Fokus auf Netz und Margen."
+      "begruendung": "Aktie klettert über die 100-Tage-Linie, weiterhin gestützt von stabilen Ergebnissen und Investitionen."
     },
     "IT0003242622": {
       "sentiment_score": 1,
       "veto": false,
       "confidence": 0.6,
-      "event_kategorie": "Sonstiges",
-      "begruendung": "Ad-hoc-Meldungen bestätigen stabiles Netzgeschäft und Margen, Terna-Energy reagiert weiter auf das Milliardenangebot."
+      "event_kategorie": "Zahlen",
+      "begruendung": "Ad-hoc-Meldung bestätigt Stabilität nach den Halbjahreszahlen."
     },
     "IT0003856405": {
       "sentiment_score": 2,
       "veto": false,
       "confidence": 0.7,
       "event_kategorie": "Zahlen",
-      "begruendung": "Ad-hoc-Meldungen bestätigen Kursgewinne durch Auftragslage und Prognose kurz vor den Halbjahreszahlen."
+      "begruendung": "Ad-hoc-Meldung bestätigt Profiteur-Rolle durch steigende Rüstungsbudgets und solide Quartalszahlen, Aktie über 50-Tage-Linie."
     },
     "NL0010273215": {
       "sentiment_score": 3,
       "veto": false,
-      "confidence": 0.9,
+      "confidence": 0.8,
       "event_kategorie": "Zahlen",
-      "begruendung": "Jahresprognose auf 43-45 Mrd. Euro angehoben, Aktie legt binnen 12 Monaten um 159% zu."
+      "begruendung": "Intel bestätigt High-NA-EUV-Massenfertigung, Aktie erholt sich von Post-Earnings-Schwäche, Wall Street bleibt bullish."
     },
     "US5398301094": {
-      "sentiment_score": 0,
+      "sentiment_score": 3,
       "veto": false,
-      "confidence": 0.4,
-      "event_kategorie": "Analyst",
-      "begruendung": "Analysten senken laut Simply Wall St. die Kursziele leicht, während ein neuer britischer Raketenabwehr-Auftrag und die Dividende gegensteuern."
+      "confidence": 0.9,
+      "event_kategorie": "Zahlen",
+      "begruendung": "Aktie legt nach starken Zahlen zweistellig zu, Jahresprognose wird angehoben, Rekord-Auftragsbestand vermeldet."
     },
     "US67066G1040": {
       "sentiment_score": 1,
       "veto": false,
-      "confidence": 0.4,
+      "confidence": 0.5,
       "event_kategorie": "Sonstiges",
-      "begruendung": "DZ Bank bestätigt Kaufen-Rating und Dark-Fiber-Akquisition ist strategisch positiv, trotz Sorgen um chinesische KI-Konkurrenz."
+      "begruendung": "1,5-Mrd.-Dollar-Deal mit Amkor treibt die Aktie, während sie trotz Rekordumsatz den S&P 500 nur knapp schlägt."
     },
     "US72703X1063": {
-      "sentiment_score": 0,
+      "sentiment_score": 2,
       "veto": false,
-      "confidence": 0.3,
-      "event_kategorie": "Keine",
-      "begruendung": "Keine neuen kursrelevanten Nachrichten, nur wiederholte ältere Meldungen zu Satellitenstart und London-Büro."
+      "confidence": 0.7,
+      "event_kategorie": "Zahlen",
+      "begruendung": "Ad-hoc-Meldung bestätigt 42,1% Umsatzwachstum im Q1, Aktie legt nach starken Wachstumszahlen zu."
     }
   }
 }

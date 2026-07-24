@@ -1,15 +1,57 @@
 {
-  "generated_at": "2026-07-23 09:00",
+  "generated_at": "2026-07-24 09:00",
   "items": {
     "DE0005557508": {
       "name": "Dt. Telekom",
       "ticker": "",
       "headlines": [
         {
-          "title": "Deutsche Telekom-Aktie: Es geht wieder stark bergauf - WELT",
+          "title": "Deutsche Telekom-Aktie mit down-Signal - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOaUE3Uy1BOVZRaVV0d2FRX1prUmRpMmVpWDBJbmZXempESHExc2NEbFBlalVQMGc3ZVF3SHRCSGlXTlo2V2ppY0lxYUJMeXFmUHlBVFN0X1Viek1oeTRzTS00SlpIMXNubi1oaUs3cGVVeWRhMlpNNDRQd1ZhckpfRUFuVGdKaXE3MmZmUVhKd2EzbENPSVAzWXRzbEg?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Deutsche Telekom-Aktie: Zweiter Tag in Folge große Verluste - WELT",
           "publisher": "WELT",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOMWdYM0U4a1IzWGFKaElPU0FiZzJsMU1jMzZTOGxSaWhOOE9tZXV6S1FxX0l1X1YyNDZFVmNHNFg1N3JDS3pzWWktOXJKTDZCWkZLM1ZQaEQ3UjMxMS01Mk1ub1lkbWxjUmFFelpETkwtdGxTcGZUY0U3MjV0V2NhcWhxd3dBbFpsd2lMdFZPUGhyUTNBSFZZRWE3MTJIaGtfbTNXcDVENklLbFlWSUVPcUxCLXFWU2lWY1VjYjRyUENtQQ?oc=5",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQVjNaYWRvSWNHWGVlMXJENWFRcVVDSzg4Ny1RaTNCU3dzaGgza29oaXpPR2JsLUZ0bW5lUVJvQm9kRXVYWUNIN0psZzcyN1haeE9ZaGNkWVNlaHZiYlVaVXNEQ1JrVTNZRDhraXlhT0FxUHMzUzJkSXJnOHNraTJnTW9FUVpsQ1gya19vZ3hycEo2bFh0cU1WWmtVSzVuWVdCUkFYcU1ETjZ2Znl0NlJ4RFdpMnc1OTRFbGtNWks3Mmh5MEtsRjd4NUQ1Z3o?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Deutsche Telekom - Aktie verliert deutlich - 23.07.2026 - Wallstreet Online",
+          "publisher": "Wallstreet Online",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQN1Y0Q0RzWVF5a0twT09Ma0kyYnZESV9uRjhpZlIxc241MXEwZG1JQ05rbHBaNHF5Yk5aRTRINzJpYXVtTzJiU1pXWTlwSkRhQ1pWUV9VdFcxUE5tSzNTVFVzSXlfYmNrajVvNk5KTTBDOEd2SWhMbEI2TW1tbHJHUW5mcFR6cHNkeDE3SlF2NUwtM0QwdEFhM3hFdWViRzNpMzRSWURoWGVzak9PaTdTN3l3?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "US-Tochter enttäuscht: Deutsche Telekom: Diese Zahlen bedeuten Ärger! - FinanzNachrichten.de",
+          "publisher": "FinanzNachrichten.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPSGY3bXJZQkFTU3ZNOWtsOGhSa043b2syVk9tMmd3ZmFXU0htaTh0dW9wOGRoZ0wxRmRjZ3BLNlQ5ZXloUWdubTFFUWVrRll4M09UdHJwdEdoTWJBYlBNRTFpbnZTRXpoQkdzVmdCczlrUUx0d3A2MnM2aFM0M2dUcThLV2pmMkh1QkhON0hPdFhTZ3lReV9KNjRNUzZHOXZ2U3g0Z3J3MzQ2MFMyZldrSlRndGxuOUJIa1hNNXUwWkpkMUJ0R2ZGand6S0lBYUItUnlZNQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Schlechte Nachrichten für die Deutsche Telekom-Aktie: Scheitert die Erholung jetzt? - Börse Online",
+          "publisher": "Börse Online",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNQVFubU9VYVo5TXJzdUJQNjFnX2FqcE9QdjVvWk03S24wTFRwN1dDaC1pdi1XQklsSklENGtIYzJ5SThXX3BUNHpUMHVUcDNWVExhVnMzNlhwYlVhSTBHYzdtTEhJR3JwLVRPRWc2R19wdW1kbGtjRzl1OVpXRHNyb2NVNm0zdjZsaFNzTU11eVhYd0k5MkFHTWlCbHd2RTVVblQ4M2g0MzFqLXIyNmhaYzFtaFRTX3lJVTFfNlBacXduVko2MXZoTWM0RW0tT3NSQjYyM1JaTDRsMVctNkE?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "T-Mobile US-Aktie tiefer: Neukundenzuwach verlangsamt sich - Telekom-Aktie ausgebremst - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNNVNfbGJvUHc0LWZSWGg2UXM2S1ROUHVkc09hZGJwVE10Z0xTZnV1X2pvRnpNcTNFUmZzajFWaWw2RnJXUGhFNE1uRDVQRGFkZm9xVUFUUmNpYVBZUVNZMTNNY29YTmhkZ3Jwd09QQWQtN01kNW9CTjd0UDYyZ3NUTWZDaEJURlBSdWlodnZMWllYYkNRRlA3QTZhejh2UE5wWks4bzkxRW5ZaGdQX2F2cmZVM1FtTUhjQWdqQTlaS3laWVBvMU5GRVZFbDN4R2xSVDRWN2x2LWVJbGV5M05kWUtndTY?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Deutsche Telekom Aktie News: Deutsche Telekom am Donnerstagnachmittag schwächer - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOOUc3NE44RkQxX0g4SXVVRUtFcnpsZHJRMjFGbnROTlRoYWFINkJwQmE4V2xhQU1vVjJqcVRBVVZsNkVwQl9kT09XTS1sbTk5RnVrM3ZkSEsxZkdmNklUNnpQQlRwZ1dzU3pxRkVRa0pzQkNHaHVUN1ZCWXNNR1FsQm03cGlrSG4yZzV6dG9xVTA2OF9kYVdjUnNUV25lZw?oc=5",
           "quelle": "google_news"
         },
         {
@@ -20,59 +62,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "Deutsche Telekom Aktie News: Deutsche Telekom am Vormittag in Grün - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOTGtpTkExT1FhdGpqNDZuVTY2WlR3aDk2dUVadmhDN1ZOc2xFbUtvTGQ4SlAyRmJOSm93LXdLbE96MFNLQkl5Y0ZrXzRUOThoRWs1ZzFKQkRJZU1sVmxETFFURVFPZ2lsQm9wNlBsTTJxbmVQby0zUUxXaktJRnFHQjRtY0N1TUF4VjBmbE5FZW8xYlh6dTNOS255THpndw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Deutsche-Telekom-Aktie: Der Wind dreht - darum könnte es jetzt wieder bergab gehen! - FinanzNachrichten.de",
-          "publisher": "FinanzNachrichten.de",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQc2VmMTFUR1VyVWF1aDJuRktNNkl5WTZGbFpRY2ZJYW8tNzJNNnBGTnJlM1RyZDZNU3hoNEpERWktZkc2a21PQk4zam1HeGNZUkVQb3I3cF9INmttbGstUmZKY1Mwd2FoSkQ3bjZKTlhTYUJSdzNhWDBsMnMtcFh3OWxnTEhaei02WXF6U2ZMajl1WldvbXdjSkRsYXBxajJiY2lIMlJFYkRTVVY5OHljRzh2U1lnS3R6VWpyYjBLanBWcy1PX0twamtTbjYyLUxpamF1SDI2UE8zaVZlZ0ZOODFKbDI?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Deutsche Telekom-Aktie: Es geht wieder bergab - WELT",
-          "publisher": "WELT",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWEptWUx5SHhxa05RT2h2LTgtRTZrZDRQc2doY2E5dmdNSTlobDVBM2tQVVBsZjIwOVNISEJHdk11bGQxVjJ2a2huamJFNk81Y2hIenpRVjBLSk1ScElyR2FNN2hxdW8ybzlGVm9HRUhINUkxRTdHY3ZZRmNYUnBsNHJQYmtoRWJuNWs3ckltX05vdmFxbG5uVUJiUVFkR3kzck9DQ1ItYmthZnlyNEdlV1VkTHdnbTdz?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Deutsche Telekom Aktie News: Deutsche Telekom am Dienstagnachmittag mit Verlusten - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxONm9UdjhNbUQtQl9GdXlyY3NTNERMNUFhRjktR3ljaHlHVTVpb19jbDNFek9RRUlpUFJxQ24waWstVEhtQ2gxT2p0dG5aYUVqNkpBaEwtWHhDTVRMaTJCV0VDVDJxb2VXeGV4M2lxUFhTcVd2cXY1YVk2c0lRQW9BNXk3cFkta1BERnFiWXBZVmMxb0xiVFNSWGttY2o5UQ?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Deutsche Telekom-Aktie: Chartanalyse zeigt GD 38 nach oben gekreuzt - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPaFd1b3J4a2lIXzh1WU56NDhVRFJ2VjFiMUh1QUNWRkFFeDZ3NHBGcVZldEFzWmloakozRTdUNnphS3pWSDhIdzQxRWh1T19ZSXd4T0tLUGhad0VBWVFlOWR2RFM0eXdzbU9JSXBpaXZCU1JXaFpwTGhfRDYxVnZqeWRYa0ZydHhPNU4tSjVzR2lWV1kzcWE3LWdtYms?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Deutsche Telekom-Aktie: Dritter Tag ohne Veränderung - WELT",
-          "publisher": "WELT",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZWhFbWpyemV1MnpRMEQ4WC1wQVA0bWxkYUFXZl9ibEtVWDNPZmZTUC1jNU9nVEZXYzM4OUNxdHhqTmQ4dnEtbnBBN09kU25sYkxIWDAxN1VMMmxGZVFtSGNZTXJSYmN1ZVZxU3d6YUdPdTlhZmZlM1puUDQtckp6V3hHbzdNVWxpZjM2bTl1bFBPeEl3eDM1QkpNcGh2bWdCTHRudkQtQU16alpPUGpUQXp1cFFOTERPcmJFS1huOUFqRDQ?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "Deutsche Telekom Buy (Deutsche Bank AG) 21.07.2026 | Analyse - Finanzen.net",
           "publisher": "Finanzen.net",
-          "published": "2026-07-20",
+          "published": "2026-07-21",
           "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOYjNHRmxkTVktTFgxYWF5eEJLZWI4RlVpXzRBSWhGb2puMVVqOEVWUXZDZVNMZ0E5QXZlMVh1VDU4ZXhZaTBJdE5DTmZDX2tFM3JmWk95MmE2R0Q4Q1FqdG4wR0dJdW9mOG5JVG9Ec2pXeVFDNnJNdWtGOGdtZU5wUkhtb3k?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Deutsche Telekom-Aktie fällt dennoch: TV-Rechte für WM 2030 gesichert - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPMzc3a1FHNUtYZkM0c3JXYzk3UjhMYk9DdmhYSnY0SFNSa2xqSWFfUlo1UFN4QlZHUlpKOEpwSHExZjI0OG5heFg1VFBtYVBpWGdocE5KUy1xdGdwVjhJX2ZtSnhxbDd0Q2RfYjh2bkx6clNEZE5rdzdfM1YwdlRyLVAwYzBub05kdXluYjZ0SjJvN25GMFd0SGNOdDl2a3pnMk1yWUN4eVRiTUtBSllUNmg5aXB2SzE3cWdJS0piWC1nSjU5SFJrX1hFc04xY3RJWS1jdTh3?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -83,10 +76,24 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "OHB: 63,88 Prozent unter Mai-Hoch - Börse Express",
+          "title": "OHB: 3,4 Milliarden Auftragsbestand - Börse Express",
           "publisher": "Börse Express",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMEtyZVdsdmxaa3E3RmtfUmdSSC00LWpGbnpnbG8ydjM5cW5lS2psRkJVUzkzTkRaajhGcW9hVzJLMzRCdzRlSmdJTUpEMFNBYk9rOXFYX1Uwck9fTmp5X3B1X3ZmVmx4Ui1GckxXWkVxdkhlVnpZZG5SZFkybU15VE00Yk1KeThNSXhZblpn?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "OHB: 24. Juli endet Kurs-Stützung - Finanztrends",
+          "publisher": "Finanztrends",
           "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNLXJfZGI5Uk5vemVDcWMwZ2c1ZFJWeDhxdkVsVENUZ01KT1dkNk9EdDVYTGoyUWNtUVd0VVpZX3B4dXBpcHFtbnRvcFFLalU2SG85S0NaUTNCR1FtcWRBZVppeEExYWZkVjEwY2NpS0s4VXhDVVh5MlhiSG9sc0lGQTJSeUVEUWNrXzNN?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9NUEhUY0dZSkVtaGZkQmZGdnRZSjFHem5SbWhBWkpOYU02aE1fNzdXQWFXY0tRdklWbzg4c0JUTktPaWtwMmZqZ29LaGZ6YUJMdzdXRXk2cFFKUTNFTjQwTHBsVE4tdUxsWG0zc01OWlhQQzVR?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "OHB SE Aktie Kurs & Chart 593612 - Goldesel.de",
+          "publisher": "Goldesel.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1SQ2dHTWo1NXF6OF9nbU5ObG91SVdDcDMwMnNYNnNGS1FraE9SRS1LSjJpUEtMY2ZkNzdnRVRwaVBydFN1NTduZjhNMWV4NzU3UmF2S1RZc0xxcUMzbFBxOTdyV0c?oc=5",
           "quelle": "google_news"
         },
         {
@@ -111,10 +118,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "OHB: 482 Millionen für Weltraumausbau - Börse Global",
-          "publisher": "Börse Global",
+          "title": "OHB Aktie (OHB) | Aktienkurs » DE0005936124 - Wallstreet Online",
+          "publisher": "Wallstreet Online",
           "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1IUGZkQWl5TU9sbXlMdzh4S3Z4dDd1YUk5QjFtYlhzUTJDd0FleFVDYW9MLU5wYmdhNjJmaEJWS2VzME5DQTJ3SGtSN0hEVVViNDVTMjZRTXpYUEhUR3NyNFRnVnplMS05N1hjckhnSmJFdjdxU2xuTHJCR2EzUQ?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBVczJ4cFdoSjNzNHU4eG1ZTGxPdU5uSTBDQS1razBBSzVjV1NrVXVLSDJ6dXRvZ3V1X0F4YjRCRzBYTHVJNWJqR2JuRTVUWG00Tm5QcnZSRVl0SnJubXc?oc=5",
           "quelle": "google_news"
         },
         {
@@ -132,24 +139,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "OHB: 38,91-Prozent-Absturz in 30 Tagen - Finanztrends",
-          "publisher": "Finanztrends",
+          "title": "OHB-Aktie: Test an der 200-Tage-Linie - Börse Express",
+          "publisher": "Börse Express",
           "published": "2026-07-18",
-          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1qQXFPTWljaGw0el9OTld0eHF1anFvTmN5Ymo0TkZVbnZEVDZrUFNWWFVqV2dPQWtyM0xWSTExSlp2a29lcU80bnRLMFAteFFvN1NOUEVwRk1kNU1DU3MwYkVHUm5aeVpZR0lZcDA0RUhpZTl1NVAxTUlB?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "OHB Aktie deutlicher Kursrutsch - 17.07.2026 - Wallstreet Online",
-          "publisher": "Wallstreet Online",
-          "published": "2026-07-17",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaTh0RmdXdmc2N3l2UGpISDN0QzNYM0pleVdnZ29FYmY4cXBwSXBkNEZWWGxEZVFtelBFMjJpZXRCYUlrNUk0MWxjWU5WY2xPZHZGSHBLSWVSd2IxZWFocUJDNmFTSEtESjJCaEpDQjJXX25FdnpQVGVKX3hDSmtSYlBRSHlPZEJIdS1LV3l0S29xUmE3YlhTajRkZnZiNklLOXJXczBR?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "OHB SE Aktie: 484 Millionen Euro frisches Kapital - Finanztrends",
-          "publisher": "Finanztrends",
-          "published": "2026-07-17",
-          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOLUt6RnBGUGlTa3BXWk9talk3dzlmOVIza0FoQ09EZUs1X0t2TFpUUERhdlVvd2d3MHRHVk1fcGY4UU0xTEM1RExQWmlZRzdfT1dURG9tTmtjc2hVRHhONHlpS1M0T0p6ejlNM05IMk5pdjVzdGpNVF9VMmNzOHk4eFZuWE12aFdGR0E?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVnd6d1BxMWpiM1oyNU82bDU2M3owT0VrQjVLOVBmS2pOMnlEd0VfNTBjWWVnRl9adXY0bU5vU1ZsbWlLM0dhdjltdW5UWGE4WU5LWkNZVmZoSm00MDZ2SERwaFJBV3FZdzNEY0E1dHBCbnhSOE0zNVBpN1lzUUNicmZ2aFVISWhzRW1MbjY4YXQwUQ?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -160,81 +153,109 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "Dax mit Kursverlusten vor EZB-Entscheidung, SAP-Aktie unter Druckpie) - Manager Magazin",
-          "publisher": "Manager Magazin",
-          "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVUhEdk81MVJOTXlGdXNtUTR4TE9zZjE2dVlmdmR1NHZQc0RMV0ZoaGExc0J0YXBPVGNXbHZQdWxLdjctOHRyaTlEZE5NR3BYNjBleV95UGl3RDdWT3JWM3FXWlM5Z2RBeW51QW5PdmpHdm80WGIwQ0ZxeUJIYXdweUxtd2hVSDJUcVhLTEUwM2J5cVV0VG9GbDBaV01MQzNNaGNmSUlvWnhJczA5OU9QNWxjZEc3NnV6a1NkWkZfdzYwbUR4RjNYcGxIOVpWWVpMaHJlekNfOHRweEpyREliV0g3aTVwcW9p?oc=5",
+          "title": "SAP nach den Zahlen: Aktie zieht an – die ersten Stimmen - Der Aktionär",
+          "publisher": "Der Aktionär",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOW9hY3FKOHBsenNqaGxUd05LdkhCRW1IN0dfTWlUWlpsOWxFRDFyaDJ3b0FYSFpQaGZOLXVLeUs1UTlwb3FqbnBWUlFJeEtMQnAyQlV6dEFiRUtJdlhJRGtpUVJ3YmFZSXQ4SDktY0M2THRPUkNQd1NwemJmeDVOX09HU25BdW9CZXJlQjZCY3k1d01SOGxJcTJnR0hubG1HMTJOcVBuRVB3UVgzM1NB?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "SAP-Aktie vor Zahlen – Chance auf das große Comeback? - sharedeals.de",
-          "publisher": "sharedeals.de",
-          "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPU3kxaFNxdGlUZFVDbS16d25UZTJzSG5hdGVWZ3Vic1E1dEZrU21zY1BnclFXVVVqandMc2pPVVIyZVFaczM2Y29RMHBiLUlsbC1OMDJFUkhXU1IxYnFWWkVDOVZrbmZpdTVZRXNISl9CMnhLSk9ONVBDcVJxWS16aUhpanI?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "SAP-Aktie: Zahlen entscheiden am Tiefpunkt - Börse Express",
-          "publisher": "Börse Express",
-          "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZ3NlRGw0d01GUHg2VWlzdi1BRHJ5UFlTSEdGZ3NfcVRoWjY5RlBmZExlczBvZW5lRlUwYWRwMzQ3QUJUMXlzTVdvZUhaZzBzRUhPX0JIUlh5WnVEVnREbWluaTZHVVZnLTZ6Y3VEY0xFNUpDcDlQbEJPS1JMTUNjc2o4WnNNYVRlcWpzU2tEMUUyMThkY0Mzeg?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "SAP-Aktie vor Zahlen: Das erwarten die Analysten für das zweite Quartal - Finanzen.net",
+          "title": "SAP-Aktie höher: Gewinn zieht weiter an - Cloud-Umsatz über Erwartungen - Finanzen.net",
           "publisher": "Finanzen.net",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSHZiVnJOdUc5eGxSNXN0REtzY2syaHNiSnBHR0FaTVQxUEhoQ0VkSnhkNk9MQ25hcTAycmg4Nmd1NDFPeEQzdUpnbFd0eHJWOVpBUXBuR3I4cEc0QVF4UngtOEpWWTIzSDhvdVQ2VENUcmRjWjdYaWpZNkRzT2FqczZib19fbURrQ2pUUWVtbVpfdElIMkt0R0x1UHhTWk9ST3ZkSlJsazA1UmJLVGlNUUdwbm40bS04MUhQX3FLXzhQUXV3VlNUUG1lVGJ4bGdzODZKTnU0aw?oc=5",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNUE9CTnRDa1pUTDZLWEgtWFU0X1M5STE0M3U5dUtnVmxfRWQ3ZkwxcDMwZnhlZTFPbHZQZWtqcVpPY2Y2RlYtR1BKSzgzQUNqWjBVbF9YNWZtdmdIT1Y2bFJfbnJ5T2V6UFRPa0NJXzZaaDRTLUkwbXBGNUZNMmJueHM0aTFmVWxOS3pmUUw4eDk3QjlIaEVnTVVPRm0xRWNiYWY1S1lrRnFTSkRPcnh6Z1lzQUtpNS0za0t3ZENtRXVHYUNzTEZKbmdYUGVEaVJGY1RaVXpR?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "Dax-Riese im Sinkflug: Warum ist die SAP-Aktie so stark abgestürzt? - n-tv.de",
-          "publisher": "n-tv.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdEZjLS1JakhDRTc2eHgwd25sb1pKUFNYNnVPUzNSLXpzR0FmaHRoUEZIYmRuWFNUOC1KOVhYVUxickFOZXdndE1XNF9yejlhdUh6eUZrVFhEMXpmZkZhRUJISG9lcFdJUEkzQTc2Q2tqOEx5SnJxV2dDd1VHdWp4ZEVRUEJlYTF4UXd2OTZBR3JqQ1U5S1E?oc=5",
+          "title": "SAP Aktie: Prognosesenkung schürt Zweifel - Börse Express",
+          "publisher": "Börse Express",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOT0tjUldILVZMRnU1VmlTMmNmaUJJM3RGcU10Q0JVQWlYQUVzeEtqS05QSVFDLWJBOU93VTF0bUJzc1pLRHk3MTRYbWo0RDctRUdHUDZrZHJ4d2ZSUlpUZURrZF9ONlRQN2VIcTZud2RqRDI2Mm5ibldNbTVNY25jaEhJdURjU1lHNmRyUmsxbUs1bHhUNVdKQQ?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "SAP SE Aktie News: SAP SE am Mittwochnachmittag mit Kursabschlägen - finanzen.ch",
-          "publisher": "finanzen.ch",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPam9aQW5qUmR6SEM1NGp6NUctMFZuUlJzUjRGM1hWaWZwXzBWaGtOTTYxNFRGZ3RVVkFZcHluSFBYOU1UZ3pDaGdsT19MVUVNemhFOGMtUy1paGZXRjdyNTVUZzVUMkFDS2xtMnI5TExDaTh6ak9lcll6dGY0azd1VUdBcUtrRXRhYUdqdC00TTU?oc=5",
+          "title": "SAP-Aktie dreht ins Plus: Analysten sehen noch deutliches Potenzial - sharedeals.de",
+          "publisher": "sharedeals.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZko2SlM3c1ptTGtLc2d0OGN4eTVCWk5TME9kdUVKQXhZbDBDbjBuaGJDdjRWNXR2ZTVpdThEY3VxajVTc1R0TnRpaUw2blBPNWctajBSczQ2ODNzTXVlZnNoM3hNdzQyTXZVaHZMYy1QV0xjX0cxcHlQeUZzYlRfNmJDWnREa29OcHotTUxjUW05RzF0Nkg2Uw?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "SAP-Aktie vor den Q2-Zahlen: 129-Euro-Marke im Fokus - ig.com",
-          "publisher": "ig.com",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObS05d1BRajMxRndqWnZkMG02TzhKR0p5ai1EeFZER0NqdTJLSW4xa1A5T3N3eHA4eU5KQnd3dmdOZHk0Ukd0TGkzYUczQzc0bGt2VjIzRjZWLTNUU2FVQ3pLZVRzRmN6TlhXa2pSRTZDMng4eGdDV1J5WnhtSkd0a1hVN282S2p4al96X3hZdDctdw?oc=5",
+          "title": "SAP-Aktie: Eilig-Meldung! - Finanztrends",
+          "publisher": "Finanztrends",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWlB0OEZZTHM0bTVGTFVwckJQUC0xZGhXVWIzbVhyRnNlZGFXaDJXMUl2cHk0cERwcm9yblE2emEyTXVaTldxSW1BdTVhRV9MTzVVTzdkdklFT1R4U2NTXzFuTFRzWlp5dDdxd0hBNnozUVB5ZUJTaFhLb3c1Y0xHenlNUEg3XzVBS0ZOeFBRT2JiZXh6dW5tUFlGOFp0WXhXT1hyVS1ZQTMwR0szdkFkd3otaF91QQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "SAP (XTRA:SAP) Leans On AI And Q2 Results As Undervalued Narrative Holds",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/technology/ai/articles/sap-xtra-sap-leans-ai-060955610.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "SAP SE (SAP) Q2 2026 Earnings Call Highlights: Cloud Growth and AI Investments Drive Performance",
+          "publisher": "GuruFocus.com",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/technology/ai/articles/sap-se-sap-q2-2026-050049121.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "SAP Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/11cd33c9-0853-32fb-b9ee-18ce4b449c69/sap-q2-earnings-call.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "Dax-Riese im Sinkflug – Warum die SAP-Aktie abgestürzt ist - T-Online",
+          "publisher": "T-Online",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQeDU2U2hQRXNiWVZBRXlZMkRKeXZyVnIyMWxZNjBRaTZ5Vk8tdFBMc2pycWxSNTVFZEI3Uy1Yc2N1UU9ESE1XdUNpWTdCLVl5cGJESWVxU0RmM3doM0ZTRmszQTg3Um1UWi1EMVBaMHlpNmdUQ0hCaUtjUUxFNk1za0ZzajIzNkxUUWRyZkhWNGJ3UXVmc214ZHh4ZWVFeEJBUjBYQmUyUDQ2TDBTNkVOblhadWxqek5CcGxmUXJlNUdraWI3QnRGdTBXZ1QyTTA?oc=5",
           "quelle": "google_news"
         },
         {
           "title": "SAP-Aktie: Champions-Check im Monat Juli - boerse.de - boerse.de",
           "publisher": "boerse.de",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQS0pSM2JzbFRfX1lxcVkzSjZkUDdRbkYzLVhMZjRBN2ZjaXZtQTd2bWN5X0owZDJrVEtSWTVNV0ZJVjBDQVlEb21KY1A4QnY3WFlkZFZZZDNGcG5CeUdTSmg5aUR1MFdPV0E2UVRjbjlZZGNkQWduT3VQSHNpN0pwb2lTZlNjeWhTLUkwVFNBMNIBjwFBVV95cUxQS0pSM2JzbFRfX1lxcVkzSjZkUDdRbkYzLVhMZjRBN2ZjaXZtQTd2bWN5X0owZDJrVEtSWTVNV0ZJVjBDQVlEb21KY1A4QnY3WFlkZFZZZDNGcG5CeUdTSmg5aUR1MFdPV0E2UVRjbjlZZGNkQWduT3VQSHNpN0pwb2lTZlNjeWhTLUkwVFNBMA?oc=5",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMTdTWkJrSlNoNTYyZ1J0LXk4WHFoSmdtdW1jTG1pcEQxSC1WU0hGTVZHOXU5ZDdKM2VVZmV1M3FzZnhIdldWY0o0WTBBR2FWRmJBWnp2SjRIM0pGTFM0MmxxZWZ4NWQyVzR0eF9RV1lURHBKdGtNWEw4Vk9HUDc5T2Nkc2VyMHRBWEHSAY8BQVVfeXFMTTZDR2FZSkxRRjFoM2tsZDB0eHlwU3V6OEV0X3pEMjNvOXlvc3VTRHo2VWR0SFE1dm5NWHdfdUhpa0VITHJzQl84SzRERzJtQ1JnSnFRajZfRTk4Y2xZSUVTZnI3ZHZqLV9zN2I5MmZ4X3pzdWt5c1ZLTHhsb2JjMm5GbDBmdmNSYnJtNFFyRVU?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "SAP-Aktie: Das könnte eigentlich Mut machen! - Finanztrends",
-          "publisher": "Finanztrends",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1QSllMMHlKSURTZnZsUjRjLUwtOGhYWGtkSHVYMTFxR3AzTzVRZHdkZW43YlVFVVpTTjBXdDR1VE9jWk5wek1RSDZGOUNZOHNQNElXVGMzYmhOWVRnMDQ4RldWT0hsUzN0bndTVXdBSnpiMjFwLVZ2SHByeExmUQ?oc=5",
+          "title": "SAP: Cloud überzeugt – Aktie springt nachbörslich an - Der Aktionär",
+          "publisher": "Der Aktionär",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPS1pCblJ5NDVhM0U0TG1BNlVuYl9NSzZ0aWRvMVRxa1ZZY3Bid1o2dkhqaDhpTlAySGxtNHlWc0xNTjFXbmExYTBiazY1Z0dwaEx0Q3VDdXR6NlJIZ2pLZGpuYkkxVy1zekxNSHJwQ2JnZFdySXh0cXhQTDRzSEFlc1JNNDZrMUJEMVAtU0ViTUlsajE5cUgtb2F5WUljVGJVVHpwY2V3MWJnNkNq?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "SAP Heads Into Q2 Earnings: Key Drivers Investors Should Watch",
-          "publisher": "Zacks",
-          "published": "2026-07-20",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/sap-heads-q2-earnings-key-135100239.html",
+          "title": "SAP CFO says AI must move beyond chatbot 'low-hanging fruit' before seeing returns",
+          "publisher": "Reuters",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/technology/ai/articles/sap-cfo-says-ai-must-215249892.html",
           "quelle": "yahoo"
         },
         {
-          "title": "Bedrohung durch KI: Gelingt der SAP-Aktie ein Comeback? - WiWo",
-          "publisher": "WiWo",
-          "published": "2026-07-19",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeVRLaDZ4QXV3YndPbld3Q3RlWTVMazJxc1lxOXpyWHNwazI2QWtQT0pmV2RmSEk0bFByZDhQSlo3R0FZUThnRHFxYy1KdjBiQjlSQUJuMzRodEZPR2d0N2c2M0xvOERYZDJNZHJYZy1vd1l6WnNjUkZXTmZlbnpyYlIxOU9HNlF0LUt3dG00S0FVeGJlbU5MX2RaZ05jMlNkaENrdHZfaw?oc=5",
-          "quelle": "google_news"
+          "title": "SAP Shakes Off Software Worries With Big Earnings Report. The Stock Rises.",
+          "publisher": "Barrons.com",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/d40eff95-de56-3b9f-9d57-954bc93513dd/sap-shakes-off-software.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "SAP Quarterly Statement Q2 2026",
+          "publisher": "PR Newswire",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sap-quarterly-statement-q2-2026-200500299.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "An Analysis of SAP SE (SAP) in the AI Transition Era",
+          "publisher": "Insider Monkey",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/technology/ai/articles/analysis-sap-se-sap-ai-142721071.html",
+          "quelle": "yahoo"
         }
       ],
       "error": null
@@ -243,6 +264,27 @@
       "name": "Nordex SE",
       "ticker": "",
       "headlines": [
+        {
+          "title": "Die Nordex-Aktie zeigt nach Zahlen und Auftragseingang Stärke - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbXZsSmtvcFRTRDRVbTNuX3ljSlNBN1lORzU4MU1DUmRhQS1uWGFZMzQ5amt0Z1ZucGhIOWh0ZWxib19IeDRFblM5LXlTMzV0dzRMMmJkNTJqUDhBdDhUakN6aUVjTDN2dEhfTC1XVkpjMkFvYk1jZS1TRVVXcVFLUUtfVm5sN0t0RTdyMWhTLVdmLWdzTUVYLXBra1lldExGUHNBTU43N2ZRSzg0eWhRRWxNeTFONGljVUFiRC1R?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Nordex SE Aktie Kurs & Chart A0D655 - Goldesel.de",
+          "publisher": "Goldesel.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9kZm1aLV9PT29QVnRrb3pEUkRORW5CVDJkTC13cEMxYmZCbmtUaDRkSWlKdnNlaGxnRHJuS0F3VGN1RGZ3R25XVzluSzFjVGJhTFN1WVlrRjV5U28?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die Nordex-Aktie reagiert auf zweistellige Umsatzsprünge und neue Aufträge - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMFREMUlvenVxNUFsZk1oblh0ZmhycW43U1B1NUV6d2UzMm9oMi1sUWZMaHFheERZdHJqNWRtVXVRVndLY0dDSXV6VGxvVmQxbUNtcGhPS18xRUpKREQxYldfVndoQ3p6WnB1QTJ1cXM3NG9aUWtyRzl3RHNxR2w5Uk5YRkF3c0c2TERBeWF2RV8ybi0ycXRTUE5Fal9renJ1VVV6cjhORDZxX0hZQ3U0NDRYLTUtTXBGcXF6QnFrQmFtcjg?oc=5",
+          "quelle": "google_news"
+        },
         {
           "title": "Nordex: Korrektur als Chance - Trading-Tipp des Tages - FinanzNachrichten.de",
           "publisher": "FinanzNachrichten.de",
@@ -258,17 +300,17 @@
           "quelle": "google_news"
         },
         {
+          "title": "Nordex SE Future (NDXF) - EUX/202708 • aktueller Kurs & realtime Chart Kurs heute - Onvista",
+          "publisher": "Onvista",
+          "published": "2026-07-22",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNlNsSk5UdGNEaVNEd0g3YTJtaDV0Y1B0M2prX0tmZVVOeFo3MDV5NUVnYWh3MnBRd0t3QzRzQ2paeHl4WExLQjNiMFRLcDlFcE1ZLUpPcWZBWHA2azNGclJfRmFJYVdTSUpmLWUzcVQ4c0FUb1hIUVJBMFJHVFZZVXQwbF95TEJacHdvb1BIRFQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
           "title": "Die Nordex-Aktie zeigt nach starken Zahlen und Auftragszuwachs Widerstandskraft - Ad-hoc-news.de",
           "publisher": "Ad-hoc-news.de",
           "published": "2026-07-22",
           "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxObnhXdzJROHdmTVRiQ0FFbU05ZWxmQldCM1Z3aXJzZ013ZmRLTXM0YW9NTEZGdERCbFRxTUN2Zk0tdHZNM3FicWtlTjdXZWUxSzB3NU91NVpoa3BMZ1dFb2p2cEhFYWk4TmNwaUxERFVqWG9HeXBRRXdSWFdVYkdXZlN4aTZFcmVEXzMtclY2bm9kN2lJRGFacHhGbnpNS2JXMnhjazFIZjBvb0tQd2hiTWJ0YVU3cl9lOFQ2ODZB?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Trading-Tipp Nordex: Korrektur als Chance - Der Aktionär",
-          "publisher": "Der Aktionär",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxObmkzMDd2S05tdXBwS1hlVl9ZVksxWFlmYmllOU50WWdmbnFPUFFCampTclptb0JnaGdaN0JmcXgwZ2czb3A3YXhlR2lpQlo4UGxPUGZXeWhvQ0lZWlpyQXBxQ0RyMnhnQ0lGWUY2SUdxVUVRREc2Z3Y0U21pSzdZU0NTMm14NUNiV3hVQ0I4amRMZml6eEFXOTdZbnY?oc=5",
           "quelle": "google_news"
         },
         {
@@ -291,27 +333,6 @@
           "published": "2026-07-20",
           "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNU3liSzZPMHk3VnBCYmdwTFl3MmZIbGR0ME45dF92SEhCZjRoUjNMdTg3TllqUnItc0N4VjJiTG5Ya1ZNaHRnTV8wTmFNR3lvaGFvMWQ3UDZIUmphcDF4a0xPdll2c2xQUW1sb3NEM3BvZWIxQmxUd1VZd1hCeFdGRlo3TnNjeVFVUDd5TjJmMS1tbnUzNS1TQ3ZXWGZJTEYtWlBtSExXYzI3LW4ySHlwbko0dWJnQQ?oc=5",
           "quelle": "google_news"
-        },
-        {
-          "title": "Nordex-Aktie legt nach operativen Zahlen den Fokus auf Marge - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWmlVWDZFb09OTzZnUVA0Q3lyZXdwSmY4MVp5OGpvc092RVVTWXNZcmQyVkxiTVRlY3d2allWZGIyZVFwTXlCMHE0MnhmM3VvRFFST0VLVmN1dTYxTzBNRVNhYXpJMlhRNi0ya2xZa0tjZjBCdFdaTklkRXJwbVhyc2FXTG1LSE9aQ2o1NUFDMjVLb2s1MkVmRU5TUVhUbDkzREgyckZTYWJwNXZDMDFqb08ya3BzQlJhQUtV?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Die Nordex-Aktie zeigt nach jüngsten Zahlen eine stabile Entwicklung - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-19",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQOXRxbS1oUm5UTGtrRDdsWEhQSUlManBKYUFuNm5QT2xhQVctcnVacFFVaUV4XzlPVjk2a1dLbGFwY1BwMjAxM0hxYVFzY3ZwZVhFMVFqVE81RGZxOTlSTWk1VlFyMktndUV3RnhQQ1ZpSlQ2WmJFdkpNTzI2MnB5WGYyVU1TRThxenRXTjNoWUtOa1Njc1Jna0lDa09ib0tmVjZiT0J6RU1TM3VHSnpHX2xYc0tQWUo3Y0wtOTU1T0FldkVqMHg0?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Nordex Aktie fällt auf 39,88€ - 17.07.2026 - Wallstreet Online",
-          "publisher": "Wallstreet Online",
-          "published": "2026-07-17",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQnVWd01HLVhFUWdpVXRmS1JjR1NSX1oxb2FFTnQ2eURNbXl5d3NpeU1qQUU2VDBIb05icS0zYlFXaWZESEhNSEJ4WUhmOVpjejNIYjFxU2gxOGFyVWFRTlVSYTd1N2JlaWpqUElMNkZoWS1yVm9aTG80akJrS2ZiV1JfWS1ESlJVUTFtM2g1eWVxeXlSeXJmYjh1U3JOdw?oc=5",
-          "quelle": "google_news"
         }
       ],
       "error": null
@@ -321,17 +342,59 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "MTU Aero Engines-Aktie: Kurs erholt sich - WELT",
+          "title": "MTU Aero Engines-Aktie: Unternehmen schwächelt - WELT",
           "publisher": "WELT",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPblQyRUFMZGctZVE4R2w2ZVlWeTAzX3d1TWhqNWRUNDE3Vmtxdzl3MlNQcWpWcFlaTk9rT0JUOWtqSmMtdFZvZWRfZkJuVVNSSS1rSXFOQm5jSXN2dTZGWVZzUnh2RjZpUjVsNW5ESXB3Q21VbmMyNkJTN1J2S3YtUnkxajV2MExtbGE2Nm45NThlbjFGLWNFUVVVMTlQamFrV0NsaG83NEZDWjE5bkVWOGw2UUwzazFMLUE?oc=5",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPblJSUHd4bDRYUEJ4cUxrN25wcW84b0xWMDRsX3o2NWcwRThMUXViTlFGRzJBOUV6Z1RRSXlPeUpEYzFkMFE5MnFsdzBJaVhpdUtiZmxJZ1FIWjZYMXF6RTBTVW0yS1hoUnNsQkFWZzlSbUtpNzNGVUhFQllmc3VvRkVLZldkWl8wS19sYnczRnpfcXRzNDhVbWg5WDJtcDhrcEZzb3JxUlBWdkhmZ1cwXzBnRGlNQ0VGdHBj?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "MTU Aero Engines-Aktie: Champions-Check im Monat Juli - boerse.de - boerse.de",
+          "title": "MTU Aero Engines-Aktie: Lohnt sich der Einstieg im Monat Juli? - boerse.de - boerse.de",
           "publisher": "boerse.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPU1JqdjFjY1pIUFh5cHZqV3ZUdTR1SWd6SU43SGlIbWNVQ3dBZ2RPaGRMVUl5Q3Z3NnhYT1l1YUgtSzZlZWRoMnZiMWs4eFhRZTllTXFxUlNpTVA1cE5qVFJ0NkpEcmwyUmdLZl8yWFVTNFFrYWVCdVBPTkZKSVpiam1PajRKMUl3NXZmb2toVDdZVXRZXzA4RjFPY2MzZXdQVlhWLWcwMUJDQ2vSAasBQVVfeXFMT1NSanYxY2NaSFBYeXB2ald2VHU0dUlneklON0hpSG1jVUN3QWdkT2hkTFVJeUN2dzZ4WE9ZdWFILUs2ZWVkaDJ2YjFrOHhYUWU5ZU1xcVJTaU1QNXBOalRSdDZKRHJsMlJnS2ZfMlhVUzRRa2FlQnVQT05GSklaYmptT2o0SjFJdzV2Zm9raFQ3WVV0WV8wOEYxT2NjM2V3UFZYVi1nMDFCQ0Nr?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "MTU Aero Engines AG Aktie Kurs & Chart A0D9PT - Goldesel.de",
+          "publisher": "Goldesel.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE91YTlRYnF3WUNDenBfdTNFVlgydUEzMGMxQWYzM09yM3R1d1dCLTZaWUJLbU9SREJoR1FXalBvd3FqVi1KM3ludjlQbkhQZWpsTG9lYURpalVYYzlpUlBZdHlkQ2VFRmNqUTRmdGtpTzlReUhxd0E?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "MTU Aero Engines-Aktie: Ohne Veränderung - WELT",
+          "publisher": "WELT",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZU5mZ1RFTHdtZjZWN1NieExZSFpISlcwVGVJWU1PUnZCdzBEdHFRcjhHSUZ4LTZXRGtoekZyaWhLZmxFQXEtVV9lajBneHp2NFZUWlpOWDZnSnpkWTFHUDlVdUkwWHFrYXdyY0VCZ050TFNoaFZGV0dTYXppNjJRTkN2QlNMNW85c1QybzJ2OFZ0ZXlRem1JdFcxeUVHREE4Umw4c3dqaGtJTGNvV21LbkQwWQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "MTU Aero erhält bei Farnborough-Messe Aufträge über 500 Mio USD - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQ2QtQzhwenp3ZWd4X21HQWhLakItY1ItSGRvemlJR3p1RVItTUpMcmY4Rmo1SXVtWDNKLUVYUjNZLUpWd0p5bENGZUVLeUtMN05wUGNGSkt0TFdlTGp5WGhkcEhNcDlTTHB1SHhhR2lYRzBORXpFYW90Z0s5UjFWd0RBRzQ5Y3B4UDJQMWpuNlZ6ZDktRlkwY3d6bEg4Mi1kUlVueFBqYXpUa1ZKSHJRZ0lDT0Jhazlm?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "MTU Aero Engines-Aktie über 38-Tage-Linie - boerse.de",
+          "publisher": "boerse.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVVVRZVlSOExhR1V0cGtjelBycDVoQTV0TlU3SGJrMFVFT21kZERDVnJwSnJybTZFNHdWajktQ29LMURTMF9KQVpmUVU1Q1hWMkJFU1Rnd3ZwMVRiclphQWhCOW9ZTUtnM3pwR1RfQW5BdkNMS1VuZVkzOHhkQlpXVWhldFJZNEhrN09qb3dn?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "MTU Aero Engines-Aktie: Kurs gibt nach - WELT",
+          "publisher": "WELT",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdnNJUkxKUGJkNGxua24tOW9meXFuSGw4VXlBTE9BeEFHd0Q2bVNjbzRYeWdselFjVFRIVmp1enJKOGttWWtpN25QaGtfZndTa0luRnVzYWd1aGNCYlA2Z1M2cVg3NmgyZml6LVR5LVhhUUVwT1V6LXNUak1QOUloYWVYaFN0QVRvUTZoSlRfRDZMRmhFeHpubFRidGk1NFFublN0M2QtNUdWWTVySGxz?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "MTU Aero Engines Aktie News: MTU Aero Engines am Nachmittag schwächer - Finanzen.net",
+          "publisher": "Finanzen.net",
           "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcVl1V1IxVHZXeVZqcVZveDRJd2JucHZOUWtWV1dSMG82MmdLUE5ObUZGZC1pRkhNTkd5OXJfblhCU21zYWxSVmZnaE9LaGh2ajZUUHFqRDB5S2N2bW5uVExXZUZIUnRNSnJNUTQyZVlpZGUzNnN4bURPc2VQcFFNZ29lRkxQeWFvdi1CWEpvb2FZNUEtQ012b05UWU5pc2ln0gGgAUFVX3lxTE1xWXVXUjFUdld5VmpxVm94NEl3Ym5wdk5Ra1ZXV1IwbzYyZ0tQTk5tRkZkLWlGSE1OR3k5cl9uWEJTbXNhbFJWZmdoT0toaHZqNlRQcWpEMHlLY3Ztbm5UTFdlRkhSdE1Kck1RNDJlWWlkZTM2c3htRE9zZVBwUU1nb2VGTFB5YW92LUJYSm9vYVk1QS1DTXZvTlRZTmlzaWc?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5KUEdQVVV1SlZlWHAtNGhiNkJBRVMzUkF1YTZwa3NmZ2E4RTROWjhocEVRQTlSbWNNR3NPTGJlOWhKUHVhOEVPT2pxUS13WlhzS1Jjb0w5RnVQVF9uSC05dGN4XzBDWFlpd0FSUDlFNnpiZ3FpdnktaVIxc9IBe0FVX3lxTE5KUEdQVVV1SlZlWHAtNGhiNkJBRVMzUkF1YTZwa3NmZ2E4RTROWjhocEVRQTlSbWNNR3NPTGJlOWhKUHVhOEVPT2pxUS13WlhzS1Jjb0w5RnVQVF9uSC05dGN4XzBDWFlpd0FSUDlFNnpiZ3FpdnktaVIxcw?oc=5",
           "quelle": "google_news"
         },
         {
@@ -342,38 +405,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "MTU Aero Engines-Aktie: Unternehmen erholt sich - WELT",
-          "publisher": "WELT",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUHduamVGdGMwVzBqZFpIVXFWT3I1UzJvQmU1VEd2cWljMkZSR0I4Z2JRdlpvcHJDQ3d4YVJGcTE2RjJCa0t3dXEza2NTSUwyeXdnQV9VSHJROVZlT2VfOWtZSTZOWk5hT3FRN184a2tjckZMY3E1Qk9vY2ZJQUcxNnJsdV8ybmpiZ3NOMFJRS0MwdEtzM2YwbEdTXy1lQnN5X01Hemt6dENWVEtHOEZIU2JqWENRemJRRy1r?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "MTU Aero Engines-Aktie: Ohne Veränderung - WELT",
-          "publisher": "WELT",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMlJKNnJHMklvcEI4enBFRlVOazVZeVVhQ1JhVUdjOVlwemo5M25YVHRTZ3cyWTFmQW9tWFByaEtBQlBDUlA4Snc2T19DZmFieWs1UkIxYzlfRzQzM3loZE9lWHN3eTYtTGVnUl9BaEY5azhuMG9fMkJTTEZuZnp1dzJuNTUtTFpJdmV4eGhCQzI2QVljdVZGSWhsLWtqZzJzY29qQmtTVi12VHBLSmlvU1Vpaw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "DAX 40-Wert MTU Aero Engines-Aktie: So viel hätten Anleger mit einem Investment in MTU Aero Engines von vor 5 Jahren verdient - finanzen.ch",
-          "publisher": "finanzen.ch",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOaktvTzJFWGhYYk95cHl0NjZmRXRraXJMVVN3MXQxaEItOWtnVlgxS1RMR2VHU09wemJ3TUVJeGw4OUxxeTRnc1ZHeGc3czdtWXl6OTFQR0lQR2lCZG5tWGV5RElLOHR0M2h2UUtQWVNiV3lpMlJaT1V3NHQzLUpOZXc4MlFzeFFFOE5WOGhHdVdsdUlaY2piSHhaS0prdjRRanRqUTRnNzhONzZXdUdUSzYxUjRVZi1Rb1ZHc0VVQzlla0dXbDhDamdZUlVPdDdoc0Q1aVJOUTFROHVFQkhYNFpORlVnQ3lVcnU0cFNtR0FBZUpOcVhWN1FxMjBiUmdLZVk5WlRmUDltbHM?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "MTU Aero Engines-Aktie unter 38-Tage-Linie - boerse.de",
           "publisher": "boerse.de",
           "published": "2026-07-20",
           "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNc1ZFelpPc01Kc3E1dFFKYWdDbF9hSE5FTE93U2NPWXg1MmhqcTA0MmpZZ21LV2RPblNEWmNZOXM0ZGxPOG5lRzYwSGNwYWVmV0tQT0ZkVmdDV1lZdTRvWXl0elhjTkdqZk9CWGJnN3VpMUVJemxiVlB0YW9JZEpET3hMOFIxYmNpTjQ0TmNR?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "MTU Aero Engines-Aktie unter 200-Tage-Linie - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-16",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNM0RaWG9VVVpOV0xzampLSUEtZ2ZyR2lPVjBLZUliWURfUElITWU2UVpwVTcxVU9EbjVDRGprVXZtbUZRT0xGMzdXVlhQV2wwQjlXeGpKdTRhcmRqUHhfczJUTTlCVDhZbXJ0MlE1YTlpN2hGdzZSN3g4V2lyQlJwbFBCXzBKUXJ3TkFYSkQ5RQ?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -383,6 +418,48 @@
       "name": "SMA Solar",
       "ticker": "",
       "headlines": [
+        {
+          "title": "Energie-Aktien im KI-Boom! Kursziele steigen! SMA Solar, Bloom Energy, RE Royalties! - Wallstreet Online",
+          "publisher": "Wallstreet Online",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPZkJraVVMeEtmTkZGb0pjSTNsVGgzaTdXY1hVbDJObWJjVzhyeFdHZHZmTEpnYmZpZElvLXY5bXh5Q2ZqZGRfSHN3SmFuV3RTZWdjaG9NMFJCN1dtZFRvcDBDdnVXM3kyVFpWLWpnN1ZmbTkyMDBPQVF6MWN1XzYzQU1UQ1laaUdlLWJ0TzBDeGlxR0Rwd2p3eWdQUDNwRjN0YUN4aU1ZaXpxNVBfbkVUNndkOFJMN0V1RDZtaVYwaHBTaWhBZkpv?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "SMA Solar Aktie News: Anleger trennen sich am Donnerstagnachmittag vermehrt von SMA Solar - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbFFWbC16TXBrdnQwM0MtQy1ZTEg0ZTFaMjFRZl9RbmpiZ09uTUV1NHcyaDFmeUZ3eDk1TE42VXpORUZtV3JkNWlBelEzV2tjRW1XY1d6ellSTHpYWjdpWk8tUW9XbXVXQWQyQkdEVEdsZjlhVnlhRDVKcTdBUXJLUHk0YWpWTl9YSFZPUGk3Y2tXSExT?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "EQS-PVR: SMA Solar Technology AG: Veröffentlichung gemäß § 40 Abs. 1 WpHG mit dem Ziel der europaweiten Verbreitung - boerse.de - boerse.de",
+          "publisher": "boerse.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOc0lCMWFZbHpSUm95X3piZDZEU3dEWTlSa1FXNWlXcURfVGtDY2tJVkNzRWNCZnQzUUFkakxfcHcxa3M4ZDVEbjUwZzlKdWhaaU10RFdWN2hudVlwVWtFb3p1WnRFT1pCbXRLQVdpT0FkYW53V0VBcDA5V1ZwRUpPd3NPdEhGcTQtanUyM3JoN3VJczI5ZFFEclgzNjhzaU9QeV9LN1NnRnlTbDczWGxoOHhHVVVQcUpNMnZrbVl1Rm1fNk1pUURRT3RkaUF0eXdrODJHc1laeHZKZGpwQVA4RU1NeUxHejNtVzlwYtIB8gFBVV95cUxQdGZ5Y0E0NTRya2dJeG9iQXpyUkU3Ym9KNFd5b3M1RVd4V0YwM3JObWExaHpDa3hCQXVlbGJ2aDNlYmdoWjFZbnFsMXVod0dzUGdGTzRhdFp0aHh2MVBhVU5NbUttazc0dEVHTm8zR0pMN0lPbnpnaUJPYl9aT2NBWnFZNHc5RFo5ek5PbUVHSXBnV3BZNzZ1N0lwM3pfTWVFNTVMWXRyQVBjN1Rmc24wWG9BWUtTQ0hHTjBTUWV2d0VtYlMzbXU2eGViRGJucWY4X1R6NXRUbG9uR2tlLVFpZDJySlJjdloxRDF6aC1GV3hYUQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "TecDAX-Titel SMA Solar-Aktie: So viel hätte eine Investition in SMA Solar von vor 10 Jahren abgeworfen - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQS1lTNnRUV3U1UVRoMTBlUG1zWEQ1M0xJWWhSbU83SGtSX2loMHhiVnJ5NnNYNzQ5ZWRwczlmdXg1OW9xbVBxQThlbEJvY2FCd2xNM2tnMWJzRWF1V19ueHo2ZnljUkNVM2xMeDBmU0VCR3NodUdpNC1mSWV3b2duVHAwUmEtekY2ZF9GcTlGdlFNWDNqZ3JVTG81LU1STnFBYUFDWk5iUFhGYWlkRHZ6LTdXQWJaVFRNNkpnRVc5V3BfeUxUMWhRd3ZPRkQzaG1zbEk0OGRHUmNHcENkbDFaVnEwOXQ0VERS?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "SMA Solar Aktie News: SMA Solar zeigt sich am Donnerstagmittag fester - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOVEsxZmtLc01yaERkZ1JPbkM3LXBjRDlJd29MUUFhdUF3UWhOTWRvZTRtSm4xLVVQUENQdEhXUWFPTEhPLUd1QmlVLVh1UVpYZ3ctOWJaeXdJQmdZbEJBR3RTWFZyQUp3ckdqVE9LMUlWNWx4YzJteGZXOWRmYVUwSHBzTmZaM1RPRmVZel9sVlQycHdG?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "SMA Solar Aktie News: SMA Solar schiebt sich am Vormittag vor - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOSldWLXJzeUt2TUtCNnlBSEJNMWZUX0xmTWZxT1BLdGQzR25TSThWY2RVWm1aUWRRbzRmanBSLVJaMkJlSHVCMVBYbHpobjNDWmZJN1ZiUWFIekxVelE0RURjaEJzM3gycE1GMHVPZmRuSTMwT1FibjFIODd1VFFqWWVwdUh6S1pCdFliWTJWY3gxbU5K?oc=5",
+          "quelle": "google_news"
+        },
         {
           "title": "SMA Solar Aktie News: SMA Solar gibt am Nachmittag ab - Finanzen.net",
           "publisher": "Finanzen.net",
@@ -398,20 +475,6 @@
           "quelle": "google_news"
         },
         {
-          "title": "SMA Solar Aktie News: SMA Solar gibt am Mittwochmittag nach - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNXzQybzllLVU1SENIaWVYMHNUaVVsakVkNmZWYTVycF9yaGZwQy11RF9RSFJXS1pYVHBhRGo4MEo3UXhadndLMndaRFhvckVXOXJmMGprODN2SkluVzljZGkxc1RCTzEyaWJYVko5Wk8zVzM2UGFTOFNIRmkybVFGYXZGRk1hb0pYT1haNXdKMVdVdEE0?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "SMA Solar Aktie News: SMA Solar am Mittag Verlust reich - finanzen.ch",
-          "publisher": "finanzen.ch",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPajN0RUJkTUV5cDFvQXZPQTc2dVkwQlhWZTFNdFdBZXlyUU9wSTFxLWNCQ3hQZjVtU0dsS2JCUEtHbUV0RmppMGx4SDg3OEpOOFR3ZW85Y1IzejBYZDI0eGcyQ2ZRTXF6c1YwLU5pai04WnhsOVM0cUNpVGJ3OWp5dUxjcjEwSF85U0hZbkxQM0ZKcG8yUnJlVQ?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "SMA Solar Aktie News: SMA Solar macht am Nachmittag Boden gut - Finanzen.net",
           "publisher": "Finanzen.net",
           "published": "2026-07-21",
@@ -419,38 +482,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "SMA Solar Aktie News: Investoren trennen sich am Vormittag vermehrt von SMA Solar - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPWkxiUHdPelZWMzBGeXNwXzBscGNzaC1MYkNmSlJlNWQzYzlSTnNLM1VHdHg4NlBDMnFCa3hsanNRSF9nNEE1OUNxdmcxTWdIVmVTeVFaX2Q3XzQxZjYxTzNRQ09iZllTU01pazNwUGZQSXpKT0Z1b2Q5X29TZHNHdlBoVlRiZHhLeHZsUjRScVRMV3ZM?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "SMA Solar Aktie News: SMA Solar am Dienstagmittag in Rot - Finanzen.net",
           "publisher": "Finanzen.net",
           "published": "2026-07-21",
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZm40RlhicW5MajV0WmotUjdoU2F3VEhRTXU0clNKQ2Z2LXNXR3NGS01KWmFjaFRPUzVpdzl6VzZTbVgzalRmUlRRNzdnLXpBMmt4OGwzbGY0LTgwMV9YVjhabm1LUkkwdHZuUzRKTXNOTG9lemNaODNCWXk3T0VaN1p0R0xCUVpsX1FLeVliMFJBRVdX?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "SMA Solar-Aktie: Lohnt sich der Einstieg jetzt? - boerse.de - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNkZOYTRJdUVoS18tREJha05xcGc5bUg2MW1ac1Q3VnhCOUM5cXFUV3I4N3VTb2Q4T3lUM1dGYnc2d3g1M1hQcWVrem83U0FoMGkyTG82WmNZVXlhN1VQWFFLRmdpNGpiV2FNSjRIUXhrU1RFclYyeEp3eXlFc09PZzJVR0RpMUUtdHdiLWUxQVlfYmUwWkVF0gGXAUFVX3lxTE82Rk5hNEl1RWhLXy1EQmFrTnFwZzltSDYxbVpzVDdWeEI5QzlxcVRXcjg3dVNvZDhPeVQzV0ZidzZ3eDUzWFBxZWt6bzdTQWgwaTJMbzZaY1lVeWE3VVBYUUtGZ2k0amJXYU1KNEhReGtTVEVyVjJ4Snd5eUVzT09nMlVHRGkxRS10d2ItZTFBWV9iZTBaRUU?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "SMA Solar: Hierauf ist technisch zu achten - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZ1ZNU1N3dS1xQ185UzhuYjdJU2FfakV3M0ZHekVKSUp4Q1JRUmZoOGlta0p1VjVIRVI1d0pOVHNGQTd4RVp3RS05MFFnSTlTX0RkbFZYMjZvYkF2WkozX3VlTGxmZTBWY2VpMEVWTENGMUJWSDVmeWJBTU90Rld0LVdkUGw4TWFrVjBXNUhyVjFNRDI1STAw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "SMA Solar Aktie News: SMA Solar am Montagmittag mit Abschlägen - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNa19uald6RzRRZ2NuRUlMalAzWnJCWmU3TlN0TDRQdEZzbi1wM29VNWNqSVBmRmpQNm42aVViY0VfS3I2WjYzYlBQYkJHeXNDc1dNemRmbGZRNG1kV2xnT2tuR3hEMVp1eWpvc3FmWFVpQS1vSzU0ZHFJQVVCdklCTGpVMk9uUFhYUzRaQzZMX3JTd0kw?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -461,38 +496,52 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "EQS-NVR: Delivery Hero SE: Veröffentlichung der Gesamtzahl der Stimmrechte nach § 41 WpHG mit dem Ziel der europaweiten Verbreitung - boerse.de - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPZjNINm80TThPMFZxRXZaMzNLeVcxS0Z5US14T1lwdEp0SlMzWjN5emgyY0lnR3I2dGYyQnA5SEZZT0hSd250dHRMM184TzZPZWJ5U0JQTUJsWWd1WHlvclNfNTk2RHkyUWNzM1NIUmhHUnQwQlFFUFc5MG5XbG9mZjg1Rm1Xa19HWFNIOWNQQ0h3Y3ZodkJlZU93NG0zUEUxblBMRlBTWHdyVkpxY2M2dU5MUnVnWE5MSXhTNFl1TlJrVUl6LXN1QzlxUGlyREhzcE1BSnVwang1RlQ0RVd1bjlzel9wdEMxWVBfZkpvSG5OU0U4NUNhdVZaSWhZSy040gGGAkFVX3lxTE9tWDhHN1NDZGhCZXQtYTZhVFF1Mk5LS0FMZjRzVUI3NzdQVjlxdUh2TVhqQ0pxZDZxVGJITVBCZU9NYzZ3dUdvUktJOVZyZEI3WVlHTndnSWIxYklPTHlSUlFBc3c4RUk5NG5XWTRVWEdXVkROeDRiZnBVaVpTVWdqX2VlWm4tMTNMQVh0UkUtQ2dScEhrVjBIQVNjOFkxSlE5U3FvTVZkMERoTW5PcFo0WmxvYWdGRHJZUDJ6dXBNTDI0VW9oWHJfcWZmTllaVUZvSUhaa0VlbDlzWGhjOV9EdzIyRTJkeWxLMEMyVlZ2bkVhYWF1MXdxTzNhdkRkRXhLemRiY2c?oc=5",
+          "title": "Delivery-Hero-Aktie setzt auf Zahlen vom 24.07.2026 - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVHozcnNfUTdYWDhDaXJ4ejJMS0JDUkd6cU1nT0FjaDFHd2dLS1E1YUM1X1pEYURsa0JuYUdFbjN5S3dkQkNGNVJSbUI4ZTRWRlFsbnBxUE9SaGoxWS1GbUlnNWJfU1hFZWEtMUFnY0lOUHN1ZHJhbll1UG5KaTZiSXVJOGthY1VJSDh6cTdGRGMyd2U4R2tDZHdRTVduSWdrUzJtMzVQdjBXd2NwNzlR?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "Die Delivery-Hero-Aktie bleibt nach Kostensenkungen und Umsatzwachstum im Fokus - Ad-hoc-news.de",
+          "title": "EQS-PVR: Delivery Hero SE: Veröffentlichung gemäß § 40 Abs. 1 WpHG mit dem Ziel der europaweiten Verbreitung - boerse.de - boerse.de",
+          "publisher": "boerse.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQZF9Sa2laZFlEQmtLMGE2VENTeDZEOFU4MzE0Q2sxV3pNQWo1TUlIakdFTFRrS1NVN3VQUHZTMzlOU3dDOWp3bFNueEswX3pxTnVTQk9ybnFrRlVZMjBvbHE5M0tER2N1NGJ4djFIQXdyajlRejV4Nm1HY3JuT0pLX0ppTWgyckNjVU5PTmVDRkJXeklfQkhhUHF0X1N3U1hxTGJON3lvTUliQjFTSU9KZnQ1TV82eVlZdGF1ZmFZb0o0SjBZRWFwZ0FvcDNUc2hsTGVEMnc2ZFptZTF3dktsWk1wb9IB6AFBVV95cUxNamZsQmk1UjcwUUZxZWNMLWVHdF9haUxnaXpicnZrcF9ZM3NSdmlXcWJ3NEQ3ekM3Ny1lZlNEaFdOVkNtbF9RSmNJdmtCQTdhQjFDR29aQ0htRF9WQWp2MUJTdlByUmVqVG9VTm1ncXRvSHdpaGNqdDlDckhWNG1vLXc3ckVxczFBbVRiLU1hdWEwVUNjVmRGamtqLWFEbjlCUUpoZVA3ZHFmUVNjQVRvcXJMNE5KUF9TRncwOUtaQVYwWXM4RkkwMjB3UmE4QTJrM0ZzV3BJVHlfWl9rQWJsMXVoSHl2cVQ0?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Delivery Hero SE Aktie Kurs & Chart A2E4K4 - Goldesel.de",
+          "publisher": "Goldesel.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1VT0tqTHNGTloxMENpQnliMzI4b3RyYmhGNHRzd2JBRmRLaHQ0UzhhUXVGeDVWcFlvN05Fd0NraGJzOUg1S3FadVdMMXpwUjJDVzdNSnN6OUZVZzdwbndseXV4TE5Fb2c3S2xFOXlB?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Delivery Hero SE: Dr. Johannes Bruder, Erwerb von 5.443 Aktien aus genehmigtem Kapital durch Abwicklung von Restricted Stock Units („RSUs“). Transaktion als Teil eines ... - MarketScreener Deutschland",
+          "publisher": "MarketScreener Deutschland",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPVzF3SjA4eGVWMEQ2cUhqNVN6MDVWRko5S2V1cVhsQkR2MDBOX2ozTUdqcW1PR0FfbHU4czRIS2RTQTZfbWhpWHpuT3hibFoxeU0xdHl3azNSTmhuRXY3WVJnS2g0el91TDBSMmkzOGpXRkh3RUtMX01pTXhxYVhOUklqTm1ybm40WURYVzhyM3VDcDNLZzh0UXFobm9Za0RFTFpMdlZkb1NLYnlqV0ZuSnF5WnpPUXJ4aVZNRWcwMnBRemItMEljUjVna0JjTkNQbENXd1QzTURwSGpXVjIwUlA5NURQMXBEYlJVT0RValV5Ym91RXc?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die Delivery-Hero-Aktie reagiert nach starken Wachstumszahlen und MDAX-Ausblick - Ad-hoc-news.de",
           "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOZmVUZnhQczEzN1Z4dGpjejFJTUJ5MFYxemJGZUExaDZxbm1JXzcweTREcHRkV1Jrd0thVGpPOUc2N0F2Y0FhdkxGNDlTOUx5Rm1kRy11Z3JiU0pEYkVqSzE2dE53M0dBcTQwVXFDZ1l1b0xEaHRibGdwZFZ5QkpBbEV6U3pOUHYya0RzQ0VTM1dBWVJWVDNDYlFudENmbUMtT2lXLXhyYVR1LTNobEU5aC1KVnVWb25ndjFBMHB5UW9yTEI3ckJ0TXJKMW8?oc=5",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcWpaS05lMzE2elVsYXQzeThqYjRZS2x6cEd1clVtUUZEQ3FEQzNIUHZXNmlnUGZUdTN3blNwdFdnUTdyRW1ZMVpZWTBVendkX09aRkZXZEF2X3I5Q240SnZZcVhmUXBLZG9HSUlzMks0VnNIVm5hRVdUaDJWZ01YQmtHeWJ4ZzBQeTduaU1SOGVzMnE0Z1UyOEg0RGpXaG1xYm9FT0R0bGxXYVRJcEZQMkxkNHd1T1FnM2p1ZW04TWttUQ?oc=5",
           "quelle": "google_news"
         },
         {
           "title": "EQS-Gesamtstimmrechtsmitteilung: Delivery Hero SE (deutsch) - Ariva",
           "publisher": "Ariva",
           "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTGNZeXJ6NzZXQXRfS055T2VwMFBUNXNwZUxVVWQ1Wng4NlBSSmFsMklaallXeElTaUZRTjU2b3c1VTdkUG5uSHRvWnBXNV80dm1CZmJkemJYU1Bkbk9aRXYyN2ZqWnJwT0hLX0RuTHhaU1F5Nl9WWmhLLTN1REJnXzFNTms3UmMyay1GekU4TUktbUg1ekE?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPZEd2WU5kb2pkYkdlZTRwME1sNFAzVWpqdUY4R09KTGxKQVdWcjcxcEVMcE1MWnJIN1lUWm9ISEIyVkJTZnhLcWNkODZMUDNGOWNrendGWGQtc2RXLUNoYWtia3ZvSktYbFZHUFUxSEREQm1acFQ1VjlkZ2N0OWQ3dzN1TEgyWEZpR2pWYXRJbWpSTWQwdWdlMWtsbzNiMFZGTGxOdUtVWm5fT2JxbXgxY19lb3l2ZVpUbGtWMUxB?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "Delivery Hero Aktie: SSW Partners übernimmt 14 Märkte für 1,4 Milliarden - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
+          "title": "EQS-NVR: Delivery Hero SE: Veröffentlichung der Gesamtzahl der Stimmrechte nach § 41 WpHG mit dem Ziel der europaweiten Verbreitung - boerse.de - boerse.de",
+          "publisher": "boerse.de",
           "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaEhjQS0ySFA0cDJzT3FhTVpPOVBna3dOSFRCU1F6RUVvQ0d3SjRheENfd2hmekVDU3h5TjlUM1FMSG94MUxpc28xOVJtWU82SFhEeTNoX2ZfRXR1QXZKQWc4UDd4Q1l5RHZFWlJkTXdIeV9oWEVBQUNUNzAwNXhtNllMTGhNSDdhcm94dUlFdUgzZHk1dWZFdFI1dEx2YkoxaUd3WDV4YUlLMzZja1VoYk1GbGNaVmZJWDR6QUtHbw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Die Delivery-Hero-Aktie reagiert auf neue Wachstumszahlen und den Fokus auf Profitabilität - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNb2ZySnlDWEhpNXJfLU50TWM4MnNLWFVyM3l5MzRPOWtSUDVaOGpHMWtYOTVpalA3cXBHeFliZFhWTlZCTUpkNGJfU3lEZVRKZkNHOTkwVklRSTRvdXBFMVpRa05DQzlWZ3RSa0hia3Y1MFJEUXROd3FFWXhBTGloa2RsZzlBaWl3c3VBU1A0UXEyUG91Y2p2eXJDckNpZGlmWk1oZGxpUEI4VkNvSjJieHFXVHFzT0tLMnY5QV82ZFhzc0hGSEs0alN3?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPZjNINm80TThPMFZxRXZaMzNLeVcxS0Z5US14T1lwdEp0SlMzWjN5emgyY0lnR3I2dGYyQnA5SEZZT0hSd250dHRMM184TzZPZWJ5U0JQTUJsWWd1WHlvclNfNTk2RHkyUWNzM1NIUmhHUnQwQlFFUFc5MG5XbG9mZjg1Rm1Xa19HWFNIOWNQQ0h3Y3ZodkJlZU93NG0zUEUxblBMRlBTWHdyVkpxY2M2dU5MUnVnWE5MSXhTNFl1TlJrVUl6LXN1QzlxUGlyREhzcE1BSnVwang1RlQ0RVd1bjlzel9wdEMxWVBfZkpvSG5OU0U4NUNhdVZaSWhZSy040gGGAkFVX3lxTE9tWDhHN1NDZGhCZXQtYTZhVFF1Mk5LS0FMZjRzVUI3NzdQVjlxdUh2TVhqQ0pxZDZxVGJITVBCZU9NYzZ3dUdvUktJOVZyZEI3WVlHTndnSWIxYklPTHlSUlFBc3c4RUk5NG5XWTRVWEdXVkROeDRiZnBVaVpTVWdqX2VlWm4tMTNMQVh0UkUtQ2dScEhrVjBIQVNjOFkxSlE5U3FvTVZkMERoTW5PcFo0WmxvYWdGRHJZUDJ6dXBNTDI0VW9oWHJfcWZmTllaVUZvSUhaa0VlbDlzWGhjOV9EdzIyRTJkeWxLMEMyVlZ2bkVhYWF1MXdxTzNhdkRkRXhLemRiY2c?oc=5",
           "quelle": "google_news"
         },
         {
@@ -503,17 +552,17 @@
           "quelle": "yahoo"
         },
         {
+          "title": "Delivery Hero Equal Weight (Barclays Capital) 21.07.2026 | Analyse - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-21",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNYkJJMDlWWi1OcXR3cTVRbzR3dTlTdUJ0dVktUGVXR1ZwbmZxTEhocGQwUVdXMHM0cnpaX25XOExVRlN3UGZyWGZIRzgtMHlnN3dmQUpRUG9lQ0Q5WFdJYi1GdDhFUmNBRVZ5STVsZWFXSzlvcjNRSGx0cHdVdG4yaGZJMVJ5SHVUVExZWA?oc=5",
+          "quelle": "google_news"
+        },
+        {
           "title": "BARCLAYS: Delivery Hero \"hold\" - boerse.de - boerse.de",
           "publisher": "boerse.de",
           "published": "2026-07-21",
           "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBKM2M4RWRWV0VwOUw5LUNYYV9pR2w5d3dyY2ZTMWhxMHJ6Zkp2cnhCX2wtTzNZWVRxVk9WbEUya2pJZXRvSnJKY1ZiZUV5XzI5WTczUWpKWGxVWlRJWUkyVEFrTkN2NkhrWGg4ME1ibkRGaGtLQVR3Q19R0gF_QVVfeXFMTXFlTG11U012N1FOeVVYcExjM0F3ZmY0cFpmTmhIc01NWmd5NGdBQnpvQ1BMRHpUZ1gtb1ZKcW1FeE1DRkdFZzZFbnlMcVl4RVhrLXJoNGd6OXpsU0FrVkdMb0ltX0ctTm1fMzNVa1FmMHNPQ05lYndxbHQwN3FrZw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "ANALYSE-FLASH: Barclays senkt Delivery Hero auf 'Equal Weight' - Ziel 41,50 Euro - boerse.de - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWEdfX2x2X1g5U3ZkUjZaU1VscTNyY2JZblY2TEwySFVVMV9LLTExbU1yMy1FOHlyOVk2TzdpeGdRX2pUTHR3ZmlVSU50Mmt1WFQ4X3d0dHZXOGJ3OVZ4aXlma21XTXB6ZlZReDAyeTR5MXJRSWhEX3g5WjR5Z1JqdkN6eGUyYkFmLWMwZWpJenVYR1hrSm1PWUJ2UENiQm5VZkwtQ25rWTM4ZU16S29CVklQTGVMZ0tvenfSAb8BQVVfeXFMTjktbHFsTTJneDN6TW9ha3k4VDhGeUlSMTlwaVNQS3JtYzJJc1JMOHZBR2dzRTlQOWU4WHJBWXllN1dDZE51eUItU2x3RkkxOUdwQUF6dmpvajBpVEtULWJlQ2ZHb1gwZjNGbGQzSXZVZ1dTRmlrX2UweVEyaTVIX0dwOE12Q01RQ21SZ3JaNXRIUEdoaWV4QklnRUtGOG5sbEdBS0d4X04xRjdjV2lMQnAxVWRZa1c5akp4SXNyUTg?oc=5",
           "quelle": "google_news"
         },
         {
@@ -550,20 +599,6 @@
           "published": "2026-07-17",
           "link": "https://finance.yahoo.com/m/7f0961e5-0f24-3e29-aaf5-f46a88a00afb/uber-to-acquire-germany-based.html",
           "quelle": "yahoo"
-        },
-        {
-          "title": "Uber Technologies' Delivery Hero Deal Could Deliver More Value Than Initial Synergy Estimates, RBC Says",
-          "publisher": "MT Newswires",
-          "published": "2026-07-17",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/uber-technologies-apos-delivery-hero-144148030.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Delivery Hero (XTRA:DHER) Discusses A Business Combination That Could Reshape Its Operations",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-17",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/delivery-hero-xtra-dher-discusses-071206938.html",
-          "quelle": "yahoo"
         }
       ],
       "error": null
@@ -573,6 +608,41 @@
       "ticker": "",
       "headlines": [
         {
+          "title": "Die E.ON-Aktie profitiert von stabilen Ergebnissen und Investitionsprogramm - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMHZBZFdHZFRpOE55X1BzWjF4REk0LUpvNndxY3V1VWFPVm93WXJSY2I0YUNFejlPSDNpZmtkQ1cxeVJpZlE5WFVPdW9XWmN2LTg5cERaUUptNDg4dVB1MHlvUnFGbWRqQ2d0NlVjTXp2eUkybGFEbDhqVWtLLWJSRFBXRlZnMlJlWHdUZ3JkS1hCVEhOVlEwZ1EwOTNhVEt3bzhJNXFpOXRfNTNlcGJDWHMyQQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die E.ON-Aktie profitiert von steigenden Ergebnissen und stabiler Nachfrage - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZVVaNDlZMWxuQVBjUG1kSU5YZzBtS3A2TS1kTDFfN3ZRbXhwMHE2SHBCdGpEenBjbXRFeUlBRkJqMTFwV003TWtBVy03ZldlRVQ4bnFjVFJyVXhfa2FQZmxsOXg3T1NRY1VXYlpVQzZ0NWI3Ym84bFhYaG5udTBfOVF0Xy1MNkFTMDljM1FDdjB6SEc4WjVLbWtFQjdHTHdvRnQxcDhwQWFhSDczQWRyQjNndlEtbWZ2aW1Jay1yNmRNUQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "E.ON-Aktie: Dritter Tag ohne Veränderung - WELT",
+          "publisher": "WELT",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTHpDMUdTdGk4czlXRUxkRUVja1JWRmNQZ21JOW5meTl6NXFocGNjcWwyakhGNUNIOUdWcWNGOWQzdVh5TGdkYWxfSENsNzlpYjZjTTU3dzIzZFlKQlBpQm44UzhwQWRVRHVtZ3FyTDZkSmJ2WDQ1LW1sWUs1bDBLdUFoSGluaHVaaXJITFRwV1djQ3AxYjd2LUowd2dRaUhvalNlU1ZMNS14ZkU?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "E.ON SE Aktie Kurs & Chart ENAG99 - Goldesel.de",
+          "publisher": "Goldesel.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBfTVhnek5zUGVoakh6T1ZqbWgtTzhweUdyQVcxaUk1Mk04NkZlYmJDZ0xSWkVMQU5uS0dtQ25pNlhfRFRYZEd3U2dmV0JBUFFnSEN5T0x6TENaOUlBdzBJOVRhc2I?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "DAX 40-Wert EON SE-Aktie: So viel hätten Anleger an einem EON SE-Investment von vor 10 Jahren verdient - finanzen.ch",
+          "publisher": "finanzen.ch",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQalFZYUdSUlFnWWdYSzFGMnNNcmRHTmVrNjRrUTR2ckFDb3prYkoybzZCQTFRcDVIdmo0OWgyZjlTTlFvNTlVOXJDNVR2THBiNDlvS04zaVdpYzRDTHVoOXg5YlpjWG9FMEMzN0ZfQzlTcUxoWG9taTRvSDdqZzNtU1o5ZzZpNkpza1Y2UW9xdk5NdGx0SjJJUXJnWE81T09uU0tPcVRqZ3RsdU93SnFyUk9pWU1yZ19CZzlORW1lNllsMk9saDAyU2IwZVRPcUpQZmlpRmJIc1F4cjJkYTJLY0xOZ1dBZGllUWpkOA?oc=5",
+          "quelle": "google_news"
+        },
+        {
           "title": "E.ON Aktie: 20,44-Euro-Hoch in Reichweite - Börse Express",
           "publisher": "Börse Express",
           "published": "2026-07-23",
@@ -580,80 +650,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "Dollar Eases as Focus Turns to Fed’s Meeting",
-          "publisher": "The Wall Street Journal",
+          "title": "DAX 40-Papier EON SE-Aktie: So viel hätte eine Investition in EON SE von vor 10 Jahren abgeworfen - Finanzen.net",
+          "publisher": "Finanzen.net",
           "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/1fc4a48f-901f-3de0-abb7-ae5dafd502e1/dollar-eases-as-focus-turns.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Acrab Unveils GΞLIX 1 SoC and Agent Box, Bringing State-of-the-Art AI to the Edge",
-          "publisher": "CNW Group",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/technology/ai/articles/acrab-unveils-g-lix-1-065600050.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Primary Hydrogen Announces Marketing Services Agreement",
-          "publisher": "TMX Newsfile",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/media-advertising/articles/primary-hydrogen-announces-marketing-services-065500379.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Hyundai Profit Falls as Weak Auto Demand, Labor Unrest Weigh",
-          "publisher": "The Wall Street Journal",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/f7cfb303-2e96-3690-aaed-c6a3aee48913/hyundai-profit-falls-as-weak.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Is an AMD Stock Split Likely After Aug. 4?",
-          "publisher": "Motley Fool",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/601b1389-a6f3-3024-a28a-7a3da0d25160/is-an-amd-stock-split-likely.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Interview: Simon Bateman, CEO Recognise Bank on full year profitability for the first time",
-          "publisher": "Retail Banker International",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/84fe9b94-964c-30df-b525-02728e0a1853/interview%3A-simon-bateman%2C.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "TotalEnergies Uses Cash From War-Induced Price Rises to Cut Debt",
-          "publisher": "The Wall Street Journal",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/fac83ef1-55ee-3b60-94ae-a7996fae4dca/totalenergies-uses-cash-from.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Piramal Realty Launches Phase 2 of Piramal Vaikunth with ~ ₹4,700 Cr GDV Potential",
-          "publisher": "PR Newswire",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/real-estate/articles/piramal-realty-launches-phase-2-064600421.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "E.ON-Aktie: Unternehmen erholt sich - WELT",
-          "publisher": "WELT",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTFBvX2s3REJiaHdQSVQ1SVp3SGdGclY0amthRWVpVmhfUFBkZGt3Z0hSLS1YVUJkcmpUdHFfWVBZaHBBOG1NUnU1VkVxMk00V1ZubW85SWl2ZzZTWlVka2RRWlRTSDAyY3FHdGctT0dPcmpiUzBjQUJkaUw1QkFQMk9HWldBb0k1WVVsNmNKQW1jYktwbktzOXpMZG50OFU0Rmc?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Die E.ON-Aktie bleibt von der Dividenden- und Netzinvestitionsstory geprägt - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQaGNRdFFmcFg2WTlIUkVzTXNSWVM2TkNlR1J3SnlGak5FVWp5M0JYd3Q4QktOYVktVm52eTdrVXZVOVJaeHIyUnlDekxhN3FFam5ScWFiU0o2T1VVLWcycG94aXpkYWhQVDNTR1dQMG9zQ0NuOXR5bVlsU0JtVjVOUXctdDlEdHFpUWJlajRTaFRHclYtSUdSZkRsWHNVYUYxRkN4eFpHcXZTRGRXLXFBYVlxMzNzOHowVmVNTHJXMm16TnM?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Die E.ON-Aktie bleibt von stabilem Ergebniswachstum und Energiewende-Investitionen gestützt - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYWNoVUVzNzVscHBHU1N5R2lZMUw4QmgwVkZCZmpXUEZzaHlhX2RaR2RlSWg5M1RxSVdTZnBWLWZtVGFvcXNEMVhsRWZmdDRsZmdjVWRONUpybUtvb0JTZjAyVFZDWm00TXk3NHV6OVRyUmM1OXQ3U2k2U2lSamxWbWUwbGZyNERZMDVCRWcwdGFDU001dHNxcGluLUc0bTBoUDRVMXZkZUFnYlYtM1V1T3NsWFI?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOc19IdlFMTmxZemp6NnFGM3JROEpwbUQ1TUNoc3ZlMThqaHlYeXQyYTNHRThQZG1kSldmWWVTSHN4X1VoY3FPRVJqSzVaWlVPU2o2Vnd5ZGxJa3Bmc05pS3FZMjg5Ymk5dy10LWV5V2NTbFZBcjZSYXNBeU5nck5zVWtQSjR6eTh2YnM4S0lqcUk2SE9MVlpKNmxiTmZVT2pkUC1aRHBNMnZJc01iSVRvS2lDMV9HYk1XUFBCSHZxZVV2dUFHcDdWd1BscDhvdU96NlVfT0hlckNLYlZSQi01Rkd3?oc=5",
           "quelle": "google_news"
         },
         {
@@ -671,10 +671,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "E.ON-Aktie: Ohne Veränderung - WELT",
-          "publisher": "WELT",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMl92NExKNU5weWl4Y1FkLWpuX3F0YXpoX1ZDSDNPNlNyTmRmNUo5V1hDRmd2Z3dWWUxJWE1KNzhzQ3M5b052aXU0eTFNZ3NpWFR4NzRtZmtETWJmMFotei0zcmN1X3JsdWhtUHFSQTVKTE1rZ0pXQWJMZ1F6b1k2aU43VDBQSk00dmhTWERGYlN6Zi12azljblJBbS1xNHNvR2dF?oc=5",
+          "title": "Jefferies belässt Eon auf 'Hold' - Ziel 17,40 Euro - boerse.de - boerse.de",
+          "publisher": "boerse.de",
+          "published": "2026-07-20",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOaGxHbGN6T3BBTWYyZk9IVlV3T2YtVlhKM0ZKU1V0czduMmhMU0VfV3pVaXkwWWJ2endLNHdlMGpTUDBkNVBvWFhnLUZnMUhfaFBySDAwc2tldzJwdGlJMGZYSFlfMkhROHRtNDFaZ01aZFdBa3RMMmh0Ui1SSWtIN0JRaEQxa0hnNEFuWlJSUERETmVS0gGaAUFVX3lxTE85M0pRWWlMTWl1YWhYRDBsOWVqN19zMHRnN09saFZia2taVldJM1pFZFFOcHVzRXhjakx0YTNMcWR4eUZQLVFzQTFtV0VCTnl3em9RY1VnR3BfZk9vWUlTN0hmVF9UY3pmWTY0V2x0cDVHSFI1aTJTYnN0U2NUR29WVzlkNkZIODlUR18tNjRYSFhwczZwdFY1Znc?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -685,38 +685,59 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "Siemens Energy Aktie: Omterra ersetzt Siemens-Namen - Finanztrends",
-          "publisher": "Finanztrends",
-          "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVFFuZlNmSFVkU0dXZlVlTzNnTnFTQnVJTndzNUZqYXE5ZEF4TnlWbFd5UFFENTd0dm96bUctSlE5NG1aMkhsYXFfWXdQVDBkYmh4bDA1YVdfandKdV9iR2dEcTF6czBfb2NMWGRiYlR1R0VjRUFkc1pyTGJnSU5rdEp0clQ3T3dMWXdVZw?oc=5",
+          "title": "Siemens Energy Aktie News: Siemens Energy verbilligt sich am Donnerstagnachmittag - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNOGQ2ZG9sc2ZtMDJVaTROSW1HM0xkOEVqd2ttWmV4UGN6YkpzMDk4OEFzU0duNV9pRm9nYzlUbkVjUWxIODQ4TTJzYnpVOHEzdV9wRFl6aFpScTNiWnB5ejdHNzJVRHR6VjdjbXJzanVIdV9vc1BBV05rbzlncFNfaWNReTFsS015dGRpNkpYZDFmUkFpYUJGLUR1SQ?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "Siemens Energy-Aktie: Droht jetzt der große Abverkauf? - sharedeals.de",
-          "publisher": "sharedeals.de",
-          "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdzJRdi1GMnhkbTZ5MnhFS29ybjdXelI1ZkJuMTVRdm9ZVWpWbjc4ZkNXSHZjLTRqTnpLYk1Za1FmMGRWanhHU28wcEM5OGdaRXU5TWJxcXY2a1JpNGhMYTU0UWdIa2hpWC13ZEVnQTRmVkFMZXk1R1NjN2lGaFh5MjZ0eXJZYU0?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Siemens Energy: Hat die Aktie mehr als 50 Prozent Kurspotenzial? - 4investors.de",
-          "publisher": "4investors.de",
-          "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB6V0FOSHR1TzZQclZsSmN1YUdCWDV5U3RFUEtvYWpwSUlvYlpJWUFaSlBVMG5hNm1FZEpzUFBJcUhuYXNsT0NWRS1pTEtlT0pnbk93Y3k5ZXFFZ2J4eG4yQ2hUOENNSXV6UVNsYXJPS2lwTExnbjZnVzFrZVTSAYIBQVVfeXFMTmlrMlVKWHd1eVNUdXVnLW5FUTdpWmQ5RUJZOUpLNlVoNjVDcDVVSHU3WDFYdm0zMEdsa2k5REhfSF9xc3NsZ0hNckFKbHc2cVVyb0pKRHpseWxXMXRXbDJoQUNndTVJRlVNSTlYZ1U3Z3BnbGpJSDQxNlZ3X2Nudnk3QQ?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Siemens Energy-Aktie: Schnell-Meldung! - Börse Express",
+          "title": "Siemens Energy Aktie: 154 Milliarden Auftragsbestand - Börse Express",
           "publisher": "Börse Express",
-          "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNd3VDUG1uTEgzQklJdkxTeFFGZVdhN3R4MjF0WjFmZzNCSExmcWFObDNFY19ZZEc0bElBS011dkVqbkxaa2F4N19HQXFVSENRQUthSlJ2eG5tMmJETm1PRHI0UENMZ0h0Z3hJa3hmRlVJRHh5b215QTVRdUtuYXFWSE5FZjB0Nkg1OC1EMExNa3I3dw?oc=5",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaHlFdzJJcVhac3A4d0FqTXl2aGlTa1hUejBiQWJsQWRNSnEyRjdWR1JpbGg0elRtdUFxeTRJV3hBQktUcDdVRHJoWEV4RWZfNFFnNG1LbUtLSnpxUHRKTWVKSVU5M2Jxb0d3NEFRaURzeEVUMmdrUHlQTUFERFNCX0NiNVNBaUtNTHhOeGhfZWVuWGIxRlBlX2NoQWhwU1J2RnktWXRR?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "Siemens Energy-Aktie: Unternehmen gibt nach - WELT",
+          "title": "Siemens Energy Aktie: Omterra-Umbenennung spart Gebühren - Börse Express",
+          "publisher": "Börse Express",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNczhGaV9CVW9LVERzaFBYRmZyUGNvd09RU3hHeGhvWTIxV3FacWJLdFlTQTNwX0kyS2hXNzRHakRrTmN1ZmRNTklrcWNSbFZ6RF9sOHFudEU3d1UzTkxUVXJkWkxOekc3cHQtWDQ0aHJBUU1VLVFBWlNVaW9JMlVMSjZKY1hsS3Z6RVF0cUU4RVI4NjJSNWhJZ3NvQTNtNzBiYU1Tc1R3WmVveTVN?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Siemens Energy-Aktie: Es geht wieder stark bergab - WELT",
           "publisher": "WELT",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQU1k5NE16YjBWY3RXc0pzWjEzQ0ZtWjl0dWpUTUNmLU5nSzlBQkp1cW5ZUTB4QlRZTi1Da0tFUEt2UDBqZXNVa2hKRlc5ZVY1NU5WRzZZRUx0RWkwRGU0dGIzRkhRLVJoQ2RxbUJOdEhob1h5TTM5UVpxeVFWeDJkZTlmWHl5Z3lxMUZwTUwtVkY4anJickl2bmoydXRlZ1pKU3hZX1AtTmItYWtCZG5ad3d3VWtzTThmRjEwTmxn?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "DAX Verlierer: Siemens Energy Aktie mit größtem Tagesverlust - Chartanalyse und Ausblick - XTB.com",
+          "publisher": "XTB.com",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPdjY3V2p5YkVnLUJkejNCYVd6MzBuaDlNN25aVmJlM0VLLWdiUDBraTRURTlBdERVdFRTN3dnWVROMml2ejNheWxleHJmbVlzS0JpekoyeTZjN3dVSk5jU1lnR2MxVmtVN05SWFExOU0ta0ZLMzdjZ1h1eUZKajBNd0IwbzVYR3FRVnVtaU90bnE5MmFia3dURWRiMW4yZjZ1YlQ3V0lSaXZselVrMEZTYVd4U2RvMElKZnJN?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Siemens Energy Aktie News: Siemens Energy am Vormittag mit Abschlägen - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZVJOckF5OXJobzJsTFRjd0FON3UxaGE2UHRmeEpQdzZhWWg1VUNLM243NmtJU0J1aWZKVFhzMWhoclNyTmM0T2pCSnFnWUhzTTVzN1lPbThMTUZoLW5meDVSYmJrcDQza1J3Y3AyNlhNMDJTSlQ0QkJkMjE3TEdwZFlvUGFMelFpa2d4SHZaMkNlTGRHbDZuMVJNOA?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Siemens Energy-Aktie: Es geht wieder bergab - WELT",
+          "publisher": "WELT",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQWF2WkJKUWluSHA5dHR1NlNjbWljMFBoSlA2OGZsTEx1YTZyRjY3WG9CRXFMZGNSdGNoYmZvZUFHZE8wamNiOGpnSHg3Um5rMEVnRFlkNHNUajZqai1YdE1fRmV0QmZ0SlFRbkJ0Tm1xNGdpcURTYzhPMWp3alRIRElldlJEazRQTUp1ZVg5V2JFNzN2eFZoUGdreDNRcDFDWU9Ec3VoQmRzMmI0a3NfRkxUX0ZZUQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Siemens Energy: Aktie wegen GE-Prognose im Fokus - Der Aktionär",
+          "publisher": "Der Aktionär",
           "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOTTVmWXZJRXJmUEN2LWRqUEhUTnp0YVZycXI5WWNQRXc4MjBEYXlNcTNpeUM3eF95N0wtSGVJczdpRXdCbGN3TDc4WUhJME1FVjRWLXZrMEtMdVNNZXExWG5ZcHh2c0M3TGJBcU5MVmJaajZKcERRejhfbU9oaDUweWNpMjZvS3FKYnJtM2ZrWnBFeF81a29JLVFCWm9GS3JVZ1RfRVNTd1RIdnZ0andtMi1fSzdjUQ?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOS05xM0t5LTc5VlVjSWd3dFEySkhOTTFNc1NFWFlyRG55cE1UUjFORmV3bzRfLWQzYWNHSERYTDR2bFdmVGlZQ2UtbVBYc3hJTm00OFFFLVhabHBDZFI2U3dhWHJIWUsyOTM5b2lrQUgzOXdSWTJYTHlxX3JyTi01RW41VzdBdXh4ejMzVGhWaW93MTBISVlCeWk5SW1rSWltV3ZoRTJTbTk5eDljdldjR01HUEdGRmt5WVRJdw?oc=5",
           "quelle": "google_news"
         },
         {
@@ -724,27 +745,6 @@
           "publisher": "WELT",
           "published": "2026-07-22",
           "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNcDBMZXZfZUxzSjVURFg5bldNajh5N1AxMGhZWWtVTGd1NmJzdUJPRkhsc3ZPdUJWYms2cjZjV3BFQnBBOUxzNkFmTnhIRU9xNGF1U0s4OXdYWmJYMDI5cExoVDZIVUw4dmRjTFZ0enl1U29JU2JPYjBJZmlHanNfbjUwR0hQYzhzZF91Vng3ZWM1TFpkdGJKbFhTb244cHZieDJwd3g3dW9FZjRYQUI2cA?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Siemens Energy-Aktie: Totaler Fehlalarm! - Börse Express",
-          "publisher": "Börse Express",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMHgwLVZ3dmV2SGF6cXZXODB2ZklHcW5VRzY3Q21VN2pncGh0Vm1SVVRqbFk2X2szMjNiQmhXTS11dmZHOHZwSS1RTUVQUWhqZ3RUVUdyZHhBcV8yejBBMGQxX0YzeVRmNXI0SndXS1ZtMFI1R0E2WkM0c3pNWTlIc1M2Zi11WjU2UHFGc3dWc0pUMjFs?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Siemens Energy-Aktie: Brutaler Irrtum! - Finanztrends",
-          "publisher": "Finanztrends",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9jMWs0YUtrMkpWZ2h3U3d6QndNRVl2Q2ROXzc3UnFFbVlNX0o2U1JMWGg1SVh4X09rUDdJTWQzM3c2YjdGNmZKc0Y0R2FNZ3JuZzNYeUFWMXd2SGhjTU1ENG5CdGlTanB3Mm1TNEhKbWxiLWQ3dndVN0l3?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Siemens Energy im Check: So viel Potenzial hat die Aktie jetzt - Der Aktionär",
-          "publisher": "Der Aktionär",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPaWktQjItbHk0RElRX3ZfeHEwUGt4bmhrazdTSnFfQlRsYWd4Z1JXbGI3Z2NlTi1Ja3BrQU1Nc0xPSEtWZ1NaYnFUam1XdkxyU3FPX3FfZVktVVNiTGZRWE15a2Y1ekUwN1Q0bnJjbXd1MWNhZ3o0M0haLUJ5Q0llalJRUmI1SE9wM2RLZFpLcE9hT2t5NUN6VlVoX0N3T0J2b3IxUklFR1g0d3BQa1FGbWpmenlvUVI5SG95eHBEdEgxWW95OVFn?oc=5",
           "quelle": "google_news"
         },
         {
@@ -762,10 +762,38 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "Die Safran-Aktie profitiert von zweistelligem Umsatzwachstum und starkem Auftragseingang - Ad-hoc-news.de",
+          "title": "Die Safran-Aktie profitiert von zweistelligem Wachstum und solider Marge - Ad-hoc-news.de",
           "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZ0twOVFUOXpCaTBUUVl1VWdvNGVoWGdveDRNNnpIOHEyVHRQZ01nazAwSnFIRzVmRmo4MDgxSFpINjY5amVNSndNM2FDcjVHQXlQbGFRUDM2bGZfX3lPblF3X0FVcDk1eFBmSUxsRG56OHQtSGE1V2NQcFZtM3lRckRWdWo5TERNYUxCN1ZlUjdZcXh6Q3BjMnNRRzE4NlpmVWQ1bkt5RkRSeGdFQzZDOFNZMWVIdnZhcmpENEdLTXlROEhpRlR4d2l1Yw?oc=5",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUTJuWVNlLXdzVkN2UDNDS0dUMzdIRWVvLTUwMFRCN3FKU28zS1ZhRDBxVm94ZTRaOWxoZXMzNGs1Y28wTXBhNkk2WWFTSFRXQmc5UGVCUXdmWUNjNlA1dWE5WGoya3RnYThwY1V2NER0aXhPdkpiLXc3NVFDb0xEQ2hsWThnaTBhTlZjWHhTYkZmUzE0dFNBa1F2VUJrUFhGZUl6ZDhMb2pDaVZRb0lPZ2FwWWVseE4zbGpBYm1lUlhyS0xXel9RX2JrSQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die Safran-Aktie profitiert von Rekordauftrag und zweistelligem Gewinnplus - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQRlFzZG5JaUx2RXpvWjc5b09UdVg4M2I4V25JdEdmMUt2blAzazZRMVZRQ3NHcENESi1HQzNnNGtJTV9lZ3kzaVZCYmRtQnVTUmdPSU9fQXJHOVFEeEMtMlB3bzNHLU9fZjl6SExFN2xpeHZ6MkdDSVJuZFdxaWlPNmxSak80QVVJVlRhUFJjSy1fb1RKd1hESU5YSnYtY3hkcEtUMzlWVHpQcmdhaGJka3kyYU5oM2ZWTG5HZEtBTmdyNWp1bVJOaDJYcjgyZw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die Safran-Aktie profitiert von robustem Wachstum und steigenden Margen - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQU9YWkFkNHVVVlYtamVubllVbkl1MHBibGNRT3MxUk43bUQtcTJSZGsxckdzWjJnZ2JlQkYwU3lGa1RJdThPa2tfaGExQTB0d3RUbldOQVdtZVFxbEZ2MDQyemRobkpDMVNsbDJaUXF3NWhWNVFnNDU4WHB6WXlDckczd3R4MVl2eEM0azItSmV0ZUVwV2dscENFeTl5eTBwcUoyNXRjSElpVEtFZ00zdVdyRTc4RF8wb1V5NFhCTy1JWllVLS14dHZB?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die Safran-Aktie profitiert von zweistelligem Gewinnplus - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWDNNSkdNNWxtVE5ITUwydGpSTjg4eFpFWGhxOTVlcTRNV1FZU09IMUVzVG1OZHdxSkt4djVsRUZxOWNxTHFFamRGaUNyVHpVNy02RXNwNmo1cVZmdVpIZDkzeFF1bEVNUEVpdGUzM204NFE1eHNLQ1luaDBiMzNZS2NEMUVYWC0tSWVLRGoyLTJkZVVwTTd1YnFieWtPQWJVSHlKZFBkLW95YnlVdnYybTQzdkhqZw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die Safran-Aktie setzt auf den Auftragsbestand - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaURUQlN2TE9GMTh3V011VmZqTjRPbm0xRTVzY21tMElxczVWRFZDRHN2RnhaQlZtS2ZKRmdjMTJfWm9uYWNaSW40ZjhRQjNfUUdpdDdTNmIzX18xbW5ZUHRYRFo0VE5KYUNaM1NzeHFqU2JVNWRrelVPMG03R05EbDNRb3BaX1VlZjQ2cTdFOXhaWFdhX2FzN29qcXgzcW1iVWJ0TDlZMUM?oc=5",
           "quelle": "google_news"
         },
         {
@@ -783,31 +811,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "Die Safran-Aktie profitiert von zweistelligem Umsatzwachstum und starker Nachfrage im Luftfahrtsekto - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNc0R3dzllMUxfY19qSFdxYUtteDY1SWpiWW9hc1R3RGQwb2xNbGkzUEp4a2lEbGVqc2Ruc2xodzhfb0lvT3V2ZnVzT3pRZ1hnT1Y2QW1GS2tjUW5YNmxsbEpPRXB2QXZkS1l0VkFnazdKLXlYd2ZZbEgwb0FhU1k0bk5XRG9BZkRhTmUwZEFhZV8zV09wVVBxa0JhMVpKWU5aZEpxWEtpMll5ak43eU1nMVhhTjB3Mm9PUjdadWt2VVZsU1pUUWFYblpKbw?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "Safran-Aktie: Lohnt sich der Einstieg jetzt? - boerse.de - boerse.de",
           "publisher": "boerse.de",
           "published": "2026-07-21",
           "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWFR1Q05nd3hEWENzTUtSZG9Za3NrOWFUcUNPd2t0YnB3TnBuU3g3UGRWZi01amlVUG44S0Q1c3JPRzRDdkYzX0pfem1lS2RlaTlzV1Etb0UxajNCWVJiR2FudjNxUGQ5d1ppOFZCV25zWWRRbjRjUDd1OXhISWlVeG5nTDlEV01BUVM1Q1JveEhxTHfSAZMBQVVfeXFMTlhUdUNOZ3d4RFhDc01LUmRvWWtzazlhVHFDT3drdGJwd05wblN4N1BkVmYtNWppVVBuOEtENXNyT0c0Q3ZGM19KX3ptZUtkZWk5c1dRLW9FMWozQllSYkdhbnYzcVBkOXdaaThWQlduc1lkUW40Y1A3dTl4SElpVXhuZ0w5RFdNQVFTNUNSb3hIcUx3?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Die Safran-Aktie bleibt nach den letzten Zahlen gefragt - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb0JDOGo1M1REcDVVcFZWRGRyMS1saTByLWp3SG5tWEdmQUFPcC1MZFJ2ZUV1OVd0eFIzaW9KRnFHdk4wTl9VcThOMFNtZDk4MkdHUm02TnlNNlJkdmRIZGw5Q1lpUlYyOG5HY1BTV043dU1qeGVfeFFpenUxdnlIVFQ3cWxuMVZOTmpSWVhUWVJGbFBDU0g4dmE1NklNVDZndS1PQVNfRE5WMjRrX3c2RnhFWU4?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Safran-Aktie setzt auf robuste Auftragslage und Margen - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZy1JaTA1VmVyRVJ0eFlwNTFYRWQzckNtamV1ZmNFNmtJbHJkbExIeGtzUTQwRUYtZHZudzczZG1Za3pIdjlQVTZGM3ZvbEMtNjNQV0dVQnNHZUwxemx4NHhLZ1gxZVVEQXR3VWRrSW1wY09JdjFGQng0YlpXZFZ5eXhhWjlyOTZ3MTVOck9jYzJfZlZvMDNoTV9sdkhOSlYtSTQyUlFWLWJZUGhiNlVhMXlaVQ?oc=5",
           "quelle": "google_news"
         },
         {
@@ -832,11 +839,53 @@
       "ticker": "",
       "headlines": [
         {
+          "title": "Rüstungsaktien: Darum steigen Rheinmetall, Dassault und Thales heute - Der Aktionär",
+          "publisher": "Der Aktionär",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOekc4dW5TenlxdzF1MmRmV2ZWbkZnWEw3QmhVNHhDVFN0LXBQc2hkUEQ1U0JOel9nY3JfOF9obExCRy1xa1NmaVZIeTNyXzBmSzhwcGd1MWIxZXE1b3RvaHpjNVFJekV3S3lhVGt0YnRURG9ENVNGRl91RWZhM2p6ZmlXaElrS0NPVDZGZjFtMXRvS29sVmEyUmFUQjNHM2lXWnlabTJ0bGlhdDhVeFcxOGJLQTN3Ukc3eGVUd0FmcGxuZw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die Dassault-Aviation-Aktie zeigt Stabilität, während der Luftfahrtkonzern nach starken Jahreszahl - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQ1p5bExSbUk0aDN5al9SQnFXOUlkVTNHWG5VdUxYOU1IYW4xbVBoVnkyWXg4ZnhqOHBTaHRkS21JNy1uZEZnUl81clFRUFU0X1BNZlRFTUNEeTNBZ3BxYV8zRDJLY3ZNc3ZjSVl5Y01WY2lMSDhUZDlWUEJDUWFocjdWajJMamZXYjFmYkl5VFNPd01RelZXVEdSaHhHNU1MSkxBcWpNZTFOSWVJVW5RdWd6eU0tUlU1?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Dassault Aviation übertrifft die Erwartungen und gewinnt an Höhe - MarketScreener Schweiz",
+          "publisher": "MarketScreener Schweiz",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNd3pOeXQ5YTZMMk8wR2lqcGZYZGs4Z2V0Tk1SVm04QkhnY1RXb3ZtdWhGT1RDYjI2akgycXhPNTRmdmlsRXA4dnl3WU1qUTdDVWxyNTVTT1pLcm9IZkRaQ3FaZzE3VmJNaThJZFFGYzZNNWtQWG1YV2ZmLTlIWlp1M1ViVk1GNWFYSFZFOUdIWE45S05WbGx6RFROclE2VDJKVFUxVEp0US00T0g5ZG1EYjNFR0JPUGMzV250cmlmMnNnaGh0Qkl5MUM5eFA?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Analyst Report: Dassault Systèmes SE",
+          "publisher": "Morningstar Research",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/2c7d6786-0e6f-316d-bbb5-58f9a479d000/analyst-report%3A-dassault.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "Dassault Aviation Shares Jump on Strong Sales, Profit Boost",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/bca77b5d-1573-32a4-9746-35f05767726e/dassault-aviation-shares-jump.html",
+          "quelle": "yahoo"
+        },
+        {
           "title": "Dassault Systèmes confirms 2026 outlook, bets on AI with $1.8 billion ArisGlobal deal",
           "publisher": "Reuters",
           "published": "2026-07-23",
           "link": "https://finance.yahoo.com/technology/articles/dassault-syst-mes-q2-revenue-050646914.html",
           "quelle": "yahoo"
+        },
+        {
+          "title": "Die Dassault-Aviation-Aktie bleibt vom Auftragsbestand und stabilen Margen gestützt - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-22",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPN0k1bEVIRGxHd1BzU25jLTlIczhMZXhyN1RGWWVqdXEzdDRyWnhsVzA3eG14Nml6aG1tRTgteGJRMVMwaFltYXA3UXlISW96M3RSWkFBSDRoUnU3blJ1aGFPRzNyaVdKTjNzdk9JT29MVThMWnVuZC1UZExvTG9ySVVQM2FRMTAxVXpTalp1SEpsVlVHRXBYQXF4dmlRY1JObkF6V2VaSkJMd1NFTE9FdE4zRktxUTIyaEhnMVprR3oteUk0bDU4YXZ5ejFmQQ?oc=5",
+          "quelle": "google_news"
         },
         {
           "title": "Dassault Aviation Aktie: Gewinn steigt, Aufträge schrumpfen - Ad-hoc-news.de",
@@ -850,13 +899,6 @@
           "publisher": "Ad-hoc-news.de",
           "published": "2026-07-22",
           "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQT2RLUTBmRU1TM05lOUV1OXlzODVZQTU2WEUyQ2hkMG9vdHplNE1nLXdnNlB3dG12VFdRY1ZUeEJwczB4VmNzMlRlTGU1azhZVDNBM19EUU5ENzR5RmYzVXVZZ05Ra2p5dDJoejdsOG9pM3FId1Jla2JMdGt0enBIcXRZcWhOOVNxcWRuOGNxUXRLVUxiNTQtMnBPYTkzMVlNRXUtS1BCaHkyTU1kQTlSX09QZWxuX05r?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Die Dassault-Aviation-Aktie bleibt vom Auftragsbestand und stabilen Margen gestützt - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPN0k1bEVIRGxHd1BzU25jLTlIczhMZXhyN1RGWWVqdXEzdDRyWnhsVzA3eG14Nml6aG1tRTgteGJRMVMwaFltYXA3UXlISW96M3RSWkFBSDRoUnU3blJ1aGFPRzNyaVdKTjNzdk9JT29MVThMWnVuZC1UZExvTG9ySVVQM2FRMTAxVXpTalp1SEpsVlVHRXBYQXF4dmlRY1JObkF6V2VaSkJMd1NFTE9FdE4zRktxUTIyaEhnMVprR3oteUk0bDU4YXZ5ejFmQQ?oc=5",
           "quelle": "google_news"
         },
         {
@@ -900,34 +942,6 @@
           "published": "2026-07-21",
           "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQc2t1YmduZEtIbEZGRnZ0eFZmUEhuQ0x1M0J1RXpkSXVlZWI4MG1uWV9sWWpWLTdYdXllbnRuNW1DZHBKSkwwVUNOUzRKMHlnNUxMVVAtM3FlMVlYM2kyRmFpOXRtTTRoTzNFMm9hUW9QYkdibU9odmxPSVpvbmZZTHBnTDAwcXl5M2FHR3pXNVUzVDJpc3o0eGxOOHg2dGkxMkc3dU1RaEd1ZWZKZy1LWFJjX2FMXzJPQTdMWUVXcXZ0QVRzQWpMZw?oc=5",
           "quelle": "google_news"
-        },
-        {
-          "title": "Die Dassault-Aviation-Aktie zeigt stabile Entwicklung nach soliden Jahreszahlen - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPV2M0S014TW9CWldRamJfblVBRTB0RVpMUThfQV8zOG8tcmVoM1BMQkZtZk12VDFKeTB1eVVVbmg5UHMwM1F6dmVaZllaZFZuTlZmRU51cWRoTTNieTRRVmhhcFQzWmpmeEpzVGxCZkQ0VXFraWhlb00yR3VIMXBJcno1a1Nra3VHQUo4d3ItR2ZPbTV0aXpJNXBxOEM5YlZmeDJjR3RTbTBDOXdwSTd4S3M2ZGE4RmRLY3dEZHJjYTNyVW8?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Die Dassault Aviation-Aktie bleibt von der Flugzeugnachfrage gestützt - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-19",
-          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMXNaQXpRS001V2FWWWJJT005U3BJUnN3RXdFN2hEMmNKbWYxcjBpa3d3OUMxYmVzaEctZy1ITTlyVlRXdUhiNjBoN2NpM2psUGxnbWpDU1A5eFpVaGYtRkpyUEs2aFhJX1BfeW9VNFhITnNXYUR0R2VPRlljcGVMTUxBTE5Bc2Zuamk2MG90OXlGUFFZX0RrdUxiQ3FNQV9TVDNLRDlhZnBEZ2lqTVhZTXJmYVpvMkhrSWVKOUpOVFV3VzkwSC1Kbw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Dassault Aviation: Konsensus der Analysten und Kursziel | A3C9Y0 | FR0014004L86 - MarketScreener Deutschland",
-          "publisher": "MarketScreener Deutschland",
-          "published": "2026-07-17",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbXVYaHRoOUt5N0dOdGFGUlBROG5LUm9ZNzR6NzRRa0phVmxheDNjT0Judk1aT19vR0x1LUY4N3Y5R09hdEVxZE5sclVMM1dXQlVleDNHU09ZdmxfVVhrTHhCTGJYeldXUS04eTBNNmQ5ZjJlUnFjMWZVbTlvQkFCLXo2d3pUcXU3aElTOG53?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Die Dassault-Aviation-Aktie zeigt stabile Perspektiven nach soliden Jahreszahlen - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-17",
-          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNOWx5YkNtMmZrRGpCR1pZRlpBWk9HLW8yQkF6dzBMbVc1RWd4NmltNzRxeU5SV3BMNlNYa2pwbENZUS12Z25LbnVXVFRmblVVNHhmdWMwT1p1QVpnd09peDFQWTRpdl8wTDMyS1lvNjM2SWlQaHJ1aXhhdGdodmc0ZmxqM29KRWJKREtmd0ZKazNneERqdEZ1cm5lS3F0NmFCNEktMVVFVjhqNFdIa0Q1SDFIMHZWWkZUakZINWNDVHJYNXdN?oc=5",
-          "quelle": "google_news"
         }
       ],
       "error": null
@@ -937,10 +951,10 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "Die A2A-Aktie profitiert von stabilen Ergebnissen und Investitionen in erneuerbare Energien - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUWxyNnJUS0Yyd1dBMTJMc3hSMTN0ZDFXUTRXSndBQXpFWW95TUdwaDllUlpQdHhFcUZUcG5ZNTU1R1RoZFFvaHFmdFhyZHBmRHVmSjZIVEhfVk9YakdwMG4ydm1DUC1tc1ZORERVeVN1SWJ5LXhjeDZPZ1Z5a3hjRTFJOS0yR0RGSkZBdUFEcTlFVzJTdGhnRmozaXVkSmdiRDZFWHQ4SlR4SkF5eDJIR1E0YUZNeXJfYVBBa0tlWEVOcUFndVN1NQ?oc=5",
+          "title": "A2A-Aktie über 100-Tage-Linie - boerse.de",
+          "publisher": "boerse.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBGVWhPMU5KRUdFQ1I4YnpDVDZsTXVYQnNMcGtvdy1BWDNFNXlVbk5kTTh2dGNtYTRwRW9fVi04LWJ0V2dwemtNcTBCZjBQYnZxN09tMlNodFVBeUpsRldWcjJxN0hYeE41b3ZXVGdBemlYX2otRGpMQVhNTTRjdw?oc=5",
           "quelle": "google_news"
         },
         {
@@ -948,6 +962,13 @@
           "publisher": "Ad-hoc-news.de",
           "published": "2026-07-22",
           "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPWVFfV2tKVTczQ0ZmLVczV0pKc3FaV0dya3pBODNRSFVxb3hwYjRUNTdKVXNRRFowLTJhS2FSY2ZwbF9zRUlWYURFUjAyaXVwdl9FMkEtUEZCbW5DbVMzRlFBOFM5cXdITlo2TDFkaWtCVG02anNMb09BbmFVRUs5MklUa1ZFdzBpSEJkaFh6MmdYTmdWaUZEMHM4SUVfbWVQc1piMEI3SmRLQQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die A2A-Aktie profitiert von stabilen Ergebnissen und Investitionen in erneuerbare Energien - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-22",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUWxyNnJUS0Yyd1dBMTJMc3hSMTN0ZDFXUTRXSndBQXpFWW95TUdwaDllUlpQdHhFcUZUcG5ZNTU1R1RoZFFvaHFmdFhyZHBmRHVmSjZIVEhfVk9YakdwMG4ydm1DUC1tc1ZORERVeVN1SWJ5LXhjeDZPZ1Z5a3hjRTFJOS0yR0RGSkZBdUFEcTlFVzJTdGhnRmozaXVkSmdiRDZFWHQ4SlR4SkF5eDJIR1E0YUZNeXJfYVBBa0tlWEVOcUFndVN1NQ?oc=5",
           "quelle": "google_news"
         },
         {
@@ -1007,6 +1028,20 @@
       "ticker": "",
       "headlines": [
         {
+          "title": "Terna-Aktie bleibt nach den Halbjahreszahlen stabil - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOY1NwWmJZTE02WWc3NzN4RDB5N1dmZExpSUJTS0VEOWFIbElWdEVpc3FEU1lLTDNNSjA0R3BOeDdCNl9iZ1B5bkFVNGRzVXBYNk5CbzgxTkVNNVNCa05SOC1IVU9rRUFlTHhScndRdDNlZHFCSUlNQ0wtZkMyZUM4SG9ybnRRSF9CUUFXWTZEeDNfdmxidmhFTmxsOUxTdkpob1VHa1VfWU1wLWJFelFj?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Terna-Aktie über 20-Tage-Linie - boerse.de",
+          "publisher": "boerse.de",
+          "published": "2026-07-22",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1LZEZBanpQNEdHZUdabFp6aUk5bFpfOTZma1hnanFua20yTjhPNkRyblZHcnFhYkxNVG0zMXgtLW5IZWFLSWRuQzNDYTdlby1FYjNWRS00TUtnbzBMbXhpdlJSSG9qNTNRYjJTSnp2MmtBSENSbExDbkV3d1Boanc?oc=5",
+          "quelle": "google_news"
+        },
+        {
           "title": "Die Terna-Aktie bleibt vom Netzinvestitionsprogramm und stabilen Margen gestützt - Ad-hoc-news.de",
           "publisher": "Ad-hoc-news.de",
           "published": "2026-07-22",
@@ -1056,24 +1091,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "Terna-Aktie über 100-Tage-Linie - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-18",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWmd6WlpsZ3dETVRWQ3JVMlc2OHQ5N0tFeTFfZDN2d3VLN2JpeVpBbm1PX2h3RF9KYW4yWGpyWUFuR214RHdLNWxVb1l6V1ZfNEc5N0tSZFkwNUsycC05RGxwZjlka2ZEMjRnWm5PenFZTGtvT1VRb0pMcmFCRUdGcA?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "BOTSI®-Advisor Hochstufung Terna von Rang 117 auf ... - boerse.de - boerse.de",
           "publisher": "boerse.de",
           "published": "2026-07-18",
           "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeHo5clRUVWZGSUlUVEY4Rnl2NVRUc1hHSno3VUd1MVlOeXM5a0lMOURmUHhjUExOZldIRWJGdkhieDJiRExhM25xQUhwYTRjeUtmZFRmZzItOTR6VXl3MzdVMmowU2xLcGxMRlFMczlPQUJwcTBwVGhXcHlSd29rTHAwSEtoS1NPcFFQTFJjWExZanBoeHfSAZsBQVVfeXFMT0sycUpaM2tzRmpsc3hPMmh6OGdtOTRTYWE5QVpJTk9tMzNzcklqTVdtcjBuUmhUaWEyN1Z5WlhtX3ZBdWc3LUZTblVmWlRUYWFuWEtrQzBvZjdRRHBqaFduXzVSaXprSWZ0eF9BXzg2dzBKR1MtLThRYTRNVlRRV3FwdWdkR1dja09HaHNFX1pOYVp6d2hIRmV0VkU?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Terna-Aktie unter 100-Tage-Linie - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-17",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZUJVOVVWSVF1UUlqcUdJTnEtOXllejNsWTdTc2VmU1FlNDFGMmxRbzh6bVdIM0gtNTFPT2g5Y2wyT2lIMkliaVBKU3p2UERsekQ3NzhyNFZud0hYN19TTFBJaXVMYlZSamhaUVIzYnJxRldmU2VZeUtXTU5wbFBOaQ?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -1084,10 +1105,17 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "Leonardo-Aktie legt mit Auftragslage und Prognose zu - Ad-hoc-news.de",
+          "title": "Leonardo-Aktie über 50-Tage-Linie - boerse.de",
+          "publisher": "boerse.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTU5CYmxlWmFWdDVhRXE4ckVhakNLY280MGllUjd6VVZoamI5RVFkaWVDNkhEUXd3dTA5a0h2QjVmZ0tuOGs1UHA0THpXcGxudW1VTHlBOTFQeWFCM1lGNjc5SF9iWDlOb1pEOVU0dlduXzMyYWhMaVpqcVdIcEJJRW1Nbw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die Leonardo-Aktie profitiert von steigenden Rüstungsbudgets und soliden Quartalszahlen - Ad-hoc-news.de",
           "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRlM4QW9PaUhYRnFrRDc0UmkzQjl5S0pQYXJaWHZLcDhoQzQ5bFltN3lMRVFycnJJTFYxQjZON1EtZ0RmOS1NaDc0WEFUelVycTJlSGtEM0NPbVg2eTUwVlNENVYyMFVpME95RC1UZEhpc3ZVZG1YZ2NKZExob0VMeGNaZWJSRUdwY1ZpcEZkYWRfZHlnOVN1Uk5LN3B0WmFYVHdmRWhTakxFOU81NW92ZQ?oc=5",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOdEpDZW50eDVMcmhaa3gzcXhUVFUtNlNXTXNyYmFuNm5fMUhITkYxLUlXNHliX3paX3BmWnk4bWhrSnlFR0xUVWkybmY0RHFObTFDRjlrZDJCN2pjdWtlN1BLUDVFUnp0UW9yQkxwbVA4MWU1a2tEbnhiR0o3ZEFlWWNpSVlXOGFlSTllOGpFQlZEblJWbnppUG4yT2E2TDZXR3FvT1BKVDRNMjlHRjc5TnYwS2ZnQzFQMDZ5dlVTSUJ1VmJSeG9mS2R0RXE?oc=5",
           "quelle": "google_news"
         },
         {
@@ -1095,6 +1123,20 @@
           "publisher": "Ad-hoc-news.de",
           "published": "2026-07-22",
           "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPT1hIN2hXa3dxdVQ4WFRoTGZrS291R0piSWlaLTk0d1E4cHNtbXYwVkQzbENEcUQ5MXhwUDhSZVlTeVd6Rm9YWldnRmx5UXdmLS1XdTdlTjNnTTNwaWtsM1NzUEhpWnVvM2FRQ194amdzdjVIbUVtR1N4NlUyRXNCaGVZa1dKajc4bGZuamFER21feVh0ZmNJQW5iRWlRbzBkSDRJNTdhcWNtXzN5YmJfSEFuYXRuQQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Leonardo-Aktie legt mit Auftragslage und Prognose zu - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-22",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRlM4QW9PaUhYRnFrRDc0UmkzQjl5S0pQYXJaWHZLcDhoQzQ5bFltN3lMRVFycnJJTFYxQjZON1EtZ0RmOS1NaDc0WEFUelVycTJlSGtEM0NPbVg2eTUwVlNENVYyMFVpME95RC1UZEhpc3ZVZG1YZ2NKZExob0VMeGNaZWJSRUdwY1ZpcEZkYWRfZHlnOVN1Uk5LN3B0WmFYVHdmRWhTakxFOU81NW92ZQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Leonardo S.p.A. Aktie Kurs & Chart A0ETQX - Goldesel.de",
+          "publisher": "Goldesel.de",
+          "published": "2026-07-21",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBrbmxVbkpDMzd5UlFpZEdFenMzaDdIYnE1cXlOWDdBU2dqR3ZEOEZJOFJVRGlsd29QYzlIcWdZNUhkVWNPMi1qTllNcEtidWVqR3VyTTh0ajQxS0k4TlpKTExYS2p1WmhW?oc=5",
           "quelle": "google_news"
         },
         {
@@ -1126,31 +1168,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "Die Leonardo-Aktie zeigt stabile Entwicklung nach soliden Quartalszahlen - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-18",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOOV9PbDZjR2VDeG01WUFMMVp5N3ZTNnJ0MXpPTXVQY1JQN29LckRMYTVYSjNmbzhLcjh0d01nRXJpck8tLUtqTFVsSl9vTmhnZU5pd09YZGVka0l2ZlFnTGxSOVd1NUt6X0NHSGdOcW90TnJ4dnVfdk9mb2lYOWVSWVNrZGdKTk5YaHNRSXh2VkUxd19wenA2VnFjN09qVnRHYUZrX052ZjU4UjE5XzRtejVNV1ctdU01eTV0M1c4V2FETkZiNEJSTzlLRQ?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "Leonardo Aktie: Kampfpanzer mit Rheinmetall vorgestellt - Börse Express",
           "publisher": "Börse Express",
           "published": "2026-07-18",
           "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOemRvM3p0ZVBLYmFSY0pTazRSMktPNUREYWxEbUt6RnR2QXpnWmJlWGhXYVEtQU1HOFBIQVd1cTJ5UFZ4WFF3REYzRWZTUWRhUldycGpTUFk0bmJocnJHQzBUemxNSzZOVlNhRDZLb2VHNG1lbkR5V3RfYzdyTjFpNGVnTkRSaDVOaHE0SGxfZmZfYnVUeFphTFRuam9tY2ZIaV9FclR0NjRUZw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Leonardo Aktie: 56,8 Milliarden Euro Auftragsbestand - Börse Express",
-          "publisher": "Börse Express",
-          "published": "2026-07-17",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPRWxfcVhLV25aeWwwUHBwXzZWQkZTNVdQZVNMSFZ5Z29EMDE1SE8xQzJ5Tm1BNEFhdzdnLVBVdVVIVTdkRnVxaTlFeW9BZk0zYkJMdmI2anVHV0gtNEFFNFppYVhNVVlIbXdEVnNVQlZJcTdSNi1hRXR2T3l3UkhBSFhzaDBLSVFxVnFEVkE1T1EtTE5XbzFvRzlhLXVvTlhDTFV5dg?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Leonardo-Aktie über 20-Tage-Linie - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-17",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNcVpaUE1Sd2oyREs0bTNPTXVaWHhDWEFwR1NOUkY4dHpwekIxV0FKaF84UEplQng1NlVZUEZrYURTQ2UtRWpURzI5b3RiSmxVa2I3UWFzeUNxbzliZkt0dnRnWHctc2pySnh5YTZtRkZNcy13RTN5NTk3OXFsS3F2b3JhZw?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -1161,52 +1182,87 @@
       "ticker": "",
       "headlines": [
         {
-          "title": "ASML: Prognose auf 43–45 Milliarden Euro angehoben - Börse Global",
+          "title": "ASML: High-NA-EUV-Massenfertigung bestätigt - Börse Express",
+          "publisher": "Börse Express",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdnA1a3ZQamlCajJieDc4MHcyOGc1cFJfaFN1dGo2N01zQ1cyVlBWNk9IYVV4bGUtY2g4WFNlZVRVVE1sSmZWWU9WbWcxbVQyRF9iY2VFbGUtVTNvZDNRc2RLZ09rSnZ3cDNVWEVVdUlQWDdYNVlTYjVCV3pyOVFiSDVOWGJvQmZNZG1reTQxeVdmYmM4a0Q2dFgycw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "ASML: Intel bestätigt High-NA-EUV - kapitalmarktexperten.de",
+          "publisher": "kapitalmarktexperten.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE16NmtzRzhBd3JkUU9vOGpITGl1V1pSTkVUVzhQRFI3dUdzRmJKYWI4Y0FQTWl3OTk1cVBMR2ZnQ2ctYk9raTk0YWRvM3FlRHhsRnF5aXpFZzlybEhucGFaRTliSGpxTm1XdFRWUXp2Vm5xVGdDSlFTOWJB?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Die ASML-Holding-Aktie bleibt vor Zahlen und Marktwert im Fokus - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMk5wdjFGOUhwMHFNWURMT1h4QnJ5NnAySUFNc0tqNmlBeGNnNGxKak1fRVhtOEJ5VEtGWGp0bGNhb2oxS2dYMDVnbm01RGZBN2xLVmFVV0xoMmxScjVZdzVXS2lJSldHTG9vZnpnSlprdEdHamJkMVVTdEtETk5kV2Ezc1ctWnpIY0tRd3AyOUk1VEtRLVhBSHhhR2xwcDViNkpmVTFMYndDRzVwRW1qSDJ4UXdUSHFBanNub3RXcw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "ASML-Aktie unter 20-Tage-Linie - boerse.de",
+          "publisher": "boerse.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE96M2JBYUhyUXVYMUNUR0hoRUlyejF3WTY1ZnA3MEtoTE1WeFR6NmU2bldRNVlqS0U0bm8tTGJ2QWFDX2FpTXNjdW1ZbHJjeHlqeC1iUTc5ZjJfWFE3aUhxckFTQmJKN0loNHowTkx0T3p0aWNGU1VfUnE2b01zQQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "ASML-Aktie: Konsolidierung vor Abschluss – jetzt einsteigen - Der Aktionär",
+          "publisher": "Der Aktionär",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOeURZb0h0dE1kSDhrU0doRXhHQUZlZElEem02S3VZVnZUNnRObEdIVU9ScmNPcVVscDA5c1dYaUNmZzI0NGVpTjNlNXVxNXNzTHhBQ21uWVA0dmNjNjJkTm90c0pUck5VdmFsc1V5andodzRNNS04ZkVSTC1uTGZtWEYtbzJsbFdnWDdNNWEwUHc2NXBLSjYwVWhuWE9qN2F5bVRkTzltZTJZUmFtb2xTb1JjNA?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "ASML Holding N.V. ADR Aktie Kurs & Chart A1J85V - Goldesel.de",
+          "publisher": "Goldesel.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA0SlI0OE1RazhGb3J5eXRPY0sxZW4wNFctNUdwTzB6VWY1WDBZYm9Xck11S25xWGtKb1hGRzVBLVNCTE42cGhfQktzeUM3SmF6enlRNHFFOENvZVFHSWpnZUxtWnFKY3drUXJleTFzb0RCcDJ3ZUE?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "ASML: 43–45 Milliarden Euro für 2026 angehoben - Börse Global",
           "publisher": "Börse Global",
           "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUlRZT0daQTJSdWl5M1Jkb0RMVG1mSmZLSU8wSkYwUm8yMmQ0UDR5cklJclQxYm1xTVBRSGZsZURpUHJhc1NDTXp5VHJNWjdBRFlFU0lfOXMyVmRxZm03SGxCWk9lWkFVY0FES3NxQzJFNUFlZ1lqV1RJdlpRWWoyQWcyM1VZemdYUnR1cWVn?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUTNVUHN2c1k3LVdXVHhQNDF0ekx0MkNCYUR2QlBHUzd1cXhoUXNoNHlQRlBYeUhXNDZ0eTd1V1Brenl5TW01V2JvZExtWkdkX3gybFJPZGctTUd1V2VGaTlNcmJmc285bFlYRF9KLTExRGp3U1R4cUt5NEJJTFNBUlV0eE5UaUdndmc?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "ASML: 159 Prozent Anstieg in zwölf Monaten - Börse Express",
-          "publisher": "Börse Express",
+          "title": "ASML liefert mehr als eine KI-Hoffnung - ntg24.de",
+          "publisher": "ntg24.de",
           "published": "2026-07-23",
-          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSUxJcFlFV256Qi1xcEo1S0R2azdINno2QnZFVFNHZ1RDMzhDaWhHSU43M2dWQ2luZ0xuZ0QyMXdzaWdGa21oSXdRTFZ1ak9qbHpfcVdWeWZDeWRfRGJyamt5UU9MMGJKMDJqSEdvZWFUZ0tKSWI2Mm1jSVpMSkxkLWdCUlctMUJQMC1HV3RHSVFBV1htSWtSd2F3?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNYmNpaEluVDJ6akVFYWs0bXlzbDlESklqLWV1R1JWVndFUEtRRnk5SUw5SC1pcjQ4ZV9paWVobUhTUWJCTnRYU25IWmwzR0VFZVJQa0ExZVlhOFZ5MS1QREdORGZxV0Y1RGJCMHByNmNjN2Z4Tld6UDZIaTUtYTJhNFdZOG51MU16RkprY1F3?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "ASML-Aktie über 38-Tage-Linie - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9MQVM2OG5DUExyeDdZd0doaDltRXNFMjdoVkVJTjN1emVjLWZVYTJraDdaOC1DbDI5NTVyRUpHM3NMeUF3d1REb3c0ZUhMc0tHenB1eGppZGlnYl9Kd2JIdlh2TzJEWW1SQ2hiZGEwdE5IUGNaWDJNSFRMcE42Zw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Infineon-Aktie hält sich wacker: Chipwerte wie AIXTRON, SUSS MicroTec und ASML im Minus - finanzen.ch",
-          "publisher": "finanzen.ch",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQWlZtTTVIcENiUGRTT0k2UzZIeVphQmlwZkFraHgyM0pRbzNsVUNxUlpwRnFWaGtndlJndE9ocnA3SU4zeloxME4zQWdsalJ3UzFhWUF5ZURtZF9FZzMzWkdENUZrLVN2cTZ4Q2wyWGR4REZxWEY5aWtKSUVxMEgyUk9nMXNRNHNtZTZvS3hqSnJFNmJxc3BWQllhTTVBMzAzT2ZZb1BnME45RGx2Sm1TUWZVZU0yREtTV0wxc29tenF0MTdCaGxjRUpVX00wTkxuS1dXT1Fn?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "ASML, IonQ, Rigetti und Quantum X Labs: Warum Deep Tech und Quantencomputing die nächste Wachstumsphase der Technologiebranche prägen - FinanzNachrichten.de",
-          "publisher": "FinanzNachrichten.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxPX19TeVZmM2J4NUFFMDdGYnJ1N2RldWtoeEVyM05uUHFhQmN4UHltUjhFOVdxWk1VbGFMN3FzR2lJQWFFTFZzNVNKX0pHUVVvYlJtYzlSN3VRNDB0N2puSlhRZWJWU1FwWEVwQTVVUE1yWDZUd2tsNl9UU1VWTWdISmFWVDU1akRhbnFPeURTaDFVOU44U2U4VHEtdHpQQXptNi1nRFF2VnZ1Slp2b19DTkhzOG9KT3ZBSDVnZGlPbnJ4NllKRUNzV3ctMXBVYWZicGxrU0xDYlAwWWxldTcySFdpbnBZRk9vb3RxV25MTFdfNnFSUVB4VXVqR3dvdUpfMERBU2hoZjB2OWI1MEtXRDBQNzZzQklPbm5qVXFIVGxnbmhVekxka3FR?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Zacks Investment Ideas feature highlights: Taiwan Semiconductor and ASML",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-135900523.html",
+          "title": "ASML, IBD Stock Of The Day, Rebounds From Post-Earnings Swoon",
+          "publisher": "Investor's Business Daily",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/077ee50c-c757-385b-8074-16f527002e42/asml%2C-ibd-stock-of-the-day%2C.html",
           "quelle": "yahoo"
         },
         {
-          "title": "ASML Lifts 2026 Outlook As High NA EUV Enters Intel Production Might Change The Case For Investing In ASML Holding (ENXTAM:ASML)",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/asml-lifts-2026-outlook-high-042931579.html",
+          "title": "ASML Holdings' EUV Leadership Strengthens Long-Term Growth",
+          "publisher": "Zacks",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/technology/articles/asml-holdings-euv-leadership-strengthens-162400389.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "Wall Street Bulls Look Optimistic About ASML (ASML): Should You Buy?",
+          "publisher": "Zacks",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-bulls-look-optimistic-133005318.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "Is Trending Stock ASML Holding N.V. (ASML) a Buy Now?",
+          "publisher": "Zacks",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/trending-stock-asml-holding-n-130004987.html",
           "quelle": "yahoo"
         },
         {
@@ -1217,52 +1273,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "ASML Holding-Aktie: Champions-Check im Monat Juli - boerse.de - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTFRrb3dsNXpQdFdDRDNHNC1MRzFra3Z6YS04dURZYUdRNl8ycjhIVmNoVERCeG9lS0drNkhncTNWWTJyRmxsREl5NU5UMGVlVHBIWHJ6VGNKUDZsQUFpVnZDZzVWTU9YdkV2U3FkOFl5LUpjU2c4cWFVZ01nam1TSWcyM21SektWRDRzbTl4cWNWSm1zYWfSAZsBQVVfeXFMTnJ5TVhCZS0tWDRIMDF2TkxmNE1FUDJNWXppYkxFZTV2Wlh6aXRmM3lUdnpIc1haTzlyMjkwNUZ4SHJVVno1ajVaLVAxR1Z1bHFsd1h6UEVBRUtNUzlfc1dhQ3pLLXZWSXFKTHYtakdURlhKMG1RWV9WWFMycXZnOFhpVGdTVFRYNjFsbFhwVmREa3RzSnNKU0ZBbUU?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Why ASML Stock Jumped 86% in the First Half of 2026",
-          "publisher": "Motley Fool",
-          "published": "2026-07-21",
-          "link": "https://finance.yahoo.com/m/b4ba5f6c-4ee1-39eb-a7f1-7dbfdedc2400/why-asml-stock-jumped-86%25-in.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Wedbush Believes Increased Guidance From ASML Bodes Well for SK Hynix. How to Play SKHY Stock Here.",
-          "publisher": "Barchart",
-          "published": "2026-07-21",
-          "link": "https://finance.yahoo.com/m/199672d8-94ea-37d0-a5d5-903b5a08b175/wedbush-believes-increased.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Micron Stock Is Near Bear-Market Territory. Here’s Why ASML’s Guidance Says Buy the Dip.",
-          "publisher": "Barchart",
-          "published": "2026-07-21",
-          "link": "https://finance.yahoo.com/m/0dcade31-bf03-3f51-a465-37640b1bd003/micron-stock-is-near.html",
-          "quelle": "yahoo"
-        },
-        {
           "title": "Historische Chance: Wird die ASML-Aktie Europas erstes Billionen-Unternehmen? - Finanzen.net",
           "publisher": "Finanzen.net",
           "published": "2026-07-20",
           "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPU0hmd1F5N21yWVpQbm9oTXI2NFhrOE9PUjN4Q0FZa0NMTnpBcjh6RW84andvZ0VwRm5rbzNzRXpKYVMxX3hwbVUtS05OOG1fd0VYcDEzT3pYeE1HNHM1akZhTjVHOWdVekJXa0dSb3RZZTc0U0NyR1R3MmFrQ1cxYmlJblhIWEJxZ1JMck9fX29HcWRvNkQtNmJ6anRlcXRZMzZfQ2tfUnBsVS02R0FvMVRPV19wbDVDbkxPbFZJbU5jZWhaeGFtcllyY2ZyY0Q1WmQ5dDlRN1FpQk1SNHp0MVlR?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Why ASML Stock Looks Undervalued After a Blowout Q2 Operating Margin Beat - TIKR.com",
-          "publisher": "TIKR.com",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTEZBdWdaZWlRNUVJZDNxbDZnUDlobXFXdlZvcUtNcUdRZ3FzMGVscXkwUlN5ZThUb2pRalZXR0FWbnA4MTV4ZUZ5Nk95M3htUWRlSzZBR3k1Sm5GVXJWNk9SSHc1MzNlakJ1YUtIcDFieGpGQ3RkcmtqVF9IZVR5Yl9RN0wyUDh2MFhJQm11M3pyZGp0SXNWeUNIT1RGYS1uVU9OZA?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "ASML Aktie viel zu günstig: Analysten reagieren! - Investing.com Deutsch",
-          "publisher": "Investing.com Deutsch",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYTkwNElqTEtWTEdxcEQ1TmNFT19NMTR1dEFfQ0V6anZMR0RUN0luOEZ4b0hkMUZCZXEtMXVoRWRfWXZaemw1Z1JkZ2htRGVoYUlSOUhsQkZtYnZKZlpYckNkeFdaQTljLTMzWUZUU1lZQzhjdTJtMjBaR2puV3hJQVRhV2luUmpaLTBaVnN1czQ4MUM5?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -1273,17 +1287,80 @@
       "ticker": "LOM.DE",
       "headlines": [
         {
-          "title": "Lockheed Martin (LMT) Stock Fair Value Edges Lower As Analysts Trim Targets",
-          "publisher": "Simply Wall St.",
+          "title": "Lockheed Martin-Aktie über 200-Tage-Linie - boerse.de",
+          "publisher": "boerse.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQXVzcjlreXdza3JnWFluMFZ6UGpGV0ZleG94cjZpSUo4aVFxMlRMMFRSa093X3V1cjA3Si1xN051MENwOGZiLWhVVlpLTkFyemxaVzRTZWRDZXF4VElUZDlXNWdqR2VGRzZnckphdnpWR0JPM2ZvVnhydkhDWDRZQWJoekVMSmUxNVlYWVFR?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Lockheed Martin-Aktie legt nach starken Zahlen zweistellig zu: Rüstungsriese hebt Jahresprognose an - Finanzen.net",
+          "publisher": "Finanzen.net",
           "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-stock-fair-050925349.html",
+          "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQUllUTVUzQkI0ZGE5YjY4aUs0ZFBCR18wVEtTektPWTZ4OHNkZzFkVU43ZWtRYTVTVEhod3BDVWozT1BLbHJIX2ZlWmRfLUI0Z0ZreWZyWXdzQm9ybVBLanFmS0RNMGprUWF6b2V2V1FtckhUVFBVRlBCek52NGl6Nm5OSUJ0ajdGQkkybGVHYU1nbEFpS0MyS0h0RGlSMGs0NDBoa2lMNm1oOHRwX3U5dERYOFV3RzZpWGtzbmpuLXI5R3Rob1dsTG1CcWNXWFpRQUwzSWxPdmREZER5aWQ0RFJuYy1hdWpyaHBIR1ZLWU1oZWw1XzRBYWhNTQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Lockheed Martin Aktie bestätigt den positiven Trend - 23.07.2026 - Wallstreet Online",
+          "publisher": "Wallstreet Online",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRU5KcHFSWVNSNGpDYkZBdFVndWp5OGtEUkRlY216R1VXQnd1eGs4M2ZTZnotZVloNmFlVmdTT0dobHdSMTlmRno1NkUwdzAtMllJTk51RjdIS2tRVmxCVnROYU9XWWRRNnN2d0pJTS1GLVFEU3dmcFFDTmxhZjNmTFNzY0l2S2gyLW5ZRGJ1RWtkanluVEFGZmVUblpFWjR6LWtnZURpX0xobjBRa20wa3BpalQ0V0JTeTNNRw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Lockheed-Martin-Aktie: Rüstungschampion fliegt allen davon - Der Aktionär",
+          "publisher": "Der Aktionär",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbVp1WDFMZ0tmSktWLW9VT2dZRXFpYTJ3cEYtamhhazhSM3FLeUFMNEs2SERtc1haWVh3OW41VVlQX19KamwxUEtGaEVvaUdWRUFIT0hxSkhyTjRoR0RYRi03dHhFbzNHb08xd3BxVTQ4dk5UM2xscGt3dHVNMk8wYkNHWldFZ2k0MzBTVmNPLVFPeUJNSGw0UUgzZFhkZVBRZzc2a1BIZUVhRXZJMjJ3SDVDdDg4WkU?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Warum die Aktie von Lockheed Martin heute stark zulegt - Investing.com Deutsch",
+          "publisher": "Investing.com Deutsch",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOejY2U25oaFowbHFSeHdxdld2ZGtDY1BvR09VamxSdFFoTXdDcDlXd0lROUtaR01BWDRqQnQ3UmdDOHctbTVIblJmTHd3dTFYZDdvcjB1XzNscW1tbVpYc0U1dTlYOXZBSXFVTmtPc253cGI1T194b3E0RlFLMFBOZlpfSlNjb1ktNlRfa29vaENBbGNyYzVlY044SnYzSW9YWmx3YmtLMUF4a3FDWmVGZlVmTXExdw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Lockheed Martin Aktie steigt nach übertroffenen Erwartungen und angehobener Prognose - Investing.com Deutsch",
+          "publisher": "Investing.com Deutsch",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSUdNWUU1UVRCbjAtSDRzVWExV1NwU2diMzhMQjBFZ1dMcDAwdEVkTkw1ZHM0SHVtSkZsVFBsVzV1ak4zT0VGN0dQRHF6UmxwZ25fTkF1UXc4Vkh3ekJlWmpLN3dJRHpmQXhZZnZDeWozLWJDTWZaSXZHTENGMGNocUtsQ2tac3F1dlc0SlJIdnVTeWtDbTBiZll0bG51SUg4UVlIUlhHWDlvVHFlT29kX2dwOUFZNWJKZmJoTVJ6S3FpU2FuTVdabGplaw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Why Are Lockheed Martin (LMT) Shares Soaring Today",
+          "publisher": "StockStory",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/why-lockheed-martin-lmt-shares-220431200.html",
           "quelle": "yahoo"
         },
         {
-          "title": "Did Lockheed’s US$10.5 Billion GLSS2 Win Just Shift Lockheed Martin's (LMT) Investment Narrative?",
-          "publisher": "Simply Wall St.",
+          "title": "Lockheed Martin Corporation Q2 2026 Earnings Call Summary",
+          "publisher": "Moby",
           "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/did-lockheed-us-10-5-031434681.html",
+          "link": "https://finance.yahoo.com/m/5f7745f2-9c92-3f9d-8ff8-e8b6ef46bb55/lockheed-martin-corporation.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "Lockheed Martin Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/d54a0098-0289-35fc-9ace-75a98b19871a/lockheed-martin-q2-earnings.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "Lockheed Martin Corp (LMT) Q2 2026 Earnings Call Highlights: Record Backlog and Robust ...",
+          "publisher": "GuruFocus.com",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-corp-lmt-q2-210301110.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "Nvidia, Tesla, SpaceX, Alphabet, Lockheed, AT&T, and More Stocks That Explain Today’s Market",
+          "publisher": "Barrons.com",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/a951d78d-defe-37ba-8a9d-aa2811be27eb/nvidia%2C-tesla%2C-spacex%2C.html",
           "quelle": "yahoo"
         },
         {
@@ -1291,13 +1368,6 @@
           "publisher": "Finanzen.net",
           "published": "2026-07-22",
           "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcXJveklucWxTQ2VzMnJkUUN4QTBNdlo5NVhzSFVaUWtGOWZtdjJXRkM0eEJKSzFfbWNpN2QtN1dFc0FreERYbmpfaTFZVkN1Sk5KYjNUMnFWdTN6WUJPdUJ5Y0RCbmpGTjVka2JXWDZnQVhqb0NvMTFxeWVzbGdlU3h5cTlwak94Y1QzbjRpRVBWYmdQcWNpUEdMaV8?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Neuer Verteidigungsdeal: Großbritannien rüstet auf: Lockheed Martin erhält Auftrag für Raketenabwehr - FinanzNachrichten.de",
-          "publisher": "FinanzNachrichten.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPWWJwZHlSMUlMMUFTRm0xTURHZ1BiSnMxY1JOV3RaaVhNY1p4R05UQ3hxaWRuS291Y2NZZjFRdDdWazl6cjhxWXpvYVAwNkFNaklTWE5JQks0NEFWVWJoMGNJY3JIMWRFdnNEVC1IRzVVRTA5aGhGV2pkbnpyLW1aZmhCTlZKcVYxOXlNRElsU1lpT0xEUk1jekZWYTNjMFZEZEpvU3JrdmRyVk5BS2N2VThHT25YOHFXUHk1TlZhZGQzTEFhc1NRbmRVNTF0Tmp3QTQtTnFURGl5OVBad1Y0c01aaTYtT2xlcXFQZ0c3aGdjcU9KSUZzc2REbVJqekVGSHc?oc=5",
           "quelle": "google_news"
         },
         {
@@ -1315,52 +1385,10 @@
           "quelle": "google_news"
         },
         {
-          "title": "Lockheed Martin Aktie News: Lockheed Martin legt am Mittwochabend zu - finanzen.ch",
-          "publisher": "finanzen.ch",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNaVYyTWZYWnBZWXdtcFdxOXo1a0J6Y2w0cVZaemdUUXRTbkU1YkVoNVNXZDV4RUQ4bnNram1ZeXhwMkMyRFpYcWZHQUNKNE9hR0JtNlZ3dzFxSXVRenlBYS12eUFzZksteklacVdmZU9STlg4V3NnTF9LRnNmbDY5cDYxTll1bURXalF5Q1RhYzZmMzVWcUhqTk00dXlYS2tV?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Lockheed Martin Declares Third Quarter 2026 Dividend",
-          "publisher": "PR Newswire",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-declares-third-quarter-203000740.html",
-          "quelle": "yahoo"
-        },
-        {
           "title": "Lockheed Martin Aktie News: Lockheed Martin am Nachmittag mit Verlusten - Finanzen.net",
           "publisher": "Finanzen.net",
           "published": "2026-07-21",
           "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNNmM4ODRZNTdyalZxTTNJQVc1amNlNjhWTlR5X0Y1eld5YkttOEJ6VDBuN1dsNkw0ZzZUOTYwVF9LUV94VnlDbjFteUIwZkZyUG9Hd2lMTzVFbjB2Rks2dlB2WldTaEpFRDNxbFRyVlU3QWVNMzhwWTNYMmhCZjU2NjNyZHpNaGp0Y0UwbkFlcmJuU01lNVZLSVA5WWc?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Lockheed Martin Aktie News: Lockheed Martin am Abend auf grünem Terrain - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQaEc1VUxlVGlyM29ubHRDdHJjeElrd2t1Q21kTk8tamNzT1Z6YU8tWWpEcEQyLXNBX3pNaGlUcjFVOU9BV3g1d0pVS0lYSXpEYUU4X3RfaXpFTVRONGE3c0xkd0phS0hjMS05VXQtSXNCMURPSWw1QzVFZWxPWjliMGh2MHM4SGNQanRDRDlDeFZteGxPRkxrd2xTcWY?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Lockheed Martin Aktie News: Lockheed Martin am Nachmittag gesucht - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbUdqSXR4bW9ZUGFURG5XTktBRVgtQzdBMlZQcXlEVjJza2NZVFFTMkdxcmFTVFBqSmVJV3VvdS01YXhuVGJvblRDMHVEdjZyMm5Cd3NIWGdKNjNuSlY0blFBaEw0VXVQYS02LTFZOVpjSm1QZExWSlhoZDc4M1M2WnBCemlFc0JPdWg5TWNrQmFFODVYT2JkSFY3U3Y?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Lockheed Martin-Aktie unter 50-Tage-Linie - boerse.de",
-          "publisher": "boerse.de",
-          "published": "2026-07-20",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQk1mZUVDTEwzaThnNFpFWUdESW94Ty1QY0NfRWxpSnN1eWlmRWhpMlY0Zkd3XzdiUnpielRwY2hmem9OUm5MSFh2cFNLZGNaMDMzaEgzLUNtWnZjUmctX3EzYWNzQ3l6enlOX2hNbENVeXFjTkV6Z0ZLVENObUhVdExkZC0yZkNuZzBDcg?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Lockheed Aktie: 1,13 Milliarden für HIMARS - Finanztrends",
-          "publisher": "Finanztrends",
-          "published": "2026-07-19",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX2ZYR0NvS0VGOE15b1RWY1RVbGxUclhObEtteGFGX0pFZy01ZDdXZ0N3R0FVaFRoYm5iTmZoTkdmZGNZcUZFRkc3cGI0RHZPZzlwTUFDX05BWnJ2enVjYTF4M3hlaGUzNk9YbEY2RDgzLW5vRm5XbGh6TWVlTEdyUg?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -1371,31 +1399,52 @@
       "ticker": "NVD.DE",
       "headlines": [
         {
-          "title": "NVIDIA is Acquiring ‘Dark Fiber’ Across the United States. Here’s Why That’s a Big Deal.",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/aa728343-f2bb-3ad7-a096-bde7f7e59018/nvidia-is-acquiring-%E2%80%98dark.html",
+          "title": "NVIDIA zündet den Milliarden-Turbo für Amkor - Aktie springt an - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQd0tQOEdNRHpRY1JhX1YtUlFQOXUwT3NpYkRMRW52ZFVYX3c5dXpnWFJraEY0SzNrOXN3bERpN1JEcFV5REN3Um1hcTR5cHFxOGgzZUxFU2JhZ013djQ0b2Z2OV91bXVWeEQ1WWFncE5semlFWlZhVm9qZHQ5cTRPOS1iQkItTUtjOHoyZWlNb3Vsdm5obGlFeUVoVnNPbUtaOEdqNXdUeGpkQmp0MFJWOHNCTGpLMXl5S0s3VWVPam9nR01YMkE?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Nvidia Stock Is Barely Beating the S&P 500 Index in 2026 Despite Record Revenue. Here's What This Performance Might Suggest.",
+          "publisher": "Motley Fool",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/68f96e17-1a51-3638-992f-eeacf91d3e29/nvidia-stock-is-barely.html",
           "quelle": "yahoo"
         },
         {
-          "title": "KI-Platzhirsch NVIDIA legt Beteiligung offen: Nebius-Aktie zieht kräftig an - Finanzen.net",
-          "publisher": "Finanzen.net",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOV3Y0MFg3VWJNQ1NFX1JCa3VpRkd4Y3NmdUFFTXZkU2xibmhiSVhFOU80R2UtTXFmTjBLYjM1QW42UkJRaVRZMUJ0a2xaYVdjMENJX2l0WnJzeTdhbzUxYWtvMHBNQnNvek1EbkxCdWxRbW5XeWEyZFlIWEpqTTJnM3NwQVNnV25odnVlMTMzM3BWQjZIWl8tR1ZXUkNjeXNkVnp2VXpaY1IwTDIzXzNnV296M3FiY204NlhSeU8ycEo0VVR3aldrUE9mSTh6dXNrNWFtd0RPTVZFVGk5VEJRNw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Nvidia-Aktie über 50-Tage-Linie - boerse.de",
+          "title": "Nvidia-Aktie: Champions-Check im Monat Juli - boerse.de - boerse.de",
           "publisher": "boerse.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPY0drUnlyNVVtSkt0WXNaakVlc3pHWm5LNVNuLU1QdU9SRUY1Z3RIekgzODdKd2FlckthT0otSnYyeFBrZmczWmo5ZmF1Zk9YRDRKcGdUWGFCY2JtTmJfdDFGcml6aHNubFRUSF9CY3NXUGZLbDQ0Mm4yeG1zcWxSWg?oc=5",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPT2p5QXNnQlp5eEEwZTRaWEpBcmZ4RDk0UTN4YzNTMWVYNTNoOFRMQTA3dFNOcVRnaFVZRDFlSVVMVk5wLV81RHFLcmFDM2tvSENvZC1fMnhFVmRRSEloNEJUYXVzaG9HUE1NQzVFMml4TGdXd0NBQVpEd1U1QTdkMmMzbEowVTFlcXAtd1hR0gGTAUFVX3lxTE5kNkIzd2pxNG5HMWlvOW5MYVRIYVBJUENTUUNidXlmbUlla29SZ0YwbHB2TTM0Q2FBUW9TcU5LZXJubEJMNmVpbGNxQVp0NE9RYW0tZkpoMkx5UC1LU3YwdFV1S0cxRzJFeTBCQzlleFY4RnV3R1hFOU90cU80czNDTlNQRE1sbVZyN1oxRGJnVzRqRQ?oc=5",
           "quelle": "google_news"
         },
         {
-          "title": "„Beispiellose“ Attacke! Super-KI schockt OpenAI: Nvidia-, Alibaba-, Micron-Aktie im Check - Der Aktionär",
+          "title": "Nvidia-CEO: Die chinesischen KI-Modelle sind exzellent - Der Aktionär",
           "publisher": "Der Aktionär",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNWFZBenRtTnJrLVc0SFIxeEg2LVBGRm1qaGdRdUhqb25PQW0wZ19BcXBoUEhBWFIwQXlLVXlweVFBZHBYMUdCQngwZC1YeUhZTFBVM3p4ZDlGTnJqZnlWVzdRQjdLOUgxenVvbzI3c1h0Rm9QUUlWV01vVDFZd0s0V05FVlNGeF91R3BlWlpNRmpTTmJVOENiak9oN2Z6eVF2QXpQZXp0OU0xTXBNa05VQmo1dU1BUllnS3VWRThfQk01cmFmb1VaQjlyZUhCVkl5TnFtWg?oc=5",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQd1dISWJEQk56QkhKNVZRa3pFakJkX0l3V19zN2NnQ2puWUs2NDdZT2F4ZFZUclduRVNwTHlobGw0enJYOUlORHlxWTZuZUlFZHFvaVlxOTNOM2Z5WWh0cXRiZ3JRbnNpUmdCSWxzWXdVLUctQ09FclpJV1ZCSUV6SlVnc1VIUkN1aW1EQlZwbUhadmpCREdtc0ltMUlNMEh0dTI1UjBNS3VYOHJQRGJF?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Mega-Plan bei Nvidia: Bald 700 Prozent mehr Umsatz und Kursexplosion bei der Aktie? - Börse Online",
+          "publisher": "Börse Online",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNeDdiRkJvSjJiOVJnWkQ4VXVUanZRQmJNWHNSRVlLWGI4LUV0RWpuZ0tNcE1FNElLeDR1cnR1MGN2anVOSndfSUluRlZnNVVEdmhCOWRVN2dCc1luMEE4dVMwT2FoaktPZWU1aVpyekkwcnNZT2gwNXlyUWVyZGctdksyeFZaN2dZQWlXbmVadmRQOFpRa19iSTRyUWJzdHZoSnpiWHh6SnozckprRmowTUxNNlpIMTBSWVlTTmVYRlNWUm5ETDZOcFR5OTU0UkQwWlJnRDRVbVVxQjd0?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "NVIDIA Aktie: Ausbruch im zweiten Versuch? - UBS - 4investors.de",
+          "publisher": "4investors.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9oeHZqN2d4cE5Gem9RaHpGbk53bkVzOXM5VW5QRGVGUl9qY1IzaVpPT2ZseWF2UGhsa0lOOHZ2OWtHMFoxbWZ2dkxJUG55OXJxM3lnNVVtR2w5LXJHRW1XMV84RkRBd3J4Y1FGRW11Ry1KUXA5WEh4TlY3SEbSAYIBQVVfeXFMTjBxcTE3MVNrakZUcm1KNENud3NXRlo4bUd1dmlEbTMwVTdxdzNzYWhHWDZyRFo2aGZodl93LUJyWFZFTDZLWEZoXzR6Y2xBMk1GZmM5NG1JeHZtZURQNnJYNDNOTkM2ZEUwYWplclhCNWF4bzNXNWFQWklYYng1QU1jdw?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "NVIDIA-Deal über 1,5 Mrd. Dollar lässt Amkor Technology Aktie um 16 % steigen - Investing.com Deutsch",
+          "publisher": "Investing.com Deutsch",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWXliZWhCNDhhTC1wWjc0Y3JRTno1djBrcGVYa1FmTVV2Z2l6VEVGdjd0Q2RzZlJEc3lqVlhnY2dsWEx0N2FXWDBOVzZjb2hvUmdMLTl3QTZSc3Axem5nM2VZX0xVMVhRSkhlOGk3aUw3QVg4ektmWTAyUmpmb3pOUEFSV0EwN2NlSXZUQjhXVnJaMW5qYndiWTQ2LXlaak53ZnM2Qm04UUNVVEUxaTJQWGt6TWlOdmh4VTB3NVJrUWtrZXlKNVN4Zw?oc=5",
           "quelle": "google_news"
         },
         {
@@ -1406,27 +1455,6 @@
           "quelle": "google_news"
         },
         {
-          "title": "NVIDIA (NVDA): Entscheidung am Schlüsselwiderstand! - FinanzNachrichten.de",
-          "publisher": "FinanzNachrichten.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTm5vWHpHeTU3SWp3Vm1ONmhac295YTRqX0VDdWVwZFE5cUI3SUlXR1I2M3p1REhLWTEwLU50eTM0RkJEZ2FLcGpzVU56U05FYTlYeXdTanZZWHpjdkIteUh1MDhPRTl5OVhsRzNCSDJYUFdKdmdNeExjQkVoVDBlbjZZZ2NPRk8yZG9xUmJWUDcxWTZlUC1UN3UwLTZoTlBaQWpuMlRocEVISEFqcFRJZHpVd2JuZ0ZsVmc?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Nvidia: Der nächste Umsatzsprung - 4investors.de",
-          "publisher": "4investors.de",
-          "published": "2026-07-22",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1vVERuanpIaE5TVW1fMlJSRDVIbThsc0h2SjVxb3FHTm1BTG9TX2xHMWdrTkxRVkRmSTU2NURwTmFMTEMwc3FaaGl2WE9sOFdQMXZuaVFvMXJHRDJxN21DSGRXZ2JQTG5WMjRzamtyWXVCeFpVYnVuN0RfdG3SAYIBQVVfeXFMUGMtNU02NURDYkpXT0d1d2hEejRHcU9IMWQwb3FTMEJDYXNoWnJkQVhEb2ZGcENRaC1vbHFsR2IyeVUyd1luMTlna2FoZTJydGVGNlZfUDdaVEVhczZyeEpGSmVHNmFySFN2b2pUM19JRklsZUJleEhEeTB2dHI5MC1xdw?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Nicht Nvidia: Diese KI-Aktie könnte der nächste große Gewinner der KI-Revolution werden - Yahoo Finanzen Deutschland",
-          "publisher": "Yahoo Finanzen Deutschland",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQjRqMHpSNFZsOUlEd2JPWUlpZUhGNWY4cDZmT0Y1cjlKdTZuVFloSFJmaGVNU3BLZTZZRHdZaXlKNFBFVHF2TkE1UnR0cldZVXc3eVJTSDZqNVlBN2VmdF93OFQyRnpYanNJVFd6VkNXdUloNFhwQ0tuS01lQXdIUUZ1Y1dYOEd5NXNQUWdSNUNrMDQ?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "AMD: Angriff auf Nvidia! | Koixia: Erneute Kursexplosion? | Zalando: Ausbruch? - Wallstreet Online",
           "publisher": "Wallstreet Online",
           "published": "2026-07-21",
@@ -1434,17 +1462,17 @@
           "quelle": "google_news"
         },
         {
-          "title": "Nebius: Warum Nvidia die Aktie wieder spannend macht - Onvista",
-          "publisher": "Onvista",
-          "published": "2026-07-21",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxONTlaTW92TkhoanRLUDUtdUxoU25SekVQMDNtem1HSFNFWnBTX1hHSkRTOHNsOXV5enMteGtPekZfQ2N3VlFJNmtyMl9yRzlISVRBWUZMTTdld2FDV3ZnMDNtLXVST1JVZ2tJdjhxcDRnSWlEU3YyMFBjelZ5Tl81Rk16R0RRZ0NGOGVqWVNiTVJYbHJTVGR1bDFIOHFtZzNiS3RTWWtmZWZKVnVrN1dPRw?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "Nvidia-Aktie: Was da jetzt möglich ist, sprengt alles! - Finanztrends",
           "publisher": "Finanztrends",
           "published": "2026-07-21",
           "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQMm5EdWN5cE1pX3RwUVRoZlRROVByMDZURzUzLURVSHYtS0xJWldaekkxb3l5bmFZd2lkdHIyNVVOdUt2MTA0OUZqT2Myb3l0NEpnajRsdVVIY0NqMmVLRDlnLWFISmIzMEJUZlg3MjBnZG12eUVxQmx0a1V3QjNqcURiX2FmQQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "NVIDIA-Aktie im Minus: Zulieferer Wistron eröffnet erste US-Fabrik in Texas - Finanzen.net",
+          "publisher": "Finanzen.net",
+          "published": "2026-07-21",
+          "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQaC1JalhIZk1RU1UxUW90aGNILXBNdnFxV0IzU0hLamdTQU41T2d0V1NTRmVORGt6eUZQMUY4bjlPTGY1RXZ5ejFZZW9hR3M0X2MteXJiMDFkVXpsdGVxenlKSTY1enV6MWtXbXM3VWRUYWRYZUNRbWtSMlJjZFFLZzBGTFFYZEpRaXRCOUx4UXYxakwtOE14NkhwSng5VWxIRnczQUxLUU8wSzlCZjNidzZFZkJ5aUtDUTY0ZXFLTDNHODg1VFlsQXNEc3hPVWhPdzlwV2Q2dWVuVGZmSjI1cEhXTjlMYi1H?oc=5",
           "quelle": "google_news"
         }
       ],
@@ -1454,6 +1482,41 @@
       "name": "Planet Labs",
       "ticker": "85H1.DE",
       "headlines": [
+        {
+          "title": "PL-Aktie hält Kurs auf Planet Labs - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-24",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOZVRZNm5lNUNXV1BvejBlaWxnQ1R0TEg5UTN0X2lidDZROXNuSUtkb0hMMDVqcWdLWkpucjhmYW85UWJZcXJlamFXbklvWWFzV09VcHVkZVFWQ0o3WXhMeGd6V1B2dlpCM1kyTVR2TTlYZGQyeFNhbTR5X1NibDFBRDRaTlBWQnYtWmVXY3lVMktqd0NqU1VhSFJn?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "NVIDIA vs. Planet Labs: Which High-Growth Tech Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/dc391d22-ccf0-355c-9cea-46866a7a0898/nvidia-vs.-planet-labs%3A-which.html",
+          "quelle": "yahoo"
+        },
+        {
+          "title": "Die Planet-Labs-Aktie legt nach starken Wachstumszahlen zu - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYmVPVTYwVDZjMkNRcjBXczdKdkpfYlNxc0JRc3N2d3UxaklUVGxTUG1zS203azVRcVhvdmQ0eUh3N2xUMlVMNEJvbXF3TkIwMVV4R0loX0p4LXVpMFZjQ25HT2l2Z0Nfa0xnYnBvb3VjQ1BmREVZQW8yd0lTYUhTeHU0Zm1STFozcDVmZG5XRGY5bUxmRWJNU2o2bjNlV0s2bW11bGdOd2dlSm9yNnMyOUNSbnZkdUNi?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "Planet Labs: 42,1 Prozent Umsatzwachstum im Q1 - Ad-hoc-news.de",
+          "publisher": "Ad-hoc-news.de",
+          "published": "2026-07-23",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPS1JEeUR4dzh6V1RFbGtwS2tDLV9WWTFyY0lYd2ptWEJ0ZTR2UXZaME01bHR0dDZxMC1RaldfdVFuYmNPR3FTemJHMkI4ZlUxd1VRUFV4NHR1WmxLRURnYktBT3otNnNxU0diQTE1M1lKVDB5MUVFQWJTVXJKUnNvMmtZVzgyemx6WHhKczVtTGZZbWd0V2puRGFEVHROU0Z0MWRHTVhkTQ?oc=5",
+          "quelle": "google_news"
+        },
+        {
+          "title": "A Planet Labs Director Sold Over 6,000 Shares Amid a 323% Stock Rally. What Does That Mean for Investors?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/f194ae10-29a0-366f-9326-a2cdc3b0584c/a-planet-labs-director-sold.html",
+          "quelle": "yahoo"
+        },
         {
           "title": "Planet Labs: Pelican-11 startet ins All - Finanztrends",
           "publisher": "Finanztrends",
@@ -1497,13 +1560,6 @@
           "quelle": "google_news"
         },
         {
-          "title": "Planet Labs: Clarity für Tanager-Satelliten - Ad-hoc-news.de",
-          "publisher": "Ad-hoc-news.de",
-          "published": "2026-07-18",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbnRXUWltckJXT1prWmFzdWRwRWJqZEkxSGpoU29DSm1yOVdxUU9obVptV1F1Tk9sRURRbGtZNlQyVGh4ZE9pTkNVaU1paW04cTFVdkh1VjZwZnlrWjM1akpCNlF6Vy14dlQyYnZjaU9KLTJaMkJmbDBURkItd2pvR3pxb0plSHhfVlhMSUNQdDY0Y3Vndmh5akdYNVBlMUJ1a0ZzbA?oc=5",
-          "quelle": "google_news"
-        },
-        {
           "title": "Planet Labs (PL) Stock Looks Strong On Returns Yet Rich On Sales",
           "publisher": "Simply Wall St.",
           "published": "2026-07-18",
@@ -1515,41 +1571,6 @@
           "publisher": "Simply Wall St.",
           "published": "2026-07-18",
           "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pl-quietly-repositioning-031605447.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Planet Labs PBC Aktie | Kurs | Dividende | Nachrichten (A3C84C, US72703X1063) - extraETF",
-          "publisher": "extraETF",
-          "published": "2026-07-17",
-          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBWQy1RbVppRlNXdHZ2UzZBaXMzbFZNcHNDY1dnUDR2cEVUQ3V6c1c5QjN0bmdRYjhfb2VnNHExMnhpWjlmU0lKelVIbkhNSkpJX2xwaHQzTEtrcGFxZlJz?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Q1 Earnings Recap: Planet Labs (NYSE:PL) Tops Data & Business Process Services Stocks",
-          "publisher": "StockStory",
-          "published": "2026-07-17",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/q1-earnings-recap-planet-labs-204146971.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Planet Labs vs. Satellogic: Which Earth Observation Stock Has an Edge?",
-          "publisher": "Zacks",
-          "published": "2026-07-17",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-vs-satellogic-earth-175200274.html",
-          "quelle": "yahoo"
-        },
-        {
-          "title": "Planet Labs PBC-Insider verkauft Aktien im Wert von 929.638 USD, wie aus einer aktuellen SEC-Meldung hervorgeht - MarketScreener Deutschland",
-          "publisher": "MarketScreener Deutschland",
-          "published": "2026-07-16",
-          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNb3dieHlST2VWSHlhOVV0blg2NzFoR01WclltRHd1N1ZvT281Rmk3TU9lZEYzOGJIX015dWkySjZIVks2ZVZtY2pWX2JZYkV4REtiYy1IN0tiYnduZXBTQmR6amJZOEdCbmUzU3RzdUp5OWxBZWpZZHYwYlRXZ2hiSXVYdUZwQXZKVTBuWWhCbGxxenNSdmtwYlloZVRKTzF0SC1ZTHdPUXl1eWZ3WUU1Si1GSEFZbGtEcDZhamtUdDgzM0F4S1BCd2hMc0ZncXdUM1dhdEFWeFJOb0ZYVUhJdGxwa0ItTVc4SHVuYzl1MjRGaEViZDE2Zg?oc=5",
-          "quelle": "google_news"
-        },
-        {
-          "title": "Planet Labs PBC Insider Sold Shares Worth $929,638, According to a Recent SEC Filing",
-          "publisher": "MT Newswires",
-          "published": "2026-07-16",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pbc-insider-sold-202150044.html",
           "quelle": "yahoo"
         }
       ],

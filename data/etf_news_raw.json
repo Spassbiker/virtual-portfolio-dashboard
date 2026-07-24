@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23 08:53",
+  "generated_at": "2026-07-24 08:53",
   "items": {
     "IE00B1XNHC34": {
       "name": "iShares Global Clean Energy Transition UCITS ETF",
@@ -65,6 +65,12 @@
       "thema": "uranium",
       "headlines": [
         {
+          "title": "Uranium Energy Corp Announces Results of Annual Meeting of Stockholders",
+          "publisher": "CNW Group",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/uranium-energy-corp-announces-results-203000474.html"
+        },
+        {
           "title": "Uranium Holds at $85 as AI Data Centers Go Nuclear",
           "publisher": "24/7 Wall St.",
           "published": "2026-07-22",
@@ -105,12 +111,6 @@
           "publisher": "Motley Fool",
           "published": "2026-07-14",
           "link": "https://finance.yahoo.com/m/251b8209-fbd2-3cee-9632-9b3448b4e809/why-uranium-energy-stock.html"
-        },
-        {
-          "title": "Noble Plains Uses AI to Unlock Historic Wyoming Uranium Data, Sets Stage for Resource Expansion",
-          "publisher": "Insider Monkey",
-          "published": "2026-07-13",
-          "link": "https://finance.yahoo.com/energy/articles/noble-plains-uses-ai-unlock-200207260.html"
         }
       ],
       "error": null
@@ -122,52 +122,52 @@
       "thema": "Rheinmetall",
       "headlines": [
         {
-          "title": "Interview: Simon Bateman, CEO Recognise Bank on full year profitability for the first time",
-          "publisher": "Retail Banker International",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/84fe9b94-964c-30df-b525-02728e0a1853/interview%3A-simon-bateman%2C.html"
+          "title": "Alphabet’s Q2 2026 net income surges 298% to $112bn",
+          "publisher": "Verdict",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/126d8c7a-92ae-3730-9c8b-8cd082bf0d60/alphabet%E2%80%99s-q2-2026-net-income.html"
         },
         {
-          "title": "TotalEnergies: Indicative Dates for 2027 Dividends",
-          "publisher": "Business Wire",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/totalenergies-indicative-dates-2027-dividends-064500158.html"
-        },
-        {
-          "title": "Dividend Declaration",
-          "publisher": "Business Wire",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/dividend-declaration-064500908.html"
-        },
-        {
-          "title": "Giant swing on Swiss peak aims to boost summer tourism as Alps warm",
-          "publisher": "AFP",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/82151974-bc97-3b09-9eea-d5be92e1271c/giant-swing-on-swiss-peak.html"
-        },
-        {
-          "title": "Channel Tunnel operator says EU software issues could delay biometric checks",
-          "publisher": "Reuters",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/economy/policy/articles/channel-tunnel-operator-says-eu-064119830.html"
-        },
-        {
-          "title": "Fraud wins when the payments industry defends alone",
+          "title": "Visa and Lianlian complete Greater China’s first live agentic B2B payment",
           "publisher": "Electronic Payments",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/654b1ca8-46e6-36ed-aaeb-c31a950405bc/fraud-wins-when-the-payments.html"
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/569ca90e-28f5-3286-9bb8-7131f9c1fbaf/visa-and-lianlian-complete.html"
         },
         {
-          "title": "Stora Enso Half-year Report 2026: Optimising our portfolio and driving results through our own actions",
+          "title": "WAFCON favourites Nigeria eye World Cup slot and record prize money",
+          "publisher": "AFP",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/45dda857-17d2-391a-a546-8d0104e3c9da/wafcon-favourites-nigeria-eye.html"
+        },
+        {
+          "title": "ECB policymakers warn about growing inflation risks",
+          "publisher": "Reuters",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/economy/policy/articles/ecb-good-position-respond-energy-050454390.html"
+        },
+        {
+          "title": "Securitas AB Interim Report Q2 2026 | January-June",
           "publisher": "PR Newswire",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/stora-enso-half-report-2026-063700239.html"
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/securitas-ab-interim-report-q2-064000904.html"
         },
         {
-          "title": "Bitcoin is a Bubble? Anthony Pompliano Will Host His 'Crazy Uncle' Peter Schiff to Give Him the 'Intellectual Beatdown He Deserves'",
-          "publisher": "Benzinga",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-bubble-anthony-pompliano-host-063515791.html"
+          "title": "When Legends Met: FIFA & BIG ART FESTIVAL. Unforgettable Night with 50 Cent in New York",
+          "publisher": "ACCESS Newswire",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/media-advertising/articles/legends-met-fifa-big-art-064000934.html"
+        },
+        {
+          "title": "Hot weather and World Cup give surprise boost to retail sales",
+          "publisher": "Reuters",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/economy/articles/hot-weather-world-cup-surprise-063617297.html"
+        },
+        {
+          "title": "Ring Jenny Launches Low-Cost AI Receptionist Software for Small Businesses in Australia",
+          "publisher": "ACCESS Newswire",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/small-business/articles/ring-jenny-launches-low-cost-063500178.html"
         }
       ],
       "error": null
@@ -178,6 +178,30 @@
       "typ": "A",
       "thema": "defense",
       "headlines": [
+        {
+          "title": "Lockheed Martin Rockets 10%, RTX Jumps 7% on Beat-and-Raise Quarters and Record Backlogs",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/3376bac4-1082-3da0-8431-512a0f495fe5/lockheed-martin-rockets-10%25%2C.html"
+        },
+        {
+          "title": "If You Like SpaceX, You’re Going to Love This SpaceX Supplier",
+          "publisher": "Barrons.com",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/bc28eee6-7ecb-3ad9-9f3b-113e0a58d32b/if-you-like-spacex%2C-you%E2%80%99re.html"
+        },
+        {
+          "title": "Kratos Defense & Security Solutions Schedules Second Quarter 2026 Earnings Conference Call for Tuesday, August 4th",
+          "publisher": "GlobeNewswire",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/kratos-defense-security-solutions-schedules-120000531.html"
+        },
+        {
+          "title": "Red Cat Just Dropped 26% in a Month: Are Drone Stocks Like RCAT, Ondas, Redwire, and AeroVironment Out of Fuel?",
+          "publisher": "24/7 Wall St.",
+          "published": "2026-07-22",
+          "link": "https://finance.yahoo.com/m/b47f57ac-aa8b-32d8-8060-527d768c72f3/red-cat-just-dropped-26%25-in-a.html"
+        },
         {
           "title": "2 of Wall Street’s Favorite Stocks to Consider Right Now and 1 We Avoid",
           "publisher": "StockStory",
@@ -197,34 +221,10 @@
           "link": "https://finance.yahoo.com/markets/stocks/articles/ktos-vs-lhx-defense-contractor-130500158.html"
         },
         {
-          "title": "KTOS: Lowering target price to $46.00",
-          "publisher": "Argus Research",
+          "title": "Should You Invest in the iShares U.S. Aerospace & Defense ETF (ITA)?",
+          "publisher": "Zacks",
           "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/27856248-4a4c-3de0-bb74-c30e56d9ff71/ktos%3A-lowering-target-price.html"
-        },
-        {
-          "title": "Kratos (KTOS) Stock Trades Up, Here Is Why",
-          "publisher": "StockStory",
-          "published": "2026-07-21",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/kratos-ktos-stock-trades-why-234226722.html"
-        },
-        {
-          "title": "Kratos (KTOS) Stock Looks Fair On Cash Flow But Rich On Sales",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-21",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/kratos-ktos-stock-looks-fair-181211995.html"
-        },
-        {
-          "title": "AeroVironment’s Stock Is Down, But Drone Demand Is Taking Off",
-          "publisher": "MarketBeat",
-          "published": "2026-07-21",
-          "link": "https://finance.yahoo.com/m/f1528ab5-d44d-3199-b288-fd402e127f52/aerovironment%E2%80%99s-stock-is.html"
-        },
-        {
-          "title": "Kratos shares climb after securing $156 million U.S. nuclear security contract (KTOS)",
-          "publisher": "InvestorsHub",
-          "published": "2026-07-21",
-          "link": "https://finance.yahoo.com/m/a51d8ffc-59d0-3cd8-9851-2cdbe09760c5/kratos-shares-climb-after.html"
+          "link": "https://finance.yahoo.com/markets/stocks/articles/invest-ishares-u-aerospace-defense-102002013.html"
         }
       ],
       "error": null
@@ -244,52 +244,52 @@
       "thema": "space",
       "headlines": [
         {
-          "title": "Tesla Inc (TSLA) Q2 2026 Earnings Call Highlights: Record Deliveries and Strategic Investments ...",
-          "publisher": "GuruFocus.com",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/tesla-inc-tsla-q2-2026-050138649.html"
-        },
-        {
-          "title": "Mega IPOs Like SpaceX Reshape Major Index Funds and ETFs",
-          "publisher": "Motley Fool",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/0b9bddee-d6f4-3f55-8380-5bffb9a3092f/mega-ipos-like-spacex-reshape.html"
-        },
-        {
-          "title": "AT&T Extends Gains Overnight After Q2 Results: 5 Key Takeaways Beyond Headline Numbers",
+          "title": "ASTS, RKLB Slip Overnight Amid Falcon 9 Booking Freeze: Retail Traders Say SpaceX Is ‘Ruining’ Space Stocks",
           "publisher": "Stocktwits",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/4b9a021d-de93-3dc7-b638-be5751a67490/at%26t-extends-gains-overnight.html"
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/f441683f-aeb6-3a54-9524-5ad48b9ae3a2/asts%2C-rklb-slip-overnight.html"
         },
         {
-          "title": "SpaceX Just Erased $1 Trillion in Value. Here’s Why the Worst Could Be Yet to Come.",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/7b9f269d-59fc-3901-80f3-0ecc673eb8e9/spacex-just-erased-%241.html"
+          "title": "Can Verizon And Charter Win Over Wall Street? Here’s What Analysts Expect From Q2 Earnings Today",
+          "publisher": "Stocktwits",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/0323ac73-eb54-3dd4-a09b-719cc196da4a/can-verizon-and-charter-win.html"
         },
         {
-          "title": "Dow Jones Futures: Google, Tesla Fall On Earnings, Capital Spending",
+          "title": "Cathie Wood Just Bought More SpaceX Stock. Here's Why I Wouldn't Copy Her",
+          "publisher": "Motley Fool",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/172823ff-c6ef-3118-b3e6-1179e37d92a7/cathie-wood-just-bought-more.html"
+        },
+        {
+          "title": "Alphabet Just Revealed a $94 Billion Stake in SpaceX -- and It Can't Sell a Single Share Yet",
+          "publisher": "Motley Fool",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/b2f76eea-7b51-3951-8339-2051e5125d7b/alphabet-just-revealed-a-%2494.html"
+        },
+        {
+          "title": "Dow Jones Futures: Market Sells Off On Oil Prices, Google, Tesla; Intel Jumps Late",
           "publisher": "Investor's Business Daily",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/092ff924-f233-311d-95de-ed11a4dabc57/dow-jones-futures%3A-google%2C.html"
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/96fdd7c6-3e7b-334a-a08e-b91b60ced4b6/dow-jones-futures%3A-market.html"
         },
         {
-          "title": "Are SpaceX Bulls Deluding Themselves? This Wall Street Analyst Might Convince You So",
-          "publisher": "Motley Fool",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/7a0c8faf-f8a3-3ad1-ba8b-56840926c87c/are-spacex-bulls-deluding.html"
-        },
-        {
-          "title": "ASTS Stock Eyes Weekly Comeback: AT&T Says AST SpaceMobile Satellite Offering Will 'Come To Fruition' Next Year",
+          "title": "Why Did SPCX, ORCL, QS Stocks Plunge To 52-Week Lows Today?",
           "publisher": "Stocktwits",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/ec6c792e-9602-3178-bbcd-a67d18458510/asts-stock-eyes-weekly.html"
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/eeab03ec-9c91-35c7-b85c-855d830d2b81/why-did-spcx%2C-orcl%2C-qs-stocks.html"
         },
         {
-          "title": "Musk keeps Tesla-SpaceX merger speculation alive, cites growing overlap",
-          "publisher": "Reuters",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/musk-keeps-tesla-spacex-merger-011328678.html"
+          "title": "TSLA Stock Sinks Toward Worst Week This Year After Weak Q2 — But CEO Elon Musk Is A 'Big Fan' Of His Insightful Retail Investor Army",
+          "publisher": "Stocktwits",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/fb324374-d36c-3da3-b957-bdd68b5f2c82/tsla-stock-sinks-toward-worst.html"
+        },
+        {
+          "title": "2 Missions, 3 Launches, and Up to $300 Million for Rocket Lab",
+          "publisher": "Motley Fool",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/626ca17e-6b7d-323b-9f6b-884f34225f80/2-missions%2C-3-launches%2C-and.html"
         }
       ],
       "error": null
@@ -403,22 +403,28 @@
       "thema": "robotics",
       "headlines": [
         {
-          "title": "Kraken Robotics Announces $35 Million in New Orders, Bringing 2026 Product Orders to $327 Million",
-          "publisher": "InvestorsHub",
-          "published": "2026-07-20",
-          "link": "https://finance.yahoo.com/m/cacdf9df-4f5d-3627-8077-0186ccabd827/kraken-robotics-announces-%2435.html"
-        },
-        {
-          "title": "Kraken Robotics Gets C$35 Million in New Product Orders",
-          "publisher": "MT Newswires",
-          "published": "2026-07-20",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/kraken-robotics-gets-c-35-105913444.html"
-        },
-        {
-          "title": "Kraken Robotics Announces $35 Million in New Orders and Business Update",
+          "title": "Serve Robotics to Report Second Quarter 2026 Financial Results, Host Conference Call and Webcast on August 6",
           "publisher": "GlobeNewswire",
-          "published": "2026-07-20",
-          "link": "https://finance.yahoo.com/technology/articles/kraken-robotics-announces-35-million-103000808.html"
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/technology/articles/serve-robotics-report-second-quarter-120000224.html"
+        },
+        {
+          "title": "Serve Robotics Prioritizes Efficiency Over Expansion: Will it Pay Off?",
+          "publisher": "Zacks",
+          "published": "2026-07-21",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/serve-robotics-prioritizes-efficiency-over-135800845.html"
+        },
+        {
+          "title": "Is This Robotics Stock a Potential 10-Bagger?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/m/0677c90a-e89b-387c-ab49-6420129b5d9c/is-this-robotics-stock-a.html"
+        },
+        {
+          "title": "Serve Robotics vs. DoorDash: Which Autonomous Delivery Stock Wins?",
+          "publisher": "Zacks",
+          "published": "2026-07-15",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/serve-robotics-vs-doordash-autonomous-140000078.html"
         },
         {
           "title": "Is This Dip In ARKQ A Gift Or A Trap?",
@@ -439,16 +445,10 @@
           "link": "https://finance.yahoo.com/healthcare/articles/beyond-automotive-healthcare-automation-drives-180400001.html"
         },
         {
-          "title": "3 Robotics ETFs Positioned to Capitalize on America’s Reshoring Boom in 2026",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/m/6dbbdbfe-c7df-3909-a75c-e2b429098cfc/3-robotics-etfs-positioned-to.html"
-        },
-        {
-          "title": "AI’s Next Act Isn’t Chatbots. It’s Robots, and BOTZ Is the Bet",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-06",
-          "link": "https://finance.yahoo.com/m/f859da8e-33d3-3db2-8774-1e1664cd3b08/ai%E2%80%99s-next-act-isn%E2%80%99t-chatbots..html"
+          "title": "Will Serve Robotics' Healthcare Push Unlock a Bigger AI Opportunity?",
+          "publisher": "Zacks",
+          "published": "2026-07-07",
+          "link": "https://finance.yahoo.com/healthcare/articles/serve-robotics-healthcare-push-unlock-150600410.html"
         }
       ],
       "error": null
@@ -460,6 +460,18 @@
       "thema": "semiconductors",
       "headlines": [
         {
+          "title": "Countdown to NXP (NXPI) Q2 Earnings: A Look at Estimates Beyond Revenue and EPS",
+          "publisher": "Zacks",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/countdown-nxp-nxpi-q2-earnings-131504826.html"
+        },
+        {
+          "title": "TXN Keeps Climbing. Should You Climb On?",
+          "publisher": "Trefis",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/dd59a580-a1bf-3283-929b-2ff4dad7c88e/txn-keeps-climbing.-should.html"
+        },
+        {
           "title": "3 Cash-Producing Stocks We Find Risky",
           "publisher": "StockStory",
           "published": "2026-07-22",
@@ -470,12 +482,6 @@
           "publisher": "Zacks",
           "published": "2026-07-21",
           "link": "https://finance.yahoo.com/markets/stocks/articles/nxp-semiconductors-nxpi-rises-higher-221504862.html"
-        },
-        {
-          "title": "Update on Expiry of Lock-up Undertaking and Insider Transactions in Sivers Semiconductors",
-          "publisher": "PR Newswire",
-          "published": "2026-07-21",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/expiry-lock-undertaking-insider-transactions-180600981.html"
         },
         {
           "title": "Susquehanna Adjusts Price Target on NXP Semiconductors to $250 From $210, Maintains Neutral Rating",
@@ -500,12 +506,6 @@
           "publisher": "Simply Wall St.",
           "published": "2026-07-16",
           "link": "https://finance.yahoo.com/markets/stocks/articles/nxp-semiconductors-nxpi-falls-chip-002240702.html"
-        },
-        {
-          "title": "How Investors May Respond To NXP Semiconductors (NXPI) Sector-Wide Profit Taking And Geopolitical Tensions",
-          "publisher": "Simply Wall St.",
-          "published": "2026-07-15",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-nxp-semiconductors-171003780.html"
         }
       ],
       "error": null
@@ -517,52 +517,52 @@
       "thema": "energy",
       "headlines": [
         {
-          "title": "Is Bloom Energy (BE) Undervalued After JPMorgan Backed Its Brookfield AI Power Deal?",
+          "title": "How Investors May Respond To Energy Transfer (ET) Boosting EBITDA Outlook and Affirming Preferred Cash Payouts",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/energy/articles/investors-may-respond-energy-transfer-051453245.html"
+        },
+        {
+          "title": "Better Stock for Passive Income: Enbridge with Its 70+ Years of Payouts or Energy Transfer with Its 6.6% Yield?",
+          "publisher": "Motley Fool",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/0805baa3-c463-3393-b4c3-4a6604755ccd/better-stock-for-passive.html"
+        },
+        {
+          "title": "Energy Transfer (ET) Could Be 13% Undervalued Following Raised EBITDA Guidance",
           "publisher": "Simply Wall St.",
           "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-undervalued-jpmorgan-backed-060946948.html"
+          "link": "https://finance.yahoo.com/energy/articles/energy-transfer-et-could-13-221009426.html"
         },
         {
-          "title": "This Dividend Stock Yields 6.6% and Stands to Benefit From the Iran War",
-          "publisher": "Barchart",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/d517392f-3cf2-3664-bf3c-c30f051611bc/this-dividend-stock-yields.html"
+          "title": "Energy Transfer LP Announces Cash Distribution on Series I Preferred Units",
+          "publisher": "Business Wire",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/energy/articles/energy-transfer-lp-announces-cash-201500527.html"
         },
         {
-          "title": "Bloom Energy (BE) Suffers a Larger Drop Than the General Market: Key Insights",
+          "title": "Bloom Energy Could Be Behind Massive Panama AI Data Center Projects, Says RBC",
+          "publisher": "Stocktwits",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/22c7fb18-5126-3ad6-816e-e2e30b5f619b/bloom-energy-could-be-behind.html"
+        },
+        {
+          "title": "Bloom Energy Set to Report Q2 Earnings: Buy, Sell or Hold the Stock?",
           "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-suffers-larger-drop-220002422.html"
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-set-report-q2-152100537.html"
         },
         {
-          "title": "These tech stocks look cheap, but history offers a warning sign",
-          "publisher": "Yahoo Finance Video",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/video/these-tech-stocks-look-cheap-but-history-offers-a-warning-sign-193935656.html"
-        },
-        {
-          "title": "Stocks making big moves yesterday: Kemper, Tenable, Bloom Energy, PagerDuty, and Wix",
-          "publisher": "StockStory",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-184627866.html"
-        },
-        {
-          "title": "Bloom Energy Corporation (BE) Rose on AI-Driven Power Demand",
-          "publisher": "Insider Monkey",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-corporation-rose-ai-161936601.html"
-        },
-        {
-          "title": "ET vs. EPD: Which Pipeline Stock Offers the Better Opportunity?",
+          "title": "Can HF Sinclair Keep Its Winning Streak Alive in Q2 Earnings?",
           "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/energy/articles/et-vs-epd-pipeline-stock-143300662.html"
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/hf-sinclair-keep-winning-streak-151900435.html"
         },
         {
-          "title": "Bloom Energy (BE) Soars 14.8% on Sharp PT Upgrade Ahead of Q2 Earnings",
-          "publisher": "Insider Monkey",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-soars-14-8-011716251.html"
+          "title": "3 Oil Pipeline MLP Stocks Riding on Favorable Industry Trends",
+          "publisher": "Zacks",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/energy/articles/3-oil-pipeline-mlp-stocks-143500756.html"
         }
       ],
       "error": null
@@ -574,52 +574,52 @@
       "thema": "materials",
       "headlines": [
         {
-          "title": "This Boom Is for the AI-Anxious. 10 Ways to Cash In.",
-          "publisher": "Barrons.com",
+          "title": "AMSL, AMAT, KLAC, LRCX: Chipmaking Equipment Stocks Rise On Intel’s CapEx Bump",
+          "publisher": "Stocktwits",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/cb30c517-d3b6-3589-a6d2-50ec6ef28236/amsl%2C-amat%2C-klac%2C-lrcx%3A.html"
+        },
+        {
+          "title": "What to Expect From Applied Materials' Next Quarterly Earnings Report",
+          "publisher": "Barchart",
           "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/bf387f59-0c34-3737-9e81-3f053af60b37/this-boom-is-for-the.html"
+          "link": "https://finance.yahoo.com/m/b60ce0b9-53a5-3cef-8760-7751e7bf4aac/what-to-expect-from-applied.html"
         },
         {
-          "title": "Jim Cramer reveals 4 surging chip stocks he likes best",
-          "publisher": "TheStreet",
+          "title": "ASML Holdings' EUV Leadership Strengthens Long-Term Growth",
+          "publisher": "Zacks",
           "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/2ff2e7e1-be72-3d46-9283-3a0e93dc9096/jim-cramer-reveals-4-surging.html"
+          "link": "https://finance.yahoo.com/technology/articles/asml-holdings-euv-leadership-strengthens-162400389.html"
         },
         {
-          "title": "Rare-Earth Stock Gold Rush Leaves Investors Empty-Handed — For Now",
-          "publisher": "Investor's Business Daily",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/1d1b0003-ff8f-376a-a679-76713e4b3780/rare-earth-stock-gold-rush.html"
+          "title": "Applied Materials (AMAT) Jumps On TSMC Expansion As Fair Value Debate Stays Open",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/applied-materials-amat-jumps-tsmc-151315248.html"
         },
         {
-          "title": "Ichor Growth Story Tracks AI Chip Spending and Etch Demand Boom Ahead",
+          "title": "Texas Instruments Q2 Earnings Beat Estimates, Revenues Rise Y/Y",
           "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/technology/ai/articles/ichor-growth-story-tracks-ai-145900956.html"
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/texas-instruments-q2-earnings-beat-141900769.html"
         },
         {
-          "title": "Is ICHR Stock Worth Buying With Strong Growth but Rich Valuation?",
+          "title": "NVTS Set to Report Q2 Earnings: Buy, Sell or Hold the Stock?",
           "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/ichr-stock-worth-buying-strong-145400367.html"
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/nvts-set-report-q2-earnings-140000230.html"
         },
         {
-          "title": "ICHR Stock Outlook Hinges on AI Demand and Margin Expansion Now",
+          "title": "Top Wide-Moat Stocks to Invest in for Sustainable Growth",
           "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/ichr-stock-outlook-hinges-ai-145200534.html"
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/top-wide-moat-stocks-invest-121900035.html"
         },
         {
-          "title": "2 S&P 500 Stocks to Keep an Eye On and 1 We Avoid",
-          "publisher": "StockStory",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/2-p-500-stocks-keep-143827424.html"
-        },
-        {
-          "title": "MP: Lowering target price to $44.00",
-          "publisher": "Argus Research",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/3fe35022-7d16-38f7-973c-4c378eaa3290/mp%3A-lowering-target-price-to.html"
+          "title": "Buy These 5 Semiconductor Stocks Charged Up by AI Enthusiasm",
+          "publisher": "Zacks",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/technology/ai/articles/buy-5-semiconductor-stocks-charged-121500952.html"
         }
       ],
       "error": null
@@ -631,52 +631,52 @@
       "thema": "industrial",
       "headlines": [
         {
-          "title": "Dow Jones Futures: Google, Tesla Fall On Earnings, Capital Spending",
+          "title": "FTSE 100 Live: London stocks called lower as Big Tech burns cash and oil hits $100",
+          "publisher": "Proactive",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/a29be53f-56d9-33c1-84fa-e7db2449b60f/ftse-100-live%3A-london-stocks.html"
+        },
+        {
+          "title": "Dow Jones Futures: Market Sells Off On Oil Prices, Google, Tesla; Intel Jumps Late",
           "publisher": "Investor's Business Daily",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/092ff924-f233-311d-95de-ed11a4dabc57/dow-jones-futures%3A-google%2C.html"
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/96fdd7c6-3e7b-334a-a08e-b91b60ced4b6/dow-jones-futures%3A-market.html"
         },
         {
-          "title": "Review & Preview: Showtime",
-          "publisher": "Barrons.com",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/589ea80b-d486-39f6-b3e2-f2eeada8ac29/review-%26-preview%3A-showtime.html"
+          "title": "Jim Cramer Shares His Framework for Telling a Buyable Crash From a Real One",
+          "publisher": "BeInCrypto",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/373ff658-06be-3a85-8686-4ab0db99cc48/jim-cramer-shares-his.html"
         },
         {
-          "title": "S&P 500, Nasdaq End Lower, Futures Extend Declines As Attention Shifts To Tech Earnings, Geopolitics —  TSLA, GOOGL, PSKY, RDDT, AMZN In Focus",
+          "title": "Nasdaq, S&P 500, Dow Futures Shake Off Iran Jitters As Investors Turn To AI Hyperscaler Earnings: INTC, TSLA, TTD, HIMS In Focus",
           "publisher": "Stocktwits",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/0e600225-97be-3c2e-9267-aea6e1341132/s%26p-500%2C-nasdaq-end-lower%2C.html"
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/78fb0fca-f68b-3e78-ab5b-1f4b39e24986/nasdaq%2C-s%26p-500%2C-dow-futures.html"
         },
         {
-          "title": "ChargePoint Holdings, Inc. (CHPT) Increases Despite Market Slip: Here's What You Need to Know",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/chargepoint-holdings-inc-chpt-increases-221503284.html"
+          "title": "Oil Prices Roar Back, Threatening Economy and GOP’s Midterm Hopes",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/cad49bc8-603f-3ba3-afb3-1b4affb1a4fe/oil-prices-roar-back%2C.html"
         },
         {
-          "title": "Onto Innovation (ONTO) Dips More Than Broader Market: What You Should Know",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/onto-innovation-onto-dips-more-221503107.html"
+          "title": "Review & Preview: Big Tech’s $889 Billion Reality Check",
+          "publisher": "Barrons.com",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/faae77df-4465-3626-9a70-39479b261762/review-%26-preview%3A-big-tech%E2%80%99s.html"
         },
         {
-          "title": "Hercules Capital (HTGC) Falls More Steeply Than Broader Market: What Investors Need to Know",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/hercules-capital-htgc-falls-more-221502572.html"
+          "title": "Tesla stock suffers double-digit drop on carmaker’s worst day in years",
+          "publisher": "The Guardian",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/tesla-stock-suffers-double-digit-223525270.html"
         },
         {
-          "title": "General Dynamics (GD) Ascends While Market Falls: Some Facts to Note",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-gd-ascends-while-221502227.html"
-        },
-        {
-          "title": "Main Street Capital (MAIN) Declines More Than Market: Some Information for Investors",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/main-street-capital-main-declines-221502900.html"
+          "title": "S&P 500, Dow, Nasdaq End Lower Over Capex Concerns, Surging Oil — CBRS, AMD, GOOGL, TSLA, MSTR In Focus",
+          "publisher": "Stocktwits",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/4bfbce32-2080-3020-bb31-7e442b2bd0e9/s%26p-500%2C-dow%2C-nasdaq-end.html"
         }
       ],
       "error": null
@@ -688,52 +688,52 @@
       "thema": "industrial",
       "headlines": [
         {
-          "title": "Dow Jones Futures: Google, Tesla Fall On Earnings, Capital Spending",
+          "title": "FTSE 100 Live: London stocks called lower as Big Tech burns cash and oil hits $100",
+          "publisher": "Proactive",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/a29be53f-56d9-33c1-84fa-e7db2449b60f/ftse-100-live%3A-london-stocks.html"
+        },
+        {
+          "title": "Dow Jones Futures: Market Sells Off On Oil Prices, Google, Tesla; Intel Jumps Late",
           "publisher": "Investor's Business Daily",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/092ff924-f233-311d-95de-ed11a4dabc57/dow-jones-futures%3A-google%2C.html"
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/96fdd7c6-3e7b-334a-a08e-b91b60ced4b6/dow-jones-futures%3A-market.html"
         },
         {
-          "title": "Review & Preview: Showtime",
-          "publisher": "Barrons.com",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/589ea80b-d486-39f6-b3e2-f2eeada8ac29/review-%26-preview%3A-showtime.html"
+          "title": "Jim Cramer Shares His Framework for Telling a Buyable Crash From a Real One",
+          "publisher": "BeInCrypto",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/373ff658-06be-3a85-8686-4ab0db99cc48/jim-cramer-shares-his.html"
         },
         {
-          "title": "S&P 500, Nasdaq End Lower, Futures Extend Declines As Attention Shifts To Tech Earnings, Geopolitics —  TSLA, GOOGL, PSKY, RDDT, AMZN In Focus",
+          "title": "Nasdaq, S&P 500, Dow Futures Shake Off Iran Jitters As Investors Turn To AI Hyperscaler Earnings: INTC, TSLA, TTD, HIMS In Focus",
           "publisher": "Stocktwits",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/0e600225-97be-3c2e-9267-aea6e1341132/s%26p-500%2C-nasdaq-end-lower%2C.html"
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/78fb0fca-f68b-3e78-ab5b-1f4b39e24986/nasdaq%2C-s%26p-500%2C-dow-futures.html"
         },
         {
-          "title": "ChargePoint Holdings, Inc. (CHPT) Increases Despite Market Slip: Here's What You Need to Know",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/chargepoint-holdings-inc-chpt-increases-221503284.html"
+          "title": "Oil Prices Roar Back, Threatening Economy and GOP’s Midterm Hopes",
+          "publisher": "The Wall Street Journal",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/cad49bc8-603f-3ba3-afb3-1b4affb1a4fe/oil-prices-roar-back%2C.html"
         },
         {
-          "title": "Onto Innovation (ONTO) Dips More Than Broader Market: What You Should Know",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/onto-innovation-onto-dips-more-221503107.html"
+          "title": "Review & Preview: Big Tech’s $889 Billion Reality Check",
+          "publisher": "Barrons.com",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/faae77df-4465-3626-9a70-39479b261762/review-%26-preview%3A-big-tech%E2%80%99s.html"
         },
         {
-          "title": "Hercules Capital (HTGC) Falls More Steeply Than Broader Market: What Investors Need to Know",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/hercules-capital-htgc-falls-more-221502572.html"
+          "title": "Tesla stock suffers double-digit drop on carmaker’s worst day in years",
+          "publisher": "The Guardian",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/tesla-stock-suffers-double-digit-223525270.html"
         },
         {
-          "title": "General Dynamics (GD) Ascends While Market Falls: Some Facts to Note",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-gd-ascends-while-221502227.html"
-        },
-        {
-          "title": "Main Street Capital (MAIN) Declines More Than Market: Some Information for Investors",
-          "publisher": "Zacks",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/main-street-capital-main-declines-221502900.html"
+          "title": "S&P 500, Dow, Nasdaq End Lower Over Capex Concerns, Surging Oil — CBRS, AMD, GOOGL, TSLA, MSTR In Focus",
+          "publisher": "Stocktwits",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/4bfbce32-2080-3020-bb31-7e442b2bd0e9/s%26p-500%2C-dow%2C-nasdaq-end.html"
         }
       ],
       "error": null
@@ -744,6 +744,12 @@
       "typ": "B",
       "thema": "infrastructure",
       "headlines": [
+        {
+          "title": "KEEL Stock Heads For Worst Month In 2026: Retail Turns Bearish On 'Dead' Company",
+          "publisher": "Stocktwits",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/83bdc05a-8df1-32ad-93ca-3367f4e9507a/keel-stock-heads-for-worst.html"
+        },
         {
           "title": "Revisiting Stock Picks Sterling Infrastructure, Tradeweb Markets, Gold.com",
           "publisher": "Barrons.com",
@@ -785,12 +791,6 @@
           "publisher": "Stocktwits",
           "published": "2026-07-22",
           "link": "https://finance.yahoo.com/m/516f8558-2240-32c3-9700-2d8780d7b416/crypto-equities-hood%2C-coin%2C.html"
-        },
-        {
-          "title": "BTIG Research Initiates Coverage on Keel Infrastructure With Buy Rating, $8 Price Target",
-          "publisher": "MT Newswires",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/btig-research-initiates-coverage-keel-110905046.html"
         }
       ],
       "error": null
@@ -802,52 +802,52 @@
       "thema": "technology",
       "headlines": [
         {
-          "title": "Jim Cramer reveals 4 surging chip stocks he likes best",
-          "publisher": "TheStreet",
-          "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/2ff2e7e1-be72-3d46-9283-3a0e93dc9096/jim-cramer-reveals-4-surging.html"
+          "title": "David Tepper Has 5% of His Portfolio in This Little-Known Energy Stock. Here's Why.",
+          "publisher": "Motley Fool",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/bbc762a7-f6bb-3b95-a894-82b5df714b92/david-tepper-has-5%25-of-his.html"
         },
         {
-          "title": "MU, SNDK, SKHY Stocks Jump: Google's AI Hunger, Elon Musk's Micron Shoutout Send Memory Bulls Charging",
+          "title": "MU Stock Loses Some Steam After Korea Chip Selloff — But Retail Is Eyeing Clean Rebound Above $1,000",
           "publisher": "Stocktwits",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/418fc3ce-dc99-3a84-9460-7fc9221682f1/mu-stock-loses-some-steam.html"
+        },
+        {
+          "title": "Micron (MU) Is Getting A New China AI Demand Signal From Kimi K3",
+          "publisher": "Simply Wall St.",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/technology/ai/articles/micron-mu-getting-china-ai-031646978.html"
+        },
+        {
+          "title": "Morgan Stanley sends strong verdict on memory stocks",
+          "publisher": "TheStreet",
+          "published": "2026-07-24",
+          "link": "https://finance.yahoo.com/m/7d137505-30af-3889-8740-c454667686d5/morgan-stanley-sends-strong.html"
+        },
+        {
+          "title": "S&P 500 Q2 Earnings: Stripping Out the Outsized Impact of Alphabet and Micron",
+          "publisher": "Zacks",
           "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/m/856e0e06-0b1c-3a35-9569-d9759148c926/mu%2C-sndk%2C-skhy-stocks-jump%3A.html"
+          "link": "https://finance.yahoo.com/markets/stocks/articles/p-500-q2-earnings-stripping-204500975.html"
         },
         {
-          "title": "Market Chatter: Tesla Received Reasonable-Terms Chip Supply From Micron, Musk Says",
-          "publisher": "MT Newswires",
+          "title": "Stock Market Today: Nasdaq Plunges To 4-Week Low; Metals Firm Kaiser Hits New Entry (Live Coverage)",
+          "publisher": "Investor's Business Daily",
           "published": "2026-07-23",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-tesla-received-reasonable-000108352.html"
+          "link": "https://finance.yahoo.com/m/e94a43e0-7ab5-3e5d-a5df-9ae321464787/stock-market-today%3A-nasdaq.html"
         },
         {
-          "title": "The Ultimate Bull Run for NVIDIA, Micron, and SanDisk May Be Closer Than Investors Think",
-          "publisher": "24/7 Wall St.",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/0d00fceb-ad7d-3657-bac7-51b2dd51958c/the-ultimate-bull-run-for.html"
-        },
-        {
-          "title": "This Chinese AI Model Became So Popular It Stopped Taking New Users— and Analysts Say Nvidia, Micron Could Be the Real Winners",
-          "publisher": "Benzinga",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/technology/ai/articles/chinese-ai-model-became-popular-213109229.html"
-        },
-        {
-          "title": "Super Micro, ServiceNow, GE Vernova, Pegasystems, and More Stocks That Explain Today’s Market",
+          "title": "Why Nvidia Stock Isn’t Rallying as It Should After Alphabet Earnings",
           "publisher": "Barrons.com",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/281450da-5a9b-345b-af5f-4d2fae8d5e5d/super-micro%2C-servicenow%2C-ge.html"
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/53955128-e98b-3eae-b1b0-999225b36e66/why-nvidia-stock-isn%E2%80%99t.html"
         },
         {
-          "title": "Stocks Slip as Alphabet Gets Ready to Report: Stock Market Today",
-          "publisher": "Kiplinger",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/a62f48a2-5f12-3809-803f-694e0dff7dd4/stocks-slip-as-alphabet-gets.html"
-        },
-        {
-          "title": "SanDisk's Bold Pivot From AI Boom Beneficiary to Bust Breaker",
-          "publisher": "Trefis",
-          "published": "2026-07-22",
-          "link": "https://finance.yahoo.com/m/75d65752-c832-3f13-af39-5df5e28615e3/sandisk%27s-bold-pivot-from-ai.html"
+          "title": "Micron, SK Hynix Stocks Rise After Google Earnings. Here’s Why.",
+          "publisher": "Barrons.com",
+          "published": "2026-07-23",
+          "link": "https://finance.yahoo.com/m/5215433f-d633-3a9f-a32c-5b8809c6aeb1/micron%2C-sk-hynix-stocks-rise.html"
         }
       ],
       "error": null

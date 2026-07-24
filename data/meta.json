@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-07-23T17:35:32",
+  "generated_at": "2026-07-24T09:00:58",
   "quellen": [
     {
       "key": "kurse",
       "label": "Kurse",
-      "stand": "2026-07-23T17:35:32",
+      "stand": "2026-07-24T09:00:58",
       "warn_tage": 2
     },
     {
       "key": "chart",
       "label": "Chartanalyse",
-      "stand": "2026-07-23T17:35:29",
+      "stand": "2026-07-24T09:00:31",
       "warn_tage": 3
     },
     {
       "key": "funda",
       "label": "Fundamentalanalyse",
-      "stand": "2026-07-23T17:35:16",
+      "stand": "2026-07-24T09:00:31",
       "warn_tage": 10
     },
     {
       "key": "sentiment",
       "label": "KI-Sentiment",
-      "stand": "2026-07-23T09:00:33",
+      "stand": "2026-07-24T09:00:31",
       "warn_tage": 8
     },
     {
@@ -34,7 +34,7 @@
     {
       "key": "etf_ranking",
       "label": "ETF-Ranking",
-      "stand": "2026-07-23T09:00:33",
+      "stand": "2026-07-24T09:00:31",
       "warn_tage": 3
     }
   ]

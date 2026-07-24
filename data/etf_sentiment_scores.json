@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23 08:53",
+  "generated_at": "2026-07-24 08:53",
   "scores": {
     "IE00B1XNHC34": {
       "typ": "A",
@@ -9,7 +9,7 @@
     "IE000NDWFGA5": {
       "typ": "A",
       "sentiment_score": 1,
-      "begruendung": "Uranpreis hält sich bei $85 im Zuge der AI-Data-Center-Nachfrage nach Nuklearenergie, die Kurseinbrüche der Vorwoche wirken aber noch nach."
+      "begruendung": "Uranpreis hält sich stabil bei $85 dank AI-Data-Center-Nachfrage nach Nuklearenergie, die Kurseinbrüche der Vorwoche wirken aber noch nach."
     },
     "IE0002Y8CX98": {
       "typ": "A",
@@ -18,8 +18,8 @@
     },
     "IE000YYE6WK5": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Kratos profitiert weiter vom $156-Mio.-Nuklearsicherheitsauftrag und positiver Drohnen-Nachfrage, gedämpft durch eine Kurszielsenkung auf $46."
+      "sentiment_score": 3,
+      "begruendung": "Lockheed Martin springt 10% und RTX 7% nach starken Zahlen mit Rekord-Auftragsbeständen, was die Verteidigungsbranche insgesamt stützt."
     },
     "IE000OJ5TQP4": {
       "typ": "A",
@@ -29,7 +29,7 @@
     "IE000YU9K6K2": {
       "typ": "A",
       "sentiment_score": -3,
-      "begruendung": "SpaceX hat laut Bericht $1 Billion an Wert vernichtet und Analysten warnen, das Schlimmste könne noch bevorstehen, nur ASTS liefert mit AT&T-Partnerschaft einen Lichtblick."
+      "begruendung": "SPCX, ORCL und QS fallen auf 52-Wochen-Tiefs, ein Falcon-9-Buchungsstopp lässt Retail-Trader von 'ruinierten' Weltraumaktien sprechen, nur Rocket Lab liefert einen Lichtblick."
     },
     "IE00BYPLS672": {
       "typ": "A",
@@ -43,43 +43,43 @@
     },
     "IE00BYZK4552": {
       "typ": "A",
-      "sentiment_score": 2,
-      "begruendung": "Kraken Robotics meldet mehrfach neue Aufträge über $35 Mio., zusammen mit der positiven Reshoring- und Healthcare-Automation-Story für den Sektor."
+      "sentiment_score": 1,
+      "begruendung": "Gemischtes Bild bei Serve Robotics zwischen Effizienzfokus und 10-Bagger-Spekulation, während die positive Healthcare-Automation-Story im Hintergrund weiterläuft."
     },
     "IE00BMC38736": {
       "typ": "A",
       "sentiment_score": -1,
-      "begruendung": "NXP steigt stärker als der Markt und Susquehanna hebt das Kursziel an, doch Wells Fargos Kürzung und der vorangegangene Chip-Ausverkauf wirken noch nach."
+      "begruendung": "NXP und Texas Instruments zeigen Erholungstendenzen, doch der vorangegangene Chip-Ausverkauf und Kurszielsenkungen wirken noch nach."
     },
     "IE00BM67HN09": {
       "typ": "B",
       "sentiment_score": 2,
-      "begruendung": "JPMorgan stützt Bloom Energys Brookfield-AI-Power-Deal und die AI-Stromnachfrage-Story bleibt intakt, auch wenn die Aktie nach der Rally kurzzeitig stärker als der Markt fällt."
+      "begruendung": "Energy Transfer hebt seine EBITDA-Prognose an und Bloom Energy wird laut RBC mit einem großen Panama-AI-Rechenzentrumsprojekt in Verbindung gebracht."
     },
     "IE00BM67HS53": {
       "typ": "B",
-      "sentiment_score": 0,
-      "begruendung": "AI-getriebene Chip-Ausrüstungsnachfrage (Ichor) steht einer Kurszielsenkung bei MP Materials und einem enttäuschenden Rare-Earth-Boom gegenüber."
+      "sentiment_score": 2,
+      "begruendung": "Chipausrüster wie Applied Materials, ASML und Lam Research legen dank Intels CapEx-Erhöhung und TSMC-Expansion zu, Texas Instruments übertrifft die Erwartungen."
     },
     "IE00B4LN9N13": {
       "typ": "B",
-      "sentiment_score": 1,
-      "begruendung": "General Dynamics legt trotz fallendem Gesamtmarkt zu, während der Rest der Schlagzeilen generische Makro-News ohne klaren Industrials-Bezug sind."
+      "sentiment_score": -1,
+      "begruendung": "Steigende Ölpreise und Sorgen um Big-Tech-Investitionen belasten den Gesamtmarkt, ohne dass eine konkrete Industrials-Meldung dagegenhält."
     },
     "IE00BM67HV82": {
       "typ": "B",
-      "sentiment_score": 1,
-      "begruendung": "General Dynamics legt trotz fallendem Gesamtmarkt zu, während der Rest der Schlagzeilen generische Makro-News ohne klaren Industrials-Bezug sind."
+      "sentiment_score": -1,
+      "begruendung": "Steigende Ölpreise und Sorgen um Big-Tech-Investitionen belasten den Gesamtmarkt, ohne dass eine konkrete Industrials-Meldung dagegenhält."
     },
     "IE000CK5G8J7": {
       "typ": "B",
-      "sentiment_score": 3,
-      "begruendung": "BTIG startet Keel Infrastructure mit Kaufempfehlung und $8-Kursziel, ein Analyst sieht über 70% Kurspotenzial und Sterlings Margenstory bleibt intakt."
+      "sentiment_score": 0,
+      "begruendung": "Keel Infrastructure steuert laut Retail-Stimmung auf den schlechtesten Monat 2026 zu und wird als 'tot' bezeichnet, während Sterling weiterhin positiv auf seine Margenstory blickt."
     },
     "IE00BM67HT60": {
       "typ": "B",
-      "sentiment_score": 3,
-      "begruendung": "Memory-Werte wie Micron, SanDisk und SK Hynix springen auf Googles AI-Nachfrage und Musks Micron-Lob, Analysten sehen den ultimativen Bullenlauf näher rücken."
+      "sentiment_score": 0,
+      "begruendung": "Micron und SK Hynix steigen nach Google-Zahlen und Morgan Stanley äußert sich positiv zu Speicherchips, während ein Korea-Chip-Ausverkauf und der 4-Wochen-Tief-Nasdaq dagegenstehen."
     },
     "DE000A0H08H3": {
       "typ": "B",

@@ -3,20 +3,20 @@
     {
       "key": "sentiment",
       "label": "Aktien-Signale (Sentiment/Score)",
-      "zeilen": 85,
+      "zeilen": 103,
       "mit_forward": 0,
       "von": "2026-07-18",
-      "bis": "2026-07-23",
+      "bis": "2026-07-24",
       "auswertbar_ab": "2026-08-15",
       "report_cmd": "python3 src/sentiment_calibration.py report"
     },
     {
       "key": "etf",
       "label": "ETF-Composite",
-      "zeilen": 22,
+      "zeilen": 44,
       "mit_forward": 0,
       "von": "2026-07-23",
-      "bis": "2026-07-23",
+      "bis": "2026-07-24",
       "auswertbar_ab": "2026-08-20",
       "report_cmd": "python3 src/etf_composite_log.py report"
     }
